@@ -20,10 +20,10 @@ There are certainly a few things missing below: scripts for scaling up/down, scr
 
 What are some of the advantages to this approach?
 
-  * Near instant deployment.  
-  * Fully automated.  
-  * Consistent development model with other platforms.  
-  * Consistent deployment model with other platforms.
+* Near instant deployment.  
+* Fully automated.  
+* Consistent development model with other platforms.  
+* Consistent deployment model with other platforms.
 
 I’m sure there are more. There are some limitations as well – in particular, you’re bound by the number of roles you can have in your Cloud Service, which today is (I think) 25. This means that, at most, you can only scale out to 25 virtual machines. I imagine this limitation will be removed at some point (or perhaps you could get around it by using virtual networks).
 

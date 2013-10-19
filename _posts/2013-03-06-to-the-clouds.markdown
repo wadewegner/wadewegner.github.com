@@ -18,12 +18,12 @@ Coming from a Windows Azure focus at Microsoft my natural tendency has been to a
 
 Don’t get me wrong. I’m still a huge fan of Windows Azure and incredibly excited by what the platform offers. (And not just because I spent five years of my life working on it!) Just look at the evolution Windows Azure has taken over the last year: 
 
-  * Introduced IaaS capabilities last year
-  * Introduced Windows Azure Websites
-  * Introduced Windows Azure Mobile Services 
-  * Introduced Media Services
+* Introduced IaaS capabilities last year
+* Introduced Windows Azure Websites
+* Introduced Windows Azure Mobile Services 
+* Introduced Media Services
 
-… and so much more. There’s never been a better time to build on Windows Azure. 
+... and so much more. There’s never been a better time to build on Windows Azure. 
 
 That said, it’s interesting to talk to CIOs and technology leaders at various companies. I’ve found a great many different mental models people have for the cloud. Generally speaking, it appears that when talking to a technical person the cloud is synonymous with AWS; when talking to a businessperson the cloud is synonymous with SalesForce.com. We all ignore these platforms at our own peril. The same can be said for folks focused entirely on AWS or SalesForce.com – you ignore Windows Azure at your own peril. 
 
@@ -33,4 +33,4 @@ All of this is a way of saying that you’ll start to see me blog more about oth
 
 None of this is surprising or revolutionary. Consequently, you may ask yourself, why a long blog post? Well, primarily it’s because I don’t want to give the impression that I’ve given up on Windows Azure. In fact, I’m more excited about the future of Windows Azure than ever before. There’s a lot of opportunity just around the corner. 
 
-So … to the cloud(s)!
+So ... to the cloud(s)!
