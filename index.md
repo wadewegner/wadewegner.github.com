@@ -9,7 +9,7 @@ tagline:
 
 	{% for post in site.posts limit: 6 %}
 
-	<div class="page-header">
+	<div>
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	</div>
 

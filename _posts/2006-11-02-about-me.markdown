@@ -1,0 +1,73 @@
+---
+author: admin
+comments: true
+date: 2006-11-02 01:01:49+00:00
+layout: post
+slug: about-me
+title: About Me
+wordpress_id: 118
+---
+
+**Update**: I have recently joined Microsoft as an Architect Evangelist. This bio will soon change.
+
+
+
+
+I am a technical lead and application architect, specializing in [Enterprise Application Integration](http://en.wikipedia.org/wiki/Enterprise_application_integration) (EAI), custom .NET applications, and data warehousing solutions. I am largely focused on Microsoft products, including Commerce Server, BizTalk Server, ASP.NET (well, all things .NET), [Team Foundation Server](http://msdn2.microsoft.com/en-us/teamsystem/aa718934.aspx) (TFS), but I also try to actively participate in the [open source](http://en.wikipedia.org/wiki/Open_source) community. I am a director for [Statera](http://www.statera.com/), a Microsoft Gold partner headquartered in Denver, CO.
+
+
+
+
+I have achieved the following professional certifications over the years:
+
+
+
+
+
+
+  * Microsoft Certified Technical Specialist, ([MCTS](http://www.microsoft.com/learning/mcp/mcts/biztalk/default.mspx)), BizTalk Server 2006
+
+  * Microsoft Certified Solutions Developer, ([MCSD](http://www.microsoft.com/learning/mcp/mcsd/default.mspx)), .NET 1.1 platform (C#)
+
+  * Microsoft Certified Application Developer, ([MCAD](http://www.microsoft.com/learning/mcp/mcad/default.mspx)), .NET 1.1 platform (C#)
+
+  * Microsoft Certified Database Administrator, ([MCDBA](http://www.microsoft.com/learning/mcp/mcdba/default.mspx)), SQL Server 2000
+
+
+
+I have experience with the following technologies:
+
+
+
+
+
+
+  * **Languages**: C#, Visual Basic.NET, C/C++, Visual Basic 6.0, T-SQL, XML, JavaScript, VBScript, Perl, XHTML, CSS, VBA, XPath
+
+  * **Databases**: Microsoft SQL Server (all versions), Oracle 9i, MySQL (5.0, 5.1), Microsoft Access (all versions), PostgreSQL (8+)
+
+  * **Operating Systems**: Windows (Vista, Server 2003 32-bit and 64-bit, XP, Server 2000, NT)
+
+  * **Technologies**: .NET Framework (1.0, 1.1, 2.0, 3.0, 3.5), ASP.NET, ASP, XML Web Services, ADO.NET, Active Directory (ADSI), Crystal Reports, Microsoft SQL Reporting Services, Windows Communication Foundation (WCF), Windows Presentation Foundation (WPF)
+
+  * **Products/Toolkits**: Microsoft Commerce Server 2007, SharePoint Portal Server (2007, 2003), BizTalk Server 2006, Virtual Server 2005 R2, Internet Information Services (all versions)
+
+  * **Developer Tools**: Microsoft Team Foundation Server, Microsoft Visual Studio (all versions), SQL Server Management Studio, Microsoft Visual SourceSafe (6+, 2005)
+
+
+
+Please feel free to send me a friendly e-mail, or leave a comment. Thanks for stopping by!
+
+
+
+
+
+
+
+
+
+
+
+
+
+![](http://images.wadewegner.com/wordpress/content/binary/MCSD.png) ![](http://images.wadewegner.com/wordpress/content/binary/MCDBA.png) ![](http://images.wadewegner.com/wordpress/content/binary/MCTS.png)
