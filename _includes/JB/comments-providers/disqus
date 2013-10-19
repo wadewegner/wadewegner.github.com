@@ -5,8 +5,7 @@
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
 
 
-	var disqus_url = '{{ site.production_disqus_url }}/2012/04/simple-capped-exponential-back-off-for-queues/';
-    /*var disqus_title = "Simple Capped Exponential Back-Off for Queues";*/
+	var disqus_url = '{{ site.production_disqus_url }}{{ page.url }}'; // /2012/04/simple-capped-exponential-back-off-for-queues/';
 
     {% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% endif %}
 
