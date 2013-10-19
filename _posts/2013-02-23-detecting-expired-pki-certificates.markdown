@@ -19,29 +19,23 @@ Yesterday Windows Azure experienced a worldwide disruption in many services due 
 It’s disappointing this happened but highlights a pretty common situation. This has nothing to do with the merits of the Windows Azure storage service or any other parts of the platform – this is an operations management issue, plain and simple. The irony is that, as a number of folks [including Lars Wilhelmsen](https://twitter.com/larsw/status/305375364534902784) have pointed out, there are tools like Microsoft SCOM that provide a Certificate Management Pack that can notify operations of expiring certificates. I can’t imagine the operations team at Windows Azure doesn’t use some kind of tool to manage expiring certificates.
 
 As a developer, I found myself curious to see just how hard it is to determine the expiration of a certificate by checking the URI. Turns out, it’s pretty simple by using System.Net.ServicePoint which provides connection management for HTTP/S connections.
-    
-    <span style="color: blue">private string </span><span style="color: black">GetSSLExpiryDate()
-    {
-        </span><span style="color: blue">string </span><span style="color: black">url = </span><span style="color: #a31515">"https://www.aditicloud.com/"</span><span style="color: black">;
-        </span><span style="color: blue">var </span><span style="color: black">request = </span><span style="color: #2b91af">WebRequest</span><span style="color: black">.Create(url) </span><span style="color: blue">as </span><span style="color: #2b91af">HttpWebRequest</span><span style="color: black">;
-        </span><span style="color: blue">var </span><span style="color: black">response = request.GetResponse();
-    
-        </span><span style="color: blue">if </span><span style="color: black">(request.ServicePoint.Certificate != </span><span style="color: blue">null</span><span style="color: black">)
-        {
-            </span><span style="color: blue">return </span><span style="color: black">request.ServicePoint.Certificate.GetExpirationDateString();
-        }
-        </span><span style="color: blue">else
-        </span><span style="color: black">{
-            </span><span style="color: blue">return string</span><span style="color: black">.Empty;
-        }
-    }</span>
 
+	private string GetSSLExpiryDate()
+	{
+    	string url = "https://www.aditicloud.com/";
+    	var request = WebRequest.Create(url) as HttpWebRequest;
+    	var response = request.GetResponse();
 
-
+    	if (request.ServicePoint.Certificate != null)
+    	{
+        	return request.ServicePoint.Certificate.GetExpirationDateString();
+    	}
+    	else
+    	{
+        	return string.Empty;
+    	}
+	}
 
 Pretty simple. What’s hard is the practice of managing and tracking these sorts of things.
-
-
-
 
 I would expect that Microsoft will ensure that this kind of problem never happens again. It’s embarrassing yet solvable. Yet it exposes an issue that most of us will also have to account for – expiring certificates. If it can happen to Microsoft, it can happen to us too.
