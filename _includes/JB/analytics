@@ -1,16 +1,15 @@
 {% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
 
-{% case site.JB.analytics.provider %}
-{% when "google" %}
-  {% include JB/analytics-providers/google %}
-{% when "getclicky" %}
-  {% include JB/analytics-providers/getclicky %}
-{% when "mixpanel" %}
-  {% include JB/analytics-providers/mixpanel %}
-{% when "piwik" %}
-  {% include JB/analytics-providers/piwik %}
-{% when "custom" %}
-  {% include custom/analytics %}
-{% endcase %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', '{{ site.JB.analytics.google.tracking_id }}']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 
 {% endif %}
