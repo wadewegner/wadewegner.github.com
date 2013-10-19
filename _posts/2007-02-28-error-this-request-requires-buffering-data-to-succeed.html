@@ -1,0 +1,27 @@
+--- 
+layout: post
+title: Error "This request requires buffering data to succeed."
+categories: 
+- BizTalk Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/bqF2YT
+  _sexybookmarks_permaHash: 5df15c88b17717d1cb0b6cbff7679ca8
+  dsq_thread_id: "612241818"
+---
+<p>If you get the following error with an HTTP send port in BizTalk 2006, you may have an authentication issue:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>A message send to adapter "HTTP" on send port "SendPort1" with URI <a href="http://localhost/vd/BTSHTTPReceive.dll?QueryString">http://localhost/vd/BTSHTTPReceive.dll?QueryString</a> is suspended.</p>
+<p>Error details: This request requires buffering data to succeed.</p></blockquote>
+<p>Check the following to see if it's the source of the problem:</p>
+<ol>
+<li>Go to the properties of your send port.
+<li>Click on "Configure..." next to your HTTP type.
+<li>Choose the "Authentication" tab.
+<li>Make sure your authentication is set correctly (i.e. valid username and password).</li></ol>
+<p>It's best to not use anonymous authentication.&nbsp; Basic is good for development and testing, but the preferred method is either Kerberos or Single Sign-On.</p>
+<p>Best of luck!</p>

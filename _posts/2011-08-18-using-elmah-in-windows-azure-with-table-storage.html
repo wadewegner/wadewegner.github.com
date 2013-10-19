@@ -1,0 +1,140 @@
+--- 
+layout: post
+title: Using ELMAH in Windows Azure with Table Storage
+categories: 
+- ASP.NET
+- ELMAH
+- NuGet
+- Windows Azure
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _topsy_long_url: http://www.wadewegner.com/2011/08/using-elmah-in-windows-azure-with-table-storage/
+  topsy_short_url: http://bit.ly/r7z48T
+  dsq_thread_id: "609466618"
+---
+<p>In this week’s episode of <a href="http://channel9.msdn.com/Shows/Cloud+Cover">Cloud Cover</a>, <a href="http://blog.smarx.com/" target="_blank">Steve</a> and I covered Logging, Tracing, and ELMAH in Windows Azure. Steve explored the first two topics while I looked into ELMAH in Windows Azure. You should make sure and take a look at his posts – they’re useful:</p>  <ul>   <li><a href="http://blog.smarx.com/posts/printf-here-in-the-cloud">Printf(“HERE”) in the Cloud</a> </li>    <li><a href="http://blog.smarx.com/posts/lightweight-tracing-to-windows-azure-tables">Lightweight Tracing to Windows Azure Tables</a> </li> </ul>  <p>ELMAH (Error Logging Modules and Handlers) itself is extremely useful, and with a few simple modifications can provide a very effective way to handle application-wide error logging for your ASP.NET web applications. If you aren’t already familiar with ELMAH, take a look at the <a href="http://code.google.com/p/elmah/">ELMAH project page</a>.</p>  <p><strong><u><font size="3">NuGet</font></u></strong></p>  <p>Before going any further, I thought I’d let you know that I’ve created a NuGet package that makes this <em><u>extremely</u></em> easy to try. You can take a look at <a href="http://nuget.org/List/Packages/WindowsAzure.ELMAH.Tables">ELMAH with Windows Azure Table Storage</a> on the NuGet gallery or immediately try this out with the following command:</p>  <p><font size="2" face="Courier New">&#160;&#160;&#160;&#160;&#160;&#160; Install-Package WindowsAzure.ELMAH.Tables</font></p>  <p>By default this NuGet package is configured to use the local storage emulator. If you want to use your actual Windows Azure storage account you can uncomment the following line in the Web.Config file:</p>  <pre class="code"><span style="color: blue">&lt;!--
+</span><span style="color: green">&lt;errorLog 
+    type=&quot;WebRole1.TableErrorLog, WebRole1&quot; 
+    connectionString=&quot;DefaultEndpointsProtocol=https;AccountName=YOURSTORAGEACCOUNT;
+      AccountKey=YOURSTORAGEKEY&quot; /&gt;
+</span><span style="color: blue">--&gt;
+</span></pre>
+
+
+<p>Incidentally, if you like NuGet, then you should check out Cory Fowler’s post on <a href="http://blog.syntaxc4.net/post/2011/08/01/Must-have-NuGet-Packages-for-Windows-Azure.aspx">must have NuGet packages for Windows Azure development</a>.</p>
+
+<p><strong><u><font size="3">Demo</font></u></strong></p>
+
+<p align="left">For those of you unfamiliar with ELMAH, I put together a simple demo. You can try it out on <a href="http://elmahdemo.cloudapp.net/">http://elmahdemo.cloudapp.net/</a>. Just enter a message (keep it clean, please!) and throw an exception.</p>
+
+<p align="left"><a href="http://images.wadewegner.com/wordpress/2011/08/ELMAHDemo.jpg"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="ELMAHDemo" border="0" alt="ELMAHDemo" src="http://images.wadewegner.com/wordpress/2011/08/ELMAHDemo_thumb.jpg" width="600" height="348" /></a></p>
+
+<p align="left">Click the <strong>ELMAH</strong> button to then load the handler. You’ll see all the errors logged with a lot of great detail.</p>
+
+<p align="left"><a href="http://images.wadewegner.com/wordpress/2011/08/ELMAHHandler.jpg"><img style="background-image: none; border-bottom: 0px; border-left: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top: 0px; border-right: 0px; padding-top: 0px" title="ELMAHHandler" border="0" alt="ELMAHHandler" src="http://images.wadewegner.com/wordpress/2011/08/ELMAHHandler_thumb.jpg" width="602" height="384" /></a></p>
+
+<p align="left">The great part is that these files are getting serialized into Windows Azure table storage. The benefit of this is you can read them from anywhere – in fact, you don’t have to even deploy the <font size="2" face="Courier New">elmah.axd</font> handler with your web application! You could run it locally.</p>
+
+<p align="left">Here’s what the files look like in table storage:</p>
+
+<p align="left"><a href="http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables.jpg"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="ELMAHInTables" border="0" alt="ELMAHInTables" src="http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables_thumb.jpg" width="600" height="322" /></a></p>
+
+<p align="left"><strong><u><font size="3">How Does it Work?</font></u></strong></p>
+
+<p align="left">The nice part is you can easily grab the NuGet package to view all the source code. There are two items of interest:<font size="2" face="Courier New"> ErrorEntity.cs</font> and <font size="2" face="Courier New">Web.Config</font>.</p>
+
+<p align="left">In <font size="2" face="Courier New">ErrorEntity.cs</font> we first create our <font size="2" face="Courier New">ErrorEntity</font>:</p>
+
+<pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">ErrorEntity </span>: <span style="color: #2b91af">TableServiceEntity
+</span>{
+    <span style="color: blue">public string </span>SerializedError { <span style="color: blue">get</span>; <span style="color: blue">set</span>; }
+
+    <span style="color: blue">public </span>ErrorEntity() { }
+    <span style="color: blue">public </span>ErrorEntity(<span style="color: #2b91af">Error </span>error)
+        : <span style="color: blue">base</span>(<span style="color: blue">string</span>.Empty, (<span style="color: #2b91af">DateTime</span>.MaxValue.Ticks - <span style="color: #2b91af">DateTime</span>.UtcNow.Ticks).ToString(<span style="color: #a31515">&quot;d19&quot;</span>))
+    {
+        <span style="color: blue">this</span>.SerializedError = <span style="color: #2b91af">ErrorXml</span>.EncodeString(error);
+    }
+}</pre>
+
+<p align="left">Then we implement the <font size="2" face="Courier New">ErrorLog</font> abstract class from ELMAH to create a <font size="2" face="Courier New">TableErrorLog</font> class with all the implementation details.</p>
+
+
+<pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">TableErrorLog </span>: <span style="color: #2b91af">ErrorLog
+</span>{
+    <span style="color: blue">private string </span>connectionString;
+
+    <span style="color: blue">public override </span><span style="color: #2b91af">ErrorLogEntry </span>GetError(<span style="color: blue">string </span>id)
+    {
+        <span style="color: blue">return new </span><span style="color: #2b91af">ErrorLogEntry</span>(<span style="color: blue">this</span>, id, <span style="color: #2b91af">ErrorXml</span>.DecodeString(<span style="color: #2b91af">CloudStorageAccount</span>.Parse(
+            connectionString).CreateCloudTableClient().GetDataServiceContext()
+            .CreateQuery&lt;<span style="color: #2b91af">ErrorEntity</span>&gt;(<span style="color: #a31515">&quot;elmaherrors&quot;</span>).Where(e =&gt; e.PartitionKey == <span style="color: blue">string</span>.Empty 
+                &amp;&amp; e.RowKey == id).Single().SerializedError));
+    }
+
+    <span style="color: blue">public override int </span>GetErrors(<span style="color: blue">int </span>pageIndex, <span style="color: blue">int </span>pageSize, <span style="color: #2b91af">IList </span>errorEntryList)
+    {
+        <span style="color: blue">var </span>count = 0;
+        <span style="color: blue">foreach </span>(<span style="color: blue">var </span>error <span style="color: blue">in </span><span style="color: #2b91af">CloudStorageAccount</span>.Parse(connectionString).
+            CreateCloudTableClient().GetDataServiceContext()
+            .CreateQuery&lt;<span style="color: #2b91af">ErrorEntity</span>&gt;(<span style="color: #a31515">&quot;elmaherrors&quot;</span>)
+            .Where(e =&gt; e.PartitionKey == <span style="color: blue">string</span>.Empty).AsTableServiceQuery()
+            .Take((pageIndex + 1) * pageSize).ToList().Skip(pageIndex * pageSize))
+        {
+            errorEntryList.Add(<span style="color: blue">new </span><span style="color: #2b91af">ErrorLogEntry</span>(<span style="color: blue">this</span>, error.RowKey, 
+                <span style="color: #2b91af">ErrorXml</span>.DecodeString(error.SerializedError)));
+            count += 1;
+        }
+        <span style="color: blue">return </span>count;
+    }
+
+    <span style="color: blue">public override string </span>Log(<span style="color: #2b91af">Error </span>error)
+    {
+        <span style="color: blue">var </span>entity = <span style="color: blue">new </span><span style="color: #2b91af">ErrorEntity</span>(error);
+        <span style="color: blue">var </span>context = <span style="color: #2b91af">CloudStorageAccount</span>.Parse(connectionString)
+            .CreateCloudTableClient().GetDataServiceContext();
+        context.AddObject(<span style="color: #a31515">&quot;elmaherrors&quot;</span>, entity);
+        context.SaveChangesWithRetries();
+        <span style="color: blue">return </span>entity.RowKey;
+    }
+
+    <span style="color: blue">public </span>TableErrorLog(<span style="color: #2b91af">IDictionary </span>config)
+    {
+        connectionString = (<span style="color: blue">string</span>)config[<span style="color: #a31515">&quot;connectionString&quot;</span>] ?? <span style="color: #2b91af">RoleEnvironment
+            </span>.GetConfigurationSettingValue((<span style="color: blue">string</span>)config[<span style="color: #a31515">&quot;connectionStringName&quot;</span>]);
+        Initialize();
+    }
+
+    <span style="color: blue">public </span>TableErrorLog(<span style="color: blue">string </span>connectionString)
+    {
+        <span style="color: blue">this</span>.connectionString = connectionString;
+        Initialize();
+    }
+
+    <span style="color: blue">void </span>Initialize()
+    {
+        <span style="color: #2b91af">CloudStorageAccount</span>.Parse(connectionString).CreateCloudTableClient()
+            .CreateTableIfNotExist(<span style="color: #a31515">&quot;elmaherrors&quot;</span>);
+    }
+}</pre>
+
+
+<p align="left">Now, to leverage these assets, we update the <font size="2" face="Courier New">Web.Config</font> file to include an <font size="2" face="Courier New">&lt;elmah&gt; ... &lt;/elmah&gt;</font> section that specifies our custom error log (and also allows remote access to the handler:</p>
+
+<pre class="code"><span style="color: blue">&lt;</span><span style="color: #a31515">elmah</span><span style="color: blue">&gt;
+  &lt;</span><span style="color: #a31515">security </span><span style="color: red">allowRemoteAccess</span><span style="color: blue">=</span>&quot;<span style="color: blue">yes</span>&quot; <span style="color: blue">/&gt;
+  &lt;</span><span style="color: #a31515">errorLog </span><span style="color: red">type</span><span style="color: blue">=</span>&quot;<span style="color: blue">WebRole1.TableErrorLog, WebRole1</span>&quot; 
+            <span style="color: red">connectionString</span><span style="color: blue">=</span>&quot;<span style="color: blue">UseDevelopmentStorage=true</span>&quot; <span style="color: blue">/&gt;
+&lt;/</span><span style="color: #a31515">elmah</span><span style="color: blue">&gt;
+</span></pre>
+
+
+<p align="left">That’s all there’s to it!</p>
+
+<p align="left">Of course, there are many other ways you could define your <font size="2" face="Courier New">ErrorEntity</font> and implement the <font size="2" face="Courier New">TableErrorLog</font> (i.e. you could extract more details into additional entities within your table), but this way is pretty effective.</p>
+
+<p align="left">I hope this helps!</p>

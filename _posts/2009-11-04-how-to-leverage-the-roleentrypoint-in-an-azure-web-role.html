@@ -1,0 +1,77 @@
+--- 
+layout: post
+title: How to Leverage the RoleEntryPoint in an Azure Web Role
+categories: 
+- Architecture
+- Azure
+- Cloud
+- Windows Azure
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/bKaaLj
+  _sexybookmarks_permaHash: efb5cd31527d339394aa3799b1679648
+  dsq_thread_id: "609466512"
+---
+<p><a href="http://www.windowsazure.com/"><img style="border-right-width: 0px; margin: 0px 0px 5px 5px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Windows Azure" border="0" alt="Windows Azure" align="right" src="http://images.wadewegner.com/wordpress/2009/11/WindowsAzure.png" width="242" height="47" /></a> One of the advantages to the approach our teams building the Windows Azure Platform have taken is flexibility.&#160; Recently, when I spoke at the <a href="http://www.wadewegner.com/index.php/2009/10/16/presenting-on-the-windows-azure-platform-at-the-day-of-cloud/">Day of Cloud presentation</a>, I recall Don Schwarz from Google making these two points (you can see video of his talk <a href="http://www.blip.tv/file/2786812">here</a>):</p>  <ul>   <li>You can’t spin up your own threads in Google App Engine. </li>    <li>You build your applications according to how Google thinks your apps should be built (the argument being that Google knows how to run highly available services at scale, which I think is a fair statement). </li> </ul>  <p>Now to be fair, there are good reasons for this – the Google App Engine has a number of very good use cases (Don Schwarz demonstrated one of them when showing the audience a multiplayer game running on Google App Engine).</p>  <blockquote>   <p>Note: I’d like state for the record that I mean no criticism of other cloud vendors (i.e. Amazon, Google, and SalesForce).&#160; I think each of them have a place in the market, and exhibit various strengths.&#160; That said, I do believe that the Windows Azure Platform stands out as the only real platform that can bridge the chasm between cloud services and on-premises software. (Note to self: back this statement up in a future blog post.)</p> </blockquote>  <p>I would argue, however, that most enterprise developers require a little more flexibility when building out enterprise class applications.&#160; The Windows Azure Platform provides this flexibility (I mean, come on – sometimes you just want to execute some native code!).</p>  <p>I decided to test how far I could take this flexibility in Windows Azure.</p>  <p>I am a big fan of <a href="http://msdn.microsoft.com/en-us/library/dd179341.aspx">Worker Roles</a> in Windows Azure.&#160; I really like the idea of having an asynchronous, “headless” service that’s working for me in the background.&#160; I wanted to see if I could spin up an equivalent to a Worker Role in a <a href="http://msdn.microsoft.com/en-us/library/dd179341.aspx">Web Role</a>, so that in addition to having my Web application running in a Web Role I could also get a service running in the background.</p>  <p>Why would I want to do this?&#160; Well, here are a few of reasons:</p>  <ul>   <li>Asynchronous logging service running in every Azure instance (whether a web or worker role); this service might take information from the event log and write it to an Azure table. </li>    <li>Clean-up operations (i.e. temporary scratch writes, etc.) </li>    <li>Opening and managing socket connections to the service bus (this is my favorite scenario). </li> </ul>  <p>The list could go on.&#160; Hopefully you get the point.</p>  <p>So, how would you do this?&#160; Again, given the flexibility of the platform, there are many ways you can do this.&#160; Below you’ll find one simple way.</p>  <p>1. Create a new cloud services project, and add a web role.</p>  <p>2. Create a new class and inherit from <font face="Courier New">Microsoft.ServiceHosting.ServiceRuntime.RoleEntryPoint</font>.&#160; You'll have to override the <font face="Courier New">Start</font> and <font face="Courier New">RoleStatus</font> methods.</p>  <pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #ffffff; min-height: 40px; padding-left: 5px; width: 500px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">using</span> Microsoft.ServiceHosting.ServiceRuntime;
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">using</span> System.Threading;
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">namespace</span> Web
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">public</span> <span style="color: #0000ff">class</span> MyWebWorkerRole : RoleEntryPoint
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    {
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">public</span> <span style="color: #0000ff">override</span> <span style="color: #0000ff">void</span> Start()
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        {
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">            <span style="color: #0000ff">while</span> (<span style="color: #0000ff">true</span>)
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">            {
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">                RoleManager.WriteToLog(&quot;<span style="color: #8b0000">Information</span>&quot;, &quot;<span style="color: #8b0000">The worker role is running.</span>&quot;);
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">                Thread.Sleep(5000);
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">            }
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        }
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">public</span> <span style="color: #0000ff">override</span> RoleStatus GetHealthStatus()
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        {
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">            <span style="color: #0000ff">return</span> RoleStatus.Healthy;
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        }
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    }
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}</pre></pre>
+
+<p>3. Create a Global.asax page.</p>
+
+<p>4. Create a method where you initialize and start and initialize your class that inherits from RoleEntryPoint.</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #ffffff; min-height: 40px; padding-left: 5px; width: 500px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">private</span> <span style="color: #0000ff">void</span> StartWorkerRole()
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    MyWebWorkerRole myWebWorkerRole = <span style="color: #0000ff">new</span> MyWebWorkerRole();
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    myWebWorkerRole.Initialize();
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    myWebWorkerRole.Start();
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}</pre></pre>
+
+<p>5. Create local threading variables that you will use to run your method.</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #ffffff; min-height: 40px; padding-left: 5px; width: 500px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">public</span> <span style="color: #0000ff">class</span> Global : System.Web.HttpApplication
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    System.Threading.ThreadStart ts;
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    System.Threading.Thread t;
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"></pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    ...</pre></pre>
+
+<p>5. Update the Application_BeginRequest method to invoke your method on a new thread.&#160; Be sure and check to see if the thread is already running, otherwise it will get started multiple times.</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #ffffff; min-height: 40px; padding-left: 5px; width: 500px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">protected</span> <span style="color: #0000ff">void</span> Application_BeginRequest(<span style="color: #0000ff">object</span> sender, EventArgs e)
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">if</span> (t == <span style="color: #0000ff">null</span>)
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    {
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        ts = <span style="color: #0000ff">new</span> System.Threading.ThreadStart(StartWorkerRole);
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        t = <span style="color: #0000ff">new</span> System.Threading.Thread(ts);
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        t.Start();
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    }
+</pre><pre style="background-color: #ffffff; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}</pre></pre>
+
+<p>And that should do it.&#160; Now you have a class that will run asynchronously in all your Web Role instances.&#160; And since it inherits from the RoleEntryPoint, you can leverage this technique for both your Web and Worker Role instances.&#160; I’d recommend placing this class in a separate class library and adding a reference to it from your various projects.</p>
+
+<blockquote>
+  <p>Note: It is highly probable that there will be some changes to the APIs and assemblies come PDC.&#160; While these concepts will stay valid, the underlying code will probably change.&#160; If this happens, I’ll be sure and provide an update.</p>
+</blockquote>
+
+<p>I hope this helps!</p>

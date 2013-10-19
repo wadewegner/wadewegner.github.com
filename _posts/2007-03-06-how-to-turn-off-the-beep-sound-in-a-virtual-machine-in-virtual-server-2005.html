@@ -1,0 +1,28 @@
+--- 
+layout: post
+title: How to turn off the beep sound in a virtual machine in Virtual Server 2005
+categories: 
+- Virtual Server 2005
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/cE4emE
+  _sexybookmarks_permaHash: 24094d371ff77d8ae515e436d4f6f2b8
+  dsq_thread_id: "609465987"
+---
+<p>Since I use virtual machines (VMs) for development, I often find myself having to turn off the beep service on my VMs, or risk the rather of my neighbors.&nbsp; There are a couple of ways to do this:</p>
+<p>1. Stop the beep on/off for the particular session.&nbsp; Obviously, the problem with this is that once you restart your machine, the beep service will restart.&nbsp; Nevertheless, you can type the the following at the command line:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p><font face="Courier New">net stop beep</font></p></blockquote>
+<p dir=ltr>and ...</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p><font face="Courier New">net start beep</font></p></blockquote>
+<p>2. Turn off the beep service.&nbsp; This will turn it off even after it is rebooted (make sure you get the spacing exact -- it actually matters!):</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p><font face="Courier New">sc config beep start= disabled </font></p></blockquote>
+<p>Note: I think that if you turn off the beep service it won't take effect until after a reboot.&nbsp; Consequently, I recommend doing using the <font face="Courier New">net stop beep</font> after you turn off the service.</p>
+<p>I believe that you can also accomplish this by modifying the registry, but I've never had to do that (these methods always work), so you'll have to look elsewhere to find out more.</p>
+<p>Best of luck!</p>

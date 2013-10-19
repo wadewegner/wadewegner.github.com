@@ -1,0 +1,63 @@
+--- 
+layout: post
+title: Outsourcing User Authentication in a Windows Phone Application
+categories: 
+- Access Control Service
+- NuGet
+- Windows Azure
+- Windows Phone
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _topsy_long_url: http://www.wadewegner.com/2011/11/outsourcing-user-authentication-in-a-windows-phone-application/
+  topsy_short_url: http://bit.ly/t07aba
+  _edit_last: "1"
+  dsq_thread_id: "609466401"
+---
+<p>Yesterday I shared all the <a href="http://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/" target="_blank">NuGet packages we’re building</a> to make it easy to build Windows Phone and Windows Azure applications. Today I wanted to share how easy it is to build a Windows Phone application that leverages the <a href="http://www.microsoft.com/windowsazure/features/accesscontrol/" target="_blank">Windows Azure Access Control service</a>.</p>  <p>The <strong>Phone.Identity.AccessControl.BasePage</strong> NuGet package includes a control for Window Phone that allows your phone applications to outsource user authentication to the Windows Azure Access Control service (ACS). This service enables your users to login by reusing their existing accounts from identity providers such as Windows Live ID, Google, Yahoo, Facebook, and even Active Directory. If you want to know more about ACS you can take a look at the dedicated hands-on labs in the <a href="http://msdn.microsoft.com/gg271268">Windows Azure Platform Training Course</a>.</p>  <p>Using this NuGet package and the included control for ACS in your Windows Phone applications takes care of all the runtime interactions with ACS. Additionally, this package provides a base login page that uses the control and is easy to setup in your phone application. All that is left for you to do is to configure your ACS namespace via the management portal (i.e. specifying your preferences such as the identity providers you want to enable in your application) and integrate the login page into your existing Windows Phone application.</p>  <p>For more information on setting up ACS take a look at the resources at <a href="http://acs.codeplex.com/">http://acs.codeplex.com/</a></p>  <p>To help simplify the process below, I’m making the assumption you already have ACS setup and configured. I’ll be using the following values in the below sample (no guarantee that they’ll be available when you read this post but I’ll do my best):</p>  <ul>   <li><strong>namespace</strong>: watwindowsphone </li>    <li><strong>realm</strong>: uri:watwindowsphone </li> </ul>  <p>Without further ado, here are the steps to build a Windows Phone application that outsources authentication to ACS:</p>  <ol>   <li>Create a new <strong>Windows Phone OS 7.1</strong> application.       <br /><img style="background-image: none; border-right-width: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="WindowsPhoneOS71" border="0" alt="WindowsPhoneOS71" src="http://images.wadewegner.com/wordpress/2011/11/WindowsPhoneOS71.jpg" width="527" height="249" /> </li>    <li>From the <strong>Package Manager Console</strong> type the following to install the ACS base login page NuGet package for Windows Phone: <span style="font-family: courier new">Install-Package Phone.Identity.AccessControl.BasePage        <br /><img style="background-image: none; border-right-width: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="InstallPackage" border="0" alt="InstallPackage" src="http://images.wadewegner.com/wordpress/2011/11/InstallPackage.jpg" width="758" height="236" /></span> </li>    <li>Update the <strong>AccessControlResources.xaml </strong>resources file to use your ACS namespace and the realm you have configured.       <pre class="code">    <span style="color: blue">&lt;</span><span style="color: #a31515">system</span><span style="color: blue">:</span><span style="color: #a31515">String </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Key</span><span style="color: blue">=&quot;acsNamespace&quot;&gt;</span><span style="color: #a31515">watwindowsphone</span><span style="color: blue">&lt;/</span><span style="color: #a31515">system</span><span style="color: blue">:</span><span style="color: #a31515">String</span><span style="color: blue">&gt;
+    &lt;</span><span style="color: #a31515">system</span><span style="color: blue">:</span><span style="color: #a31515">String </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Key</span><span style="color: blue">=&quot;realm&quot;&gt;</span><span style="color: #a31515">uri:watwindowsphone</span><span style="color: blue">&lt;/</span><span style="color: #a31515">system</span><span style="color: blue">:</span><span style="color: #a31515">String</span><span style="color: blue">&gt;
+</span></pre>
+    </li>
+
+  <li>Update the<strong> WMAppManifest.xml</strong> file so that the default page is the <strong>LoginPage.xaml</strong>. This way the user will come to the login page before the <strong>MainPage.xaml</strong>.<img style="background-image: none; border-right-width: 0px; margin: 10px 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="WMAManifiest" border="0" alt="WMAManifiest" src="http://images.wadewegner.com/wordpress/2011/11/WMAManifiest.jpg" width="694" height="281" /> </li>
+
+  <li>Update the <strong>LoginPage.xaml.cs</strong> so that the user is navigated to the <strong>MainPage.xaml </strong>upon successfully logging into the application. Make sure to update <strong>Line 23 </strong>and <strong>Line 33</strong>. 
+
+    <pre class="code"><span style="color: blue"> this</span>.NavigationService.Navigate(<span style="color: blue">new </span><span style="color: #2b91af">Uri</span>(<span style="color: #a31515">&quot;/MainPage.xaml&quot;</span>, <span style="color: #2b91af">UriKind</span>.Relative));</pre>
+  </li>
+
+  <li>Let’s display some information from the Simple Web Token. Add a <strong>TextBlock</strong> control to the <strong>MainPage.xaml </strong>page.&#160; <pre class="code">    <span style="color: green">&lt;!--ContentPanel - place additional content here--&gt;
+    </span><span style="color: blue">&lt;</span><span style="color: #a31515">Grid </span><span style="color: red">x</span><span style="color: blue">:</span><span style="color: red">Name</span><span style="color: blue">=&quot;ContentPanel&quot; </span><span style="color: red">Grid.Row</span><span style="color: blue">=&quot;1&quot; </span><span style="color: red">Margin</span><span style="color: blue">=&quot;12,0,12,0&quot;&gt;
+        &lt;</span><span style="color: #a31515">TextBlock </span><span style="color: red">Name</span><span style="color: blue">=&quot;DisplayLoginInfo&quot; /&gt;
+    &lt;/</span><span style="color: #a31515">Grid</span><span style="color: blue">&gt;
+</span></pre>
+    </li>
+
+  <li>Add a Loaded event for the <strong>MainPage.xaml</strong>. In this event you’ll want to load the <strong>simpleWebTokenStore</strong> out of the application resources. You can then use it to grab resources like the name identifier or various other claim types (like Name). Finish by updating the <strong>DisplayLoginInfo</strong>textblock. 
+
+    <pre class="code"><span style="color: blue">    using </span>Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl;
+
+    ...
+
+<span style="color: blue">    var </span>simpleWebTokenStore = <span style="color: #2b91af">Application</span>.Current.Resources[<span style="color: #a31515">&quot;swtStore&quot;</span>]
+        <span style="color: blue">as </span><span style="color: #2b91af">SimpleWebTokenStore</span>;
+
+<span style="color: blue">    var </span>userNameIdentifier = simpleWebTokenStore.SimpleWebToken.NameIdentifier;
+<span style="color: blue">    var </span>name = simpleWebTokenStore.SimpleWebToken.Claims[<span style="color: #2b91af">ClaimTypes</span>.Name];
+
+<span style="color: blue">    this</span>.DisplayLoginInfo.Text =
+        <span style="color: #a31515">&quot;Identifier: &quot; </span>+ userNameIdentifier + <span style="color: #2b91af">Environment</span>.NewLine +
+        <span style="color: #a31515">&quot;Name: &quot; </span>+ name;</pre>
+  </li>
+
+  <li>Run the application. I’d recommend using Facebook, Google, or Yahoo! for the identity providers, as Live ID does not provide the name claim type in the SWT token.<img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="LoginExperience" border="0" alt="LoginExperience" src="http://images.wadewegner.com/wordpress/2011/11/LoginExperience.jpg" width="757" height="426" /> </li>
+</ol>
+
+<p>And that’s it! You can now take advantage of the Identifier claim (and others) in your phone application for many things – tracking users, displaying additional user information, and so forth. Additionally, you can use these claims to authenticate against additional services running in Windows Azure – I’ll cover this token in a future post.</p>
+
+<p>The <strong>Phone.Identity.AccessControl.BasePage </strong>NuGet package makes it really easy for you to take advantage of the Windows Azure Access Control service within your applications. ACS provides a great way for you to leverage your users existing identity providers when using your application.</p>
+
+<p>I hope this helps!</p>

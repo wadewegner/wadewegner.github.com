@@ -1,0 +1,45 @@
+--- 
+layout: post
+title: A Few Tips on Getting Started with Force.com
+categories: 
+- Force.com
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _wpas_done_all: "1"
+  _topsy_long_url: http://www.wadewegner.com/2013/03/a-few-tips-on-getting-started-with-salesforce-com/
+  topsy_short_url: http://bit.ly/XYPjNC
+  dsq_thread_id: "1126025976"
+  _edit_last: "1"
+---
+Today I got the opportunity to attend a Salesforce.com “hack day” in San Francisco. Quite fun, and I learned a lot from <a href="https://twitter.com/adamse" target="_blank">Adam Seligman</a>, <a href="https://twitter.com/dcarroll" target="_blank">Dave Carroll</a>, <a href="https://twitter.com/metadaddy" target="_blank">Pat Patterson</a>, and <a href="https://twitter.com/akhileshgupta" target="_blank">Akhilesh Gupta</a>. This is a great team: extremely personable, clearly excited about their platform and the technology, and willing to pull up their sleeves and write some code. My kind of people.
+
+During the hack day I acquired a few tips for getting started. Nothing earthshattering but useful nonetheless.
+<ol>
+	<li>Setup a <a href="http://www.developerforce.com/events/regular/registration.php" target="_blank">developer account</a>. It’s quick, easy, and free. You can get a lot of them.</li>
+	<li>Don’t use your production account for development. This may sound trite but I can tell you from first-hand experience that you don’t want to start hacking in production. The Salesforce.com development lifecycle has process for <a href="http://www.salesforce.com/us/developer/docs/dev_lifecycle/Content/deploy.htm" target="_blank">deploying from one environment to another</a>. Use it. Today I didn’t follow this advice and it cost me quite a bit of time. See tip #1 for getting a proper developer account.</li>
+	<li>Simplify the password requirements for your developer account. First, under your name, choose <strong>Setup</strong>.<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb.png" width="198" height="171" border="0" /></a>
+
+Then type “password” in the search box and click <strong>Password Policies</strong>.
+
+<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_3.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb_3.png" width="209" height="118" border="0" /></a>
+
+Choose some less restrictive policies. It’s up to you – personally, I don’t want my developer account password expiring all the time. <strong>Note</strong>: I do not recommend you do this on your production account.
+
+<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_4.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb_4.png" width="572" height="260" border="0" /></a></li>
+	<li>Change the default <strong>IP Restrictions</strong>. Again, for my developer account, I don’t want the platform continually challenging me if I log in from different places. After you browse to <strong>Setup</strong> search for <strong>Profile</strong>. Click on <strong>Profiles</strong>.<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_5.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb_5.png" width="205" height="162" border="0" /></a>
+
+Scroll down until your see <strong>System Administrators</strong> and select it.
+
+<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_6.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb_6.png" width="590" height="42" border="0" /></a>
+
+Scroll down to <strong>IP Address Ranges</strong> and click <strong>New</strong>. Enter default ranges 0.0.0.0 to 255.255.255.255 and click <strong>Save</strong>.
+
+<a href="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_7.png"><img style="background-image: none; padding-left: 0px; padding-right: 0px; display: inline; padding-top: 0px; border: 0px;" title="image" alt="image" src="http://www.wadewegner.com/wp-content/uploads/A-Few-Tips-on-Getting-Started-with-S.com_E309/image_thumb_7.png" width="958" height="137" border="0" /></a></li>
+</ol>
+That’s all for now. For those of you who are pro’s on the platform this is likely not new or exciting. I’m sure there are more tips I’ll learn over time and, when I do, I’ll try to update this list.
+
+I hope this helps!

@@ -1,0 +1,47 @@
+--- 
+layout: wpcf7_contact_form
+title: Contact
+categories: []
+
+tags: []
+
+status: publish
+type: wpcf7_contact_form
+published: true
+meta: 
+  _old_cf7_unit_id: "1"
+  _form: |-
+    <p>Your Name (required)<br />
+        [text* your-name] </p>
+    
+    <p>Your Email (required)<br />
+        [email* your-email] </p>
+    
+    <p>Subject<br />
+        [text your-subject] </p>
+    
+    <p>Your Message<br />
+        [textarea your-message] </p>
+    
+    <p>[submit "Send"]</p>
+    
+    [captchac captcha-1] [captchar captcha-1]
+  _mail: |-
+    a:7:{s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:26:"[your-name] <[your-email]>";s:4:"body";s:173:"From: [your-name] <[your-email]>
+    Subject: [your-subject]
+    
+    Message Body:
+    [your-message]
+    
+    --
+    This mail is sent via contact form on Wade Wegner http://www.wadewegner.com";s:9:"recipient";s:20:"wade.wegner@live.com";s:18:"additional_headers";s:0:"";s:11:"attachments";s:0:"";s:8:"use_html";s:0:"";}
+  _mail_2: |-
+    a:8:{s:6:"active";s:0:"";s:7:"subject";s:14:"[your-subject]";s:6:"sender";s:26:"[your-name] <[your-email]>";s:4:"body";s:112:"Message body:
+    [your-message]
+    
+    --
+    This mail is sent via contact form on Wade Wegner http://www.wadewegner.com";s:9:"recipient";s:12:"[your-email]";s:18:"additional_headers";s:0:"";s:11:"attachments";s:0:"";s:8:"use_html";s:0:"";}
+  _messages: a:14:{s:12:"mail_sent_ok";s:43:"Your message was sent successfully. Thanks.";s:12:"mail_sent_ng";s:84:"Failed to send your message. Please try later or contact administrator by other way.";s:17:"akismet_says_spam";s:84:"Failed to send your message. Please try later or contact administrator by other way.";s:16:"validation_error";s:74:"Validation errors occurred. Please confirm the fields and submit it again.";s:12:"accept_terms";s:35:"Please accept the terms to proceed.";s:13:"invalid_email";s:28:"Email address seems invalid.";s:16:"invalid_required";s:31:"Please fill the required field.";s:17:"captcha_not_match";s:31:"Your entered code is incorrect.";s:23:"quiz_answer_not_correct";s:27:"Your answer is not correct.";s:13:"upload_failed";s:22:"Failed to upload file.";s:24:"upload_file_type_invalid";s:30:"This file type is not allowed.";s:21:"upload_file_too_large";s:23:"This file is too large.";s:23:"upload_failed_php_error";s:38:"Failed to upload file. Error occurred.";s:4:"spam";s:93:"Failed to send your message. Please try later or contact the administrator by another method.";}
+  _additional_settings: ""
+---
+

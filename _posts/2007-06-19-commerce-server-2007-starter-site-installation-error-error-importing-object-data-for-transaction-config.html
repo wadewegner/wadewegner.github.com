@@ -1,0 +1,52 @@
+--- 
+layout: post
+title: "Commerce Server 2007 Starter Site installation error: Error importing object data for Transaction Config"
+categories: 
+- Commerce Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/b0vpD5
+  _sexybookmarks_permaHash: 6447bb55f8541eb1dfa6273521b31719
+  dsq_thread_id: "609465106"
+---
+<p>During the installation of the Commerce Server 2007 Starter Site, I received the following error in the Pup.log file:</p>
+<blockquote>
+<p><font face="Courier New">[10:57:50] Error importing object data for Transaction Config from file C:Documents and SettingsAdministratorLocal SettingsTempTransaction Config 8004E024:COM+ activation failed because the activation could not be completed in the specified amount of time. (Exception from HRESULT: 0x8004E024)</font></p></blockquote>
+<p>I also saw the following error in the Application Log, written at the exact same time:</p>
+<blockquote>
+<p><font face="Courier New">Failed to import orders configuration data. System.Runtime.InteropServices.COMException (0x8004E024): COM+ activation failed because the activation could not be completed in the specified amount of time. (Exception from HRESULT: 0x8004E024)<br />&nbsp;&nbsp; at System.Runtime.InteropServices.Marshal.ThrowExceptionForHRInternal(Int32 errorCode, IntPtr errorInfo)<br />&nbsp;&nbsp; at System.EnterpriseServices.Thunk.Proxy.CoCreateObject(Type serverType, Boolean bQuerySCInfo, Boolean&amp; bIsAnotherProcess, String&amp; uri)<br />&nbsp;&nbsp; at System.EnterpriseServices.ServicedComponentProxyAttribute.CreateInstance(Type serverType)<br />&nbsp;&nbsp; at System.Runtime.Remoting.Activation.ActivationServices.IsCurrentContextOK(Type serverType, Object[] props, Boolean bNewObj)<br />&nbsp;&nbsp; at Microsoft.CommerceServer.Orders.DataManagement.ServerOrderSystem.ImportRegionCodes(String txnConfigResourceConnectionString, DataTable regionCodesTable)<br />&nbsp;&nbsp; at Microsoft.CommerceServer.Orders.DataManagement.ServerOrderSystem.ImportConfigurationData(Stream stream, String txnConfigResourceConnectionString) </font>
+<p><font face="Courier New">For more information, see Help and Support Center at http://go.microsoft.com/fwlink/events.asp.</font></p></blockquote>
+<p>I should note that, rather than install the Starter Site to a virtual directory under the Default Web Site, I decided to create a new Web site to which I installed the Starter Site.&nbsp; The reason I did this is I already had the CSharpSite installed to the Default Web site, and I didn't want the two sites interfering with each other.</p>
+<p>Also, to provide other information regarding this installation (just to show I'm not making an obvious mistake):</p>
+<ul>
+<li>I ran it as the local Administrator account; full access to the system and SQL Server
+<li>Windows Server 2003 Standard R2; SQL Server 2005 Standard SP2; Commerce Server 2007 Developer edition
+<li>All hot fixes have been applied to the O/S
+<li>Instructions provided by the <a href="http://go.microsoft.com/fwlink/?LinkId=71818" target=_blank>Commerce Server 2007 Start Site Installation Guide</a> were followed
+<li>The CSharpSite was previously installed successfully
+<li>Everything is running locally (CS 2007, SQL Server 2005, BizTalk 2006), so it's not as if DTC (or some nefarious networking issue) is causing problems</li></ul>
+<p>This was the only error I received during the installation.&nbsp; I took note of it, then continued onward.</p>
+<p>Lo and behold, when I went to test the installation of the Starter Site, I received the following error:</p>
+<blockquote>
+<p>The specified value for the newOrderStatus attribute is not valid.&nbsp; The value provided was: 'NewOrder'. Please make sure an entry for this value exists in the AllowedStatus table in the transaction config database. </p></blockquote>
+<p>So, I decided to investigate.&nbsp; Sure enough, the tables in the StarterSite_transactionconfig database were empty.&nbsp; Specifically, the AllowedStatus, RegionCodes, and StatusManager tables did not contain any data.&nbsp; So, I created scripts based on the data contained in these tables in the CSharpSite_transactionconfig database (which installed without any problems).</p>
+<p><strong>[Update] Note: see below for the actual resolution to this problem.&nbsp; Although the following steps will correctly resolve the problem, there's a better way.</strong></p>
+<p>For example, here's the script generated for the AllowedStatus table (it's a bit more extensive for the RegionCodes table --&nbsp;e-mail me if you need a copy of the script):</p>
+<blockquote>
+<p><font face="Courier New">INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('Cancelled')<br />INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('InProcess')<br />INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('NewOrder')<br />INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('Rejected')<br />INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('Shipped')<br />INSERT INTO [StarterSite_transactionconfig].[dbo].[AllowedStatus] ([Status]) VALUES ('Submitted')</font></p></blockquote>
+<p>After inserting the missing data into these three tables, and running iisreset from the command-line, the Starter Site ran without any problems.
+<p>I still plan to try and investigate the underlying cause of the problem ... when I learn more, I'll update this post.&nbsp; At the very least, I wanted to post this solution.
+<p>I hope this helps!
+<p><strong>[Update] The <em>actual</em> solution to this problem.</strong>
+<p>Shortly after going through the previous steps, I performed the <a href="http://www.google.com/search?hl=en&amp;rls=com.microsoft%3Aen-us%3AIE-SearchBox&amp;rlz=1I7GGIG&amp;q=commerce+server+%22COM%2B+activation+failed+because+the+activation+could+not+be+completed+in+the+specified+amount+of+time.%22" target=_blank>this Google search</a> and noticed the following in the <a href="http://download.microsoft.com/download/3/a/4/3a46267f-9640-4623-86a1-c63bbfea9e1d/Microsoft%20Commerce%20Server%202007%20Readme.html" target=_blank>Commerce Server 2007 Readme file</a>:
+<blockquote>
+<p>Unpacking a site might not populate the AllowedStatus table<br />The following error message might occur in the site packager log file:
+<p>"8004E024:COM+ activation failed because the activation could not be completed in the specified amount of time. (Exception from HRESULT: 0x8004E024)"
+<p>This error message indicates that Commerce Server could not populate the AllowedStatus table in the transactionconfig database. To populate the AllowedStatus table, open SQL Server Management Studio (open SQL Query Analyzer if you are using SQL Server 2000), and run the regiondata SQL script against the transactionconfig database. The regiondata script is located at %COMMERCE_SERVER_ROOT%SDKSamplesSiteCreate.</p></blockquote>
+<p>So, it appears to be a known issue (previously unknown to me, though!) and easy to resolve!
+<p>What's the moral of this story?&nbsp; Make sure to <em>thoroughly</em> research errors before you try to hack the solution&nbsp;yourself (or blog about it), even if you accidentally get the resolution correct.
+<p>I hope this saves someone the 30 minutes it cost me!</p>

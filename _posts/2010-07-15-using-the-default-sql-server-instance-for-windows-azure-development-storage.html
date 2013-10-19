@@ -1,0 +1,39 @@
+--- 
+layout: post
+title: Using the default SQL Server instance for Windows Azure development storage
+categories: 
+- SQL Server
+- Windows Azure
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  disable_wpautop: "0"
+  disable_wptexturize: "0"
+  disable_convert_chars: "0"
+  disable_convert_smilies: "0"
+  dsq_thread_id: "609464628"
+---
+<p>This tip isn’t new, but it’s still useful.&#160; I found myself building a new development box this week, and I didn’t want to use SQLExpress for the Windows Azure development storage.&#160; Instead, I wanted to use the default instance for SQL Server.</p>  <p>It’s pretty simple to do this – after you install the Windows Azure SDK and Tools, go to a command prompt and browse to the following folder: <font face="Courier New">C:Program FilesWindows Azure SDKv1.2bindevstore </font>(or wherever you installed the SDK).&#160; From there, use the DSInit.exe tool:</p>  <div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 10px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper">   <div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">     <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">DSInit.exe /sqlInstance:.</pre>
+</div>
+</div>
+
+<p></p>
+
+<p>Remember that the . is a reference to the default instance.&#160; If you want to target an instance name, you can use:
+  <br /></p>
+
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 10px 0px 10px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper">
+  <div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">
+    <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px">DSInit.exe /sqlInstance:YourInstanceName</pre>
+</div>
+</div>
+
+<p>Now you’ll see that</p>
+
+<p><img style="border-bottom: 0px; border-left: 0px; display: inline; border-top: 0px; border-right: 0px" title="DevelopmentStorageDb20090919" border="0" alt="DevelopmentStorageDb20090919" src="http://images.wadewegner.com/wordpress/2010/07/image2.png" width="273" height="192" /> </p>
+
+<p>Note: this tip is also helpful for when you get the error message “Failed to create database ‘DevelopmentStorageDb20090919’” during the automatic configuration of Windows Azure development storage.</p>

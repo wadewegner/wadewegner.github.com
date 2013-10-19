@@ -1,0 +1,149 @@
+--- 
+layout: post
+title: Using the UpdateProgress to lock down controls in the browser
+categories: 
+- .NET 3.5
+- AJAX
+- ASP.NET
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/cobbCb
+  _sexybookmarks_permaHash: 26410195595876b221c2693e5f89d2a4
+  dsq_thread_id: "609464634"
+---
+<p>Finally, back to some writing some code!&#160; Between writing my book and some of my more recent projects, I haven't had a chance to write a lot of code.</p>  <p>I'm currently porting a web-based timesheet application to an ASP.NET AJAX Futures Web Application with the .NET Framework 3.5.&#160; In writing the application, I'm trying to adhere to a number of practices:</p>  <ol>   <li>Separation of concerns </li>    <li>Test driven development (TDD) to support changing business requirements </li>    <li>Intuitive and fool proof user interface </li> </ol>  <p>It's because of #3 that I am going with an ASP.NET AJAX application.</p>  <p>ASP.NET AJAX uses an <font face="Courier New">UpdatePanel</font> control to support partial-page updates; essentially, controls contained within the <font face="Courier New">ContentTemplate</font> property can be updated without refreshing the entire page.&#160; The ASP.NET WebForm also contains a <font face="Courier New">ScriptManager</font> control which allows the <font face="Courier New">UpdatePanel</font> to participate in partial-page updates without requiring custom client script code.</p>  <p>The following code shows these controls working together:</p>  <pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #c71585">asp</span>:<span style="color: #800000">ScriptManager</span> <span style="color: #ff0000">ID</span>=<span style="color: #0000ff">&quot;ScriptManager1&quot;</span> <span style="color: #ff0000">runat</span>=<span style="color: #0000ff">&quot;server&quot;</span> <span style="color: #0000ff">/&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #800000">div</span> <span style="color: #ff0000">id</span>=<span style="color: #0000ff">&quot;main&quot;</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;</span><span style="color: #c71585">asp</span>:<span style="color: #800000">UpdatePanel</span> <span style="color: #ff0000">ID</span>=<span style="color: #0000ff">&quot;UpdatePanel1&quot;</span> <span style="color: #ff0000">runat</span>=<span style="color: #0000ff">&quot;server&quot;</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">&lt;</span><span style="color: #800000">ContentTemplate</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">            <span style="color: #0000ff">&lt;</span><span style="color: #c71585">asp</span>:<span style="color: #800000">Button</span> <span style="color: #ff0000">ID</span>=<span style="color: #0000ff">&quot;Button1&quot;</span> <span style="color: #ff0000">runat</span>=<span style="color: #0000ff">&quot;server&quot;</span> <span style="color: #ff0000">Text</span>=<span style="color: #0000ff">&quot;Button&quot;</span> <span style="color: #ff0000">OnClick</span>=<span style="color: #0000ff">&quot;Button1_Click&quot;</span> <span style="color: #0000ff">/&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">&lt;/</span><span style="color: #800000">ContentTemplate</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;/</span><span style="color: #c71585">asp</span>:<span style="color: #800000">UpdatePanel</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span></pre></pre>
+
+<p>Pretty simple.</p>
+
+<p>When the button is clicked, the page does not appear to postback; instead, the button click invokes an asynchronous postback in which the page updates are limited to the controls in the <font face="Courier New">UpdatePanel</font>.&#160; The server sends back HTML markup for only the affected elements to the browser.&#160; Within the browser, the client <font face="Courier New">PageRequestManager</font> class performs Document Object Model (DOM) manipulation to replace existing HTML with updated markup.</p>
+
+<p>Simple, but very cool stuff!&#160; What's nice with ASP.NET 3.5 and Visual Studio 2008 is that you don't have to install anything else in order to build ASP.NET AJAX applications -- it's already built in!</p>
+
+<p>Now, if it takes awhile for the server to process the postback (e.g. complex rules or badly written code &lt;grin&gt;), the user may not realize that the server is processing the request.&#160; This can lead to all kinds of issues with users that are not savvy or familiar with web applications (multiple clicks, moving off the page, etc.).&#160; Consequently, I want to tell the user that the server is processing the request <u>and</u> disable the controls on the page.&#160; Let's break this down into two steps: show a message, and disable the user's interaction with the controls.</p>
+
+<p>You can use the <font face="Courier New">UpdateProgress</font> control alone with the <font face="Courier New">UpdatePanel</font> to provide a message to the user during the postback.&#160; This is very simple -- put the <font face="Courier New">UpdateProgress</font> control within the <font face="Courier New">UpdatePanel</font> like so:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #c71585">asp</span>:<span style="color: #800000">UpdateProgress</span> <span style="color: #ff0000">ID</span>=<span style="color: #0000ff">&quot;UpdateProgress1&quot;</span> <span style="color: #ff0000">runat</span>=<span style="color: #0000ff">&quot;server&quot;</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;</span><span style="color: #800000">ProgressTemplate</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        Update in progress. Please wait ...
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;/</span><span style="color: #800000">ProgressTemplate</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;/</span><span style="color: #c71585">asp</span>:<span style="color: #800000">UpdateProgress</span><span style="color: #0000ff">&gt;</span></pre></pre>
+
+<p>This will display the &quot;Update in progress.&#160; Please wait ...&quot; message to the the user while the server is processing the request.&#160; However, it doesn't prevent the user from continuing to interact with the web application.&#160; To provide this type of functionality, we will use the <font face="Courier New">PageRequestManager</font> to invoke some JavaScript while also using CSS and DHTML to lock down the UI.</p>
+
+<p>First, we'll add a little more to our <font face="Courier New">UpdateProgress</font> control:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #800000">ProgressTemplate</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;</span><span style="color: #800000">div</span> <span style="color: #ff0000">id</span>=<span style="color: #0000ff">&quot;blur&quot;</span><span style="color: #0000ff">&gt;</span>&amp;nbsp;<span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;</span><span style="color: #800000">div</span> <span style="color: #ff0000">id</span>=<span style="color: #0000ff">&quot;progress&quot;</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        Update in progress. Please wait ...
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">&lt;/</span><span style="color: #800000">div</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">ProgressTemplate</span><span style="color: #0000ff">&gt;</span></pre></pre>
+
+<p><a href="http://11011.net/software/vspaste"></a></p>
+
+<p>We'll use the &quot;blur&quot; and &quot;progress&quot; controls to <em>overlay </em>the controls in the UI while also providing a message to the user.&#160; To provide the functionality we require, we need to use the following CSS elements:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #800000">#blur</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">width</span>: <span style="color: #0000ff">100%</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">background-color</span>: <span style="color: #0000ff">black</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">moz-opacity</span>: <span style="color: #0000ff">0.5</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">khtml-opacity</span>: <span style="color: #0000ff">.5</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">opacity</span>: <span style="color: #0000ff">.5</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">filter</span>: <span style="color: #0000ff">alpha(opacity=50)</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">z-index</span>: <span style="color: #0000ff">120</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">height</span>: <span style="color: #0000ff">100%</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">position</span>: <span style="color: #0000ff">absolute</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">top</span>: <span style="color: #0000ff">0</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">left</span>: <span style="color: #0000ff">0</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #800000">#progress</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">z-index</span>: <span style="color: #0000ff">200</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">background-color</span>: <span style="color: #0000ff">White</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">position</span>: <span style="color: #0000ff">absolute</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">top</span>: <span style="color: #0000ff">0pt</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">left</span>: <span style="color: #0000ff">0pt</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">border</span>: <span style="color: #0000ff">solid 1px black</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">padding</span>: <span style="color: #0000ff">5px 5px 5px 5px</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #ff0000">text-align</span>: <span style="color: #0000ff">center</span>;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}</pre></pre>
+
+<p><a href="http://11011.net/software/vspaste"></a><a href="http://11011.net/software/vspaste"></a><a href="http://11011.net/software/vspaste"></a></p>
+
+<p>The purpose of the &quot;blur&quot; control is to provide a tag that lays over everything in the browser.&#160; Since the opacity is 0.5 (and 50), it appears gray while allowing the user to continue to see the controls behind it.&#160; However, since the &quot;blur&quot; control exists between the user and the other controls, the user cannot interact with any other controls.</p>
+
+<p>Now, the tricky thing is that we need to run a JavaScript function to manipulate the size and positioning of the &quot;blur&quot; and &quot;progress&quot; controls; essentially, we want the &quot;blur&quot; to cover 100% of the browser window, and the &quot;progress&quot; to sit in a box in the center.&#160; The key part is hooking in a JavaScript call to the initialization of the <font face="Courier New">PageRequestManager</font> request.&#160; To do this, you can add the following JavaScript <u>after</u> the <font face="Courier New">ScriptManager</font>:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #c71585">asp</span>:<span style="color: #800000">ScriptManager</span> <span style="color: #ff0000">ID</span>=<span style="color: #0000ff">&quot;ScriptManager1&quot;</span> <span style="color: #ff0000">runat</span>=<span style="color: #0000ff">&quot;server&quot;</span> <span style="color: #0000ff">/&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;</span><span style="color: #800000">script</span> <span style="color: #ff0000">language</span>=<span style="color: #0000ff">&quot;javascript&quot;</span> <span style="color: #ff0000">type</span>=<span style="color: #0000ff">&quot;text/javascript&quot;</span><span style="color: #0000ff">&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">&lt;!--
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">function</span> () {
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #008000">// code here</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    )
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #008000">// --&gt;</span>
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">&lt;/</span><span style="color: #800000">script</span><span style="color: #0000ff">&gt;</span></pre></pre>
+
+<p><a href="http://11011.net/software/vspaste"></a></p>
+
+<p>This JavaScript allows you to add JavaScript code that will process during the initialization of the postback -- a perfect place for us to grab the information we need.&#160; Here's what the complete code looks like:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Sys.WebForms.PageRequestManager.getInstance().add_initializeRequest(
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">function</span> () {
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    <span style="color: #0000ff">if</span> (<span style="color: #0000ff">document</span>.getElementById) {
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">var</span> progress = <span style="color: #0000ff">document</span>.getElementById('progress');
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">var</span> <span style="color: #0000ff">blur</span> = <span style="color: #0000ff">document</span>.getElementById('<span style="color: #0000ff">blur</span>');
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        progress.style.width = '300px';
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        progress.style.height = '30px';
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        <span style="color: #0000ff">blur</span>.style.height = <span style="color: #0000ff">document</span>.documentElement.clientHeight;
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        progress.style.<span style="color: #0000ff">top</span> = <span style="color: #0000ff">document</span>.documentElement.clientHeight/3 - progress.style.height.replace('px','')/2 + 'px';
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">        progress.style.left = <span style="color: #0000ff">document</span>.body.offsetWidth/2 - progress.style.width.replace('px','')/2 + 'px';
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    }
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">  }
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">)</pre></pre>
+
+<p><a href="http://11011.net/software/vspaste"></a></p>
+
+<p>The exact implementation isn't that important -- what I think is important is that you can hook into the <font face="Courier New">PageRequestManager</font> to invoke some JavaScript.</p>
+
+<p>Now, to help test, you can use <font face="Courier New">System.Threading</font> to make the button click sleep for two seconds:</p>
+
+<pre style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; min-height: 40px; padding-left: 5px; width: 490px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px"><span style="color: #0000ff">protected</span> <span style="color: #0000ff">void</span> Button1_Click(<span style="color: #0000ff">object</span> sender, EventArgs e)
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">{
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">    System.Threading.Thread.Sleep(2000);
+</pre><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">}</pre></pre>
+
+<p><a href="http://11011.net/software/vspaste"></a></p>
+
+<p>Okay, now to test.&#160; Here's the page prior to the postback:</p>
+
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_10.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_4.png" width="244" height="170" /></a></p>
+
+<p>Once the page is clicked, the experience changes to the following while the server is processing the request:</p>
+
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_18.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_8.png" width="244" height="170" /></a></p>
+
+<p>And yes, this works in Firefox too:</p>
+
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_16.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_7.png" width="244" height="168" /></a></p>
+
+<p>As I mentioned before, the &quot;blur&quot; and &quot;progress&quot; controls act as a screen over all the other controls, and since they are part of the <font face="Courier New">ProgressTemplate</font> these controls they are only active during server processing.&#160; You can confirm this by removing the <font face="Courier New">Sleep</font> method -- you won't even see you the &quot;blur&quot; and &quot;progress&quot; controls, as they are not needed.</p>
+
+<p>This is only one little part of what I'm trying to do with this new application -- hopefully you find it interesting!&#160; Of course, I hope you can make it all look a little prettier than what I threw together for this post!</p>
+
+<p>I hope this helps!</p>

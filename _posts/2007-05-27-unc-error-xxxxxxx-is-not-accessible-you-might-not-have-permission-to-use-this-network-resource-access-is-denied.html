@@ -1,0 +1,34 @@
+--- 
+layout: post
+title: "UNC error: XXXXXXX is not accessible. You might not have permission to use this network resource. Access is denied."
+categories: 
+- Windows Server 2003
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/cfxbQy
+  _sexybookmarks_permaHash: dd87994d6c18b9bb6cad4f414cd0c77b
+  dsq_thread_id: "610049739"
+---
+<p>Have you ever received the following error when you tried to access a UNC path?</p>
+<blockquote dir="ltr" style="margin-right: 0px;">
+<p><img src="http://images.wadewegner.com/wordpress/content/binary/UNCError.gif" border="0"></p>
+<p><em>XXXXXXX</em> is not accessible. You might not have permission to use this network resource. Access is denied.</p></blockquote>
+<p dir="ltr">I found that if I logged into some of our production servers, I was unable to connect to a UNC path on the file server (a different machine), even though I was able to access these resources locally.&nbsp; The only difference I could find was that in order to access the production servers I had to use a different login than my local login (e.g. my local login had acess to the file share, but not the login I used for the production boxes).&nbsp; And, as I do not have administrative rights in this domain (nor were any administrators available to assist) I couldn't change the rights to the file server to give my production user access.</p>
+<p dir="ltr">So, I needed to find a way to access the file share as my local account.&nbsp; Unfortunately, I couldn't log into the production server with my local account (a good thing, actually), and I couldn't get Explorer.exe to runas my local account while on the server.</p>
+<p dir="ltr">Then I decided to try and mount the share as a driver.&nbsp; Here are the steps I took:</p>
+<ol dir="ltr">
+<li>
+<div>Opened up My Computer, the click Tools --&gt; Map Network Drive ...</div>
+</li><li>
+<div>For the folder, specify your UNC share.&nbsp; Then, instead of clicking finish, click the "Connect using a different user name".<br /><br /><img src="http://images.wadewegner.com/wordpress/content/binary/UNCError2.gif" border="0"><br /></div>
+</li><li>
+<div>In the Connect As screen, specify your local account that has the ability to access the UNC share.<br /><br /><img src="http://images.wadewegner.com/wordpress/content/binary/UNCError3.gif" border="0"><br /></div>
+</li><li>
+<div>Click OK, then Finish.</div></li></ol>
+<p>These steps mount the UNC share using your local account.&nbsp; As a result, I was able to access the file server on the production server, which I previously hadn't been able to do.</p>
+<p>If you find yourself in a similar situation, these steps may provide you with a temporary work around.</p>
+<p>I hope this helps!</p>

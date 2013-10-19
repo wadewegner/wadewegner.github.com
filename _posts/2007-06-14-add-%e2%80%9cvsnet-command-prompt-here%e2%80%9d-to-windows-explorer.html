@@ -1,0 +1,27 @@
+--- 
+layout: post
+title: "Add \xE2\x80\x9CVS.NET Command Prompt Here\xE2\x80\x9D to Windows Explorer"
+categories: 
+- Scripts
+- Tools
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  dsq_thread_id: "949979521"
+---
+<p>I was browsing one of my new favorite websites, <a href="http://www.microsoft.com/technet/scriptcenter/scripts/default.mspx?mfr=true">Microsoft's Script Repository</a>, when I came upon the <a href="http://www.microsoft.com/technet/scriptcenter/scripts/desktop/explorer/dmexvb01.mspx">Add "Command Prompt Here" to Windows Explorer"</a> Web page.&nbsp; This script adds a "Command Prompt Here" command to the Windows Explorer system menu, so that if you select the command, a command window will open up in the same folder.&nbsp; Nifty, eh?&nbsp; Yes, I know, this has been around for quite awhile and is nothing new.&nbsp; But, with a little twist, this can become a lot more useful.</p>
+<p>Personally, I never use "cmd.exe" by itself.&nbsp; I always use the&nbsp;"Visual Studio 2005 Command Prompt", as it has all the useful and fun PATHs already added to it.&nbsp; So, with a small tweak to the script, we get the following enhancement:</p>
+<p><img src="http://images.wadewegner.com/wordpress/content/binary/VSNETCMD.GIF" border=0></p>
+<p>Very handy!</p>
+<p>Here's the script (it's so simple that I'm embarassed to share it!):</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p></p></blockquote>
+<div dir=ltr style="PADDING-RIGHT: 3px; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px; BACKGROUND-COLOR: white"><span style="FONT-SIZE: 11px; COLOR: black; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent"><span style="FONT-SIZE: 11px; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent">Set</span> objShell <span style="FONT-SIZE: 11px; COLOR: red; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent">=</span> <span style="FONT-SIZE: 11px; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent">CreateObject</span>(<span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"WScript.Shell"</span>)<br /><br />objShell.RegWrite <span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"HKCRFolderShellMenuTextCommand"</span>, _<br />&nbsp;&nbsp;&nbsp;&nbsp;<span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"cmd.exe ""C:Program FilesMicrosoft Visual Studio 8VCvcvarsall.bat"" x86 /k cd "</span> &amp; <span style="FONT-SIZE: 11px; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent">chr</span>(34) &amp; <span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"%1"</span> &amp; <span style="FONT-SIZE: 11px; COLOR: blue; FONT-FAMILY: Courier New; BACKGROUND-COLOR: transparent">chr</span>(34)<br />objShell.RegWrite <span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"HKCRFolderShellMenuText"</span>, <span style="FONT-SIZE: 11px; COLOR: #666666; FONT-FAMILY: Courier New; BACKGROUND-COLOR: #e4e4e4">"VS.NET Command Prompt Here"</span></span></div>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p></p></blockquote>
+<p dir=ltr>As I said, pretty simple, but oh so useful!</p>
+<p dir=ltr><a href="http://images.wadewegner.com/wordpress/content/binary/CommandPromptHere.vbs">CommandPromptHere.vbs (.29 KB)</a></p>
+<p dir=ltr>I hope this helps!</p>

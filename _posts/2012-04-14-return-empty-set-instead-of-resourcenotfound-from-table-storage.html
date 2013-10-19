@@ -1,0 +1,32 @@
+--- 
+layout: post
+title: Return Empty Set Instead of ResourceNotFound from Table Storage
+categories: 
+- Tables
+- Windows Azure
+- Windows Azure Storage
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _topsy_long_url: http://www.wadewegner.com/2012/04/return-empty-set-instead-of-resourcenotfound-from-table-storage/
+  topsy_short_url: http://bit.ly/IoLKUZ
+  dsq_thread_id: "851642640"
+---
+<p>This past week I’ve been working on a little project – amazing how less email equates to more time for other endeavors – and I was surprised when I received a <font size="2" face="Courier New">DataServiceQueryException</font> when querying table storage in the local storage emulator. I was querying based on partition and row keys and, if no data matched the statement, I received an <font size="2" face="Courier New">HTTP 404: Resource Not Found</font> exception.</p>  <p>I was initially puzzled. Shouldn’t I receive an empty set or null instead?</p>  <p>Of course, I had forgotten that this is by design. The <font size="2" face="Courier New">DataServiceContext</font> will throw a <font size="2" face="Courier New">DataServiceQueryException</font> if there’s no data to return. To receive an empty set it’s necessary to set the <font size="2" face="Courier New">IgnoreResourceNotFoundException</font> property to <font size="2" face="Courier New">true</font>.</p>  <p>Here’s a simplified version of the code:</p>  <pre class="code"><span style="color: blue">    string </span>connectionString = <span style="color: #a31515">&quot;UseDevelopmentStorage=true&quot;</span>;
+
+<span style="color: blue">    var </span>context = <span style="color: #2b91af">CloudStorageAccount</span>.Parse(connectionString)
+        .CreateCloudTableClient().GetDataServiceContext();
+
+    <font style="background-color: #ffff00">context.IgnoreResourceNotFoundException = <span style="color: blue">true</span>;</font>
+
+<span style="color: blue">    var </span>results = context.CreateQuery&lt;<span style="color: #2b91af">TableEntity</span>&gt;(<span style="color: #a31515">&quot;tableName&quot;</span>)
+        .Where(e =&gt; e.PartitionKey == partitionKey &amp;&amp; e.RowKey == rowKey).AsTableServiceQuery();
+
+<span style="color: blue">    var </span>key = results.FirstOrDefault();</pre>
+
+<p>Problem solved. No <font size="2" face="Courier New">DataServiceQueryException</font>!</p>
+
+<p>Something to keep in mind when working with the Windows Azure table storage service. I almost didn’t blog about but decided that it was worth a few minutes effort. Probably something to add to your Windows Azure development checklist (you have one, right?).</p>

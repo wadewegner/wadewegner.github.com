@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Adding a printer in Vista with UAC turned off
+categories: 
+- Rant
+- Windows Vista
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/aRusCv
+  _sexybookmarks_permaHash: 6845c9ad22a610f3a22219e863508f3b
+  dsq_thread_id: "948590979"
+---
+<p>One of the first things&nbsp;I do after installing Vista is turn off UAC (ooh, I can already feel the criticism).&nbsp; I just can abide having to authorize every single action I take on the computer.&nbsp; It's one thing to ask me to confirm a change to IIS or a service running on my machine, but don't make me authorize the deletion of files on the operating system!&nbsp; If I clicked delete and confirmed the deletion, just delete it!</p> <p>Previously, if you wanted to add a network printer that ran on Windows XP or 2003, you had to have UAC turned on.&nbsp; This means that I would have to turn on UAC, reboot my machine, add the printer, turn off UAC, and then reboot my machine again.&nbsp; Just to add a printer.&nbsp; Brilliant!</p> <p>Fortunately Microsoft just released two updates:</p> <ul> <li><a href="http://support.microsoft.com/?kbid=938979">Windows Vista Performance Update</a></li> <li><a href="http://support.microsoft.com/?kbid=938194">Windows Vista Reliability Update</a></li></ul> <p>The first of the two specifically addresses the following "issue":</p> <blockquote> <p><em>If User Account Control is disabled on the computer, you cannot install a network printer successfully. This problem occurs if the network printer is hosted by a Windows XP-based or a Windows Server 2003-based computer.</em></p></blockquote> <p>Finally!</p> <p>To test this, I installed both updates (rebooting after each on), and then attempted to add a network printer.&nbsp; Previously, clicking the Install driver button caused failed if UAC was turned off.</p> <p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1.jpg" atomicselection="true"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="73" alt="Adding a network printer in Vista" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1_thumb.jpg" width="240" border="0"></a></p> <p>After installing the updates, however, it works exactly as one would expect it to work.</p> <p>It only took six or seven months, but it seems this annoying "issue" was finally resolved.&nbsp; Thank goodness!</p>

@@ -1,0 +1,30 @@
+--- 
+layout: post
+title: Using AI to predict football outcomes
+categories: []
+
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/af8cWv
+  _sexybookmarks_permaHash: f78627d63354bdf2b923355798506c9f
+  dsq_thread_id: "956401291"
+---
+<p>In a <a href="http://www.wadewegner.com/PermaLink,guid,a50d0f5b-ecbe-4716-9276-9ec9cb7656a4.aspx">previous post</a>, I attempted to create a very simple artificial neural network (ANN)&nbsp;to predict the outcome of NFL games.&nbsp; I found that the approach I took was really no better than random guesses, as&nbsp;I had an average accuracy of 50%.</p>
+<p>Consequently, I decided upon a different approach.&nbsp; I used the same network architecture, but I added data which allowed the network to make more accurate predictions.&nbsp; This time, I used the following data:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>Week Number (1-17)<br />Away team Yards per Game differential<br />Away team Yards per Play differential<br />Away team First Downs per Game differential<br />Away team Time of Possession differential<br />Home team Yards per Game differential<br />Home team Yards per Play differential<br />Home team First Downs per Game differential<br />Home team Time of Possession differential<br />Bias (binary value of 1)</p>
+<p>Note: since originally writing this, I expanded the differentials.&nbsp; Essentially, I'm grabbing everyting from the <a href="http://www.nfl.com/stats/2006/regular">NFL stats page</a>&nbsp;(requires less work on my end) and creating differentials between the defense and offense.</p></blockquote>
+<p>A typically row pattern looks like this ...</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>01031033044044027029025049B</p></blockquote>
+<p>... where the first two characters represent the week number, the next three the away team&nbsp;yards per game, and so on.&nbsp; This value is then converted into a binary array (of 105 binary values), and added to a collection of binary arrays.&nbsp; This collection represents the training data.&nbsp; Each "pattern" is pushed throw the network and found to be either true (meaning the away team won) or false (meaning the away team lost).&nbsp; The error gradient is calculated, and then backpropogation (a subject for another post) refines the weights, and continues to try and get the data to converge.&nbsp; I decided it was practical to go to an RMSE value of .15 on the training data, before making the prediction.</p>
+<p>With this approach, I made predictions for week 11 (excluding week 11 data, of course) ten times, and averaged the values.&nbsp; I then compared it to the actual results of the game.&nbsp; I found the accuracy to be 81.25%, which means it made an accurate prediction 13 of 16 times!</p>
+<p>So, I decided to include week 12 again, and make predictions for week 13.&nbsp; Here are my predicted winners:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>St. Louis<br />* Atlanta<br />* Dallas<br />* New England<br />Indianapolis<br />* Jacksonville<br />* Cleveland<br />Minnesota<br />* N.Y. Jets<br />* San Diego<br />* New Orleans<br />* Pittsburgh<br />* Houston<br />* Seattle<br />Carolina</p>
+<p>* Accurately predicted!</p></blockquote>
+<p dir=ltr>So, for week 13, I have accurately predicted&nbsp;11 of the 15 games (73% accuracy)!&nbsp; This approach has MUCH more promise than the previous approach, yet isn't as good as I'd like it to be.&nbsp; I have some ideas one how to make this even MORE accurate!&nbsp; Stay tuned!</p>

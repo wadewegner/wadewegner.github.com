@@ -1,0 +1,22 @@
+--- 
+layout: post
+title: Managing the SecureString in the DataCacheSecurity Constructor
+categories: 
+- Caching
+- Windows Azure
+- Windows Azure AppFabric
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _edit_last: "1"
+  disable_wpautop: "1"
+  disable_wptexturize: "0"
+  disable_convert_chars: "0"
+  disable_convert_smilies: "0"
+  _wp_old_slug: ""
+  dsq_thread_id: "609465496"
+---
+<p>If you take a good look at the latest Release Notes for the <a href="http://www.wadewegner.com/2011/02/windows-azure-appfabric-ctp-february/" target="_blank">Windows Azure AppFabric CTP February Release</a> – or if you jump directly into the new SDK and try to <a href="http://www.wadewegner.com/2010/12/programmatically-configuring-the-caching-client/" target="_blank">programmatically configure the Caching client</a> – you’ll quickly discover that the <strong>DataCacheSecurity</strong> class now requires a <strong>System.Security.SecureString</strong> instead of a string.</p>  <p>The reason for this change in the <strong>DataCacheSecurity</strong> constructor is to reduce the time that an unencrypted string remains in memory.&#160; The expectation is that a user will read an authentication token in an encrypted file, and then construct the <strong>SecureString</strong> from it.</p>  <p>While this is well and good, it does make for some challenges when developing against the APIs.&#160; Consequently, you may want to create a method that takes your authorization token string and returns a <strong>SecureString</strong>.</p>  <blockquote>   <p><strong>Note</strong>: Only use this method when you don’t need the to ensure that the authorization token stays out of memory.&#160; In many ways, the below method defeats the purpose of <strong>SecureString</strong>.</p> </blockquote>  <p>Here’s what the method can look like:</p>  <p>   <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:13d10e60-5d64-49c9-82d3-85584e64360e" class="wlWriterEditableSmartContent"> <div class="le-pavsc-container"> <div class="le-pavsc-titleblock">Code Snippet</div> <div style="background: #ddd; overflow: auto"> <ol style="background: #ffffff; margin: 0 0 0 2.5em; padding: 0 0 0 5px;"> <li><span style="color:#0000ff">static</span> <span style="color:#0000ff">private</span> <span style="color:#2b91af">SecureString</span> createSecureString(<span style="color:#0000ff">string</span> token)</li> <li class="even">{</li> <li>    <span style="color:#2b91af">SecureString</span> secureString = <span style="color:#0000ff">new</span> <span style="color:#2b91af">SecureString</span>();</li> <li class="even">    <span style="color:#0000ff">foreach</span> (<span style="color:#0000ff">char</span> c <span style="color:#0000ff">in</span> token)</li> <li>    {</li> <li class="even">        secureString.AppendChar(c);</li> <li>    }</li> <li class="even">    secureString.MakeReadOnly();</li> <li>    <span style="color:#0000ff">return</span> secureString;</li> <li class="even">}</li> </ol> </div> </div> </div> </p>  <p>Now, from your application, you can simply call this method and return the <strong>SecureString</strong> authorization token …</p>  <p>   <div style="padding-bottom: 0px; margin: 0px; padding-left: 0px; padding-right: 0px; display: inline; float: none; padding-top: 0px" id="scid:9ce6104f-a9aa-4a17-a79f-3a39532ebf7c:52d7e2be-e20d-45b6-8cde-88f735be7212" class="wlWriterEditableSmartContent"> <div class="le-pavsc-container"> <div class="le-pavsc-titleblock">Code Snippet</div> <div style="background: #ddd; overflow: auto"> <ol style="background: #ffffff; margin: 0 0 0 2em; padding: 0 0 0 5px;"> <li><span style="color:#2b91af">SecureString</span> authorizationToken = createSecureString(<span style="color:#a31515">&quot;TOKEN&quot;</span>);</li> </ol> </div> </div> </div> </p>  <p>… which you can then pass into the <strong>DataCacheSecurity </strong>constructor (as outlined in this <a href="http://www.wadewegner.com/2010/12/programmatically-configuring-the-caching-client/" target="_blank">post</a>).</p>  <p>While this does incur some overhead, it is pretty minimal since you should only construct the <strong>DataCacheFactory</strong> once during the application life time.</p>  <p>I hope this helps!</p>

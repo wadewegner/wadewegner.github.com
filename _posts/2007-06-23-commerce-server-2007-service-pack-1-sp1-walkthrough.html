@@ -1,0 +1,40 @@
+--- 
+layout: post
+title: Commerce Server 2007 Service Pack 1 (SP1) Walkthrough
+categories: 
+- Commerce Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/c4Fhdb
+  _sexybookmarks_permaHash: 1da4fdd0856d7c2408cc7348da643db6
+  dsq_thread_id: "977969033"
+---
+<p>I went through the process of upgrading my Commerce Server 2007 sites today.&nbsp; While I had a <a href="http://www.wadewegner.com/PermaLink,guid,05bce1d1-07b9-45f1-a495-ac5bc0d6e23c.aspx">few issues with the installation</a>, I was able to get everything updated and functioning.</p>
+<p>There are really two parts to the SP1 installation: the first is the installation of SP1 itself, and the second is the <a href="http://www.wadewegner.com/PermaLink,guid,d4fe3f01-c318-4958-b46b-4e2a4b8827c0.aspx">upgrade wizard</a> that must run against your Commerce Server 2007 sites.&nbsp; This post will walk you through the installation of the service pack itself.&nbsp; The upgrade wizard walkthrough is discussed in a <a href="http://www.wadewegner.com/PermaLink,guid,d4fe3f01-c318-4958-b46b-4e2a4b8827c0.aspx">separate post</a>.</p>
+<p>Before you install Service Pack 1 for Commerce Server 2007, I recommend you do the following:</p>
+<ol>
+<li>Test SP1 by installing first in your development environment.&nbsp; Ensure that your application continues to function.&nbsp; If necessary, run regression tests against your application to make sure nothing has been broken.
+<li>Install SP1 in your QA or UAT environments, followed by your Stating environment (if you have one).&nbsp; Again, this is to ensure that your systems are not broken by the installation of the service pack.
+<li>Make sure to thoroughly back-up your production environments before you upgrade.&nbsp; This is VERY important, as you must ensure that you have an exit strategy, should something go wrong.&nbsp; Do not neglect this step, or you may regret it.</li></ol>
+<p>Okay, that said, you must first download SP1 before you can begin.&nbsp; You can download SP1 for Commerce Server 2007 here: <a title=details.aspx-FamilyId=748049C5-A9BF-4AEC-91A0-AFE2DE0BF860&amp;displaylang=en href="http://www.wadewegner.com/ct.ashx?id=1904b877-d1d4-4841-87d2-8b4ecd826965&amp;url=http%3a%2f%2fwww.microsoft.com%2fdownloads%2fdetails.aspx%3fFamilyId%3d748049C5-A9BF-4AEC-91A0-AFE2DE0BF860%26displaylang%3den"><a title=http://www.microsoft.com/downloads/details.aspx?FamilyId=748049C5-A9BF-4AEC-91A0-AFE2DE0BF860&amp;displaylang=en href="http://www.microsoft.com/downloads/details.aspx?FamilyId=748049C5-A9BF-4AEC-91A0-AFE2DE0BF860&amp;displaylang=en">http://www.microsoft.com/downloads/details.aspx?FamilyId=748049C5-A9BF-4AEC-91A0-AFE2DE0BF860&amp;displaylang=en</a></a></p>
+<p>(Note: I created this walkthrough, along with verbose screen shots and text, largely for documentation I am delivering to clients.&nbsp; Please feel free to use these screen shots and/or text for your own documentation.)</p>
+<p>Once you have downloaded the file, you can begin the following steps:</p>
+<ol>
+<li>Double-click "CS2007-SP1-ENU.exe".&nbsp; You will receive a security warning - click Run to continue.<br /><br /><img height=302 alt=WalkThru1 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru1_1.gif" width=404><br />
+<li>Specify a location to unzip the necessary files, and click Unzip.<br /><br /><img height=215 alt=WalkThru2 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru2_1.gif" width=351><br />
+<li>Browse to the location you unzipped the files and review the ReadMe.htm file.
+<li>After you have read the ReadMe.htm file, double-click SP1Setup.exe to launch the installation wizard.
+<li>On the CS 2007 SP1 Installation Wizard starter screen, click Next to continue.<br /><br /><img height=389 alt=WalkThru3 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru3_1.gif" width=551><br />
+<li>Read the license agreement, specify that you accept the terms, and click Next to continue.<br /><br /><img height=389 alt=WalkThru4 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru4_1.gif" width=551><br />
+<li>Click Next to begin the installation.<br /><br /><img height=389 alt=WalkThru5 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru5_1.gif" width=551><br />
+<li>A dialog box will indicate that various services will be stopped.&nbsp; Click OK to acknowledge and continue.&nbsp; The installation of SP1 will (finally!) begin.<br /><br /><img height=203 alt=WalkThru6 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru6_1.gif" width=316><br /><br /><img height=389 alt=WalkThru7 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru7_1.gif" width=551> <br />
+<li>Once the installation is complete, a summary page displays.&nbsp; You can take a look at the log file (which I would recommend) and can also immediately launch the Commerce Server Upgrade Wizard (which I would also recommend).&nbsp; Click Finish to complete the Commerce Server 2007&nbsp;SP1 upgrade.<br /><br /><img height=389 alt=WalkThru8 src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/WalkThru8_1.gif" width=551> </li></ol>
+<p>At this point you must upgrade any Commerce Server 2007 sites you have installed on the machine.&nbsp; I will discuss this process in a separate post.&nbsp; I have two recommendations for you at this point:</p>
+<ul>
+<li>Immediately upgrade all of your Commerce Server 2007 sites.&nbsp; If you don't upgrade them, you will get errors like the following (notice that I learned this out of experience):<br /><br />&nbsp;<img height=448 alt=Error src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007ServicePack1SP1Walkthr_A60E/Error_5.gif" width=404> <br />
+<li>Wait to reboot your server until you have upgraded all of&nbsp;your Commerce Server 2007 sites.&nbsp; <a href="http://www.wadewegner.com/PermaLink,guid,d4fe3f01-c318-4958-b46b-4e2a4b8827c0.aspx">See my post for more details</a>.</li></ul>
+<p>I hope this helps!&nbsp; Best of luck!</p>

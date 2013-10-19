@@ -1,0 +1,145 @@
+--- 
+layout: post
+title: Setting up a virtual Visual Studio 2005 Team Foundation Server
+categories: 
+- Team Foundation Server
+- Virtual Server 2005
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/boIX8w
+  _sexybookmarks_permaHash: 309db1b4aad3c436a216ecbe0b6481fe
+  dsq_thread_id: "609748055"
+---
+<p>Although it&nbsp;has&nbsp;its share of issues, I am a big fan of Visual Studio 2005 Team Foundation Server (known as TFS for short).&nbsp; Often you'll see people only leverage it for a source code repository, but if that's all you are using it for then you are missing out.&nbsp; In addition to storing source code, TFS also supports:</p>
+<ul>
+<li>Code analysis
+<li>Build automation
+<li>Support for continuous integration
+<li>Automated testing
+<li>Reporting
+<li>Project tracking</li></ul>
+<p>I have found TFS to a very useful tool for all my custom development projects, especially Commerce Server 2007.&nbsp; From a developer's perspective, I find that I am much more excited about cod analysis, build automation, continuous integration, and testing; the project tracking and management functions are great, but it's the&nbsp;developer tools that&nbsp;really tickle my fancy.&nbsp; As such, I have included around 15 to 20 pages of content in my book Professional Commerce Server 2007 on how to successfully integrate Commerce Server 2007 and TFS.</p>
+<p>To support my writing efforts, I needed to have a TFS environment available during the writing of these chapters.&nbsp; I virtualize nearly all my non-production environments, and it was no different when I setup this server.</p>
+<p>To save myself some time, I started with one of my base servers that had the following characteristics (it is extremely handy to have one of these servers archived):</p>
+<ul>
+<li>Windows Server 2003 Standard R2&nbsp;with Service Pack 2 (and all updates applied)
+<li>IIS installed and configured
+<li>.NET 2.0 installed with latest hotfixes
+<li>Visual Studio 2005 Team Developer installed w/ Service Pack 1
+<li>SQL Server 2005 Database Services with Service Pack 2</li></ul>
+<p>This gave&nbsp;me a huge head start in setting up my&nbsp;TFS&nbsp;environment.&nbsp; For the rest, you should utilize the <a href="http://go.microsoft.com/fwlink/?LinkId=40042">Visual Studio 2005 Team Foundation Installation Guide</a>.&nbsp; Below are some notes I took on what I did to finish the installation and configuration of TFS.</p>
+<h3>Install and Configure TFS</h3>
+<p>(Wow, for some reason Live Writer did an awful job with this list - the RSS feed is a mess!&nbsp; Sorry!)</p>
+<ol>
+<li>Changed the computer name from "BaseServer to "TFServer." (reboot)
+<li>Updated SQL Server to use the new computer name.&nbsp; Ran the following script:
+<p><font face="Courier New">sp_dropserver 'BaseServer'<br />GO <br />sp_addserver 'TFServer', local <br />GO</font>
+<p></p>
+<li>Deleted all the SQL Server remote logins that I didn't need.
+<li>Restarted SQL Server 2005.&nbsp; Don't forget to do this; otherwise, when you run <font face="Courier New">SELECT @@SERVERNAME</font> the old computer name will return.
+<li>I think joined "TFServer" to my local domain. (reboot)
+<li>You should use domain accounts to manage TFS.&nbsp; I created the following domain accounts:
+<p>
+<ul>
+<li>TFSSetup (make this account part of the local Administrators group on TFS)
+<li>TFSService
+<li>TFSReports
+<p></p></li></ul>
+<li>Confirmed that IIS 6.0 has ASP.NET enabled, and also confirmed that FrontPage Server 2002 Extensions is not installed.
+<li>TFS makes use of more than SQL Server 2005 Database Services.&nbsp; I Installed the following additional SQL Server components:
+<ul>
+<p>
+<li>Analysis Services
+<li>Reporting Services
+<li>Integration Services
+<p></p></li></ul>
+<li>Shutdown the Analysis, Reporting, and Integration services.
+<li>Installed Service Pack 2 for SQL Server 2005 to upgrade additional components.&nbsp; The Database Services had already been upgraded, so I didn't have to touch it.
+<li>Installed Hotfix for Microsoft .NET Framework 2.0 (KB913393) - this&nbsp;is avail on the TFS CD.
+<li>Installed Windows SharePoint Services 2.0 with Service Pack 2
+<ul>
+<p>
+<li>Go to: <a href="http://go.microsoft.com/fwlink/?linkid=55087">http://go.microsoft.com/fwlink/?linkid=55087</a>&nbsp;to download the bits.
+<li>Run the following at the command-line (allows for a silent installation): stsv2.exe /C:"setupsts.exe /remoteSql=yes /provision=no /qn+"
+<p></p></li></ul>
+<li>I decided to reboot the machine; all the services I previously stopped are turned back on, and then I can&nbsp;login as &lt;domain&gt;TFSSetup.
+<li>Configured Reporting Services:
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=229 alt=image_thumb[6] src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6_thumb.png" width=334 border=0></a>
+<p></p>
+<ul>
+<li>Click Start -&gt; Microsoft SQL Server 2005 -&gt; Configuration Tools -&gt; Reporting Services Configuration.
+<li>Do the following:
+<ul>
+<li>Create a Report Server Virtual Directory
+<li>Create a Report Manager Virtual Directory
+<li>Apply the Web Service Identity
+<li>Configure the Database Setup</li></ul>
+<li>I left the remaining steps alone.
+<p></p></li></ul>
+<li>Installed TFS.
+<ul>
+<p>
+<li>Selected a Single-Server Installation.
+<li>Pass the System Health Check .
+<li>Used &lt;domain&gt;TFSService to run TFS.
+<li>Used &lt;domain&gt;TFSReports to run Reporting.
+<li>Enabled Team Foundation Alerts:
+<ul>
+<li>Configured local server.
+<li>Setup from e-mail address.</li></ul>
+<p></p></li></ul>
+<li>Backed-up the Reporting Services Encryption key:
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=226 alt=image src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2_thumb.png" width=341 border=0></a> </p>
+<ul>
+<li>Ran the Reporting Services Configuration Tool
+<li>Clicked Encryption Keys, and then Backup.
+<p></p></li></ul>
+<li>I then browsed to the following URL: <a href="http://localhost:8080/services/v1.0/Registration.asmx">http://localhost:8080/services/v1.0/Registration.asmx</a>
+<ul>
+<p>
+<li>Clicked GetRegistrationEntries and then clicked Invoke.
+<li>Ensured that the type was "VSTF" within the XML output.
+<p></p></li></ul>
+<li>Installed Team Explorer (on the TFS CD).
+<li>Installed Visual Studio Team Foundation Service Quiescence GDR:
+<ul>
+<p>
+<li>This is a feature pack for TFS.
+<li>Download from: <a href="http://go.microsoft.com/fwlink/?LinkId=79225">http://go.microsoft.com/fwlink/?LinkId=79225</a>
+<li>Required before you can install SP1.
+<p></p></li></ul>
+<li>Installed Visual Studio 2005 Team Foundation Server Service Pack 1.
+<ul>
+<p>
+<li>Download from: <a href="http://go.microsoft.com/fwlink/?LinkId=79224">http://go.microsoft.com/fwlink/?LinkId=79224</a>
+<p></p></li></ul>
+<li>Installed Team Foundation Build.
+<ul>
+<p>
+<li>Opened the "build" folder on the TFS CD.
+<li>Ran Setup.exe.
+<li>Used &lt;domain&gt;TFSSERVICE as the service account.
+<p></p></li></ul>
+<li>Ran Visual Studio 2005 Team Foundation Server Service Pack 1 again to update Team Foundation Build.
+<li>One final reboot.</li></ol>
+<p>Now, to verify that everything was installed and configured properly, I performed confirmed that I was able to create a new Team Project.</p>
+<h3>Create a Team Project in TFS</h3>
+<ol>
+<li>Open up Visual Studio 2005
+<li>Click View -&gt; Team Explorer
+<li>Click Add Existing Team Project
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=80 alt=image src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4_thumb.png" width=240 border=0></a>
+<p></p>
+<li>Select your Team Foundation Server, and click OK.
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=329 alt=image src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3_thumb.png" width=398 border=0></a>
+<p></p>
+<li>Right-click your Team Foundation Server, and click New Team Project.
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_5.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=188 alt=image src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb_6.png" width=240 border=0></a>
+<p></p>
+<li>Follow the wizard and create a new Team Project.</li></ol>
+<p>All together, this process took around 3 hours.&nbsp; Granted, this would have taken a lot longer if I hadn't already had a virtual machine that was mostly configured.</p>
+<p>I hope this helps!</p>

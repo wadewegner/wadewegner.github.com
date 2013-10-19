@@ -1,0 +1,104 @@
+--- 
+layout: post
+title: Programmatically Installing and Using Your Management Certificate with the New .publishsettings File
+categories: 
+- Service Management API
+- Tools
+- Windows Azure
+- X509Certificates
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _topsy_long_url: http://www.wadewegner.com/2011/11/programmatically-installing-and-using-your-management-certificate-with-the-new-publishsettings-file/
+  topsy_short_url: http://bit.ly/soFQ1k
+  dsq_thread_id: "609466497"
+---
+<p>Earlier this week we released the <a href="http://blogs.msdn.com/b/windowsazure/archive/2011/11/14/updated-windows-azure-sdk-amp-windows-azure-hpc-scheduler-sdk.aspx" target="_blank">Windows Azure SDK 1.6</a>, which includes a lot of great updates to the emulators, tools for Visual Studio, and libraries. One of my favorite additions is a new way to get a management certificate installed into Windows Azure and onto your machine. You can now browse to <a href="https://windows.azure.com/download/publishprofile.aspx">https://windows.azure.com/download/publishprofile.aspx</a> and login with your Live ID; this process will do two things:</p>  <ol>   <li>Generate a management certificate that is installed into Windows Azures on your behalf. </li>    <li>Prompts you to download a <font face="Courier New">.publishsettings </font>file which includes an encoded version of your certificate and all of your subscription IDs. </li> </ol>  <p>The new tools for Visual Studio let you easily important this file and immediately start working with your subscriptions from within Visual Studio. It’s a <em>much</em> simpler experience than in the past. In fact, on this weeks episode of the Cloud Cover Show (not yet published) Steve and I cover how to use this file from within your own code. While Steve beat me to it and <a href="http://blog.smarx.com/posts/calling-the-windows-azure-service-management-api-with-the-new-publishsettings-file" target="_blank">published a great blog post</a> showing some of the things you can do, I thought I’d take this a slightly different way and show you a couple different things:</p>  <ul>   <li>How to install the certificate into your personal certificate store (which is exactly what Visual Studio is doing). </li>    <li>How to use the certificate from your person certificate store to make calls to the Service Management API. </li> </ul>  <p>The code is very similar. Take a look:</p>  <ol>   <pre class="code"><span style="color: blue">var </span>publishSettingsFile = 
+    <span style="color: #a31515">@&quot;C:\\temp\\CORP DPE Account-11-16-2011-credentials.publishsettings&quot;</span>;
+<span style="clear: both">
+<span style="color: #2b91af">XDocument </span>xdoc = <span style="color: #2b91af">XDocument</span>.Load(publishSettingsFile);
+<span style="clear: both">
+<span style="color: blue">var </span>managementCertbase64string =
+    xdoc.Descendants(<span style="color: #a31515">&quot;PublishProfile&quot;</span>).Single().Attribute(<span style="color: #a31515">&quot;ManagementCertificate&quot;</span>).Value;
+<span style="clear: both">
+<span style="color: blue">var </span>importedCert = <span style="color: blue">new </span><span style="color: #2b91af">X509Certificate2</span>(
+    <span style="color: #2b91af">Convert</span>.FromBase64String(managementCertbase64string));</pre>
+</ol>
+
+<p>Now that we’ve imported the certificate, we can extract some information. I’ll grab the certificate thumbprint, which uniquely identifies the certificate—we’ll use it later in the post.</p>
+
+<ol>
+  <pre class="code"><span style="color: blue">string </span>thumbprint = importedCert.Thumbprint;</pre>
+</ol>
+
+<p>Additionally, I can grab my subscription ID from the <font face="Courier New">.publishsettings</font> file – this we will also use later.</p>
+
+<ol>
+  <pre class="code"><span style="color: blue">string </span>subscriptionId = xdoc.Descendants(<span style="color: #a31515">&quot;Subscription&quot;</span>).First().Attribute(<span style="color: #a31515">&quot;Id&quot;</span>).Value;</pre>
+</ol>
+
+<p>Now, we can take our <span style="color: #2b91af"><font face="Courier New">X509Certificate2</font> </span>and install it directly into our certificate store.</p>
+
+<ol>
+  <pre class="code"><span style="color: #2b91af">X509Store </span>store = <span style="color: blue">new </span><span style="color: #2b91af">X509Store</span>(<span style="color: #2b91af">StoreName</span>.My);
+store.Open(<span style="color: #2b91af">OpenFlags</span>.ReadWrite);
+store.Add(importedCert);
+store.Close();</pre>
+</ol>
+
+<p>After running this code, you can see that the certificate has been installed into my personal certificate store.</p>
+
+<p><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="CertMgr" border="0" alt="CertMgr" src="http://images.wadewegner.com/wordpress/2011/11/CertMgr.png" width="650" height="264" /></p>
+
+<p>If you select the certificate you’ll see that it’s the same certificate with the same thumbprint.</p>
+
+<p><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="certificate" border="0" alt="certificate" src="http://images.wadewegner.com/wordpress/2011/11/certificate.png" width="276" height="343" /></p>
+
+<p>Since the certificate is now loaded into the certificate store I can delete the <font face="Courier New">.publishsettings</font> file – I no longer need it. (It’s also a credential that I don’t want to let anyone else get their hands on.)</p>
+
+<p>Now I have the following resources available to me:</p>
+
+<ul>
+  <li>My X509 certificate loaded in my personal certificate store. </li>
+
+  <li>The thumbprint for the certificate (which we’ll use to identify the right certificate). </li>
+
+  <li>My Windows Azure subscription ID. </li>
+</ul>
+
+<p>With this information we can do the exact same thing Steve shows in his post except without the <font face="Courier New">.publishsettings</font> file.</p>
+
+<ol>
+  <pre class="code"><span style="color: #2b91af">X509Store </span>store = <span style="color: blue">new </span><span style="color: #2b91af">X509Store</span>(<span style="color: #2b91af">StoreName</span>.My);
+store.Open(<span style="color: #2b91af">OpenFlags</span>.ReadWrite);
+<span style="color: #2b91af">X509Certificate2 </span>managementCert = 
+    store.Certificates.Find(<span style="color: #2b91af">X509FindType</span>.FindByThumbprint, thumbrprint, <span style="color: blue">false</span>)[0];
+<span style="clear: both">
+<span style="color: blue">var </span>req = (<span style="color: #2b91af">HttpWebRequest</span>)<span style="color: #2b91af">WebRequest</span>.Create(
+    <span style="color: blue">string</span>.Format(<span style="color: #a31515">&quot;https://management.core.windows.net/{0}/services/hostedservices&quot;</span>, 
+    subscriptionId));
+<span style="clear: both">
+req.Headers[<span style="color: #a31515">&quot;x-ms-version&quot;</span>] = <span style="color: #a31515">&quot;2011-10-01&quot;</span>;
+req.ClientCertificates.Add(managementCert);
+<span style="clear: both">
+<span style="color: #2b91af">XNamespace </span>xmlns = <span style="color: #a31515">&quot;http://schemas.microsoft.com/windowsazure&quot;</span>;
+<span style="clear: both">
+<span style="color: #2b91af">Console</span>.WriteLine(<span style="color: blue">string</span>.Join(<span style="color: #a31515">&quot;\n&quot;</span>,
+    <span style="color: #2b91af">XDocument</span>.Load(req.GetResponse().GetResponseStream())
+    .Descendants(xmlns + <span style="color: #a31515">&quot;ServiceName&quot;</span>).Select(n =&gt; n.Value).ToArray()));</pre>
+  <span style="clear: both"><span style="clear: both"><span style="clear: both"><span style="clear: both"></span></span></span></span></ol>
+
+  <p>Essentially, we can grab the certificate out of the certificate store using the thumbprint and then make the exact same call to the service management API.</p>
+
+  <p>The console output below shows that I’m able to get a list of all my hosted services:</p>
+
+  <p><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="Console" border="0" alt="Console" src="http://images.wadewegner.com/wordpress/2011/11/Console.png" width="677" height="342" /></p>
+
+  <p>It’s as simple as that!</p>
+
+  <p>I’m not sure that this post applies to everyone—in fact, most of you may find it boring or cryptic—but for those of you that are building content or tools you’ll probably find this a really simple way to automate a lot of the pieces. I know that my team plans to use these techniques in a lot of places to simply the experience of getting started with Windows Azure.</p>
+
+  <p>I hope this helps!</p>

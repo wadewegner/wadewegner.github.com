@@ -1,0 +1,30 @@
+--- 
+layout: post
+title: Script the creation of SQL logins and role assignments for Commerce Server 2007
+categories: 
+- Commerce Server
+- Scripts
+- SQL Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/cvZY3J
+  _sexybookmarks_permaHash: 443934d29b2db0b9ff2aac586f33f61a
+  dsq_thread_id: "611711055"
+---
+<p>One of the more manually intense steps in the installation of Commerce Server is setting up the appropriate SQL logins and Database Role User Mapping.&nbsp; This task can easily take 30 - 60 minutes to complete if done manually.&nbsp; Futhermore, it's likely that this is the easiest step to make a mistake, which will cause problems for you down the road.</p>
+<p>So, to make this process quicker and less prone to errors, I've created an SQL script that you can run against your database.&nbsp; This script performs two tasks:</p>
+<ol>
+<li>Creates the SQL login accounts (e.g. COMPUTERNAMECatalogWebSvc).
+<li>Associates the SQL login accounts to database roles.</li></ol>
+<p>Note: this script is only for SQL Server 2005.&nbsp; SQL Server 2000 uses a different set of database roles.</p>
+<p>Take a look the <em>Grant Web Applications and Window Services Access to the Databases</em>&nbsp;section of the <a href="http://go.microsoft.com/fwlink/?LinkID=57268"><font color=#7cbafc>Installation Guide</font></a>&nbsp;for Commerce Server 2007, and you'll see that&nbsp;the number of role assignments is quite extensive.</p>
+<p>Rather than pasting the entire SQL script into this post, I am only going to upload the .SQL file.&nbsp; You can modify this file as necessary in order to adapt it to your environment (e.g. changing the computer name, you may have different names for logins, or don't need services like the direct mailer).</p>
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/CreateCSLoginsAndAssignRoles.sql.txt">CreateCSLoginsAndAssignRoles.sql.txt (12.54 KB)</a>&nbsp;(just remove the .txt extension)</p>
+<p>I hope this helps!</p>
+<p>[Update]</p>
+<p>I found it useful to create an abbreviated verion of this script that is used for adding new sites.&nbsp; Whereas the script "CreateCSLoginsAndAssignRoles.sql.txt" is for brand new installations of Commerce Server 2007, the following script is useful for when you add a new site and re-use users and logins.</p>
+<p><a href="http://images.wadewegner.com/wordpress/content/binary/CreateCSLoginsAndAssignRolesForNewSites.sql.txt">CreateCSLoginsAndAssignRolesForNewSites.sql.txt (8.42 KB)</a>&nbsp;(just remove the .txt extension)</p>

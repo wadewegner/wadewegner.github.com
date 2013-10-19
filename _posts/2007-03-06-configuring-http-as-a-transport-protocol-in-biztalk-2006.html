@@ -1,0 +1,29 @@
+--- 
+layout: post
+title: Configuring HTTP as a transport protocol in BizTalk 2006
+categories: 
+- BizTalk Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/copX7u
+  _sexybookmarks_permaHash: 63698d5141a92a48be893e7e9aac86ff
+  dsq_thread_id: "609465931"
+---
+<p>I've been working on a project where we have two independent BizTalk 2006 clusters -- one at the headquarters, and one (actually, a few) at some a remote office.&nbsp; In order to send messages back and forth, we are using HTTP as the transport protocol.</p>
+<p>For example, we first query an AS400/DB2 database (via the HOST adapters for BizTalk 2006)&nbsp;through a receive port/location.&nbsp; This&nbsp;is&nbsp;picked up by a subscribing send port, which posts it via HTTP to the remote office.&nbsp; That remote office has an receive port/location configured to listen on HTTP, via the BTSHTTPReceive.dll ISAPI extension.&nbsp; This is then picked up by a send port that then inserts the data into an MSSQL database.</p>
+<p>Having set this up a few times now, I've found that I keep making the same mistakes.&nbsp; Consequently, here's my short-list of items to watch for when setting up HTTP for both send/receive in BizTalk 2006:</p>
+<ul>
+<li>Make sure your application pool is configured to run under the context of your BizTalk use account
+<li>Confirm that your virtual directory has Scripts and Executables execute permissions
+<li>Copy the file "BTSHTTPReceive.dll" into your virtual directory from the folder "C:Program FilesMicrosoft BizTalk Server 2006HttpReceive"
+<li>Make sure to configure a "Web Service Extension" in IIS for the "BTSHTTPReceive.dll" file
+<li>Remove anonymous access to your virtual directory, and use either Integrated or Basic authentication (preferrably Integrated)
+<li>Make sure your send port utilizes the same security context, so that it can post to the site
+<li>Confirm that your BizTalkUser account belongs to the BizTalk Server Administrators group</li></ul>
+<p>For your send port, configure your destination with a querystring value, like this: <a href="http://localhost/transport/BTSHTTPReceive.dll?MessageType">http://localhost/transport/BTSHTTPReceive.dll?MessageType</a>.&nbsp; I like to append the message type, but that's up to you.&nbsp; For your receive location, configure your virtual directory plus ISAPI extension to something like: /transport/BTSHTTPReceive.dll?MessageType.</p>
+<p>That's all I can think of off the top of my head.</p>
+<p>Best of luck!</p>

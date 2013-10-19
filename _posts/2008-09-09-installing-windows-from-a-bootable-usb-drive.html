@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Installing Windows From a Bootable USB Drive
+categories: 
+- Tips
+- Tools
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/ailwQE
+  _sexybookmarks_permaHash: e70f0758dd446416990aad38cdc06f88
+  dsq_thread_id: "613587483"
+---
+<p>I find myself doing this over and over again, so I figured it would be worthwhile to post.&nbsp; Below you’ll find a really useful way for installing a Windows O/S from a bootable USB device.&nbsp; I am particularly dependent on USB drives, as I have a Lenovo X61 Tablet that doesn’t have a CD/DVD-ROM (unless I’m docked, but I’m hardly in the office).  <p>A couple of notes:  <ul> <li>This assumes you’re running Windows Vista or Windows Server 2008  <li>I’ve tested by installing the following O/S’s: Windows XP SP3, Windows Vista, and Windows Server 2008  <li>You must have a machine capable of booting from a USB drive</li></ul> <p>Without further ado, here are the steps:  <ol> <li>Open an elevated command prompt.  <li>You must make your USB drive bootable.&nbsp; Type the following in the command prompt: <br /><br /><font face="Courier New">diskpart<br />list disk <font color="#ff0000">(FIND YOUR USB DISK)<br /></font>select disk 1 <font color="#ff0000">(OR WHATEVER YOUR DISK NUMBER IS)<br /></font>clean<br />create partition primary<br />select partition 1<br />active<br />format fs=NTFS<br />assign<br />exit</font> <br /> <li>Mount your Windows Server ISO (or unpack it) and copy the contents of the CD/DVD onto your USB.&nbsp; Make sure you get all files, including hidden ones.</li></ol> <p>You should now be able to use this USB drive to install a new O/S.&nbsp; Good luck!</p>

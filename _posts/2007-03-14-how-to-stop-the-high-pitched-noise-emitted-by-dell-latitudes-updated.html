@@ -1,0 +1,27 @@
+--- 
+layout: post
+title: How to stop the high-pitched noise emitted by Dell Latitudes [Updated]
+categories: []
+
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/bORoG2
+  _sexybookmarks_permaHash: d6dfe848baaebbd1ced88eaf0f9f50fd
+  dsq_thread_id: "609465845"
+---
+<p>I've been trying to explain to people how the high-pitched noise emitting from my Dell Latitude D820 (which is a great computer) has been driving me crazy!&nbsp; Indeed, after complaining about this noise, most people actually think I have GONE crazy.&nbsp; But, it turns out that it's actually a known issue.&nbsp; Here's an article published by Dell:</p>
+<p><a href="http://support.dell.com/support/topics/global.aspx/support/dsn/en/document?c=us&amp;docid=0A7D5CD2E17F5125E0401E0A55176204&amp;journalid=B141AFF2D12811DA8253D5412E975AB8&amp;l=en&amp;s=gen">http://support.dell.com/support/topics/global.aspx/support/dsn/en/document?c=us&amp;docid=0A7D5CD2E17F5125E0401E0A55176204&amp;journalid=B141AFF2D12811DA8253D5412E975AB8&amp;l=en&amp;s=gen</a></p>
+<p>Personally, I find it quite humorous that Dell blames the problem on Piezoelectricity, and even goes so far as to link to Wikipedia for more information.&nbsp; But, this article led me on the correct path to solving the problem.</p>
+<p>Having read the article, I noticed that my Bluetooth device shuts down shortly after my machine boots up.&nbsp; Turns out, it's because a power saving checkbox was enabled.&nbsp; As a result, the Bluetooth device turns off, and this evidently allows the processor to move into a C3 state, thus causing the high-pitched noise.</p>
+<p>To resolve this, go to your Device Manager, right-click "Dell Wireless 350 Bluetooth Module" (at least, that's what it's called on my machine), and select properties.&nbsp; Select the "Power Management" tab, and uncheck the "Allow the computer to turn off this device to save power" checkbox.</p>
+<p><img src="http://images.wadewegner.com/wordpress/content/binary/Bluetooth.gif" border=0></p>
+<p>Once you've done this, the noise will stop!</p>
+<p>Best of luck!</p>
+<p>[Update]</p>
+<p>Since writing this post, Dell has come out with an updated version of the Latitude 820 Bios (version A06).&nbsp; You can get this update <a href="http://support.dell.com/support/downloads/download.aspx?c=us&amp;l=en&amp;s=gen&amp;releaseid=R152940&amp;SystemID=Latitude%20D820&amp;servicetag=J3D6YB1&amp;os=WW1&amp;osl=en&amp;deviceid=10433&amp;devlib=0&amp;typecnt=0&amp;vercnt=5&amp;catid=1&amp;impid=-1&amp;formatcnt=1&amp;libid=1&amp;fileid=203807">here</a>.&nbsp; I haven't tried it yet, but it's possible that this Bios update will help!</p>
+<p>[Update 2]</p>
+<p>I installed version A06 and STILL the high-pitched noise was emitted by the laptop.&nbsp; Fortunately, the steps above still resolve the issue.</p>

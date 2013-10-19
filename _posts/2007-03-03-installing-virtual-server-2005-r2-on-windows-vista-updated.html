@@ -1,0 +1,17 @@
+--- 
+layout: post
+title: Installing Virtual Server 2005 R2 on Windows Vista [Updated]
+categories: 
+- Virtual Server 2005
+- Windows Vista
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/9DKRkT
+  _sexybookmarks_permaHash: 03fa05d512cd30e8e8191b714c4a18b0
+  dsq_thread_id: "988023713"
+---
+<p>I came across a great blog entry today that provided the following script.&nbsp; This script will setup IIS with the proper configuration to allow Virtual Server 2005 R2 to function.&nbsp; Just run this in the command line (or create a batch file) before installing Virtual Server.</p> <blockquote dir=ltr style="MARGIN-RIGHT: 0px"> <p>start /w pkgmgr /l:log.etw /iu:IIS-WebServerRole;IIS-WebServer;IIS-CommonHttpFeatures;IIS-StaticContent;IIS-DefaultDocument;IIS-DirectoryBrowsing;IIS-HttpErrors;IIS-HttpRedirect;IIS-ApplicationDevelopment;IIS-ASPNET;IIS-NetFxExtensibility;IIS-ASP;IIS-CGI;IIS-ISAPIExtensions;IIS-ISAPIFilter;IIS-ServerSideIncludes;IIS-HealthAndDiagnostics;IIS-HttpLogging;IIS-LoggingLibraries;IIS-RequestMonitor;IIS-HttpTracing;IIS-CustomLogging;IIS-ODBCLogging;IIS-Security;IIS-BasicAuthentication;IIS-WindowsAuthentication;IIS-DigestAuthentication;IIS-ClientCertificateMappingAuthentication;IIS-IISCertificateMappingAuthentication;IIS-URLAuthorization;IIS-RequestFiltering;IIS-IPSecurity;IIS-Performance;IIS-HttpCompressionStatic;IIS-HttpCompressionDynamic;IIS-WebServerManagementTools;IIS-ManagementConsole;IIS-ManagementScriptingTools;IIS-ManagementService;IIS-IIS6ManagementCompatibility;IIS-Metabase;IIS-WMICompatibility;IIS-LegacyScripts;IIS-LegacySnapIn;IIS-FTPPublishingService;IIS-FTPServer;IIS-FTPManagement;WAS-WindowsActivationService;WAS-ProcessModel;WAS-NetFxEnvironment;WAS-ConfigurationAPI</p> </blockquote> <p>Note: this will pretty much install everything under IIS.&nbsp; I recommend that you either go through and remove some of the above settings, or go in afterwards and do so.</p> <p>Additionally, make sure that when you run the installer, select "Run as Administrator".</p> <p>Thanks to <a href="http://www.holliday.com.au/blog/installing-virtual-server-2005-on-vista-5365.html">Grant Holliday</a> for the tip!</p> <p>[Updated 06/21/07]</p> <p>A good friend and former colleague of mine, <a class="blogRollLinkStyle" href="http://rfinn.spaces.live.com/">Rich Finn</a>, had a little trouble getting this to work based on my steps above (I'll have to review them again).&nbsp; After he finally got the configuration correct, he sent me the following screen shot.&nbsp; I hope this helps someone!</p> <p><span style="FONT-SIZE: 11pt; FONT-FAMILY: 'Calibri','sans-serif'; mso-fareast-font-family: Calibri; mso-fareast-theme-font: minor-latin; mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; mso-fareast-language: EN-US; mso-bidi-language: AR-SA"><?xml:namespace prefix = v ns = "urn:schemas-microsoft-com:vml" /><v:shapetype id=_x0000_t75 coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f"><font color=#000000>&nbsp;</font></v:shapetype></span><img src="http://images.wadewegner.com/wordpress/content/binary/iis.gif" border="0"></p>

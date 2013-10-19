@@ -1,0 +1,79 @@
+--- 
+layout: post
+title: Release the hounds - Multicasting with Azure AppFabric
+categories: 
+- Azure
+- Azure AppFabric
+- NetEventRelayBinding
+- Windows Azure
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/bFS9yC
+  _sexybookmarks_permaHash: 3be8d460e3c046be6a4d0e405e13a08a
+  dsq_thread_id: "609465519"
+---
+<p>On an email thread today, someone was looking for suggestions on how to start a job simultaneously across multiple worker roles running in Windows Azure.&#160; For example, image you have ten worker roles already running and, through the command of an admin or user, you want to “release the hounds!”</p>  <p>Definitely an interesting scenario, and many different ways to approach it.&#160; Initial ideas and thoughts centered around using Windows Azure storage tables or blobs – in fact, <a href="http://blog.smarx.com/" target="_blank">Steve Marx</a> quickly threw out some <strike>pseudo</strike> code highlighting a reasonable way to approach the problem:</p>  <div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; line-height: 12pt; background-color: #f4f4f4; margin: 15px 0px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; max-height: 200px; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper">   <div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">     <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060" id="lnum1">   1:</span> <span style="color: #0000ff">while</span> (blob.DownloadText() != “RELEASE THE HOUNDS!”)</pre>
+
+    <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: #f4f4f4; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060" id="lnum2">   2:</span>     Thread.Sleep(TimeSpan.FromSeconds(1));</pre>
+
+    <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; line-height: 12pt; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060" id="lnum3">   3:</span> // do the actual work</pre></div></div>
+
+<p>Then to release:</p>
+
+<div style="border-bottom: silver 1px solid; text-align: left; border-left: silver 1px solid; padding-bottom: 4px; background-color: #f4f4f4; margin: 15px 0px; padding-left: 4px; width: 97.5%; padding-right: 4px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; font-size: 8pt; overflow: auto; border-top: silver 1px solid; cursor: text; border-right: silver 1px solid; padding-top: 4px" id="codeSnippetWrapper">
+  <div style="border-bottom-style: none; text-align: left; padding-bottom: 0px; border-right-style: none; background-color: #f4f4f4; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px" id="codeSnippet">
+    <pre style="border-bottom-style: none; text-align: left; padding-bottom: 0px; border-right-style: none; background-color: white; margin: 0em; padding-left: 0px; width: 100%; padding-right: 0px; font-family: &#39;Courier New&#39;, courier, monospace; direction: ltr; border-top-style: none; color: black; font-size: 8pt; border-left-style: none; overflow: visible; padding-top: 0px"><span style="color: #606060" id="lnum1">   1:</span> blob.UploadText(“RELEASE THE HOUNDS!”);</pre></div></div>
+
+<p>You could definitely take this approach and have success.</p>
+
+<p>Of course, to me this scenario screamed multicasting with <a href="http://msdn.microsoft.com/en-us/library/microsoft.servicebus.neteventrelaybinding.aspx" target="_blank"><em>NetEventRelayBinding</em></a>.</p>
+
+<p><em>NetEventRelayBinding</em> supports multiple listeners on the same URI, which means that you can have 1 or 1000 worker roles in Windows Azure all listening to the same URI – this gives you the ability to push out events to all listeners, as any message sent by a client gets distributed to all the listeners.</p>
+
+<p>Clemens Vasters <a href="http://vasters.com/clemensv/PermaLink,guid,92d78bee-2cfd-4a29-95ab-c5abb9b905e7.aspx" target="_blank">sums <em>NetEventRelayBinding</em> it up nicely on his blog</a>:</p>
+
+<blockquote>
+  <p>The <em>NetEventRelayBinding</em> doesn't have an exact counterpart in the standard bindings. This binding provides access to the multicast publish/subscribe capability in the Relay. Using this binding, clients act as event publishers and listeners act as subscribers. An event-topic is represented by an agreed-upon name in the naming system. There can be any number of publishers and any number of subscribers that use the respective named rendezvous point in the Relay. Listeners can subscribe independent of whether a publisher currently maintains an open connection and publishers can publish messages irrespective of how many listeners are currently active – including zero. The result is a very easy to use lightweight one-way publish/subscribe event distribution mechanism that doesn't require any particular setup or management.</p>
+</blockquote>
+
+<p>So, the architecture might look something like this:</p>
+
+<p><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Apologies for the crappy graphic" border="0" alt="Apologies for the crappy graphic" src="http://images.wadewegner.com/wordpress/2010/05/image1.png" width="421" height="239" /> </p>
+
+<p>In this scenario, an admin sitting on a laptop can send a message to the Service Bus, which in turn relays the message to all the listeners.&#160; When the worker roles receive the message they will “release the hounds” and process whatever it is they need to process.</p>
+
+<blockquote>
+  <p>Note: this approach is just as valid for listeners that don’t reside in Windows Azure.&#160; For example, if you have an application that is distributed across PCs and you want to send every client a message (without implementing some form of polling) this is the perfect approach.</p>
+</blockquote>
+
+<p>So, without further ado, here’s the <a href="http://cid-952ba2b9cf071aa0.skydrive.live.com/self.aspx/.Public/ReleaseTheHounds.zip" target="_blank">code to release the hounds!</a></p>
+
+<p>Now, a few comments on the code:</p>
+
+<ul>
+  <li>I wrote this using Visual Studio 2010 RTM. Your mileage may vary. </li>
+
+  <li>Make sure you have the <a href="http://www.microsoft.com/downloads/details.aspx?familyid=DBA6A576-468D-4EF6-877E-B14E3C865D3A&amp;displaylang=en" target="_blank">Windows Azure SDK</a> and the <a href="http://go.microsoft.com/fwlink/?LinkID=129448" target="_blank">Windows Azure AppFabric SDK</a>. </li>
+
+  <li>The first thing you’re going to want to do is search on <strong>YOURSERVICENAME</strong> and <strong>YOURISSUERSECRET</strong> and replace with your own values. </li>
+
+  <li>It’s initially configured to run locally.&#160; Just hit F5. </li>
+
+  <li>When you run locally, three things will launch:
+    <ol>
+      <li>The local development fabric, with two worker roles. </li>
+
+      <li>A Windows Forms application with a big button (hey, it’s better than a console window!). </li>
+
+      <li>A console window that displays traces from all your worker roles.&#160; This is especially useful for getting information from your worker roles once you’ve deployed to Windows Azure.&#160; I’ll blog on this another time. </li>
+    </ol>
+  </li>
+
+  <li>When you eventually deploy to Windows Azure, but sure to uncomment the <strong>&lt;extensions&gt;</strong> and <strong>&lt;bindingExtensions&gt;</strong> sections in the App.config, as the Windows Azure AppFabric SDK is not installed in Windows Azure, and it won’t understand <em><strong>NetEventRelayBinding</strong></em>. </li>
+</ul>
+
+<p>I personally think this is a pretty neat solution, and can enable a lot of advanced scenarios.&#160; I’d love to hear your feedback and comments.</p>

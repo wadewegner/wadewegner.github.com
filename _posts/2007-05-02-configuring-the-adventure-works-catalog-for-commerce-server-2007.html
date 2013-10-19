@@ -1,0 +1,36 @@
+--- 
+layout: post
+title: Configuring the Adventure Works catalog for Commerce Server 2007
+categories: 
+- Commerce Server
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/asHv4j
+  _sexybookmarks_permaHash: c84f770137ffb0c5d9e2ee2084ef7356
+  dsq_thread_id: "610040763"
+---
+<p>I thought I'd share this quick and dirty way to load the Adventure Works catalog into Commerce Server 2007 so that you can use it with the Starter Site.&nbsp; This catalog, along with the Start Site, is a great way to familiarize yourself with well designed catalog and how it interacts with Start Site.</p>
+<p>This procedure assumes that you've downloaded the Starter Site, and unpacked it to the default location.&nbsp; Also, it assumes that you've setup the Business Management Applications to interact correctly with the Commerce Server web services, which in turn assumes you've configured security for the web services through Azman.msc appropriately.</p>
+<ol>
+<li>Open up the Commerce Server Catalog Manager.
+</li><li>Under the Tasks pane, click Import a Catalog.&nbsp; This launches the Import Product Catalog Wizard.&nbsp; Click Next to continue.
+</li><li>On the File Location screen, click the Browse button, and browse to the following XML file: C:Program FilesMicrosoft Commerce Server 2007SdkSamplesCatalogAdvWorksCatalog.xml.&nbsp; This XML file is an export of the Adventure Works catalog.
+</li><li>Change the type from Incremental to Replace.&nbsp; Most likely you don't already have this catalog, but if you do this it will ensure that it replaces the current catalog.
+</li><li>Click the Advanced check box, just so that in the next few steps you can see the advanced options.&nbsp; Click the Next button to continue.
+</li><li>On the first Advanced Import Properties screen, confirm that the Adventure Works Catalog is selected and click the Next button to continue.
+</li><li>On the second Advanced Import Properties screen, ensure that all import properties are selected.&nbsp; Leave all the default selections and click the Next button to continue.
+</li><li>On the Import Catalog Summary screen, review your summary.&nbsp; If everything looks good, click the Create button.&nbsp; The import will take minute or so to complete.
+</li><li>Click View --&gt; Status to pull up the Progress Status window.&nbsp; The import runs asynchronously, so you can watch the status of the catalog import.&nbsp; Once you see that the catalog has been imported successfully, return to the Catalogs view and click the Refresh button.&nbsp; You should now see the "Adventure Works Catalog" under your catalogs explorer.</li></ol>
+<p>Make sure that your CatalogSets allow anonymous and registered&nbsp;users to view your new catalog.&nbsp; This&nbsp;CatalogSets determine which catalogs users have access to view and interact.&nbsp; Click the CatalogSets link under Views, and double-click the Anonymous User Default CatalogSet.&nbsp; Click the Add All Catalogs check box, and click the Refresh button.&nbsp; You should see your Adventure Works catalog in the Included Catalogs list box.&nbsp; Click Save and Continue, and do the same thing for the Registered User Default CatalogSet.</p>
+<p>Now that you have successfully imported the Adventure Works catalog and setup the CatalogSets, click the Refresh Site Cache button.&nbsp; If you have problems updating the Site Cache, be sure to read the following article: <a href="http://msdn2.microsoft.com/en-us/library/aa546079.aspx">http://msdn2.microsoft.com/en-us/library/aa546079.aspx</a>.&nbsp; An alternative is to run IISRESET from the command line, which forces the Web site to reload its cache, but I recommend you configure your sites appropriately so that the Refresh Site Cache functions.</p>
+<p>Before you try to run the Starter Site and see browse your catalog, let's grab some some of the files within the AdvWorksImages.cab from the C:Program FilesMicrosoft Commerce Server 2007SdkSamplesCatalog folder.</p>
+<ol>
+<li>Create an "Images" folder under the Start Site (by default, it is found at: C:InetpubwwwrootStarterSite).
+</li><li>Extract the images from the AdvWorksImages.cab file into this new folder.&nbsp; You can do this by double-clicking the cab file, selecting and copying all the files, and paste them into the new folder.</li></ol>
+<p>Now you're ready to browse the Adventure Works catalog.&nbsp; Take the time to browse products on the Web site, as well as the catalog itself.&nbsp; Try creating some product relationships for cross- and up-sell opportunities, as well as new products.&nbsp; Be sure to refresh your site cache, or you won't see your changes&nbsp;reflected on the Web site.</p>
+<p>If you want to be able to add items to your cart, then you'll have to add your Adventure Works catalog to an inventory catalog.&nbsp; Under the Catalog Manager, either create a new inventory catalog, or add your Adventure Works catalog to the default catalog.&nbsp; Once this is done, you'll then have to go back to your Adventure Works catalog and add inventory quantities to your items.&nbsp; I'll save this process for a future blog.</p>
+<p>Best of luck!</p>

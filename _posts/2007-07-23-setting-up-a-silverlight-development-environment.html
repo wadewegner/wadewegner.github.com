@@ -1,0 +1,46 @@
+--- 
+layout: post
+title: Setting up a Silverlight development environment
+categories: 
+- Silverlight
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/bPRle6
+  _sexybookmarks_permaHash: 039ab2f1477d6db9a8fb08ce481c5d07
+  dsq_thread_id: "609464577"
+---
+<p>This weekend&nbsp;I spent&nbsp;some time playing with Silverlight and Orcas.&nbsp; Needless to say, I am very impressed with both.&nbsp; Here's a sample <a href="http://apps.wadewegner.com/hangman">Hangman</a> application I created in about three hours.</p>
+<p>I thought I'd go ahead and document the steps I took when I setup my development environment.&nbsp; I'll try to come back here and update the content, so that it stays pertinent as updates are released.</p>
+<p><strong>Setting up a Silverlight development environment</strong></p>
+<ol>
+<li>Make sure to read everything you can on <a href="http://silverlight.net/">Silverlight</a>, as well as the&nbsp;<a title=http://silverlight.net/GetStarted/ href="http://silverlight.net/GetStarted/">Get Started</a>&nbsp;Silverlight page (I've listed a number of good blogs at the bottom of this post).
+<li>Install&nbsp;Microsoft Silverlight 1.0 Beta (<a href="http://go.microsoft.com/fwlink/?LinkID=89015&amp;clcid=0x409">for Windows</a>).&nbsp; This is the runtime that's required to experience Silverlight applications.
+<li>Install&nbsp;Microsoft Silverlight 1.1 Alpha (<a href="http://go.microsoft.com/fwlink/?LinkID=88986&amp;clcid=0x409">for Windows</a>).&nbsp; This is the runtime that's required to experience Silverlight applications written with .NET.
+<li>Reboot.
+<li>Install <a href="http://go.microsoft.com/fwlink/?LinkID=89146&amp;clcid=0x409">Microsoft Visual Studio codename "Orcas" Beta 1</a>.&nbsp; Soon to be Visual Studio 2008, this is the next evolution of Visual Studio 2005.&nbsp; It's pretty sweet.
+<li>Reboot.
+<li>Optional: Install Microsoft MSDN Library for Visual Studio codename "Orcas".&nbsp; Watch out - during the installation of the MSDN Library, it took about five minutes for it to complete this step.&nbsp; Be patient, and let it finish.<br /><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_1.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=181 alt="MSDN Library install" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_thumb.png" width=240 border=0></a>
+<li>Reboot.
+<li>Install&nbsp;<a href="http://go.microsoft.com/fwlink/?LinkID=89147&amp;clcid=0x409">Microsoft ASP.NET Futures (May 2007)</a>.&nbsp; This provides you with ASP.NET controls for Silverlight.
+<li>Install <a href="http://go.microsoft.com/fwlink/?LinkID=79076&amp;clcid=0x409">Expression Blend 2 May Preview</a>.&nbsp; This is a design tool that allows a user to interact with Silverlight.&nbsp; Note: this is different from Expression Blend that can be found on MSDN.&nbsp; Make sure to get this download.&nbsp; Also, <a href="http://timheuer.com/blog/">Tim Heuer</a> pointed me to <a href="http://www.microsoft.com/Expression/products/download.aspx?key=blend2maypreview">http://www.microsoft.com/Expression/products/download.aspx?key=blend2maypreview</a>, which provides a&nbsp;product key and longer trial (180-day evaluation).&nbsp; Note: when I went to install Expression Blend 2, I was only given two choices: Vista, or Windows XP.&nbsp; My development VM is Windows Server 2003 Standard R2.&nbsp; I chose Windows XP, and haven't had any problems.<br /><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4.png" atomicselection="true"><img style="BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px" height=79 alt="Expression Blend 2 choice" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4_thumb.png" width=240 border=0></a>
+<li>Install <a href="http://go.microsoft.com/fwlink/?LinkID=89149&amp;clcid=0x409">Microsoft Silverlight Tools Alpha for Visual Studio codename "Orcas" Beta 1</a>.&nbsp; This is an add-on that allows you to create Silverlight applications using .NET.
+<li>Download <a href="http://go.microsoft.com/fwlink/?LinkID=89144&amp;clcid=0x409">Microsoft Silverlight 1.0 Beta Software Development Kit (SDK)</a>.&nbsp; This is a zip file that contains documentation, samples along with templates for Visual Studio, and has also a “Go Live” license that enables building commercial applications.&nbsp; I unzipped it to C:Program FilesMicrosoft SilverlightSDKs.
+<li>Download&nbsp;<a href="http://go.microsoft.com/fwlink/?LinkID=89145&amp;clcid=0x409">Microsoft Silverlight 1.1 Alpha Software Development Kit (SDK)</a>.&nbsp; This is another zip file that contains documentation and samples Silverlight Web experiences that target Silverlight 1.1 Alpha.</li></ol>
+<p>That should be enough to get your environment up and running.&nbsp; Once that's complete, watch this Silverlight walk-through: <a title=http://silverlight.net/quickstarts/silverlight10/xaml.aspx href="http://silverlight.net/quickstarts/silverlight10/xaml.aspx">http://silverlight.net/quickstarts/silverlight10/xaml.aspx</a>.</p>
+<p>Here are some good Silverlight blogs I've found (send me email, or leave me a comment, if you know of more):&nbsp; </p>
+<ul>
+<li><a href="http://timheuer.com/blog/">Tim Heuer - Method ~ of ~ failed</a>
+<li><a href="http://blogs.msdn.com/tims/default.aspx">Tim Sneath - Musing of a Client Platform Technical Evangelist</a>
+<li><a href="http://silverlight.net/blogs/">Silverlight Blogs</a>
+<li><a href="http://blogs.msdn.com/mikeormond/default.aspx">Mike Ormond's Blog - In my world, things would be simpler than this ...</a></li></ul>
+<p>Also, here are a few interesting posts:
+<ul>
+<li><a href="http://tirania.org/blog/archive/2007/Jun-21.html">Porting to Linux</a>
+<li><a href="http://nerddawg.blogspot.com/2007/06/google-gears-and-silverlight.html">Google Gears and Silverlight</a>
+<li><a href="http://www.techcrunch.com/2007/05/01/take-time-to-understand-silverlight-its-important/">Why Silverlight is important</a>
+<li><a href="http://jeremy.zawodny.com/blog/archives/009000.html">Strategy behind Silverlight</a></li></ul>
+<p>I hope someone finds this useful!&nbsp; Leave a comment if you've developed something cool, so that I can check it out!</p>

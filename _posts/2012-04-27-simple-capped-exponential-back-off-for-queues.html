@@ -1,0 +1,70 @@
+--- 
+layout: post
+title: Simple Capped Exponential Back-Off for Queues
+categories: 
+- Azure
+- Best Practices
+- Queues
+- Windows Azure
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _topsy_long_url: http://www.wadewegner.com/2012/04/simple-capped-exponential-back-off-for-queues/
+  topsy_short_url: http://bit.ly/IhLlbH
+  dsq_thread_id: "851642785"
+---
+<p>Recently <a href="http://blog.smarx.com/" target="_blank">Steve Marx</a> and I spent a few hours working on a best practices document for Windows Azure. As expected, this was a fun and educational experience – plenty of goofing around, but also some really good discussion on things to think about when building applications for Windows Azure. One of the items we discussed is a better approach for sleeping inside the Worker Role when pulling from queues. Rather than defaulting to a retry every 10 seconds we decided that the best approach is to exponentially back-off on your queue reads while capping it with an upper bound.</p> <p>The primary value of this is to decrease the number of storage transactions when reading from your queue, and therefore reduce both bandwidth and transaction costs.</p> <p>There are plenty of other good posts on this topic that provide a lot more detailed justification and rationale for this approach:</p> <ul> <li><a href="http://www.developerfusion.com/article/120619/advanced-scenarios-with-windows-azure-queues/" target="_blank">Advanced scenarios with Windows Azure Queues</a>  <li><a href="http://geekswithblogs.net/hroggero/archive/2011/05/26/cloud-lesson-learned-exponential-backoff.aspx" target="_blank">Cloud Lesson Learned: Exponential Backoff</a>  <li><a href="http://programming4.us/desktop/2910.aspx" target="_blank">Windows Azure : Messaging with the queue - Patterns for message processing</a> </li></ul> <p>The logic and approach is deceptively simple and I thought I’d share a really simple, yet effective, example. (Incidentally, credit goes to Steve for very quickly putting together the basis of this really simple example.)</p> <p>Here’s the code:</p><pre class="code"><span style="color: blue">   string </span>queueName = <span style="color: #a31515">"queuetest"</span>;
+
+<span style="color: blue">   int </span>minInterval = 1;
+<span style="color: blue">   int </span>interval = minInterval;
+
+<span style="color: blue">   int </span>exponent = 2;
+<span style="color: blue">   int </span>maxInterval = 60;
+
+<span style="color: #2b91af">   CloudStorageAccount </span>account = <span style="color: #2b91af">CloudStorageAccount</span>.DevelopmentStorageAccount;
+<span style="color: #2b91af">   CloudQueueClient </span>queueClient = account.CreateCloudQueueClient();
+<span style="color: #2b91af">   CloudQueue </span>queue = queueClient.GetQueueReference(queueName);
+   queue.CreateIfNotExist();
+
+<span style="color: blue">   while </span>(<span style="color: blue">true</span>)
+   {
+      <span style="color: blue">var </span>msg = queue.GetMessage();
+      <span style="color: blue">if </span>(msg != <span style="color: blue">null</span>)
+      {
+         <span style="color: green">// do something
+         </span>queue.DeleteMessage(msg);
+         interval = minInterval;
+
+         <span style="color: #2b91af">Trace</span>.WriteLine(<span style="color: blue">string</span>.Format(<span style="color: #a31515">"Interval reset to {0} seconds"</span>, interval));
+      }
+      <span style="color: blue">else
+      </span>{
+         <span style="color: #2b91af">Trace</span>.WriteLine(<span style="color: blue">string</span>.Format(<span style="color: #a31515">"Sleep for {0} seconds"</span>, interval));
+         <span style="color: #2b91af">Thread</span>.Sleep(<span style="color: #2b91af">TimeSpan</span>.FromSeconds(interval));
+         interval = <span style="color: #2b91af">Math</span>.Min(maxInterval, interval * exponent);
+      }
+   }</pre>
+<p>As I said, really simple. The magic is in the last line where we check to see which is smaller – the maximum interval or the product of the interval and the exponent. At some point the product of the interval and exponent grows larger than the maximum interval, and consequently the interval value is set to the maximum interval.</p>
+<p>Here’s the output in the Windows Azure Compute Emulator:</p><pre style="padding-bottom: 10px; border-right-width: 0px; margin: 0px; padding-left: 0px; outline-width: 0px; padding-right: 0px; font-family: 'Courier New'; background: none transparent scroll repeat 0% 0%; border-top-width: 0px; border-bottom-width: 0px; font-size: 11px; vertical-align: baseline; border-left-width: 0px; padding-top: 0px">   Sleep for 1 seconds 
+   Sleep for 2 seconds 
+   Sleep for 4 seconds 
+   Sleep for 8 seconds 
+   Sleep for 16 seconds 
+   Sleep for 32 seconds 
+   Sleep for 60 seconds 
+   Sleep for 60 seconds 
+   ...</pre>
+<p>Now, the application will continue to sleep until it finds a message in the queue, at which point the interval is reset back to one. To test this I used the Azure Storage Explorer and created a new queue message.</p>
+<p><a href="http://images.wadewegner.com/wordpress/2012/04/AzureStorageExplorerQueue.jpg"><img style="background-image: none; border-right-width: 0px; padding-left: 0px; padding-right: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px; padding-top: 0px" title="AzureStorageExplorerQueue" border="0" alt="AzureStorageExplorerQueue" src="http://images.wadewegner.com/wordpress/2012/04/AzureStorageExplorerQueue_thumb.jpg" width="640" height="464"></a></p>
+<p>Once the message is created the output is as follows:</p><pre style="padding-bottom: 10px; border-right-width: 0px; margin: 0px; padding-left: 0px; outline-width: 0px; padding-right: 0px; font-family: 'Courier New'; background: none transparent scroll repeat 0% 0%; border-top-width: 0px; border-bottom-width: 0px; font-size: 11px; vertical-align: baseline; border-left-width: 0px; padding-top: 0px">   Interval reset to 1 seconds 
+   Sleep for 1 seconds
+   Sleep for 2 seconds
+   Sleep for 4 seconds
+   Sleep for 8 seconds
+   ...</pre>
+<p>And so forth.</p>
+<p>You can find all the source code for this sample in my <a href="https://github.com/wadewegner/CappedExponentialBackOff" target="_blank">CappedExponentialBackOff repository</a> on GitHub.</p>
+<p>Pretty simple but quite useful. I hope this helps!</p><pre></pre>

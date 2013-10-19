@@ -1,0 +1,54 @@
+--- 
+layout: post
+title: Getting Started with Windows Server AppFabric Cache
+categories: 
+- ASP.NET
+- Cache
+- Windows Server AppFabric
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  dsq_thread_id: "609465394"
+---
+<p>I struggled today to find a good “Getting started with Windows Server AppFabric Cache” tutorial – either my <em>search fu </em>failed me or it simply doesn’t exist.&#160; Nevertheless, I was able to piece together the information I needed to get started.</p>  <p>I recommend you break this up into three steps:</p>  <ul>   <li>Installing Windows Server AppFabric</li>    <li>Configuring Windows Server AppFabric Cache</li>    <li>Testing Windows Server AppFabric Cache with Sample Apps</li> </ul>  <p>I think this article will serve as a good tutorial on getting started, and we can refer back to it as the basis for more advanced scenarios.</p>  <p><strong>Installing Windows Serve AppFabric</strong></p>  <ol>   <li>Get the <a href="http://www.microsoft.com/web/downloads/platform.aspx" target="_blank">Web Platform Installer</a>. </li>    <li>Once it is installed and opened, select <strong>Options</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/clip_image0024.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Options" border="0" alt="Options" src="http://images.wadewegner.com/wordpress/2010/08/clip_image0024_thumb.jpg" width="244" height="182" /></a> </li>    <li>Under <strong>Display additional scenarios</strong> select <strong>Enterprise</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/clip_image0026.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Enterprise" border="0" alt="Enterprise" src="http://images.wadewegner.com/wordpress/2010/08/clip_image0026_thumb.jpg" width="244" height="169" /></a> </li>    <li>Now you’ll see an Enterprise tab.&#160; Select it, and choose <strong>Windows Server AppFabric</strong>.&#160; Click <strong>Install</strong>.&#160; This will start a multi-step process for installing Windows Server AppFabric (which in my case required two reboots to complete).       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/clip_image0028.jpg"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Windows Server AppFabric" border="0" alt="Windows Server AppFabric" src="http://images.wadewegner.com/wordpress/2010/08/clip_image0028_thumb.jpg" width="244" height="182" /></a> </li> </ol>  <p><strong>Configuring Windows Server AppFabric Cache</strong></p>  <ol>   <li>Open the <strong>Windows Server AppFabric Configuration Wizard</strong> (Start –&gt; Windows Server AppFabric –&gt; Configure AppFabric). </li>    <li>Click <strong>Next</strong> until you reach the <strong>Caching Service</strong> step.&#160; Check <strong>Set Caching Service configuration</strong>, select <strong>SQL Server AppFabric Caching Service Configuration Store Provider</strong> for the configuration provider, and click <strong>Configure</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image3.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Set Caching Service" border="0" alt="Set Caching Service" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb.png" width="244" height="186" /></a> </li>    <li>Check <strong>Create AppFabric Caching Service configuration database</strong>, confirm the <strong>Server </strong>name, and specify a <strong>Database</strong> name. Click <strong>OK</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image4.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Specify Database" border="0" alt="Specify Database" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb1.png" width="244" height="129" /></a> </li>    <li>When asked if you want to continue, click <strong>Yes</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image5.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Configuration Database confirmation" border="0" alt="Configuration Database confirmation" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb2.png" width="244" height="93" /></a> </li>    <li>You will receive confirmation that your database was created and registered.      <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image6.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Success" border="0" alt="Success" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb3.png" width="244" height="90" /></a> </li>    <li>On the <strong>Cache Node</strong> step, confirm the selected port nodes.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image7.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Cache Node ports" border="0" alt="Cache Node ports" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb4.png" width="244" height="186" /></a> </li>    <li>You will be asked to continue and apply the configuration settings; select <strong>Yes</strong>.       <br /><a href="http://images.wadewegner.com/wordpress/2010/08/image8.png"><img style="border-right-width: 0px; display: inline; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" title="Continue" border="0" alt="Continue" src="http://images.wadewegner.com/wordpress/2010/08/image_thumb5.png" width="244" height="107" /></a> </li>    <li>On the last step you’ll click <strong>Finish</strong>. </li>    <li>Open up an elevated <strong>Windows PowerShell </strong>window. </li>    <li>Add the Distributed Cache administration module      <div style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; padding-left: 5px; width: 600px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Import-Module DistributedCacheAdministration</pre></div>
+  </li>
+
+  <li>Set the context of your Windows PowerShell session to the desired cache cluster with Use-CacheCluster.&#160; You can run this without parameters to use the connection parameters provided during configuration. 
+    <div style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; padding-left: 5px; width: 600px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Use-CacheCluster</pre></div>
+  </li>
+
+  <li>Grant your user account access to the cache cluster as a client.&#160; Specify your user and domain name. 
+    <div style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; padding-left: 5px; width: 600px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Grant-CacheAllowedClientAccount domainusername</pre></div>
+  </li>
+
+  <li>Verify your user account has been granted access. 
+    <div style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; padding-left: 5px; width: 600px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Get-CacheAllowedClientAccounts</pre></div>
+  </li>
+
+  <li>Start the cluster. 
+    <div style="border-bottom: #cecece 1px solid; border-left: #cecece 1px solid; padding-bottom: 5px; background-color: #fbfbfb; padding-left: 5px; width: 600px; padding-right: 5px; overflow: auto; border-top: #cecece 1px solid; border-right: #cecece 1px solid; padding-top: 5px"><pre style="background-color: #fbfbfb; margin: 0em; width: 100%; font-family: consolas,&#39;Courier New&#39;,courier,monospace; font-size: 12px">Start-CacheCluster</pre></div>
+  </li>
+</ol>
+
+<p><strong>Testing Windows Server AppFabric Cache with Sample Apps</strong></p>
+
+<ol>
+  <li>Grab a copy of the <a href="http://go.microsoft.com/fwlink/?LinkID=167153" target="_blank">Microsoft AppFabric Samples</a>, which are a series of <em>very</em> short examples.</li>
+
+  <li>Extract the samples locally.</li>
+
+  <li>Open up <strong>CacheSampleWebApp.sln</strong> (..SamplesCacheCacheSampleWebApp).</li>
+
+  <li>Right-click the <strong>CreateOrder.aspx</strong> file and select <strong>Set As Start Page</strong>.</li>
+
+  <li>Hit <strong>F5</strong> to start the solution.</li>
+
+  <li>Confirm that the cache is functioning by creating a sample order, getting the sample order, and updating the sample order.</li>
+</ol>
+
+<p>Once you accomplish these three steps, you’ll have the basis for building more complex caching solutions.</p>
+
+<p>I hope this helps!</p>

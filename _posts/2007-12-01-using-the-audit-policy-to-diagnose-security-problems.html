@@ -1,0 +1,16 @@
+--- 
+layout: post
+title: Using the Audit Policy to diagnose security problems
+categories: 
+- Troubleshooting
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/boJ97D
+  _sexybookmarks_permaHash: c52b5d811d6c6dfd55be6a1162c0fd24
+  dsq_thread_id: "970605264"
+---
+<p>A neat trick to help you diagnose troublesome security problems.&nbsp; Modify your the audit settings for process tracking, so that successes and failures are logged in your Security log.</p> <ol> <li>Go to <strong>Start</strong> -&gt; <strong>Run</strong>. <li>Type: gpedit.msc  <li>Expand <strong>Local Computer Policy</strong> -&gt; <strong>Computer Configuration</strong> -&gt; <strong>Windows Settings</strong> -&gt; <strong>Security Settings</strong> -&gt; <strong>Local Policies</strong> -&gt; <strong>Audit Policy</strong>.<br /><br /><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_4.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="151" alt="image" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_2.png" width="244" border="0"></a> <br /> <li>Review the "Audit process tracking" policy. <li>Right-click the "Audit process tracking" policy, and select <strong>Properties</strong>. <li>On the Local Security Setting folder, check the "Success" and "Failure" checkboxes under "Audit these attempts". <p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_8.png"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="189" alt="image" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_4.png" width="244" border="0"></a>  <p></p> <li>Click <strong>OK</strong> to continue.</li></ol> <p>If you define this policy setting, you can specify whether to audit successes, audit failures, or not audit the event type at all. Success audits generate an audit entry when the process being tracked succeeds. Failure audits generate an audit entry when the process being tracked fails.</p> <p>These audits are now tracked in the Security log in the Event Viewer.&nbsp; Here's an example of a "Detailed Tracking" event.</p> <p><a href="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/Event_2.jpg"><img style="border-right: 0px; border-top: 0px; border-left: 0px; border-bottom: 0px" height="244" alt="Event" src="http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/Event_thumb.jpg" width="217" border="0"></a> </p> <p>Some additional details can be found <a href="http://technet2.microsoft.com/windowsserver/en/library/0a642c0c-387a-44f5-bfd9-951b87fd13801033.mspx?mfr=true">on TechNet</a>.</p> <p>Pretty easy to configure, and very useful when you're trying to figure out why applications are not running appropriately and you think it might be related to security issues.</p>

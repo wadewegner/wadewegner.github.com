@@ -1,0 +1,39 @@
+--- 
+layout: post
+title: BizTalk 2006 XPath expression gotcha!
+categories: 
+- BizTalk Server
+- XPath
+tags: []
+
+status: publish
+type: post
+published: true
+meta: 
+  _sexybookmarks_shortUrl: http://bit.ly/aGgVcm
+  _sexybookmarks_permaHash: bab6ba5e28c96b1eecace9aa48e0726d
+  dsq_thread_id: "609465540"
+---
+<p>I built an XPath expression to extract the contents of an XML element.&nbsp; I tested this XPath in a utility I created that executes the expression, and writes the results to the file system.&nbsp; The XPath expression worked perfectly, and returned the contents of the XML element.&nbsp; Here's a quick and dirty example ...</p>
+<p>My XML file:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>&lt;ns0:Example xmlns:ns0="<a href="http://example/">http://example/</a>"&gt;<br />&nbsp;&lt;ns0:Contents&gt;1169861&lt;/ns0:Contents&gt;<br />&lt;/ns0:Example&gt;</p></blockquote>
+<p>And my XPath expression:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>/*[local-name()='Example' and namespace-uri()='http://example/']/*[local-name()='Contents' and namespace-uri()='http://example/']/text()</p></blockquote>
+<p dir=ltr style="MARGIN-RIGHT: 0px">(Don't forget the "/text()" at the end, or you'll get the entire element!)</p>
+<p dir=ltr style="MARGIN-RIGHT: 0px">And, using my utility, I get the following (expected!) output:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p>1169861</p></blockquote>
+<p dir=ltr style="MARGIN-RIGHT: 0px">However, when run in BizTalk 2006, I got that ever-so-annoyingly-generic error message:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p dir=ltr style="MARGIN-RIGHT: 0px">Object reference not set to an instance of an object.</p></blockquote>
+<p dir=ltr style="MARGIN-RIGHT: 0px">I confirmed that this error occured when I set my orchestration's local numeric variable equal to the the following expression in my BizTalk orchestration:</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p dir=ltr style="MARGIN-RIGHT: 0px">xPathExpression = "/*[local-name()='Example' and namespace-uri()='http://example/']/*[local-name()='Contents' and namespace-uri()='http://example/']/text()";</p>
+<p dir=ltr style="MARGIN-RIGHT: 0px">contents = xpath(msgExample, xPathExpression);</p></blockquote>
+<p dir=ltr style="MARGIN-RIGHT: 0px">What gives?&nbsp; The XPath expression works perfectly in my utility, but it doesn't in a BizTalk orchestration?&nbsp; So, I decided see if I could find any help on Google.&nbsp; No joke, I searched for "biztalk xpath gotcha" and found <a href="http://ruskydotnet.blogspot.com/">Aaron Saikovski's</a> blog detailing <a href="http://ruskydotnet.blogspot.com/2006/04/biztalk-2004-xpath-expression-gotcha.html">this problem</a>.&nbsp; His note indicated that, in BizTalk 2004, you had to wrap your XPath expressing with string()!&nbsp; It's that simple.&nbsp; So, changing my XPath to the following ...</p>
+<blockquote dir=ltr style="MARGIN-RIGHT: 0px">
+<p dir=ltr style="MARGIN-RIGHT: 0px">xPathExpression = "string(/*[local-name()='Example' and namespace-uri()='http://example/']/*[local-name()='Contents' and namespace-uri()='http://example/']/text())";</p></blockquote>
+<p dir=ltr style="MARGIN-RIGHT: 0px">... saved the day!</p>
+<p dir=ltr style="MARGIN-RIGHT: 0px">What a fun quirk!&nbsp; Thanks Aaron!</p>
