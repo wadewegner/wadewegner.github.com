@@ -68,7 +68,7 @@ task :post do
     post.puts "category: \"#{category.gsub(/-/,' ')}\""
     post.puts "tags: #{tags}"
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "{% include setup %}"
   end
 end # task :post
 
@@ -93,7 +93,7 @@ task :page do
     post.puts "title: \"#{title}\""
     post.puts 'description: ""'
     post.puts "---"
-    post.puts "{% include JB/setup %}"
+    post.puts "{% include setup %}"
   end
 end # task :page
 
@@ -142,7 +142,7 @@ namespace :theme do
           page.puts "layout: default"
           page.puts "---"
         end 
-        page.puts "{% include JB/setup %}"
+        page.puts "{% include setup %}"
         page.puts "{% include themes/#{theme_name}/#{File.basename(filename)} %}" 
       end
     end

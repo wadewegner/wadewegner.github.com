@@ -3,7 +3,7 @@ layout: page
 title: Wade Wegner's Blog
 tagline: 
 ---
-{% include JB/setup %}
+{% include setup %}
 
 <div id="article">
 

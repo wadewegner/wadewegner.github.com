@@ -2,7 +2,7 @@
 theme :
   name : twitter
 ---
-{% include JB/setup %}
+{% include setup %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,7 +46,7 @@ theme :
           <ul class="nav">
             {% assign pages_list = site.pages %}
             {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
+            {% include pages_list %}
           </ul>
         </div>
       </div>
@@ -65,7 +65,7 @@ theme :
 
     </div>
 
-    {% include JB/analytics %}
+    {% include analytics %}
   </body>
 </html>
 
