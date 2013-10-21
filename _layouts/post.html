@@ -65,7 +65,7 @@ $( "#target" ).click(function() {
 //  alert( "Handler for .click() called." );
 
   $.post('http://wadewegner.webscript.io/fixit', {
-      messageType: 'format', message: "test123"
+      url: {{ BASE_PATH }}{{ page.url }}, submittedDate: new Date().getTime()
     }, function (data) {
       //id = data.id;
       //$('input').val('');
