@@ -8,7 +8,7 @@ title : Atom Feed
  <title>{{ site.title }}</title>
  <link href="{{ site.production_url }}{{ site.JB.atom_path }}" rel="self"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>{{ site.production_url }}</id>
+ <id>{{ site.production_url }}/</id>
  <author>
    <name>{{ site.author.name }}</name>
    <email>{{ site.author.email }}</email>
