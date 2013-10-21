@@ -61,22 +61,36 @@ layout: default
 <script>
 $(document).ready(function(){
 
-$( "#target" ).click(function() {
-//  alert( "Handler for .click() called." );
-
-  $.post('http://wadewegner.webscript.io/fixit', {
-      url: '{{ BASE_PATH }}{{ page.url }}', submittedDate: new Date().getTime()
-    }, function (data) {
-      //id = data.id;
-      //$('input').val('');
-      //$('form').toggleClass('hide');
+  function reset () {
+    $("#toggleCSS").attr("href", "../themes/alertify.default.css");
+    alertify.set({
+      labels : {
+        ok     : "OK",
+        cancel : "Cancel"
+      },
+      delay : 5000,
+      buttonReverse : false,
+      buttonFocus   : "ok"
     });
+  }
 
-});
+  $( "#target" ).click(function() {
+  //  alert( "Handler for .click() called." );
 
+    $.post('http://wadewegner.webscript.io/fixit', {
+        url: '{{ BASE_PATH }}{{ page.url }}', submittedDate: new Date().getTime()
+      }, function (data) {
+        //id = data.id;
+        //$('input').val('');
+        //$('form').toggleClass('hide');
+      });
+
+    reset();
+    alertify.alert("Thank you for letting me know! I'll try to get this fixed ASAP.");
+  });
 
 });
 </script>
-
+    
 
 
