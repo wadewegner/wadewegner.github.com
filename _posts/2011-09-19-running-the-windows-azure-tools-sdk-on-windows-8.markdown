@@ -4,7 +4,7 @@ comments: true
 date: 2011-09-19 06:52:53+00:00
 layout: post
 slug: running-the-windows-azure-tools-sdk-on-windows-8
-title: Running the Windows Azure Tools & SDK on the Windows Developer Preview
+title: Running the Windows Azure Tools &amp; SDK on the Windows Developer Preview
 wordpress_id: 1538
 categories:
 - Tips

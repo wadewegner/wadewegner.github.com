@@ -10,8 +10,12 @@ layout: default
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span>
+      <span>{{ page.date | date_to_long_string }}</span> | 
+      <a href="#" id="target">
+        Pardon the dust. Please click here if this page has malformatted content.
+      </a>
     </div>
+  
     <div class="content">
       {{ content }}
     </div>
@@ -52,4 +56,27 @@ layout: default
     {% include comments %}
   </div>
 </div>
+
+
+<script>
+$(document).ready(function(){
+
+$( "#target" ).click(function() {
+//  alert( "Handler for .click() called." );
+
+  $.post('http://wadewegner.webscript.io/fixit', {
+      messageType: 'format', message: "test123"
+    }, function (data) {
+      //id = data.id;
+      //$('input').val('');
+      //$('form').toggleClass('hide');
+    });
+
+});
+
+
+});
+</script>
+
+
 

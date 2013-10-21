@@ -5,11 +5,11 @@ tagline:
 ---
 {% include setup %}
 
-<div id="article">
+<div>
 
 	{% for post in site.posts limit: 6 %}
 
-	<div>
+	<div class="page-header">
 		<h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	</div>
 
