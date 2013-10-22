@@ -17,8 +17,9 @@ author :
   twitter : wadewegner
   feedburner : WadeWegner
 
-production_url : http://wadewegner.github.io
+production_url : http://www.wadewegner.com
 production_disqus_url : http://www.wadewegner.com
+production_facebook_url : http://www.wadewegner.com
 
 JB :
   BASE_PATH : false
