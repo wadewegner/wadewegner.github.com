@@ -13,7 +13,7 @@ categories:
 - Windows Azure
 ---
 
-![Joseph Paradi, Innovation Lead for Internal IT at Accenture](http://www.wadewegner.com/wp-content/uploads/2009/09/JosephPresenting-300x178.jpg)
+![Joseph Paradi, Innovation Lead for Internal IT at Accenture](http://www.wadewegner.com/content/2009/09/JosephPresenting-300x178.jpg)
 Last week I presented at the [Wisconsin .NET Users Group](http://www.wi-ineta.org/) for the first time, along with [Joseph Paradi](http://www.linkedin.com/pub/joseph-paradi/2/586/9a6). I had a great time, and I really appreciate the hospitality of the group - great facility, attentive audience, and excellent questions. The title of our talk was **_Windows Azure in the Real World_**; here's the abstract for the presentation:
 
 

@@ -10,7 +10,7 @@ categories:
 - Personal
 ---
 
-_Pardon the indulgence, but this post is not related to Windows Azure, cloud computing, or technology whatsoever. Instead, it’s a celebration of my wonderful family, and the fun we have._![](http://www.potstuck.com/wp-content/uploads/2008/01/the-3-monkeys.jpg)
+_Pardon the indulgence, but this post is not related to Windows Azure, cloud computing, or technology whatsoever. Instead, it’s a celebration of my wonderful family, and the fun we have._![](http://www.potstuck.com/content/2008/01/the-3-monkeys.jpg)
 
  
 

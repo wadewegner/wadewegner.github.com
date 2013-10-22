@@ -58,7 +58,7 @@ When asked, specify “D for directory”. This will copy everything from c:php 
 [![defaultDocument](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_5.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_12.png)
 
 	
-  11. Additionally, we need to setup a handler in the Web.config file. Add the following code to the <handlers> element in the web.Config: [![FastCGI](http://www.wadewegner.com/wp-content/uploads/2009/03/FastCGI.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_22.png)
+  11. Additionally, we need to setup a handler in the Web.config file. Add the following code to the <handlers> element in the web.Config: [![FastCGI](http://www.wadewegner.com/content/2009/03/FastCGI.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_22.png)
 
 	
   12. In order for this to function, we have to enable native code execution in Windows Azure. To do so, open the **ServiceDefinition.csdef** file and set the **enableNativeCodeExecutiion** flag to true:

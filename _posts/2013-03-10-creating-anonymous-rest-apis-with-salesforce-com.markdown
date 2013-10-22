@@ -29,11 +29,11 @@ Following is a detailed tutorial:
 
 2.	Let’s create a custom object. Under **App Setup** click **Schema Builder**. Click the **Elements** tab and drag an **Object** into the schema canvas.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb.png)](http://www.wadewegner.com/content/Create-a_7D04/image.png)
 
 3.	For the **Label** choose “Widget”, for the **Plural Label** choose “Widgets”, and for the **Record Name** choose “Name". Click **Save**.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_3.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_3.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_3.png)](http://www.wadewegner.com/content/Create-a_7D04/image_3.png)
 
 4.	It’s time to create the Apex REST API. Close the Schema Builder and under **App Setup** expand **Developer** and click **Apex Classes**. Click **New** to create a new class.
 
@@ -81,7 +81,7 @@ Following is a detailed tutorial:
 
 7. 	Choose a Force.com domain name. Ensure it is available, click the checkbox, then click **Register My Force.com Domain**.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_4.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_4.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_4.png)](http://www.wadewegner.com/content/Create-a_7D04/image_4.png)
 
 8.	Once your site is registered click the **New** button.
 
@@ -89,23 +89,23 @@ Following is a detailed tutorial:
 
 10.	By default the site is not active. Click the **Activate** button or else you will not be able to access your APIs.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_5.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_5.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_5.png)](http://www.wadewegner.com/content/Create-a_7D04/image_5.png)
 
 11.	Next we have to grant anonymous access to our Apex REST API. Click the **Public Access Settings** button.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_6.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_6.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_6.png)](http://www.wadewegner.com/content/Create-a_7D04/image_6.png)
 
 12.	Scroll down the **Custom Object Permissions** and click the **Edit** button underneath the **Widgets**.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_7.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_7.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_7.png)](http://www.wadewegner.com/content/Create-a_7D04/image_7.png)
 
 	Scroll down again to **Custom Object Permissions **(yeah, I know …) and check all the boxes. Click **Save**.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_8.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_8.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_8.png)](http://www.wadewegner.com/content/Create-a_7D04/image_8.png)
 
 13.	Scroll down to **Enabled Apex Class Access** and click the **Edit** button. Select the **WidgetController** and click the **Add** button. Click **Save**.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_9.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_9.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_9.png)](http://www.wadewegner.com/content/Create-a_7D04/image_9.png)
 
 14.	Browse to [http://www.hurl.it/](http://www.hurl.it/). This is a great website for making HTTP requests and will let us test the GET, POST, PATCH, and DELETE.
 
@@ -115,15 +115,15 @@ Following is a detailed tutorial:
 
 	Click **+ add header** and enter “Content-Type” for the **name** and “application/json; charset=UTF-8” for the value. Click the **Send** button.
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_10.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_10.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_10.png)](http://www.wadewegner.com/content/Create-a_7D04/image_10.png)
 
 	You should get a response like the following:
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_11.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_11.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_11.png)](http://www.wadewegner.com/content/Create-a_7D04/image_11.png)
 
 16.	Change from **POST** to **GET** and click **Send.** You should get the following response:
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_12.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_12.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_12.png)](http://www.wadewegner.com/content/Create-a_7D04/image_12.png)
 
 	Copy the **Id** value – we’ll use this in a moment.
 
@@ -133,7 +133,7 @@ Following is a detailed tutorial:
 
 	You should get the following response:
 
-	[![image](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_thumb_13.png)](http://www.wadewegner.com/wp-content/uploads/Create-a_7D04/image_13.png)
+	[![image](http://www.wadewegner.com/content/Create-a_7D04/image_thumb_13.png)](http://www.wadewegner.com/content/Create-a_7D04/image_13.png)
 
 	If you quickly flip back to **GET** and click **Send** you’ll see that your record has been updated.
 

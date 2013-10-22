@@ -138,10 +138,10 @@ Recently we added a set of client side NuGet packages that can communicate with 
   * **[Phone.Storage.Sample](http://www.nuget.org/packages/Phone.Storage.Sample)**: Sample application for Windows Phone that shows how to use the Windows Azure Storage Client Library for Windows Phone. 
    
   * **[Phone.Storage.AccessControl](http://www.nuget.org/packages/Phone.Storage.AccessControl)**: This package enables communication with the Windows Azure Storage Proxy Cloud Services using Windows Azure Access Control Service (ACS) for authentication.         
-![image](http://www.wadewegner.com/wp-content/uploads/2012/01/image6.png)
+![image](http://www.wadewegner.com/content/2012/01/image6.png)
    
   * **[Phone.Storage.Membership](http://www.nuget.org/packages/Phone.Storage.Membership)**: This package enables communication with the Windows Azure Storage Proxy Cloud Services using Membership for authentication.         
-![image](http://www.wadewegner.com/wp-content/uploads/2012/01/image7.png)
+![image](http://www.wadewegner.com/content/2012/01/image7.png)
  
 
 **_Server Side NuGet Packages_**
@@ -190,7 +190,7 @@ If you plan to use the Phone.Notifications.AccessControl NuGet package and secur
   * **[WindowsAzure.Notifications.AccessControl](http://www.nuget.org/List/Packages/WindowsAzure.Notifications.AccessControl)**: This package enables authentication using Windows Azure Access Control Service (ACS) for the Push Notification Registration Cloud Service. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config.         
        
 The dependencies and relationships between these NuGets are as follows:   
-![WindowsAzure.Notifications.AccessControl](http://www.wadewegner.com/wp-content/uploads/2012/01/image2.png)
+![WindowsAzure.Notifications.AccessControl](http://www.wadewegner.com/content/2012/01/image2.png)
  
 
 If you plan to use the Phone.Notifications.Membership NuGet package and secure the communications channel with membership, then you can use this NuGet package:
@@ -201,7 +201,7 @@ If you plan to use the Phone.Notifications.Membership NuGet package and secure t
   * **[CloudServices.Notifications.Membership](http://www.nuget.org/List/Packages/CloudServices.Notifications.Membership)**: This package enables authentication using the Membership provider for the Push Notification.         
        
 The dependencies and relationships between these NuGets are as follows:   
-![WindowsAzure.Notifications.Membership](http://www.wadewegner.com/wp-content/uploads/2012/01/image3.png)
+![WindowsAzure.Notifications.Membership](http://www.wadewegner.com/content/2012/01/image3.png)
  
 
 When working with Push Notifications, you need some kind of client to generate and send notifications. We’ve built some simple scaffolding that you can use during development (or production?) to generate and send notifications:
@@ -228,12 +228,12 @@ Recently we added a set of client side NuGet packages that can communicate with 
   * **[WindowsAzure.Storage.AccessControl](http://www.nuget.org/packages/WindowsAzure.Storage.AccessControl)**:This package enables authentication using Windows Azure Access Control Service (ACS) for the Windows Azure Storage Proxy Cloud Services. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config. 
    
   * **[WindowsAzure.Storage.Proxy.AccessControl](http://www.nuget.org/packages/WindowsAzure.Storage.Proxy.AccessControl)**: This package enables authentication using Windows Azure Access Control Service (ACS) for the Windows Azure Storage Proxy Cloud Services. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config.         
-![WindowsAzure.Storage.AccessControl](http://www.wadewegner.com/wp-content/uploads/2012/01/image4.png)
+![WindowsAzure.Storage.AccessControl](http://www.wadewegner.com/content/2012/01/image4.png)
    
   * **[WindowsAzure.Storage.Membership](http://www.nuget.org/packages/WindowsAzure.Storage.Membership)**: This package enables authentication using the Membership provider for the Windows Azure Storage Proxy Cloud Services. You just need to make sure to have a valid Membership provider configured in your Web.config. 
    
   * **[WindowsAzure.Storage.Proxy.Membership](http://www.nuget.org/packages/WindowsAzure.Storage.Proxy.Membership)**: This package enables authentication using the Membership provider for the Windows Azure Storage Proxy Cloud Services. You just need to make sure to have a valid Membership provider configured in your Web.config.         
-![WindowsAzure.Storage.Membership](http://www.wadewegner.com/wp-content/uploads/2012/01/image5.png)
+![WindowsAzure.Storage.Membership](http://www.wadewegner.com/content/2012/01/image5.png)
  
 
 That’s it!
