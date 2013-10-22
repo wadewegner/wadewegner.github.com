@@ -16,8 +16,6 @@ layout: default
       </a>
     </div>
 
-    <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
-  
     <div class="content">
       {{ content }}
     </div>
@@ -64,7 +62,7 @@ layout: default
 $(document).ready(function(){
 
   function reset () {
-    $("#toggleCSS").attr("href", "../themes/alertify.default.css");
+    $("#toggleCSS").attr("href", "/css/alertify.default.css");
     alertify.set({
       labels : {
         ok     : "OK",
@@ -92,7 +90,3 @@ $(document).ready(function(){
 
 });
 </script>
-    
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-
-
