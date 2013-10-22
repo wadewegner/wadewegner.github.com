@@ -6,7 +6,6 @@ tagline:
 {% include setup %}
 
 <div>
-
 	{% for post in site.posts limit: 6 %}
 
 	<div class="page-header">

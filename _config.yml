@@ -10,7 +10,6 @@ pygments: true
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
-#
 title : Wade Wegner
 tagline: From the whiteboard to the keyboard
 author :
@@ -27,14 +26,10 @@ author :
 # If you have set a CNAME (pages.github.com) set your custom domain here.
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
-#
 production_url : http://wadewegner.github.io
-
-
 production_disqus_url : http://www.wadewegner.com
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
-#
 JB :
   version : 0.3.0
 
