@@ -16,7 +16,9 @@ I’m working on a Windows Phone project that requires me to surface up multiple
 
 I’ve detailed the steps below, but if you want to get to the heart of it then here’s the code to get this working:
 
-	SyndicationFeed mainFeed = new SyndicationFeed(); List<string> feeds = new List<string>(); 
+	SyndicationFeed mainFeed = new SyndicationFeed(); 
+	List<string> feeds = new List<string>(); 
+	
 	feeds.Add("http://feeds2.feedburner.com/WadeWegner"); 
 	feeds.Add("http://www.nickharris.net/feed/"); 
 	feeds.Add("http://feeds.feedburner.com/ntotten"); 
