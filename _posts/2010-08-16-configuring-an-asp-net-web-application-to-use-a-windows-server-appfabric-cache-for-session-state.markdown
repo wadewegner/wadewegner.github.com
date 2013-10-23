@@ -18,25 +18,20 @@ Last week I spent some time [setting up Windows Server AppFabric Cache](http://w
 
 Below is a walkthrough on how to configure this scenario. In addition to this post, I recommend you take a look at [this article on MSDN](http://msdn.microsoft.com/en-us/library/ee790859.aspx).
 
-  1. Thoroughly review [Getting Started with Windows Server AppFabric Cache](http://www.wadewegner.com/2010/08/getting-started-with-windows-server-appfabric-cache/) to get everything setup.  
-  2. Open up the **Cache PowerShell** console (Start –> Windows Server AppFabric –> Caching Administration Windows PowerShell). This will automatically import the DistributedCacheAdministration module and use the CacheCluster.  
-  3. Start the Cache Cluster (if not already started). Run the following command in the PowerShell console:   
+1. Thoroughly review [Getting Started with Windows Server AppFabric Cache](http://www.wadewegner.com/2010/08/getting-started-with-windows-server-appfabric-cache/) to get everything setup.  
+2. Open up the **Cache PowerShell** console (Start –> Windows Server AppFabric –> Caching Administration Windows PowerShell). This will automatically import the DistributedCacheAdministration module and use the CacheCluster.  
+3. Start the Cache Cluster (if not already started). Run the following command in the PowerShell console:   
 
     
     	Start-CacheCluster
 
+4. Create a new cache that you will leverage for your session state provider. Run the following command in the PowerShell console: 
 
-
-  4. Create a new cache that you will leverage for your session state provider. Run the following command in the PowerShell console: 
-
-    
     	New-Cache MySessionStateCache
 
+5. Create a **new ASP.NET Web Application** in **Visual Studio 2010** targeting .NET 4.0. This will create a sample project, complete with master page which we’ll leverage later on. 
 
-
-  5. Create a **new ASP.NET Web Application** in **Visual Studio 2010** targeting .NET 4.0. This will create a sample project, complete with master page which we’ll leverage later on. 
-
-  6. Add references to the **Microsoft.ApplicationServer.Caching.Client** and **Microsoft.ApplicationServer.Caching.Core**. To do this, use the following steps (thanks to [Ron Jacobs for the insight](http://blogs.msdn.com/b/rjacobs/archive/2010/03/04/how-to-add-a-reference-to-microsoft-applicationserver-caching-client.aspx)): 
+6. Add references to the **Microsoft.ApplicationServer.Caching.Client** and **Microsoft.ApplicationServer.Caching.Core**. To do this, use the following steps (thanks to [Ron Jacobs for the insight](http://blogs.msdn.com/b/rjacobs/archive/2010/03/04/how-to-add-a-reference-to-microsoft-applicationserver-caching-client.aspx)): 
 
 
     1. Right-click on your project and select **Add Reference**. 
@@ -46,14 +41,11 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
     3. Enter the following folder name, and press enter: 
 
     
-    		%windir%SysnativeAppFabric
-
-
+    		%windir%\Sysnative\AppFabric
 
     4. Locate and select both **Microsoft.ApplicationServer.Caching.Client** and **Microsoft.ApplicationServer.Caching.Core** assemblies. 
 
-
-  7. Add the **configSections** element to the **web.config** file as the very first element element in the configuration element: 
+7. Add the **configSections** element to the **web.config** file as the very first element element in the configuration element: 
 
 		<configSections>
 		
@@ -63,8 +55,8 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
 		
 		</configSections>
 
-  8. Add the **dataCacheClient** element to the **web.config** file, after the configSections element. Be sure to replace **YOURHOSTNAME** with the name of your cache host. In the PowerShell console you can get the HostName (and CachePort) by starting or restarting your cache). 
-	
+8. Add the **dataCacheClient** element to the **web.config** file, after the configSections element. Be sure to replace **YOURHOSTNAME** with the name of your cache host. In the PowerShell console you can get the HostName (and CachePort) by starting or restarting your cache). 
+
 	    <dataCacheClient>
 			<hosts>
 				<host
@@ -73,7 +65,7 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
 			</hosts>
 		</dataCacheClient>
 
-  9. Add the **sessionState** element to the **web.config** file in the system.web element. Be sure that the **cacheName** is the same as the cache you created in step 4. 
+9. Add the **sessionState** element to the **web.config** file in the system.web element. Be sure that the **cacheName** is the same as the cache you created in step 4. 
 
 	    <sessionState mode="Custom" customProvider="AppFabricCacheSessionStoreProvider">
 			<providers>
@@ -84,7 +76,7 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
 			</providers>
 		</sessionState>
 
-  10. Now, we need a quick and easy way to test this. There are many ways to do this, below is mine. I loaded data into session, then created a button that writes the session data into a JavaScript alert. Quick and easy: 
+10. Now, we need a quick and easy way to test this. There are many ways to do this, below is mine. I loaded data into session, then created a button that writes the session data into a JavaScript alert. Quick and easy: 
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
@@ -112,7 +104,7 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
 			return b;
 		}
 
-  11. Now, hit **control-F5** to start your project. After it loads, click the button labeled “Click Me” – you should see the following alert:
+11. Now, hit **control-F5** to start your project. After it loads, click the button labeled “Click Me” – you should see the following alert:
   
 	[![ASP.NET using Cache for Session State](http://images.wadewegner.com/wordpress/2010/08/image_thumb6.png)](http://images.wadewegner.com/wordpress/2010/08/image9.png)
 
