@@ -24,16 +24,11 @@ While trying to figure out how to get the Application ID wasn’t particularly d
 
 Here’s how to get the application ID with C#:
 
-{% highlight csharp %}
-string appId = CurrentApp.AppId.ToString();
-{% endhighlight %}
+	string appId = CurrentApp.AppId.ToString();
 
 Note that during development the GUID comes back as "00000000-0000-0000-0000-000000000000". Once released through the Windows Store you will get a specific value.
 
 Getting the ASHWID is a bit more difficult. Prior to the RTM release a lot of folks created their own GUID and stored it in the Windows.Storage.ApplicationData.Current.LocalSettings. This is a reasonable hack but of course the user can delete local storage and then your application would change the value – not good if you’re depending on something unique.
-
-
-
 
 Fortunately the RTM release includes the GetPackageSpecificToken class that can return the ASHWID. Of course, I looked at some [guidance](http://msdn.microsoft.com/en-us/library/windows/apps/jj553431) and [MSDN method documentation](http://msdn.microsoft.com/en-us/library/windows/apps/windows.system.profile.hardwareidentification.getpackagespecifictoken) on getting the ASHWID and never found a good sample on how to get the ASHWID and store it as a string. Consequently, I hope this short snippet – again, found on Stack Overflow, helps:
 
