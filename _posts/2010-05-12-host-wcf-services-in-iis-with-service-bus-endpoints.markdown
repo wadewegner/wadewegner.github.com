@@ -22,8 +22,8 @@ The primary challenge is activation. As Vishal writes, “For the on-premise WCF
 
 In the whitepaper, Vishal points out two ways to resolve this challenge:
 
-  * IIS Application Warm-Up  
-  * ASP.NET 4.0 Auto-Start 
+* IIS Application Warm-Up  
+* ASP.NET 4.0 Auto-Start 
 
 In this post, I’m going to highlight exactly how to go about using **IIS Application Warm-Up to get a WCF service hosted in IIS 7.5 to receive messages from the Service Bus**. This post borrows heavily from Visha's whitepaper; I strongly suggest you spend the time to read the entire paper.
 
