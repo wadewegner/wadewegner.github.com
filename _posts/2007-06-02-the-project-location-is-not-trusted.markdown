@@ -14,7 +14,7 @@ Having recently purchased a new server, I found myself configuring and setting u
 
 [![NotTrusted](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Theprojectlocationisnottrusted_CE6F/NotTrusted_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Theprojectlocationisnottrusted_CE6F/NotTrusted.gif)
 
-"The project location is not trusted. Running the application may result in security exceptions when it attempts to perform actions which require full trust."
+	"The project location is not trusted. Running the application may result in security exceptions when it attempts to perform actions which require full trust."
 
 This is something I've had to setup and configure many times, but since it's not something I do every day I had to go look up the command to add my D drive as a group with full trust. To accomplish this, do the following:
 
@@ -22,7 +22,7 @@ This is something I've had to setup and configure many times, but since it's not
 
 2. Type the following command:
 
-	caspol -q -machine -addgroup 1 -url file://d:/* FullTrust -name "D Drive"
+		caspol -q -machine -addgroup 1 -url file://d:/* FullTrust -name "D Drive"
 
 That's it. You have now added the D drive to your .NET runtime security policy with the Full Trust permission set. You will not receive any security exceptions when running your .NET applications.
 
