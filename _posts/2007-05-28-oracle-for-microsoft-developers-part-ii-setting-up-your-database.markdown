@@ -88,33 +88,33 @@ Now that we've provided a high-level discussion of Oracle, and some of the diffe
 
 3. Create a new tablespace. The following script creates a tablespace called "ts_name" at the root of the drive that Oracle is installed on (e.g. C:), has logging turned on, a default size of 32 MBs that automatically extends to 2 GBs.
 
-    create tablespace ts_name
-    logging
-    datafile '/ts_name.dbf'
-    size 32m
-    autoextend on
-    next 32m maxsize 2048m
-    extent management local;
+        create tablespace ts_name
+        logging
+        datafile '/ts_name.dbf'
+        size 32m
+        autoextend on
+        next 32m maxsize 2048m
+        extent management local;
 
 4. Create a new user (or user schema) that has access to this tablespace. The following script creates a user named "alfred" with a password of "pword".
 
-    create user alfred identified by pword;
+        create user alfred identified by pword;
 
-  You can also define the default and temporary tablespace for this uses, as well as the quota. Note: you can specify a numeric value for the quota (such as 10) or unlimited, which defines an unlimited quota.
+    You can also define the default and temporary tablespace for this uses, as well as the quota. Note: you can specify a numeric value for the quota (such as 10) or unlimited, which defines an unlimited quota.
 
-    create user alfred identified by pword<br></br>  default tablespace ts_name temporary tablespace ts_name quota unlimited on ts_name; 
+        create user alfred identified by pword<br></br>  default tablespace ts_name temporary tablespace ts_name quota unlimited on ts_name; 
 
-  Failure to define a quote for your user within the tablespace will prevent the user from actually writing data into the database. Make sure you don't miss this step!
+    Failure to define a quote for your user within the tablespace will prevent the user from actually writing data into the database. Make sure you don't miss this step!
 
 5. Grant the user privileges, such as creating a session, table, views, etc.
 
-    grant create session to alfred;
-    grant create table to alfred;
-    grant create view to alfred;
-    grant create trigger to alfred;
-    grant create procedure to alfred;
-    grant create sequence to alfred;
-    grant create synonym to alfred;
+        grant create session to alfred;
+        grant create table to alfred;
+        grant create view to alfred;
+        grant create trigger to alfred;
+        grant create procedure to alfred;
+        grant create sequence to alfred;
+        grant create synonym to alfred;
 
 6. Close SQL*Plus, cause you're done!
 
