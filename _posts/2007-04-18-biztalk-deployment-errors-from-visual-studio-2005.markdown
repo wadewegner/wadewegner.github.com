@@ -22,7 +22,8 @@ So, I was having fun building some Orchestrations and Pipelines in BizTalk 2006,
   
 	Unspecified exception: "Object reference not set to an instance of an object."
 
-	Failed to add resource(s). Change requests failed for some resources. BizTalkAssemblyResourceManager failed to complete end type change request. Object reference not set to an instance of an object.   
+	Failed to add resource(s). Change requests failed for some resources. BizTalkAssemblyResourceManager failed to complete end type change request.
+	Object reference not set to an instance of an object.   
 
 All I did was update a pipeline that was used by an Orchestration! I tried all kinds of things to get this to work: restarted host instances, restarted the Enterprise Single Sign-On service, performed a full stop on all my applications, and even deleted all my project assemblies from the GAC. Nothing worked except for rebooting.
 

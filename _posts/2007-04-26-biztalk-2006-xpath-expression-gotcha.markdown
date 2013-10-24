@@ -39,10 +39,10 @@ I confirmed that this error occured when I set my orchestration's local numeric 
  
 	contents = xpath(msgExample, xPathExpression);
 
-
 What gives? The XPath expression works perfectly in my utility, but it doesn't in a BizTalk orchestration? So, I decided see if I could find any help on Google. No joke, I searched for "biztalk xpath gotcha" and found [Aaron Saikovski's](http://ruskydotnet.blogspot.com/) blog detailing [this problem](http://ruskydotnet.blogspot.com/2006/04/biztalk-2004-xpath-expression-gotcha.html). His note indicated that, in BizTalk 2004, you had to wrap your XPath expressing with string()! It's that simple. So, changing my XPath to the following ...
 
-	xPathExpression = "string(/*[local-name()='Example' and namespace-uri()='http://example/']/*[local-name()='Contents' and namespace-uri()='http://example/']/text())";
+	xPathExpression =
+		"string(/*[local-name()='Example' and namespace-uri()='http://example/']/*[local-name()='Contents' and namespace-uri()='http://example/']/text())";
 
 ... saved the day!
 
