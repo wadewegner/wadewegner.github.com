@@ -35,60 +35,60 @@ Below is a script that will go ahead and create these local users for you (if I 
 	' Encapsulates the processing of this script  
 	Sub Load()  
 	  
-	' Create the CS 2007 users  
-	CreateUser "CatalogWebSvc","Pa$$w0rd","Account for running the Catalog Web service"  
-	CreateUser "CSDMSvc","Pa$$w0rd","Account for running the Commerce Server Direct mailer service"  
-	CreateUser "CSHealthMonitorSvc","Pa$$w0rd","Account for running the Commerce Server health Monitoring service"  
-	CreateUser "CSLOB","Pa$$w0rd","Account for running the Commerce Server adapters"  
-	CreateUser "CSStageSvc","Pa$$w0rd","Account for running the Commerce Server Staging service"  
-	CreateUser "MarketingWebSvc","Pa$$w0rd","Account for running the Marketing Web service"  
-	CreateUser "OrdersWebSvc","Pa$$w0rd","Account for running the Orders Web service"  
-	CreateUser "ProfilesWebSvc","Pa$$w0rd","Account for running the Profiles Web service"  
-	CreateUser "RunTimeUser","Pa$$w0rd","IIS account for accessing a Commerce Server site or application"  
-	  
-	MsgBox "Complete!"  
+		' Create the CS 2007 users  
+		CreateUser "CatalogWebSvc","Pa$$w0rd","Account for running the Catalog Web service"  
+		CreateUser "CSDMSvc","Pa$$w0rd","Account for running the Commerce Server Direct mailer service"  
+		CreateUser "CSHealthMonitorSvc","Pa$$w0rd","Account for running the Commerce Server health Monitoring service"  
+		CreateUser "CSLOB","Pa$$w0rd","Account for running the Commerce Server adapters"  
+		CreateUser "CSStageSvc","Pa$$w0rd","Account for running the Commerce Server Staging service"  
+		CreateUser "MarketingWebSvc","Pa$$w0rd","Account for running the Marketing Web service"  
+		CreateUser "OrdersWebSvc","Pa$$w0rd","Account for running the Orders Web service"  
+		CreateUser "ProfilesWebSvc","Pa$$w0rd","Account for running the Profiles Web service"  
+		CreateUser "RunTimeUser","Pa$$w0rd","IIS account for accessing a Commerce Server site or application"  
+		  
+		MsgBox "Complete!"  
 	  
 	End Sub  
 	  
 	' Create the local user  
 	Sub CreateUser(userName, password, description)  
-	  
-	' Check to see if the user exists; if so, then skip  
-	If NOT CheckIfUserExists(userName) Then  
-	Set objComputer = GetObject("WinNT://" & strComputer & "")  
-	&
-	nbsp;Set objUser = objComputer.Create("user", userName)  
-	  
-	objUser.SetPassword password  
-	objUser.FullName = userName  
-	objUser.Description = description  
-	objUser.Put "UserFlags", 65600 ' Sets Password Never Expires to TRUE  
-	' and sets User Can't Change Password to TRUE  
-	objUser.SetInfo  
-	Else  
-	MsgBox userName & " already exists!"  
-	End If  
+		  
+		' Check to see if the user exists; if so, then skip  
+		If NOT CheckIfUserExists(userName) Then  
+			Set objComputer = GetObject("WinNT://" & strComputer & "")  
+			&
+			nbsp;Set objUser = objComputer.Create("user", userName)  
+			  
+			objUser.SetPassword password  
+			objUser.FullName = userName  
+			objUser.Description = description  
+			objUser.Put "UserFlags", 65600 ' Sets Password Never Expires to TRUE  
+			' and sets User Can't Change Password to TRUE  
+			objUser.SetInfo  
+		Else  
+			MsgBox userName & " already exists!"  
+		End If  
 	  
 	End Sub  
 	  
 	' Check to see if user exists  
 	Function CheckIfUserExists(userName)  
-	  
-	Set objComputer = GetObject("WinNT://" & strComputer & "")  
-	objComputer.Filter = Array("user")  
-	intFound = 0  
-	  
-	For Each User In objComputer  
-	If lcase(User.Name) = lcase(userName) Then  
-	intFound = 1   
-	End If   
-	Next  
-	  
-	If intFound = 1 Then  
-	CheckIfUserExists = True  
-	Else  
-	CheckIfUserExists = False  
-	End If  
+		  
+		Set objComputer = GetObject("WinNT://" & strComputer & "")  
+		objComputer.Filter = Array("user")  
+		intFound = 0  
+		  
+		For Each User In objComputer  
+			If lcase(User.Name) = lcase(userName) Then  
+				intFound = 1   
+			End If   
+		Next  
+		  
+		If intFound = 1 Then  
+			CheckIfUserExists = True  
+		Else  
+			CheckIfUserExists = False  
+		End If  
 	  
 	End Function
 
