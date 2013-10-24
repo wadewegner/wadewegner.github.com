@@ -30,9 +30,10 @@ This post assume that you've already installed your Oracle client. Check out my 
 
 	2. Change InstallPath from "C:Program Files (x86)Common FilesMicrosoft BizTalk Adapters for Enterprise Applications" to "C:Progra~2Common FilesMicrosoft BizTalk Adapters for Enterprise Applications".
 
+
 	Yes, for some reason, you have to change "Program Files (x86)" to "Progra~2", probably because the Adapter isn't written very well. If you don't update these registry settings, you will most likely get the following error:
 
-	he description for Event ID ( 0 ) in Source ( Microsoft BizTalk Adapters for Enterprise Applications ) cannot be found. The local computer may not have the necessary registry information or message DLL files to display messages from a remote computer. You may be able to use the /AUXSOURCE= flag to retrieve this description; see Help and Support for details. The following information is part of the event: Exception occurred:  
+		The description for Event ID ( 0 ) in Source ( Microsoft BizTalk Adapters for Enterprise Applications ) cannot be found. The local computer may not have the necessary registry information or message DLL files to display messages from a remote computer. You may be able to use the /AUXSOURCE= flag to retrieve this description; see Help and Support for details. The following information is part of the event: Exception occurred:  
 
 		Error Code: 12154 (0x2f7a)  
 		08004 : [Oracle][ODBC][Ora]ORA-12154: TNS:could not resolve service name.
@@ -45,7 +46,7 @@ Do the following to resolve this issue (from the article):
 
 1. Locate the following registry key: HKEY_LOCAL_MACHINESoftwareWow6432NodeMicrosoftBizTalkAdaptersConfig
 
-> [** Thanks to [Steef-Jan Wiggers](http://www.soa-thoughts.blogspot.com/) for noting that I forgot to display the 32-bit path in the Wow6432Node key]
+	Thanks to [Steef-Jan Wiggers](http://www.soa-thoughts.blogspot.com/) for noting that I forgot to display the 32-bit path in the Wow6432Node key.
 
 2. Right-click the registry key that you located in step 1, and then click Permissions. 
 
@@ -55,11 +56,11 @@ Do the following to resolve this issue (from the article):
 
 5. On the Security tab, click the domain group or the domain user account that you added in step 4, click to select the Read check box, and then click OK. 
 
-If you don't update these registry settings, you will most likely get the following (unhelpful) error:
+	If you don't update these registry settings, you will most likely get the following (unhelpful) error:
 
-	"RuntimeAgent: Error trapped in constructor: No connection could be made because the target machine actively refused it"
+		"RuntimeAgent: Error trapped in constructor: No connection could be made because the target machine actively refused it"
 
-	Error transmitting message: No connection could be made because the target machine actively refused it
+		Error transmitting message: No connection could be made because the target machine actively refused it
 
 6. Update the security permissions on your Oracle folder.
 
