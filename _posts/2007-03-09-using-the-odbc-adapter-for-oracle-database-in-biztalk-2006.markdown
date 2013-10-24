@@ -52,6 +52,7 @@ Here's the process I use to create a Recieve Port/Location
 
   4. User name
 
+
 5. At this point I'd recommend not specifying anything else, and clicking okay. This will save the settings, and allow you to continue forward. Having clicked okay, go ahead and immediately click "Configure" again to return to the properties.
 
 6. Click "Managing Events". This will call the Oracle Adapter Wizard, and confirm that you have correctly configured everything. If you are unable to browse the Oracle database, then you have made a mistake somewhere along the way. Click OK or Cancel to exit.
