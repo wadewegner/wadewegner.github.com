@@ -22,7 +22,7 @@ It reminds me of a small-scale version of the map Google Analytics provides. Her
 
 	<a href="http://www2.clustrmaps.com/counter/maps.php?url=http://www.wadewegner.com" temp_href="http://www2.clustrmaps.com/counter/maps.php?url=http://www.wadewegner.com" id="clustrMapsLink">
 	    
-	<img src="http://www2.clustrmaps.com/counter/index2.php?url=http://www.wadewegner.com" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null;this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg';document.getElementById('clustrMapsLink').href='http://clustrmaps.com'" />
+		<img src="http://www2.clustrmaps.com/counter/index2.php?url=http://www.wadewegner.com" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null;this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg';document.getElementById('clustrMapsLink').href='http://clustrmaps.com'" />
 
 	</a>
 
@@ -48,7 +48,7 @@ As with ClustrMap, the code for this widget is very simple:
     
 	<a href=http://whos.amung.us/show/ds0261t1>
 	    
-	<img src="http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff" temp_src="http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff" alt="counter" width="81" height="29" border="0" />
+		<img src="http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff" temp_src="http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff" alt="counter" width="81" height="29" border="0" />
 	    
 	</a>
 
