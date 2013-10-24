@@ -23,7 +23,7 @@ Consequently, I decided upon a different approach. I used the same network archi
 	Home team Time of Possession differential  
 	Bias (binary value of 1)
 
-> Note: since originally writing this, I expanded the differentials. Essentially, I'm grabbing everyting from the [NFL stats page](http://www.nfl.com/stats/2006/regular) (requires less work on my end) and creating differentials between the defense and offense.
+**Note:** since originally writing this, I expanded the differentials. Essentially, I'm grabbing everyting from the [NFL stats page](http://www.nfl.com/stats/2006/regular) (requires less work on my end) and creating differentials between the defense and offense.
 
 A typically row pattern looks like this ...
 
@@ -51,6 +51,6 @@ So, I decided to include week 12 again, and make predictions for week 13. Here a
 	* Seattle  
 	Carolina
 
-> * Accurately predicted!
+	* Accurately predicted!
 
 So, for week 13, I have accurately predicted 11 of the 15 games (73% accuracy)! This approach has MUCH more promise than the previous approach, yet isn't as good as I'd like it to be. I have some ideas one how to make this even MORE accurate! Stay tuned!
