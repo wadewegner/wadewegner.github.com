@@ -1,4 +1,4 @@
-{% for node in pages_list %}
+{% for node in pages_list reversed %}
   {% if node.title != null %}
     {% if node.title == 'About' or node.title == 'Projects' or node.title == 'Speaking' %}
     	{% if page.url == node.url %}
@@ -11,7 +11,7 @@
 {% endfor %}
 
 
-{% for node in pages_list %}
+{% for node in pages_list reversed %}
   {% if node.title != null %}
 	{% if group == null or group == node.group %}
     	{% if page.url == node.url %}
