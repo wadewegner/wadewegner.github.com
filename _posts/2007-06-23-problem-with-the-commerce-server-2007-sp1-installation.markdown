@@ -16,9 +16,11 @@ While installing SP1 I encountered a rather strange problem. Let me try to expla
 
 To begin, I decided to upgrade my Commerce Server 2007 virtual machine to SP1. To begin, I did the following:
 
-  1. Followed the steps I detail in my post [Commerce Server 2007 Service Pack 1 (SP1) Walkthrough](http://www.wadewegner.com/PermaLink,guid,3e9bb1c9-4c0f-4468-af92-68ecf4db73d7.aspx). In fact, these screen shots were taken during this initial installation of SP1.
-  2. After I installed SP1, I immediately launched the Upgrade Wizard.
-  3. For the most part, I followed the steps outlined in my post [Commerce Server 2007 Upgrade Wizard (post SP1 install) Walkthrough](http://www.wadewegner.com/PermaLink,guid,d4fe3f01-c318-4958-b46b-4e2a4b8827c0.aspx). However, instead of upgrading both my StarterSite and CSharpSite, I only upgraded my CSharpSite and then rebooted my machine.
+1. Followed the steps I detail in my post [Commerce Server 2007 Service Pack 1 (SP1) Walkthrough](http://www.wadewegner.com/PermaLink,guid,3e9bb1c9-4c0f-4468-af92-68ecf4db73d7.aspx). In fact, these screen shots were taken during this initial installation of SP1.
+
+2. After I installed SP1, I immediately launched the Upgrade Wizard.
+
+3. For the most part, I followed the steps outlined in my post [Commerce Server 2007 Upgrade Wizard (post SP1 install) Walkthrough](http://www.wadewegner.com/PermaLink,guid,d4fe3f01-c318-4958-b46b-4e2a4b8827c0.aspx). However, instead of upgrading both my StarterSite and CSharpSite, I only upgraded my CSharpSite and then rebooted my machine.
 
 Why did I reboot the machine after only upgrading one site? Well, I'm not exactly sure. Part of me wanted to see what would happen with only one site upgraded, and another part wanted to upgrade one site at a time while rebooting in-between. Regardless, I rebooted after installing only the CSharpSite.
 
@@ -34,20 +36,21 @@ I should note that the system was previously very healthy, as I use this VM all 
 
 So, at this point it was clear that:
 
-  1. The SQL Server Agent was no longer able to start-up.  
+1. The SQL Server Agent was no longer able to start-up.  
   
-SQLServerAgent could not be started (reason: Unable to connect to server '(local)'; SQLServerAgent cannot start).  
+	SQLServerAgent could not be started (reason: Unable to connect to server '(local)'; SQLServerAgent cannot start).  
 
-  2. Enterprise Single-Sign On (ENTSSO) was also having issues starting because it couldn't communicate to SQL Server 2005.  
-  
-The SSO service failed to start.  
-Error Code: 0x800710D9, Unable to read from or write to the database.  
+2. Enterprise Single-Sign On (ENTSSO) was also having issues starting because it couldn't communicate to SQL Server 2005.  
 
-  3. Commerce Server was complaining that I hadn't updated the StarterSite yet (this one is to be expected, as I hadn't updated it yet):  
+	The SSO service failed to start.  
+	
+	Error Code: 0x800710D9, Unable to read from or write to the database.  
+
+3. Commerce Server was complaining that I hadn't updated the StarterSite yet (this one is to be expected, as I hadn't updated it yet):  
   
-Error in Commerce Administration Object : Description - 'The following resources are old. They will not function correctly until they are upgraded:  
-Product Catalog (7.1.0)  
-Marketing (7.0.0)
+		Error in Commerce Administration Object : Description - 'The following resources are old. They will not function correctly until they are upgraded:  
+		Product Catalog (7.1.0)  
+		Marketing (7.0.0)
 
 Obviously, something here is wrong, and SQL Server seemed to be at the heart of it.
 
@@ -55,7 +58,7 @@ The next thing I did was try to connect to SQL Server 2005. Using the SQL Server
 
 ![A connection was successfully established to the server, but then an error occured during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/SQLError_1.gif)
 
-"A connection was successfully established to the server, but then an error occurred during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)" (copied directly from dialog window)
+	A connection was successfully established to the server, but then an error occurred during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)" (copied directly from dialog window)
 
 I have never seen this error before, but wasn't surprised to see that I couldn't find anything anything on [Google](http://www.google.com/search?hl=en&rls=com.microsoft%3Aen-us%3AIE-SearchBox&rlz=1I7GGIG&q=%22A+connection+was+successfully+established+to+the+server%2C+but+then+an+error+occurred+during+the+pre-login+handshake.+%28provider%3A+Shared+Memory+Provider%2C+error%3A+0+-+No+process+is+on+the+other+end+of+the+pipe.%29+%28Microsoft+SQL+Server%2C+Error%3A+223%29%22) or [Live](http://search.live.com/results.aspx?q=%22A+connection+was+successfully+established+to+the+server%2C+but+then+an+error+occurred+during+the+pre-login+handshake.+%28provider%3A+Shared+Memory+Provider%2C+error%3A+0+-+No+process+is+on+the+other+end+of+the+pipe.%29+%28Microsoft+SQL+Server%2C+Error%3A+223%29%22&form=QBNO) (although, hopefully this post will come up in the future). Sure, various iterations of the first part can be found, but nothing seems applicable to this situation.
 
