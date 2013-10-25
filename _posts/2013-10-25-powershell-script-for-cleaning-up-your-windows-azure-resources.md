@@ -68,29 +68,29 @@ When executed you'll see output similar to the following:
 	WARNING: 12:18:57 PM - Removing Production deployment for webfarmwqpvdxl893 service
 	WARNING: 12:22:30 PM - Removing cloud service vm6...
 	
-	OperationDescription         OperationId                            OperationStatus                                 
-	--------------------         -----------                            ---------------                                 
-	Remove-AzureDisk             8b8b5e5d-5c6b-2086-8882-d3c301004c2d   Succeeded                                       
-	Remove-AzureDisk             64a75cf5-eb2c-2543-b32a-40fdf2b30a4e   Succeeded                                       
-	Remove-AzureDisk             22af4853-e028-2b9b-9de2-cf58390ab833   Succeeded                                       
-	Remove-AzureDisk             1df3ac85-4679-2edb-848e-7d8010d0cf25   Succeeded                                       
-	Remove-AzureDisk             70e3551b-b0ab-2bcd-9e87-352e0a97e0c3   Succeeded                                       
-	Remove-AzureDisk             3875a2af-9526-2f50-adf8-0ed99baaf675   Succeeded                                       
-	Remove-AzureDisk             645615fa-c887-2431-8636-1b3e06b9e685   Succeeded                                       
-	Remove-AzureDisk             c8dcd546-6161-23c6-8e24-e5e4725bce9d   Succeeded                                       
-	Remove-AzureDisk             a79ff233-620a-23c4-89cc-34b963d55a01   Succeeded                                       
-	Remove-AzureDisk             8b58db0d-aa6c-25d2-9939-f6c1912c8090   Succeeded                                       
+	OperationDescription         OperationId                            OperationStatus
+	--------------------         -----------                            ---------------
+	Remove-AzureDisk             8b8b5e5d-5c6b-2086-8882-d3c301004c2d   Succeeded
+	Remove-AzureDisk             64a75cf5-eb2c-2543-b32a-40fdf2b30a4e   Succeeded
+	Remove-AzureDisk             22af4853-e028-2b9b-9de2-cf58390ab833   Succeeded
+	Remove-AzureDisk             1df3ac85-4679-2edb-848e-7d8010d0cf25   Succeeded
+	Remove-AzureDisk             70e3551b-b0ab-2bcd-9e87-352e0a97e0c3   Succeeded
+	Remove-AzureDisk             3875a2af-9526-2f50-adf8-0ed99baaf675   Succeeded
+	Remove-AzureDisk             645615fa-c887-2431-8636-1b3e06b9e685   Succeeded
+	Remove-AzureDisk             c8dcd546-6161-23c6-8e24-e5e4725bce9d   Succeeded
+	Remove-AzureDisk             a79ff233-620a-23c4-89cc-34b963d55a01   Succeeded
+	Remove-AzureDisk             8b58db0d-aa6c-25d2-9939-f6c1912c8090   Succeeded
 
-	Remove-AzureStorageAccount   ffd7ef08-b913-2b20-aceb-ef06787a9674   Succeeded                                       
-	Remove-AzureStorageAccount   26495110-66b0-230b-b98c-cb6d2b2b050e   Succeeded                                       
-	Remove-AzureStorageAccount   9b85d71b-7f9a-2494-9eb3-9e00eb9b5820   Succeeded                                       
-	Remove-AzureStorageAccount   806128ef-2990-2e27-bec0-c61ccb3fc7fe   Succeeded                                       
-	Remove-AzureStorageAccount   850eb732-5df2-219c-82ed-e351a6b89f65   Succeeded                                       
-	Remove-AzureStorageAccount   498b0283-4be3-2851-8abc-5b1da0108bf7   Succeeded                                       
+	Remove-AzureStorageAccount   ffd7ef08-b913-2b20-aceb-ef06787a9674   Succeeded
+	Remove-AzureStorageAccount   26495110-66b0-230b-b98c-cb6d2b2b050e   Succeeded
+	Remove-AzureStorageAccount   9b85d71b-7f9a-2494-9eb3-9e00eb9b5820   Succeeded
+	Remove-AzureStorageAccount   806128ef-2990-2e27-bec0-c61ccb3fc7fe   Succeeded
+	Remove-AzureStorageAccount   850eb732-5df2-219c-82ed-e351a6b89f65   Succeeded
+	Remove-AzureStorageAccount   498b0283-4be3-2851-8abc-5b1da0108bf7   Succeeded
 
-    Remove-AzureAffinityGroup    07ddb3a8-7ef3-2e78-a30f-71753e77a6cb 	Succeeded                           
+    Remove-AzureAffinityGroup    07ddb3a8-7ef3-2e78-a30f-71753e77a6cb 	Succeeded
 
-    Remove-AzureVNetConfig       d62374ca-c9c6-24b4-ae5d-31d93ada4623 	Succeeded 
+    Remove-AzureVNetConfig       d62374ca-c9c6-24b4-ae5d-31d93ada4623 	Succeeded
 
 **Note:** there's no way to specify a particular Virtual Network name.
 Consequently, the best you can do is delete everything and, if the VNet is still in use it will throw an error. That's fine.
