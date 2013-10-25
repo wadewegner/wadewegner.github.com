@@ -44,9 +44,9 @@ So, now that you understand my motivation, let me share a few of the things I di
 
 3. I decided to use [Jekyll Bootstrap](http://jekyllbootstrap.com/) as the starting point for a few reasons:
 
- * I love the simple elegance of Bootstrap, and it was already backed in.
- * It's 100% compatible with Github Pages.
- * There are some nice [Liquid](https://github.com/Shopify/liquid) templates for common things like Archives, Categories, Tags, and so forth.
+	 * I love the simple elegance of Bootstrap, and it was already backed in.
+	 * It's 100% compatible with Github Pages.
+	 * There are some nice [Liquid](https://github.com/Shopify/liquid) templates for common things like Archives, Categories, Tags, and so forth.
 
 	All this said, Jekyll Boostrap also had a ton of code for tools and includes that I'll never use. I ended up spending a good amount of time removing and triaging much of the code. I like it simple and neat. You can take a look at my repository for inspiration.
 
