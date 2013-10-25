@@ -72,7 +72,7 @@ So, now that you understand my motivation, let me share a few of the things I di
 		  alertify.alert("Thank you for letting me know! I'll try to get this fixed ASAP.");
 		});
 
-	... and then thank the user (using Prettify.js).
+	... and then thank the user (using alertify.js).
 
 	![](http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-25-ThankYou.JPG)
 
@@ -100,6 +100,8 @@ So, now that you understand my motivation, let me share a few of the things I di
 		      "submittedDate":"1382673263024"
 		   }
 		]
+
+5. It was important for me to migrate all the comments people have made over the years. The easiest way I found to do this is to setup an account with ![Disqus](http://disqus.com/), use their tools for migrating Wordpress comments into Disqus, and then use Disqus as your comment system.
 
 I'll dig into the topic of Webscript.io deeper in a separate post. Webscript.io is a fantastic tool that you should look into using - especially if you have a static website and don't want to host your own Web APIs. Suffice to say, this is an easy / simple way to use crowd-sourcing to help me identify posts that need to be fixed.
 
