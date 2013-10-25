@@ -43,11 +43,11 @@ So, now that you understand my motivation, let me share a few of the things I di
 2. Use [ExitWP](https://github.com/thomasf/exitwp). I performed my migration against a WordPress export file. Originally I used the Jekyll importer for Wordpress but found that it did not do a good job of converting my HTML into markdown. I dug around a bit and found ExitWP - it ran like a champ and did a fantastic job of creating the markdown files. Simply clone the repository and use your WordPress.xml export file.
 
 3. I decided to use [Jekyll Bootstrap](http://jekyllbootstrap.com/) as the starting point for a few reasons:
+  * I love the simple elegance of Bootstrap, and it was already baked in.
+  * It's 100% compatible with Github Pages.
+  * There are some nice [Liquid](https://github.com/Shopify/liquid) templates for common things like Archives, Categories, Tags, and so forth.
 
-	 * I love the simple elegance of Bootstrap, and it was already backed in.
-	 * It's 100% compatible with Github Pages.
-	 * There are some nice [Liquid](https://github.com/Shopify/liquid) templates for common things like Archives, Categories, Tags, and so forth.
-
+  <br/>
 	All this said, Jekyll Boostrap also had a ton of code for tools and includes that I'll never use. I ended up spending a good amount of time removing and triaging much of the code. I like it simple and neat. You can take a look at my repository for inspiration.
 
 4. My bog has a lot of code snippets. Even though ExitWP did a good job of converting my HTML to markdown, I found that most of the code snippets did not get converted well. I've spent a decent amount of time going through the posts and updating. To make my life simpler, I decided to use Webscript and some simple JQuery code to give my readers the ability to notify me of a page with bad formatting.
@@ -101,9 +101,7 @@ So, now that you understand my motivation, let me share a few of the things I di
 		   }
 		]
 
-	I'll dig into this deeper in a separate post. Webscript.io is a fantastic tool that you should look into using - especially if you have a static website and don't want to host your own Web APIs.
-
-	Suffice to say, this is an easy / simple way to use crowd-sourcing to help me identify posts that need to be fixed.
+I'll dig into the topic of Webscript.io deeper in a separate post. Webscript.io is a fantastic tool that you should look into using - especially if you have a static website and don't want to host your own Web APIs. Suffice to say, this is an easy / simple way to use crowd-sourcing to help me identify posts that need to be fixed.
 
 Aside from the above, I have done all that much. I love having all my code accessible and find that I spend more time experimenting with things I'd never do on Wordpress.
 
