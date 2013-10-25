@@ -9,6 +9,8 @@ category:
 ---
 {% include setup %}
 
+> Special thanks to [Michael Washam](michaelwasham.com/‎) for helping me find and fix a bug in my code!
+
 I find myself regularly creating resources in Windows Azure, such as cloud services, virtual machines, storage accounts, virtual networks, and the like. Most of the time this is part of writing scripts or testing out deployments, and I don't plan to keep them around indefinitely. The challenge this creates is how to cleanup all these resources. While it's possible to do this through the Windows Azure management portal you'll find in practice that it's slow and cumbersome.
 
 Consequently, I've created a script which I use regularly to cleanup my resources.
@@ -102,4 +104,4 @@ I hope it goes without saying that with **phenomenal cosmic power** comes great 
 
 Over time I'll like add additional resources to this list. For now I'm happy with the above as it removes most of the resources that have a monthly cost associated with them.
 
-I hope this helps!  
+I hope this helps!
