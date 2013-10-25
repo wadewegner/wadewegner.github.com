@@ -105,6 +105,6 @@ I'll dig into the topic of Webscript.io deeper in a separate post. Webscript.io 
 
 Aside from the above, I haven't done all that much. I love having all my code accessible and find that I spend more time experimenting with things I'd never do on Wordpress.
 
-Hopefully this post explains my rationale for migrating to Jekyll and gives a few tips to help you, should you also decide to make the most.
+Hopefully this post explains my rationale for migrating to Jekyll and gives a few tips to help you, should you also decide to make the move.
 
 I hope this helps!
