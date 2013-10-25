@@ -50,7 +50,7 @@ So, now that you understand my motivation, let me share a few of the things I di
   <br/>
 	All this said, Jekyll Boostrap also had a ton of code for tools and includes that I'll never use. I ended up spending a good amount of time removing and triaging much of the code. I like it simple and neat. You can take a look at my repository for inspiration.
 
-4. My bog has a lot of code snippets. Even though ExitWP did a good job of converting my HTML to markdown, I found that most of the code snippets did not get converted well. I've spent a decent amount of time going through the posts and updating. To make my life simpler, I decided to use Webscript and some simple JQuery code to give my readers the ability to notify me of a page with bad formatting.
+4. My blog has a lot of code snippets. Even though ExitWP did a good job of converting my HTML to markdown, I found that most of the code snippets did not get converted well. I've spent a decent amount of time going through the posts and updating. To make my life simpler, I decided to use Webscript and some simple jQuery code to give my readers the ability to notify me of a page with bad formatting.
 
 	To implement this I simply created a link at the top of each blog post. 
 
