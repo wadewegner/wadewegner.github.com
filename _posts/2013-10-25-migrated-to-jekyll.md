@@ -103,7 +103,7 @@ So, now that you understand my motivation, let me share a few of the things I di
 
 I'll dig into the topic of Webscript.io deeper in a separate post. Webscript.io is a fantastic tool that you should look into using - especially if you have a static website and don't want to host your own Web APIs. Suffice to say, this is an easy / simple way to use crowd-sourcing to help me identify posts that need to be fixed.
 
-Aside from the above, I have done all that much. I love having all my code accessible and find that I spend more time experimenting with things I'd never do on Wordpress.
+Aside from the above, I haven't done all that much. I love having all my code accessible and find that I spend more time experimenting with things I'd never do on Wordpress.
 
 Hopefully this post explains my rationale for migrating to Jekyll and gives a few tips to help you, should you also decide to make the most.
 
