@@ -2,7 +2,7 @@
 layout: post
 title: "PowerShell Script for Cleaning Up Your Windows Azure Resources"
 description: ""
-category:
+categories:
 - Windows Azure
 - PowerShell
 - Automation
