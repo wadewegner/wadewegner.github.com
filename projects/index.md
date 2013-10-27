@@ -1,6 +1,6 @@
 --- 
 layout: page
-title: Projects
+title: My Projects
 categories: []
 ---
 In my various roles I have been responsible for driving and shipping a significant amount of content and software.
