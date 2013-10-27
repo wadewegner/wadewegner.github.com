@@ -54,15 +54,11 @@ Okay, ready to get started? Here are the steps to follow.
   <p/>
 8. Update **CreateUser.cmd** to include the following code. Be sure to change “webdeployuser” and “password” to different values:         
 
-	Code: CreateUser.cmd
-		
 		net user webdeployuser password /add
 		net localgroup administrators webdeployuser /add
 		exit /b 0
 
 9. Update **InstallWebDeploy.cmd** to include the following code:         
-
-	Code: InstallWebDeploy.cmd
 
 		"%~dp0\webpicmd\WebPICmdLine.exe" /Products: WDeploy /xml:https://www.microsoft.com/web/webpi/2.0/RTM/WebProductList.xml /log:webdeploy.txt
 		net stop wmsvc
@@ -82,16 +78,12 @@ Okay, ready to get started? Here are the steps to follow.
 
 12. Add a new **InputEndpoint** named **mgmtsvc** with the following values:       
 
-	Code: InputEndpoint
-
 		<Endpoints>
 		  <InputEndpoint name="Endpoint1" protocol="http" port="80" />
 		  <InputEndpoint name="mgmtsvc" protocol="tcp" port="8172" localPort="8172" />
 		</Endpoints>
 
 13. Create three **Startup Tasks** to call the command files in the **MvcWebRole**.       
-
-	Code: Startup Tasks
 
 		<Startup>
 		  <Task commandLine="Startup\EnableWebAdmin.cmd" executionContext="elevated" taskType="simple" />
