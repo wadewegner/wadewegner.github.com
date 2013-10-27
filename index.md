@@ -50,10 +50,27 @@ tagline:
 					<div class="bottom-buffer-10" style="border-bottom: 1px solid #eeeeee;">
 						<strong>Additional Resources</strong>
 					</div>
-					<a href="/about">About Me</a><br/>
-					<a href="/speaking">Speaking Engagements</a><br/>
-					<a href="/projects">My Projects</a><br/>
-					<a href="/contact">Contact Me</a><br/>
+					<ul type="square">
+						<li><a href="/about">About Me</a></li>
+						<li><a href="/speaking">Speaking Engagements</a></li>
+						<li><a href="/projects">My Projects</a></li>
+						<li><a href="/contact">Contact Me</a></li>
+					</ul>
+				</div>
+
+				<div class="top-buffer-20">
+					<div class="bottom-buffer-10" style="border-bottom: 1px solid #eeeeee;">
+						<strong>Recent Posts</strong>
+					</div>
+
+					<ul type="square">
+						{% for post_side in site.posts limit: 10 %}
+
+						<li><a href="{{ post_side.url }}">{{ post_side.title }}</a></li>
+
+						{% endfor %}
+					</ul>
+
 				</div>
 			</div>
 			{% endif %}
