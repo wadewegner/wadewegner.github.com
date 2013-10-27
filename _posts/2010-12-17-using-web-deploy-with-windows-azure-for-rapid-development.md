@@ -51,7 +51,7 @@ Okay, ready to get started? Here are the steps to follow.
   * Microsoft.Web.PlatformInstaller.dll 
   * Microsoft.Web.PlatformInstaller.UI.dll 
   * WebPICmdLine.exe 
-
+<br/>
 8. Update **CreateUser.cmd** to include the following code. Be sure to change “webdeployuser” and “password” to different values:         
 
 	Code: CreateUser.cmd
