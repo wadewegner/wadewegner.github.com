@@ -13,6 +13,9 @@ meta:
   bfa_virtual_template: simple
   dsq_thread_id: "947518374"
 ---
+
+![Wade Wegner](http://images.wadewegner.com/wordpress/2011/12/CloudCoverLive.png "Wade Wegner")
+
 One of the great joys I've had in my career is speaking to other professionals. I have found it extremely rewarding.
 
 Here's a non-exhaustive list of some of the talks I've given. Forgive me for not including many of the smaller local and regional talks and, to be honest, it's likely I'm behind in keeping this up-to-date.

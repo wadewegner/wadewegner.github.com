@@ -1,6 +1,6 @@
 --- 
 layout: page
-title: About
+title: About Me
 categories: []
 ---
 ![Wade Wegner](http://images.wadewegner.com/wordpress/2011/12/CloudCoverLive.png "Wade Wegner")

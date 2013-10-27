@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: mainpage
 title: Wade Wegner's Blog
 tagline: 
 ---
@@ -16,19 +16,19 @@ tagline:
 	<div class="row-fluid post-full">
 		<div class="span9">
 			<div class="date">
-			<span>{{ post.date | date_to_long_string }}</span>
+				<span>{{ post.date | date_to_long_string }}</span>
 			</div>
 			<div class="content">
-			{{ post.content }}
+				{{ post.content }}
 			</div>
 		</div>
-		<span class="span3">
+		<div class="span3">
 
 			{% if first == true %}
 			<div class="profile">
 				<div class="top">
 					<div class="photo">
-						<a href="http://wadewegner.com"><img class="img-rounded" alt="Wade Wegner" src="/img/WadeWegner_128x128.jpg"></a>
+						<a href="http://www.wadewegner.com"><img class="img-rounded" alt="Wade Wegner" src="/img/WadeWegner_128x128.jpg"></a>
 					</div>
 
 					<a class="social-rss" href="http://feeds.feedburner.com/WadeWegner"></a>
@@ -57,7 +57,7 @@ tagline:
 			</div>
 			{% endif %}
 
-		</span>
+		</div>
 	</div>
 
 	{% assign first = false %}
