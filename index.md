@@ -53,6 +53,7 @@ tagline:
 					<a href="/about">About Me</a><br/>
 					<a href="/speaking">Speaking</a><br/>
 					<a href="/projects">Projects</a><br/>
+					<a href="/contact">Contact Me</a><br/>
 				</div>
 			</div>
 			{% endif %}
