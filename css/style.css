@@ -63,3 +63,14 @@
   background: #57A957;
   border: 1px solid #4c964d;
   color: #FFF; }
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 10px 0 10px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.post-full .date {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
