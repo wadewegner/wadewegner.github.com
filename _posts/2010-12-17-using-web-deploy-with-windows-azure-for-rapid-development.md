@@ -47,7 +47,6 @@ Okay, ready to get started? Here are the steps to follow.
 6. Unzip the file **webpicmdline_ctp.zip** into the **webpicmd** folder. 
 
 7. In Visual Studio, add the following four files into the solution. For each of these files, change the **Copy to Output Directory** value to **Copy always**.              
-
   * Microsoft.Web.Deployment.dll 
   * Microsoft.Web.PlatformInstaller.dll 
   * Microsoft.Web.PlatformInstaller.UI.dll 
