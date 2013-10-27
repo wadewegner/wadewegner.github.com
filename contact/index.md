@@ -1,11 +1,10 @@
 --- 
 layout: page
-title: Contact
+title: Contact Me
 categories: []
 ---
 
-
-
+The easiest way to reach me (and get a response) is through Twitter. You can reach me [@WadeWegner](http://twitter.com/WadeWegner). However, in the event you don't have a Twitter account, you can send me a message using the form below.
 
 <form action="https://wadewegner.webscript.io/contact" method="post" class="form-horizontal">
   <div class="control-group">
