@@ -48,10 +48,11 @@ Okay, ready to get started? Here are the steps to follow.
 
 7. In Visual Studio, add the following four files into the solution. For each of these files, change the **Copy to Output Directory** value to **Copy always**.              
 
-  * Microsoft.Web.Deployment.dll 
-  * Microsoft.Web.PlatformInstaller.dll 
-  * Microsoft.Web.PlatformInstaller.UI.dll 
-  * WebPICmdLine.exe 
+	* Microsoft.Web.Deployment.dll 
+	* Microsoft.Web.PlatformInstaller.dll 
+	* Microsoft.Web.PlatformInstaller.UI.dll 
+	* WebPICmdLine.exe 
+<br/>
 
 8. Update **CreateUser.cmd** to include the following code. Be sure to change “webdeployuser” and “password” to different values:         
 
