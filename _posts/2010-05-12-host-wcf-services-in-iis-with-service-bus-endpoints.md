@@ -72,13 +72,13 @@ In this post, I’m going to highlight exactly how to go about using **IIS Appli
 
 7. Also, update the EchoService.svc.cs with the implementation of the GetData method. 
 
-	public string GetData(int value)
-	{
-	    if (value < 0)
-	        throw new ApplicationException("Negative values not allowed!!!");
-	    Thread.Sleep(value);
-	    return string.Format("You entered: {0}", value);
-	}
+		public string GetData(int value)
+		{
+		    if (value < 0)
+		        throw new ApplicationException("Negative values not allowed!!!");
+		    Thread.Sleep(value);
+		    return string.Format("You entered: {0}", value);
+		}
 
 8. Now we need to update the web.config settings. This is fairly extensive. Be sure and replace YOUR_NAMESPACE, YOUR_ISSUER_NAME, and YOUR_ISSUER_SECRET with your own values. 
 
@@ -181,7 +181,7 @@ Now, to complete the test, let’s build a quick Console application to connect 
 
 3. Add a link to the IEchoService.cs file in the EchoSample project. Right-click the project, choose Add Existing, and change Add to Add as Link. 
 
-![Add Existing Item - Add As Link](http://images.wadewegner.com/wordpress/2010/05/image_thumb2.png)
+	![Add Existing Item - Add As Link](http://images.wadewegner.com/wordpress/2010/05/image_thumb2.png)
 
 4. Update the Program.cs file with the following code. Be sure and replace YOUR_NAMESPACE, YOUR_ISSUER_NAME, and YOUR_ISSUER_SECRET with your own values.
 
