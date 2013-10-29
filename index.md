@@ -43,7 +43,7 @@ tagline:
 				<p><span style="font-weight:bold;">Wade Wegner</span> is the CTO at Aditi Technologies and an aspiring brewmaster.</p>
 			
 				<div>
-					<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1382126667.html#_=1382886215451&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=wadewegner&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 230px; height: 20px;"></iframe>
+					<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1382126667.html#_=1382886215451&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=wadewegner&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 250px; height: 20px;"></iframe>
 				</div>
 
 				<div class="top-buffer-20">
