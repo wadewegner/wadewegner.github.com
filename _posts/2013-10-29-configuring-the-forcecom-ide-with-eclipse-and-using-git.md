@@ -15,16 +15,16 @@ Today I needed to configure Eclipse to use the Force.COM IDE. In the past I've e
 
 ![Inline APEX development](http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-30-Inline.png)
 
-... or using the [Developer Console](http://wiki.developerforce.com/page/Developer_Console). Both are decent for quick and dirty updates, but when it comes to applying best practices - i.e. automated builds, source control, and so forth - I don't want to live in the browser.
+... or using the [Developer Console](http://wiki.developerforce.com/page/Developer_Console). Both are decent for quick and dirty updates, but when it comes to applying best practices (i.e. automated builds, source control, and so forth) I don't want to live in the browser.
 
-There's a good wiki article available on the Developer Force website which explains [how to setup Eclipse with the Force.com IDE](http://wiki.developerforce.com/page/Force.com_IDE_Installation), so I won't repeat those instructions. Instead, I want to focus on two things:
+There's a good wiki article available on the Developer Force website which explains [how to setup Eclipse with the Force.com IDE](http://wiki.developerforce.com/page/Force.com_IDE_Installation), so I won't repeat those instructions. Instead, I want to do two things:
 
 1. Provide some context to people that may not have a Java (nor Eclipse) background.
 2. Provide a perspective on configuring git (and either Github or Bitbucket) to provide source control for your project.
 
 Nothing earth shattering but hopefully useful.
 
-**Setting Up Eclipse with the Force.com IDE**
+**<span style="text-decoration: underline;">Setting Up Eclipse with the Force.com IDE</span>**
 
 As I said above, review this article: [http://wiki.developerforce.com/page/Force.com\_IDE_Installation](http://wiki.developerforce.com/page/Force.com_IDE_Installation)
 
@@ -32,11 +32,11 @@ Eclipse and the Force.com IDE require the Java Runtime Environment (JRE). The mo
 
 ![Install JRE 6 for Eclipse](http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-30-SoftwareUpdate.png)
 
-There is no need to remove JRE SE 7 if you already have it installed. Go ahead and install JRE SE 6 - they should work side-by-side.
+There is no need to remove JRE SE 7 if you already have it installed. Go ahead and install JRE SE 6 &mdash; they should work side-by-side.
 
-You may have noticed I threw in another acronym - the **SE** in **JRE SE**. SE stands for Standard Edition. You may also come across JDK, which stands for the Java Development Kit. You don't necessarily need the JDK but note that the JDK already includes the JRE.
+You may have noticed I threw in another acronym. SE stands for Standard Edition. You may also come across JDK, which stands for the Java Development Kit. You don't necessarily need the JDK but note that the JDK already includes the JRE.
 
-Setting up Eclipse isn't particularly difficult, but I noticed a few quirks when installing it on OSX Version 10.9 (i.e. Mavericks) - using a different OS version (or Windows) may have different results.
+Setting up Eclipse isn't particularly difficult, but I noticed a few quirks when installing it on OSX Version 10.9 (i.e. Mavericks) &mdash; using a different OS version (or Windows) may have different results.
 
 When you download Eclipse (I downloaded **Eclipse 4.3 "Kepler" IDE for Java Developers**) the first thing you'll notice is that it is zipped and there isn't an installer. Take the following steps to set it up. (Incidentally, I was annoyed to see that I had to create and register an account to download Eclipse. Yuck!)
 
@@ -52,11 +52,11 @@ When you download Eclipse (I downloaded **Eclipse 4.3 "Kepler" IDE for Java Deve
 
 	If you are prompted to install the JRE SE 6 at this point, do it.
 
-4. I like to have Eclipse on the dock for easy access. Drag the Eclipse icon into your dock - you will now be able to launch Eclipse by clicking on the icon in the dock.
+4. I like to have Eclipse on the dock for easy access. Drag the Eclipse icon into your dock &mdash; you will now be able to launch Eclipse by clicking on the icon in the dock.
 
 Aside from these notes, just follow the instructions on the wiki article.
 
-**Setting Up Git with the Force.com IDE**
+**<span style="text-decoration: underline;">Setting Up Git with the Force.com IDE</span>**
 
 I looked hard to find best practices for using Git with Eclipse and the Force.com IDE. I didn't find much. The two things I found worth mention are:
 
@@ -68,13 +68,13 @@ So, what are good practices for using Git with Eclipse and the Force.com IDE? Fo
 
 Here are some of the steps I took.
 
-1. I prefer to have my workspaces in the same folder as the rest of my source/projects. Consequently, I setup my workspace under a **src** folder.
+1. I prefer to have my workspaces in the same folder as the rest of my source/projects. Consequently, I set up my workspace under a **src** folder.
 
 	![Workspace](http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-30-Workspace.png)
 
 2. Now create a new repository (you can use Github, Bitbucket, or your preferred git provider).
 
-3. Now that you have a repository, initialize git and setup a remote. Go to the folder and run the following commands in the git bash (I've given an example for Bitbucket and Github - just choose one or the other):
+3. Now that you have a repository, initialize git and set up a remote. Go to the folder and run the following commands in the git bash (I've given an example for Bitbucket and Github &mdash; just choose one or the other):
 
 		git init
 		git remote add origin ssh://git@bitbucket.org/[YourUsername]/[YourRepository].git
@@ -92,7 +92,7 @@ I'll leave this post with two questions for you:
 
 * What best practices for Git and Force.com development has your team found?
 
-* How have you setup your .gitignore file? I've dug around and haven't found any examples.
+* How have you set up your .gitignore file? I've dug around and haven't found any examples.
 
 Please leave your responses in the comments below. As I get more experience developing with these tools, I'm sure the notes above will change. I'll try to keep this post updated.
 
