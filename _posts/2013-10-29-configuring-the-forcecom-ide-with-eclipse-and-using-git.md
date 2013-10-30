@@ -60,7 +60,7 @@ Aside from these notes, just follow the instructions on the wiki article.
 
 I looked hard to find best practices for using Git with Eclipse and the Force.com IDE. I didn't find much. The two things I found worth mention are:
 
-* [How To Use Git, GitHub and the Force.com IDE with Open Source Labs Apps](How To Use Git, GitHub and the Force.com IDE with Open Source Labs Apps) : This is a decent article by [Reid Carlburg](https://twitter.com/ReidCarlberg), but it's dated and it's likely teams have found better ways to manage the Git integration. I actually pinged Reid about this article and he pointed me to [Mavensmate](http://mavensmate.com/) which looks interesting.
+* [How To Use Git, GitHub and the Force.com IDE with Open Source Labs Apps](http://blogs.developerforce.com/labs/2011/04/how-to-use-git-github-force-com-ide-open-source-labs-apps.html) : This is a decent article by [Reid Carlburg](https://twitter.com/ReidCarlberg), but it's dated and it's likely teams have found better ways to manage the Git integration. I actually pinged Reid about this article and he pointed me to [Mavensmate](http://mavensmate.com/) which looks interesting.
 
 * [EGit](http://www.eclipse.org/egit/) : EGit is an Eclipse provider for Git. It looks like a great tool for folks who want to use an integrated tool in the Eclipse IDE. Personally, I prefer to live in the console / Git Bash (or as some friends call it, "the dark place"), so EGit isn't the answer for me.
 
