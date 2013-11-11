@@ -18,4 +18,6 @@ I'm extremely proud of what we've accomplished over the last two years and there
 
 There are too many other people I will miss to mention them all by name. Thank you all!
 
-I'll have my work cut out for me at Salesforce. This is an incredibly exciting time and I've been impressed with the capabilities of the Force.com platform. This is also the most significant departure from the Microsoft platform I've made in my career, something both exciting and frightening! I am &mdash; and will remain &mdash; a strong proponent of Windows Azure. What excites me is that I've found the Salesforce and Force.com platform equally as compelling, and I'm looking forward to my part in its advocacy. I have no doubt that it's going to be an amazing ride!
+I'll have my work cut out for me at Salesforce. This is an incredibly exciting time and I've been impressed with the capabilities of the Force.com platform. This is also the most significant departure from the Microsoft platform I've made in my career, something both exciting and frightening! I am, and will remain, a strong proponent of the Windows Azure platform. What excites me is that I've found the Salesforce and Force.com platform equally as compelling, and I'm looking forward to my part in its advocacy. I have no doubt that it's going to be an amazing ride!
+
+I'll have a lot more to say about my role at Salesforce in the coming weeks. For now I need to hunker down and prepare for [Dreamforce](http://www.salesforce.com/dreamforce/DF13/) - hope to see you there!
