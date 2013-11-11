@@ -58,20 +58,6 @@ tagline:
 					</ul>
 				</div>
 
-				<div class="top-buffer-20">
-					<div class="bottom-buffer-10" style="border-bottom: 1px solid #eeeeee;">
-						<strong>Recent Posts</strong>
-					</div>
-
-					<ul type="square">
-						{% for post_side in site.posts limit: 10 %}
-
-						<li><a href="{{ post_side.url }}">{{ post_side.title }}</a></li>
-
-						{% endfor %}
-					</ul>
-
-				</div>
 			</div>
 			{% endif %}
 
