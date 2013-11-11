@@ -8,20 +8,14 @@ tags: []
 ---
 {% include setup %}
 
-Earlier this year I started an incubation project here at [Aditi Technologies](http://www.aditi.com) to explore Salesforce and, more specifically, Force.com as a platform for building cloud applications. Today I start as a full-time employee. Funny how things turn out.
+Earlier this year I started an incubation project at [Aditi Technologies](http://www.aditi.com) to explore Salesforce as a platform for building cloud applications. Today I start at Salesforce as a full-time employee.
 
-When I [left Microsoft](http://www.wadewegner.com/2012/03/leaving-microsoft/) I did so to take a shot at building products and applications for Windows Azure with a fantastic team [here at Aditi Technologies](http://www.wadewegner.com/2012/04/joining-aditi-technologies-as-chief-technology-officer/). We've done that, and more.
+Life is funny sometimes, no?
 
-I'm extremely proud of what's been accomplished over the last two years. In particular, I'm proud of our product engineering team, led by [Ryan Dunn](http://dunnry.com/blog/) ([@dunnry](http://twitter.com/dunnry)). In addition to being one hell of a homebrewer, Ryan is a fantastic engineer and has built some amazing products. It's been an honor and privilege to work with him and the following engineers:
+When I [left Microsoft](http://www.wadewegner.com/2012/03/leaving-microsoft/) I did so to take a shot at [building products and applications](http://www.wadewegner.com/2012/04/joining-aditi-technologies-as-chief-technology-officer/) for Windows Azure. I've done that, and more. I hadn’t planned on leaving Aditi any time soon but there are some opportunities too awesome to ignore. Such is the opportunity with Salesforce.
 
-* [Raghuraman Rajagopalan](http://in.linkedin.com/in/raghurajagopalan) - Good friend and India team lead. Raghu was the first person to signup for the crazy ride on this team. Without his leadership we'd never have shipped a single product.
-* [Vijaya Kumar Reddy Gajjala](http://in.linkedin.com/pub/vijaya-kumar-reddy-gajjala/11/974/647) - 
-* [Sagar Matto](https://www.facebook.com/sagar.mattoo.77)
-* [Brihadish Koushik](http://blog.aditi.com/author/brihadish-koushik/)
-* [John Belcher](http://www.linkedin.com/pub/john-belcher/76/479/2b6)
+I'm extremely proud of what we've accomplished over the last two years and there's a lot that I'm going to miss. In particular, I will miss working with our product engineering team, led by [Ryan Dunn](http://dunnry.com/blog/) ([@dunnry](http://twitter.com/dunnry)). It's been an honor and privilege to work with him and the following engineers on the team: [Raghuraman Rajagopalan](http://in.linkedin.com/in/raghurajagopalan), [Vijaya Kumar Reddy Gajjala](http://in.linkedin.com/pub/vijaya-kumar-reddy-gajjala/11/974/647), [Sagar Matto](https://www.facebook.com/sagar.mattoo.77), [Brihadish Koushik](http://blog.aditi.com/author/brihadish-koushik/), and [John Belcher](http://www.linkedin.com/pub/john-belcher/76/479/2b6). 
 
-With this team we've built a number of great services. What services have we built, you may ask?
+There are too many other people I will miss to mention them all by name. Thank you all!
 
-**Scheduler**
-
-The first service we built and shipped.
+I'll have my work cut out for me at Salesforce. This is an incredibly exciting time and I've been impressed with the capabilities of the Force.com platform. This is also the most significant departure from the Microsoft platform I've made in my career, something both exciting and frightening! I am &mdash; and will remain &mdash; a strong proponent of Windows Azure. What excites me is that I've found the Salesforce and Force.com platform equally as compelling, and I'm looking forward to my part in its advocacy. I have no doubt that it's going to be an amazing ride!
