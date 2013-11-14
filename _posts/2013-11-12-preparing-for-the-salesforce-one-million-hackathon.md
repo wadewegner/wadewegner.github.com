@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Preparing for the Salesforce  Million Hackathon"
+title: "Preparing for the Salesforce $1 Million Hackathon"
 description: ""
 categories:
 - dreamforce
