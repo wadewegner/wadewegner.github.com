@@ -12,6 +12,8 @@ tags: []
 
 Released this week at Dreamforce is a new command-line interface (CLI) tool for Force.com. This tool is open-sourced and available at [http://github.com/heroku/force](http://github.com/heroku/force). This tool lets you quickly interact with the Force.com APIs and opens up interesting opportunities for scripting and automating tasks on Force.com.
 
+![Apex code example](http://wadewegner.blob.core.windows.net/wordpress/2013-11-18-ApexCode.png)
+
 You can immediately download the precompiled binaries for the force command-line interface and start using it today:
 
 * Linux: [32-bit](https://godist.herokuapp.com/projects/heroku/force/releases/current/linux-386/force) | [64-bit](https://godist.herokuapp.com/projects/heroku/force/releases/current/linux-amd64/force)
@@ -75,7 +77,7 @@ Let's give it a try.
 
 	> force apex
 	MyNewObject__c newObject = new MyNewObject__c();
-	newObject.Descdription__c = 'description';
+	newObject.Description__c = 'description';
 	insert newObject;
 
 Now, hit Control-D to submit the code for execution.
