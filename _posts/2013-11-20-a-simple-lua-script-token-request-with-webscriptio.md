@@ -11,11 +11,11 @@ Yesterday I spent some time writing a [Python token request script against the F
 
 Why Lua? Why not!
 
-No, I have a good reason for getting this to work in Lua. I'm a big fan of [webscript.io](http://webscript.io) which provides a tremendously simple way to create web APIs. Webscripts are all written in Lua.
+No, I have a good reason for getting this to work in Lua. I'm a big fan of [Webscript.io](http://webscript.io) which provides a tremendously simple way to create web APIs. Webscripts are all written in Lua.
 
 The first step to using webscripts against the Force.com APIs is to make a token request. So, let's do it.
 
-Before you give this a try be sure to read my previous post on [making a Force.comtoken request](http://www.wadewegner.com/2013/11/forcecom-token-requests-with-python/) and review the section where I discuss the **secret key**. You will need this in order to authenticate against the Force.com API.
+Before you give this a try be sure to read my previous post on [making a Force.com token request](http://www.wadewegner.com/2013/11/forcecom-token-requests-with-python/) and review the section where I discuss the **secret key**. You will need this in order to authenticate against the Force.com API.
 
 Without further ado, here's the code.
 
