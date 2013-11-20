@@ -43,9 +43,9 @@ To test this (if you're up for it), try to execute this from a different machine
 
 While you may find this annoying it's purposeful and important. The reality is that sometimes a username and password isn't enough. We need more protection. This error is in effect telling you that you're not calling from a trusted IP address.
 
-There are three ways to fix it. The easy way, the somewhat more challenging way, and then right way.
+There are three ways to fix it. The easy way, the somewhat more challenging way, and then the right way.
 
-Let me get the first two out of the way. But don't use them. Seriously.
+Let's take a look at the three ways. But don't use the first two. Seriously.
 
 1. Set appropriate login ranges for the user profile. **Administration Setup**, **Manage Users**, **Users**. Find your login name and then click the link under **Profile**. In my case, this is **System Administrator**. Click **Login IP Ranges** then the **New* button. For giggles, add the range 0.0.0.0 to 255.255.255.255 as this will enable access from everywhere.
 
