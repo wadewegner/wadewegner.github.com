@@ -40,4 +40,12 @@ To execute your webscript simply browse to the generated endpoint. After it (qui
 
 That's it!
 
+You can see the the image above that we get three things from Webscript.io:
+
+1. A detailed log of the HTTP request the webscript made.
+2. A detailed log of the HTTP response the webscript received.
+3. The access_token output.
+
+Fantastic!
+
 I love how easy it is to try things out with webscripts. Once you give it a try I'm sure you will too.
