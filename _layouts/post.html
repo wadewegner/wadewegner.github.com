@@ -87,17 +87,19 @@ $(document).ready(function(){
   }
 
   $( "#target" ).click(function() {
-var output;
+
     $.post('http://wadewegner.webscript.io/fixit', {
         url: '{{ BASE_PATH }}{{ page.url }}', submittedDate: new Date().getTime()
       }, function (data) {
-        output = data;
+
+        alertify.alert(data);
+        //id = data.id;
         //$('input').val('');
         //$('form').toggleClass('hide');
       });
 
     reset();
-    alertify.alert("Thank you for letting me know! I'll try to get this fixed ASAP.  " + output);
+    alertify.alert("Thank you for letting me know! I'll try to get this fixed ASAP.");
   });
 
   // twitter
