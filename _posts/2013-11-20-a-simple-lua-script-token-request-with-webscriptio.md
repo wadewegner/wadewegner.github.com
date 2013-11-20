@@ -2,7 +2,12 @@
 layout: post
 title: "A Simple Lua Script Token Request with Webscript.io"
 description: ""
-category: ""
+categories:
+- force.com
+- token
+- rest
+- lua
+- webscripts
 tags: []
 ---
 {% include setup %}
