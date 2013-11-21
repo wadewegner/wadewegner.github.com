@@ -58,15 +58,15 @@ Nothing too surprising here:
 
 Now, with this method, you can set the overlay properties on the MediaItem like this:
 
-    1. // sets file name to media item
-    2. mediaItem = new MediaItem("test.wmv");
+    1.  // sets file name to media item
+    2.  mediaItem = new MediaItem("test.wmv");
     3.   
-    4. // create the overlay image and return the path
-    5. string overlayFileName = createOverlayImage("Thank you for encoding this video!", Environment.CurrentDirectory, mediaItem.VideoSize.Width, mediaItem.VideoSize.Height);
+    4.  // create the overlay image and return the path
+    5.  string overlayFileName = createOverlayImage("Thank you for encoding this video!", Environment.CurrentDirectory, mediaItem.VideoSize.Width, mediaItem.VideoSize.Height);
     6.                 
-    7. // create the overlay on the media item
-    8. mediaItem.OverlayFileName = overlayFileName;
-    9. mediaItem.OverlayLayoutMode = OverlayLayoutMode.WholeSequence;
+    7.  // create the overlay on the media item
+    8.  mediaItem.OverlayFileName = overlayFileName;
+    9.  mediaItem.OverlayLayoutMode = OverlayLayoutMode.WholeSequence;
     10. mediaItem.OverlayRect = new Rectangle(new Point(30, 10), new Size((mediaItem.VideoSize.Width - 30), (mediaItem VideoSize.Height - 10)));
 
 Breaking it down:
