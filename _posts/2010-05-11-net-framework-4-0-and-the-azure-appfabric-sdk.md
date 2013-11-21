@@ -17,15 +17,15 @@ I soon realized that the issue was the machine.config file. When you install the
 
 Fortunately, there’s an easy solution to this issue: use the CLR’s **requiredRuntime** feature.
   
-1. Create a configuration file named **RelayConfigurationInstaller.exe.config** in the “C:%Program Files%Windows Azure platform AppFabric SDKV1.0Assemblies” folder with the following code:        
+1. Create a configuration file named **RelayConfigurationInstaller.exe.config** in the “C:\%Program Files%\Windows Azure platform AppFabric SDK\V1.0\Assemblies” folder with the following code:        
        
-    <?xml version ="1.0"?>
-    <configuration>  
-    <startup>    
-        <requiredRuntime safemode="true" imageVersion="v4.0.30319" version="v4.0.30319"/>  
-    </startup>
-    </configuration>
-   
+	    <?xml version ="1.0"?>
+	    <configuration>  
+	    <startup>    
+	        <requiredRuntime safemode="true" imageVersion="v4.0.30319" version="v4.0.30319"/>  
+	    </startup>
+	    </configuration>
+	   
 2. Open up an elevated Visual Studio 2010 Command Prompt, browse to the directory, and run: **RelayConfigurationInstaller.exe/ i**
  
 Your .NET Framework 4.0 machine.config file will now have the required configuration settings for the Service Bus bindings. Thanks to Vishal Chowdhary for the insight!
