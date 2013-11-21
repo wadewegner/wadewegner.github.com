@@ -17,7 +17,7 @@ I spent a good deal of time this weekend importing hours and hours family videos
 
 I decided to use Microsoft Expression Encoder 3 – a great tool. The best part is that there’s an SDK and set of assemblies that you can use in your own applications.
 
-> Note: if you are using a 64-bit machine, be sure to set the platform target of your application to x86, or else you will get compilation errors from the Encoder assemblies.
+**Note:** if you are using a 64-bit machine, be sure to set the platform target of your application to x86, or else you will get compilation errors from the Encoder assemblies.
 
 Below you’ll find the application I wrote. Let me explain my goals:
 
