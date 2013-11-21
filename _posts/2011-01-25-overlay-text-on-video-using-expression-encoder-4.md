@@ -50,44 +50,35 @@ The first thing to recognize is that you have to create a Bitmap of the text you
 
 Nothing too surprising here:
   
-  * Line #9: Pass in the text you want to overlay, the path for where you’ll store the created bitmap, and the width/height. 
+  * **Line #9:** Pass in the text you want to overlay, the path for where you’ll store the created bitmap, and the width/height. 
    
-  * Line #12: Create a random file name for the Bitmap. 
+  * **Line #12:** Create a random file name for the Bitmap. 
    
-  * Line #26: You can change the font, color, and locations here if you’d like. 
+  * **Line #26:** You can change the font, color, and locations here if you’d like. 
 
 Now, with this method, you can set the overlay properties on the MediaItem like this:
 
-  1. // sets file name to media item
-  2. mediaItem = new MediaItem("test.wmv");
-  3.   4. // create the overlay image and return the path
-  5. string overlayFileName = createOverlayImage("Thank you for encoding this video!", Environment.CurrentDirectory, mediaItem.VideoSize.Width, mediaItem.VideoSize.Height);
-  6.                 
-  7. // create the overlay on the media item
-  8. mediaItem.OverlayFileName = overlayFileName;
-  9. mediaItem.OverlayLayoutMode = OverlayLayoutMode.WholeSequence;
-  10. mediaItem.OverlayRect = new Rectangle(new Point(30, 10), new Size((mediaItem.VideoSize.Width - 30), (mediaItem.VideoSize.Height - 10)));
-
- 
+    1. // sets file name to media item
+    2. mediaItem = new MediaItem("test.wmv");
+    3.   
+    4. // create the overlay image and return the path
+    5. string overlayFileName = createOverlayImage("Thank you for encoding this video!", Environment.CurrentDirectory, mediaItem.VideoSize.Width, mediaItem.VideoSize.Height);
+    6.                 
+    7. // create the overlay on the media item
+    8. mediaItem.OverlayFileName = overlayFileName;
+    9. mediaItem.OverlayLayoutMode = OverlayLayoutMode.WholeSequence;
+    10. mediaItem.OverlayRect = new Rectangle(new Point(30, 10), new Size((mediaItem.VideoSize.Width - 30), (mediaItem VideoSize.Height - 10)));
 
 Breaking it down:
 
- 
-
-  
-  * Line #5: Grab the full path to the newly created Bitmap over your text overlay. 
+  * **Line #5:** Grab the full path to the newly created Bitmap over your text overlay. 
    
-  * Line #8: Set the OverlayFileName to your Bitmap. 
+  * **Line #8:** Set the OverlayFileName to your Bitmap. 
    
-  * Line #9: Choose the layout mode. There are a few options here that you can explore; details are on MSDN. 
+  * **Line #9:** Choose the layout mode. There are a few options here that you can explore; details are on MSDN. 
    
-  * Line #10: The OverlayRect defines where your Bitmap lives on the video. I indented it a bit, but it’s up to you. 
- 
+  * **Line #10:** The OverlayRect defines where your Bitmap lives on the video. I indented it a bit, but it’s up to you.
 
 [![image](http://images.wadewegner.com/wordpress/2011/01/image_thumb1.png)](http://images.wadewegner.com/wordpress/2011/01/image1.png)
 
- 
-
 I’ve modified the Simple template provided by the Expression Encoder 4 SDK with the code. You can find it below. Hope this helps.
-
- 
