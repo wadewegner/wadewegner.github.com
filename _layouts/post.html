@@ -12,8 +12,10 @@ layout: default
 <div class="row-fluid post-full">
   <div class="span12">
     <div class="date">
-      <span>{{ page.date | date_to_long_string }}</span> | 
-      Please <a href="#" id="target" rel="nofollow">click here</a> if this page has malformatted content.
+      <span>{{ page.date | date_to_long_string }}</span>
+      <span id="fixme" style="display:none;">
+        | Please <a href="#" id="target" rel="nofollow">click here</a> if this page has malformatted content.
+      </span>
     </div>
 
     <div style="height:35px">
@@ -71,6 +73,18 @@ layout: default
 <script>
 $(document).ready(function(){
 
+  $.post('http://wadewegner.webscript.io/amifixed', {
+        url: '{{ BASE_PATH }}{{ page.url }}'
+      }, function ( data ) {
+        
+      if (data == "true") {
+        $( "#fixme" ).hide();
+      }
+      else {
+        $( "#fixme" ).show();
+      }
+  });
+
   function reset () {
     $("#toggleCSS").attr("href", "/css/alertify.default.css");
     alertify.set({
@@ -89,10 +103,10 @@ $(document).ready(function(){
     $.post('http://wadewegner.webscript.io/fixit', {
         url: '{{ BASE_PATH }}{{ page.url }}', submittedDate: new Date().getTime()
       }, function (data) {
-        //id = data.id;
-        //$('input').val('');
-        //$('form').toggleClass('hide');
-      });
+
+    });
+
+    $( "#fixme" ).hide();
 
     reset();
     alertify.alert("Thank you for letting me know! I'll try to get this fixed ASAP.");
