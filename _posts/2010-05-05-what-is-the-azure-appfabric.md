@@ -45,7 +45,7 @@ In my opinion, it leaves us with a technology that is a key differentiator in Mi
 
 In closing, let’s be clear on two things – in Azure AppFabric, there’s both a Service Bus and Access Control Service.
 
-* The **Service Bus **is an Internet-scale enterprise service bus that makes it easy to connect applications over the Internet. Services that register on the Service Bus can easily be discovered and accessed across any network topology.
+* The **Service Bus** is an Internet-scale enterprise service bus that makes it easy to connect applications over the Internet. Services that register on the Service Bus can easily be discovered and accessed across any network topology.
 
 * The **Access Controls Service** helps you build federated authorization into your applications and services, without the complicated programming that is normally required to secure applications that extend beyond organizational boundaries. 
 
