@@ -36,7 +36,7 @@ By default this NuGet package is configured to use the local storage emulator. I
 
 Incidentally, if you like NuGet, then you should check out Cory Fowler’s post on [must have NuGet packages for Windows Azure development](http://blog.syntaxc4.net/post/2011/08/01/Must-have-NuGet-Packages-for-Windows-Azure.aspx).
 
-**_Demo_**
+**Demo**
 
 For those of you unfamiliar with ELMAH, I put together a simple demo. You can try it out on [http://elmahdemo.cloudapp.net/](http://elmahdemo.cloudapp.net/). Just enter a message (keep it clean, please!) and throw an exception.
 
@@ -52,7 +52,7 @@ Here’s what the files look like in table storage:
 
 [![ELMAHInTables](http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables.jpg)
 
-**_How Does it Work?_**
+**How Does it Work?**
 
 The nice part is you can easily grab the NuGet package to view all the source code. There are two items of interest: ErrorEntity.cs and Web.Config.
 
