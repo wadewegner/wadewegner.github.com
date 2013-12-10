@@ -10,7 +10,7 @@ categories:
 - Commerce Server
 ---
 
-**Update, 4/13/2008** - Please see [this post](http://www.wadewegner.com/2008/04/13/UpdateOnTheCommerceServerBook.aspx) for information regarding this book.
+**Update**: Please see [this post](http://www.wadewegner.com/2008/04/13/UpdateOnTheCommerceServerBook.aspx) for information regarding this book.
 
 [![Microsoft Commerce Server](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UpdateProfessionalCommerceServer2007_B4AA/CS2007_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/UpdateProfessionalCommerceServer2007_B4AA/CS2007_2.png)
 
