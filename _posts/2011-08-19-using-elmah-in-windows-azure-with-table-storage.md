@@ -21,9 +21,9 @@ In this week’s episode of [Cloud Cover](http://channel9.msdn.com/Shows/Cloud+C
 
 ELMAH (Error Logging Modules and Handlers) itself is extremely useful, and with a few simple modifications can provide a very effective way to handle application-wide error logging for your ASP.NET web applications. If you aren’t already familiar with ELMAH, take a look at the [ELMAH project page](http://code.google.com/p/elmah/).
 
-**_NuGet_**
+**NuGet**
 
-Before going any further, I thought I’d let you know that I’ve created a NuGet package that makes this __extremely__ easy to try. You can take a look at [ELMAH with Windows Azure Table Storage](http://nuget.org/List/Packages/WindowsAzure.ELMAH.Tables) on the NuGet gallery or immediately try this out with the following command:
+Before going any further, I thought I’d let you know that I’ve created a NuGet package that makes this extremely easy to try. You can take a look at [ELMAH with Windows Azure Table Storage](http://nuget.org/List/Packages/WindowsAzure.ELMAH.Tables) on the NuGet gallery or immediately try this out with the following command:
 
 	Install-Package WindowsAzure.ELMAH.Tables
 
