@@ -18,7 +18,7 @@ We just released a [Salesforce1 tutorial on Github](https://github.com/developer
 ![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709024/1df57d66-6118-11e3-8d41-cc042a8b7d48.png)
 ![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709147/c070bdd4-6119-11e3-8917-9f08b9003f41.png)
 
-This tutorial focuses on the following aspects of Salesforce1 applications:
+This tutorial focuses on the following features of Salesforce1 applications:
 
 * Use the [Force Command-Line Interface (CLI)](http://github.com/heroku/force) tool to manipulate metadata in Salesforce.
 * Create a **Salesforce1 mobile application** using the Salesforce1 app container.
@@ -26,7 +26,7 @@ This tutorial focuses on the following aspects of Salesforce1 applications:
 * Use **mobile cards** and create **publisher actions**.
 * Create a **compact view** for the page layout that is better designed for the Salesforce1 mobile application.
 
-So that you can get quickly started, this tutorial provides the following resources to make it as easy as possible for you to try it out yourself:
+To get you quickly started this tutorial provides the following resources:
 
 1. A [set of shell scripts](https://github.com/developerforce/demo-df13-devkeynote-s1app/tree/master/assets) to populate the demo schema and data into your Salesforce organization.
 2. A detailed [setup guide](https://github.com/developerforce/demo-df13-devkeynote-s1app/blob/master/SETUP.md) to get you ready.
