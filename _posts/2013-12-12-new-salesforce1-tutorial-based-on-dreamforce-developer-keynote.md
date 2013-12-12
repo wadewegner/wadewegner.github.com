@@ -15,9 +15,6 @@ tags: []
 
 We just released a [Salesforce1 tutorial on Github](https://github.com/developerforce/demo-df13-devkeynote-s1app) that walks you though the same demo presented by [Dave Carroll](http://twitter.com/dcarroll) at the [Dreamforce '13 Developer's Keynote](http://www.youtube.com/watch?v=KELBWQIVcfk&feature=share&list=PLScnZWsj0lrRCMuciE0La1_iKtCPt4Kka).
 
-![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709024/1df57d66-6118-11e3-8d41-cc042a8b7d48.png)
-![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709147/c070bdd4-6119-11e3-8917-9f08b9003f41.png)
-
 This tutorial focuses on the following features of Salesforce1 applications:
 
 * Use the [Force Command-Line Interface (CLI)](http://github.com/heroku/force) tool to manipulate metadata in Salesforce.
@@ -25,6 +22,9 @@ This tutorial focuses on the following features of Salesforce1 applications:
 * Create **Visualforce components and pages** enabled for the Salesforce1 mobile application.
 * Use **mobile cards** and create **publisher actions**.
 * Create a **compact view** for the page layout that is better designed for the Salesforce1 mobile application.
+
+![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709024/1df57d66-6118-11e3-8d41-cc042a8b7d48.png)
+![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709147/c070bdd4-6119-11e3-8917-9f08b9003f41.png)
 
 To get you quickly started this tutorial provides the following resources:
 
