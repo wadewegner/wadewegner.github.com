@@ -13,7 +13,7 @@ tags: []
 ---
 {% include setup %}
 
-We just released a [Salesforce1 tutorial on Github](https://github.com/developerforce/demo-df13-devkeynote-s1app) that walks you though the same demo presented by [Dave Carroll](http://twitter.com/dcarroll) at the [Dreamforce '13 Developer's Keynote](http://www.youtube.com/watch?v=KELBWQIVcfk&feature=share&list=PLScnZWsj0lrRCMuciE0La1_iKtCPt4Kka). This tutorial will enable you to build the same [Salesforce1 application](http://www.salesforce.com/salesforce1/) application built by Dave during the presentation. 
+We just released a [Salesforce1 tutorial on Github](https://github.com/developerforce/demo-df13-devkeynote-s1app) that walks you though the same demo presented by [Dave Carroll](http://twitter.com/dcarroll) at the [Dreamforce '13 Developer's Keynote](http://www.youtube.com/watch?v=KELBWQIVcfk&feature=share&list=PLScnZWsj0lrRCMuciE0La1_iKtCPt4Kka).
 
 ![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709024/1df57d66-6118-11e3-8d41-cc042a8b7d48.png)
 ![Salesforce1 App](https://f.cloud.github.com/assets/746259/1709147/c070bdd4-6119-11e3-8917-9f08b9003f41.png)
