@@ -32,6 +32,6 @@ To get you quickly started this tutorial provides the following resources:
 2. A detailed [setup guide](https://github.com/developerforce/demo-df13-devkeynote-s1app/blob/master/SETUP.md) to ensure you have all prerequisites setup correctly.
 3. A [step-by-step tutorial](https://github.com/developerforce/demo-df13-devkeynote-s1app/blob/master/DEMO.md) to walk you through the process.
 
-This tutorial is open-sourced on Github. Feel free to grab the code and run through the tutorial. If you have feedback or find a bug you can either submit an issue ßor fork the repository and submit a pull request. Please review the [details on the repository](https://github.com/developerforce/demo-df13-devkeynote-s1app).
+This tutorial is open-sourced on Github. Feel free to grab the code and run through the tutorial. If you have feedback or find a bug you can either submit an issue or fork the repository and submit a pull request. Please review the [details on the repository](https://github.com/developerforce/demo-df13-devkeynote-s1app).
 
 Good luck!
