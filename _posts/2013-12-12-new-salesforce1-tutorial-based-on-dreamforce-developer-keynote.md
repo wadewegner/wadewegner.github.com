@@ -15,7 +15,7 @@ tags: []
 
 We just released a [Salesforce1 tutorial on Github](https://github.com/developerforce/demo-df13-devkeynote-s1app) that walks you though the same demo presented by [Dave Carroll](http://twitter.com/dcarroll) at the [Dreamforce '13 Developer's Keynote](http://www.youtube.com/watch?v=KELBWQIVcfk&feature=share&list=PLScnZWsj0lrRCMuciE0La1_iKtCPt4Kka).
 
-This tutorial focuses on the following features of Salesforce1 applications:
+This tutorial enables you to do the following with Salesforce1:
 
 * Use the [Force Command-Line Interface (CLI)](http://github.com/heroku/force) tool to manipulate metadata in Salesforce.
 * Create a **Salesforce1 mobile application** using the Salesforce1 app container.
