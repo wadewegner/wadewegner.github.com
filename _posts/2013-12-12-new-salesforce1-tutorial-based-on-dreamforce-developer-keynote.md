@@ -26,6 +26,14 @@ Using this tutorial, you will:
 * Use **mobile cards** and create **publisher actions**.
 * Create a **compact view** for the page layout that is better designed for the Salesforce1 mobile application.
 
-This tutorial is open-sourced on Github. Feel free to grab the code and run through the tutorial. If you have feedback or find a bug you can either submit an issue ßor fork the repository and submit a pull request. Please review the [details on the repository](https://github.com/developerforce/demo-df13-devkeynote-s1app).
+This tutorial is open-sourced on Github. Feel free to grab the code and run through the tutorial.
+
+The tutorial provides the following resources to make it as easy as possible for you to try it out yourself:
+
+1) A set of scripts to populate the demo schema and data into your Salesforce organization.
+2) A detailed [setup guide](https://github.com/developerforce/demo-df13-devkeynote-s1app/blob/master/SETUP.md) to get you ready.
+3) A [step-by-step tutorial](https://github.com/developerforce/demo-df13-devkeynote-s1app/blob/master/DEMO.md) that walks you through the entire process.
+
+If you have feedback or find a bug you can either submit an issue ßor fork the repository and submit a pull request. Please review the [details on the repository](https://github.com/developerforce/demo-df13-devkeynote-s1app).
 
 Good luck!
