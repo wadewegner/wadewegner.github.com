@@ -2,7 +2,13 @@
 layout: post
 title: "Salesforce1 Tutorial for the Dreamforce '13 Developer Keynote"
 description: ""
-category: ""
+categories:
+- salesforce1
+- quick action
+- mobile card
+- visualforce
+- compact view
+- df13
 tags: []
 ---
 {% include setup %}
