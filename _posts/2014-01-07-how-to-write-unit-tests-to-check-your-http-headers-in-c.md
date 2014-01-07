@@ -14,7 +14,7 @@ I've been building a set of libraries recently that make HTTP calls into a REST 
 
 There are a few key pieces to solving this challenge:
 
-1. Accepting a callback in our classes constructor for a special **HttpClient** used by our unit tests.
+1. Accepting a callback in our class's constructor for a special **HttpClient** used by our unit tests.
 2. A custom **DelegatingHandler** that returns a mocked response for our special **HttpClient**.
 3. Using a lambda expression within the unit test to make our assertions.
 
