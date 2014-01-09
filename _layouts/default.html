@@ -8,7 +8,9 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="{{ page.title }}" />
 
+    <!-- Facebook -->
     <meta property="og:title" content="{{ page.title }}"/>
     {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
     <meta property="og:type" content="article"/>
@@ -16,6 +18,14 @@
     <meta property="og:image" content="http://www.wadewegner.com/img/WadeWegner_128x128.jpg"/>
     <meta property="og:site_name" content="{{ site.name }}"/>
     <meta property="fb:admins" content="691575665" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@WadeWegner">
+    <meta name="twitter:creator" content="@WadeWegner">
+    <meta name="twitter:title" content="{{ page.title }}">
+    <meta name="twitter:image:src" content="http://www.wadewegner.com/img/WadeWegner_128x128.jpg">
+    <meta name="twitter:domain" content="www.wadewegner.com">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
