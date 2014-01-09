@@ -9,6 +9,14 @@
     <meta name="author" content="{{ site.author.name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <meta property="og:title" content="{{ page.title }}"/>
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.wadewegner.com{{ page.url | remove:'index.html' }}"/>
+    <meta property="og:image" content="http://www.wadewegner.com/img/WadeWegner_128x128.jpg"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="fb:admins" content="691575665" />
+
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -16,19 +24,10 @@
 
     <link rel="stylesheet" href="/css/bootstrap.2.2.2.min.css">
     <link rel="stylesheet" href="/css/style.css?body=1" type="text/css" media="all">
-
     <link rel="stylesheet" href="/css/alertify.core.css" />
     <link rel="stylesheet" href="/css/alertify.default.css" id="toggleCSS" />
     <link rel="stylesheet" href="/css/alertify.bootstrap.css" />
-
-    <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="/img/favicon.ico">
-  <!--
-    <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
-  -->
-
     <link href="http://feeds.feedburner.com/WadeWegner" type="application/rss+xml" rel="alternate" title="WadeWegner.com RSS Feed">
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
