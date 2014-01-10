@@ -111,3 +111,35 @@
 .social-linkedin{background-color:#007FB1;background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABJUlEQVR42u3WPUuCURiH8QoJAhellyXyBZuCoMYIGpqDbNJa2hT7AEFfoKWoJZoKos2v0BJN0RApuNTeFkhBS8bjNdzD4U9BmM8p8NzwW+7DwYsHDjgURdGfCgEh4F8HjKGCA5Qx4jNgGJdwZ89nQArvEtDyGTCKpgTUvQWYBVzhEXVMD9wrWEUZJWxi0fZJ2M6wM1Wc4wK7KPwm4BbunNg+D51t3EPnFVu9BlzDnSPbZ/EB+aFvp4P5fgZkLEDnBTd4hs5ZPwNmoAEPyNj5FBpy/oREnF9gQ+7W5LyNdJwBS3J3Tc7fMBlnwPIPAiZiegX+A3LoDHRAHp8+Au7gzqntZ6GzIneLkUwvr2AHx45124/jUM5ycndOzveRDP+KQ0AI+EoXgZ24oNRosBkAAAAASUVORK5CYII=)}
 
 .inline-code{font-family: Consolas, "Liberation Mono", Courier, monospace;}
+
+/* Google 404 Widget */
+/* Widget content container */
+#goog-wm { }
+
+/* Heading for "Closest match"
+#goog-wm h3.closest-match { }
+
+/* "Closest match" link
+#goog-wm h3.closest-match a { }
+
+/* Heading for "Other things" */
+#goog-wm h3.other-things { }
+
+/* "Other things" list item */
+#goog-wm ul li { }
+
+/* Site search box */
+#goog-wm li.search-goog 
+{ 
+display: list-item; 
+list-style-type: none;
+}
+#goog-wm-qt
+{
+margin-bottom:0px;
+margin-right:10px;
+}
+#goog-wm ul
+{
+margin: 0 0 10px 0;
+}
