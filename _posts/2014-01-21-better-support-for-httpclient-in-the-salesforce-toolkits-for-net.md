@@ -27,9 +27,11 @@ Take a look at the various annoucements and posts:
 
 Just because we released doesn't mean I've stopped working. In fact, I've been monitoring feedback via Twitter and Github, and today made a few worthwhile optimizations. It was rightly pointed out to me by [Darrel Miller](https://twitter.com/darrel_miller) that the <span class="inline-code">ServiceHttpClient</span> did not [optimally use the HttpClient library](https://twitter.com/darrel_miller/status/420685723243536384). Specifically:
 
-- The <span class"inline-code">Developer.Common</span> library created a new <span class="inline-code">HttpClient</span> each time. This can be an extremely expensive operation.
+- The <span class="inline-code">Developer.Common</span> library created a new <span class="inline-code">HttpClient</span> each time. This can be an extremely expensive operation.
 
 - There was no way to modify the <span class="inline-code">HttpRequestMessage</span> class.
+
+- There was no way to use the <span class"inline-code">HttpClient</span> across <span class"inline-code">ServiceHttpClient</span> and <span class"inline-code">AuthenticationClient</span.
 
 To fix this, a number of changes were made to the <span class"inline-code">Developer.Common</span> library.
 
