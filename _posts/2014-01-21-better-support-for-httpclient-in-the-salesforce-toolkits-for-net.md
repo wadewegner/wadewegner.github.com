@@ -31,7 +31,7 @@ Just because we released doesn't mean I've stopped working. In fact, I've been m
 
 - There was no way to modify the <span class="inline-code">HttpRequestMessage</span> class.
 
-- There was no way to use the <span class="inline-code">HttpClient</span> across <span class="inline-code">ServiceHttpClient</span> and <span class="inline-code">AuthenticationClient</span.
+- There was no way to use the <span class="inline-code">HttpClient</span> across <span class="inline-code">ServiceHttpClient</span> and <span class="inline-code">AuthenticationClient</span>.
 
 To fix this, a number of changes were made to the <span class="inline-code">Developer.Common</span> library.
 
