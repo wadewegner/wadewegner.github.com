@@ -31,15 +31,15 @@ Just because we released doesn't mean I've stopped working. In fact, I've been m
 
 - There was no way to modify the <span class="inline-code">HttpRequestMessage</span> class.
 
-- There was no way to use the <span class"inline-code">HttpClient</span> across <span class"inline-code">ServiceHttpClient</span> and <span class"inline-code">AuthenticationClient</span.
+- There was no way to use the <span class="inline-code">HttpClient</span> across <span class="inline-code">ServiceHttpClient</span> and <span class="inline-code">AuthenticationClient</span.
 
-To fix this, a number of changes were made to the <span class"inline-code">Developer.Common</span> library.
+To fix this, a number of changes were made to the <span class="inline-code">Developer.Common</span> library.
 
-1) The <span class"inline-code">ServiceHttpClient</span> now [requires the HttpClient in the constructors](https://github.com/developerforce/Common-Libraries-for-NET/blob/master/src/CommonLibrariesForNET/ServiceHttpClient.cs#L20). Given that, for most operations, the <span class"inline-code">DeveloperForce.Force</spa> and <span class"inline-code">DeveloperForce.Chatter</span> libraries manage this, you will likely see no changes to any of your code. However, if you ever want to create your own <span class"inline-code">HttpClient</span> and use it to make multiple calls against the Force.com or Chatter REST APIs, you can now create it yourself and pass it in.
+1) The <span class="inline-code">ServiceHttpClient</span> now [requires the HttpClient in the constructors](https://github.com/developerforce/Common-Libraries-for-NET/blob/master/src/CommonLibrariesForNET/ServiceHttpClient.cs#L20). Given that, for most operations, the <span class="inline-code">DeveloperForce.Force</spa> and <span class="inline-code">DeveloperForce.Chatter</span> libraries manage this, you will likely see no changes to any of your code. However, if you ever want to create your own <span class="inline-code">HttpClient</span> and use it to make multiple calls against the Force.com or Chatter REST APIs, you can now create it yourself and pass it in.
 
-2) Similarly, the <span class"inline-code">AuthenticationClient</span> class allows you to pass in the <span class"inline-code">HttpClient</span>. However, it is not required, as I'm making the assumption some people simply want to make a call to get the token, and don't care if the <span class"inline-code">HttpClient</span> is disposed.
+2) Similarly, the <span class="inline-code">AuthenticationClient</span> class allows you to pass in the <span class="inline-code">HttpClient</span>. However, it is not required, as I'm making the assumption some people simply want to make a call to get the token, and don't care if the <span class="inline-code">HttpClient</span> is disposed.
 
-3) Both the <span class"inline-code">ServiceHttpClient</span> and <span class"inline-code">AuthenticationClient</span> now implement <span class"inline-code">IDisposable</span>. This means you can use <span class"inline-code">Using</span> statements to dispose the <span class"inline-code">HttpClient</span> or you can call <span class"inline-code">Dispose</span> yourself.
+3) Both the <span class="inline-code">ServiceHttpClient</span> and <span class="inline-code">AuthenticationClient</span> now implement <span class="inline-code">IDisposable</span>. This means you can use <span class="inline-code">Using</span> statements to dispose the <span class="inline-code">HttpClient</span> or you can call <span class="inline-code">Dispose</span> yourself.
 
 All these updates have been released via our NuGet packages.
 
