@@ -33,7 +33,7 @@ Just because we released doesn't mean I've stopped working. In fact, I've been m
 
 - There was no way to use the <span class="inline-code">HttpClient</span> across <span class="inline-code">ServiceHttpClient</span> and <span class="inline-code">AuthenticationClient</span>.
 
-To fix this, a number of changes were made to the <span class="inline-code">Developer.Common</span> library.
+To fix this, a number of changes were made to the <span class="inline-code">DeveloperForce.Common</span> library.
 
 1. The <span class="inline-code">ServiceHttpClient</span> now [requires the HttpClient in the constructors](https://github.com/developerforce/Common-Libraries-for-NET/blob/master/src/CommonLibrariesForNET/ServiceHttpClient.cs#L20). Given that, for most operations, the <span class="inline-code">DeveloperForce.Force</span> and <span class="inline-code">DeveloperForce.Chatter</span> libraries manage this, you will likely see no changes to any of your code. However, if you ever want to create your own <span class="inline-code">HttpClient</span> and use it to make multiple calls against the Force.com or Chatter REST APIs, you can now create it yourself and pass it in.
 
