@@ -13,7 +13,11 @@ tags: []
 ---
 {% include setup %}
 
-One of the top requests I've received since [releasing the Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) has been a Windows Phone 8 sample application. I was very happy to oblige and today I'm pleased to share with you the [Windows Phone 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth) sample application. This sample application demonstrates the following:
+One of the top requests I've received since [releasing the Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) has been a Windows Phone 8 sample application. I was very happy to oblige and today I'm pleased to share with you the [Windows Phone 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth) sample application.
+
+![Visual Studio Phone App](https://f.cloud.github.com/assets/746259/2034797/fa1a98d6-8930-11e3-987b-c11f2c77feb2.png)
+
+This sample application demonstrates the following:
 
 1. Obtaining an access token using the User-Agent flow.
 2. Manging the callback in a Windows Phone 8 app.
