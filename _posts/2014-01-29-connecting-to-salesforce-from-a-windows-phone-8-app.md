@@ -13,9 +13,7 @@ tags: []
 ---
 {% include setup %}
 
-One of the top requests I've received since [releasing the Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) has been a Windows Phone 8 sample application. I was very happy to oblige and today I'm pleased to share with you the [Windows Phone 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth) sample application. This sample makes use of the <span class="inline-code">Developerforce.Force</span> and <span class="inline-code">Developerforce.Common</span> NuGet packages.
-
-Since the .NET libraries in the toolkits are all portable class libraries developers are able to build applications targeting .NET 4 & 4.5, Windows Phone 8, Windows 8 & 8.1, and Silverlight 5.
+One of the top requests I've received since [releasing the Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) has been a Windows Phone 8 sample application. I was very happy to oblige and today I'm pleased to share with you the [Windows Phone 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth) sample application. This sample makes use of the <span class="inline-code">Developerforce.Force</span> and <span class="inline-code">Developerforce.Common</span> NuGet packages. Since the .NET libraries in the toolkits are all portable class libraries developers are able to build applications targeting .NET 4 & 4.5, Windows Phone 8, Windows 8 & 8.1, and Silverlight 5.
 
 ![Visual Studio Phone App](https://f.cloud.github.com/assets/746259/2034797/fa1a98d6-8930-11e3-987b-c11f2c77feb2.png)
 
@@ -60,24 +58,24 @@ Go ahead and save your Connected App. Salesforce will create a **Consumer Key** 
 There's only change you'll have to make in the sample application. In <span class="inline-code">MainPage.xaml.cs</span> update the <span class="inline-code">ConsumerKey</span> string to use the **Consumer Key** created by your Connected App. Make this change and hit F5 and give it a spin.
 
 <div class="row-fluid">
-<div class="span4">
-<strong>Login to Salesforce</strong>
+	<div class="span4">
+	<strong>Login to Salesforce</strong>
 
-<img src="https://f.cloud.github.com/assets/746259/2034280/9ce3b5e2-8928-11e3-9a0c-753c65ef917b.png" alt="login">
+	<img src="https://f.cloud.github.com/assets/746259/2034280/9ce3b5e2-8928-11e3-9a0c-753c65ef917b.png" alt="login">
 
-</div>
-<div class="span4">
-<strong>Authorize Access</strong>
+	</div>
+	<div class="span4">
+	<strong>Authorize Access</strong>
 
-<img src="https://f.cloud.github.com/assets/746259/2034281/9e48d9b2-8928-11e3-9bd7-7bba48bbee60.png" alt="authorize">
+	<img src="https://f.cloud.github.com/assets/746259/2034281/9e48d9b2-8928-11e3-9bd7-7bba48bbee60.png" alt="authorize">
 
-</div>
-<div class="span4">
-<strong>See Your Accounts</strong>
+	</div>
+	<div class="span4">
+	<strong>See Your Accounts</strong>
 
-<img src="https://f.cloud.github.com/assets/746259/2034282/9fe3f284-8928-11e3-8849-94ee1fee1843.png" alt="accounts">
+	<img src="https://f.cloud.github.com/assets/746259/2034282/9fe3f284-8928-11e3-8849-94ee1fee1843.png" alt="accounts">
 
-</div>
+	</div>
 </div>
 
 That's it!
