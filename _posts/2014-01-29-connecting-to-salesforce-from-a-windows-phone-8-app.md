@@ -27,7 +27,7 @@ A Connected App is an application that allows you to connect to Salesforce ident
 
 We're going to use the Connected App to give our mobile application access to the Salesforce APIs.
 
-You can create a Connected App in your developement environment by going to **Setup** > **Create** > Apps. The last pane reads **Connected Apps**. Click **New** to create a new Connected App.
+You can create a Connected App in your developement environment by going to **Setup** > **Create** > **Apps**. The last pane reads **Connected Apps**. Click **New** to create a new Connected App.
 
 Supply the following information:
 
@@ -98,11 +98,11 @@ The important values included her are:
 
 Once the URL has been constructed we then tell a browser control to navigate to the URL.
 
+<script src="https://gist.github.com/wadewegner/8697510.js?file=CreateAndBrowseAuthURL.cs"></script>
+
 Now, once we have logged in, the authorization server will redirect back with information we want to collect. We need a way to handle that callback.
 
 Fortunately (or unfortunately, in some cases) Windows Phone 8 has what's called **URI Association Schemes** that auto launches apps. Since we're returning a URN with the value "sfdc://success" the URI association scheme tries to get involved and launch an application. We want to surpress this behavior while also hooking into it to get the values sent as part of the redirection.
-
-<script src="https://gist.github.com/wadewegner/8697510.js?file=CreateAndBrowseAuthURL.cs"></script>
 
 To do this we'll do a few things:
 
