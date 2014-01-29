@@ -83,7 +83,10 @@ Of course, there's quite a bit going on behind the scenes that makes this possib
 The first step is to create the URL to the Authorization Server. Fortunlately this is fairly simple as the 
 <span class="inline-code">Developerforce.Common</span> library provides a helper method called <span class="inline-code">FormatAuthUrl</span> you can use.
 
-Note that we use the **Token** token response type, indicating our desire to use the User-Agent auth flow. The URL will look something like this:
+
+<script src="https://gist.github.com/wadewegner/8697510.js?file=CreateAndBrowseAuthURL.cs"></script>
+
+Note that we use the <span class="inline-code">ResponseTypes.Token</span> response type, indicating our desire to use the User-Agent auth flow. The URL will look something like this:
 
 ```
 https://login.salesforce.com/services/oauth2/authorize?response_type=token&client_id=3MVG9A2kN3Bn17hsEyMqRTTaEfW.t4ssmYD2zPrrftW7vokEg0kCWj3H_NwryefANj37hbxV_KyB0Qd2NLySH&redirect_uri=sfdc://success&display=touch&immediate=False&state=&scope=
@@ -97,8 +100,6 @@ The important values included her are:
 - **display**: We've specified **touch** so that we get a mobile friendly login page.
 
 Once the URL has been constructed we then tell a browser control to navigate to the URL.
-
-<script src="https://gist.github.com/wadewegner/8697510.js?file=CreateAndBrowseAuthURL.cs"></script>
 
 Now, once we have logged in, the authorization server will redirect back with information we want to collect. We need a way to handle that callback.
 
