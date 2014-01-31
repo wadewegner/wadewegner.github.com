@@ -16,6 +16,8 @@ tags: []
 
 Two days ago I published a [sample app for Windows Phone 8](http://www.wadewegner.com/2014/01/connecting-to-salesforce-from-a-windows-phone-8-app/) that demonstrats how to authenticate users and make calls against the Force.com REST API using the [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/). The next obvious step was to build a sample application for Windows 8. **ACHIEVEMENT UNLOCKED!**
 
+![Windows 8 Sample App](https://f.cloud.github.com/assets/746259/2053351/87effd60-8aa6-11e3-8e22-a33dd8b33bc2.png)
+
 You can get the sample here: [https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/Windows8OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/Windows8OAuth).
 
 To get authentication working in Windows 8 we'll use the <span class="inline-code">WebAuthenicationBroker</span>, which manages the asynchronous authentication operation in a modal dialog window. First, the user is asked to login. This is nothing more than *secured* browser control that renders the Salesforce login page.
