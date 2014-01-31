@@ -20,7 +20,7 @@ Two days ago I published a [sample app for Windows Phone 8](http://www.wadewegne
 
 You can get the sample here: [https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/Windows8OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/Windows8OAuth).
 
-To get authentication working in Windows 8 we'll use the <span class="inline-code">WebAuthenicationBroker</span>, which manages the asynchronous authentication operation in a modal dialog window. First, the user is asked to login. This is nothing more than *secured* browser control that renders the Salesforce login page.
+To get authentication working in Windows 8 we'll use the <span class="inline-code">WebAuthenticationBroker</span>, which manages the asynchronous authentication operation in a modal dialog window. First, the user is asked to login. This is nothing more than *secured* browser control that renders the Salesforce login page.
 
 <img src="https://f.cloud.github.com/assets/746259/2053148/b33f0488-8aa2-11e3-877a-cb4cc9fce1e1.png" alt="Login" width="40%" style="border-style: solid;border-width:1px;border-color:#767676;">
 
