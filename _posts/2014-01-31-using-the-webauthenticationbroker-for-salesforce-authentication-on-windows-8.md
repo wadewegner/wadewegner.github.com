@@ -12,7 +12,6 @@ categories:
 - WebAuthenticationBroker
 tags: []
 ---
-{% include setup %}
 
 Two days ago I published a [sample app for Windows Phone 8](http://www.wadewegner.com/2014/01/connecting-to-salesforce-from-a-windows-phone-8-app/) that demonstrates how to authenticate users and make calls against the Force.com REST API using the [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/). The next obvious step was to build a sample application for Windows 8. **ACHIEVEMENT UNLOCKED!**
 

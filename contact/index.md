@@ -24,7 +24,7 @@ The easiest way to reach me (and get a response) is through Twitter. You can rea
   <div class="control-group">
     <label for="body" class="control-label">Body:
     </label>
-    <div class="controls"><textarea name="body" rows="10" class="input-xlarge"></textarea>
+    <div class="controls"><textarea name="body" style="width:500px;" rows="10" class="input-xlarge"></textarea>
     </div>
   </div>
   <div class="control-group">

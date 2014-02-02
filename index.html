@@ -1,0 +1,18 @@
+---
+layout: default
+title: Wade Wegner's Blog
+---
+
+{% assign first = true %}
+{% for post in site.posts limit: 6 %}
+
+<div class="blog-post">
+
+	<h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+	<p class="blog-post-meta">{{ post.date | date_to_long_string }}</p>
+
+	{{ post.content }}
+
+</div>
+
+{% endfor %}

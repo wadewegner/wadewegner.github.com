@@ -1,126 +1,118 @@
-{% include setup %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
     <title>{{ page.title }}</title>
-    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
-    <meta name="author" content="{{ site.author.name }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="title" content="{{ page.title }}" />
-    <meta name="description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure." />
 
-    <!-- Facebook -->
-    <meta property="og:title" content="{{ page.title }}"/>
-    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
-    <meta property="og:type" content="article"/>
-    <meta property="og:url" content="http://www.wadewegner.com{{ page.url | remove:'index.html' }}"/>
-    <meta property="og:image" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg"/>
-    <meta property="og:site_name" content="{{ site.name }}"/>
-    <meta property="fb:admins" content="691575665" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
 
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:site" content="@WadeWegner">
-    <meta name="twitter:title" content="Wade Wegner's blog">
-    <meta name="twitter:description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure.">
-    <meta name="twitter:creator" content="@WadeWegner">
-    <meta name="twitter:image:src" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg">
-    <meta name="twitter:domain" content="www.wadewegner.com">
-    <meta name="twitter:app:name:iphone" content="">
-    <meta name="twitter:app:name:ipad" content="">
-    <meta name="twitter:app:name:googleplay" content="">
-    <meta name="twitter:app:url:iphone" content="">
-    <meta name="twitter:app:url:ipad" content="">
-    <meta name="twitter:app:url:googleplay" content="">
-    <meta name="twitter:app:id:iphone" content="">
-    <meta name="twitter:app:id:ipad" content="">
-    <meta name="twitter:app:id:googleplay" content="">
+    <link rel="stylesheet" href="/css/main.css" >
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" href="/css/bootstrap.2.2.2.min.css">
-    <link rel="stylesheet" href="/css/style.css?body=1" type="text/css" media="all">
-    <link rel="stylesheet" href="/css/alertify.core.css" />
-    <link rel="stylesheet" href="/css/alertify.default.css" id="toggleCSS" />
-    <link rel="stylesheet" href="/css/alertify.bootstrap.css" />
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link href="http://feeds.feedburner.com/WadeWegner" type="application/rss+xml" rel="alternate" title="WadeWegner.com RSS Feed">
-
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="/scripts/alertify.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 
   </head>
-
   <body>
 
-    <div class="navbar">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="brand" href="/">{{ site.title }}</a>
-          <ul class="nav">
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include pages_list %}
-          </ul>
+    <div class="container">
+
+      <div class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Wade Wegner</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="/about">About</a></li>
+              <li><a href="/speaking">Speaking</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/contact">Contact</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="/archive.html">Archive</a></li>
+              <li><a href="/categories.html">Categories</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-sm-9 blog-main">
+
+          {{ content }}
+
+          <hr>
+
+          <footer>
+            <p>
+              <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.wadewegner.com/" property="cc:attributionName" rel="cc:attributionURL">Wade Wegner</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.
+              Unless otherwise noted, all code samples are licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a>.
+            </p>
+          </footer>
+
+        </div>
+
+        <div class="col-sm-3 blog-sidebar">
+            <div class="profile">
+              <div class="top">
+
+                <div class="photo">
+                  <a href="http://www.wadewegner.com"><img class="img-rounded" alt="Wade Wegner" src="/img/WadeWegner_128x128.jpg"></a>
+                </div>
+
+                <a class="social-rss" href="http://feeds.feedburner.com/WadeWegner"></a>
+                <a class="social-facebook" href="http://www.facebook.com/wadewegner"></a>
+                <a class="social-twitter" href="http://www.twitter.com/wadewegner"></a>
+                <a class="social-github" href="http://www.github.com/wadewegner"></a>
+                <a class="social-linkedin" href="http://www.linkedin.com/in/wadewegner"></a>
+                <a class="social-stackoverflow" href="http://stackoverflow.com/users/1043146/wade"></a>
+
+              </div>
+
+              <p><span style="font-weight:bold;">Wade Wegner</span> is a Platform Advocate for Salesforce and an aspiring brewmaster.</p>
+            
+              <div>
+                <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1382126667.html#_=1382886215451&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=WadeWegner&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 250px; height: 20px;"></iframe>
+              </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="container">
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '{{ site.google.tracking_id }}']);
+      _gaq.push(['_trackPageview']);
 
-      <div class="content">
-        {{ content }}
-      </div>
-      <hr>
-      <footer>
-        <p>&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}
-        </p>
-      </footer>
-
-    </div>
-
-    {% include analytics %}
-
-    <script>
-    $(function () {
-      var contact = GetParameterValues('contact');
-      
-      if (contact == '1') {
-        reset();
-        alertify.alert("Thanks for sending me a message!");
-      }
-    });
-
-    function reset () {
-      $("#toggleCSS").attr("href", "/css/alertify.default.css");
-      alertify.set({
-        labels : {
-          ok     : "OK",
-          cancel : "Cancel"
-        },
-        delay : 5000,
-        buttonReverse : false,
-        buttonFocus   : "ok"
-      });
-    }
-
-    function GetParameterValues(param) {
-      var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-      for (var i = 0; i < url.length; i++) {
-        var urlparam = url[i].split('=');
-        if (urlparam[0] == param) {
-        return urlparam[1];
-        }
-      }
-    }
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
     </script>
 
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
   </body>
 </html>
-

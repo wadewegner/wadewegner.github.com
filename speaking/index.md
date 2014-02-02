@@ -2,16 +2,7 @@
 layout: page
 title: Speaking Engagements
 categories: []
-
 tags: []
-
-status: publish
-type: page
-published: true
-meta: 
-  _edit_last: "1"
-  bfa_virtual_template: simple
-  dsq_thread_id: "947518374"
 ---
 
 ![Wade Wegner](http://images.wadewegner.com/wordpress/2011/12/CloudCoverLive.png "Wade Wegner")

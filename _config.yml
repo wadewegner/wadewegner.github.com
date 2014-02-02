@@ -1,15 +1,11 @@
 name: Wade Wegner
-
-# This is the default format. 
-# For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:year/:month/:title/
-
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile"]
 markdown: redcarpet
 pygments: true
-
 title : Wade Wegner
 tagline: From the whiteboard to the keyboard
+
 author :
   name : Wade Wegner
   email : wade.wegner@gmail.com
@@ -17,26 +13,12 @@ author :
   twitter : wadewegner
   feedburner : WadeWegner
 
-production_url : http://www.wadewegner.com
-production_disqus_url : http://www.wadewegner.com
-production_facebook_url : http://www.wadewegner.com
+categories_path : /categories.html
+archive_path: /archive.html
 
-JB :
-  BASE_PATH : false
-  ASSET_PATH : false
+disqus :
+  short_name : wadewegner
+  url : http://www.wadewegner.com
 
-  archive_path: /archive.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
-
-  comments :
-    provider : disqus
-    disqus :
-      short_name : wadewegner
-
-  analytics :
-    provider : google 
-    google : 
-        tracking_id : 'UA-1174672-2'
+google : 
+  tracking_id : 'UA-1174672-2'
