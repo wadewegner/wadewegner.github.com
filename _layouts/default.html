@@ -4,11 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
     <title>{{ page.title }}</title>
+
+    {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="title" content="{{ page.title }}" />
+    <meta name="description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure." />
+
+    <meta name="description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure." />
+
+    <!-- Facebook -->
+    <meta property="og:title" content="{{ page.title }}"/>
+    {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="http://www.wadewegner.com{{ page.url | remove:'index.html' }}"/>
+    <meta property="og:image" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg"/>
+    <meta property="og:site_name" content="{{ site.name }}"/>
+    <meta property="fb:admins" content="691575665" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@WadeWegner">
+    <meta name="twitter:title" content="Wade Wegner's blog">
+    <meta name="twitter:description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure.">
+    <meta name="twitter:creator" content="@WadeWegner">
+    <meta name="twitter:image:src" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg">
+    <meta name="twitter:domain" content="www.wadewegner.com">
+    <meta name="twitter:app:name:iphone" content="">
+    <meta name="twitter:app:name:ipad" content="">
+    <meta name="twitter:app:name:googleplay" content="">
+    <meta name="twitter:app:url:iphone" content="">
+    <meta name="twitter:app:url:ipad" content="">
+    <meta name="twitter:app:url:googleplay" content="">
+    <meta name="twitter:app:id:iphone" content="">
+    <meta name="twitter:app:id:ipad" content="">
+    <meta name="twitter:app:id:googleplay" content="">
 
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
@@ -24,6 +56,8 @@
 
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <link href="http://feeds.feedburner.com/WadeWegner" type="application/rss+xml" rel="alternate" title="WadeWegner.com RSS Feed">
 
   </head>
   <body>
