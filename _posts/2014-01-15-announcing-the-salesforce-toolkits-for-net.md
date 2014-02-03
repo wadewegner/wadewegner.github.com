@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Announcing the Salesforce Toolkits for .NET"
-description: ""
+description: "I am extremely pleased to announce the availability of two Salesforce Toolkits for .NET developers: the Force.com Toolkit for .NET and the Chatter Toolkit for .NET. These toolkits provide an easy way for .NET developers to interact with the Force.com and Chatter REST APIs using a native .NET libraries."
 categories:
 - Salesforce
 - Force.com

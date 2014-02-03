@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Better Support for HttpClient in the Salesforce Toolkits for .NET"
-description: ""
+description: "Some important updates made to the toolkits to allow better management of the HttpClient."
 categories:
 - Salesforce
 - Force.com

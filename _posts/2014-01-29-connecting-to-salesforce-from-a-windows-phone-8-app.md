@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Connecting to Salesforce from a Windows Phone 8 App"
-description: ""
+description: "Want to build a Salesforce app on the Windows Phone? No problem. In this post you'll learn how to obtain an access token, manage the callback, and make calls against the Force.com REST API."
 categories:
 - Salesforce
 - Force.com
