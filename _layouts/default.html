@@ -11,10 +11,7 @@
     {% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="title" content="{{ page.title }}" />
-    <meta name="description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure." />
-
-    <meta name="description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure." />
-
+   
     <!-- Facebook -->
     <meta property="og:title" content="{{ page.title }}"/>
     {% if page.description %}<meta property="og:description" content="{{ page.description }}">{% endif %}
@@ -28,8 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@WadeWegner">
     <meta name="twitter:title" content="Wade Wegner's blog">
-    <meta name="twitter:description" content="Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Salesforce, Force.com, and Windows Azure.">
-    <meta name="twitter:creator" content="@WadeWegner">
+    {% if page.description %}<meta name="twitter:description" content="{{ page.description }}">{% endif %}<meta name="twitter:creator" content="@WadeWegner">
     <meta name="twitter:image:src" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg">
     <meta name="twitter:domain" content="www.wadewegner.com">
     <meta name="twitter:app:name:iphone" content="">
