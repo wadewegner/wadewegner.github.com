@@ -126,6 +126,14 @@
               <div>
                 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="http://platform.twitter.com/widgets/follow_button.1382126667.html#_=1382886215451&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=WadeWegner&amp;show_count=true&amp;show_screen_name=true&amp;size=m" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 250px; height: 20px;"></iframe>
               </div>
+
+              <div style="padding-top:30px;">
+                <h4>Recent Posts</h4>
+              {% for post in site.posts limit: 20 %}
+                <p><strong>{{ post.date | date: "%m/%d/%Y" }}:</strong> <a href="{{ post.url }}">{{ post.title }}</a></p>
+              {% endfor %}
+              </div>
+
           </div>
         </div>
       </div>
