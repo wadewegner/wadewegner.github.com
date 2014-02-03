@@ -11,7 +11,6 @@ categories:
 - NuGet
 tags: []
 ---
-{% include setup %}
 
 I am extremely pleased to announce the availability of two Salesforce Toolkits for .NET developers: the [Force.com Toolkit for .NET](https://github.com/developerforce/Force.com-Toolkit-for-NET) and the [Chatter Toolkit for .NET](https://github.com/developerforce/Chatter-Toolkit-for-NET). These toolkits provide an easy way for .NET developers to interact with the Force.com and Chatter REST APIs using a native .NET libraries.
 

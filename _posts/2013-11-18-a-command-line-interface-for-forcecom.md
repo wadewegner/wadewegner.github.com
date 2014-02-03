@@ -8,7 +8,6 @@ categories:
 - command-line interface
 tags: []
 ---
-{% include setup %}
 
 Released this week at Dreamforce is a new command-line interface (CLI) tool for Force.com. This tool is open-sourced and available at [http://github.com/heroku/force](http://github.com/heroku/force). This tool lets you quickly interact with the Force.com APIs and opens up interesting opportunities for scripting and automating tasks on Force.com.
 

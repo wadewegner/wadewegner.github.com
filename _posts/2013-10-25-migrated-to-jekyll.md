@@ -6,7 +6,6 @@ categories:
 - Jekyll
 - Markdown
 ---
-{% include setup %}
 
 For quite some time I've wanted to move my blog off  WordPress and start to use [Jekyll](http://jekyllrb.com/) - in fact, I started looking into Jekyll back when I was still at Microsoft and had many conversations with [Steve Marx](http://blog.smarx.com/) about making the move. In this short post I want to discuss my motivations for making the switch and also highlight some of the unique things I did to make this quick and simple. I do not plan to get into the details of Jekyll and how it works - there are a lot of posts and articles available for you to review.
 

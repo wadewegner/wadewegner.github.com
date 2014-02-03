@@ -7,7 +7,6 @@ categories:
 - PowerShell
 - Automation
 ---
-{% include setup %}
 
 > Special thanks to [Michael Washam](michaelwasham.com/‎) for helping me find and fix a bug in my code!
 

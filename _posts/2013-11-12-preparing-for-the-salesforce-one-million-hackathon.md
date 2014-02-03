@@ -11,7 +11,6 @@ categories:
 - salesforce
 tags: []
 ---
-{% include setup %}
 
 *This post originally appeared on the [Salesforce Developer Relations blog](http://blogs.developerforce.com/developer-relations/2013/11/preparing-for-the-salesforce-1-million-hackathon.html) on November 12, 2013.*
 

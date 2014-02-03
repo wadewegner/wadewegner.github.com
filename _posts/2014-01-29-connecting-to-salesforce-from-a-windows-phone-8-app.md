@@ -11,7 +11,6 @@ categories:
 - OAuth
 tags: []
 ---
-{% include setup %}
 
 One of the top requests I've received since [releasing the Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) has been a Windows Phone 8 sample application. I was very happy to oblige and today I'm pleased to share with you the [Windows Phone 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth) sample application. This sample makes use of the <span class="inline-code">Developerforce.Force</span> and <span class="inline-code">Developerforce.Common</span> NuGet packages. Since the .NET libraries in the toolkits are all portable class libraries developers are able to build applications targeting .NET 4 & 4.5, Windows Phone 8, Windows 8 & 8.1, and Silverlight 5.
 

@@ -11,7 +11,6 @@ categories:
 - df13
 tags: []
 ---
-{% include setup %}
 
 We just released a [Salesforce1 tutorial on Github](https://github.com/developerforce/demo-df13-devkeynote-s1app) that walks you though the same demo presented by [Dave Carroll](http://twitter.com/dcarroll) at the [Dreamforce '13 Developer's Keynote](http://www.youtube.com/watch?v=KELBWQIVcfk&feature=share&list=PLScnZWsj0lrRCMuciE0La1_iKtCPt4Kka).
 

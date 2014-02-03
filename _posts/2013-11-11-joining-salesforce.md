@@ -6,7 +6,6 @@ categories:
 - Salesforce
 tags: []
 ---
-{% include setup %}
 
 Earlier this year I started an incubation project at [Aditi Technologies](http://www.aditi.com) to explore Salesforce as a platform for building cloud applications. Today I start at Salesforce as a full-time employee.
 

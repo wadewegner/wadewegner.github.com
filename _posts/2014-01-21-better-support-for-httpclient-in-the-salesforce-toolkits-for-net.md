@@ -9,7 +9,6 @@ categories:
 - Toolkit
 tags: []
 ---
-{% include setup %}
 
 If you [follow me on Twitter](http://twitter.com/WadeWegner), chances are you heard we released a set of Salesforce Toolkits for .NET last week. The reception has been extraordinary, and I'm so excited to see the applications developers build using these toolkits!
 

@@ -9,7 +9,6 @@ categories:
 - Token
 tags: []
 ---
-{% include setup %}
 
 Today I wrote some Python code for querying the Force.com REST APIs. It started pretty straightforward but I stumbled upon an important concept when I tried to run this Python from an untrusted location. More on this in a moment. Let's start at the beginning.
 

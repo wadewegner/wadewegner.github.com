@@ -9,7 +9,6 @@ categories:
 - Git
 tags: []
 ---
-{% include setup %}
 
 Today I needed to configure Eclipse to use the Force.COM IDE. In the past I've edited Apex and Visualforce code either directly inline ...
 

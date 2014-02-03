@@ -10,7 +10,6 @@ categories:
 - webscripts
 tags: []
 ---
-{% include setup %}
 
 Yesterday I spent some time writing a [Python token request script against the Force.com APIs](http://www.wadewegner.com/2013/11/forcecom-token-requests-with-python/). Today I thought I'd share a short code snippet for doing the same thing but this time using [Lua](http://www.lua.org/).
 
