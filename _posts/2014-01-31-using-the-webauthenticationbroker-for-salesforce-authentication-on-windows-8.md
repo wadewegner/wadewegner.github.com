@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using the WebAuthenticationBroker for Salesforce Authentication on Windows 8"
-description: ""
+description: "Learn how to use the WebAuthenticationBroker in Windows 8 to authenticate with Salesforce."
 categories:
 - Salesforce
 - Force.com
