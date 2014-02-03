@@ -8,13 +8,13 @@
 
     <title>{{ page.title }}</title>
 
-    {% if page.description != "" %}<meta name="description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}{% if page.description != "" %}<meta name="description" content="{{ page.description }}">{% endif %}{% endif %}
     <meta name="author" content="{{ site.author.name }}">
     <meta name="title" content="{{ page.title }}" />
    
     <!-- Facebook -->
     <meta property="og:title" content="{{ page.title }}"/>
-    {% if page.description != "" %}<meta property="og:description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}{% if page.description != "" %}<meta property="og:description" content="{{ page.description }}">{% endif %}{% endif %}
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="http://www.wadewegner.com{{ page.url | remove:'index.html' }}"/>
     <meta property="og:image" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg"/>
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@WadeWegner">
     <meta name="twitter:title" content="Wade Wegner's blog">
-    {% if page.description != "" %}<meta name="twitter:description" content="{{ page.description }}">{% endif %}
+    {% if page.description %}{% if page.description != "" %}<meta name="twitter:description" content="{{ page.description }}">{% endif %}{% endif %}
     <meta name="twitter:creator" content="@WadeWegner">
     <meta name="twitter:image:src" content="http://www.wadewegner.com/img/WadeWegner_200x200.jpg">
     <meta name="twitter:domain" content="www.wadewegner.com">
