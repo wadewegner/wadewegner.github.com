@@ -36,7 +36,7 @@ This is a simple operation. The two methods enabling this to work are <span clas
 
 The <span class="inline-code">FormatRefreshTokenUrl</span> method helps to create the URL with all the proper values. It is a public static method, so you can use it independently of <span class="inline-code">TokenRefreshAsync</span>. Of course, <span class="inline-code">TokenRefreshAysnc</span> uses it as well.
 
-<script src="https://gist.github.com/wadewegner/8828039.js?file=CallTokenRefreshAsync.cs"></script>
+<script src="https://gist.github.com/wadewegner/8828039.js?file=TokenRefreshAsync.cs"></script>
 
 Notice that <span class="inline-code">TokenRefreshAsync</span> creates the same <span class="inline-code">AuthToken</span> used by the other authentication methods, so it's easy to incorporate.
 
