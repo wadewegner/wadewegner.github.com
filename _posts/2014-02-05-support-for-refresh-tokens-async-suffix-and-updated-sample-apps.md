@@ -54,6 +54,11 @@ I don't like introducing changes like this and will strive to keep them to the m
 
 All of our sample applications have been updated. Make sure to take a look: [https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples)
 
+- [Simple Console](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/SimpleConsole)
+- [Web Server OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WebServerOAuthFlow)
+- [Windows 8 OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/Windows8OAuth)
+- [Windows Phone OAuth](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples/WindowsPhoneOAuth)
+
 In particular, take a look at the **Windows 8 OAuth Sample** to see how the token refresh is implemented.
 
 I hope you find these updates useful!
