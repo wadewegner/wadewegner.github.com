@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Support for Refresh Tokens, Async Suffix, and Updated Sample Apps"
-description: ""
+description: "Three important updates for the Salesforce Toolkits for .NET: refresh tokens, async suffix, and sample applications."
 categories:
 - Salesforce
 - Force.com
