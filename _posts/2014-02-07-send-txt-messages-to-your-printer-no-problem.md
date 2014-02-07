@@ -58,7 +58,7 @@ Not a problem for me. I had two ideas:
 
 Given that the thermal printer is powered by a **Raspberry Pi**, giving you the ability to write just about any kind of code you can think of in various languages, these ideas proved pretty simple.
 
-## Printing text messages on the IoT thermal printer
+### Printing text messages on the IoT thermal printer
 
 You may ask yourself, why would you want to send a text message to a printer? The best answer I can come up with is, because I can! As with most things, it's solving the challenge that provides the satisfaction, not the function itself.
 
@@ -109,7 +109,7 @@ Let me tell you, it's super cool when you see messages start to pour in!
 
 Text away!
 
-## Getting the school lunch menu
+### Getting the school lunch menu
 
 As I said, I had grown tired of having to load up the school lunch menu every morning. We'd routinely have to browse to [this lunch menu](http://dcsd.nutrislice.com/menu/eldorado/lunch/). It gets tiring after the 100th time.
 
