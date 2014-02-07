@@ -12,7 +12,7 @@ categories:
 tags: []
 ---
 
-**Question:** How do you send a text message from your phone and have it print on a thermal printer that's sitting on your kitchen counter?
+How do you send a text message from your phone and have it print on a thermal printer that's sitting on your kitchen counter?
 
 ![iot-beer](https://f.cloud.github.com/assets/746259/2115102/87aa3efe-9048-11e3-9222-b32b825909ef.jpg)
 
