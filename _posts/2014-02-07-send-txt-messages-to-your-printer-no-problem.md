@@ -76,7 +76,7 @@ Here's how the three cloud services work:
 
 1. You send a message to a phone number. This phone number is owned by Twilio, and I'm effectively "renting" it. They receive the message and send it (and some additional metadata) to a web service I have running in Heroku. This is set by specifying the **Messaging Request URL** on your Twilio number. (Note: Please refer to Twilio's fantastic developer documentation if you have any problems.)
 
-	<img src="https://f.cloud.github.com/assets/746259/2115239/f2396b48-904b-11e3-855b-a4f7c03497c0.png" alt="Twillio Message Request URL" style="border-style: solid;border-width:1px;border-color:#767676;">
+	<img src="https://f.cloud.github.com/assets/746259/2115239/f2396b48-904b-11e3-855b-a4f7c03497c0.png" alt="Twillio Message Request URL" style="border-style: solid;border-width:1px;border-color:#767676;padding-left:5px;">
 
 2. Our web service running in Heroku receives the message and extracts the phone number and message. (Note: Heroku also has fantastic developer documentation. Please refer to it to see how to create and deploy your web service.)
 
