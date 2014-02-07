@@ -63,8 +63,8 @@ h6, .h6 {
  */
 
 .blog-main {
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 18px;
+  line-height: 26px;
 }
 
 /* Sidebar modules for boxing content */
@@ -274,7 +274,7 @@ img {
 }
 
 /* Better styles for embedding GitHub Gists */
-.gist{font-size:12px;line-height:18px;margin-bottom:20px;width:100%}
+.gist{font-size:16px;line-height:22px;margin-bottom:20px;width:100%}
 .gist pre{font-family:Menlo,Monaco,'Bitstream Vera Sans Mono','Courier New',monospace !important}
 .gist-meta{font-family:Helvetica,Arial,sans-serif;font-size:13px !important}
 .gist-meta a{color:#26a !important;text-decoration:none}
