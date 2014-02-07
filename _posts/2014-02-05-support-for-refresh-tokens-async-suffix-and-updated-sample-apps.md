@@ -14,7 +14,7 @@ categories:
 tags: []
 ---
 
-Over the past two days I've committed and published a number of updates to the Salesforce Toolkits for .NET worth sharing. But first, a special thanks to [Rocky Assad](https://github.com/fourq) and [Delmer Johnson](https://github.com/DelmerJohnson) for the contributions they have made to the toolkits over the past couple weeks. It's fantastic to see such passionate involvement from members of the Salesforce developer community!
+Over the past two days I've committed and published a number of updates to the [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) worth sharing. But first, a special thanks to [Rocky Assad](https://github.com/fourq) and [Delmer Johnson](https://github.com/DelmerJohnson) for the contributions they have made to the toolkits over the past couple weeks. It's fantastic to see such passionate involvement from members of the Salesforce developer community!
 
 There are three updates I'd like to discuss in this post:
 
