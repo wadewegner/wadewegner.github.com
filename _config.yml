@@ -22,3 +22,5 @@ disqus :
 
 google : 
   tracking_id : 'UA-1174672-2'
+
+production_url : http://www.wadewegner.com
