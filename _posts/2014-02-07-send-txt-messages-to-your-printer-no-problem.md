@@ -74,7 +74,7 @@ And, of course, some Python code on the Raspberry Pi.
 
 Here's how the three cloud services work:
 
-1. You send a message to a phone number. This phone number is owned by Twilio, and I'm effectively "renting" it. They receive the message and send it (and some additional metadata) to a web service I have running in Heroku. This is set by specifying the **Messaging Request URL** on your Twilio number. (Note: Please refer to Twilio's fantastic developer documentation if you have any problems.)
+1. You text a message to a phone number. This phone number is owned by Twilio and I'm effectively "renting" it. They receive the message and send it (and some additional metadata) to a web service I have running in Heroku. This is set by specifying the **Messaging Request URL** on your Twilio number. (Note: Please refer to Twilio's fantastic developer documentation if you have any problems.)
 
 	<img src="https://f.cloud.github.com/assets/746259/2115239/f2396b48-904b-11e3-855b-a4f7c03497c0.png" alt="Twillio Message Request URL" style="border-style: solid;border-width:1px;border-color:#767676;padding-left:10px;">
 
@@ -133,8 +133,8 @@ Here it is in action:
 
 ![2014-02-07 16 23 51](https://f.cloud.github.com/assets/746259/2115402/5f1da8a2-904f-11e3-91f6-bdfb78e09912.jpg)
 
-A solution guaranteed to reduce your daily stress and make your children incredibly happy!
+Mmm, there's nothing quite like Cowboy Mac!
 
-Well, that's it. I hope you found this interesting. If you do something like this yourself definitely let me know!
+There you have it! A solution guaranteed to reduce your daily stress and make your children incredibly happy!
 
-You can find all the source code for this solution in the following gist: [https://gist.github.com/wadewegner/8872919](https://gist.github.com/wadewegner/8872919)
+I hope you found this solution interesting. If you do something like this yourself definitely let me know! You can find all the source code for this solution in the following gist: [https://gist.github.com/wadewegner/8872919](https://gist.github.com/wadewegner/8872919)
