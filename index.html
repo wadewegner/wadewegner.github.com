@@ -12,6 +12,13 @@ description: Wade Wegner's personal blog. Conversations about programming, techn
 	<h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	<p class="blog-post-meta">{{ post.date | date_to_long_string }}</p>
 
+	<div>
+		<small><strong>
+			<span class="fbCount" data-url="http://www.wadewegner.com{{ post.url }}">0</span> likes and
+			<a class="twSearch" href="#" data-url="http://www.wadewegner.com{{ post.url }}"><span class="twCount" data-url="http://www.wadewegner.com{{ post.url }}">0</span> tweets</a>
+		</strong></small>
+	</div>
+
 	{{ post.content }}
 
 </div>

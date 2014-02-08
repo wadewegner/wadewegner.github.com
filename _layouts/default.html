@@ -152,6 +152,42 @@
 
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
 
+
+    <script>
+    $(document).ready(function(){
+
+      $(".fbCount").each(function () {
+        var elem = $(this);
+        var url = elem.attr("data-url");
+
+        $.getJSON('http://graph.facebook.com/' + url, function (data) {
+            elem.html(data.shares);
+        });
+      });
+
+      $(".twCount").each(function () {
+        var elem = $(this);
+        var url = elem.attr("data-url");
+
+        $.getJSON("http://cdn.api.twitter.com/1/urls/count.json?callback=?&url=" + url, function (data) {
+            elem.html(data.count);
+        });
+      });
+
+      $(".twSearch").each(function () {
+        var elem = $(this);
+        var url = elem.attr("data-url");
+
+        var twitterSearch = 'https://twitter.com/search?q=' + url;
+        
+        elem.attr({
+            href: twitterSearch,
+            target: "_blank"
+        });
+      });
+    });
+    </script>
+
     <style>
       .gist-meta {
         visibility: hidden;
