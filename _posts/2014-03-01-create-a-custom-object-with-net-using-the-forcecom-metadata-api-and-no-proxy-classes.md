@@ -18,9 +18,9 @@ There are, however, a few limits to what the REST API can accomplish. In particu
 
 The answer is relatively simple: use the [Metadata API](http://www.salesforce.com/us/developer/docs/api_meta/).
 
-Of course, the reality is that there’s more to it. In particular, if you’ve only used the REST APIs (or it’s been years since you’ve had to use SOAP, as was the case with yours truly), this may present a challenge as the Metadata API is SOAP-based and requires you to authentication in a different manner than the REST APIs.
+Of course, the reality is that there’s more to it. In particular, if you’ve only used the REST APIs (or it’s been years since you’ve had to use SOAP as was the case with yours truly), this may present a challenge as the Metadata API is SOAP-based.
 
-But not to fear. The utility of these APIs is worth the few extra minutes and lines of code.
+But not to fear! The utility of these APIs is worth the few extra minutes and lines of code.
 
 When starting with these SOAP APIs, most developers will typically download the WSDL files, generate class proxies, and code against them. This is a fine approach and there’s a healthy amount of examples that show how this works.
 
