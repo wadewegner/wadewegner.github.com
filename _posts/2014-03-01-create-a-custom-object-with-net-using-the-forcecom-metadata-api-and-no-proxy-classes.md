@@ -3,12 +3,11 @@ layout: post
 title: "Create a Custom Object with .NET using the Force.com Metadata API ... and No Proxy Classes!"
 description: "Ever want to create a custom object or field in Salesforce using the APIs? Tired of having to generate massive WSDLs to perform simple operations? In this post we'll look at how we can create custom objects and fields by managing the SOAP requests ourselves."
 categories:
-- IoT
-- printer
-- Heroku
-- Twilio
-- Raspberry Pi
-- python
+- Salesforce
+- Force.com
+- SOAP API
+- Metadata API
+- C#
 tags: []
 ---
 
