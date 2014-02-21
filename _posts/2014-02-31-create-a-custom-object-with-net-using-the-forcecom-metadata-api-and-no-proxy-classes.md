@@ -14,7 +14,7 @@ tags: []
 
 Recently I've written a lot about using the Force.com REST API with .NET. I've also created a [Force.com Toolkit for .NET](https://github.com/developerforce/Force.com-Toolkit-for-NET), a [Chatter Toolkit for .NET](https://github.com/developerforce/Chatter-Toolkit-for-NET), and a set of [sample applications](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples) that make it easier for developers to interact with these APIs. Using the REST API you can write custom integrations with your applications in Salesforce, interacting with all of your metadata through simple HTTP calls using JSON.
 
-There are, however, a few limits to what the REST API can accomplish. In particular, one of the requests and/or questions I see over and over is how to create custom objects and fields using the APIs. If you look at the Developer Forum[link] you’ll see lots of people (especially .NET developers) ask these questions.
+There are, however, a few limits to what the REST API can accomplish. In particular, one of the requests and/or questions I see over and over is how to create custom objects and fields using the APIs. If you look at the [Developer Forum](https://developer.salesforce.com/forums/) you’ll see lots of people (especially .NET developers) ask these questions.
 
 The answer is relatively simple: use the [Metadata API](http://www.salesforce.com/us/developer/docs/api_meta/).
 
@@ -163,7 +163,7 @@ Pretty slick. As you can see, the only things you need to bring to this approach
 
 So, how can we confirm that this work?
 
-![Custom Object and Field](/Content/2014/02/CustomObjectAndField.png)
+![Custom Object and Field](https://raw.github.com/wadewegner/wadewegner.github.com/master/content/2014/02/CustomObjectAndField.png)
 
 Log into your Salesforce organization. Under recent items you should see the custom object and fields you’ve created. Go ahead and click on the custom object and you can confirm that it has the custom field.
 
