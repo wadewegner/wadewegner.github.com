@@ -18,7 +18,7 @@ There are, however, a few limits to what the REST API can accomplish. In particu
 
 The answer is relatively simple: use the [Metadata API](http://www.salesforce.com/us/developer/docs/api_meta/).
 
-Of course, the reality is that there’s more to it. In particular, if you’ve only used the REST APIs (or it’s been years since you’ve had to use SOAP, as was the case with yours truly), this may present a challenge as the Metadata API is SOAP-based and the SOAP API has a different authentication mechanism than the REST APIs. Of course, you're welcome to use your OAuth Token acquired RESTfully in the Metadata API (and SessionId in the REST API) if you desire.
+Of course, the reality is that there’s more to it. In particular, if you’ve only used the REST APIs (or it’s been years since you’ve had to use SOAP, as was the case with yours truly), this may present a challenge as the Metadata API is SOAP-based and the SOAP API has a different authentication mechanism than the REST APIs. (Of course, you're welcome to use your OAuth Token acquired RESTfully in the Metadata API, and SessionId in the REST API, if you desire.)
 
 But not to fear. The utility of these APIs is worth the few extra minutes and lines of code.
 
