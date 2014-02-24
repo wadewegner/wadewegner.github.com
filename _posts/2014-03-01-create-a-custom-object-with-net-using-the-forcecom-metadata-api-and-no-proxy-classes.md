@@ -11,6 +11,18 @@ categories:
 tags: []
 ---
 
+<hr />
+
+<span style="text-decoration:underline;">**Update 2/24/14**</span>
+
+Over the weekend I took much of what I wrote below and packaged it up in a [NuGet package](http://www.nuget.org/packages/WadeWegner.Salesforce.SOAPHelpers/). You can use the NuGet to accomplish everything I wrote below with fewer lines of code. Full details are available on the [WadeWegner.Salesforce.SOAPHelpers Github repository](https://github.com/wadewegner/Salesforce.SOAPHelpers) and you can get the NuGet package with the following command:
+
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="inline-code">Install-Package WadeWegner.Salesforce.SOAPHelpers</span>
+
+Enjoy!
+
+<hr />
+
 Recently I've written a lot about using the Force.com REST API with .NET. I've also created a [Force.com Toolkit for .NET](https://github.com/developerforce/Force.com-Toolkit-for-NET), a [Chatter Toolkit for .NET](https://github.com/developerforce/Chatter-Toolkit-for-NET), and a set of [sample applications](https://github.com/developerforce/Force.com-Toolkit-for-NET/tree/master/samples) that make it easier for developers to interact with these APIs. Using the REST API you can write custom integrations with your applications in Salesforce, interacting with all of your metadata through simple HTTP calls using JSON.
 
 There are, however, a few limits to what the REST API can accomplish. In particular, one of the requests and/or questions I see over and over is how to create custom objects and fields using the APIs. If you look at the [Developer Forum](https://developer.salesforce.com/forums/) you’ll see lots of people (especially .NET developers) ask these questions.
