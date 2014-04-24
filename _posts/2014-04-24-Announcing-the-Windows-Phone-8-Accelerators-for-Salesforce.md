@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing the Windows Phone 8 Accelerators for Salesforce"
+title: "Announcing the Salesforce Accelerators for Windows Phone 8"
 description: "The accelerators for Windows Phone 8 make it easier to build new Windows Phone 8 apps using the Salesforce Toolkits for .NET"
 categories:
 - Salesforce
