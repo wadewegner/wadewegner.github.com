@@ -11,7 +11,7 @@ categories:
 - Visual Studio
 ---
 
-I am pleased to announce a set of accelerators designed to make it easier to create new applications using the Salesforce Toolkits for .NET. You can 
+I am pleased to announce a set of accelerators designed to make it easier to create new applications using the Salesforce Toolkits for .NET.
 
 The [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/), released earlier this year, allows you to interact with the Force.com and Chatter REST APIs using native .NET code on multiple platforms and devices. Many developers and companies have already benefited from these libraries and have built new ASP.NET web applications, Windows Phone 8 apps, and even Windows 8 store apps.
 
