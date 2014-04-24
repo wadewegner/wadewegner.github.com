@@ -15,7 +15,7 @@ I am pleased to announce a set of accelerators designed to make it easier to cre
 
 The [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/), released earlier this year, allows you to interact with the Force.com and Chatter REST APIs using native .NET code on multiple platforms and devices. Many developers and companies have already benefited from these libraries and have built new ASP.NET web applications, Windows Phone 8 apps, and even Windows 8 store apps.
 
-Nevertheless, one of the requests I kept receiving was to create additional samples that make it easier to get started; little *nuggets* of code that *accelerate* the process. These accelerators are the answer to those requests by delivering functionality through small, composable NuGet packages.
+Nevertheless, one of the requests I kept receiving was to create additional tools and samples that make it easier to get started; little *nuggets* of code that *accelerate* the process. These accelerators are the answer to those requests by delivering functionality through small, composable NuGet packages.
 
 This short video shows how quick and easy it is to build a Windows Phone 8 app that connects to Salesforce.
 
