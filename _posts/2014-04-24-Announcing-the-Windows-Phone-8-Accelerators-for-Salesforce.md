@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Announcing the Salesforce Accelerators for Windows Phone 8"
+title: "Announcing the Salesforce Accelerators for Windows Phone 8 Apps"
 description: "The accelerators for Windows Phone 8 make it easier to build new Windows Phone 8 apps using the Salesforce Toolkits for .NET"
 categories:
 - Salesforce
@@ -9,9 +9,13 @@ categories:
 - Toolkit
 - NuGet
 - Visual Studio
+- Windows Phone
 ---
 
-I am pleased to announce a set of accelerators designed to make it easier to create new applications using the Salesforce Toolkits for .NET: [DeveloperForce.WindowsPhone8.Login](https://www.nuget.org/packages/DeveloperForce.Windows8.Login/) and [DeveloperForce.WindowsPhone8.Samples.Accounts](https://www.nuget.org/packages/DeveloperForce.WindowsPhone8.Samples.Accounts/).
+I am pleased to announce the **Salesforce Accelerators for Windows Phone 8 Apps**, a set of assets designed to make it easier to create new applications using the Salesforce Toolkits for .NET:
+
+* [DeveloperForce.WindowsPhone8.Login](https://www.nuget.org/packages/DeveloperForce.Windows8.Login/)
+* [DeveloperForce.WindowsPhone8.Samples.Accounts](https://www.nuget.org/packages/DeveloperForce.WindowsPhone8.Samples.Accounts/).
 
 The [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/), released earlier this year, allow you to interact with the Force.com and Chatter REST APIs using native .NET code on multiple platforms and devices. Many developers and companies have already benefited from these libraries and have built new ASP.NET web applications, Windows Phone 8 apps, and even Windows 8 store apps.
 
@@ -19,7 +23,7 @@ Nevertheless, one of the requests I kept receiving was to create additional tool
 
 This short video shows how quick and easy it is to build a Windows Phone 8 app that connects to Salesforce.
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/i-vYcyZL9Yo" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="360" src="//www.youtube.com/embed/i-vYcyZL9Yo" frameborder="0" allowfullscreen></iframe>
 
 Let's dig a little deeper and look at exactly what is happening.
 
