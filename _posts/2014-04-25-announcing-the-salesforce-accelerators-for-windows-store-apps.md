@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Announcing the Salesforce Accelerators for Windows Store Apps"
-description: ""
+description: "The accelerators for Windows Store apps make it easier to build new Windows Store apps using the Salesforce Toolkits for .NET"
 categories:
 - Salesforce
 - Force.com
@@ -12,7 +12,7 @@ categories:
 - Windows 8
 ---
 
-Yesterday I was pleased to the [Salesforce Accelerators for Windows Phone 8 Apps](http://www.wadewegner.com/2014/04/Announcing-the-Windows-Phone-8-Accelerators-for-Salesforce/). Today I'm excited to tell you about the **Salesforce Accelerators for Windows Store Apps**:
+Yesterday I was pleased to announce the [Salesforce Accelerators for Windows Phone 8 Apps](http://www.wadewegner.com/2014/04/Announcing-the-Windows-Phone-8-Accelerators-for-Salesforce/). Today I'm excited to tell you about the **Salesforce Accelerators for Windows Store Apps**:
 
 * [DeveloperForce.Windows8.Login](https://www.nuget.org/packages/DeveloperForce.Windows8.Login/)
 * [DeveloperForce.Windows8.Samples.Accounts](https://www.nuget.org/packages/DeveloperForce.Windows8.Samples.Accounts/)
