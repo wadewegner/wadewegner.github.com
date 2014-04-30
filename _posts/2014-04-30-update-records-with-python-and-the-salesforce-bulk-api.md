@@ -21,21 +21,21 @@ A perfect opportunity for scripting, no?
 
 It's really not that difficult. All three of these particular services provide a simple API that returns a JSON package with the counts we need. For example, let's say I want to see counts/shares for my post announcing the [Salesforce Toolkits for .NET](http://localhost:4000/2014/01/announcing-the-salesforce-toolkits-for-net/).
 
-For Twitter I'd create the URL [https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
+For Twitter, create the URL [https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
 
 	{
 		"count" : 144,
 		"url" : "http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/"
 	}
 
-For Facebook I'd create the URL [http://graph.facebook.com/http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](http://graph.facebook.com/http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
+For Facebook, create the URL [http://graph.facebook.com/http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](http://graph.facebook.com/http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
 
 	{
 		"id": "http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/",
 		"shares": 28
 	}
 
-For LinkedIn I'd create the URL: [http://www.linkedin.com/countserv/count/share?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](http://www.linkedin.com/countserv/count/share?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
+For LinkedIn, create the URL: [http://www.linkedin.com/countserv/count/share?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](http://www.linkedin.com/countserv/count/share?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
 
 	IN.Tags.Share.handleCount({
 		"count":18,
