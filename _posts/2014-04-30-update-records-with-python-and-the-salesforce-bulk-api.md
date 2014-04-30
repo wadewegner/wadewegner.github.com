@@ -80,8 +80,6 @@ There are, roughly, four steps involved in using the Bulk API:
 
 To facilitate these steps I created a file called `async.py` that had the four following methods.
 
-**login**
-
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=login.py"></script>
 
 You can see that this method does the following:
@@ -93,8 +91,6 @@ You can see that this method does the following:
 
 Pretty simple and nothing surprising.
 
-**createJob**
-
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=createJob.py"></script>
 
 A few things worth noting here:
@@ -105,8 +101,6 @@ A few things worth noting here:
 * We pass in the `object` we're working with. For example, we're using a custom object called `Byline__c`, so that's what we'll pass in.
 * There are two `contentType` values: CSV and XML. We need to specify which one we're using.
 
-**addBatch**
-
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=addBatch.py"></script>
 
 This is likely the most important, and undocumented, step - particularly when using XML.
@@ -115,15 +109,11 @@ This is likely the most important, and undocumented, step - particularly when us
 * For the purposes of this method I found it easier to create an `objects` parameter on `addBatch` and pass it in. We'll walk through this in detail shortly.
 * Notice too that the url now includes the `jobId` that was returned from the `createJob` response.
 
-**closeJob**
-
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=closeJob.py"></script>
 
 Lastly we close the job. This is a pretty simple operation.
 
 Before we pull it all together, let's look at one more method I've created to facilitate the Bulk API operation. The reason I didn't include this method above is you'll see it's very specific to the particular use case; i.e. we're looping through a lot of data and constructing the `object` data we'll eventually pass into the `addBatch` method.
-
-**createObjectXml**
 
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=createObjectXml.py"></script>
 
