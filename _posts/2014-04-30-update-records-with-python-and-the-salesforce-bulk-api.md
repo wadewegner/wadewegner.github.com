@@ -48,21 +48,21 @@ Pretty simple, right?
 
 So, now the challenge is using this information to update all the records in Salesforce. Let me quickly describe to you the two approaches I took. The first was fast and simple, but long term has some complications. The second took longer to create but ultimately provides the soundest approach.
 
-* **Approach 1: Using the Salesforce REST API**
+**Approach 1: Using the Salesforce REST API**
 
-	I started with this approach. Basically, logged in using the Username-Password authentication flow, grabbed my access token, performed a SOQL query to get all the records with published URLs, looped through them, and then issues an update via the REST API with the proper social counts. Pretty simple.
+I started with this approach. Basically, logged in using the Username-Password authentication flow, grabbed my access token, performed a SOQL query to get all the records with published URLs, looped through them, and then issues an update via the REST API with the proper social counts. Pretty simple.
 
-	The problem with this approach is that, eventually, I'm going to hit my [REST API limits](http://help.salesforce.com/apex/HTViewHelpDoc?id=integrate_api_rate_limiting.htm). Not only is my query an API call, but so too is every update. The plan is for this script to run many times throughout the day. It won't take too long for me to hit the limit.
+The problem with this approach is that, eventually, I'm going to hit my [REST API limits](http://help.salesforce.com/apex/HTViewHelpDoc?id=integrate_api_rate_limiting.htm). Not only is my query an API call, but so too is every update. The plan is for this script to run many times throughout the day. It won't take too long for me to hit the limit.
 
-	Although it is a simple and elegant solution, ultimately it won't work.
+Although it is a simple and elegant solution, ultimately it won't work.
 
-* **Approach 2: Using the Salesforce Bulk API**
+**Approach 2: Using the Salesforce Bulk API**
 
-	As you'll see, this approach is a lot more involved. However, it's also rock solid and designed to beyond the scenarios supported by the REST API.
+As you'll see, this approach is a lot more involved. However, it's also rock solid and designed to beyond the scenarios supported by the REST API.
 
-	The Bulk API is optimized for loading or deleting large sets of data. You can use it to query, insert, update, upsert, or delete a large number of records asynchronously by submitting batches which are processed in the background by Salesforce.
+The Bulk API is optimized for loading or deleting large sets of data. You can use it to query, insert, update, upsert, or delete a large number of records asynchronously by submitting batches which are processed in the background by Salesforce.
 
-	The easiest way to use Bulk API is to enable it for processing records in Data Loader using CSV files. This avoids the need to write your own client application. However, you can also send it XML, which avoids having to construct or generate CSV files; perfect, in my opinion, for our scenario.
+The easiest way to use Bulk API is to enable it for processing records in Data Loader using CSV files. This avoids the need to write your own client application. However, you can also send it XML, which avoids having to construct or generate CSV files; perfect, in my opinion, for our scenario.
 
 Okay, enough talk. Let's jump into the code.
 
