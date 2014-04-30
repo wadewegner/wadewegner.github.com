@@ -48,7 +48,7 @@ Pretty simple, right?
 
 So, now the challenge is using this information to update all the records in Salesforce. Let me quickly describe to you the two approaches I took. The first was fast and simple, but long term has some complications. The second took longer to create but ultimately provides the soundest approach.
 
-#### Approach 1: Using the Salesforce REST API**
+#### Approach 1: Using the Salesforce REST API
 
 I started with this approach. Basically, logged in using the Username-Password authentication flow, grabbed my access token, performed a SOQL query to get all the records with published URLs, looped through them, and then issues an update via the REST API with the proper social counts. Pretty simple.
 
@@ -56,7 +56,7 @@ The problem with this approach is that, eventually, I'm going to hit my [REST AP
 
 Although it is a simple and elegant solution, ultimately it won't work.
 
-#### Approach 2: Using the Salesforce Bulk API**
+#### Approach 2: Using the Salesforce Bulk API
 
 As you'll see, this approach is a lot more involved. However, it's also rock solid and designed to beyond the scenarios supported by the REST API.
 
