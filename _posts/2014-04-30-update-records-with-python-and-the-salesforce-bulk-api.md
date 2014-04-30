@@ -19,7 +19,7 @@ This week a colleague of mine asked me if I could help him by writing a script t
 
 A perfect opportunity for scripting, no?
 
-It's really not that difficult. All three of these particular services provide a simple API that returns a JSON package with the counts we need. For example, let's say I want to see counts/shares for my post announcing the [Salesforce Toolkits for .NET](http://localhost:4000/2014/01/announcing-the-salesforce-toolkits-for-net/).
+It's really not that difficult. All three of these particular services provide a simple API that returns a JSON package with the counts we need. For example, let's say I want to see counts/shares for my post announcing the [Salesforce Toolkits for .NET](http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/).
 
 For Twitter, create the URL [https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/](https://cdn.api.twitter.com/1/urls/count.json?url=http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/) and parse the following JSON:
 
