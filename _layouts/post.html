@@ -8,10 +8,9 @@ layout: default
 	<p class="blog-post-meta">{{ page.date | date_to_long_string }}</p>
 
   <div class="hidden-xs">
-    <small><strong>
-      <span class="fbCount" data-url="http://www.wadewegner.com{{ page.url }}">0</span> likes and
-      <a class="twSearch" href="#" data-url="http://www.wadewegner.com{{ page.url }}"><span class="twCount" data-url="http://www.wadewegner.com{{ page.url }}">0</span> tweets</a>
-    </strong></small>
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
   </div>
 
 {{ content }}
