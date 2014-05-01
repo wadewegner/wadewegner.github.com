@@ -68,6 +68,8 @@ Okay, enough talk. Let's jump into the code.
 
 #### Solution
 
+To go really deep with the Bulk API, I recommend you review the [Bulk API Developers Guide](https://www.salesforce.com/us/developer/docs/api_asynch/) and watch the [Fast Parallel Data Loading with the Bulk API](https://developer.salesforce.com/en/events/webinars/bulk-api?d=70130000000lWwX) presentation from [Steve Bobrowski](http://twitter.com/sbob909) & [Sean Regan](http://twitter.com/sfdcsregan).
+
 There are, roughly, four steps involved in using the Bulk API:
 
 1. Logging in.
@@ -77,8 +79,6 @@ There are, roughly, four steps involved in using the Bulk API:
 3. Adding a batch. (Or multiple batches.)
 
 4. Closing the job (thereby starting it).
-
-To go really deep with the Bulk API, I recommend you review the [Bulk API Developers Guide](https://www.salesforce.com/us/developer/docs/api_asynch/) and watch the [Fast Parallel Data Loading with the Bulk API](https://developer.salesforce.com/en/events/webinars/bulk-api?d=70130000000lWwX) presentation from [Steve Bobrowski](http://twitter.com/sbob909) & [Sean Regan](http://twitter.com/sfdcsregan).
 
 To facilitate these steps I created a file called `async.py` that had the four following methods.
 
