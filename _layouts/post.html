@@ -7,23 +7,13 @@ layout: default
 	<h2 class="blog-post-title">{{ page.title }}</h2>
 	<p class="blog-post-meta">{{ page.date | date_to_long_string }}</p>
 
-<!--   <div class="hidden-xs" style="vertical-align: top;">
-      <script type="IN/Share" data-counter="right"></script>
-    <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-  </div> -->
-
-   <div class="social-button-container">
-      <div class="social-button">
-          <script type="IN/Share" data-counter="right"></script>
-      </div>
-      <div class="social-button">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
-      </div>
-      <!-- 
-          I would normally have to put something like <div class="clear"></div> here
-          if I was not using overflow: hidden on the .social-button-container. See
-          the note in the CSS.
-      -->
+  <div class="social-button-container hidden-xs">
+    <div class="social-button">
+        <script type="IN/Share" data-counter="right"></script>
+    </div>
+    <div class="social-button">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+    </div>
   </div>
 
 {{ content }}

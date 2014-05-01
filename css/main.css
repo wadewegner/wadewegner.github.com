@@ -330,3 +330,13 @@ img {
   border: 1px solid #dddddd;
   border-left-width: 0;
 }
+
+.social-button-container {
+    overflow: hidden; 
+}
+
+.social-button {
+    float: left;
+    width: 100px;
+    height: 20px;
+}
