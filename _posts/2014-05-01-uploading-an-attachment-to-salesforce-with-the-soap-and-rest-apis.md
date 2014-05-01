@@ -2,7 +2,12 @@
 layout: post
 title: "Uploading an Attachment to Salesforce with the SOAP and REST APIs"
 description: ""
-category: 
+categories:
+- python
+- rest api
+- soap api
+- force.com
+- salesforce
 ---
 
 Earlier today a colleague asked me if I had an example of using Python to create an attachment in Salesforce. I didn't, but that didn't stop me from creating a couple. Sadly, our documentation here isn't the greatest. You can look at the [Insert or Update Blob Data](http://www.salesforce.com/us/developer/docs/api_rest/Content/dome_sobject_insert_update_blob.htm) for the REST API or [Attachment](http://www.salesforce.com/us/developer/docs/api/Content/sforce_api_objects_attachment.htm) for our SOAP API. If you're like me, neither document is good enough; I had to continue to dig around to figure out exactly what I needed.
