@@ -78,6 +78,8 @@ There are, roughly, four steps involved in using the Bulk API:
 
 4. Closing the job (thereby starting it).
 
+To go really deep with the Bulk API, I recommend you review the [Bulk API Developers Guide](https://www.salesforce.com/us/developer/docs/api_asynch/) and watch the [Fast Parallel Data Loading with the Bulk API](https://developer.salesforce.com/en/events/webinars/bulk-api?d=70130000000lWwX) presentation from [Steve Bobrowski](http://twitter.com/sbob909) & [Sean Regan](http://twitter.com/sfdcsregan).
+
 To facilitate these steps I created a file called `async.py` that had the four following methods.
 
 <script src="https://gist.github.com/wadewegner/38c6752f76e6970c935d.js?file=login.py"></script>
