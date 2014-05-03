@@ -8,15 +8,14 @@ layout: default
 	<p class="blog-post-meta">{{ page.date | date_to_long_string }}</p>
 
   <div class="hidden-xs">
-    {{ page.url }}
     <span>
-        <script type="IN/Share" data-counter="right"></script>
+        <script type="IN/Share" data-url="http://www.wadewegner.com{{ page.url }}" data-counter="top"></script>
     </span>
     <span>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ page.url }}" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.wadewegner.com{{ page.url }}" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
     </span>
     <span>
-      <div class="fb-share-button" data-href="{{ page.url }}" data-type="box_count"></div>
+      <div class="fb-share-button" data-href="http://www.wadewegner.com{{ page.url }}" data-type="box_count"></div>
     </span>
   </div>
 
