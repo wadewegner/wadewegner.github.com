@@ -337,6 +337,7 @@ img {
 }
 
 .social-button {
+    overflow: hidden;
     float: left;
     padding-right:5px;
 }

@@ -12,6 +12,18 @@ description: Wade Wegner's personal blog. Conversations about programming, techn
 	<h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
 	<p class="blog-post-meta">{{ post.date | date_to_long_string }}</p>
 
+	<div class="social-button-container hidden-xs">
+		<span class="social-button">
+		    <script type="IN/Share" data-url="http://www.wadewegner.com{{ post.url }}" data-counter="top"></script>
+		</span>
+		<span class="social-button">
+		    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.wadewegner.com{{ post.url }}" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+		</span>
+		<span class="social-button">
+		  <div class="fb-share-button" data-href="http://www.wadewegner.com{{ post.url }}" data-type="box_count"></div>
+		</span>
+	</div>
+
 	{{ post.content }}
 
 </div>
