@@ -9,13 +9,13 @@ layout: default
 
   <div class="hidden-xs">
     <span>
-        <script type="IN/Share" data-counter="right"></script>
+        <script type="IN/Share" data-url="asdfasdf" data-counter="top"></script>
     </span>
     <span>
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://dev.twitter.com/pages/tweet_button" data-via="your_screen_name" data-lang="en" data-related="anywhereTheJavascriptAPI" data-count="vertical">Tweet</a>
+        <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ page.url }}" data-via="" data-lang="en" data-related="" data-count="vertical">Tweet</a>
     </span>
     <span>
-      <div class="fb-share-button" data-href="https://developers.facebook.com/docs/plugins/" data-type="box_count"></div>
+      <div class="fb-share-button" data-href="{{ page.url }}" data-type="box_count"></div>
     </span>
   </div>
 
