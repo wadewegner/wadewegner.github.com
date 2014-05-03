@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Update Records with Python & the Salesforce Bulk API"
+title: "Update Records with Python and the Salesforce Bulk API"
 description: "See how to update lots of records with the Salesforce Bulk API using Python."
 categories: 
 - python
