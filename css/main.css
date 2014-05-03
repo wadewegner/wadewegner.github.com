@@ -333,10 +333,10 @@ img {
 
 .social-button-container {
     overflow: hidden; 
+    height: 70px;
 }
 
 .social-button {
     float: left;
-    width: 100px;
-    height: 25px;
+    padding-right:5px;
 }
