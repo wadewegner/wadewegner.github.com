@@ -18,7 +18,7 @@ Why would you want to do this? Well, if the act of configuring a Raspberry Pi it
 * Customize retail offers based on your location in a store and proximity to certain products.
 * Alert you while you sit at a bar enjoying your favorite craft beer when someone rides off with your bicycle outside.
 
-I particularly enjoy the last use case. Simply tag your big with a BLE transmitter and then, if it leaves the proximity/region, get alerted!
+I particularly enjoy the last use case. Simply tag your bag with a BLE transmitter and then, if it leaves the proximity/region, get alerted!
 
 If you look around the Internet you'll find hundreds of additional use cases and ideas. The point is, this is cool technology with a lot of different applications and uses.
 
@@ -26,7 +26,7 @@ In this post we're going to look at how you can start to play around with this u
 
 ## Required Hardware
 
-Here's the hardware I use. You don't have to purchase from [Afruit](http://www.adafruit.com), but to have the best results I'd recommend you try to get the same hardware I used; otherwise your mileage may vary.
+Here's the hardware I use. You don't have to purchase from [Adafruit](http://www.adafruit.com), but to have the best results I'd recommend you try to get the same hardware I used; otherwise your mileage may vary.
 
 * [Raspberry Pi Model B 512MB RAM](https://www.adafruit.com/products/998)
 * [SD/MicroSD Memory Card (4 GB SDHC)](https://www.adafruit.com/products/102)
