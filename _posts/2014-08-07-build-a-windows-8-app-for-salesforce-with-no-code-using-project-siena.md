@@ -22,4 +22,4 @@ Here's a video that shows how a **developer** can define the relationship with S
 
 I think this is a pretty compelling approach to enabling a business user to build a rich application that allows them to interact with different services.
 
-This is only the tip of the iceburg. Take a look at the other Project Siena tutorials to get more ideas about how you can use Project Siena to build applications.
+This is only the tip of the iceburg. Take a look at the other [Project Siena tutorials](http://channel9.msdn.com/Blogs/Microsoft-Project-Siena) to get more ideas about how you can use Project Siena to build applications.
