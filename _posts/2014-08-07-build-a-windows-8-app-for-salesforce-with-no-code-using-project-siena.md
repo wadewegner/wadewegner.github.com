@@ -18,7 +18,7 @@ The release of the [WADL Generator for Project Siena (Alpha)](http://gallery.tec
 
 Here's a video that shows how a **developer** can define the relationship with Salesforce and create a WADL file that a **business user** can use within a Project Siena application.
 
-<iframe src="http://channel9.msdn.com/Blogs/Wade-Wegner-s-Channel-9-Blog/Create-a-Windows-8-App-with-Salesforce-Data-Using-Project-Siena/player?h=540&w=960" style="height:540px;width:960px;" allowFullScreen frameBorder="0" scrolling="no"></iframe>
+<iframe src="http://channel9.msdn.com/Blogs/Wade-Wegner-s-Channel-9-Blog/Create-a-Windows-8-App-with-Salesforce-Data-Using-Project-Siena/player?h=360&w=640" style="height:540px;width:960px;" allowFullScreen frameBorder="0" scrolling="no"></iframe>
 
 As I hope you'll agree, this is a compelling approach to enabling a business user to build a rich application that allows them to interact with different services.
 
