@@ -30,7 +30,7 @@ There are a few reasons I think this is pretty compelling:
 
 * Once in Project Siena, you don't have to worry about setting up authentication or configuring authorization to the 3rd party SaaS provider. It's already been done.
 
-* The business user has a very rich and interact experience when building the application.
+* The business user has a very rich and interact experience when building the application. As the demo shows, even interacting with a REST API, and seeing the results, is possible at design time.
 
 * All the business user really has to care about are controls & functions. (And perhaps a little bit of "Excel-like" coding.)
 
