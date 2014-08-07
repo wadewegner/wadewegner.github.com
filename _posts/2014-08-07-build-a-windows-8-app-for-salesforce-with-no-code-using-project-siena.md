@@ -10,7 +10,7 @@ categories:
 - Project Siena
 ---
 
-**Microsoft Project Siena (Beta)** is a tool that allows a business user (i.e. non-developer) to quickly building rich business applications for Windows 8. You can learn all about the tool on the [Project Siena website](http://www.microsoft.com/en-us/projectsiena/default.aspx) and by watching a set of tutorials on the [Microsoft Project Siena (Beta) Channel 9 Blog](http://channel9.msdn.com/Blogs/Microsoft-Project-Siena).
+**Microsoft Project Siena (Beta)** is a tool that allows a business user (i.e. non-developer) to quickly building rich business applications for Windows 8. You can learn all about the tool on the [Microsoft Project Siena web site](http://www.microsoft.com/en-us/projectsiena/default.aspx) and by watching a set of tutorials on the [Microsoft Project Siena (Beta) Channel 9 Blog](http://channel9.msdn.com/Blogs/Microsoft-Project-Siena).
 
 Having recently left Salesforce to join Microsoft, I was curious about how to build a Project Siena app that integrated into Salesforce. Project Siena uses the Web Application Description Language, or WADL, to connect to 3rd party SaaS services. WADL is an open web standard that is for REST what WSDL is for SOAP, meaning it describes the service resources and relationships.
 
