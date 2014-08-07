@@ -28,7 +28,7 @@ There are a few reasons I think this is pretty compelling:
 
 * WADL is an open web standard used by many companies, not just Microsoft.
 
-* Once in Project Siena, you don't have to worry about setting up authentication or configuring authorization to the 3rd party SaaS provider. It's already been done.
+* Once in Project Siena, you don't have to worry about setting up authentication or configuring authorization to the 3rd party SaaS provider. It's already been done and the settings exist in the WADL file.
 
 * The business user has a very rich and interact experience when building the application. As the demo shows, even interacting with a REST API, and seeing the results, is possible at design time.
 
