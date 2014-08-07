@@ -22,7 +22,7 @@ Here's a video that shows how a developer can define the relationship with Sales
 
 <iframe src="http://channel9.msdn.com/Blogs/Wade-Wegner-s-Channel-9-Blog/Create-a-Windows-8-App-with-Salesforce-Data-Using-Project-Siena/player?h=450&w=800" style="height:450px;width:800px;" allowFullScreen frameBorder="0" scrolling="no" ></iframe>
 
-There are a few of reasons I think this is pretty compelling.
+There are a few reasons I think this is pretty compelling:
 
 * I like the separations of concerns. The developer can setup the integration with Salesforce (or any REST API) and define functions used by a business user.
 
