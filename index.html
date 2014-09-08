@@ -1,32 +1,21 @@
 ---
 layout: default
-title: Wade Wegner's Blog
-description: Wade Wegner's personal blog. Conversations about programming, technology and cloud computing, especially Microsoft Azure, .NET, Salesforce, and beer.
 ---
 
-{% assign first = true %}
-{% for post in site.posts limit: 6 %}
+<div class="home">
 
-<div class="blog-post">
+  <div class="posts">
+    {% for post in paginator.posts %}
+      <div class="post">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+          <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</p>
+          <h3 class="h2 post-title">{{ post.title }}</h3>
+          <p class="post-summary">{{ post.description }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 
-	<h2 class="blog-post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
-	<p class="blog-post-meta">{{ post.date | date_to_long_string }}</p>
-
-	<div class="hidden-xs">
-		<span>
-		    <script type="IN/Share" data-url="http://www.wadewegner.com{{ post.url }}"></script>
-		</span>
-		<span style="position:relative;top:-1px;">
-		    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.wadewegner.com{{ post.url }}" data-via="WadeWegner" data-lang="en" data-count="none" data-text="{{ post.title }}"></a>
-
-		</span>
-		<span style="position:relative;top:-7px;left:-1px;">
-		  <div class="fb-like" data-href="http://www.wadewegner.com{{ post.url }}" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-		</span>
-	</div>
-
-	{{ post.content }}
+  {% include pagination.html %}
 
 </div>
-
-{% endfor %}

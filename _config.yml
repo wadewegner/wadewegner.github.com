@@ -1,26 +1,23 @@
-name: Wade Wegner
+# Site settings
+title: Wade Wegner
+email: your_email@example.com
+author: Wade Wegner
+description: "From the whiteboard to the keyboard."
+baseurl: ""
+url: "http://www.wadewegner.com"
+
+# Build settings
+encoding: utf-8
+markdown: redcarpet #kramdown
+paginate: 5
 permalink: /:year/:month/:title/
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md", "Gemfile"]
-markdown: redcarpet
-pygments: true
-title : Wade Wegner
-tagline: From the whiteboard to the keyboard
 
-author :
-  name : Wade Wegner
-  email : wade.wegner@gmail.com
-  github : wadewegner
-  twitter : wadewegner
-  feedburner : WadeWegner
+# Social
+google_analytics: UA-1174672-2
 
-categories_path : /categories.html
-archive_path: /archive.html
-
-disqus :
-  short_name : wadewegner
-  url : http://www.wadewegner.com
-
-google : 
-  tracking_id : 'UA-1174672-2'
-
-production_url : http://www.wadewegner.com
+# Sitemap
+sitemap:
+  lastmod: 2014-09-07
+  priority: 0.7
+  changefreq: monthly
+  exclude: 'yes'

@@ -1,70 +1,11 @@
 ---
 layout: default
 ---
-
-<div class="blog-post">
-
-	<h2 class="blog-post-title">{{ page.title }}</h2>
-	<p class="blog-post-meta">{{ page.date | date_to_long_string }}</p>
-
-  <div class="hidden-xs">
-    <span>
-        <script type="IN/Share" data-url="http://www.wadewegner.com{{ page.url }}"></script>
-    </span>
-    <span style="position:relative;top:-1px;">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.wadewegner.com{{ page.url }}" data-via="WadeWegner" data-lang="en" data-count="none" data-text="{{ post.title }}"></a>
-    </span>
-    <span style="position:relative;top:-7px;left:-1px;">
-      <div class="fb-like" data-href="http://www.wadewegner.com{{ page.url }}" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
-    </span>
-  </div>
-
-{{ content }}
-
-{% unless page.categories == empty %}
-  <ul class="tag_box inline">
-
-  {% for category in page.categories %} 
-  	<li><a href="{{ BASE_PATH }}{{ site.categories_path }}#{{ category }}-ref">
-  		{{ category | join: "/" }} <span>{{ site.categories[category].size }}</span>
-  	</a></li>
-  {% endfor %}
-
-  </ul>
-{% endunless %}  
-
-<!-- TODO: Not working exactly how I want
-  <div class="pagination">
-    <ul>
-    {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&larr; Previous</a></li>
-    {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
-    {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.archive_path }}">Archive</a></li>
-    {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &rarr;</a></li>
-    {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
-    {% endif %}
-    </ul>
-  </div>
--->
-
-  <div id="disqus_thread"></div>
-  <script type="text/javascript">
-     
-    var disqus_shortname = '{{ site.disqus.short_name }}'; // required: replace example with your forum shortname
-    var disqus_url = '{{ site.disqus.url }}{{ page.url }}';
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-  <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
+<div class="post-header mb2">
+  <h1 class="py2">{{ page.title }}</h1>
+  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
 </div>
+
+<article class="post-content">
+  {{ content }}
+</article>
