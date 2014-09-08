@@ -1,3 +1,5 @@
+This is a facinating way to do commenting. I love it. 
+
 ---
 layout: post
 title: "Build a Windows 8 App for Salesforce With No Code Using Project Siena"
