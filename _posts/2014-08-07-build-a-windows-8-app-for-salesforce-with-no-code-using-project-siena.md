@@ -35,3 +35,8 @@ There are a few reasons I think this is pretty compelling:
 * All the business user really has to care about are controls & functions. (And perhaps a little bit of "Excel-like" coding.)
 
 I think this is only the tip of the iceburg. Take a look at the other [Project Siena tutorials](http://channel9.msdn.com/Blogs/Microsoft-Project-Siena) to get more ideas about how you can use Project Siena to build applications.
+
+
+Comments
+* I think the Project Siena bots are coming to take our development jobs from us! - @danvanderboom
+* A bit awkward/clunky for a comment system, but pull requests for corrections on blog posts is still a cool idea. Do you know how often I catch other authors' spelling and grammar mistakes? I'd totally submit pull requests for those if I could. Crowd-source editing. Award esteem points to highly trusted editors, and share like a whitelist in trust networks. 
