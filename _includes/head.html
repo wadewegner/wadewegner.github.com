@@ -25,6 +25,8 @@
     <!-- Indexing -->
     <script src='//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js' type='text/javascript'></script>
     <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js' type='text/javascript'></script>
+    
+    {% if page.url == "/search/" %}
     <script type="text/javascript" src="/scripts/jquery.indextank.ize.js"></script>
     <script type="text/javascript" src="/scripts/jquery.indextank.autocomplete.js"></script>
     <script type="text/javascript" src="/scripts/querybuilder.js"></script>
@@ -33,34 +35,35 @@
     <script type="text/javascript" src="/scripts/jquery.indextank.instantsearch.js"></script>
     <link href='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/flick/jquery-ui.css' rel='stylesheet'>
 
-
     <script type='text/javascript'>
-        // var publicApiUrl = "http://ynereh.api.indexden.com";
-        // var indexName = "wadewegner";
+        var publicApiUrl = "http://ynereh.api.indexden.com";
+        var indexName = "wadewegner";
 
-        // var userFormat = function(item) {
-        //     alert(item.url);
-        //     var r = $("<div></div>").addClass("result").addClass("user")
-        //             .append( $("<img></img>").attr("src", item.avatar ) )
-        //             .append( $("<a></a>").attr("href", item.url).html(item.snippet_name || item.name) )
-        //             .append( $("<span></span>").addClass("location").text(item.hometown || "far far away") );
+        var userFormat = function(item) {
+            alert(item.url);
+            var r = $("<div></div>").addClass("result").addClass("user")
+                    .append( $("<img></img>").attr("src", item.avatar ) )
+                    .append( $("<a></a>").attr("href", item.url).html(item.snippet_name || item.name) )
+                    .append( $("<span></span>").addClass("location").text(item.hometown || "far far away") );
 
-        //     // some items need a slightly different rendering
-        //     if (item.is_staff == "true") {
-        //             r.addClass("staff");
-        //     } 
+            // some items need a slightly different rendering
+            if (item.is_staff == "true") {
+                    r.addClass("staff");
+            } 
 
-        //     return r;
-        // };
+            return r;
+        };
 
-        // $(document).ready(function(){
-        //     $("#myform").indextank_Ize(publicApiUrl, indexName);
+        $(document).ready(function(){
+            $("#myform").indextank_Ize(publicApiUrl, indexName);
 
-        // var renderer =  $("#results").indextank_Renderer({format: userFormat});
+        var renderer =  $("#results").indextank_Renderer({format: userFormat});
         
-        // $("#query").indextank_Autocomplete().indextank_AjaxSearch( {listeners: renderer});
-        // });
+        $("#query").indextank_Autocomplete().indextank_AjaxSearch( {listeners: renderer});
+        });
 
     </script>
+
+    {% endif %}
 
 </head>
