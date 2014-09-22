@@ -7,8 +7,6 @@ module Jekyll
       site.posts.each do |post|
         post.data['path'] = post.name
       end
-
     end
   end
-
 end
