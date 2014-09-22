@@ -56,7 +56,7 @@
         format: function(item){
                     return $("<div></div>")
                             .addClass("result")
-                            .append( $("<a></a>").attr("href", item.link || item.url ).text(item.title || item.name) )
+                            .append( $("<a></a>").attr("href", item.link || item.url || item.docid ).text(item.title || item.name) )
                             .append( $("<span></span>").addClass("description").html(item.snippet_text || item.text) );
                     },
         setupContainer: function($el){

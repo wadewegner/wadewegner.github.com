@@ -40,26 +40,19 @@
         var indexName = "wadewegner";
 
         var userFormat = function(item) {
-            alert(item.url);
-            var r = $("<div></div>").addClass("result").addClass("user")
-                    .append( $("<img></img>").attr("src", item.avatar ) )
-                    .append( $("<a></a>").attr("href", item.url).html(item.snippet_name || item.name) )
-                    .append( $("<span></span>").addClass("location").text(item.hometown || "far far away") );
-
-            // some items need a slightly different rendering
-            if (item.is_staff == "true") {
-                    r.addClass("staff");
-            } 
+            var r = $("<div></div>")
+            .addClass("result")
+            .append( $("<p></p>"))
+            .append( $("<a></a>").attr("href", item.link || item.url || item.docid ).text(item.title || item.name) )
+            .append( $("<span></span>").addClass("description").html(item.snippet_text || item.text) );
 
             return r;
         };
 
         $(document).ready(function(){
             $("#myform").indextank_Ize(publicApiUrl, indexName);
-
-        var renderer =  $("#results").indextank_Renderer({format: userFormat});
-        
-        $("#query").indextank_Autocomplete().indextank_AjaxSearch( {listeners: renderer});
+            var renderer =  $("#results").indextank_Renderer({format: userFormat});
+            $("#query").indextank_Autocomplete().indextank_AjaxSearch( {listeners: renderer});
         });
 
     </script>
