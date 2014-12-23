@@ -21,7 +21,7 @@ Follow these five simple steps to install Go.
 
 	To make things simple, use the default installation path at `C:\Go`
 
-3. Ensure the **Go binaries** (found in `C:\Go\bin`) are in your `Path` system environment variables. To check click `System`, `Advanced system settings`, `Environment Variables...` and look for `Path` under `System variables`:
+3. Ensure the **Go binaries** (found in `C:\Go\bin`) are in your `Path` system environment variables. To check click `System`, `Advanced system settings`, `Environment Variables...` and open `Path` under `System variables`:
 
 	![gopath](https://cloud.githubusercontent.com/assets/746259/5536474/965ff18a-8a4f-11e4-853f-aede7735a6fd.png)
 
@@ -39,11 +39,11 @@ Follow these five simple steps to install Go.
 
 	![goworkspace](https://cloud.githubusercontent.com/assets/746259/5536646/909c8c06-8a52-11e4-8cb0-1ba9b5077f8a.png)
 
-5. Create the **GOPATH environment variable** which references your Go workspace path. To add, click `System`, `Advanced system settings`, `Environment Variables...` and click `New...` under `System variables`:
+5. Create the **GOPATH environment variable** and reference your Go workspace path. To add, click `System`, `Advanced system settings`, `Environment Variables...` and click `New...` under `System variables`:
 
 	![gopathenvvar](https://cloud.githubusercontent.com/assets/746259/5536717/6ef223da-8a53-11e4-96bf-3cbbd9acf589.png)
 
-	Set the variable name to **GOPATH** and value to your Go workspace path (e.g. `C:\Projects\Go`):
+	Set the variable name to `GOPATH` and value to your Go workspace path (e.g. `C:\Projects\Go`):
 
 	![gopathvalue](https://cloud.githubusercontent.com/assets/746259/5536757/feb28c94-8a53-11e4-9bf4-02728abe34e5.png)
 
@@ -60,7 +60,7 @@ Want to quickly test and ensure this is all working as expected? Open the comman
 	go get github.com/golang/example/hello
 	%GOPATH%/bin/hello
 
-You should see the output as "Hello, Go examples!" (refreshingly not your typically hello world):
+You should see the output as "Hello, Go examples!" (refreshingly, not your typical hello world):
 
 ![gohelloworld](https://cloud.githubusercontent.com/assets/746259/5536857/ad39c088-8a55-11e4-9080-c87d62ca55c8.png)
 
