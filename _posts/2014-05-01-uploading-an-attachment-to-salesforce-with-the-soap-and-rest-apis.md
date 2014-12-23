@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Uploading an Attachment to Salesforce with the SOAP and REST APIs"
-description: ""
+description: "Earlier today a colleague asked me if I had an example of using Python to create an attachment in Salesforce. I didn't, but that didn't stop me from creating a couple."
 categories:
 - python
 - rest api
