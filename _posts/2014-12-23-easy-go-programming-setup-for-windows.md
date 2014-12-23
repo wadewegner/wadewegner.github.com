@@ -57,8 +57,12 @@ And that's all it takes! You're ready to get started.
 
 Want to quickly test and ensure this is all working as expected? Open the command line and type the following:
 
-	go get github.com/golang/example/hello
-	%GOPATH%/bin/hello
+{% highlight bat %}
+
+go get github.com/golang/example/hello
+%GOPATH%/bin/hello
+
+{% endhighlight %}
 
 You should see the output as "Hello, Go examples!" (refreshingly, not your typical hello world):
 

@@ -5,7 +5,6 @@ date: 2006-12-04 00:29:18+00:00
 layout: post
 slug: using-ai-to-predict-football-outcomes
 title: Using AI to predict football outcomes
-wordpress_id: 115
 ---
 
 In a [previous post](http://www.wadewegner.com/PermaLink,guid,a50d0f5b-ecbe-4716-9276-9ec9cb7656a4.aspx), I attempted to create a very simple artificial neural network (ANN) to predict the outcome of NFL games. I found that the approach I took was really no better than random guesses, as I had an average accuracy of 50%.
