@@ -80,7 +80,7 @@ package main
 
 	`curl -L http://bit.ly/1wx4JFY --output Web.Config`
 
-That is it!
+That is it! You can now browse to your Azure Website and see it in action.
 
 For now, try it out here: [http://golang.azurewebsites.net/hello](http://golang.azurewebsites.net/hello) 
 
