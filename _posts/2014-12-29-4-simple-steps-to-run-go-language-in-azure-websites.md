@@ -8,7 +8,7 @@ categories:
 - azure websites
 ---
 
-A few weeks ago I wrote a Go Language web app and wanted to find a good place to host it. Given I work with the team that builds Azure Websites, it seemed only fitting to host it in Azure Websites. Turns out, it works great! However, there aren't any resources available that walk you through the steps. Consequently, I wrote the following tutorial.
+A few weeks ago I wrote a GoLang web app and wanted to find a good place to host it. Given I work with the team that builds Azure Websites, it seemed only fitting to host it in Azure Websites. Turns out, it works great! However, there aren't any resources available that walk you through the steps. Consequently, I wrote the following tutorial.
 
 (Incidentally, if you want to start to use Go Language and run Windows you'll want to review my post [Easy Go Programming Setup for Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/).)
 
