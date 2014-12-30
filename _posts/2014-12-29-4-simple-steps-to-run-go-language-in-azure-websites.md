@@ -34,24 +34,21 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 
 	Note: I'm not sure why it returns `Bad Request` but so far it doesn't seem to cause any issues.
 
-3. Create a `server.go` file in the `wwwroot` folder. This is a super simple Go file which will reply for any URL on the website.
+3. Create a `server.go` file in the `wwwroot` folder. This is a super simple Go file which will reply for any URL on the website.{% highlight go %}
 
-		package main
-
-		import (
-		    "fmt"
-		    "net/http"
-		    "os" 
-		)
-
-		func handler(w http.ResponseWriter, r *http.Request) {
-		    fmt.Fprintf(w, "You just browsed page (if blank you're at the root): %s", r.URL.Path[1:])
-		}
-
-		func main() {
-		    http.HandleFunc("/", handler)
-		    http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
-		}
+package main
+	import (
+	    "fmt"
+	    "net/http"
+	    "os" 
+	)
+	func handler(w http.ResponseWriter, r *http.Request) {
+	    fmt.Fprintf(w, "You just browsed page (if blank you're at the root): %s", r.URL.Path[1:])
+	}
+	func main() {
+	    http.HandleFunc("/", handler)
+	    http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
+	}{% endhighlight %}
 
 	As a convenience, feel free to use `curl` and download this directly from [my public gist](https://gist.github.com/wadewegner/52a925a7b1607a48d796). Otherwise, you should consider using Kudu or git to get your files into your Azure Website.
 
@@ -59,13 +56,13 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 
 	Once downloaded, type `type server.go` to confirm you grabbed everything correctly.
 
-4. Create a `Web.Config` file in the `wwwroot` folder. We will use the `httpPlatformHandler` simpilar to [running Tomcat in Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/).
+4. Create a `Web.Config` file in the `wwwroot` folder. We will use the `httpPlatformHandler` simpilar to [running Tomcat in Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/).{% highlight xml %}
 
-		<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 		<configuration>
 		    <system.webServer>
 		        <handlers>
-		            <add name="httpplatformhandler" path="*" verb="*" modules="httpPlatformHandler" resourceType="Unspecified" />
+		            <add name="httpplatformhandler" path="\*" verb="\*" modules="httpPlatformHandler" resourceType="Unspecified" />
 		        </handlers>
 		        <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
 		                      arguments="run d:\home\site\wwwroot\server.go" 
@@ -75,7 +72,7 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 		            </environmentVariables>
 		        </httpPlatform>
 		    </system.webServer>
-		</configuration>
+		</configuration>{% endhighlight %}
 
 	Again, you can use the following curl command to download the `Web.Config` file:
 
