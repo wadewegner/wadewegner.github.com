@@ -59,20 +59,20 @@ package main
 4. Create a `Web.Config` file in the `wwwroot` folder. We will use the `httpPlatformHandler` simpilar to [running Tomcat in Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/).{% highlight xml %}
 
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
-    <system.webServer>
-        <handlers>
-            <add name="httpplatformhandler" path="\*" verb="\*" modules="httpPlatformHandler" resourceType="Unspecified" />
-        </handlers>
-        <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
-                      arguments="run d:\home\site\wwwroot\server.go" 
-                      startupTimeLimit="60">
-            <environmentVariables>
-              <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" />
-            </environmentVariables>
-        </httpPlatform>
-    </system.webServer>
-</configuration>{% endhighlight %}
+	<configuration>
+	    <system.webServer>
+	        <handlers>
+	            <add name="httpplatformhandler" path="\*" verb="\*" modules="httpPlatformHandler" resourceType="Unspecified" />
+	        </handlers>
+	        <httpPlatform processPath="d:\home\site\wwwroot\go\bin\go.exe" 
+	                      arguments="run d:\home\site\wwwroot\server.go" 
+	                      startupTimeLimit="60">
+	            <environmentVariables>
+	              <environmentVariable name="GOROOT" value="d:\home\site\wwwroot\go" />
+	            </environmentVariables>
+	        </httpPlatform>
+	    </system.webServer>
+	</configuration>{% endhighlight %}
 
 	Again, you can use the following curl command to download the `Web.Config` file:
 
