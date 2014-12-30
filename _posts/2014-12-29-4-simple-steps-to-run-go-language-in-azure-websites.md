@@ -10,7 +10,7 @@ categories:
 
 A few weeks ago I wrote a Go Language web app and wanted to find a good place to host it. Given I work with the team that builds Azure Websites, it seemed only fitting to host it in Azure Websites. Turns out, it works great! However, there aren't any resources available that walk you through the steps. Consequently, I wrote the following tutorial.
 
-(Incidentally, if you want to start to use Go Langauge and run Windows you'll want to review my post [Easy Go Programming Setup for Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/).)
+(Incidentally, if you want to start to use Go Language and run Windows you'll want to review my post [Easy Go Programming Setup for Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/).)
 
 Is this the absolutely authority on running Go Language in Azure Websites? No, but it works. I plan to publish a few more articles on more complex scenarios in the future.
 
@@ -34,7 +34,7 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 
 	Note: I'm not sure why it returns `Bad Request` but so far it doesn't seem to cause any issues.
 
-3. Create a `server.go` file in the `wwwroot` folder. This is a super simple Go file which will reply for any URL on the website.{% highlight go %}
+3. Create a `server.go` file in the `wwwroot` folder. This is a super simple Go file which will reply for any resource on the website.{% highlight go %}
 
 package main
 	import (
