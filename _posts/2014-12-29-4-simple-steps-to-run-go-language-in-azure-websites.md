@@ -28,6 +28,8 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 
 	`unzip go1.4.windows-386.zip`
 
+	You should see the following:
+
 	![unzipped](https://cloud.githubusercontent.com/assets/746259/5574286/0ac47f78-8f78-11e4-91c3-1a5f4a6540ae.png)
 
 	Be patient with the console as these two operations may take a few moments. It's purposefully simple.
