@@ -49,7 +49,7 @@ package main
 	}
 	func main() {
 	    http.HandleFunc("/", handler)
-	    http.ListenAndServe(":"+os.Getenv("HTTP_PLATFORM_PORT"), nil)
+	    http.ListenAndServe(":"+os.Getenv("HTTP\_PLATFORM\_PORT"), nil)
 	}{% endhighlight %}
 
 	As a convenience, feel free to use `curl` and download this directly from [my public gist](https://gist.github.com/wadewegner/52a925a7b1607a48d796). Otherwise, you should consider using Kudu or git to get your files into your Azure Website.
