@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating a Go Site Extention and Resource Template for Azure"
-description: "Site extensions provide sophisticated extensibility for Azure Websites. The Azure Resource Manager, along with resource templates, automates the deployment and configuration of Azure resources. Combine them together, and you can automate many different website tasks, even the configuration of the Go runtime in Azure Websites."
+description: "Site extensions provide sophisticated extensibility for Azure Websites while the Azure Resource Manager automates the deployment and configuration of Azure resources. Combine them together, and you can automate many different website tasks, even the configuration of the Go runtime in Azure Websites."
 categories: 
 - golang
 - azure
@@ -21,7 +21,7 @@ Let's see how it works.
 
 ### Create the Site Extension ###
 
-Site Extensions are exactly what the name suggests and provides ways to extented your Azure Website. You create a NuGet package with your code and changes, package it up, deploy it to [https://www.siteextensions.net/](https://www.siteextensions.net/) (actually, any NuGet feed), and later you can apply these packages to your Azure Website. For additional details please see the [Azure Web Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/) blog post and the [Azure Site Extensions wiki](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions).
+Site Extensions are exactly what the name suggests and provides ways to extend your Azure Website. You create a NuGet package with your code and changes, package it up, deploy it to [https://www.siteextensions.net/](https://www.siteextensions.net/) (actually, any NuGet feed), and later you can apply these packages to your Azure Website. For additional details please see the [Azure Web Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/) blog post and the [Azure Site Extensions wiki](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions).
 
 I used two important capabilities to get Go setup in the Azure Website: install/uninstall scripts and XML Document Transformation (XDT).
 
@@ -244,5 +244,7 @@ When you run this command it will create a resource group and run resource templ
 The parameters `siteName`, `hostingPlanName`, and `siteLocation` are all defined within the resource template. For documentation on the `New-AzureResourceGroup` syntax you can review the [MSDN documentation](http://msdn.microsoft.com/en-us/library/dn654594.aspx).
 
 And that's it, my friends. The end result is an Azure Website you can use to start playing around with Go.
+
+There's a lot of stuff to think about in this blog post. While my goal here was to make it easy to setup Go inside Azure Websites, I hope you see this as an example of how you can take advantage of Site Extensions and the Azure Resource Manager to do some amazing things in Azure.
 
 I hope this helps!
