@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating a Go Site Extention and Resource Template for Azure"
-description: "Site extensions provide sophisticated extensibility for Azure Websites. The Azure Resource Manager, along with resource templates, automates the deployment and configuration of Azure resources. Combine them together, and you can automate many different website tasks, even the configuration of the Go Language runtime setup."
+description: "Site extensions provide sophisticated extensibility for Azure Websites. The Azure Resource Manager, along with resource templates, automates the deployment and configuration of Azure resources. Combine them together, and you can automate many different website tasks, even the configuration of the Go runtime in Azure Websites."
 categories: 
 - golang
 - azure
@@ -11,19 +11,17 @@ categories:
 - site extension
 ---
 
-The New Year is a good time to set goals for yourself. I've challenged myself this year to explore Go Language and run some shipping apps using Go, which is likely no surprise given my recent posts on [setting up Go on Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/) and [running Go on Azure Websites](http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/). While most of my work with Go has been playing and figuring out what I know and, more importantly, don't know, I've also started some delibrate training and coding.
+The New Year is a good time to set goals for yourself. I've challenged myself this year to explore the Go language and run some shipping apps using Go, which is likely no surprise given my recent posts on [setting up Go on Windows](http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/) and [running Go on Azure Websites](http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/). While most of my work with Go has been playing and figuring out what I know and, more importantly, don't know, I've also started some delibrate training and coding.
 
 As part of playing around, I used Azure Websites to host my Go web apps. The last post I wrote showed my first [Go prototype on Azure Websites](http://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/). While useful as a prototype, it's arguably not the most straightforward way to go about building your Go web app on Azure Websites. The principal issue is that the Go runtime is not available by default on Azure Websites; we have to deploy and configure the website to use the Go binaries. While my first prototype works, Azure has to capabilities you've likely never heard of which can help: Site Extensions and the Azure Resource Manager.
-
-Site Extensions are exactly what the name suggests and provides ways to extented your Azure Website. You create a NuGet package with your code and changes, package it up, deploy it to [https://www.siteextensions.net/](https://www.siteextensions.net/) (actually, any NuGet feed), and later you can apply these packages to your Azure Website. For additional details please see the [Azure Web Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/) blog post and the [Azure Site Extensions wiki](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions).
-
-The Azure Resource Manager is a relatively new technology that provides a container for managing the lifecycle Azure resources (called a [resource group](http://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-using-resource-groups/)), a way to describe and execute the deployment and configuration of a set of Azure resources, and a management layer for these resources. As the resource manager is still in preview, documentation is harder to comeby. To learn more about the resource manager, I recommend you watch [Introduction to Azure Resource Manager](http://channel9.msdn.com/Events/Build/2014/2-607) from Build 2014 and read the [REST API Reference](http://msdn.microsoft.com/en-us/library/azure/dn790568.aspx) and [Template Language](http://msdn.microsoft.com/en-us/library/azure/dn835138.aspx) guides.
 
 So, what did I do? I created a [site extension for Go](https://www.siteextensions.net/packages/golang/) and wrote a [resource template](https://github.com/wadewegner/azure-go-lang-site-extension/blob/master/scripts/Template.json) and [PowerShell script](https://github.com/wadewegner/azure-go-lang-site-extension/blob/master/scripts/Deploy.ps1) for deploying an Azure Website that installs the site extention. You can find everything in my [azure-go-lang-site-extension](https://github.com/wadewegner/azure-go-lang-site-extension) respository on Github.
 
 Let's see how it works.
 
 ### Create the Site Extension ###
+
+Site Extensions are exactly what the name suggests and provides ways to extented your Azure Website. You create a NuGet package with your code and changes, package it up, deploy it to [https://www.siteextensions.net/](https://www.siteextensions.net/) (actually, any NuGet feed), and later you can apply these packages to your Azure Website. For additional details please see the [Azure Web Site Extensions](http://azure.microsoft.com/blog/2014/06/20/azure-web-sites-extensions/) blog post and the [Azure Site Extensions wiki](https://github.com/projectkudu/kudu/wiki/Azure-Site-Extensions).
 
 I used two important capabilities to get Go setup in the Azure Website: install/uninstall scripts and XML Document Transformation (XDT).
 
@@ -90,6 +88,8 @@ Through the extensions blade you can browse available site extensions. You'll fi
 Wait a few minutes and you now have a Go web app running in Azure Websites. Not too bad! Of course, we can make the last step of creating the Azure Website and installing the Site Extension easier with the Azure Resource Manager.
 
 ### Create the Resource Template ###
+
+The Azure Resource Manager is a relatively new technology that provides a container for managing the lifecycle Azure resources (called a [resource group](http://azure.microsoft.com/en-us/documentation/articles/azure-preview-portal-using-resource-groups/)), a way to describe and execute the deployment and configuration of a set of Azure resources, and a management layer for these resources. As the resource manager is still in preview, documentation is harder to comeby. To learn more about the resource manager, I recommend you watch [Introduction to Azure Resource Manager](http://channel9.msdn.com/Events/Build/2014/2-607) from Build 2014 and read the [REST API Reference](http://msdn.microsoft.com/en-us/library/azure/dn790568.aspx) and [Template Language](http://msdn.microsoft.com/en-us/library/azure/dn835138.aspx) guides.
 
 The resource template is nothing more than a JSON file that describes the Azure resources we want to deploy; in this case, it's an Azure Website along with our Go site extension. Let's look at the template.
 
