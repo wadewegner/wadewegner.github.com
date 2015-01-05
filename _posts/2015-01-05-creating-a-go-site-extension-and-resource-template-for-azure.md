@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Creating a Go Site Extention and Resource Template for Azure"
+title: "Creating a Go Site Extension and Resource Template for Azure"
 description: "Site extensions provide sophisticated extensibility for Azure Websites while the Azure Resource Manager automates the deployment and configuration of Azure resources. Combine them together, and you can automate many different website tasks, even the configuration of the Go runtime in Azure Websites."
 categories: 
 - golang
