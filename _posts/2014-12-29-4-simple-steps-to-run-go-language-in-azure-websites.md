@@ -86,4 +86,4 @@ For now, try it out here: [http://golang.azurewebsites.net/hello](http://golang.
 
 Is there more we can do here? Absolutely, and I intend to cover some additional topics in future posts. However, for now, it feels good knowing that we can push our Go Language code to Azure Websites.
 
-Special thanks to [Rajith Mukkai Ramachandra](https://twitter.com/ranjithtweeets) for his help and answering all my questions quickly and thoroughly!
+Special thanks to [Ranjith Mukkai Ramachandra](https://twitter.com/ranjithtweeets) for his help and answering all my questions quickly and thoroughly!
