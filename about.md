@@ -4,7 +4,7 @@ title: About Me
 permalink: /about/
 ---
 
-![Wade Wegner](http://images.wadewegner.com/wordpress/2011/12/CloudCoverLive.png "Wade Wegner")
+![Wade Wegner](https://wadewegner.blob.core.windows.net/wordpress/2011/12/CloudCoverLive.png "Wade Wegner")
 
 I consider myself extremely lucky to have had so many amazing opportunities throughout my career, working with some of the smartest engineers and technologists in the world, and filling various roles from software developer to architect to technology evangelist.
 
