@@ -18,7 +18,7 @@ Having read the article, I noticed that my Bluetooth device shuts down shortly a
 
 To resolve this, go to your Device Manager, right-click "Dell Wireless 350 Bluetooth Module" (at least, that's what it's called on my machine), and select properties. Select the "Power Management" tab, and uncheck the "Allow the computer to turn off this device to save power" checkbox.
 
-![](http://images.wadewegner.com/wordpress/content/binary/Bluetooth.gif)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Bluetooth.gif)
 
 Once you've done this, the noise will stop!
 

@@ -28,7 +28,7 @@ Finally!
 
 To test this, I installed both updates (rebooting after each on), and then attempted to add a network printer. Previously, clicking the Install driver button caused failed if UAC was turned off.
 
-[![Adding a network printer in Vista](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1_thumb.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1.jpg)
+[![Adding a network printer in Vista](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/AddingaprinterinVistawithUACturnedoff_8EAB/printer1.jpg)
 
 After installing the updates, however, it works exactly as one would expect it to work.
 

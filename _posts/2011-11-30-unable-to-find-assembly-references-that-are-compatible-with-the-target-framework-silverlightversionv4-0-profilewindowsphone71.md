@@ -24,20 +24,20 @@ Yes, that title is a mouthful. But this title is as cryptic as the error that ca
 
 Here’s what you’ll see in Visual Studio:
 
-![NuGetErrorMessage](http://images.wadewegner.com/wordpress/2011/11/NuGetErrorMessage.jpg)
+![NuGetErrorMessage](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NuGetErrorMessage.jpg)
 
 This is the error I get when trying to install one of our [NuGet packages](http://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/) on a freshly built machine. Long story short, the reason is that I don’t have the latest NuGet Package Manager.
 
 Take a look at Extension Manager and observe the version number associated with the NuGet Package Manager:
 
-![OldNuGet](http://images.wadewegner.com/wordpress/2011/11/OldNuGet.jpg)
+![OldNuGet](https://wadewegner.blob.core.windows.net/wordpress/2011/11/OldNuGet.jpg)
 
 See that the version is 1.2? We need to update it to version 1.5. Head to [http://nuget.org](http://nuget.org) and from there click to install NuGet. Once you’ve completed the installation you should confirm that you now have version 1.5:
 
-![NewNuGet](http://images.wadewegner.com/wordpress/2011/11/NewNuGet.jpg)
+![NewNuGet](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NewNuGet.jpg)
 
 So now, when you try to install a NuGet package such as Phone.Storage you won’t have any problems.
 
-![NuGetWorking](http://images.wadewegner.com/wordpress/2011/11/NuGetWorking.jpg)
+![NuGetWorking](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NuGetWorking.jpg)
 
 I hope this helps!

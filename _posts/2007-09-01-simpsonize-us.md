@@ -20,7 +20,7 @@ Evidently, here's what I look like as a Simpson's character ... the likeness is 
 
 
 
-[![Simpson Wade](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade_thumb.png)[![Simpson Wade](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%202_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%202.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade.png)
+[![Simpson Wade](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade_thumb.png)[![Simpson Wade](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%202_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%202.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade.png)
 
 
 
@@ -30,7 +30,7 @@ Here's me taking a trip to the Quik-E-Mart:
 
 
 
-[![Simpson Wade at Quik-E-Mart](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%204_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%204.png)
+[![Simpson Wade at Quik-E-Mart](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%204_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/simpson%20wade%204.png)
 
 
 
@@ -40,7 +40,7 @@ Personally, I think my wife makes a better looking Simpson character than I do:
 
 
 
-[![Simpson Teri](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/Teri1_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/Teri1.png)
+[![Simpson Teri](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/Teri1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/Teri1.png)
 
 
 
@@ -50,7 +50,7 @@ My daughters also make cute Simpson's characters:
 
 
 
-[![Simpson Hayley](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/hayley_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/hayley.png) [![Simpson Katelyn](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/katelyn_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/katelyn.png)
+[![Simpson Hayley](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/hayley_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/hayley.png) [![Simpson Katelyn](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/katelyn_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SimpsonizeUs_7BA8/katelyn.png)
 
 
 

@@ -60,7 +60,7 @@ The first set of NuGet packages to be aware of are the NuGet packages for Window
 
  
 
-[![Windows Phone OS 7.1](http://images.wadewegner.com/wordpress/2011/11/Windows-Phone-OS-7.1_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/11/Windows-Phone-OS-7.1.jpg)
+[![Windows Phone OS 7.1](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1.jpg)
 
  
 
@@ -102,7 +102,7 @@ In scenarios where you’d want to secure your notification services using the A
   * **[Phone.Notifications.AccessControl](http://www.nuget.org/List/Packages/Phone.Notifications.AccessControl)**: This package enables communication with the Push Notification Registration Cloud Service using Windows Azure Access Control Service (ACS) for authentication, by adding a set of base pages to the phone application.         
        
 The dependencies and relationships between these NuGets are as follows:   
-![Phone.Notifications.AccessControl](http://images.wadewegner.com/wordpress/2011/11/Phone.Notifications.AccessControl.png)
+![Phone.Notifications.AccessControl](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Phone.Notifications.AccessControl.png)
  
 
 In scenarios where you’d want to secure your notification services using traditional membership, you can use the following packages:
@@ -113,7 +113,7 @@ In scenarios where you’d want to secure your notification services using tradi
   * **[Phone.Notifications.Membership](http://www.nuget.org/List/Packages/Phone.Notifications.Membership)**: This package enables communication with the Push Notification Registration Cloud Service using Membership for authentication, by adding a set of base pages to the phone application.         
        
 The dependencies and relationships between these NuGets are as follows:   
-![Phone.Notifications.Membership](http://images.wadewegner.com/wordpress/2011/11/Phone.Notifications.Membership.png)
+![Phone.Notifications.Membership](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Phone.Notifications.Membership.png)
  
 
 **__**

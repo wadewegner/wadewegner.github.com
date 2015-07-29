@@ -25,7 +25,7 @@ The December update provides new and updated hands-on labs, demo scripts, and pr
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2010/12/image.png)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=413E88F8-5966-4A83-B309-53B7B77EDF78&displaylang=en)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image.png)](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=413E88F8-5966-4A83-B309-53B7B77EDF78&displaylang=en)
 
  
 
@@ -69,4 +69,4 @@ The Windows Azure Platform Training Course includes a comprehensive set of hands
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2010/12/image1.png)](http://msdn.microsoft.com/en-us/windowsazure/wazplatformtrainingcourse.aspx)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image1.png)](http://msdn.microsoft.com/en-us/windowsazure/wazplatformtrainingcourse.aspx)

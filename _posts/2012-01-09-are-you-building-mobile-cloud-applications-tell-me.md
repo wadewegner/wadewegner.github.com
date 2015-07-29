@@ -13,7 +13,7 @@ categories:
 - Windows Phone
 ---
 
-<div style="float: left;padding-right:5px;padding-top:5px;"><img src="http://images.wadewegner.com/wordpress/2012/01/image8.png"></div>
+<div style="float: left;padding-right:5px;padding-top:5px;"><img src="https://wadewegner.blob.core.windows.net/wordpress/2012/01/image8.png"></div>
 
 If you follow my blog or [on Twitter](http://twitter.com/wadewegner) then you know that I’m passionate about using services running in Windows Azure to power mobile applications. To effectively run mobile services for mobile apps you need a platform that is responsive to a global audience and able to scale to the needs of your user base – Windows Azure provides these capabilities.
 

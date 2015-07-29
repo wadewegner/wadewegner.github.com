@@ -12,7 +12,7 @@ categories:
 - Windows Azure
 ---
 
-[![Windows Azure Toolkits for Devices](http://images.wadewegner.com/wordpress/2011/05/image_thumb12.png)](http://images.wadewegner.com/wordpress/2011/05/image15.png)A few days ago, [Fredrik Olsson](http://www.peylow.se/) opened a pull request against our GitHub repository for the [Windows Azure Toolkit for iOS](https://github.com/microsoft-dpe/watoolkitios-lib). A [pull request](http://help.github.com/pull-requests/) provides a way to tell others about changes you’ve made to a repository – by sending me a pull request, Fredrik was notifying me of his updates so that I could review and, if appropriate, merge them to the main repository.
+[![Windows Azure Toolkits for Devices](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb12.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image15.png)A few days ago, [Fredrik Olsson](http://www.peylow.se/) opened a pull request against our GitHub repository for the [Windows Azure Toolkit for iOS](https://github.com/microsoft-dpe/watoolkitios-lib). A [pull request](http://help.github.com/pull-requests/) provides a way to tell others about changes you’ve made to a repository – by sending me a pull request, Fredrik was notifying me of his updates so that I could review and, if appropriate, merge them to the main repository.
 
  
 

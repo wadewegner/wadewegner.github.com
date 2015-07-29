@@ -13,7 +13,7 @@ categories:
 
 Have you ever received the following error when you tried to access a UNC path?
 
-![](http://images.wadewegner.com/wordpress/content/binary/UNCError.gif)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/UNCError.gif)
 
 	_XXXXXXX_ is not accessible. You might not have permission to use this network resource. Access is denied.
 
@@ -27,11 +27,11 @@ Then I decided to try and mount the share as a driver. Here are the steps I took
 
 2. For the folder, specify your UNC share. Then, instead of clicking finish, click the "Connect using a different user name".  
   
-	![](http://images.wadewegner.com/wordpress/content/binary/UNCError2.gif)  
+	![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/UNCError2.gif)  
 
 3. In the Connect As screen, specify your local account that has the ability to access the UNC share.  
 
-	![](http://images.wadewegner.com/wordpress/content/binary/UNCError3.gif)  
+	![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/UNCError3.gif)  
 
 4. Click OK, then Finish.
 

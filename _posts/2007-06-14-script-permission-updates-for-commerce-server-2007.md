@@ -71,6 +71,6 @@ Note that, in order to run this script, you may have to run "cscript.exe /h:cscr
 
 After running this script, you will have updated the permissions and you didn't have to do it manually!
 
-[AssignCSPermissions.vbs.txt (1.5 KB)](http://images.wadewegner.com/wordpress/content/binary/AssignCSPermissions.vbs.txt)
+[AssignCSPermissions.vbs.txt (1.5 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/AssignCSPermissions.vbs.txt)
 
 I hope this helps!

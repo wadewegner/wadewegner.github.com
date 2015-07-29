@@ -31,10 +31,10 @@ To request access to the beta simply follow these steps:
   2. **Login** with your Windows Live account.
    
   3. In the left menu, select **Beta Programs**. This will load the Beta Program page in the main frame.        
-![image](http://images.wadewegner.com/wordpress/2011/03/image.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image.png)
    
   4. You should see (at the time of this post) two available beta programs – **Windows Azure Connect** and **VM Role**. On the right, select the checkbox for VM Role (you may as well do it for Windows Azure Connect while you’re at it).        
-![image](http://images.wadewegner.com/wordpress/2011/03/image3.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image3.png)
    
   5. Click the **Apply for Access** button.
  
@@ -47,7 +47,7 @@ Once you’re accepted your status will change to **Active** and you’ll receiv
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/03/image2.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image2.png)
 
  
 

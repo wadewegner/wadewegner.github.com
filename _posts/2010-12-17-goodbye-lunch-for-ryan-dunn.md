@@ -14,7 +14,7 @@ Earlier this week we had a team lunch to wish [Ryan Dunn](http://dunnry.com/blog
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2010/12/image_thumb2.png)](http://images.wadewegner.com/wordpress/2010/12/image12.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image12.png)
 
  
 

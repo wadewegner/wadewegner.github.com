@@ -19,7 +19,7 @@ I encountered an error today while setting up a project within the Commerce Serv
 
 Using the CSS MMC, I created a simple project that stages my StarterSite content from my local directory (e.g. C:\Inetpub\wwwroot\StarterSite) to a temporary folder (e.g. C:\TempDestination). It was meant to be the start of a proof-of-concept for a more complex network topology. However, I almost immediately received an error when I attempted to start replication:
 
-[![CSS: Unspecified Error](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_1.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_1.png)
+[![CSS: Unspecified Error](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_1.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_1.png)
 
 I just love errors like this! Gives me something to research and figure out ...
 
@@ -56,11 +56,11 @@ In comes [File Monitor](http://www.microsoft.com/technet/sysinternals/utilities/
 
 I was able to capture the following "Access Denied" message via File Monitor:
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_3.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_3.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_3.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_3.png)
 
 **Solution:** Turns out that the NT AUTHORITY\NETWORK SERVICE has been attempting to open the StagingLog.mdb file to no avail. After giving the NT AUTHORITY\NETWORK SERVICE the rights to Modify the StagingLog.mdb file ...
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_4.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_4.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_thumb_4.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServerStagingerrorOperationmustu_CDAE/image_4.png)
 
 ... I am now able to successfully start my CSS project and stage my StarterSite data to a separate folder.
 

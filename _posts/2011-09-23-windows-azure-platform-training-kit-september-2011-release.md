@@ -13,7 +13,7 @@ categories:
 - Windows Azure Platform
 ---
 
-[![Windows Azure Platform Training Kit - September 2011 Release](http://images.wadewegner.com/wordpress/2011/09/image_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/image.png)Yesterday we released the Window Azure Platform Training Kit – September 2011 Release. You can get the content here:
+[![Windows Azure Platform Training Kit - September 2011 Release](https://wadewegner.blob.core.windows.net/wordpress/2011/09/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/image.png)Yesterday we released the Window Azure Platform Training Kit – September 2011 Release. You can get the content here:
 
  
 

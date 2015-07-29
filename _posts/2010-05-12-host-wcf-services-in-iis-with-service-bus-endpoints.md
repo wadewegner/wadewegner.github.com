@@ -159,17 +159,17 @@ To get the service to automatically establish the connection to the Service Bus,
 
 2. In IIS, select your virtual application EchoSample. Double-click the **Application Warm-Up **feature, and click **Settings**. Check the **Start Application Pool ‘ASP.NET v4.0’ when service started** checkbox. 
 
-	[![Application Warm-Up settings](http://images.wadewegner.com/wordpress/2010/05/image_thumb.png)](http://images.wadewegner.com/wordpress/2010/05/image2.png)
+	[![Application Warm-Up settings](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image2.png)
 
 3. Add a new request to register EchoService.svc as a warm-up request for the application. Right-click and choose **Add Request**. Enter EchoService.svc, and click OK. You should now see it in the Request URL list. 
 
-	[![Application Warm-Up add request](http://images.wadewegner.com/wordpress/2010/05/image3_thumb.png)](http://images.wadewegner.com/wordpress/2010/05/image3.png)
+	[![Application Warm-Up add request](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image3.png)
 
-	[![Application Warm-Up](http://images.wadewegner.com/wordpress/2010/05/image6_thumb.png)](http://images.wadewegner.com/wordpress/2010/05/image6.png)
+	[![Application Warm-Up](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image6.png)
 
 And that’s it! The service is now automatically started and “warmed up” by IIS. To test, recycle the Application Pool and restart the web site. Then, hit your Service Bus endpoint and confirm that you’re services are running.
 
-![Publicly Listed Services](http://images.wadewegner.com/wordpress/2010/05/image_thumb1.png)
+![Publicly Listed Services](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image_thumb1.png)
 
 Now, even if we restart the computer, the WCF service will reestablish the connection to the Service Bus because IIS 7.5, through the Application Warm-Up Extensions, will automatically refresh.
 
@@ -181,7 +181,7 @@ Now, to complete the test, let’s build a quick Console application to connect 
 
 3. Add a link to the IEchoService.cs file in the EchoSample project. Right-click the project, choose Add Existing, and change Add to Add as Link. 
 
-	![Add Existing Item - Add As Link](http://images.wadewegner.com/wordpress/2010/05/image_thumb2.png)
+	![Add Existing Item - Add As Link](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image_thumb2.png)
 
 4. Update the Program.cs file with the following code. Be sure and replace YOUR_NAMESPACE, YOUR_ISSUER_NAME, and YOUR_ISSUER_SECRET with your own values.
 

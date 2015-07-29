@@ -21,7 +21,7 @@ The application is a Metro styled app built on HTML5, CSS, and JavaScript. Addit
 
 When the application is launched, the user needs to login. Rather than creating yet another identity store, or mapping directly to a specific identity provider, Margie’s Travel uses the [Windows Azure Access Control Service](http://www.microsoft.com/windowsazure/features/accesscontrol/).
 
-[![Margie's Travel](http://images.wadewegner.com/wordpress/2011/09/Image1_thumb3_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Image1_thumb3.png)
+[![Margie's Travel](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image1_thumb3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image1_thumb3.png)
 
 When you click the login button, the application first checks the Windows PasswordVault to see if the credential (which includes the token) exists:
 
@@ -30,7 +30,7 @@ When you click the login button, the application first checks the Windows Passwo
 
 If this exists, the application will login. If not, the the application calls out to the Access Control Service to get a list of identity providers from which the user can select.
 
-[![Windows Azure Access Control Service](http://images.wadewegner.com/wordpress/2011/09/Image2_thumb1_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Image2_thumb1.png)
+[![Windows Azure Access Control Service](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image2_thumb1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image2_thumb1.png)
 
 This code is also very simple to write in JavaScript:
 
@@ -44,7 +44,7 @@ This code is also very simple to write in JavaScript:
     
 Once the users makes the selection, the Windows Web Authentication Broker invoked. This allows us to use a consistent and secure method for handling authentication. The login page for the selected identity provider is rendered in the broker.
 
-[![Windows Web Auth Broker](http://images.wadewegner.com/wordpress/2011/09/Image3_thumb2_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Image3_thumb2.png)
+[![Windows Web Auth Broker](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image3_thumb2_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image3_thumb2.png)
 
 Once the user logs in, the Access Control Service token is return to the Web Auth Broker. The application is able to take the credential and store it into the Windows Web Vault. This gives us a consistent SSO experience so that upon subsequent launches thee user does not need to log in again.
 
@@ -57,13 +57,13 @@ To store the credential, we simply take the various components, create a new Pas
 
 Furthermore, since the Web Broker can synchronize across trusted devices using Windows Live, the token is automatically synchronized to any trusted device so that you can get SSO across multiple devices.
 
-[![Rich Data in Margie's Travel](http://images.wadewegner.com/wordpress/2011/09/Image4_thumb1_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Image4_thumb1.png)
+[![Rich Data in Margie's Travel](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image4_thumb1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image4_thumb1.png)
 
 Once logged in, the application will call out to additional Web services in Windows Azure (like the GetTravelerInfo() method) so that we can validate the users credentials before returning the results.
 
 In addition, this token can be used to call out to additional services in Windows Azure, to get rich pictures from Bing, specific data from the Windows Azure DataMarket and Wolfram Alpha, and even weather information.
 
-[![Data from Windows Azure DataMarket and Bing](http://images.wadewegner.com/wordpress/2011/09/Image5_thumb1_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Image5_thumb1.png)
+[![Data from Windows Azure DataMarket and Bing](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image5_thumb1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Image5_thumb1.png)
 
 All of this is made possible by unique features and capabilities provided by Windows Azure and Windows 8.
 

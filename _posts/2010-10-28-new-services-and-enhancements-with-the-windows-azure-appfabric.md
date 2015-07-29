@@ -17,7 +17,7 @@ categories:
 
  
 
-[![Windows Azure AppFabric](http://images.wadewegner.com/wordpress/2010/10/image_thumb.png)](http://images.wadewegner.com/wordpress/2010/10/image1.png) Today’s an exciting day! During the keynote this morning at PDC10, Bob Muglia announced a wave of new building block services and capabilities for the Windows Azure AppFabric. The purpose of the Windows Azure AppFabric is to provide a comprehensive cloud platform for developing, deploying and managing applications, extending the way you build Windows Azure applications today. At PDC09, we announced both Windows Azure AppFabric and Windows Server AppFabric, highlighting a commitment to deliver a set of complimentary services both in the cloud and on-premises. While this has long been an aspiration, we haven’t yet delivered on it – until today!
+[![Windows Azure AppFabric](https://wadewegner.blob.core.windows.net/wordpress/2010/10/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/10/image1.png) Today’s an exciting day! During the keynote this morning at PDC10, Bob Muglia announced a wave of new building block services and capabilities for the Windows Azure AppFabric. The purpose of the Windows Azure AppFabric is to provide a comprehensive cloud platform for developing, deploying and managing applications, extending the way you build Windows Azure applications today. At PDC09, we announced both Windows Azure AppFabric and Windows Server AppFabric, highlighting a commitment to deliver a set of complimentary services both in the cloud and on-premises. While this has long been an aspiration, we haven’t yet delivered on it – until today!
 
  
 

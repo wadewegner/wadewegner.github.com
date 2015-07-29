@@ -47,7 +47,7 @@ Here are a couple screen shots with the updates. The first one shows what happen
 
 
 
-![Hangman; lose](http://images.wadewegner.com/wordpress/content/binary/lose1.gif)
+![Hangman; lose](https://wadewegner.blob.core.windows.net/wordpress/content/binary/lose1.gif)
 
 
 
@@ -57,7 +57,7 @@ This next one shows what happens when you win. Doesn't that look a lot more plea
 
 
 
-![Hangman; winning](http://images.wadewegner.com/wordpress/content/binary/Untitled-1.gif)
+![Hangman; winning](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Untitled-1.gif)
 
 
 

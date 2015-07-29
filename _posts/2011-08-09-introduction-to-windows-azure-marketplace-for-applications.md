@@ -16,7 +16,7 @@ Today we released an update to the Windows Azure Platform Training Kit to includ
 
  
 
-![SaaS1](http://images.wadewegner.com/wordpress/2011/08/SaaS1.jpg)
+![SaaS1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/SaaS1.jpg)
 
  
 
@@ -48,7 +48,7 @@ You can take a look at the SaaS application live in the marketplace: [https://da
 
  
 
-![SaaS2](http://images.wadewegner.com/wordpress/2011/08/SaaS2.jpg)
+![SaaS2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/SaaS2.jpg)
 
  
 

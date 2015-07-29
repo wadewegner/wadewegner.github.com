@@ -12,7 +12,7 @@ categories:
 
 ... and here's a good reason why:
 
-![](http://images.wadewegner.com/wordpress/content/binary/Yahoo1.gif)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Yahoo1.gif)
 
 Every time I attempt to search, I get the error "Sorry, Unable to process request at this time -- error 999." This has been occurring for at least the past 30 minutes. However, I pinged a friend of mine, [Brad Younge](http://byounge.spaces.live.com/), and he can search just fine. Quite strange!
 

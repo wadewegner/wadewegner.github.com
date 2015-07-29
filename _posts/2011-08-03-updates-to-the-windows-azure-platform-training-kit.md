@@ -17,7 +17,7 @@ Today we released the [Windows Azure Platform Training Kit – August 2011](http
 
  
 
-![Windows Azure Platform Training Kit - August 2011](http://images.wadewegner.com/wordpress/2011/08/image5.png)
+![Windows Azure Platform Training Kit - August 2011](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image5.png)
 
  
 

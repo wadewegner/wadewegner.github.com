@@ -40,14 +40,14 @@ I thought I'd go ahead and document the steps I took when I setup my development
   6. Reboot.
 
   7. Optional: Install Microsoft MSDN Library for Visual Studio codename "Orcas". Watch out - during the installation of the MSDN Library, it took about five minutes for it to complete this step. Be patient, and let it finish.  
-[![MSDN Library install](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_1.png)
+[![MSDN Library install](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image3_1.png)
 
   8. Reboot.
 
   9. Install [Microsoft ASP.NET Futures (May 2007)](http://go.microsoft.com/fwlink/?LinkID=89147&clcid=0x409). This provides you with ASP.NET controls for Silverlight.
 
   10. Install [Expression Blend 2 May Preview](http://go.microsoft.com/fwlink/?LinkID=79076&clcid=0x409). This is a design tool that allows a user to interact with Silverlight. Note: this is different from Expression Blend that can be found on MSDN. Make sure to get this download. Also, [Tim Heuer](http://timheuer.com/blog/) pointed me to [http://www.microsoft.com/Expression/products/download.aspx?key=blend2maypreview](http://www.microsoft.com/Expression/products/download.aspx?key=blend2maypreview), which provides a product key and longer trial (180-day evaluation). Note: when I went to install Expression Blend 2, I was only given two choices: Vista, or Windows XP. My development VM is Windows Server 2003 Standard R2. I chose Windows XP, and haven't had any problems.  
-[![Expression Blend 2 choice](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4.png)
+[![Expression Blend 2 choice](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8cd2f9f4af11_7EDC/image4.png)
 
   11. Install [Microsoft Silverlight Tools Alpha for Visual Studio codename "Orcas" Beta 1](http://go.microsoft.com/fwlink/?LinkID=89149&clcid=0x409). This is an add-on that allows you to create Silverlight applications using .NET.
 

@@ -14,7 +14,7 @@ categories:
 - Windows Azure
 ---
 
-[_![SQL Azure](http://images.wadewegner.com/wordpress/2009/11/SQLAzure_thumb.png)_](http://images.wadewegner.com/wordpress/2009/11/SQLAzure.png)_Note: This is a guest post from [George Huey](http://www.linkedin.com/pub/george-huey/0/4b0/375), Architect Evangelist in the Developer and Platform Evangelism group._
+[_![SQL Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/11/SQLAzure_thumb.png)_](https://wadewegner.blob.core.windows.net/wordpress/2009/11/SQLAzure.png)_Note: This is a guest post from [George Huey](http://www.linkedin.com/pub/george-huey/0/4b0/375), Architect Evangelist in the Developer and Platform Evangelism group._
 
  
 

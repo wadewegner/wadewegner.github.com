@@ -11,7 +11,7 @@ categories:
 - User Groups
 ---
 
-[![Windows Azure Cloud Computing User Group](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-1_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-1_2.png)This past Tuesday was the inaugural meeting of the [**Windows Azure Cloud Computing User Group**](http://cloudcomputingusergroup.com/) in Chicago, IL. The mission of this new user group is to provide a forum for developers and architects to discuss Microsoft's vision of [**Software + Services**](http://www.microsoft.com/softwareplusservices/) (S+S), and in particular the [Azure Services Platform](http://www.azure.com/). This user group is sponsored by [Neudesic](http://www.neudesic.com), and the presenter for the first meeting was Bryce Calhoun, Director at Neudesic. Despite the snow and difficult driving conditions, the meeting was well attended by many members of the local community.
+[![Windows Azure Cloud Computing User Group](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-1_2.png)This past Tuesday was the inaugural meeting of the [**Windows Azure Cloud Computing User Group**](http://cloudcomputingusergroup.com/) in Chicago, IL. The mission of this new user group is to provide a forum for developers and architects to discuss Microsoft's vision of [**Software + Services**](http://www.microsoft.com/softwareplusservices/) (S+S), and in particular the [Azure Services Platform](http://www.azure.com/). This user group is sponsored by [Neudesic](http://www.neudesic.com), and the presenter for the first meeting was Bryce Calhoun, Director at Neudesic. Despite the snow and difficult driving conditions, the meeting was well attended by many members of the local community.
 
 Bryce gave an excellent presentation on cloud computing that fostered some good discussion within the group. His presentation was divided into the following topics:
 
@@ -26,7 +26,7 @@ Bryce also dropped into Visual Studio and built out a Windows Azure application 
 
 I was pleased when Bryce showed this quote from Steve Ballmer early in the presentation, as I think it really captures the value of engaging with this user group:
 
-[!["The software and services era is now. We are writing new software, we will be delivering betas and design previews, and the time to engage is now." Steve Ballmer](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-2_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-2_2.png)
+[!["The software and services era is now. We are writing new software, we will be delivering betas and design previews, and the time to engage is now." Steve Ballmer](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-2_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-2_2.png)
 
 The Azure Services Platform was announced at the [Microsoft Professional Developers Conference](http://www.microsoftpdc.com/) (PDC) this past October, and you can already start building applications today through the public CTP. Now is the time to explore the technology, try out new and different ways of writing software, _and provide feedback to Microsoft on what works and what doesn't work_! It is my hope that this user group becomes a forum to explore how the tools and technologies that are available through Azure help (or hinder!) businesses when they attempt to create compelling applications in the cloud.
 
@@ -36,13 +36,13 @@ Below are some of my notes from the presentation. This isn't an exhaustive set o
 
 I really liked Bryce's discussion on why we should all take the cloud seriously. In particular, I felt that the following slide highlighted how all the big players - Microsoft, Google, Yahoo, Amazon, Oracle, etc. - are investing, to some degree, in the cloud.
 
-_**[![Big players investing in the cloud](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-5_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-5_2.png) **_
+_**[![Big players investing in the cloud](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-5_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-5_2.png) **_
 
 _**Software + Services**_
 
 Bryce had a slide that discussed S+S that I found rather interesting. In this slide ...
 
-[![S+S choices](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-3_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-3_2.png)
+[![S+S choices](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-3_2.png)
 
 ... you can see that, on the left, we have a fairly standard architecture for on-premises software. You might find this in any enterprise data center, as it is specifically designed to handle the needs and scale of an enterprise. On the right you can see services in the cloud - notice how the various tiers are designed to scale horizontally and provide "on-demand" scaling. This architecture is significantly different from your standard on-premises architecture because you are now dealing with _Internet_-scale, something that most companies and enterprises have little experience at providing.
 
@@ -50,7 +50,7 @@ What's missing from this picture, in my opinion, is an illustration that shows t
 
 I really like this slide from Ray Ozzie's keynote presentation at PDC:
 
-[![S+S continuum](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-6_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-6_2.png)
+[![S+S continuum](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-6_2.png)
 
 You can see here that the technologies provided by Microsoft provide a continuum that gives you an on-premises platform as well a set of cloud services that complement the on-premises platform. You can use what makes sense and works in your scenario.
 
@@ -65,7 +65,7 @@ The best source of information regarding the Azure business model (i.e. pricing 
 
 Bryce made some good points regarding Opex (operational expenditure) and Capex (capital expenditure) when speaking to this slide:
 
-[![OPEX & CAPEX w/ and w/o cloud services](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-4_thumb_1.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-4_4.png)
+[![OPEX & CAPEX w/ and w/o cloud services](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-4_thumb_1.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/FirstmeetingoftheChicagoWindowsAzureClou_C184/UG-4_4.png)
 
 This slide attempts to show that you can significantly reduce your costs when you no longer have to maintain a large infrastructure to support your on-premises software. Instead, if you move towards a utility compute model, you only pay for the services you need and let the provider absorb the cost of maintaining the data center.
 

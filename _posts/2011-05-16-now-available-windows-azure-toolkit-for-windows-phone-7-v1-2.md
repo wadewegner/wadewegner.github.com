@@ -44,7 +44,7 @@ I highly recommend you take a look at the following resources to learn more:
       
 
         
-[![GettingStartedWAZToolkitWP7v12_512_c](http://images.wadewegner.com/wordpress/2011/05/GettingStartedWAZToolkitWP7v12_512_c.jpg)](http://channel9.msdn.com/posts/Getting-Started-with-the-Windows-Azure-Toolkit-for-Windows-Phone-7-v12)
+[![GettingStartedWAZToolkitWP7v12_512_c](https://wadewegner.blob.core.windows.net/wordpress/2011/05/GettingStartedWAZToolkitWP7v12_512_c.jpg)](http://channel9.msdn.com/posts/Getting-Started-with-the-Windows-Azure-Toolkit-for-Windows-Phone-7-v12)
          
           
 
@@ -58,7 +58,7 @@ by [Wade Wegner](http://www.wadewegner.com/)
               
 
         
-[![WAZWP7ACS1_512_ch9632](http://images.wadewegner.com/wordpress/2011/05/WAZWP7ACS1_512_ch9632.jpg)](http://channel9.msdn.com/Shows/Identity/Getting-Started-with-ACS-and-the-Windows-Azure-Toolkit-for-Windows-Phone-7)
+[![WAZWP7ACS1_512_ch9632](https://wadewegner.blob.core.windows.net/wordpress/2011/05/WAZWP7ACS1_512_ch9632.jpg)](http://channel9.msdn.com/Shows/Identity/Getting-Started-with-ACS-and-the-Windows-Azure-Toolkit-for-Windows-Phone-7)
          
           
 
@@ -127,7 +127,7 @@ In version 1.1 we introduced support for Microsoft Push Notification Services. I
 
  
 
-![PushNotification](http://images.wadewegner.com/wordpress/2011/05/PushNotification.png)
+![PushNotification](https://wadewegner.blob.core.windows.net/wordpress/2011/05/PushNotification.png)
 
  
 
@@ -139,7 +139,7 @@ As mentioned extensively by Vittorio, you can also choose to use ACS instead of 
 
  
 
-![ACS](http://images.wadewegner.com/wordpress/2011/05/ACS.png)
+![ACS](https://wadewegner.blob.core.windows.net/wordpress/2011/05/ACS.png)
 
  
 
@@ -147,7 +147,7 @@ Take a look at [this article](http://watoolkitwp7.codeplex.com/wikipage?title=Ch
 
  
 
-![WP7](http://images.wadewegner.com/wordpress/2011/05/WP7.png)
+![WP7](https://wadewegner.blob.core.windows.net/wordpress/2011/05/WP7.png)
 
  
 
@@ -155,7 +155,7 @@ As with Blobs and Tables, we now provide full support for Windows Azure Queues. 
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image13.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image13.png)
 
  
 
@@ -163,7 +163,7 @@ Finally, we were not particularly pleased with the out-of-the-box ASP.NET theme,
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image14.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image14.png)
 
  
 
@@ -185,7 +185,7 @@ An affect of these changes could be an error when interacting with user data sto
 
  
 
-[![image_22](http://images.wadewegner.com/wordpress/2011/05/image_22_thumb.png)](http://images.wadewegner.com/wordpress/2011/05/image_22.png)
+[![image_22](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_22_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_22.png)
 
  
 

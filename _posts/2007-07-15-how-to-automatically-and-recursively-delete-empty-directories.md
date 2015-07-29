@@ -198,4 +198,4 @@ I've gone ahead and included a zip file with the full source code for this conso
 
 
 
-[EmptyFolders.zip (20.81 KB)](http://images.wadewegner.com/wordpress/content/binary/EmptyFolders.zip)
+[EmptyFolders.zip (20.81 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/EmptyFolders.zip)

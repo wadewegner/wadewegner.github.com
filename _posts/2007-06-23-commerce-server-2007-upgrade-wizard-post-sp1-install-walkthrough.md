@@ -23,41 +23,41 @@ That said, here's the process for using the Upgrade Wizard to upgrade your Comme
 
 1. Launch the Upgrade Wizard. You can launch this application automatically after installing SP1 or by running the Upgrade Wizard (Start -> All Programs -> Microsoft Commerce Server 2007 -> Tools -> Upgrade Wizard). Click Next to begin.  
 
-    ![CS 2007 Upgrade Wizard: Welcome](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade1_1.gif)   
+    ![CS 2007 Upgrade Wizard: Welcome](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade1_1.gif)   
 
 2. On the Select Options screen, specify the log file path. I left the default location. Click Next to continue.  
 
-    ![CS 2007 Upgrade Wizard: Select Options](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade2_1.gif)   
+    ![CS 2007 Upgrade Wizard: Select Options](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade2_1.gif)   
 
 3. On the Select a Commerce Site screen, specify the site you want to upgrade. Note: if you have more than one site, you can only upgrade on at a time; you can re-run the Upgrade Wizard to upgrade additional sites. Click Next to continue.  
 
-    ![CS 2007 Upgrade Wizard: Select a Commerce Site](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade3_1.gif)   
+    ![CS 2007 Upgrade Wizard: Select a Commerce Site](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade3_1.gif)   
 
 4. On the Upgrade Site Resources screen, you have the option to choose Migrate or Do Nothing for your various resources. Select the action Migrate for all your resources. Click Next to continue.  
 
-    ![CS 2007 Upgrade Wizard: Upgrade Site Resources](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade4_1.gif)   
+    ![CS 2007 Upgrade Wizard: Upgrade Site Resources](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade4_1.gif)   
 
 5. The Upgrade Summary screen reviews the selections you have made. Review the selections, and click Next to start the upgrade.  
 
-    ![CS 2007 Upgrade Wizard: Upgrade Summary](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade6_1.gif)  
+    ![CS 2007 Upgrade Wizard: Upgrade Summary](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade6_1.gif)  
 
-    ![CS 2007 Upgrade Wizard: Upgrade Process](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade7_1.gif)  
+    ![CS 2007 Upgrade Wizard: Upgrade Process](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade7_1.gif)  
 
 6. Once the upgrade is complete you will have to click the Next button to continue.  
 
-    ![CS 2007 Upgrade Wizard: Upgrade Process (summary)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade8_1.gif)   
+    ![CS 2007 Upgrade Wizard: Upgrade Process (summary)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade8_1.gif)   
 
 7. On the Summary screen, you can review the upgrade and click Main error log to review any errors. Click Next to continue.  
 
-    ![CS 2007 Upgrade Wizard: Summary](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade9_1.gif)   
+    ![CS 2007 Upgrade Wizard: Summary](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade9_1.gif)   
 
 8. You have successfully upgraded your Commerce Server 2007 site. Click Finish to complete the upgrade wizard.  
 
-    ![CS 2007 Upgrade Wizard: Complete](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade10_1.gif)   
+    ![CS 2007 Upgrade Wizard: Complete](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade10_1.gif)   
 
 9. After you click Finish you are reminded to restart. Click OK to continue.  
 
-    ![CS 2007 Upgrade Wizard: Restart notice](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade11_1.gif)  
+    ![CS 2007 Upgrade Wizard: Restart notice](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade11_1.gif)  
 
 10. If you have additional Commerce Server 2007 sites to upgrade, repeat steps 1-8.
 

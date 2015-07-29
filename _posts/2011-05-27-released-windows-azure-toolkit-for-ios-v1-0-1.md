@@ -12,7 +12,7 @@ categories:
 - Windows Azure
 ---
 
-[![Windows Azure Toolkits for Devices](http://images.wadewegner.com/wordpress/2011/05/image_thumb12.png)](http://images.wadewegner.com/wordpress/2011/05/image15.png)Last night we released an update to the [Windows Azure Toolkit for iOS](https://github.com/microsoft-dpe). This release is a minor update that includes the refactoring of code for better conformance to standards, some bug updates, and a few additions to the sample application. You can take a look at the updates in each of the three repositories:
+[![Windows Azure Toolkits for Devices](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb12.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image15.png)Last night we released an update to the [Windows Azure Toolkit for iOS](https://github.com/microsoft-dpe). This release is a minor update that includes the refactoring of code for better conformance to standards, some bug updates, and a few additions to the sample application. You can take a look at the updates in each of the three repositories:
 
  
 
@@ -28,7 +28,7 @@ One of the important updates is guidance—via the sample application—on how t
 
  
 
-![Queues](http://images.wadewegner.com/wordpress/2011/05/Queues.png)
+![Queues](https://wadewegner.blob.core.windows.net/wordpress/2011/05/Queues.png)
 
  
 
@@ -68,7 +68,7 @@ When you visit the GitHub repositories, be sure to look for and download **v1.0.
 
  
 
-[![Release](http://images.wadewegner.com/wordpress/2011/05/Release_thumb.png)](http://images.wadewegner.com/wordpress/2011/05/Release.png)
+[![Release](https://wadewegner.blob.core.windows.net/wordpress/2011/05/Release_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/Release.png)
 
    
 

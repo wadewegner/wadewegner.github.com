@@ -22,10 +22,10 @@ Here’s how to use it. From my blog, users can get this functionality a couple 
 
   
   1. Hover over the web slice discover section in the blog.        
-[![Take my posts with you](http://images.wadewegner.com/wordpress/2010/04/image_thumb.png)](http://images.wadewegner.com/wordpress/2010/04/image.png)
+[![Take my posts with you](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image.png)
    
   2. From the IE tool bar, add the web slice.        
-[![Add my web slice](http://images.wadewegner.com/wordpress/2010/04/image_thumb1.png)](http://images.wadewegner.com/wordpress/2010/04/image1.png)
+[![Add my web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image1.png)
  
 
 Really easy, and really powerful. This means that readers have access to my latest posts _anywhere_ they are browsing.
@@ -36,7 +36,7 @@ The best part is that web slices can notify users of updates – anytime my RSS 
 
  
 
-[![IE8 web slice notification](http://images.wadewegner.com/wordpress/2010/04/image_thumb2.png)](http://images.wadewegner.com/wordpress/2010/04/image2.png)
+[![IE8 web slice notification](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image2.png)
 
  
 
@@ -44,7 +44,7 @@ And when you select it, you’ll see the contents of the web slice:
 
  
 
-[![Wade Wegner web slice](http://images.wadewegner.com/wordpress/2010/04/image_thumb3.png)](http://images.wadewegner.com/wordpress/2010/04/image3.png)
+[![Wade Wegner web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image3.png)
 
  
 
@@ -66,10 +66,10 @@ The Web Slice Factory is exactly what it sounds like – a factory (or wizard) f
   
    
   3. You can setup three kinds of web slices: 1) Blog/Feed, 2) Twitter, and 3) Flicker. Choose which one you want to create. In this case, I’ll stick with Blog/Feed.        
-[![Pick a source](http://images.wadewegner.com/wordpress/2010/04/image_thumb4.png)](http://images.wadewegner.com/wordpress/2010/04/image4.png)
+[![Pick a source](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image4.png)
    
   4. Enter your blog / feed RSS URL into the box. Immediately upon entering the feed you’ll see the preview light up on the right side.        
-[![Personalize your Web Slice](http://images.wadewegner.com/wordpress/2010/04/image_thumb5.png)](http://images.wadewegner.com/wordpress/2010/04/image5.png)
+[![Personalize your Web Slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image5.png)
    
   5. Customize the web slice to look the way you want it to look. To _really_ brand it the way you want it, use a background image with the logo and style you want.         
 

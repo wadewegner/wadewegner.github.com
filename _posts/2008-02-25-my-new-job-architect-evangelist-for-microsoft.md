@@ -10,7 +10,7 @@ categories:
 - Microsoft
 ---
 
-[![DPE Logo](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MyNewJobArchitectEvangelistforMicrosoft_12951/DPE_Logo_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MyNewJobArchitectEvangelistforMicrosoft_12951/DPE_Logo_4.jpg)I recently accepted a job as an Architect Evangelist for Microsoft, working with the central region Developer & Platform Evangelism (DPE) team out of Downers Grove, IL. I am extremely excited - this is a dream come true! I've spent most of my career as a IT consultant largely focused on Microsoft technologies, and I think this role will really allow me to focus on my interests and passions.
+[![DPE Logo](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MyNewJobArchitectEvangelistforMicrosoft_12951/DPE_Logo_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MyNewJobArchitectEvangelistforMicrosoft_12951/DPE_Logo_4.jpg)I recently accepted a job as an Architect Evangelist for Microsoft, working with the central region Developer & Platform Evangelism (DPE) team out of Downers Grove, IL. I am extremely excited - this is a dream come true! I've spent most of my career as a IT consultant largely focused on Microsoft technologies, and I think this role will really allow me to focus on my interests and passions.
 
 
 

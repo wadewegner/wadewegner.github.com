@@ -25,4 +25,4 @@ Thanks to [Grant Holliday](http://www.holliday.com.au/blog/installing-virtual-se
 
 A good friend and former colleague of mine, [Rich Finn](http://rfinn.spaces.live.com/), had a little trouble getting this to work based on my steps above (I'll have to review them again). After he finally got the configuration correct, he sent me the following screen shot. I hope this helps someone!
 
-![](http://images.wadewegner.com/wordpress/content/binary/iis.gif)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/iis.gif)

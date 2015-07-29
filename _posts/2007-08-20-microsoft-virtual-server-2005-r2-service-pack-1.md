@@ -19,14 +19,14 @@ I run Virtual Server 2005 R2 on Vista Business without any problems (well, if yo
 
   * When installing SP1, be sure to turn off the Virtual Server service, else you will receive the following warning:
 
-> [![warning](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/warning_thumb.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/warning.jpg)
+> [![warning](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/warning_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/warning.jpg)
 
   * It will detect the previous version and force you to upgrade:
 
-> [![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_thumb_1.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_1.png)
+> [![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_thumb_1.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_1.png)
 
   * I could be wrong, but I'm pretty sure that some of these options are new. Sorry, I haven't had the time to research them - when I do, I promise I'll post my findings.
 
-> [![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_thumb_2.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_2.png)
+> [![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_thumb_2.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/MicrosoftVirtualServer2005R2ServicePack1_14E2A/image_2.png)
 
 The upgrade seemed to go without a problem. I was able to mount and start my virtual machines without any problems whatsoever.

@@ -15,7 +15,7 @@ I know this is old news, but this post is primarily a reminder to myself -- I ke
 
 
 
-[![Navigation to the webpage was canceled](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image1_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image1.png)
+[![Navigation to the webpage was canceled](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image1.png)
 
 
 
@@ -33,7 +33,7 @@ In order to view the help file, you have to right-click the file, choose Propert
 
 
 
-[![CHM properties](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image.png)
+[![CHM properties](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ViewinghelpfilesinVista_6D9E/image.png)
 
 
 

@@ -22,7 +22,7 @@ When I started everything up the next day I tried to reproduce this behavior so 
 
 
 
-[![BizTalk DW Reporting](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Error_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Error.gif)
+[![BizTalk DW Reporting](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Error_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Error.gif)
 
 
 
@@ -58,7 +58,7 @@ Aha! This was a much more useful error!
 I opened up Component Services (Start --> Administrative Tools --> Component Services), and browsed to Computers --> My Computer --> COM+ Applications --> **eConnect 9 for Great Plains**. The Microsoft Great Plains eConnect Version 9 COM Plus Package has a tab entitled **Identity** which allows you to define the user account under which the application runs. Turns out that _somehow_ my account was switched from the user I specified at installation to the interactive user system account:
 
 
-[![Component](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component.gif)
+[![Component](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component.gif)
 
 
 And this was the root cause of my problem. eConnect requires integrated security and uses the user specified in this identity tab to access the GP database. Consequently, the user specified must have access to the appropriate database on the GP server and also be a part of the DYNGRP role.
@@ -71,7 +71,7 @@ So, I went ahead and added my user to the DYNGRP role, made sure it had the appr
 
 
 
-[![Component2](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component2_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component2.gif)
+[![Component2](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component2_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BizTalkprocesscrashingwitheConnect9adapt_8E58/Component2.gif)
 
 
 
@@ -91,4 +91,4 @@ I hope this helps!
 
 
 
-[DirectDoc9.zip (7.42 KB)](http://images.wadewegner.com/wordpress/content/binary/DirectDoc9.zip)
+[DirectDoc9.zip (7.42 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/DirectDoc9.zip)

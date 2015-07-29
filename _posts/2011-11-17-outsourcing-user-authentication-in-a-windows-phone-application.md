@@ -31,11 +31,11 @@ Without further ado, here are the steps to build a Windows Phone application tha
 
 1. Create a new **Windows Phone OS 7.1** application.         
 
-	![WindowsPhoneOS71](http://images.wadewegner.com/wordpress/2011/11/WindowsPhoneOS71.jpg)
+	![WindowsPhoneOS71](https://wadewegner.blob.core.windows.net/wordpress/2011/11/WindowsPhoneOS71.jpg)
 
 2. From the **Package Manager Console** type the following to install the ACS base login page NuGet package for Windows Phone: Install-Package Phone.Identity.AccessControl.BasePage          
 
-	![InstallPackage](http://images.wadewegner.com/wordpress/2011/11/InstallPackage.jpg)
+	![InstallPackage](https://wadewegner.blob.core.windows.net/wordpress/2011/11/InstallPackage.jpg)
 
 3. Update the **AccessControlResources.xaml** resources file to use your ACS namespace and the realm you have configured.
        
@@ -77,7 +77,7 @@ Without further ado, here are the steps to build a Windows Phone application tha
 
 4. Update the **WMAppManifest.xml** file so that the default page is the **LoginPage.xaml**. This way the user will come to the login page before the **MainPage.xaml**.
 
-	![WMAManifiest](http://images.wadewegner.com/wordpress/2011/11/WMAManifiest.jpg)
+	![WMAManifiest](https://wadewegner.blob.core.windows.net/wordpress/2011/11/WMAManifiest.jpg)
 
 5. Update the **LoginPage.xaml.cs** so that the user is navigated to the **MainPage.xaml **upon successfully logging into the application. Make sure to update **Line 23 **and **Line 33**. 
 
@@ -101,7 +101,7 @@ Without further ado, here are the steps to build a Windows Phone application tha
 
 8. Run the application. I’d recommend using Facebook, Google, or Yahoo! for the identity providers, as Live ID does not provide the name claim type in the SWT token.
 
-	![LoginExperience](http://images.wadewegner.com/wordpress/2011/11/LoginExperience.jpg)
+	![LoginExperience](https://wadewegner.blob.core.windows.net/wordpress/2011/11/LoginExperience.jpg)
 
 And that’s it! You can now take advantage of the Identifier claim (and others) in your phone application for many things – tracking users, displaying additional user information, and so forth. Additionally, you can use these claims to authenticate against additional services running in Windows Azure – I’ll cover this token in a future post.
 

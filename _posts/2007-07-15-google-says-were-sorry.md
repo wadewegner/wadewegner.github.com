@@ -15,7 +15,7 @@ I was performing an advanced search on [Google Blog Search](http://blogsearch.go
 
 
 
-![We're sorry ... but your query looks similar to automated requests from a computer virus or spyware application](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/GooglesaysWeresorry_112F5/image_1.png)
+![We're sorry ... but your query looks similar to automated requests from a computer virus or spyware application](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/GooglesaysWeresorry_112F5/image_1.png)
 
 
 

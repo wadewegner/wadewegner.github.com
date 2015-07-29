@@ -14,7 +14,7 @@ categories:
 
 I’ve long advocated using JSON when building mobile and cloud applications. If nothing else, the payload size makes it extremely efficient when transferred over the wire – take a look at the size of the same information formatted as OData, REST-XML, and lastly JSON:
 
-![JSON versus OData versus REST-XML](http://images.wadewegner.com/wordpress/2012/08/JSON.png)
+![JSON versus OData versus REST-XML](https://wadewegner.blob.core.windows.net/wordpress/2012/08/JSON.png)
 
 Pretty compelling.
 
@@ -316,6 +316,6 @@ Now that I have these classes, it’s really easy to use JSON.NET to load them w
 
 Now it’s a simple matter of using my RootObject within my applications.
 
-I feel like I may be the last person to have heard of this tool, in which case I’m both embarrassed and bitter – couldn’t you all have told me about this years ago? ![Smile](http://images.wadewegner.com/wordpress/2012/08/wlEmoticon-smile.png)
+I feel like I may be the last person to have heard of this tool, in which case I’m both embarrassed and bitter – couldn’t you all have told me about this years ago? ![Smile](https://wadewegner.blob.core.windows.net/wordpress/2012/08/wlEmoticon-smile.png)
 
 I hope this helps!

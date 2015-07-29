@@ -13,7 +13,7 @@ categories:
 - Windows Azure
 ---
 
-[![Windows Azure](http://images.wadewegner.com/wordpress/2009/11/WindowsAzure.png)](http://www.windowsazure.com/) One of the advantages to the approach our teams building the Windows Azure Platform have taken is flexibility. Recently, when I spoke at the [Day of Cloud presentation](http://www.wadewegner.com/index.php/2009/10/16/presenting-on-the-windows-azure-platform-at-the-day-of-cloud/), I recall Don Schwarz from Google making these two points (you can see video of his talk [here](http://www.blip.tv/file/2786812)):
+[![Windows Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/11/WindowsAzure.png)](http://www.windowsazure.com/) One of the advantages to the approach our teams building the Windows Azure Platform have taken is flexibility. Recently, when I spoke at the [Day of Cloud presentation](http://www.wadewegner.com/index.php/2009/10/16/presenting-on-the-windows-azure-platform-at-the-day-of-cloud/), I recall Don Schwarz from Google making these two points (you can see video of his talk [here](http://www.blip.tv/file/2786812)):
 
  
 

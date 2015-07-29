@@ -26,11 +26,11 @@ Why did I reboot the machine after only upgrading one site? Well, I'm not exactl
 
 After rebooting, here was my first indication that something was wrong.  
   
-![At least one service or driver failed during system startup.](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Error_1.gif)
+![At least one service or driver failed during system startup.](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Error_1.gif)
 
 So, I immediately went to the Event Viewer. I saw a number of errors involving the SQLSERVERAGENT, Commerce Server, and ENTSSO. Here's a look at the various errors in the log (the reboot occurred around 10:52 am ... some of these other errors were thrown from my playing around before I resolved the problem):
 
-![Event Viewer errors](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Errors_1.gif)
+![Event Viewer errors](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Errors_1.gif)
 
 I should note that the system was previously very healthy, as I use this VM all the time while writing the book _[Professional Commerce Server 2007](http://www.wadewegner.com/PermaLink,guid,96042b54-9859-4ea8-8497-5dab8033f405.aspx)_ for WROX. In fact, I had been using the computer with no problems immediately before installing the service pack.
 
@@ -56,7 +56,7 @@ Obviously, something here is wrong, and SQL Server seemed to be at the heart of 
 
 The next thing I did was try to connect to SQL Server 2005. Using the SQL Server Management Studio, I tried to login with my Windows credentials. I wasn't surprised to see that I couldn't:
 
-![A connection was successfully established to the server, but then an error occured during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/SQLError_1.gif)
+![A connection was successfully established to the server, but then an error occured during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/SQLError_1.gif)
 
 	A connection was successfully established to the server, but then an error occurred during the pre-login handshake. (provider: Shared Memory Provider, error: 0 - No process is on the other end of the pipe.) (Microsoft SQL Server, Error: 223)" (copied directly from dialog window)
 
@@ -64,7 +64,7 @@ I have never seen this error before, but wasn't surprised to see that I couldn't
 
 So, I decide to poke around. What bothered me was that SQL Server (MSSQLSERVER) was running yet I couldn't connect to it, and the SQL Server Agent (MSSQLSERVER) itself couldn't start. Even my attempts to manually start the service failed. Here's a look at SQL Server Configuration Manager:
 
-![SQL Server Configuration Manager](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Config_1.gif)
+![SQL Server Configuration Manager](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Config_1.gif)
 
 Also, I attempted to connect to Commerce Server by running the Upgrade Wizard ... it didn't start, nor did I receive an error. It simply didn't start.
 
@@ -72,7 +72,7 @@ For some reason, one thing jumped out at me -- I was running as LocalSystem rath
 
 Not having any other ideas, I changed both SQL Server and SQL Server Agent to "Log on as" the "Network Service" (NT AUTHORITYNetworkService) instead of the LocalSystem account. I then restarted SQL Server 2005 and the SQL Server Agent. Lo and behold, the SQL Server Agent started-up!
 
-![Config2](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Config2_1.gif)
+![Config2](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/IssueswithCommerceServer2007SP1Installat_A115/Config2_1.gif)
 
 A little baffled, but encouraged that I was on track to resolving the problem (even if I don't understand the root cause), I tried to connect to SQL Server 2005. Sure enough, I was able to login to the database server and interact with the various databases. I also attempted to connect to the Commerce Server 2007 Upgrade Wizard, which immediat
 ely started with no problems.

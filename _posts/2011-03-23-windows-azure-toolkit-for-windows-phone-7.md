@@ -12,7 +12,7 @@ categories:
 - Windows Phone 7
 ---
 
-![Courtesy Steve Marx (http://blog.smarx.com/)](http://images.wadewegner.com/wordpress/2011/03/PhoneCloud.png)I am tremendously excited to announce the release of the [Windows Azure Toolkit for Windows Phone 7](http://watoolkitwp7.codeplex.com/). This toolkit is designed to make it easier for your to **build phone application that leverage cloud services running in Windows Azure**. Our team has been diligently working on this toolkit for months, and I think you’ll like what you see.
+![Courtesy Steve Marx (http://blog.smarx.com/)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/PhoneCloud.png)I am tremendously excited to announce the release of the [Windows Azure Toolkit for Windows Phone 7](http://watoolkitwp7.codeplex.com/). This toolkit is designed to make it easier for your to **build phone application that leverage cloud services running in Windows Azure**. Our team has been diligently working on this toolkit for months, and I think you’ll like what you see.
 
  
 
@@ -48,7 +48,7 @@ It’s easy to get started.
   1. Head over to [http://watoolkitwp7.codeplex.com/](http://watoolkitwp7.codeplex.com/) and download the latest package named **WAZToolkitForWP7.exe**. This file is a self-extracting executable, and will unpack the files on your disk.
    
   2. Your first step is to run **WAZToolkitForWP7.exe**. **Accept** the License Agreement (standard MS-PL) and click **Install**. Nothing is registered or installed on the O/S, so it makes it extremely easy to upgrade or remove.        
-![image](http://images.wadewegner.com/wordpress/2011/03/image4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image4.png)
    
   3. Your next step is to run **Setup.cmd**. This launches the configuration wizard that will check prerequisites and install new project templates. Walk through the wizard and install any missing software. Please note that “Visual Basic for the Windows Phone Developer Tools RTW” is optional and not required.
    
@@ -65,7 +65,7 @@ Head to **Visual Studio** and select **File** –> **New** –> **Project**. Sel
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/03/image5.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image5.png)
 
  
 
@@ -77,7 +77,7 @@ A new project wizard will ask you for your Windows Azure storage account informa
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/03/image6.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image6.png)
 
  
 
@@ -89,7 +89,7 @@ Simply hit **F5** to build and run. Your phone application will launch in the Wi
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/03/image_thumb.png)](http://images.wadewegner.com/wordpress/2011/03/image7.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image7.png)
 
  
 

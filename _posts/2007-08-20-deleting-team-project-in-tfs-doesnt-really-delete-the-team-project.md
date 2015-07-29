@@ -49,7 +49,7 @@ Before I began documenting the procedure, I went through and confirmed that ever
 
 
 
-[![TF50608: Unable to retrieve information for security object $PROJECT:vsts:///Classification/TeamProject/<guid, it does not exist.](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/441054752d16_DDAD/image_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/441054752d16_DDAD/image.png)
+[![TF50608: Unable to retrieve information for security object $PROJECT:vsts:///Classification/TeamProject/<guid, it does not exist.](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/441054752d16_DDAD/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/441054752d16_DDAD/image.png)
 
 
 

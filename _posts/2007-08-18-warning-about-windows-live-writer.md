@@ -12,7 +12,7 @@ categories:
 
 As those of you who subscribe to this blog's feed have noticed, a place holder record was written into my RSS feed. Having just reinstalled my operating system (I have switched back to Vista Business once again), I was configuring my Windows Live Writer for this blog. If you click View --> Update Weblog Style you will be asked the following:
 
-[![Allow Writer to Create a Temporary Post?](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WarningaboutWindowsLiveWriter_8913/image_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WarningaboutWindowsLiveWriter_8913/image.png)
+[![Allow Writer to Create a Temporary Post?](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WarningaboutWindowsLiveWriter_8913/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WarningaboutWindowsLiveWriter_8913/image.png)
 
 Just say No!
 

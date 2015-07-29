@@ -41,7 +41,7 @@ Here’s what you’ll have to do to get the tools and SDK working with the Wind
 
   
   1. Install **Microsoft .NET Framework 3.5.1**. Easiest way is to type “Windows Features”, select **Settings**, and select **Turn Windows features on or off**. Then simply check the checkbox. Click **OK** to install.         
-![Step 1 - .NET 3.5.1](http://images.wadewegner.com/wordpress/2011/09/Step-1-.NET-3.5.1.png)
+![Step 1 - .NET 3.5.1](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Step-1-.NET-3.5.1.png)
    
   2. Next we need to correctly configure IIS. Typically we’d do this through the Web Platform Installer, but this doesn’t work correctly on Windows 8. From **Turn Windows features on or off** you’ll need to do the following, then click **OK** to install.              
     * Check **Internet Information Services**. 
@@ -93,7 +93,7 @@ Save the above script as a CMD file (i.e. OpenVisualStudio2010.cmd) and then mak
 
 
 
-[![Running Instance](http://images.wadewegner.com/wordpress/2011/09/Running-Instance_thumb.png)](http://images.wadewegner.com/wordpress/2011/09/Running-Instance.png)
+[![Running Instance](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance.png)
 
 
 

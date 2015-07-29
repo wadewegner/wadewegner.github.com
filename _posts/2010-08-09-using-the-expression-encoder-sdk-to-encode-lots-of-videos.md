@@ -149,10 +149,10 @@ Good stuff.
 
 I’m running it from the console, so you will have to make some modifications if you want it to run in a more sophisticated application. Works for me, though – I just start it up at the end of the day. Here you can see the information that’s written out to the console (note the variety of cores leveraged):
 
-![Console Output](http://images.wadewegner.com/wordpress/2010/08/console.png)
+![Console Output](https://wadewegner.blob.core.windows.net/wordpress/2010/08/console.png)
 
 It’s fun to see my machine working this hard. Every core is pegged.
 
-![Pegged Cores](http://images.wadewegner.com/wordpress/2010/08/image2.png)
+![Pegged Cores](https://wadewegner.blob.core.windows.net/wordpress/2010/08/image2.png)
 
 Hope someone finds this useful. Anyone see a better way to approach this?

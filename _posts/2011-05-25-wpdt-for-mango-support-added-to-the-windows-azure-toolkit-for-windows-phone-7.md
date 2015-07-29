@@ -30,7 +30,7 @@ To support the WPDT 7.1 beta, we just released the **[Windows Azure Toolkit for 
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image27.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image27.png)
 
  
 
@@ -42,7 +42,7 @@ Regardless of whether you have downloaded or installed the new tools, the experi
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image25.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image25.png)
 
  
 

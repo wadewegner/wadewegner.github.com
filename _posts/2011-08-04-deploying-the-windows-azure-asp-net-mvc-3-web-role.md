@@ -24,7 +24,7 @@ One of the items I demonstrated on the show was deploying the new MVC 3 template
 
  
 
-![Windows Azure ASP.NET MVC 3 Web Role](http://images.wadewegner.com/wordpress/2011/08/image10.png)
+![Windows Azure ASP.NET MVC 3 Web Role](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image10.png)
 
  
 
@@ -36,7 +36,7 @@ Immediately after creating the projects I confirmed that my assemblies were all 
 
  
 
-[![YSOD](http://images.wadewegner.com/wordpress/2011/08/image_thumb.png)](http://images.wadewegner.com/wordpress/2011/08/image1.png)
+[![YSOD](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image1.png)
 
  
 
@@ -44,7 +44,7 @@ Naturally, I updated my **web.config** file with <customErrors mode="Off" /> and
 
  
 
-[![No SQL Express](http://images.wadewegner.com/wordpress/2011/08/image_thumb1.png)](http://images.wadewegner.com/wordpress/2011/08/image2.png)
+[![No SQL Express](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image2.png)
 
  
 
@@ -62,7 +62,7 @@ In retrospect, I should have expected this error as I received validation warnin
 
  
 
-![Warning](http://images.wadewegner.com/wordpress/2011/08/image11.png)
+![Warning](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image11.png)
 
  
 
@@ -118,14 +118,14 @@ In retrospect, I wish I had simply created a SQL Azure database and used it inst
   1. In the [Windows Azure Platform Management Portal](http://windows.azure.com/), select **Database** and create a new database. I called mine **UniversalProviders**.
 
       
-![image](http://images.wadewegner.com/wordpress/2011/08/image4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image4.png)
 
 
   
   2. Select the database and click the **View …** button to grab/copy your connection string. Note: you’ll need to remember your SQL login password.
 
       
-![image](http://images.wadewegner.com/wordpress/2011/08/image6.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image6.png)
 
 
   
@@ -166,7 +166,7 @@ Now, when we run the applications, it works!
 
 
 
-[![image](http://images.wadewegner.com/wordpress/2011/08/image_thumb3.png)](http://images.wadewegner.com/wordpress/2011/08/image7.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image7.png)
 
 
 
@@ -178,7 +178,7 @@ In fact, I recommend you use **Database Manager **from the portal …
 
 
 
-[![image](http://images.wadewegner.com/wordpress/2011/08/image_thumb4.png)](http://images.wadewegner.com/wordpress/2011/08/image8.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image8.png)
 
 
 
@@ -190,7 +190,7 @@ In fact, I recommend you use **Database Manager **from the portal …
 
 
 
-[![image](http://images.wadewegner.com/wordpress/2011/08/image_thumb5.png)](http://images.wadewegner.com/wordpress/2011/08/image9.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image9.png)
 
 
 
@@ -220,7 +220,7 @@ What’s more, if you then click **Log On **and setup a user, you’ll see all t
 
 
 
-![Picture](http://images.wadewegner.com/wordpress/2011/08/Picture.png)
+![Picture](https://wadewegner.blob.core.windows.net/wordpress/2011/08/Picture.png)
 
 
 

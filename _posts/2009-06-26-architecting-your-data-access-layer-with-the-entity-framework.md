@@ -30,7 +30,7 @@ Let me spell it out in a little more detail, as well as highlight what I feel ar
 
 With this approach, you opt to use the Entity Framework as your data access layer. This is a perfectly legitimate approach, and comes with a host of benefits in many situations. Here’s a picture of the architecture:
 
-![EF](http://images.wadewegner.com/wordpress/2010/04/EF.png)
+![EF](https://wadewegner.blob.core.windows.net/wordpress/2010/04/EF.png)
 
 As you can see, in this architecture aspects of the Entity Framework – like entities and the entity framework object context – are scattered throughout the various tiers. This approach has many benefits, but it also introduces some challenges.
 

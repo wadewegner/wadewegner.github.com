@@ -27,7 +27,7 @@ Today we released an update to our [Windows Azure Toolkit for iOS](https://githu
  
 We first released this toolkit on May 6th, and since then we’ve released two minor updates and even accepted a [merge request from the community](http://www.wadewegner.com/2011/05/released-windows-azure-toolkit-for-ios-v1-0-1/). This toolkit has been a real pleasure to work on. Not only has it been to break out of the traditional Microsoft stack and learn about new languages and environments, but it’s also been great to introduce a lot of Objective-C and iOS developers to the power of Windows Azure.
 
-![ACS & iOS/iPhone](http://images.wadewegner.com/wordpress/2011/08/HomeRealm.png)
+![ACS & iOS/iPhone](https://wadewegner.blob.core.windows.net/wordpress/2011/08/HomeRealm.png)
 
 There are three key aspects to version 1.2 of the iOS toolkit:
   
@@ -61,7 +61,7 @@ Along with the CSPKG you need a CSCFG to deploy your application to Windows Azur
 
 In Visual Studio we have tools that make it easy to update the CSCFG file without having to open up the XML, but of course you cannot do this on a Mac. To make this easier, we created a tool that you can use on the Mac to walkthrough and generate the CSCFG file with all the appropriate details. Once created, you can use this CSCFG file along with the downloaded CSPKG file to deploy your application.
 
-[![iosconig](http://images.wadewegner.com/wordpress/2011/07/iosconig_thumb.png)](http://images.wadewegner.com/wordpress/2011/07/iosconig.png)
+[![iosconig](https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig.png)
 
 In addition to creating the CSCFG file, the configuration tool will also updated ACS with all the appropriate settings so that you can build & run your application quickly. For all the details, please take a look at Vittorio Bertocci’s post on [Using the Windows Azure Access Control Service in iOS Applications](http://blogs.msdn.com/b/vbertocci/archive/2011/07/25/using-the-windows-azure-access-control-service-in-ios-applications.aspx).
 

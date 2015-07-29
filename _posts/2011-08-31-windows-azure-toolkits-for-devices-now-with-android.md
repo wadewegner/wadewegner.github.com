@@ -37,7 +37,7 @@ These releases complete our coverage of the three device platforms we intended t
 
  
 
-![Windows Azure Toolkits for Devices](http://images.wadewegner.com/wordpress/2011/08/DevicesToolkits.jpg)
+![Windows Azure Toolkits for Devices](https://wadewegner.blob.core.windows.net/wordpress/2011/08/DevicesToolkits.jpg)
 
  
 
@@ -63,13 +63,13 @@ Here’s the project structure:
 
   
   * library       
-![Eclipse library project](http://images.wadewegner.com/wordpress/2011/08/Projects1.jpg)
+![Eclipse library project](https://wadewegner.blob.core.windows.net/wordpress/2011/08/Projects1.jpg)
    
   * simple (sample application)       
-![Eclipse sample project](http://images.wadewegner.com/wordpress/2011/08/Projects2.jpg)
+![Eclipse sample project](https://wadewegner.blob.core.windows.net/wordpress/2011/08/Projects2.jpg)
    
   * tests       
-![Eclipse test project](http://images.wadewegner.com/wordpress/2011/08/Projects3.jpg)
+![Eclipse test project](https://wadewegner.blob.core.windows.net/wordpress/2011/08/Projects3.jpg)
  
 
 The library project includes the full source code to the storage client and authentication implementations.
@@ -80,7 +80,7 @@ Once you configure your workspace in Eclipse, you can run the simple sample appl
 
  
 
-![Starting the Android Emulator](http://images.wadewegner.com/wordpress/2011/08/StartingEmulator.jpg)
+![Starting the Android Emulator](https://wadewegner.blob.core.windows.net/wordpress/2011/08/StartingEmulator.jpg)
 
  
 
@@ -88,7 +88,7 @@ From here you choose to either connect directly to Windows Azure storage using y
 
  
 
-![ProxySelector](http://images.wadewegner.com/wordpress/2011/08/ProxySelector.jpg)
+![ProxySelector](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ProxySelector.jpg)
 
  
 
@@ -96,7 +96,7 @@ From here you choose to either connect directly to Windows Azure storage using y
 
  
 
-![FileLocation](http://images.wadewegner.com/wordpress/2011/08/FileLocation.jpg)
+![FileLocation](https://wadewegner.blob.core.windows.net/wordpress/2011/08/FileLocation.jpg)
 
  
 
@@ -132,7 +132,7 @@ I’m most excited about the support for SQL Azure.
 
  
 
-![SQL Azure Support](http://images.wadewegner.com/wordpress/2011/08/SQLAzureSupport.jpg)
+![SQL Azure Support](https://wadewegner.blob.core.windows.net/wordpress/2011/08/SQLAzureSupport.jpg)
 
  
 
@@ -144,7 +144,7 @@ You can choose to enter your SQL Azure credentials into the wizard (which places
 
  
 
-![Using SQL Azure Locally](http://images.wadewegner.com/wordpress/2011/08/SQLAzureLocally.jpg)
+![Using SQL Azure Locally](https://wadewegner.blob.core.windows.net/wordpress/2011/08/SQLAzureLocally.jpg)
 
  
 
@@ -152,7 +152,7 @@ Once you’ve finished walking through the wizard, you may not immediately notic
 
  
 
-![SQL Azure in the Phone Emulator](http://images.wadewegner.com/wordpress/2011/08/SQLAzureInThePhoneEmulator.jpg)
+![SQL Azure in the Phone Emulator](https://wadewegner.blob.core.windows.net/wordpress/2011/08/SQLAzureInThePhoneEmulator.jpg)
 
  
 
@@ -160,7 +160,7 @@ Moving forward we plan to only target the Windows Phone Developer Tools 7.1 rele
 
  
 
-![Samples](http://images.wadewegner.com/wordpress/2011/08/image14.png)
+![Samples](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image14.png)
 
  
 
@@ -176,7 +176,7 @@ Over the last few weeks, as more and more developers used our iOS libraries, we 
 
  
 
-![github repo for iOS](http://images.wadewegner.com/wordpress/2011/08/watoolkitforios.jpg)
+![github repo for iOS](https://wadewegner.blob.core.windows.net/wordpress/2011/08/watoolkitforios.jpg)
 
  
 

@@ -11,7 +11,7 @@ categories:
 - Windows Azure AppFabric
 ---
 
-[![Windows Azure AppFabric](http://images.wadewegner.com/wordpress/2010/08/AppFabric2.png)](http://www.microsoft.com/windowsazure/appfabric/default.aspx)Today the Windows Azure AppFabric team released an [update to the SDK](http://www.microsoft.com/downloads/details.aspx?FamilyID=39856a03-1490-4283-908f-c8bf0bfad8a5&displaylang=en). This release is what’s called a QFE (quick fix engineering) update that’s intended to address bugs or breaking issues. To my knowledge, this is the first QFE for the Windows Azure AppFabric. In this case, the QFE fixed one bug:
+[![Windows Azure AppFabric](https://wadewegner.blob.core.windows.net/wordpress/2010/08/AppFabric2.png)](http://www.microsoft.com/windowsazure/appfabric/default.aspx)Today the Windows Azure AppFabric team released an [update to the SDK](http://www.microsoft.com/downloads/details.aspx?FamilyID=39856a03-1490-4283-908f-c8bf0bfad8a5&displaylang=en). This release is what’s called a QFE (quick fix engineering) update that’s intended to address bugs or breaking issues. To my knowledge, this is the first QFE for the Windows Azure AppFabric. In this case, the QFE fixed one bug:
 
  
 

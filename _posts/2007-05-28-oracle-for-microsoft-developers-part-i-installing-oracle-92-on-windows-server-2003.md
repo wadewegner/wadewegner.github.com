@@ -22,59 +22,59 @@ So, without further ado, let's see go through the steps needed to install Oracle
 
 2. Start the Oracle Universal Installer. Click the Next button.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/01.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/01.gif)  
 
 3. Confirm the installation destination (you'll need at least 3 GBs available for the installation) and click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/02.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/02.gif)  
 
 4. Select "Oracle9i Database 9.2.0.1.0", and click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/03.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/03.gif)  
 
 5. Select "Enterprise Edition", and click Next. (Why? Well, I don't have any compelling reason here - it's just what I've used to get things working ...)  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/04.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/04.gif)  
 
 6. Select "General Purpose", and click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/05.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/05.gif)  
 
 7. Leave the Port Number as 2030, and click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/06.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/06.gif)  
 
 8. Define the Global Database Name. I choose "orcl", but feel free to choose whatever. Make sure that the SID is unique - it's probably easiest to make it the same value as the Global Database Name. Click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/07.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/07.gif)  
 
 9. Specify the Directory for Database Files. I choose to leave the default value. Click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/08.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/08.gif)  
 
 10. Unless you have a reason to change it, leave the "default character set" selected, and click Next.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/09.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/09.gif)  
 
 11. On the Summary screen, click Install. This installation process will take a little while. Be patience. Read one of my other posts, while you're waiting.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/10.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/10.gif)  
 
 12. The next screen to appear is the Database Configuration Assistance. On this screen, specify the SYS and SYSTEM passwords. Do NOT click OK yet.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/11.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/11.gif)  
 
 13. Before you click OK, click the Password Management Button. Specify passwords for SYS, SYSTEM, and DBSNMP (SCOTT too, if you'd like).  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/12.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/12.gif)  
 
 14. Once you get to the End of Installation, click Exit.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/13.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/13.gif)  
 
 15. After you click Exit, the Oracle Enterprise Management Console will start. Check and make sure you can log into your Oracle database server by expanding databases, right-click ORCL (or whatever you called it) and click Connect. Enter the "system" Username, and change Connect as from "Normal" to "SYSDBA". Click OK.  
 
-  ![](http://images.wadewegner.com/wordpress/content/binary/14.gif)  
+  ![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/14.gif)  
 
 16. If you were able to successfully connect to the Oracle database server, then restart Windows. There's a number of reasons to do this, including updates to the PATH environment variable.
 

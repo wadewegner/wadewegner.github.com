@@ -31,7 +31,7 @@ Have you seen this error before? If you’ve spent any time with the Windows Azu
 
 And an image of the error:
 
-![Development Storage initialization error](http://images.wadewegner.com/wordpress/2012/01/SQLError.png)
+![Development Storage initialization error](https://wadewegner.blob.core.windows.net/wordpress/2012/01/SQLError.png)
 
 This error can occur when running the storage emulator (or running DSINIT.exe) for the first time. The compute emulator needs to initialize itself, which includes creating a local SQL Server database that is used to store data for local Windows Azure storage. The above error indicates that there’s a permissions when trying to create the database.
 

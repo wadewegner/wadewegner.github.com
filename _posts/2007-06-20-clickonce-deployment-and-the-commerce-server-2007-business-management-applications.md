@@ -25,7 +25,7 @@ When an application is published, two files are created: an application manifest
 
 Here's an example of an application published to a Web page (this particular example is from the SpaceWar SDK for the XNA framework - yes, I truly aspire to be an [XBOX 360 game developer](http://msdn2.microsoft.com/en-us/xna/default.aspx)):
 
-[![Example of application published to a Web page via ClickOnce](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ClickOnceDeploymentoftheCommerceServer20_DCB4/ClickOnce_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ClickOnceDeploymentoftheCommerceServer20_DCB4/ClickOnce.gif)
+[![Example of application published to a Web page via ClickOnce](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ClickOnceDeploymentoftheCommerceServer20_DCB4/ClickOnce_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ClickOnceDeploymentoftheCommerceServer20_DCB4/ClickOnce.gif)
 
 (Note the deployment version number.)
 

@@ -103,7 +103,7 @@ So, the architecture might look something like this:
 
 
 
-![Apologies for the crappy graphic](http://images.wadewegner.com/wordpress/2010/05/image1.png)
+![Apologies for the crappy graphic](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image1.png)
 
 
 

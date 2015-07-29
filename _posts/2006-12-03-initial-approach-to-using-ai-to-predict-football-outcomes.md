@@ -14,7 +14,7 @@ Over the past few months, I have been playing around with artificial neural netw
 
 Below is a simple ANN architecture:
 
-![](http://images.wadewegner.com/wordpress/content/binary/NeuralNetwork.png)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/NeuralNetwork.png)
 
 On the left we have inputs (i.e. data), and on the right we have an output (i.e. the outcome). The middle is a layer of neurons that essentially map the inputs to the output via weights (i.e. synapses).
 

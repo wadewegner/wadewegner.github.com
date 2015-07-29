@@ -20,7 +20,7 @@ So, [what is the Windows Azure platform AppFabric](http://www.microsoft.com/wind
 
  
 
-[![What is the Windows Azure platform AppFabric?](http://images.wadewegner.com/wordpress/2010/05/image.png)](http://www.microsoft.com/windowsazure/videoPlayerPopup.aspx?w=720&h=480&vid=NetServices_720x480_FINAL_101609.wmv)
+[![What is the Windows Azure platform AppFabric?](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image.png)](http://www.microsoft.com/windowsazure/videoPlayerPopup.aspx?w=720&h=480&vid=NetServices_720x480_FINAL_101609.wmv)
 
  
 

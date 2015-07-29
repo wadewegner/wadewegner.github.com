@@ -135,7 +135,7 @@ Go ahead and run the SelfSTS project in the EchoSampleSAML solution below by rig
 
  
 
-![SelfSTS](http://images.wadewegner.com/wordpress/2010/11/image1.png)
+![SelfSTS](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image1.png)
 
  
 
@@ -153,7 +153,7 @@ Quickly stop the SelfSTS and click “Edit Claim Types and Values”.
 
  
 
-![Edit Claims](http://images.wadewegner.com/wordpress/2010/11/EditClaims.png)
+![Edit Claims](https://wadewegner.blob.core.windows.net/wordpress/2010/11/EditClaims.png)
 
  
 
@@ -183,7 +183,7 @@ When you open the solution you’ll have to upgrade it for Visual Studio 2010. S
 
  
 
-![AcmBrowser](http://images.wadewegner.com/wordpress/2010/11/AcmBrowser.png)
+![AcmBrowser](https://wadewegner.blob.core.windows.net/wordpress/2010/11/AcmBrowser.png)
 
  
 
@@ -191,7 +191,7 @@ This is a very handy tool, but unfortunately it takes a little time to get used 
 
  
 
-![Service Namespace and Management Key](http://images.wadewegner.com/wordpress/2010/11/ServiceNamespace.png)
+![Service Namespace and Management Key](https://wadewegner.blob.core.windows.net/wordpress/2010/11/ServiceNamespace.png)
 
  
 
@@ -215,7 +215,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
        
     * Endpoint URI: [http://localhost:8000/STS/FederationMetadata/2007-06/FederationMetadata.xml](http://localhost:8000/STS/FederationMetadata/2007-06/FederationMetadata.xml) (from the SelfSTS)             
            
-[![image](http://images.wadewegner.com/wordpress/2010/11/image_thumb.png)](http://images.wadewegner.com/wordpress/2010/11/image2.png)             
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image2.png)             
 
        
    
@@ -239,7 +239,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
            
       * Value: Send                
                
-[![test send](http://images.wadewegner.com/wordpress/2010/11/image_thumb1.png)](http://images.wadewegner.com/wordpress/2010/11/image3.png)                 
+[![test send](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image3.png)                 
 
                
        
@@ -262,7 +262,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
            
       * Value: Listen                
                
-[![test listen](http://images.wadewegner.com/wordpress/2010/11/image_thumb2.png)](http://images.wadewegner.com/wordpress/2010/11/image4.png)                 
+[![test listen](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image4.png)                 
 
                
        
@@ -444,7 +444,7 @@ When the Service starts and successfully connects as a listener, it should look 
 
  
 
-![image](http://images.wadewegner.com/wordpress/2010/11/image5.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image5.png)
 
  
 
@@ -452,7 +452,7 @@ After you startup the Client and echo some text, you’ll see the text reflected
 
  
 
-![image](http://images.wadewegner.com/wordpress/2010/11/image6.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image6.png)
 
  
 

@@ -17,7 +17,7 @@ I had the honor and privilege to present with Jack Greenfield at PDC2008 this pa
 
 It was an incredible journey to PDC, and I plan to post a number of blog entries over the next couple weeks highlighting our [day one keynote with Bob Muglia and RedPrairie](http://channel9.msdn.com/pdc2008/KYN01/) (skip to minute 59:00), our use of the [Azure Services Platform](http://www.microsoft.com/azure/default.mspx) to build a supply chain application, and lots of code and patterns that show how we did it.  For now, I'd like to share with your our breakout session at PDC2008.  To watch our presentation, please click the picture below:
 
-[![Behind The Scenes: How We Built a Multi-Enterprise Supply Chain Application](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/BuildingMultiEnterpriseBusinessApplicati_1340D/image_3.png)](http://channel9.msdn.com/pdc2008/BB59/)
+[![Behind The Scenes: How We Built a Multi-Enterprise Supply Chain Application](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BuildingMultiEnterpriseBusinessApplicati_1340D/image_3.png)](http://channel9.msdn.com/pdc2008/BB59/)
 
 Our session abstract:
 

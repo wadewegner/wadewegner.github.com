@@ -45,7 +45,7 @@ First, access the Windows Azure portal by navigating to [_http://windows.azure.c
 
  
 
-![iOSACS1](http://images.wadewegner.com/wordpress/2011/08/iOSACS1.jpg)
+![iOSACS1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS1.jpg)
 
  
 
@@ -53,7 +53,7 @@ Click on the **Service Bus, Access Control & **Caching menu item and select the 
 
  
 
-![iOSACS2](http://images.wadewegner.com/wordpress/2011/08/iOSACS2.jpg)
+![iOSACS2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS2.jpg)
 
  
 
@@ -61,7 +61,7 @@ The new service namespace dialog will open. Ensure that **Access Control** is se
 
  
 
-![iOSACS3](http://images.wadewegner.com/wordpress/2011/08/iOSACS3.jpg)
+![iOSACS3](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS3.jpg)
 
  
 
@@ -69,7 +69,7 @@ The ACS namespace will now be created. This might take a few minutes. Wait until
 
  
 
-![iOSACS4](http://images.wadewegner.com/wordpress/2011/08/iOSACS4.jpg)
+![iOSACS4](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS4.jpg)
 
  
 
@@ -81,7 +81,7 @@ Within the portal, click on** Identity Providers **and add the identity provider
 
  
 
-![iOSACS5](http://images.wadewegner.com/wordpress/2011/08/iOSACS5.jpg)
+![iOSACS5](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS5.jpg)
 
  
 
@@ -93,7 +93,7 @@ Once you have added the required providers, click on the **Relying Parties** sec
 
  
 
-![iOSACS6](http://images.wadewegner.com/wordpress/2011/08/iOSACS6.jpg)
+![iOSACS6](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS6.jpg)
 
  
 
@@ -122,7 +122,7 @@ Next, go into the **Rule Groups** section of the portal and select the default r
 
  
 
-[![iOSACS7](http://images.wadewegner.com/wordpress/2011/08/iOSACS7_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/iOSACS7.jpg)
+[![iOSACS7](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS7_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS7.jpg)
 
  
 
@@ -130,7 +130,7 @@ Click on the **Generate** link in order to generate a set of default rules for t
 
  
 
-![iOSACS8](http://images.wadewegner.com/wordpress/2011/08/iOSACS8.jpg)
+![iOSACS8](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS8.jpg)
 
  
 
@@ -138,7 +138,7 @@ Select the providers that you wish to use, and click on the **Generate** button.
 
  
 
-![iOSACS9](http://images.wadewegner.com/wordpress/2011/08/iOSACS9.jpg)
+![iOSACS9](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS9.jpg)
 
  
 
@@ -162,7 +162,7 @@ To start, launch XCode 4 and create a new project.
 
  
 
-![iOSACS10](http://images.wadewegner.com/wordpress/2011/08/iOSACS10.jpg)
+![iOSACS10](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS10.jpg)
 
  
 
@@ -170,7 +170,7 @@ From the project template dialog, select a **View-based application** and click 
 
  
 
-![iOSACS11](http://images.wadewegner.com/wordpress/2011/08/iOSACS11.jpg)
+![iOSACS11](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS11.jpg)
 
  
 
@@ -186,7 +186,7 @@ Right click on your project and select the **Add Files to…** menu option.
 
  
 
-![iOSACS12](http://images.wadewegner.com/wordpress/2011/08/iOSACS12.jpg)
+![iOSACS12](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS12.jpg)
 
  
 
@@ -194,7 +194,7 @@ Locate the .a file (for the simulator) and header files and add them to your pro
 
  
 
-![iOSACS13](http://images.wadewegner.com/wordpress/2011/08/iOSACS13.jpg)
+![iOSACS13](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS13.jpg)
 
  
 
@@ -202,7 +202,7 @@ Now we need to add a reference to a library required for XML parsing. To do this
 
  
 
-![iOSACS14](http://images.wadewegner.com/wordpress/2011/08/iOSACS14.jpg)
+![iOSACS14](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS14.jpg)
 
  
 
@@ -214,7 +214,7 @@ Ensure that the libwatoolkitios.a file has been automatically added as a referen
 
  
 
-![iOSACS15](http://images.wadewegner.com/wordpress/2011/08/iOSACS15.jpg)
+![iOSACS15](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS15.jpg)
 
  
 
@@ -230,7 +230,7 @@ In the search box, type “other linker” to filter the settings.
 
  
 
-![iOSACS16](http://images.wadewegner.com/wordpress/2011/08/iOSACS16.jpg)
+![iOSACS16](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS16.jpg)
 
  
 
@@ -242,7 +242,7 @@ Click on the + button to add two flags. The first is **–ObjC** and the second 
 
  
 
-![iOSACS17](http://images.wadewegner.com/wordpress/2011/08/iOSACS17.jpg)
+![iOSACS17](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS17.jpg)
 
  
 
@@ -296,7 +296,7 @@ Once the application starts, you should be prompted to select an identity provid
 
  
 
-![iOSACS18](http://images.wadewegner.com/wordpress/2011/08/iOSACS18.jpg)
+![iOSACS18](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS18.jpg)
 
  
 
@@ -304,7 +304,7 @@ Pick one of the providers, and enter a valid set of credentials.
 
  
 
-![iOSACS19](http://images.wadewegner.com/wordpress/2011/08/iOSACS19.jpg)
+![iOSACS19](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS19.jpg)
 
  
 
@@ -316,7 +316,7 @@ The first time the application is run, you’ll be prompted to authorize the app
 
  
 
-[![iOSACS20](http://images.wadewegner.com/wordpress/2011/08/iOSACS20_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/iOSACS20.jpg)
+[![iOSACS20](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS20_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS20.jpg)
 
  
 

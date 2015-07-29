@@ -104,7 +104,7 @@ Ah, this explains why Internet Explorer only allows me to download two files at 
 
 Now, in order to allow my BizTalk orchestration to proper issue more than two concurrent connections (remember, it too is just calling .NET code), I needed to modify the BTSNTSvc.exe.config file that services the BizTalk host instances. This file is found in the BizTalk Server directory under Program Files:
 
-[![BTSNTSvc.exe.config](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/e8c3b063ce21_A687/image_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/e8c3b063ce21_A687/image.png)
+[![BTSNTSvc.exe.config](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/e8c3b063ce21_A687/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/e8c3b063ce21_A687/image.png)
 
 Simply add the <system.net> ... </system.net> XML to the configuration file and then restart your host instances. This will allow you to issue more than two concurrent requests to any given web server.
 

@@ -27,7 +27,7 @@ It's a pretty slick (albeit graphically retarded) Silverlight application. It us
 
 
 
-![Hangman with Silverlight and .NET 3.5](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/HangmanapplicationbuiltonSilverlightan.5_EC67/image_1.png)
+![Hangman with Silverlight and .NET 3.5](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/HangmanapplicationbuiltonSilverlightan.5_EC67/image_1.png)
 
 
 

@@ -34,7 +34,7 @@ When we released on Monday we did not include updated project templates for Visu
 
  
 
-![VBNET](http://images.wadewegner.com/wordpress/2011/05/VBNET1.png)
+![VBNET](https://wadewegner.blob.core.windows.net/wordpress/2011/05/VBNET1.png)
 
  
 
@@ -52,10 +52,10 @@ We also fixed a few bugs in this release. Many thanks to those of you who helped
 
   
   * **[Fixed]** The VS on-screen documentation for "Windows Phone 7 Empty Cloud App" template is missing.         
-![clip_image002](http://images.wadewegner.com/wordpress/2011/05/clip_image0021.gif)
+![clip_image002](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0021.gif)
    
   * **[Fixed]** Modify VSIX installation scripts to avoid errors when users have PowerShell Profile Scripts.         
-![clip_image002[5]](http://images.wadewegner.com/wordpress/2011/05/clip_image00251.gif)
+![clip_image002[5]](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image00251.gif)
    
   * **[Fixed]** The **CopyLocal** property of the **Microsoft.IdentityModel** assembly is set to **false** in the sample and project template solutions. It has now been set to **true**. 
    

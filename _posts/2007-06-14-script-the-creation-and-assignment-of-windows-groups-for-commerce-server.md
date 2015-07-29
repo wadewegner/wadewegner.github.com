@@ -89,6 +89,6 @@ Without further ado, here's the script:
 
 Pretty straightforward. Nothing too fancy or flashy.
 
-[CreateAndAssignCSGroups.vbs (1.98 KB)](http://images.wadewegner.com/wordpress/content/binary/CreateAndAssignCSGroups.vbs)
+[CreateAndAssignCSGroups.vbs (1.98 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/CreateAndAssignCSGroups.vbs)
 
 I hope someone fiinds this helpful!

@@ -10,7 +10,7 @@ categories:
 - Windows Phone 7
 ---
 
-[![image](http://images.wadewegner.com/wordpress/2010/12/image9.png)](http://windowsphone.wordpress.org/)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image9.png)](http://windowsphone.wordpress.org/)
 
  
 

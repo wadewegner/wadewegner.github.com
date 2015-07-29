@@ -22,7 +22,7 @@ I am extremely excited to announce the immediate availability of the Windows Azu
 
 This first release of the Windows Azure Toolkit for iOS provides an easy and convenient way of accessing Windows Azure storage from iOS-based applications. As with the [Windows Azure Toolkit for Windows Phone 7](http://watoolkitwp7.codeplex.com/) we will continue to bring additional capabilities to the toolkit, such as push notifications, Access Control Service, and more.
 
-![iOSImage1](http://images.wadewegner.com/wordpress/2011/05/iOSImage1.png)![iOSImage2](http://images.wadewegner.com/wordpress/2011/05/iOSImage2.png)![iOSImage3](http://images.wadewegner.com/wordpress/2011/05/iOSImage3.png)
+![iOSImage1](https://wadewegner.blob.core.windows.net/wordpress/2011/05/iOSImage1.png)![iOSImage2](https://wadewegner.blob.core.windows.net/wordpress/2011/05/iOSImage2.png)![iOSImage3](https://wadewegner.blob.core.windows.net/wordpress/2011/05/iOSImage3.png)
 
 You can get the toolkit—and all the source code—on github:
 
@@ -58,7 +58,7 @@ You can download the [compiled storage library on github](https://github.com/dow
 
 If you are not familiar with XCode, this is a short tutorial for getting your first project up and running. Launch **XCode 4** and create a new project:
 
-![](http://images.wadewegner.com/wordpress/2011/05/clip_image0024_thumb.jpg)
+![](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0024_thumb.jpg)
 
 Select a **View-based application** and click **Next**.
 
@@ -66,7 +66,7 @@ Give the project a name and company. For the purposes of this walkthrough, we’
 
  
 
-![](http://images.wadewegner.com/wordpress/2011/05/clip_image0044_thumb.jpg)
+![](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0044_thumb.jpg)
 
  
 
@@ -78,7 +78,7 @@ When the project opens, right click on the Frameworks folder and select “Add F
 
  
 
-[![clip_image006[4]_thumb](http://images.wadewegner.com/wordpress/2011/05/clip_image0064_thumb_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/05/clip_image0064_thumb.jpg)
+[![clip_image006[4]_thumb](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0064_thumb_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0064_thumb.jpg)
 
  
 
@@ -86,7 +86,7 @@ Locate the **libwatoolkitios.a** library file from the download package folder (
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb7.png)](http://images.wadewegner.com/wordpress/2011/05/image8.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb7.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image8.png)
 
  
 
@@ -98,7 +98,7 @@ In the search box, type in “header search” and look for an entry called “H
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb8.png)](http://images.wadewegner.com/wordpress/2011/05/image9.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb8.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image9.png)
 
  
 
@@ -106,7 +106,7 @@ Double-click on this line (towards the right of the line), and click on the “+
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb9.png)](http://images.wadewegner.com/wordpress/2011/05/image10.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb9.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image10.png)
 
  
 
@@ -114,7 +114,7 @@ Add the path to where the folder containing the header files are located (this i
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb10.png)](http://images.wadewegner.com/wordpress/2011/05/image11.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb10.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image11.png)
 
  
 
@@ -122,7 +122,7 @@ Now, click on the “Build Phases” tab and expand the “Link Binary with Libr
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb11.png)](http://images.wadewegner.com/wordpress/2011/05/image12.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb11.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image12.png)
 
  
 

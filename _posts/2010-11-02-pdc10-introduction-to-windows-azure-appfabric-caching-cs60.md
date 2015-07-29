@@ -16,7 +16,7 @@ In addition to building the [Composite Application keynote demo](http://player.m
 
  
 
-[![Introduction to Windows Azure AppFabric Caching](http://images.wadewegner.com/wordpress/2010/11/image.png)](http://player.microsoftpdc.com/Session/1f607983-c6eb-4d9f-b644-55247e8adda6)
+[![Introduction to Windows Azure AppFabric Caching](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image.png)](http://player.microsoftpdc.com/Session/1f607983-c6eb-4d9f-b644-55247e8adda6)
 
  
 

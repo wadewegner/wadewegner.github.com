@@ -64,39 +64,39 @@ That said, I was asked to create said community, and share some simple instructi
 
   3. Enter the username and password in the upper right-hand corner, and click the "log in" button. Feel free to contact me if you need the login information.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_5.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_5.png)   
 
 
   4. After you are logged in, click the "upload" menu button.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_7.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_7.png)   
 
 
   5. Select an upload destination (or create a new album). Personally, I'd recommend just using the existing "Wedding" album to keep it simple.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_9.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_9.png)   
 
 
   6. Click the "select files" button. This will open a file dialog box.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_11.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_11.png)   
 
 
   7. Browse to the location of your pictures and/or videos. Select the files you want to upload, and click the "Open" button. You should see the selected files added to your file list.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_13.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_13.png)   
 
 
   8. Repeat steps 6 and 7 to add additional files.
 
   9. Once have added all your files, click the "upload" button.  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_15.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_15.png)   
 
 
   10. You can now add a title and description to the pictures and videos you have uploaded. The more information the better, so add some comments! If you don't, then people that missed the wedding (like me!) won't know what I'm looking at. Click the "save" button to save the title and description (or click "save all changes" below).  
   
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_17.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Sharingphotoswithfamilyandfriends_9ADB/image_17.png)   
 
 
   11. When you are done, you can click "view album" to look at your handiwork!

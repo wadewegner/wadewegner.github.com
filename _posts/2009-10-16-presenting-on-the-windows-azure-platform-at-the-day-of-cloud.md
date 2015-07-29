@@ -13,7 +13,7 @@ categories:
 - Windows Azure
 ---
 
-[![image](http://images.wadewegner.com/wordpress/2009/10/image_thumb17.png)](http://www.dayofcloud.com/about.html)Today I presented on the Windows Azure Platform at the [Day of Cloud](http://www.dayofcloud.com/) conference, in Chicago, IL. This conference was hosted by [Tech in the Middle](http://www.dayofcloud.com/about.html), and gave speakers the opportunity to present on SalesForce.com, the Windows Azure Platform (yours truly), Amazon Web Services, and Google App Engine. A great concept, and a lot of fun.
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image_thumb17.png)](http://www.dayofcloud.com/about.html)Today I presented on the Windows Azure Platform at the [Day of Cloud](http://www.dayofcloud.com/) conference, in Chicago, IL. This conference was hosted by [Tech in the Middle](http://www.dayofcloud.com/about.html), and gave speakers the opportunity to present on SalesForce.com, the Windows Azure Platform (yours truly), Amazon Web Services, and Google App Engine. A great concept, and a lot of fun.
 
  
 

@@ -15,7 +15,7 @@ I was browsing one of my new favorite websites, [Microsoft's Script Repository](
 
 Personally, I never use "cmd.exe" by itself. I always use the "Visual Studio 2005 Command Prompt", as it has all the useful and fun PATHs already added to it. So, with a small tweak to the script, we get the following enhancement:
 
-![](http://images.wadewegner.com/wordpress/content/binary/VSNETCMD.GIF)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/VSNETCMD.GIF)
 
 Very handy!
 
@@ -29,6 +29,6 @@ Here's the script (it's so simple that I'm embarassed to share it!):
 
 As I said, pretty simple, but oh so useful!
 
-[CommandPromptHere.vbs (.29 KB)](http://images.wadewegner.com/wordpress/content/binary/CommandPromptHere.vbs)
+[CommandPromptHere.vbs (.29 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/CommandPromptHere.vbs)
 
 I hope this helps!

@@ -94,6 +94,6 @@ Below is a script that will go ahead and create these local users for you (if I 
 
 And there you have it!
 
-[CreateCS2007LocalUsers.vbs (2.46 KB)](http://images.wadewegner.com/wordpress/content/binary/CreateCS2007LocalUsers.vbs)
+[CreateCS2007LocalUsers.vbs (2.46 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/CreateCS2007LocalUsers.vbs)
 
 I hope someone else finds this useful!

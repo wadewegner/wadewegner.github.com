@@ -16,7 +16,7 @@ The first is [ClustrMap](http://www2.clustrmaps.com/). ClustrMap is a mapping wi
 
 I use this in my sidebar, toward the bottom of my blog. Here's what it looks like:
 
-![ClustrMap example](http://images.wadewegner.com/wordpress/content/binary/cluster.gif)
+![ClustrMap example](https://wadewegner.blob.core.windows.net/wordpress/content/binary/cluster.gif)
 
 It reminds me of a small-scale version of the map Google Analytics provides. Here's an example of the script you would embed within your HTML:
 
@@ -28,7 +28,7 @@ It reminds me of a small-scale version of the map Google Analytics provides. Her
 
 Very easy to use and setup. It takes about a day for it to gather enough information and draw a map, so don't expect it to work immediately. If you click on the map you can get a few statistic about the site. Here's an example:
 
-![ClustrMap stats](http://images.wadewegner.com/wordpress/content/binary/stats.gif)
+![ClustrMap stats](https://wadewegner.blob.core.windows.net/wordpress/content/binary/stats.gif)
 
 The second widget is [whos.amung.us](http://whos.amung.us/). Have you ever wanted to know how many users are reading your Web site or blog in real time? This widget is the answer. Again, they provide HTML script that you can embed within your Web site, and it renders as an image that counts the number of users on your Web site. Clicking on the images takes you to their Web page, which shows you exactly which pages your readers are on, as well as how long ago they arrived.
 
@@ -38,11 +38,11 @@ Here's what the widget looks like:
 
 Here's the page that shows the URLs your readers are currently at (it's also neat that the links refresh themselves every few seconds):
 
-![whos.amung.us stats](http://images.wadewegner.com/wordpress/content/binary/links.gif)
+![whos.amung.us stats](https://wadewegner.blob.core.windows.net/wordpress/content/binary/links.gif)
 
 Also, [whos.amung.us](http://whos.amung.us/) provides a functional Color Wheel that allows you to change the colors of the widget:
 
-![whos.amung.us color map](http://images.wadewegner.com/wordpress/content/binary/wheel.gif)
+![whos.amung.us color map](https://wadewegner.blob.core.windows.net/wordpress/content/binary/wheel.gif)
 
 As with ClustrMap, the code for this widget is very simple:
     

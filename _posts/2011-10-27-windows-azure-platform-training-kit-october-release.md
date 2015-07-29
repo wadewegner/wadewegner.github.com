@@ -25,7 +25,7 @@ Today we published the **Windows Azure Platform Training Kit - October Release**
   * **Browse the hands-on labs**: Alternatively, you can browse through the individual hands-on labs on the MSDN site here: [http://bit.ly/WAPCourse](http://bit.ly/WAPCourse)
  
 
-![WAPTK](http://images.wadewegner.com/wordpress/2011/10/WAPTK.jpg)
+![WAPTK](https://wadewegner.blob.core.windows.net/wordpress/2011/10/WAPTK.jpg)
 
  
 
@@ -53,7 +53,7 @@ As with the September release, we have shipped an (updated) preview of our web i
 
  
 
-![WebInstallerPreview2](http://images.wadewegner.com/wordpress/2011/10/WebInstallerPreview2.jpg)
+![WebInstallerPreview2](https://wadewegner.blob.core.windows.net/wordpress/2011/10/WebInstallerPreview2.jpg)
 
  
 

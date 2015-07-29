@@ -39,7 +39,7 @@ Second, after you’ve deployed to Windows Azure and your instance is up and run
 
  
 
-![WebDeployOn443](http://images.wadewegner.com/wordpress/2010/12/WebDeployOn443.png)
+![WebDeployOn443](https://wadewegner.blob.core.windows.net/wordpress/2010/12/WebDeployOn443.png)
 
  
 

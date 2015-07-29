@@ -16,7 +16,7 @@ So, I've finally joined the 21st century, and purchased a [Samsung Blackjack](ht
 
 
 
-![Samsung Blackjack](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/samsungblackjack_1.gif)
+![Samsung Blackjack](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/samsungblackjack_1.gif)
 
 
 
@@ -74,21 +74,21 @@ As I said, my goal here is to setup a development environment and deploy a _simp
 
   5. Click **Install the Developer Tools** --> **Install the Tools**, and then in the detail pane slide down and click **Windows Mobile 5.0 SDK for Smartphone** (or Pocket PC, if you prefer).  
   
-![Windows Mobile 5.0 Developer Resource Kit](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_3.png)  
+![Windows Mobile 5.0 Developer Resource Kit](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_3.png)  
 
 
   6. This opens up File Explorer in the folder C:Program FilesWindows Mobile 5.0 Developer Resource KitcontentDeveloper ToolsWindows Mobile 5.0 SDKs. From here, click Windows Mobile 5.0 SDK for Smartphone.msi or Windows Mobile 5.0 SDK for Pocket PC.msi.
 
   7. Once the installation completes, Visual Studio will have been updated to include a new project type called "Windows Mobile 5.0 Smartphone" under "Visual Basic" and "Visual C#". Open Visual Studio 2005, and click **File** --> **New** --> **Project**.  
   
-![Windows Mobile 5.0 Smartphone project](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_4.png)  
+![Windows Mobile 5.0 Smartphone project](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_4.png)  
 
 
   8. Select "Device Application" and click **OK**. Yes, I know the name and location are poor. Change them if you want; remember, this is just a quick test/demo.
 
   9. The project template includes a Form1.cs file. The designer shows a form embedded in a phone shell. Drop a label on the form that says something (e.g. "Hello world!").  
   
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_thumb_3.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_5.png)   
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_thumb_3.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_5.png)   
 
 
   10. Make sure your Blackjack is connected to your computer via your USB cable, and confirm that ActiveSync is able to communicate and synchronize with your Blackjack.
@@ -97,7 +97,7 @@ As I said, my goal here is to setup a development environment and deploy a _simp
 
   12. Go to **Build** --> **Deploy DeviceApplication1**. A dialog box asks you where to deploy your application. Choose **Windows Mobile 5.0 Smartphone Device**. Click Deploy.  
   
-![Deploy Smartphone device](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_8.png)   
+![Deploy Smartphone device](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_8.png)   
 
 
   13. The initial deployment will push a lot of CAB files used to run your .NET application. Make sure you approve all these cabs from your Blackjack. You will only have to do this the first time.

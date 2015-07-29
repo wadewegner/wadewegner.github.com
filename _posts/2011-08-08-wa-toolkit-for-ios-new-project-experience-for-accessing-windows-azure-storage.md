@@ -44,7 +44,7 @@ If you are not familiar with XCode, this is a short tutorial for getting your fi
 
  
 
-![iOS1](http://images.wadewegner.com/wordpress/2011/08/iOS1.jpg)
+![iOS1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS1.jpg)
 
  
 
@@ -56,7 +56,7 @@ Give the project a name and company. For the purposes of this walkthrough, we’
 
  
 
-![iOS2](http://images.wadewegner.com/wordpress/2011/08/iOS2.jpg)
+![iOS2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS2.jpg)
 
  
 
@@ -68,7 +68,7 @@ When the project opens, right click on the Frameworks folder and select “Add F
 
  
 
-![iOS3](http://images.wadewegner.com/wordpress/2011/08/iOS3.jpg)
+![iOS3](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS3.jpg)
 
  
 
@@ -76,7 +76,7 @@ Locate the libwatoolkitios.a library file from the download package folder (from
 
  
 
-![iOS4](http://images.wadewegner.com/wordpress/2011/08/iOS4.jpg)
+![iOS4](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS4.jpg)
 
  
 
@@ -88,7 +88,7 @@ In the search box, type in “header search” and look for an entry called “H
 
  
 
-![iOS5](http://images.wadewegner.com/wordpress/2011/08/iOS5.jpg)
+![iOS5](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS5.jpg)
 
  
 
@@ -96,7 +96,7 @@ Double click on this line (towards the right of the line), and click on the “+
 
  
 
-![iOS6](http://images.wadewegner.com/wordpress/2011/08/iOS6.jpg)
+![iOS6](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS6.jpg)
 
  
 
@@ -104,7 +104,7 @@ Add the path to where the folder containing the header files are located (this i
 
  
 
-![iOS7](http://images.wadewegner.com/wordpress/2011/08/iOS7.jpg)
+![iOS7](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS7.jpg)
 
  
 
@@ -112,7 +112,7 @@ Remaining in the “Build Settings” tab, now type in “other linker flags” 
 
  
 
-![iOS8](http://images.wadewegner.com/wordpress/2011/08/iOS8.jpg)
+![iOS8](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS8.jpg)
 
  
 
@@ -120,7 +120,7 @@ Finally, click on the “Build Phases” tab and expand the “Link Binary with 
 
  
 
-![iOS9](http://images.wadewegner.com/wordpress/2011/08/iOS9.jpg)
+![iOS9](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOS9.jpg)
 
  
 

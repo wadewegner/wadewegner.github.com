@@ -12,7 +12,7 @@ categories:
 
 It’s been a little more than three weeks since I announced my [departure from Microsoft](http://www.wadewegner.com/2012/03/leaving-microsoft/). Leaving Microsoft was harder than I expected and I never anticipated the outpouring of support and appreciation from everyone. From the bottom of my heart, thank you!
 
-![Aditi Technologies](http://images.wadewegner.com/wordpress/2012/04/Aditi_Corp_Icons_240.png)
+![Aditi Technologies](https://wadewegner.blob.core.windows.net/wordpress/2012/04/Aditi_Corp_Icons_240.png)
 
 Today I’m really excited to share that I’ve joined [Aditi Technologies](http://www.aditi.com/) as Chief Technology Officer. Aditi is a top Microsoft partner with a lot of talented people and has recently made a lot of key investments – particularly around Windows Azure. Last November Aditi [acquired Cumulux](http://www.prnewswire.com/news-releases/aditi-technologies-announces-acquisition-of-cumulux-microsoft-cloud-partner-of-the-year-134227893.html), hired Windows Azure MVP [Nuno Godinho](http://adititechnologiesblog.blogspot.com/2010/07/nuno-godinho.html), and most recently brought on the former Windows Azure Tactical Strategist [Steve Marx](http://blog.smarx.com/posts/joining-aditi-as-chief-windows-azure-architect).
 

@@ -40,17 +40,17 @@ Incidentally, if you like NuGet, then you should check out Cory Fowler’s post 
 
 For those of you unfamiliar with ELMAH, I put together a simple demo. You can try it out on [http://elmahdemo.cloudapp.net/](http://elmahdemo.cloudapp.net/). Just enter a message (keep it clean, please!) and throw an exception.
 
-[![ELMAHDemo](http://images.wadewegner.com/wordpress/2011/08/ELMAHDemo_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/ELMAHDemo.jpg)
+[![ELMAHDemo](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHDemo_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHDemo.jpg)
 
 Click the **ELMAH** button to then load the handler. You’ll see all the errors logged with a lot of great detail.
 
-[![ELMAHHandler](http://images.wadewegner.com/wordpress/2011/08/ELMAHHandler_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/ELMAHHandler.jpg)
+[![ELMAHHandler](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHHandler_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHHandler.jpg)
 
 The great part is that these files are getting serialized into Windows Azure table storage. The benefit of this is you can read them from anywhere – in fact, you don’t have to even deploy the elmah.axd handler with your web application! You could run it locally.
 
 Here’s what the files look like in table storage:
 
-[![ELMAHInTables](http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/ELMAHInTables.jpg)
+[![ELMAHInTables](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHInTables_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/ELMAHInTables.jpg)
 
 **How Does it Work?**
 

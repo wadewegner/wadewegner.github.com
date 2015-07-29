@@ -21,7 +21,7 @@ You can now read this article online: [Introducing the Windows Azure AppFabric C
 
  
 
-[![clip_image001](http://images.wadewegner.com/wordpress/2011/04/clip_image001.jpg)](http://msdn.microsoft.com/en-us/magazine/gg983488.aspx)
+[![clip_image001](https://wadewegner.blob.core.windows.net/wordpress/2011/04/clip_image001.jpg)](http://msdn.microsoft.com/en-us/magazine/gg983488.aspx)
 
  
 

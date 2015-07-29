@@ -22,7 +22,7 @@ To create a UDL file, follow these steps:
 
 4. Configure your database connection settings.
 
-	![](http://images.wadewegner.com/wordpress/content/binary/UDL.gif)
+	![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/UDL.gif)
 
 5. Once you've been able to successfully test your connection, click the OK button.
 

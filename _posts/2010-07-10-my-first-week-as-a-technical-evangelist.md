@@ -11,7 +11,7 @@ categories:
 - Windows Azure
 ---
 
-[![Developer and Platform Evangelism](http://images.wadewegner.com/wordpress/2010/07/deplogo2_thumb.png)](http://images.wadewegner.com/wordpress/2010/07/deplogo2.png) I definitely luck out when it comes to the first day on the job. My [first day as an Architect Evangelist](http://www.wadewegner.com/2008/02/my-new-job-architect-evangelist-for-microsoft/) was at a team offsite in Las Vegas. This time around, as a Technical Evangelist, my team hosted a [Windows Azure platform](http://www.microsoft.com/windowsazure/) Software Design Review (SDR) for customers up in Redmond. A SDR is an opportunity for customers to join product teams and review current and future states of the technology. Lots of energy and great conversations.
+[![Developer and Platform Evangelism](https://wadewegner.blob.core.windows.net/wordpress/2010/07/deplogo2_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/07/deplogo2.png) I definitely luck out when it comes to the first day on the job. My [first day as an Architect Evangelist](http://www.wadewegner.com/2008/02/my-new-job-architect-evangelist-for-microsoft/) was at a team offsite in Las Vegas. This time around, as a Technical Evangelist, my team hosted a [Windows Azure platform](http://www.microsoft.com/windowsazure/) Software Design Review (SDR) for customers up in Redmond. A SDR is an opportunity for customers to join product teams and review current and future states of the technology. Lots of energy and great conversations.
 
  
 

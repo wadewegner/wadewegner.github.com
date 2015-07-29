@@ -14,7 +14,7 @@ I installed Windows XP Professional with SP 2 today and was amazed to see this w
 
  
 
-[![Windows XP - 96 Updates](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsXPProfessional96updates_CCCC/Silly_thumb.gif)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/WindowsXPProfessional96updates_CCCC/Silly_2.gif)
+[![Windows XP - 96 Updates](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsXPProfessional96updates_CCCC/Silly_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsXPProfessional96updates_CCCC/Silly_2.gif)
 
  
 

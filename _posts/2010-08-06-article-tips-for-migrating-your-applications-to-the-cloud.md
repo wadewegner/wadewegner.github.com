@@ -17,7 +17,7 @@ I had the great pleasure of co-authoring an [article on application migration to
 
  
 
-[![Tips for Migrating Your Applications to the Cloud](http://images.wadewegner.com/wordpress/2010/08/image1.png)](http://msdn.microsoft.com/en-us/magazine/ff872379.aspx)
+[![Tips for Migrating Your Applications to the Cloud](https://wadewegner.blob.core.windows.net/wordpress/2010/08/image1.png)](http://msdn.microsoft.com/en-us/magazine/ff872379.aspx)
 
  
 

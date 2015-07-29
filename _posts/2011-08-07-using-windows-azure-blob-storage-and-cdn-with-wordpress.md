@@ -57,7 +57,7 @@ You should now have a folder that looks like this:
 
  
 
-[![CDNWordpress-1](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-1_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-1.jpg)
+[![CDNWordpress-1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1.jpg)
 
  
 
@@ -89,7 +89,7 @@ Once unzipped, you should see the following:
 
  
 
-[![CDNWordpress-2](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-2_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-2.jpg)
+[![CDNWordpress-2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2.jpg)
 
  
 
@@ -153,7 +153,7 @@ Back in WordPress, enter your **Storage Account Name** and **Primary Access Key*
 
  
 
-![CDNWordpress-3](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-3.jpg)
+![CDNWordpress-3](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-3.jpg)
 
  
 
@@ -165,7 +165,7 @@ Click the **Save Changes** button. Once you’ve saved, the **Default Storage Co
 
  
 
-![CDNWordpress-4](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-4.jpg)
+![CDNWordpress-4](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-4.jpg)
 
  
 
@@ -177,7 +177,7 @@ When you’ve set the policy correctly, it should look like this:
 
  
 
-[![CDNWordpress-5](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-5_thumb.jpg)](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-5.jpg)
+[![CDNWordpress-5](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5.jpg)
 
  
 
@@ -213,7 +213,7 @@ The Windows Azure CDN is setup such that you can easily turn the CDN on for your
 
  
 
-![CDNWordpress-6](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-6.jpg)
+![CDNWordpress-6](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-6.jpg)
 
  
 
@@ -221,7 +221,7 @@ A dialog window will open that gives you the opportunity to choose some settings
 
  
 
-![CDNWordpress-7](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-7.jpg)
+![CDNWordpress-7](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-7.jpg)
 
  
 
@@ -237,7 +237,7 @@ Once this process has completed, you’ll see a note saying that the CDN endpoin
 
  
 
-![CDNWordpress-8](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-8.jpg)
+![CDNWordpress-8](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-8.jpg)
 
  
 
@@ -253,7 +253,7 @@ While this works perfectly well, I personally don’t like the non-customized UR
 
  
 
-[http://images.wadewegner.com/images/Mug-195w.jpg](http://images.wadewegner.com/images/Mug-195w.jpg)
+[https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg](https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg)
 
  
 
@@ -261,7 +261,7 @@ If you run nslookup on the custom domain name, you should see that it ultimately
 
  
 
-![CDNWordpress-9](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-9.jpg)
+![CDNWordpress-9](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-9.jpg)
 
  
 
@@ -281,7 +281,7 @@ One the plugin settings page you’ll se a **CNAME** property you can specify. S
 
  
 
-![CDNWordpress-10](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-10.jpg)
+![CDNWordpress-10](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-10.jpg)
 
  
 
@@ -297,7 +297,7 @@ The easiest way to test it out is to create a draft blog post with an image. I�
 
  
 
-![CDNWordpress-11](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-11.jpg)
+![CDNWordpress-11](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-11.jpg)
 
  
 
@@ -309,7 +309,7 @@ After you post, take a look at the preview of the post. In particular, right-cli
 
  
 
-![CDNWordpress-12](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-12.jpg)
+![CDNWordpress-12](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-12.jpg)
 
  
 
@@ -321,7 +321,7 @@ Furthermore, take a look at blob storage. You’ll see that your resources/image
 
  
 
-![CDNWordpress-13](http://images.wadewegner.com/wordpress/2011/08/CDNWordpress-13.jpg)
+![CDNWordpress-13](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-13.jpg)
 
  
 

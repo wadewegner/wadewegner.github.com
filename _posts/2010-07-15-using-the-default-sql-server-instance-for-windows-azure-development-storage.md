@@ -71,7 +71,7 @@ Now you’ll see that
 
 
 
-![DevelopmentStorageDb20090919](http://images.wadewegner.com/wordpress/2010/07/image2.png)
+![DevelopmentStorageDb20090919](https://wadewegner.blob.core.windows.net/wordpress/2010/07/image2.png)
 
 
 

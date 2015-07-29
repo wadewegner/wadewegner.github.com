@@ -13,7 +13,7 @@ categories:
 - Windows Azure
 ---
 
-[![image](http://images.wadewegner.com/wordpress/2010/06/image.png)](http://northamerica.msteched.com/) It was an amazing [TechEd NA 2010](http://northamerica.msteched.com/), and I admit that it took me a few days to recover. Between the heat and humidity, great times with friends, and good food, I managed to spend a bit of time at the conference.
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/06/image.png)](http://northamerica.msteched.com/) It was an amazing [TechEd NA 2010](http://northamerica.msteched.com/), and I admit that it took me a few days to recover. Between the heat and humidity, great times with friends, and good food, I managed to spend a bit of time at the conference.
 
  
 

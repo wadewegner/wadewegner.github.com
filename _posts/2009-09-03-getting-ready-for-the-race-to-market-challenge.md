@@ -12,7 +12,7 @@ categories:
 
 I am really excited about [The Race to Market Challenge](http://www.mobilethisdeveloper.com/), sponsored by the Windows Mobile team.  Nothing motivates me like a challenge that promises great prizes and glory - especially when the prize is a [Microsoft Surface](http://www.microsoft.com/surface/)!
 
-[![image](http://images.wadewegner.com/wordpress/2009/09/image_thumb.png)](http://images.wadewegner.com/wordpress/2009/09/image10.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image10.png)
 
 If that's not enough to get you pumped up about developing a killer application, what will?
 
@@ -102,12 +102,12 @@ Here are the steps I took:
 	
     * Here's what it looks like - very cool:
 
-[![image](http://images.wadewegner.com/wordpress/2009/09/image_thumb1.png)](http://images.wadewegner.com/wordpress/2009/09/image11.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image11.png)
 
 	
     * After a few moments, your applications will get deployed to the device.  It may take a few minutes the first time as all the necessary pieces are deployed.  Once it has finished, you should see your application deployed.  It will look like this:
 
-[![image](http://images.wadewegner.com/wordpress/2009/09/image_thumb2.png)](http://images.wadewegner.com/wordpress/2009/09/image12.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/09/image12.png)
 
 
 

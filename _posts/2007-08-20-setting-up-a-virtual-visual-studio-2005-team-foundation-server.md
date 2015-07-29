@@ -153,7 +153,7 @@ GO
   14. Configured Reporting Services:
 
 
-[![image_thumb[6]](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6.png)
+[![image_thumb[6]](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb6.png)
 
 
 
@@ -206,7 +206,7 @@ GO
   16. Backed-up the Reporting Services Encryption key:
 
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image2.png)
 
 
 
@@ -299,7 +299,7 @@ Now, to verify that everything was installed and configured properly, I performe
   3. Click Add Existing Team Project
 
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image4.png)
 
 
 
@@ -307,7 +307,7 @@ Now, to verify that everything was installed and configured properly, I performe
   4. Select your Team Foundation Server, and click OK.
 
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3_thumb.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image3.png)
 
 
 
@@ -315,7 +315,7 @@ Now, to verify that everything was installed and configured properly, I performe
   5. Right-click your Team Foundation Server, and click New Team Project.
 
 
-[![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb_6.png)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_5.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_thumb_6.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ConfiguringavirtualTFServer_7070/image_5.png)
 
 
 

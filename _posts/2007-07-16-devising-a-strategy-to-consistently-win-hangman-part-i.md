@@ -21,7 +21,7 @@ In an effort to distract myself from more productive endeavors, I started playin
 
 
 
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_2.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_2.png)
 
 
 
@@ -31,7 +31,7 @@ During game play, the plugin constructs the man you are desperately trying to sa
 
 
 
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_4.png)
 
 
 
@@ -118,7 +118,7 @@ Once I wrote all this and let it run, it took about 20-30 minutes to complete (I
 
 
 
-![image](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_3.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Devisingastrategytoconsistentlywinningha_1117F/image_3.png)
 
 
 
@@ -180,7 +180,7 @@ Kind of interesting that there are more 9-letter words than any other words, eh?
 
 
 
-![](http://images.wadewegner.com/wordpress/content/binary/graph1.gif)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/graph1.gif)
 
 
 
@@ -400,7 +400,7 @@ I truly hope that at least someone else out there has fond some value in this po
 
 
 
-[Dictionary.zip (2.15 MB)](http://images.wadewegner.com/wordpress/content/binary/Dictionary.zip)
+[Dictionary.zip (2.15 MB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Dictionary.zip)
 
 
 

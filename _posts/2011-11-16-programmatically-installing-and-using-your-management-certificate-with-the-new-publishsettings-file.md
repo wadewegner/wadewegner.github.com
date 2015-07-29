@@ -48,11 +48,11 @@ Now, we can take our X509Certificate2 and install it directly into our certifica
 
 After running this code, you can see that the certificate has been installed into my personal certificate store.
 
-![CertMgr](http://images.wadewegner.com/wordpress/2011/11/CertMgr.png)
+![CertMgr](https://wadewegner.blob.core.windows.net/wordpress/2011/11/CertMgr.png)
 
 If you select the certificate you’ll see that it’s the same certificate with the same thumbprint.
 
-![certificate](http://images.wadewegner.com/wordpress/2011/11/certificate.png)
+![certificate](https://wadewegner.blob.core.windows.net/wordpress/2011/11/certificate.png)
 
 Since the certificate is now loaded into the certificate store I can delete the .publishsettings file – I no longer need it. (It’s also a credential that I don’t want to let anyone else get their hands on.)
 
@@ -83,7 +83,7 @@ Essentially, we can grab the certificate out of the certificate store using the 
 
 The console output below shows that I’m able to get a list of all my hosted services:
 
-![Console](http://images.wadewegner.com/wordpress/2011/11/Console.png)
+![Console](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Console.png)
 
 It’s as simple as that!
 

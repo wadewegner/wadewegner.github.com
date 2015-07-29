@@ -44,7 +44,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (1)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_1.jpg)
+[![Windows Server 2008 Installation (1)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_1.jpg)
 
  
 
@@ -52,7 +52,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (2)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_thumb_2.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_2.jpg)
+[![Windows Server 2008 Installation (2)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_thumb_2.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_2.jpg)
 
  
 
@@ -60,7 +60,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (3)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_1.jpg)
+[![Windows Server 2008 Installation (3)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_1.jpg)
 
  
 
@@ -68,7 +68,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (4)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_1.jpg)
+[![Windows Server 2008 Installation (4)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_1.jpg)
 
  
 
@@ -76,7 +76,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (5)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_1.jpg)
+[![Windows Server 2008 Installation (5)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_1.jpg)
 
  
 
@@ -84,7 +84,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (6)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_1.jpg)
+[![Windows Server 2008 Installation (6)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_1.jpg)
 
  
 
@@ -92,7 +92,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (7)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_thumb_2.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_2.jpg)
+[![Windows Server 2008 Installation (7)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_thumb_2.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_2.jpg)
 
  
 
@@ -100,7 +100,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (8)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_1.jpg)
+[![Windows Server 2008 Installation (8)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_1.jpg)
 
  
 
@@ -109,7 +109,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (9)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_1.jpg)
+[![Windows Server 2008 Installation (9)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_1.jpg)
 
  
 
@@ -117,7 +117,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (10)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_1.jpg)
+[![Windows Server 2008 Installation (10)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_1.jpg)
 
  
 
@@ -125,7 +125,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (11)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_1.jpg)
+[![Windows Server 2008 Installation (11)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_1.jpg)
 
  
 
@@ -133,7 +133,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (12)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12)_thumb.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12).jpg)
+[![Windows Server 2008 Installation (12)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12)_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12).jpg)
 
  
 
@@ -141,7 +141,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (13)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_thumb_1.jpg)](http://images.wadewegner.com/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_1.jpg)
+[![Windows Server 2008 Installation (13)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_1.jpg)
 
  
 

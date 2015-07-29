@@ -13,7 +13,7 @@ categories:
 - Windows Azure
 ---
 
-[![image](http://images.wadewegner.com/wordpress/2009/11/image10.png)](http://www.microsoftpdc.com/) It’s hard to believe that the [Professional Developers Conference (PDC) 2009](http://microsoftpdc.com/) is less than two weeks away. It doesn’t seem that long ago that I sat behind the stage at PDC 2008 providing support for the [RedPrairie keynote with Bob Muglia](http://channel9.msdn.com/pdc2008/KYN01/) and spoke in a breakout session with [Jack Greenfield on Multi-Enterprise Business Applications](http://channel9.msdn.com/pdc2008/BB59/). I’ll be back again this year, and I’m giving another talk – this time on [lessons learned when migrating applications to the Windows Azure platform](http://microsoftpdc.com/Sessions/SVC22).
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2009/11/image10.png)](http://www.microsoftpdc.com/) It’s hard to believe that the [Professional Developers Conference (PDC) 2009](http://microsoftpdc.com/) is less than two weeks away. It doesn’t seem that long ago that I sat behind the stage at PDC 2008 providing support for the [RedPrairie keynote with Bob Muglia](http://channel9.msdn.com/pdc2008/KYN01/) and spoke in a breakout session with [Jack Greenfield on Multi-Enterprise Business Applications](http://channel9.msdn.com/pdc2008/BB59/). I’ll be back again this year, and I’m giving another talk – this time on [lessons learned when migrating applications to the Windows Azure platform](http://microsoftpdc.com/Sessions/SVC22).
 
  
 
@@ -21,15 +21,15 @@ Rather than present this session entirely on my own, I decided to invite some of
 
  
 
-![CCH](http://images.wadewegner.com/wordpress/2009/11/CCH.png)[CCH, a Wolters Kluwer Company](http://www.cch.com/) - CCH is a Wolters Kluwer company, based in Riverwoods, Illinois, providing tax and business law information and software solutions. The company has approximately 700 products for the United States market.
+![CCH](https://wadewegner.blob.core.windows.net/wordpress/2009/11/CCH.png)[CCH, a Wolters Kluwer Company](http://www.cch.com/) - CCH is a Wolters Kluwer company, based in Riverwoods, Illinois, providing tax and business law information and software solutions. The company has approximately 700 products for the United States market.
 
  
 
-[![accenture-logo](http://images.wadewegner.com/wordpress/2009/11/accenturelogo2.png)](http://www.accenture.com/) [Accenture](http://www.accenture.com/) - Launched originally as the business and technology consulting arm of Arthur Andersen, Accenture is now among the world’s largest consulting organizations. It employs more than 180,000 people in 52 countries.
+[![accenture-logo](https://wadewegner.blob.core.windows.net/wordpress/2009/11/accenturelogo2.png)](http://www.accenture.com/) [Accenture](http://www.accenture.com/) - Launched originally as the business and technology consulting arm of Arthur Andersen, Accenture is now among the world’s largest consulting organizations. It employs more than 180,000 people in 52 countries.
 
  
 
-[Domino’s Pizza](http://images.wadewegner.com/wordpress/2009/11/Dominos1.png) – See how Domino’s Pizza is running Java and Tomcat in Windows Azure to run their eCommerce application. Windows Azure provides high scalability to handle Super Bowl load, interoperability with different platforms and technologies, and the ability to integrate to on-premises resources. 
+[Domino’s Pizza](https://wadewegner.blob.core.windows.net/wordpress/2009/11/Dominos1.png) – See how Domino’s Pizza is running Java and Tomcat in Windows Azure to run their eCommerce application. Windows Azure provides high scalability to handle Super Bowl load, interoperability with different platforms and technologies, and the ability to integrate to on-premises resources. 
 
  
 

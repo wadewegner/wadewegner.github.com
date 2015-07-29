@@ -67,7 +67,7 @@ For example:
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image24.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image24.png)
 
 
 
@@ -99,7 +99,7 @@ For example:
   1. Open the Certificate Manager snap-in for the management console by typing **certmgr.msc** in the **Start** menu textbox.
 
       
-![4](http://images.wadewegner.com/wordpress/2011/05/4.png)
+![4](https://wadewegner.blob.core.windows.net/wordpress/2011/05/4.png)
 
 
   
@@ -111,7 +111,7 @@ For example:
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image17.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image17.png)
 
 
   
@@ -121,7 +121,7 @@ For example:
   4. Choose a name and export the file to a .pfx file. 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image18.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image18.png)
 
 
   
@@ -166,7 +166,7 @@ For example:
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image19.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image19.png)
 
 
   
@@ -181,7 +181,7 @@ For example:
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image20.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image20.png)
 
 
   
@@ -192,7 +192,7 @@ For example:
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image21.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image21.png)
 
 
   
@@ -213,7 +213,7 @@ During the project creation through the project template, you are given the opti
 
 
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image22.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image22.png)
 
 
 
@@ -265,7 +265,7 @@ If you chose to support Apple Push Notifications, please follow these additional
 
     
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image23.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image23.png)
 
 
   

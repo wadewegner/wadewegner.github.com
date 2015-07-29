@@ -28,7 +28,7 @@ With the help and guidance of [Vittorio Bertocci](http://blogs.msdn.com/b/vberto
 
  
 
-[![clip_image002[6]](http://images.wadewegner.com/wordpress/2011/05/clip_image0026_thumb.gif)](http://images.wadewegner.com/wordpress/2011/05/clip_image0026.gif)
+[![clip_image002[6]](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0026_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/clip_image0026.gif)
 
  
 
@@ -48,7 +48,7 @@ Inspired by the Metro Design Language of Windows Phone 7, we’ve significantly 
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb5.png)](http://images.wadewegner.com/wordpress/2011/05/image5.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image5.png)
 
  
 
@@ -56,7 +56,7 @@ Inspired by the Metro Design Language of Windows Phone 7, we’ve significantly 
 
  
 
-[![image](http://images.wadewegner.com/wordpress/2011/05/image_thumb6.png)](http://images.wadewegner.com/wordpress/2011/05/image6.png)
+[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb6.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image6.png)
 
  
 
@@ -68,7 +68,7 @@ One feature we “missed” in our initial releases—and to be honest it was a 
 
  
 
-![image](http://images.wadewegner.com/wordpress/2011/05/image7.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image7.png)
 
  
 

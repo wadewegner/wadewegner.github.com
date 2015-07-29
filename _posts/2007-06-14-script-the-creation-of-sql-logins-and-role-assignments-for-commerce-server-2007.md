@@ -27,7 +27,7 @@ Take a look the _Grant Web Applications and Window Services Access to the Databa
 
 Rather than pasting the entire SQL script into this post, I am only going to upload the .SQL file. You can modify this file as necessary in order to adapt it to your environment (e.g. changing the computer name, you may have different names for logins, or don't need services like the direct mailer).
 
-[CreateCSLoginsAndAssignRoles.sql.txt (12.54 KB)](http://images.wadewegner.com/wordpress/content/binary/CreateCSLoginsAndAssignRoles.sql.txt) (just remove the .txt extension)
+[CreateCSLoginsAndAssignRoles.sql.txt (12.54 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/CreateCSLoginsAndAssignRoles.sql.txt) (just remove the .txt extension)
 
 I hope this helps!
 
@@ -35,4 +35,4 @@ I hope this helps!
 
 I found it useful to create an abbreviated verion of this script that is used for adding new sites. Whereas the script "CreateCSLoginsAndAssignRoles.sql.txt" is for brand new installations of Commerce Server 2007, the following script is useful for when you add a new site and re-use users and logins.
 
-[CreateCSLoginsAndAssignRolesForNewSites.sql.txt (8.42 KB)](http://images.wadewegner.com/wordpress/content/binary/CreateCSLoginsAndAssignRolesForNewSites.sql.txt) (just remove the .txt extension)
+[CreateCSLoginsAndAssignRolesForNewSites.sql.txt (8.42 KB)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/CreateCSLoginsAndAssignRolesForNewSites.sql.txt) (just remove the .txt extension)
