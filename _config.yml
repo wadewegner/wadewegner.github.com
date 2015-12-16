@@ -33,3 +33,29 @@ indextank_api_url: http://:ebadebadasab@ynereh.api.indexden.com
 
 # these values are applied as regular expressions 
 indextank_excludes: [index.html, 404.html, ^/secret/]
+
+# Resume settings
+resume_avatar:                  "true"
+resume_name:                    "Wade Wegner"
+resume_title:                   "Product guy and aspiring brewmaster"
+resume_contact_email:
+  "wade.wegner@gmail.com"
+
+# Decide which sections to use
+# comment out to hide
+resume_section_experience:      true
+resume_section_education:       true
+resume_section_projects:        true
+resume_section_skills:          true
+resume_section_recognition:     true
+resume_section_links:           true
+resume_section_associations:    true
+
+# Resume social links
+# uncomment the options you wish to display, and add your own URL
+resume_social_links:
+  resume_github_url:            "https://github.com/wadewegner"
+  resume_twitter_url:           "http://twitter.com/wadewegner"
+  resume_facebook_url:          "https://www.facebook.com/wade.wegner"
+  resume_linkedin_url:          "https://www.linkedin.com/in/wadewegner"
+  resume_website_url:           "http://wadewegner.com"
