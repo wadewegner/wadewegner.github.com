@@ -1,79 +1,8 @@
+---
+layout: default
+---
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-    <meta name="author" content="{{ site.author }}">
-    {% if page.categories %}<meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-
-    <link rel="shortcut icon" href="/img/favicon.ico">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/css/wadewegner.css" | prepend: site.baseurl }}" type="text/css">
-
-    <!-- Fonts -->
-    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
-
-    <!-- Rss -->
-    <link href="//feeds.feedburner.com/WadeWegner" type="application/rss+xml" rel="alternate" title="WadeWegner.com RSS Feed">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}" />
-    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-
-    <!-- Indexing -->
-    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js' type='text/javascript'></script>
-    <script src='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js' type='text/javascript'></script>
-
-    {% if page.url == "/search/" %}
-    <script type="text/javascript" src="/scripts/jquery.indextank.ize.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.indextank.autocomplete.js"></script>
-    <script type="text/javascript" src="/scripts/querybuilder.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.indextank.ajaxsearch.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.indextank.renderer.js"></script>
-    <script type="text/javascript" src="/scripts/jquery.indextank.instantsearch.js"></script>
-    <link href='//ajax.googleapis.com/ajax/libs/jqueryui/1.8.7/themes/flick/jquery-ui.css' rel='stylesheet'>
-
-
-    <script type='text/javascript'>
-        var publicApiUrl = "http://ynereh.api.indexden.com";
-        var indexName = "wadewegner";
-
-        var userFormat = function(item) {
-            var r = $("<div></div>")
-            .addClass("result")
-            .append( $("<p></p>"))
-            .append( $("<a></a>").attr("href", item.link || item.url || item.docid ).text(item.title || item.name) )
-            .append( $("<span></span>").addClass("description").html(item.snippet_text || item.text) );
-
-            return r;
-        };
-
-        $(document).ready(function(){
-            $("#myform").indextank_Ize(publicApiUrl, indexName);
-            var renderer =  $("#results").indextank_Renderer({format: userFormat});
-            $("#query").indextank_Autocomplete().indextank_AjaxSearch( {listeners: renderer});
-        });
-    </script>
-
-    {% endif %}
-
-</head>
-<body>
-
-  <div class="site-wrap">
-    {% include header.html %}
-
-    <div class="post p2 p-responsive wrap" role="main">
-      <div class="measure">
+  <link rel="stylesheet" href="http://resume-template.joelglovier.com//css/main.css">
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
         {% if site.resume_avatar == 'true' %}
@@ -279,11 +208,3 @@
       </section>
       <!-- end Links -->
       {% endif %}
-
-      </div>
-    </div>
-  </div>
-
-  {% include footer.html %}
-</body>
-</html>
