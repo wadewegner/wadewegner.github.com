@@ -8,7 +8,7 @@ url: http://www.wadewegner.com
 
 # Build settings
 encoding: utf-8
-highlighter: pygments
+highlighter: rouge
 markdown: redcarpet #kramdown
 paginate: 5
 permalink: /:year/:month/:title/
