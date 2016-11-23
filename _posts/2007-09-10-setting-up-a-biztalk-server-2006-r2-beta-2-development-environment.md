@@ -71,14 +71,22 @@ The components are available by downloading and installing the following files:
 
 Note: if you only want the R2 functionality (e.g. WCF, etc) you only need BTS06R2_Beta2.exe.
 After I downloaded all the files, I first extracted the contents of BTS06R2_Beta2.exe to a temporary folder (choose a folder you can remember, like C:TempBTS06R2_Beta2).  Next, I ran Setup.exe from that folder.  Click Next until you get to the Component Installation screen.  You'll see that there are a few differences from the standard BizTalk components.  Here's a peak:
- [![BizTalk Server 2006 R2 Installation Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2InstallationWizard_thumb_1.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2InstallationWizard_4.gif)
+
+![BizTalk Server 2006 R2 Installation Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2InstallationWizard_thumb_1.gif)
+
 I decided to leave the default settings.  Feel free to do what you want.  Continue to click Next until you get to the Summary screen.  Review your selections and click Install (you may also want to set your auto-login credentials to save time).
 After it installs you have to run the BizTalk Configuration Tool.  The configuration is roughly the same as it is for BizTalk Server 2006:
-[![BizTalk Server 2006 R2 Configuration](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Configuration_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Configuration_2.gif)
+
+![BizTalk Server 2006 R2 Configuration](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Configuration_thumb.gif)
+
 I don't plan on using many of the features at the moment (e.g. BAM, HWS, etc.) so I only installed the following features:
-[![BizTalk Server 2006 R2 Features](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Features_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Features_2.gif)
+
+![BizTalk Server 2006 R2 Features](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkR2Features_thumb.gif)
+
 And that's it!  At this point, you will have BizTalk 2006 R2 (beta 2) installed and functioning.  Open up the BizTalk Server 2006 Administration Console and take a look at the adapters now available to you:
-[![BizTalk Server 2006 R2 Adapters](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkAdapters_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkAdapters_2.gif)
+
+![BizTalk Server 2006 R2 Adapters](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/SettingupaBizTalkServer2006R2development_CDB5/BizTalkAdapters_thumb.gif)
+
 Specifically, you now can use the following adapters:
 
 

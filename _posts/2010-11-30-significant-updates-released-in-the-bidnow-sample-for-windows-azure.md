@@ -21,7 +21,9 @@ Click here if you want to quickly grab the [latest version of the BidNow sample]
 
  
 
-![BidNowSample](https://wadewegner.blob.core.windows.net/wordpress/2010/11/BidNowSample.png) There have been a host of announcements and releases over the last month for the Windows Azure Platform. It started at the [Professional Developers Conference (PDC)](http://microsoftpdc.com/) in Redmond, where we announced new services such as [Windows Azure AppFabric Caching](http://www.wadewegner.com/2010/10/new-services-and-enhancements-with-the-windows-azure-appfabric/) and [SQL Azure Reporting](http://www.microsoft.com/en-us/sqlazure/reporting.aspx), as well as new features for Windows Azure, such as VM Role, Admin mode, RDP, Full IIS, and a new portal experience. Yesterday, the Windows Azure team released the [Windows Azure SDK 1.3 and Tools for Visual Studio](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7a1089b6-4050-4307-86c4-9dadaa5ed018&displaylang=en) and updates to the [Windows Azure portal](http://windows.azure.com/) (for all the details, see the [team post](http://blogs.msdn.com/b/windowsazure/archive/2010/11/29/just-released-windows-azure-sdk-1-3-and-the-new-windows-azure-management-portal.aspx)). These are significant releases that provide a lot of enhancements for Windows Azure.
+![BidNowSample](https://wadewegner.blob.core.windows.net/wordpress/2010/11/BidNowSample.png) 
+
+There have been a host of announcements and releases over the last month for the Windows Azure Platform. It started at the [Professional Developers Conference (PDC)](http://microsoftpdc.com/) in Redmond, where we announced new services such as [Windows Azure AppFabric Caching](http://www.wadewegner.com/2010/10/new-services-and-enhancements-with-the-windows-azure-appfabric/) and [SQL Azure Reporting](http://www.microsoft.com/en-us/sqlazure/reporting.aspx), as well as new features for Windows Azure, such as VM Role, Admin mode, RDP, Full IIS, and a new portal experience. Yesterday, the Windows Azure team released the [Windows Azure SDK 1.3 and Tools for Visual Studio](http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7a1089b6-4050-4307-86c4-9dadaa5ed018&displaylang=en) and updates to the [Windows Azure portal](http://windows.azure.com/) (for all the details, see the [team post](http://blogs.msdn.com/b/windowsazure/archive/2010/11/29/just-released-windows-azure-sdk-1-3-and-the-new-windows-azure-management-portal.aspx)). These are significant releases that provide a lot of enhancements for Windows Azure.
 
  
 
@@ -163,7 +165,7 @@ As you’ve come to expect, BidNow includes a Configuration Wizard that includes
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image8.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image8.png)
 
  
 

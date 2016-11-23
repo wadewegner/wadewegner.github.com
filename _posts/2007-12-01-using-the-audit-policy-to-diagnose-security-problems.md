@@ -16,13 +16,12 @@ A neat trick to help you diagnose troublesome security problems. Modify your the
   2. Type: gpedit.msc  
   3. Expand **Local Computer Policy** -> **Computer Configuration** -> **Windows Settings** -> **Security Settings** -> **Local Policies** -> **Audit Policy**.  
   
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_2.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_4.png)   
-
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_2.png)
   4. Review the "Audit process tracking" policy. 
   5. Right-click the "Audit process tracking" policy, and select **Properties**. 
   6. On the Local Security Setting folder, check the "Success" and "Failure" checkboxes under "Audit these attempts". 
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_4.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_8.png)  
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/image_thumb_4.png)
 
   7. Click **OK** to continue.
 
@@ -30,7 +29,7 @@ If you define this policy setting, you can specify whether to audit successes, a
 
 These audits are now tracked in the Security log in the Event Viewer. Here's an example of a "Detailed Tracking" event.
 
-[![Event](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/Event_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/Event_2.jpg)
+![Event](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheAuditPolicytodiagnosesecuritypro_74CD/Event_thumb.jpg)
 
 Some additional details can be found [on TechNet](http://technet2.microsoft.com/windowsserver/en/library/0a642c0c-387a-44f5-bfd9-951b87fd13801033.mspx?mfr=true).
 

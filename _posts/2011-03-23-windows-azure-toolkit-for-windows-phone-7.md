@@ -12,7 +12,9 @@ categories:
 - Windows Phone 7
 ---
 
-![Courtesy Steve Marx (http://blog.smarx.com/)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/PhoneCloud.png)I am tremendously excited to announce the release of the [Windows Azure Toolkit for Windows Phone 7](http://watoolkitwp7.codeplex.com/). This toolkit is designed to make it easier for your to **build phone application that leverage cloud services running in Windows Azure**. Our team has been diligently working on this toolkit for months, and I think you’ll like what you see.
+![Courtesy Steve Marx](https://wadewegner.blob.core.windows.net/wordpress/2011/03/PhoneCloud.png)
+
+I am tremendously excited to announce the release of the [Windows Azure Toolkit for Windows Phone 7](http://watoolkitwp7.codeplex.com/). This toolkit is designed to make it easier for your to **build phone application that leverage cloud services running in Windows Azure**. Our team has been diligently working on this toolkit for months, and I think you’ll like what you see.
 
  
 
@@ -48,7 +50,8 @@ It’s easy to get started.
   1. Head over to [http://watoolkitwp7.codeplex.com/](http://watoolkitwp7.codeplex.com/) and download the latest package named **WAZToolkitForWP7.exe**. This file is a self-extracting executable, and will unpack the files on your disk.
    
   2. Your first step is to run **WAZToolkitForWP7.exe**. **Accept** the License Agreement (standard MS-PL) and click **Install**. Nothing is registered or installed on the O/S, so it makes it extremely easy to upgrade or remove.        
-![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image4.png)
+
+  ![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image4.png)
    
   3. Your next step is to run **Setup.cmd**. This launches the configuration wizard that will check prerequisites and install new project templates. Walk through the wizard and install any missing software. Please note that “Visual Basic for the Windows Phone Developer Tools RTW” is optional and not required.
    
@@ -89,7 +92,7 @@ Simply hit **F5** to build and run. Your phone application will launch in the Wi
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image7.png)
+ ![image](https://wadewegner.blob.core.windows.net/wordpress/2011/03/image7.png)
 
  
 
@@ -101,7 +104,8 @@ For a detailed walkthrough, please see the [Getting Started](http://watoolkitwp7
 
  
 
-One final closing thought – the toolkit is not yet complete. In fact, we’ve only just started. We already have additional work underway, and we plan to have many additional drops to provide additional capabilities and functionality. For example …
+One final closing thought – the toolkit is not yet complete. In fact, we’ve only just started
+. We already have additional work underway, and we plan to have many additional drops to provide additional capabilities and functionality. For example …
 
  
 

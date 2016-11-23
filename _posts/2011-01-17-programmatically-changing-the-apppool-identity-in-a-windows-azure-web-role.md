@@ -17,7 +17,7 @@ With the Windows Azure SDK 1.3 comes full support for IIS in web roles, giving y
 
 By default, the AppPool runs as the NetworkService. Go ahead and create a new Windows Azure Project, choose a web role, and hit F5 to run it in IIS. A new AppPool is created with a GUID for the name, and you’ll see that the Identity is NetworkService.
 
-[![DefaultAppPoolIdentity](https://wadewegner.blob.core.windows.net/wordpress/2011/01/DefaultAppPoolIdentity_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/DefaultAppPoolIdentity.png)
+![DefaultAppPoolIdentity](https://wadewegner.blob.core.windows.net/wordpress/2011/01/DefaultAppPoolIdentity.png)
 
 In most cases this is fine, and the NetworkService identity is sufficient. However, there are some cases where you many need to change the AppPool identity. Here at Microsoft, for example, we have an internal proxy that manages all our network traffic. In order for traffic to move through the proxy, the underlying identity has to be an authenticated domain user. Consequently, any requests sent by the NetworkService result in errors when trying to access network resources (e.g. Windows Azure storage, AppFabric service namespaces, and SQL Azure).
 
@@ -69,7 +69,7 @@ A few things to point out:
   
 * Line #6: Specify the name of your web role project as webApplicationProjectName. This is used on line #13 to look up the newly created AppPool. 
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image.png)
+  ![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image.png)
 
 * Lines #7 & #8: Update to use your own username & password. 
 
@@ -77,7 +77,7 @@ A few things to point out:
 
 Once you update your code and run again, you’ll see that your AppPool is updated with the new identity.
 
-[![NewAppPoolIdentity](https://wadewegner.blob.core.windows.net/wordpress/2011/01/NewAppPoolIdentity_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/NewAppPoolIdentity.png)
+![NewAppPoolIdentity](https://wadewegner.blob.core.windows.net/wordpress/2011/01/NewAppPoolIdentity.png)
 
 Now, whenever your application makes a request through the network, it will originate from your domain account (or whatever you specify) instead of the NetworkService.
 

@@ -57,7 +57,7 @@ You should now have a folder that looks like this:
 
  
 
-[![CDNWordpress-1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1.jpg)
+![CDNWordpress-1](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1.jpg)
 
  
 
@@ -89,7 +89,7 @@ Once unzipped, you should see the following:
 
  
 
-[![CDNWordpress-2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2.jpg)
+![CDNWordpress-2](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2.jpg)
 
  
 
@@ -105,11 +105,11 @@ Initially, the code block looks like this:
 
  
 
-if (isset($_SERVER["APPL_PHYSICAL_PATH"])) {        
-set_include_path(         
-get_include_path() . PATH_SEPARATOR . $_SERVER["APPL_PHYSICAL_PATH"]         
-);         
-}
+	if (isset($_SERVER["APPL_PHYSICAL_PATH"])) {        
+	set_include_path(         
+	get_include_path() . PATH_SEPARATOR . $_SERVER["APPL_PHYSICAL_PATH"]         
+	);         
+	}
 
  
 
@@ -117,11 +117,11 @@ You should update it accordingly (where the updates are highlighted in yellow):
 
  
 
-if (isset($_SERVER["APPL_PHYSICAL_PATH"])) {        
-set_include_path(         
-get_include_path() . PATH_SEPARATOR . $_SERVER["APPL_PHYSICAL_PATH"] . PATH_SEPARATOR . 'C:\\Program Files (x86)\\PHPAzure-3.0.0\\library'         
-);         
-}
+	if (isset($_SERVER["APPL_PHYSICAL_PATH"])) {        
+	set_include_path(         
+	get_include_path() . PATH_SEPARATOR . $_SERVER["APPL_PHYSICAL_PATH"] . PATH_SEPARATOR . 'C:\\Program Files (x86)\\PHPAzure-3.0.0\\library'         
+	);         
+	}
 
  
 
@@ -177,7 +177,7 @@ When you’ve set the policy correctly, it should look like this:
 
  
 
-[![CDNWordpress-5](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5.jpg)
+![CDNWordpress-5](https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5.jpg)
 
  
 
@@ -245,7 +245,7 @@ Now, once this is done, you’ll be able to browse to resources in storage throu
 
  
 
-[http://az29238.vo.msecnd.net/images/Mug-195w.jpg](http://az29238.vo.msecnd.net/images/Mug-195w.jpg)
+![Mug-195w](http://az29238.vo.msecnd.net/images/Mug-195w.jpg)
 
  
 
@@ -253,7 +253,7 @@ While this works perfectly well, I personally don’t like the non-customized UR
 
  
 
-[https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg](https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg)
+![mug](https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg)
 
  
 

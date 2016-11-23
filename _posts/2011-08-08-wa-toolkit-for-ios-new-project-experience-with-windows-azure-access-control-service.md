@@ -122,7 +122,7 @@ Next, go into the **Rule Groups** section of the portal and select the default r
 
  
 
-[![iOSACS7](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS7_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS7.jpg)
+![iOSACS7](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS7.jpg)
 
  
 
@@ -262,21 +262,21 @@ Next, search for a method called **didFinishLaunchingWithOptions **and after the
 
  
 
-NSLog(@"Intializing the Access Control Client...");            
-WACloudAccessControlClient *acsClient = [WACloudAccessControlClient accessControlClientForNamespace:@"iostest-walkthrough" realm:@"uri:wazmobiletoolkit"];            
-[acsClient showInViewController:self.viewController allowsClose:NO withCompletionHandler:^(BOOL authenticated)            
-{             
-if (!authenticated)          
-{              
-NSLog(@"Error authenticating");          
-}            
-else          
-{              
-NSLog(@"Creating the authentication token...");            
-WACloudAccessToken *token = [WACloudAccessControlClient sharedToken];          
-/* Do something with the token here! */          
-}              
-}];
+	NSLog(@"Intializing the Access Control Client...");            
+	WACloudAccessControlClient *acsClient = [WACloudAccessControlClient accessControlClientForNamespace:@"iostest-walkthrough" realm:@"uri:wazmobiletoolkit"];            
+	[acsClient showInViewController:self.viewController allowsClose:NO withCompletionHandler:^(BOOL authenticated)            
+	{             
+		if (!authenticated)          
+		{              
+			NSLog(@"Error authenticating");          
+		}            
+		else          
+		{              
+			NSLog(@"Creating the authentication token...");            
+			WACloudAccessToken *token = [WACloudAccessControlClient sharedToken];          
+			/* Do something with the token here! */          
+		}              
+	}];
 
  
 
@@ -316,7 +316,7 @@ The first time the application is run, you’ll be prompted to authorize the app
 
  
 
-[![iOSACS20](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS20_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS20.jpg)
+![iOSACS20](https://wadewegner.blob.core.windows.net/wordpress/2011/08/iOSACS20.jpg)
 
  
 
@@ -357,31 +357,27 @@ The following code example shows how this can be done.
 
  
 
-WAAuthenticationCredential *credential = [WAAuthenticationCredential authenticateCredentialWithProxyURL:[NSURL URLWithString:@"[URL OF YOUR CLOUD READY PACKAGE]"] accessToken:[WACloudAccessControlClient sharedToken]];          
-NSLog(@"Creating the storage client...");
+	WAAuthenticationCredential *credential = [WAAuthenticationCredential authenticateCredentialWithProxyURL:[NSURL URLWithString:@"[URL OF YOUR CLOUD READY PACKAGE]"] accessToken:[WACloudAccessControlClient sharedToken]];          
+	NSLog(@"Creating the storage client...");
+	
+	WACloudStorageClient *storageClient = [WACloudStorageClient storageClientWithCredential:credential];          
+	[WACloudStorageClient ignoreSSLErrorFor:@"[FIRST PART OF THE URL FOR YOUR CLOUD READY PACKAGE]"];          
+	NSLog(@"Accessing table storage...");
 
- 
-
-WACloudStorageClient *storageClient = [WACloudStorageClient storageClientWithCredential:credential];          
-[WACloudStorageClient ignoreSSLErrorFor:@"[FIRST PART OF THE URL FOR YOUR CLOUD READY PACKAGE]"];          
-NSLog(@"Accessing table storage...");
-
- 
-
-[storageClient fetchTablesWithCompletionHandler:^(NSArray *tables, NSError *error)          
-{           
-if (!error)          
-{            
-NSLog(@"%i Tables were found!", [tables count]);            
-UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Table Storage" message:[NSString stringWithFormat:@"%i tables were found!",[tables count]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];          
-[alert show];          
-[alert release];          
-}            
-else            
-{            
-NSLog(@"%@", [error localizedDescription]);          
-}            
-}];
+	[storageClient fetchTablesWithCompletionHandler:^(NSArray *tables, NSError *error)          
+	{           
+		if (!error)          
+		{            
+			NSLog(@"%i Tables were found!", [tables count]);            
+			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Table Storage" message:[NSString stringWithFormat:@"%i tables were found!",[tables count]] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];          
+			[alert show];          
+			[alert release];          
+		}            
+		else            
+		{            
+			NSLog(@"%@", [error localizedDescription]);          
+		}            
+	}];
 
  
 

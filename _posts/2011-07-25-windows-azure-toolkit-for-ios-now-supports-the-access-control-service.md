@@ -61,7 +61,7 @@ Along with the CSPKG you need a CSCFG to deploy your application to Windows Azur
 
 In Visual Studio we have tools that make it easy to update the CSCFG file without having to open up the XML, but of course you cannot do this on a Mac. To make this easier, we created a tool that you can use on the Mac to walkthrough and generate the CSCFG file with all the appropriate details. Once created, you can use this CSCFG file along with the downloaded CSPKG file to deploy your application.
 
-[![iosconig](https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig.png)
+![iosconig](https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig.png)
 
 In addition to creating the CSCFG file, the configuration tool will also updated ACS with all the appropriate settings so that you can build & run your application quickly. For all the details, please take a look at Vittorio Bertocci’s post on [Using the Windows Azure Access Control Service in iOS Applications](http://blogs.msdn.com/b/vbertocci/archive/2011/07/25/using-the-windows-azure-access-control-service-in-ios-applications.aspx).
 

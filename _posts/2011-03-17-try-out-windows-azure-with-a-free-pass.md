@@ -39,23 +39,28 @@ It’s also pretty easy to get start.  In fact, Steve Marx and I shared a promo
 
 	
   2. Select your country where it reads **please select country** and enter the promo code “CloudCover” (without quotes) where it reads **enter promo code**.
-[![Screen1](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen1.png)
+
+  ![Screen1](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen1.png)
 
 	
   3. Either click the **Sign In** button to use your existing **Windows Live** account, or click **Sign up** to create a new account.
-[![Screen2](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen2_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen2.png)
+
+  ![Screen2](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen2.png)
 
 	
   4. You’ll be asked to fill out some information (e.g. first name, last name, etc.) – fill this out and click **Submit**.
-[![Screen3](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen3_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen31.png)
+
+  ![Screen3](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen31.png)
 
 	
   5. Next you’ll have to accept the terms of service.  Once again, enter your **first and last name** (I really don’t know why we have this here twice!), click the checkbox to **accept the terms**, then click **Accept**.
-[![Screen4](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen4_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen4.png)
+
+  ![Screen4](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen4.png)
 
 	
   6. And you’re done!
-[![Screen5](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen5_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen5.png)
+
+  ![Screen5](https://wadewegner.blob.core.windows.net/wordpress/2011/03/Screen5.png)
 
 
 It takes a few days to complete the process – yes, I too wish this weren’t the case – so I recommend two things: 1) sign-up right now, and 2) be patient.  Unfortunately, there’s nothing that I can personally do for you to speed up the process.

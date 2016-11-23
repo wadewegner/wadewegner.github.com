@@ -13,7 +13,9 @@ I learned about the [FreeRice](http://www.freerice.com/index.php) program from [
 
 
 
-![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/FreeRice.jpg)[](http://www.freerice.com/index.php)
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/FreeRice.jpg)
+
+[link](http://www.freerice.com/index.php)
 
 
 

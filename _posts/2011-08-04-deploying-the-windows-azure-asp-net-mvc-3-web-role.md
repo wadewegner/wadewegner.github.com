@@ -36,7 +36,7 @@ Immediately after creating the projects I confirmed that my assemblies were all 
 
  
 
-[![YSOD](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image1.png)
+![YSOD](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image1.png)
 
  
 
@@ -44,7 +44,7 @@ Naturally, I updated my **web.config** file with <customErrors mode="Off" /> and
 
  
 
-[![No SQL Express](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image2.png)
+![No SQL Express](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image2.png)
 
  
 
@@ -166,7 +166,7 @@ Now, when we run the applications, it works!
 
 
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image7.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image7.png)
 
 
 
@@ -178,7 +178,7 @@ In fact, I recommend you use **Database Manager **from the portal …
 
 
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image8.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image8.png)
 
 
 
@@ -190,7 +190,7 @@ In fact, I recommend you use **Database Manager **from the portal …
 
 
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image9.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/08/image9.png)
 
 
 

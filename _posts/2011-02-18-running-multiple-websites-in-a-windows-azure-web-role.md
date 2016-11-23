@@ -49,7 +49,7 @@ One of the capabilities that, surprisingly, people still doesn’t seem aware of
 
 The difference here is found in lines **#4** through **#10**. We now have a **<Sites>** element that includes a default **<Site> **named “Web”. When run (locally or in Windows Azure), this translates into an actual web site running in IIS.
 
-[![Deployment](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Deployment_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Deployment.jpg)
+![Deployment](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Deployment.jpg)
 
 You can see that our website is now running in IIS. And what’s nice is that the syntax used in the **ServiceDefinition.csdef **file is nearly identical to how this is traditionally accomplished in the [**system.applicationHost**](http://www.iis.net/ConfigReference/system.applicationHost/sites) – there’s not much new we have to learn.
 
@@ -90,21 +90,21 @@ While this syntax is correct, [www.litware.com](http://www.litware.com) will not
 
 After you’ve done this, you can confirm that they’re resolving correctly by pinging one of the addresses:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image3.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image3.png)
 
 The reply should come from 127.0.0.1.
 
 With this complete, hit **F5** and run again. You’re now running the same project in two different websites – take a look at IIS:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image4.png)
 
 In fact, if you take a look at the bindings on **Web2**, you’ll see that the host name has been set to [www.litware.com](http://www.litware.com).
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image5.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image5.png)
 
 And if you type [http://www.litware.com:81/](http://www.litware.com:81/) (or whatever port the compute emulator is using), you’ll see the website display.
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb6.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image6.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image6.png)
 
 This is pretty cool, especially when want to use the same application for multiple websites – you can handle the requests in such a way that you either pull from different databases or even display different CSS files to make the website display differently.
  
@@ -126,11 +126,11 @@ Create a new **<Site>** element where the **physicalDirectory** value is the loc
 
 We’ve now create a third website, but this time – instead of pointing to the Web role project in our solution – we’ve pointed to a completely separate project that lives outside of our solution. Hit F5 and take a look at IIS:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb7.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image7.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image7.png)
 
 We now have three sites running, the third which includes the files from “WebApplication7”. Try it out by updating the URL to [http://www.fabrikam.com:81/](http://www.fabrikam.com:81/) and you’ll see:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb8.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image8.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image8.png)
 
 You can see that this is the not the Web role project itself, but the second project we created. The packaging tools know to include all the files needed from the **physicalDirectory** location and make them a part of the CSPKG that is ultimately given to the fabric controller.
 
@@ -152,11 +152,11 @@ Create a brand new **Web Application**, and this time update with a different de
 
 The **<VirtualApplication>** element is on line **#3**. Go ahead and hit F5, and take a look at IIS:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb9.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image9.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image9.png)
 
 You can see that now, in Web3, our virtual application called **VirtualApp** is running. And if we browse to [http://www.fabrikam.com:81/virtualapp/](http://www.fabrikam.com:81/virtualapp/), we’ll see that it is indeed “WebApplication8” that’s running.
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb10.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image10.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image10.png)
 
 So there you have it!
 

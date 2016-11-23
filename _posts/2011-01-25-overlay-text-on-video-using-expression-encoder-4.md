@@ -79,6 +79,6 @@ Breaking it down:
    
   * **Line #10:** The OverlayRect defines where your Bitmap lives on the video. I indented it a bit, but it’s up to you.
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image1.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image1.png)
 
 I’ve modified the Simple template provided by the Expression Encoder 4 SDK with the code. You can find it below. Hope this helps.

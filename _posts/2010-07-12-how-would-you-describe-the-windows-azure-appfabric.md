@@ -11,7 +11,9 @@ categories:
 - Windows Azure AppFabric
 ---
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/07/image.png)](http://www.microsoft.com/windowsazure/appfabric/) I was reading through the [FAQ document for the Windows Azure platform](http://www.microsoft.com/windowsazure/faq/) this evening (what else is there to do on a Sunday night?), and I came across the following:
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/07/image.png)
+
+I was reading through the [FAQ document for the Windows Azure platform](http://www.microsoft.com/windowsazure/faq/) this evening (what else is there to do on a Sunday night?), and I came across the following:
 
  
 

@@ -13,7 +13,9 @@ categories:
 - Windows Azure
 ---
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/06/image.png)](http://northamerica.msteched.com/) It was an amazing [TechEd NA 2010](http://northamerica.msteched.com/), and I admit that it took me a few days to recover. Between the heat and humidity, great times with friends, and good food, I managed to spend a bit of time at the conference.
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/06/image.png)
+
+It was an amazing [TechEd NA 2010](http://northamerica.msteched.com/), and I admit that it took me a few days to recover. Between the heat and humidity, great times with friends, and good food, I managed to spend a bit of time at the conference.
 
  
 
@@ -33,11 +35,7 @@ I had the pleasure of co-presenting with Jerome Schulist, a solutions architect 
   * Automatic scale-out and scale-back of worker roles through queue lengths 
  
 
-For detailed information on this solution, you can take a look at the [Tribune Company’s Windows Azure case study](http://www.microsoft.com/casestudies/Case_Study_Detail.aspx?CaseStudyID=4000007519) or you can watch our TechEd NA 2010 presentation here:
-
- 
-
-  [ 	  ![Get Microsoft Silverlight](http://www.msteched.com/Skins/TechEdOnline/Styles/images/NoSilverlight.jpg)   ](http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.50106.0)
+For detailed information on this solution, you can take a look at the [Tribune Company’s Windows Azure case study](http://www.microsoft.com/casestudies/Case_Study_Detail.aspx?CaseStudyID=4000007519).
 
  
 

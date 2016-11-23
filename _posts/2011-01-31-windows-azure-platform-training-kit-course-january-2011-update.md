@@ -15,7 +15,9 @@ categories:
 - Windows Azure Platform
 ---
 
-[![WAPTK-January](https://wadewegner.blob.core.windows.net/wordpress/2011/01/WAPTK-January_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/WAPTK-January.png)I am thrilled to announce that we have released a January 2011 update to the [Windows Azure Platform Training Kit](http://go.microsoft.com/fwlink/?LinkID=130354) & [Training Course](http://go.microsoft.com/fwlink/?LinkID=207018).
+![WAPTK-January](https://wadewegner.blob.core.windows.net/wordpress/2011/01/WAPTK-January.png)
+
+I am thrilled to announce that we have released a January 2011 update to the [Windows Azure Platform Training Kit](http://go.microsoft.com/fwlink/?LinkID=130354) & [Training Course](http://go.microsoft.com/fwlink/?LinkID=207018).
 
  
 

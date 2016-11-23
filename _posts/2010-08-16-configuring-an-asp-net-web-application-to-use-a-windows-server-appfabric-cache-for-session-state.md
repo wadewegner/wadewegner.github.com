@@ -106,7 +106,7 @@ Below is a walkthrough on how to configure this scenario. In addition to this po
 
 11. Now, hit **control-F5** to start your project. After it loads, click the button labeled “Click Me” – you should see the following alert:
   
-	[![ASP.NET using Cache for Session State](https://wadewegner.blob.core.windows.net/wordpress/2010/08/image_thumb6.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/08/image9.png)
+	![ASP.NET using Cache for Session State](https://wadewegner.blob.core.windows.net/wordpress/2010/08/image9.png)
 
 That’s it! You have now configured your ASP.NET web application to leverage Windows Server AppFabric Cache to store all Session State.
 

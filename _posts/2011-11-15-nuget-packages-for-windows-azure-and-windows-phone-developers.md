@@ -60,9 +60,7 @@ The first set of NuGet packages to be aware of are the NuGet packages for Window
 
  
 
-[![Windows Phone OS 7.1](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1.jpg)
-
- 
+![Windows Phone OS 7.1](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1_thumb.jpg) 
 
 You can use these NuGets in a number of interesting ways. For example, you can quickly incorporate the [Access Control Service](http://www.microsoft.com/windowsazure/features/accesscontrol/) into your phone applications using the following NuGet packages:
 

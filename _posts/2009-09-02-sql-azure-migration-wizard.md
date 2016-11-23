@@ -18,40 +18,7 @@ Nevertheless, despite all the benefits you get from SQL Azure today, we're still
 
 At it's core, the [SQL Azure Migration Wizard](http://sqlazuremw.codeplex.com/) help you migrate your SQL Server databases into SQL Azure.  Point to your local database, walk through the wizard, and the end result is a SQL script you can deploy to SQL Azure - in fact, the tool will even deploy it for you.  I used this tool against the same database that took me hours to manually migrate and the process only took a few minutes.
 
-George has made the [SQL Azure Migration Wizard](http://sqlazuremw.codeplex.com/) available on CodePlex - you can download the source code and/or the binaries.  Additionally, he has put together the following screen cast to demonstrate how easy it is to use this tool.  Take a look:
-
-
-        
-            
-            
-            
-            
-            
-            
-            
-
-             
-
-
-                    ![](http://9puoxg.blu.livefilestore.com/y1pEmjy1ft6gmwROn80Y_0rZYusknHJSq7B_40r0ke-CuBxX4af_qv23TsiwxHDLGlenYmdy2iYoyhK0wSki2gYmA/SQLAzureMW_Thumb.jpg)
-                    ![](http://9puoxg.blu.livefilestore.com/y1pwtSE8VmyuZfe1fDPMgoyhQbyviNGfoPIC4cG8gctI6xZMTv_UBZ5GL8jYWAwE4qKANSkFv_d6i-rnXJ2TyVuTXUrx63JWwHH/Preview.png)
-                    
-
-
-                    
-
-
-                    ![Get Microsoft Silverlight](http://go2.microsoft.com/fwlink/?LinkId=108181)
-                    
-
-                    [
-                        ![Get Microsoft Silverlight]()
-                    ](http://go2.microsoft.com/fwlink/?LinkID=124807)
-             
-
-
-        
-
+George has made the [SQL Azure Migration Wizard](http://sqlazuremw.codeplex.com/) available on CodePlex - you can download the source code and/or the binaries.  
 
 I would like to point out that, while the [SQL Azure Migration Wizard](http://sqlazuremw.codeplex.com/) is a fabulous tool that will save you a lot of time when migrating your databases to SQL Azure, it's a temporary solution.  The SQL Server and SQL Azure teams will solve many of these problems before SQL Azure releases later this year. 
 

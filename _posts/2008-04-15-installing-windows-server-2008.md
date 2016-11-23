@@ -44,7 +44,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (1)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_1.jpg)
+  ![Windows Server 2008 Installation (1)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(1)_1.jpg)
 
  
 
@@ -52,31 +52,23 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (2)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_thumb_2.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_2.jpg)
+  ![Windows Server 2008 Installation (2)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(2)_2.jpg)
 
  
 
 3. Depending on the flavor of your DVD / ISO, you will have various options to select from. Select the operating system you want to install, and click **Next**.
-
  
 
-[![Windows Server 2008 Installation (3)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_1.jpg)
-
- 
+  ![Windows Server 2008 Installation (3)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(3)_1.jpg)
 
 4. You are next presented with the license terms. Be sure and read these terms! Once you have finished, select **I accept these terms**, and click** Next**.
 
- 
-
-[![Windows Server 2008 Installation (4)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_1.jpg)
-
+  ![Windows Server 2008 Installation (4)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(4)_1.jpg)
  
 
 5. You must next select the type of installation. Again, depending on your flavor, you may have different options. I always prefer to perform a fresh installation. That's just how I role. Make your selection, and click **Next**.
 
- 
-
-[![Windows Server 2008 Installation (5)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_1.jpg)
+  ![Windows Server 2008 Installation (5)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(5)_1.jpg)
 
  
 
@@ -84,7 +76,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (6)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_1.jpg)
+  ![Windows Server 2008 Installation (6)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(6)_1.jpg)
 
  
 
@@ -92,7 +84,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (7)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_thumb_2.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_2.jpg)
+  ![Windows Server 2008 Installation (7)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(7)_2.jpg)
 
  
 
@@ -100,7 +92,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (8)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_1.jpg)
+  ![Windows Server 2008 Installation (8)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(8)_1.jpg)
 
  
 
@@ -109,7 +101,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (9)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_1.jpg)
+  ![Windows Server 2008 Installation (9)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(9)_1.jpg)
 
  
 
@@ -117,7 +109,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (10)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_1.jpg)
+  ![Windows Server 2008 Installation (10)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(10)_1.jpg)
 
  
 
@@ -125,7 +117,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (11)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_1.jpg)
+  ![Windows Server 2008 Installation (11)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(11)_1.jpg)
 
  
 
@@ -133,7 +125,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (12)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12)_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12).jpg)
+  ![Windows Server 2008 Installation (12)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(12).jpg)
 
  
 
@@ -141,7 +133,7 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
  
 
-[![Windows Server 2008 Installation (13)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_thumb_1.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_1.jpg)
+  ![Windows Server 2008 Installation (13)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/InstallingWindowsServer2008_12C45/Windows%20Server%202008%20Installation%20(13)_1.jpg)
 
  
 
@@ -151,13 +143,10 @@ Alright, convinced? Well, if for some reason you're still not convinced then I i
 
 Congratulations, you've just installed Windows Server 2008! Altogether, I was able to go through this process in about 30 minutes on my Dell D830. Not too shabby! In the effort of full disclosure, here are the specifications for my machine:
 
- 
 
->   
-> 
 > Processor: Intel Core 2 Duo, 2.40 GHz       
-Memory (RAM): 4.00 GB        
-System type: 64-bit Operating System
+> Memory (RAM): 4.00 GB        
+> System type: 64-bit Operating System
 
  
 

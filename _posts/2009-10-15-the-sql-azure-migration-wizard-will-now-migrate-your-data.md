@@ -12,7 +12,9 @@ categories:
 - Tools
 ---
 
-[![George Huey, when he's not writing code!](https://wadewegner.blob.core.windows.net/wordpress/2009/10/GeorgeHuey_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/GeorgeHuey.jpg) Last month I [blogged about the SQL Azure Migration Wizard](http://www.wadewegner.com/index.php/2009/09/01/sql-azure-migration-wizard/) created by George Huey. This tool helps you to migrate your SQL Server database into [SQL Azure](http://www.microsoft.com/azure/sql.mspx) and is [available up on Codeplex](http://sqlazuremw.codeplex.com/). To date, this tool has been downloaded almost a thousand times!
+![George Huey, when he's not writing code!](https://wadewegner.blob.core.windows.net/wordpress/2009/10/GeorgeHuey.jpg) 
+
+Last month I [blogged about the SQL Azure Migration Wizard](http://www.wadewegner.com/index.php/2009/09/01/sql-azure-migration-wizard/) created by George Huey. This tool helps you to migrate your SQL Server database into [SQL Azure](http://www.microsoft.com/azure/sql.mspx) and is [available up on Codeplex](http://sqlazuremw.codeplex.com/). To date, this tool has been downloaded almost a thousand times!
 
  
 

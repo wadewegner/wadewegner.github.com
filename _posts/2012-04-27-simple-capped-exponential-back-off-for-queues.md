@@ -73,7 +73,7 @@ Here’s the output in the Windows Azure Compute Emulator:
 
 Now, the application will continue to sleep until it finds a message in the queue, at which point the interval is reset back to one. To test this I used the Azure Storage Explorer and created a new queue message.
 
-[![AzureStorageExplorerQueue](https://wadewegner.blob.core.windows.net/wordpress/2012/04/AzureStorageExplorerQueue_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2012/04/AzureStorageExplorerQueue.jpg)
+![AzureStorageExplorerQueue](https://wadewegner.blob.core.windows.net/wordpress/2012/04/AzureStorageExplorerQueue_thumb.jpg)
 
 Once the message is created the output is as follows:
     

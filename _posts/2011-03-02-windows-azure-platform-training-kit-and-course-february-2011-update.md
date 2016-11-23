@@ -14,7 +14,11 @@ categories:
 
  
 
-[![clip_image001[4]](https://wadewegner.blob.core.windows.net/wordpress/2011/03/clip_image0014.jpg)](http://bit.ly/WAPTCFeb11)The February 2011 update of the Windows Azure Platform Training Kit includes several updates and bug fixes for the hands-on labs. Most of the updates were focused on supporting the new Windows Azure AppFabric February CTP and the new portal experience for AppFabric Caching, Access Control, and the Service Bus. The specific content that was updated in this release includes:
+![clip_image001](https://wadewegner.blob.core.windows.net/wordpress/2011/03/clip_image0014.jpg)
+
+[link](http://bit.ly/WAPTCFeb11)
+
+The February 2011 update of the Windows Azure Platform Training Kit includes several updates and bug fixes for the hands-on labs. Most of the updates were focused on supporting the new Windows Azure AppFabric February CTP and the new portal experience for AppFabric Caching, Access Control, and the Service Bus. The specific content that was updated in this release includes:
 
  
 

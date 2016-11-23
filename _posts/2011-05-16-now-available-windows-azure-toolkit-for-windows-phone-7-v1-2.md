@@ -44,9 +44,7 @@ I highly recommend you take a look at the following resources to learn more:
       
 
         
-[![GettingStartedWAZToolkitWP7v12_512_c](https://wadewegner.blob.core.windows.net/wordpress/2011/05/GettingStartedWAZToolkitWP7v12_512_c.jpg)](http://channel9.msdn.com/posts/Getting-Started-with-the-Windows-Azure-Toolkit-for-Windows-Phone-7-v12)
-         
-          
+![GettingStartedWAZToolkitWP7v12_512_c](https://wadewegner.blob.core.windows.net/wordpress/2011/05/GettingStartedWAZToolkitWP7v12_512_c.jpg)
 
 [Getting Started with the Windows Azure Toolkit for Windows Phone 7](http://channel9.msdn.com/posts/Getting-Started-with-the-Windows-Azure-Toolkit-for-Windows-Phone-7-v12)
 
@@ -58,9 +56,7 @@ by [Wade Wegner](http://www.wadewegner.com/)
               
 
         
-[![WAZWP7ACS1_512_ch9632](https://wadewegner.blob.core.windows.net/wordpress/2011/05/WAZWP7ACS1_512_ch9632.jpg)](http://channel9.msdn.com/Shows/Identity/Getting-Started-with-ACS-and-the-Windows-Azure-Toolkit-for-Windows-Phone-7)
-         
-          
+![WAZWP7ACS1_512_ch9632](https://wadewegner.blob.core.windows.net/wordpress/2011/05/WAZWP7ACS1_512_ch9632.jpg)
 
 [Getting Started with ACS and the Windows Azure Toolkit for Windows Phone 7](http://channel9.msdn.com/Shows/Identity/Getting-Started-with-ACS-and-the-Windows-Azure-Toolkit-for-Windows-Phone-7)
 
@@ -185,7 +181,7 @@ An affect of these changes could be an error when interacting with user data sto
 
  
 
-[![image_22](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_22_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_22.png)
+![image_22](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_22.png)
 
  
 

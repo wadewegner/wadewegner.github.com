@@ -52,14 +52,7 @@ My searches lead me to the [Windows Mobile 5.0 Developer Resource Kit](http://ww
 As I said, my goal here is to setup a development environment and deploy a _simple_ application to my Blackjack. In order to consider this a successful test, I don't need the application to actually do anything except run. Here are the steps I took.
 
 
-
-
-> 
-
-> 
 > _Note: while this is written specifically for the Blackjack, the following steps will (largely) work for any kind of SmartPhone running Windows Mobile 5.0._
-
-
 
 
 
@@ -88,7 +81,7 @@ As I said, my goal here is to setup a development environment and deploy a _simp
 
   9. The project template includes a Form1.cs file. The designer shows a form embedded in a phone shell. Drop a label on the form that says something (e.g. "Hello world!").  
   
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_thumb_3.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_5.png)   
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/WindowsMobile5.0Development_11CC7/image_thumb_3.png) 
 
 
   10. Make sure your Blackjack is connected to your computer via your USB cable, and confirm that ActiveSync is able to communicate and synchronize with your Blackjack.

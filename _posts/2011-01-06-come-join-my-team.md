@@ -12,11 +12,9 @@ categories:
 - Windows Azure Platform
 ---
 
-![Developer and Platform Evangelism](https://software.msdnaa.dk/Content/dpe_logo.png)One of the best career decisions I’ve made was to join the **Windows Azure Platform Evangelism team** last July. Yes, it was a lot of work to uproot the family and move to Seattle, but it was absolutely worth it. I pinch myself nearly everyday to make sure that it’s not just a dream – the opportunities here are tremendous:
+One of the best career decisions I’ve made was to join the **Windows Azure Platform Evangelism team** last July. Yes, it was a lot of work to uproot the family and move to Seattle, but it was absolutely worth it. I pinch myself nearly everyday to make sure that it’s not just a dream – the opportunities here are tremendous:
 
  
-
-  
   * Work with an incredible group of smart, driven, **technical leaders**
    
   * Interact with **product teams**, help to shape the direction of **product innovation**, and work with customers on building awesome applications 

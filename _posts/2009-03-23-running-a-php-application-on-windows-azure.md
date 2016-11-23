@@ -25,19 +25,23 @@ In this post, I want to walk you through the step you need to take to run a PHP 
 
 	
   2. Select **Cloud Service** project type and select the **Blank Cloud Service** template. Specify the name/location, and click **OK**.
-[![New Windows Azure project](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_1.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_4.png)
+
+  ![New Windows Azure project](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_4.png)
 
 	
   3. Add a **Cgi Web Role **project. Right-click the project (e.g. CloudService1) and select **New Web Role Project**.
-[![Add a web role project](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_2.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_6.png)
+
+  ![Add a web role project](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_6.png)
 
 	
   4. Specify the **Name** and click **OK**.
-[![Add a CGI web role](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_3.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_8.png)
+
+  ![Add a CGI web role](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_8.png)
 
 	
   5. By default the **Web.roleconfig** file is opened in the new project. Remove the comments and update the **application fullPath **to "%RoleRoot%phpphp-cgi.exe".
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_4.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_10.png)
+
+  ![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_10.png)
 
 	
   6. Now we need to actually grab the PHP executable that will bet invoked. Browse to [http://www.php.net/downloads.php](http://www.php.net/downloads.php) and grab the non-thread-safe Windows binary (at the time of writing, it is “PHP 5.2.9-1 Non-thread-safe zip package”).
@@ -55,26 +59,32 @@ When asked, specify “D for directory”. This will copy everything from c:php 
 
 	
   10. Open up the **Web.config** file and specify a new default document. This will tell Windows Azure to open up our PHP page by default. Under the <system.webServer> element, add a <defaultDocument>:
-[![defaultDocument](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_5.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_12.png)
+
+  ![defaultDocument](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_12.png)
 
 	
-  11. Additionally, we need to setup a handler in the Web.config file. Add the following code to the <handlers> element in the web.Config: [![FastCGI](http://www.wadewegner.com/content/2009/03/FastCGI.jpg)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_22.png)
+  11. Additionally, we need to setup a handler in the Web.config file. Add the following code to the <handlers> element in the web.Config: 
+
+  ![FastCGI](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_22.png)
 
 	
   12. In order for this to function, we have to enable native code execution in Windows Azure. To do so, open the **ServiceDefinition.csdef** file and set the **enableNativeCodeExecutiion** flag to true:
-[![enableNativeCodeExecution](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_6.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_14.png)
 
+![enableNativeCodeExecution](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_14.png)
 	
   13. Now, let’s create a new PHP file. Right-click on your Cgi Web Role and add a new item. Select the Text File template and change the name to index.php. Click **Add**.
-[![index.php](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_7.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_16.png)
+
+![index.php](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_16.png)
 
 	
   14. To test, create some PHP code. A quick, but effective, test is to simply echo “Hello World”. In the index.php file, write the following code:
-[![hello world](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_8.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_18.png)
+
+![hello world](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_18.png)
 
 	
   15. Press F5, and your browser should open and show you the following page:
-[![Hello World!](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_thumb_9.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_20.png)
+
+![Hello World!](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_20.png)
 
 
 And that’s all it takes!

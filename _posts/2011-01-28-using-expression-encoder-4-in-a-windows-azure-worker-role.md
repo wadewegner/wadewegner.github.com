@@ -48,7 +48,7 @@ The next thing to do is add the tools to our project that are needed to configur
 
 As I mentioned in my post on [Web Deploy with Windows Azure](http://www.wadewegner.com/2010/12/using-web-deploy-with-windows-azure-for-rapid-development/), make sure to mark these files as “Copy to Output Directory” in Visual Studio. I like to organize these files like this:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image2.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image2.png)
 
 Now, let’s take a look at the InstallEncoder.cmd script, as that’s where the real work is done. Here’s the script:
 
@@ -87,21 +87,21 @@ Unfortunately, there’s one other thing to be aware of – the Expression Encod
 
 Create a new Console project – I called mine “DllHostx86” based on some guidance I gleamed from [Hani Tech’s post](http://blogs.msdn.com/b/haniatassi/archive/2009/03/20/using-a-32bit-dll-in-the-windows-azure.aspx) – and add the Expression Encoder assemblies:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image3.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image3.png)
 
 Update the platform target so that it’s explicitly targeting x86 – this is required with these assemblies, as I’ve noted elsewhere in my blog (see [Using the Expression Encoder SDK to encode lots of videos](http://www.wadewegner.com/2010/08/using-the-expression-encoder-sdk-to-encode-lots-of-videos/)).
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image4.png)
 
 Now you can write the code in the Program.cs file to encode the videos using the Encoder APIs. This itself is pretty easy and straightforward, and I invite you to review the post I mention above to see how. Also, if you want to do something kind of fun you can add a [text overlay on the video](http://www.wadewegner.com/2011/01/overlay-text-on-video-using-expression-encoder-4/), just to show you can.
 
 The next step is to make sure that the DllHostx86 executable is available to include as part of our Worker Role package – we’ll want to run it as a separate process outside of the Worker Role. Simply update the output path so that it points to a folder that exists in your Worker Role project.
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image5.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image5.png)
 
 This way the any build will create an executable that exists within the Worker Role project folder, and consequently can be included within the Visual Studio project (be sure to set them to copy to the output directory). The end result will look like this:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image_thumb6.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image6.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/01/image6.png)
 
 Now, all we have to do is write some code that will create a new process and execute our DllHostx86.exe file.
 

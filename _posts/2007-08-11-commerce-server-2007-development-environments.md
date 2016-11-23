@@ -10,7 +10,9 @@ categories:
 - Commerce Server
 ---
 
-[![Commerce Server 2007](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007DevelopmentEnvironment_9127/CS2007_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007DevelopmentEnvironment_9127/CS2007.png) I often get asked about how development environments should be configured and what practices should be implemented when building a Commerce Server 2007 solution. I have found this to be a difficult question to answer, as everyone has their own preferences and "best-practices" when it comes to development environments. Additionally, we are often constrained by the following variables:
+![Commerce Server 2007](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/CommerceServer2007DevelopmentEnvironment_9127/CS2007_thumb.png)
+
+I often get asked about how development environments should be configured and what practices should be implemented when building a Commerce Server 2007 solution. I have found this to be a difficult question to answer, as everyone has their own preferences and "best-practices" when it comes to development environments. Additionally, we are often constrained by the following variables:
 
   * Relative importance placed on time, cost, and quality
   * Available development and QA skills

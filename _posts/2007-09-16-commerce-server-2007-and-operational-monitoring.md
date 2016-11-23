@@ -38,7 +38,7 @@ There are four steps involved in installing MOM 2005:
 
 I suggest that, before you install MOM 2005, you take advantage of the "Check Prerequisites" tool to make sure that you've properly configured your server. 
 
-[![Check Prerequisites for MOM 2005](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/image_2.png)
+![Check Prerequisites for MOM 2005](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/image_thumb.png)
 
 If you have problems installing agents on step two, take a look at the following KB article: [ttp://support.microsoft.com/kb/883335/en-us](http://support.microsoft.com/kb/883335/en-us). Turns out I had a DNS issue on one of the machines I wanted push an agent onto; after resolving the DNS issue I had no problems. 
 
@@ -48,7 +48,7 @@ Once you have successfully installed and configured MOM 2005 (steps 1 through 3)
 
 You must first download the [MOM 2005 pack for Commerce Server 2007](http://www.microsoft.com/downloads/details.aspx?FamilyID=20ac6a26-02cc-4dee-95e5-39ee6dabd751&DisplayLang=en). When you run the executable you must specify the location to place the files.
 
-[![Commerce Server 2007 MOM Pack 2005](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/1_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/1_2.gif)
+![Commerce Server 2007 MOM Pack 2005](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/1_thumb.gif)
 
 I suggest you use the default location for management packs: C:Program FilesMicrosoft Operations Manager 2005Management Packs. This way, when you run the import from the MOM 2005 Administrator Console, you won't have to change the default location.
 
@@ -59,8 +59,11 @@ To import the management pack you must do the following:
   3. Right-click **Management Packs** and select **Import/Export Management Pack**.
   4. Choose the Import a management pack, and click **Next**.
   5. Lave the default location for the management packs, which is where you installed the Commerce Server 2007 MOM Pack. Click **Next** to continue.  
-[![Management Pack Import/Export Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/2_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/2_2.gif)
-  6. Select the **Microsoft Commerce Server 2007.akm** management pack to import. Click **Next** to continue.[![Management Pack Import/Export Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/3_thumb.gif)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/3_2.gif)
+  ![Management Pack Import/Export Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/2_thumb.gif)
+
+  6. Select the **Microsoft Commerce Server 2007.akm** management pack to import. Click **Next** to continue.
+  ![Management Pack Import/Export Wizard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/39b63fb25a66_8E5F/3_thumb.gif)
+
   7. On the summary page, click **Finish**.
 
 Once you have installed the management pack you must then specify your Commerce Server 2007 servers. To do this, you must do the following.

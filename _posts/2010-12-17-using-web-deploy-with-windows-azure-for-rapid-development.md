@@ -99,7 +99,7 @@ At this point, you are ready to deploy your application. When the role instance 
 
 Once deployed, your application should look like this:
 
-[![Pre-Web Deploy](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image10.png)
+![Pre-Web Deploy](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image10.png)
 
 Now it’s time to setup your **MvcWebRole** project to publish directly to your role instance through web deploy. First, though, make a quick change to your application so that, after you deploy, you can verify that the new bits are deployed.
 
@@ -135,11 +135,11 @@ Now, let’s publish the update.
 
 Once complete, your **Publish Web** window should look something like this:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image11.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image11.png)
 
 After you get the message **Publish succeeded**, refresh your page. It should now look like this:
 
-[![DeployedWithWebDeploy](https://wadewegner.blob.core.windows.net/wordpress/2010/12/DeployedWithWebDeploy_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/12/DeployedWithWebDeploy.png)
+![DeployedWithWebDeploy](https://wadewegner.blob.core.windows.net/wordpress/2010/12/DeployedWithWebDeploy.png)
 
 And there you have it! Within seconds you’ve deployed updates to your application running in Windows Azure.
 

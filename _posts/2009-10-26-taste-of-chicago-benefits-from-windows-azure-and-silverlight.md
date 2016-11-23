@@ -17,7 +17,9 @@ As a native Illinoisan, I know that the [Taste of Chicago](http://www.explorechi
 
  
 
-[![West Monroe Partners](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image19.png)](http://www.westmonroepartners.com/)This past year, the City of Chicago needed to quickly build out an interactive map for the event – and when I say quickly, I mean it. They needed an interactive mapping experience built and deployed in less than 10 days. To help make this a reality, the City of Chicago turned to a very capable Microsoft partner, [West Monroe Partners (WMP)](http://www.westmonroepartners.com/), for assistance.
+![West Monroe Partners](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image19.png)
+
+This past year, the City of Chicago needed to quickly build out an interactive map for the event – and when I say quickly, I mean it. They needed an interactive mapping experience built and deployed in less than 10 days. To help make this a reality, the City of Chicago turned to a very capable Microsoft partner, [West Monroe Partners (WMP)](http://www.westmonroepartners.com/), for assistance.
 
  
 
@@ -37,9 +39,7 @@ WMP proposed the following – an immersive [Silverlight](http://silverlight.net
 
  
 
-[![Taste of Chicago interactive map](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image20.png)](http://tasteofchicago09.cloudapp.net/)
-
- 
+![Taste of Chicago interactive map](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image20.png) 
 
 The [Windows Azure Platform](http://www.microsoft.com/windowsazure/) – which I’ve discussed many times on my blog – is Microsoft’s cloud platform. It is comprised of the following: Windows Azure, an operating system as a service; SQL Azure, a fully relational database in the cloud; and .NET Services, consumable web-based services that provide both secure connectivity and federated access control for applications.
 
@@ -67,7 +67,9 @@ Additionally, Erik Brown – technical lead at WMP – spoke to Microsoft about 
 
  
 
-[![Windows Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image21.png)](http://channel9.msdn.com/posts/Abe+Pachikara/SI-WMT-Handles-Client-Need-in-10-Days-Using-Azure/Default.aspx?wa=wsignin1.0)
+![Windows Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image21.png)
+
+[link](http://channel9.msdn.com/posts/Abe+Pachikara/SI-WMT-Handles-Client-Need-in-10-Days-Using-Azure/Default.aspx?wa=wsignin1.0)
 
  
 

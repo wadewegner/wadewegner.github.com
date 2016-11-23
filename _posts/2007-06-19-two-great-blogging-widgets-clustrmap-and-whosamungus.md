@@ -22,7 +22,7 @@ It reminds me of a small-scale version of the map Google Analytics provides. Her
 
 	<a href="http://www2.clustrmaps.com/counter/maps.php?url=http://www.wadewegner.com" temp_href="http://www2.clustrmaps.com/counter/maps.php?url=http://www.wadewegner.com" id="clustrMapsLink">
 	    
-		<img src="http://www2.clustrmaps.com/counter/index2.php?url=http://www.wadewegner.com" style="border:0px;" alt="Locations of visitors to this page" title="Locations of visitors to this page" id="clustrMapsImg" onError="this.onError=null;this.src='http://clustrmaps.com/images/clustrmaps-back-soon.jpg';document.getElementById('clustrMapsLink').href='http://clustrmaps.com'" />
+		
 
 	</a>
 
@@ -34,7 +34,7 @@ The second widget is [whos.amung.us](http://whos.amung.us/). Have you ever wante
 
 Here's what the widget looks like:
 
-[![counter](http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff)](http://whos.amung.us/show/ds0261t1)
+![counter](http://whos.amung.us/cwidget/ds0261t1/7cbafcffffff)
 
 Here's the page that shows the URLs your readers are currently at (it's also neat that the links refresh themselves every few seconds):
 

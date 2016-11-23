@@ -48,7 +48,7 @@ For me I wanted to create a service that published the aggregated feed – I cho
 
 1. Create a new ASP.NET MVC 3 Web Application. I’ve called mine **RssFeed**.   
 
-	[![NewProject](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NewProject_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NewProject.jpg)
+	![NewProject](https://wadewegner.blob.core.windows.net/wordpress/2011/11/NewProject_thumb.jpg)
 
 2. Choose an **Internet Application** using the **Razor** view engine and **HTML5 semantic** markup. 
 
@@ -56,7 +56,7 @@ For me I wanted to create a service that published the aggregated feed – I cho
 
 4. Create an empty controller. I’ve called mine the **RssController**.
 
-	[![RssFeed](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed.jpg)
+	![RssFeed](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg)
 
 5. We’re going to define our own **ActionResult** implementation that can emit RSS by deriving from **ActionResult**. Inspiration and original source comes from [this post](http://www.developerzen.com/2009/01/11/aspnet-mvc-rss-feed-action-result/) on Developer Zen. 
 
@@ -121,7 +121,7 @@ For me I wanted to create a service that published the aggregated feed – I cho
 
 9. Now, hit F5 and run. Browse to http://localhost:<port>/rss to see the aggregated RSS feed.   
 
-	[![RssFeed](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed.jpg)
+	![RssFeed](https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg)
 
 And that’s it!
 

@@ -34,7 +34,7 @@ In addition to the core updates listed above, we’ve also enhanced the setup an
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/10/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/10/image.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/10/image_thumb.png)
 
  
 

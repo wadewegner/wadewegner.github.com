@@ -11,7 +11,9 @@ categories:
 - Windows Azure Platform
 ---
 
-![pdc10](https://wadewegner.blob.core.windows.net/wordpress/2010/10/image.png)While I’ve been involved with [the Professional Developers Conference (PDC)](http://www.microsoftpdc.com/) in the past ([keynote in ‘08](http://channel9.msdn.com/Blogs/pdc2008/KYN01), [breakout in ‘08](http://channel9.msdn.com/blogs/pdc2008/bb59), and [breakout in ‘09](http://www.microsoftpdc.com/2009/SVC22)), I’ve never been as personally vested and involved as I am this year. Whether you look at as a perk or curse, it’s one of the jobs I signed up for when I took the roll as a [Technical Evangelist](http://www.wadewegner.com/2010/05/new-role-technical-evangelist-for-azure-appfabric/) for the Windows Azure Platform (personally, I love it!).
+![pdc10](https://wadewegner.blob.core.windows.net/wordpress/2010/10/image.png)
+
+While I’ve been involved with [the Professional Developers Conference (PDC)](http://www.microsoftpdc.com/) in the past ([keynote in ‘08](http://channel9.msdn.com/Blogs/pdc2008/KYN01), [breakout in ‘08](http://channel9.msdn.com/blogs/pdc2008/bb59), and [breakout in ‘09](http://www.microsoftpdc.com/2009/SVC22)), I’ve never been as personally vested and involved as I am this year. Whether you look at as a perk or curse, it’s one of the jobs I signed up for when I took the roll as a [Technical Evangelist](http://www.wadewegner.com/2010/05/new-role-technical-evangelist-for-azure-appfabric/) for the Windows Azure Platform (personally, I love it!).
 
  
 

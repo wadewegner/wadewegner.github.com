@@ -38,7 +38,7 @@ In the LABS portal, the CTP environment only lights-up **Service Bus, Access Con
 
  
 
-[![Picture 0](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-0_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-0.png)
+![Picture 0](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-0.png)
 
  
 
@@ -46,7 +46,7 @@ Once you select **Service Bus, Access Control & Caching**, you’ll land on the 
 
  
 
-[![Picture 1](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-1_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-1.png)
+![Picture 1](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-1.png)
 
  
 
@@ -60,7 +60,7 @@ Be sure download the updated Windows Azure AppFabric SDK – you can find it at 
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image.png)
 
  
 
@@ -68,7 +68,7 @@ To create a Cache, select the **Cache** under **AppFabric** …
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image1.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/02/image1.png)
 
  
 
@@ -76,7 +76,7 @@ To create a Cache, select the **Cache** under **AppFabric** …
 
  
 
-[![Picture 2.5](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-2.5_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-2.5.png)
+![Picture 2.5](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-2.5.png)
 
  
 
@@ -88,7 +88,7 @@ In the CTP, you only have control over the **Service Namespace** and the **Cache
 
  
 
-[![Picture 3a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-3a_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-3a.png)
+![Picture 3a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-3a.png)
 
  
 
@@ -96,7 +96,7 @@ For the option size, your choices are **128MB Cache** and **256MB Cache**. When 
 
  
 
-[![Picture 6](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-6.png)
+![Picture 6](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-6.png)
 
  
 
@@ -104,7 +104,7 @@ It only takes about 10-15 seconds to provision your cache in the background. Whe
 
  
 
-[![Picture 7](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-7_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-7.png)
+![Picture 7](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-7.png)
 
  
 
@@ -112,7 +112,7 @@ Once the cache is provisioned, you can expand the **Properties** to get specific
 
  
 
-[![Picture 10a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-10a_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-10a.png)
+![Picture 10a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-10a.png)
 
  
 
@@ -120,7 +120,7 @@ There are a few more capabilities now available from the portal – specifically
 
  
 
-[![Picture 9a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-9a_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-9a.png)
+![Picture 9a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-9a.png)
 
  
 
@@ -128,7 +128,7 @@ In addition to changing the cache size, you can also grab the client configurati
 
  
 
-[![Picture 8a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-8a_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-8a.png)
+![Picture 8a](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-8a.png)
 
  
 
@@ -152,51 +152,50 @@ Open up the App.Config and paste in the configuration from the portal. Once adde
 
   
 
-Code Snippet
-
-  1. <?xml version="1.0"?>
-  2. <configuration>
-  3.   <configSections>
-  4.     <section name="dataCacheClient" type="Microsoft.ApplicationServer.Caching.DataCacheClientSection, Microsoft.ApplicationServer.Caching.Core" allowLocation="true" allowDefinition="Everywhere"/>
-  5.   </configSections>
-  6.   <dataCacheClient deployment="Simple">
-  7.     <hosts>
-  8.       <host name="YOURCACHE.cache.appfabriclabs.com" cachePort="22233" />
-  9.     </hosts>
-  10.     <securityProperties mode="Message">
-  11.       <messageSecurity
-  12.           authorizationInfo="YOURTOKEN">
-  13.       </messageSecurity>
-  14.     </securityProperties>
-  15.   </dataCacheClient>
-  16. </configuration>
+	  1. <?xml version="1.0"?>
+	  2. <configuration>
+	  3.   <configSections>
+	  4.     <section name="dataCacheClient" type="Microsoft.ApplicationServer.Caching.DataCacheClientSection, Microsoft.ApplicationServer.Caching.Core" allowLocation="true" allowDefinition="Everywhere"/>
+	  5.   </configSections>
+	  6.   <dataCacheClient deployment="Simple">
+	  7.     <hosts>
+	  8.       <host name="YOURCACHE.cache.appfabriclabs.com" cachePort="22233" />
+	  9.     </hosts>
+	  10.     <securityProperties mode="Message">
+	  11.       <messageSecurity
+	  12.           authorizationInfo="YOURTOKEN">
+	  13.       </messageSecurity>
+	  14.     </securityProperties>
+	  15.   </dataCacheClient>
+	  16. </configuration>
 
  
 
 Now let’s update the Main method of our Console application with a very simple demonstration:
 
-   
 
-  
 
-Code Snippet
-
-  1. static void Main(string[] args)
-  2. {
-  3.     // setup the DataCacheFactory using the app.config settings
-  4.     DataCacheFactory dataCacheFactory = new DataCacheFactory();
-  5.   6.     // get the default cache client 
-  7.     DataCache dataCache = dataCacheFactory.GetDefaultCache();
-  8.   9.     // enter a value to store in the cache
-  10.     Console.Write("Enter a value: ");
-  11.     string value = Console.ReadLine();
-  12.   13.     // put your value in the cache
-  14.     dataCache.Put("key", value);
-  15.   16.     // get your value out of the cache
-  17.     string response = (string)dataCache.Get("key");
-  18.   19.     // write the value
-  20.     Console.WriteLine("Your value: " + response);
-  21. }
+	  1. static void Main(string[] args)
+	  2. {
+	  3.     // setup the DataCacheFactory using the app.config settings
+	  4.     DataCacheFactory dataCacheFactory = new DataCacheFactory();
+	
+	  6.     // get the default cache client 
+	  7.     DataCache dataCache = dataCacheFactory.GetDefaultCache();
+	
+	  9.     // enter a value to store in the cache
+	  10.     Console.Write("Enter a value: ");
+	  11.     string value = Console.ReadLine();
+	
+	  13.     // put your value in the cache
+	  14.     dataCache.Put("key", value);
+	
+	  16.     // get your value out of the cache
+	  17.     string response = (string)dataCache.Get("key");
+	
+	  19.     // write the value
+	  20.     Console.WriteLine("Your value: " + response);
+	  21. }
 
  
 
@@ -204,7 +203,7 @@ You can see that all we have to do is create a new instance of the DataCacheFact
 
  
 
-[![Picture 11](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-11_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-11.png)
+![Picture 11](https://wadewegner.blob.core.windows.net/wordpress/2011/02/Picture-11.png)
 
  
 

@@ -23,7 +23,9 @@ categories:
 
 
 
-![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Mix08.jpg)I'll be in Las Vegas again tomorrow to attend MIX08. In it's third year, MIX is an opportunity to learn about Microsoft's strategy surrounding the future of the web, the latest Microsoft web technologies, rich user experiences, and Vista and IE8 forecasts. It's a great event for technical strategists, creative designers, and technical decision makers. This year, MIX will explore the following:
+![](https://wadewegner.blob.core.windows.net/wordpress/content/binary/Mix08.jpg)
+
+I'll be in Las Vegas again tomorrow to attend MIX08. In it's third year, MIX is an opportunity to learn about Microsoft's strategy surrounding the future of the web, the latest Microsoft web technologies, rich user experiences, and Vista and IE8 forecasts. It's a great event for technical strategists, creative designers, and technical decision makers. This year, MIX will explore the following:
 
 
 

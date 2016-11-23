@@ -25,10 +25,4 @@ Take a look at this great highlight reel featuring a number of great customer so
   * National Instruments 
  
 
-  	      [     ![Get Microsoft Silverlight](http://img.microsoft.com/showcase/Content/img/resx/en-US/installSL.gif) ](http://go.microsoft.com/fwlink/?LinkID=149156&v=3.0.40624.0)
-
-![DCSIMG](http://m.webtrends.com/dcsygm2gb10000kf9xm7kfvub_9p1t/njs.gif?dcsuri=/nojavascript&WT.js=No)
-
- 
-
 More to come on some of the great solutions and technologies highlighted at MIX 2010!

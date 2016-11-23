@@ -54,8 +54,8 @@ As with the Windows Phone and ACS example, I want to walk you through the whole 
 2. From the **Package Manager Console** type the following to install the ACS base login page NuGet package for Windows Phone: Install-Package Phone.Notifications.BasePage.          
 ![Phone.Notifications.BasePage](https://wadewegner.blob.core.windows.net/wordpress/2011/11/Phone.Notifications.BasePage.jpg)
 
-3. Update the** WMAppManifest.xml** file so that the default page is the **Push.xaml**. This way the user will come to the login page before the **MainPage.xaml.          
-![WMAppManifest](https://wadewegner.blob.core.windows.net/wordpress/2011/11/WMAppManifest.jpg)**
+3. Update the** WMAppManifest.xml** file so that the default page is the **Push.xaml**. This way the user will come to the login page before the **MainPage.xaml**.          
+![WMAppManifest](https://wadewegner.blob.core.windows.net/wordpress/2011/11/WMAppManifest.jpg)
 
 4. Let’s create a page that we can use to demonstration deep linking with MPNS. Create a new **Windows Phone Portrait Page** called **DeepLinkPage.xaml** in the **Pages** folder. 
 

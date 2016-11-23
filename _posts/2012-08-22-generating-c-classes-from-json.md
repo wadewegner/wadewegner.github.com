@@ -130,7 +130,7 @@ Take a look. Here’s some JSON returned back from the [Untappd API](http://unta
 	                  "url":"",
 	                  "relationship":null,
 	                  "bio":"",
-	                  "useravatar":"http://gravatar.com/avatar/f1672535a7caa3bd686267257d33c588?size=100&d=https%3A%2F%2Funtappd.s3.amazonaws.com%2Fsite%2Fassets%2Fimages%2Fdefaultavatar.jpg",
+	                  "useravatar":"http://gravatar.com/avatar/f1672535a7caa3bd686267257d33c588",
 	                  "contact":{
 	                     "foursquare":25958771
 	                  }

@@ -17,10 +17,9 @@ I had the honor and privilege to present with Jack Greenfield at PDC2008 this pa
 
 It was an incredible journey to PDC, and I plan to post a number of blog entries over the next couple weeks highlighting our [day one keynote with Bob Muglia and RedPrairie](http://channel9.msdn.com/pdc2008/KYN01/) (skip to minute 59:00), our use of the [Azure Services Platform](http://www.microsoft.com/azure/default.mspx) to build a supply chain application, and lots of code and patterns that show how we did it.  For now, I'd like to share with your our breakout session at PDC2008.  To watch our presentation, please click the picture below:
 
-[![Behind The Scenes: How We Built a Multi-Enterprise Supply Chain Application](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BuildingMultiEnterpriseBusinessApplicati_1340D/image_3.png)](http://channel9.msdn.com/pdc2008/BB59/)
+![Behind The Scenes: How We Built a Multi-Enterprise Supply Chain Application](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/BuildingMultiEnterpriseBusinessApplicati_1340D/image_3.png)
 
 Our session abstract:
-
 
 > Learn how we built a multi-enterprise supply chain application using the cloud services platform. Today, most organizations are deeply interconnected, and business applications span multiple enterprises. See how we built an application that satisfies requirements around connectivity, identity, orchestration, and storage, providing a scalable, pervasive, highly available, general-purpose platform that replaces custom software and infrastructure. Hear about the core requirements for multi-enterprise business applications, their architecture, and the cloud-based framework we built to support them. Learn about the issues we encountered, lessons learned, and useful guidelines and patterns.
 

@@ -159,13 +159,13 @@ To get the service to automatically establish the connection to the Service Bus,
 
 2. In IIS, select your virtual application EchoSample. Double-click the **Application Warm-Up **feature, and click **Settings**. Check the **Start Application Pool ‘ASP.NET v4.0’ when service started** checkbox. 
 
-	[![Application Warm-Up settings](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image2.png)
+	![Application Warm-Up settings](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image2.png)
 
 3. Add a new request to register EchoService.svc as a warm-up request for the application. Right-click and choose **Add Request**. Enter EchoService.svc, and click OK. You should now see it in the Request URL list. 
 
-	[![Application Warm-Up add request](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image3_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image3.png)
+	![Application Warm-Up add request](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image3.png)
 
-	[![Application Warm-Up](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image6.png)
+	![Application Warm-Up](https://wadewegner.blob.core.windows.net/wordpress/2010/05/image6.png)
 
 And that’s it! The service is now automatically started and “warmed up” by IIS. To test, recycle the Application Pool and restart the web site. Then, hit your Service Bus endpoint and confirm that you’re services are running.
 

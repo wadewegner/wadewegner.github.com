@@ -22,10 +22,12 @@ Here’s how to use it. From my blog, users can get this functionality a couple 
 
   
   1. Hover over the web slice discover section in the blog.        
-[![Take my posts with you](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image.png)
+
+  ![Take my posts with you](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image.png)
    
   2. From the IE tool bar, add the web slice.        
-[![Add my web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image1.png)
+
+  ![Add my web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image1.png)
  
 
 Really easy, and really powerful. This means that readers have access to my latest posts _anywhere_ they are browsing.
@@ -36,7 +38,7 @@ The best part is that web slices can notify users of updates – anytime my RSS 
 
  
 
-[![IE8 web slice notification](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image2.png)
+![IE8 web slice notification](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image2.png)
 
  
 
@@ -44,7 +46,7 @@ And when you select it, you’ll see the contents of the web slice:
 
  
 
-[![Wade Wegner web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image3.png)
+![Wade Wegner web slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image3.png)
 
  
 
@@ -66,10 +68,12 @@ The Web Slice Factory is exactly what it sounds like – a factory (or wizard) f
   
    
   3. You can setup three kinds of web slices: 1) Blog/Feed, 2) Twitter, and 3) Flicker. Choose which one you want to create. In this case, I’ll stick with Blog/Feed.        
-[![Pick a source](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image4.png)
+
+  ![Pick a source](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image4.png)
    
   4. Enter your blog / feed RSS URL into the box. Immediately upon entering the feed you’ll see the preview light up on the right side.        
-[![Personalize your Web Slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image5.png)
+
+  ![Personalize your Web Slice](https://wadewegner.blob.core.windows.net/wordpress/2010/04/image5.png)
    
   5. Customize the web slice to look the way you want it to look. To _really_ brand it the way you want it, use a background image with the logo and style you want.         
 
@@ -95,44 +99,14 @@ Pretty easily, actually. Basically, you need to wrap some meta data around a sec
 
      
     
-    <span style="color: #606060" id="lnum1">   1:</span> <span style="color: #0000ff"><</span><span style="color: #800000">div</span> <span style="color: #ff0000">class</span><span style="color: #0000ff">="hslice"</span> <span style="color: #ff0000">id</span><span style="color: #0000ff">="WadeWegnerWebSlice"</span><span style="color: #0000ff">></span>
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum2">   2:</span>    <span style="color: #0000ff"><</span><span style="color: #800000">div</span> <span style="color: #ff0000">style</span><span style="color: #0000ff">="display:none"</span> <span style="color: #ff0000">class</span><span style="color: #0000ff">="entry-title"</span><span style="color: #0000ff">></span>Wade Wegner<span style="color: #0000ff"></</span><span style="color: #800000">div</span><span style="color: #0000ff">></span>
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum3">   3:</span>    <span style="color: #0000ff"><</span><span style="color: #800000">div</span> <span style="color: #ff0000">class</span><span style="color: #0000ff">="entry-content"</span><span style="color: #0000ff">></span>
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum4">   4:</span>       IE8 users, view my blog posts as a Web Slice in your browser.
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum5">   5:</span>    <span style="color: #0000ff"></</span><span style="color: #800000">div</span><span style="color: #0000ff">></span>
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum6">   6:</span>    <span style="color: #0000ff"><</span><span style="color: #800000">a</span> <span style="color: #ff0000">href</span><span style="color: #0000ff">="http://www.ieaddons.com/en/ie8slice/wsUpdate.aspx?id=1053"</span> <span style="color: #ff0000">rel</span><span style="color: #0000ff">="feedurl"</span> <span style="color: #ff0000">style</span><span style="color: #0000ff">="display:none"</span><span style="color: #0000ff">></</span><span style="color: #800000">a</span><span style="color: #0000ff">></span>
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum7">   7:</span> <span style="color: #0000ff"></</span><span style="color: #800000">div</span><span style="color: #0000ff">></span>
-
+    <div class="hslice" id="WadeWegnerWebSlice"> 
+	    <div style="display:none" class="entry-title">Wade Wegnerdiv> 
+		    <div class="entry-content"> 
+		      IE8 users, view my blog posts as a Web Slice in your browser. 
+		    </div> 
+	    	<a href="http://www.ieaddons.com/en/ie8slice/wsUpdate.aspx?id=1053" rel="feedurl" style="display:none">a> 
+	    </div>
+	</div>
 
 
 

@@ -26,7 +26,7 @@ The practice of enabling the portability of identity information across otherwis
 
 More recently, various kinds of identity architecture have made identity federation much easier. Practices like [claims-based authentication](http://www.infoq.com/news/2009/10/Guide-Claim-Based-Identity), standards like [WS-Federation](http://en.wikipedia.org/wiki/WS-Federation), and so forth allow companies to establish trust domains between different organization and parties much easier. See the following illustration from [InfoQ](http://www.infoq.com/news/2009/10/Guide-Claim-Based-Identity):
 
-[![Claims-based identity with tokens](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image6_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image61.png)
+![Claims-based identity with tokens](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image61.png)
 
 In this picture, the application implicitly trusts tokens that come from the issuer. Consequently, rather than having to authenticate the users identity, the application can delegate that responsibility to the issuer, and instead focus on parsing the information received in the token. These tokens contain claims, which are nothing more than bits of information about a person, such as a name, email address, membership in a particular role, and so on. If your application trusts the issuer of the claim, you can leverage the information without having to query the identity store directly.
 
@@ -87,7 +87,7 @@ For example, this is what I ran:
 
 
 
-[![CreateCert.cmd](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image26_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image26.png)
+![CreateCert.cmd](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image26.png)
 
 
 
@@ -97,7 +97,7 @@ Note: you will have to enter the password "abc!123" multiple times. This is docu
 
 
 
-[![Certification Authority](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image3_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image33.png)
+![Certification Authority](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image33.png)
 
 
 
@@ -227,7 +227,7 @@ It should look like the following after the update:
 
 
 
-[![SSL tab](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image_thumb15.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image15.png)
+![SSL tab](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image15.png)
 
 
 
@@ -1022,7 +1022,7 @@ You will have to make a number of updates:
 
 
 
-[![Federation Utility wizard](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image33_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image331.png)
+![Federation Utility wizard](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image331.png)
 
 
 
@@ -1270,7 +1270,7 @@ Now, when you hit the endpoint on your ADFS v2 service, you will get redirected 
 
 
 
-[![hosts](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image39_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image39.png)
+![hosts](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image39.png)
 
 
 

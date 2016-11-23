@@ -13,12 +13,10 @@ categories:
 - XNA
 ---
 
-[![Starflight](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image.png) I love gaming. Long before the death match 95 tournament with Windows 95 that [featured Bill Gates in a trench coat](http://www.youtube.com/watch?v=xh0JM7pD4qM&feature=related), I was playing computer games. Two of the first games I remember playing were [The Ancient Art of War](http://en.wikipedia.org/wiki/The_Ancient_Art_of_War) and [Montezuma’s Revenge](http://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)) – simple but fun. I soon became a Sierra devotee, and devoured games such as [Kings Quest](http://en.wikipedia.org/wiki/Kings_Quest), [Heroes Quest](http://en.wikipedia.org/wiki/Quest_for_glory) (renamed Quest for Glory), [Space Quest](http://en.wikipedia.org/wiki/Space_Quest), [Police Quest](http://en.wikipedia.org/wiki/Police_Quest), and [Leisure Suit Larry](http://en.wikipedia.org/wiki/Leisure_suit_larry) (just don’t tell my dad). However, my favorite all time game was [Starflight](http://en.wikipedia.org/wiki/Starflight) from Binary Systems – this game had everything: space battles, exploration, great story line, and it required strategy and a lot of invested time.
+![Starflight](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image.png) 
 
- 
+I love gaming. Long before the death match 95 tournament with Windows 95 that [featured Bill Gates in a trench coat](http://www.youtube.com/watch?v=xh0JM7pD4qM&feature=related), I was playing computer games. Two of the first games I remember playing were [The Ancient Art of War](http://en.wikipedia.org/wiki/The_Ancient_Art_of_War) and [Montezuma’s Revenge](http://en.wikipedia.org/wiki/Montezuma%27s_Revenge_(video_game)) – simple but fun. I soon became a Sierra devotee, and devoured games such as [Kings Quest](http://en.wikipedia.org/wiki/Kings_Quest), [Heroes Quest](http://en.wikipedia.org/wiki/Quest_for_glory) (renamed Quest for Glory), [Space Quest](http://en.wikipedia.org/wiki/Space_Quest), [Police Quest](http://en.wikipedia.org/wiki/Police_Quest), and [Leisure Suit Larry](http://en.wikipedia.org/wiki/Leisure_suit_larry) (just don’t tell my dad). However, my favorite all time game was [Starflight](http://en.wikipedia.org/wiki/Starflight) from Binary Systems – this game had everything: space battles, exploration, great story line, and it required strategy and a lot of invested time.
 
->   
-> 
 > As an aside, I have seen the Starflight and Starflight 2 executables, along with some of the other games I’ve mentioned, floating around the Internet for awhile. It is possible to use [DOSBox](http://www.dosbox.com/) – an x86 emulator with DOS – to play these games.
 
  
@@ -27,7 +25,9 @@ The common theme to all of this, of course, is that my gaming platform was the P
 
  
 
-[![XNA](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image1.png)For a long time I’ve wanted to try my hand at making a game, but I’m a developer not a designer. Additionally, I know nothing about DirectX, OpenGL, and other multimedia/gaming APIs. While I’ve known about the [XNA](http://en.wikipedia.org/wiki/Microsoft_XNA) since it released in 2006, I never made the time to try it out. For those of you that aren’t familiar with XNA, it’s a framework with a set of tools that facilitates the development and management of computer games. The best part is it uses C#!
+![XNA](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image1.png)
+
+For a long time I’ve wanted to try my hand at making a game, but I’m a developer not a designer. Additionally, I know nothing about DirectX, OpenGL, and other multimedia/gaming APIs. While I’ve known about the [XNA](http://en.wikipedia.org/wiki/Microsoft_XNA) since it released in 2006, I never made the time to try it out. For those of you that aren’t familiar with XNA, it’s a framework with a set of tools that facilitates the development and management of computer games. The best part is it uses C#!
 
  
 
@@ -63,7 +63,7 @@ The first thing to do is get your XNA account all setup. This allows you to depl
 
  
 
-[![XNA Membership Options](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image2.png)
+  ![XNA Membership Options](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image2.png)
 
  
 
@@ -71,7 +71,7 @@ The first thing to do is get your XNA account all setup. This allows you to depl
 
  
 
-[![XNA Membership Types](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image3.png)
+  ![XNA Membership Types](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image3.png)
 
  
 
@@ -79,7 +79,7 @@ The first thing to do is get your XNA account all setup. This allows you to depl
 
  
 
-[![My Profile](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image4.png)
+  ![My Profile](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image4.png)
 
  
 
@@ -87,7 +87,7 @@ The first thing to do is get your XNA account all setup. This allows you to depl
 
  
 
-[![My Profile - Premium](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb5.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image5.png)
+  ![My Profile - Premium](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image5.png)
 
  
 
@@ -152,7 +152,7 @@ t**
 
  
 
-[![Add Device](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb6.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image6.png)
+  ![Add Device](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image6.png)
 
  
 
@@ -160,7 +160,7 @@ t**
 
  
 
-[![XBOX 360](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb7.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image7.png)
+  ![XBOX 360](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image7.png)
 
  
 
@@ -168,7 +168,7 @@ t**
 
  
 
-[![Name](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb8.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image8.png)
+  ![Name](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image8.png)
 
  
 
@@ -176,7 +176,7 @@ t**
 
  
 
-[![Connection Key](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb9.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image9.png)
+  ![Connection Key](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image9.png)
 
  
 
@@ -184,7 +184,7 @@ t**
 
  
 
-[![XNA Game Studio Device Center](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image_thumb10.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image10.png)
+  ![XNA Game Studio Device Center](https://wadewegner.blob.core.windows.net/wordpress/2010/01/image10.png)
 
  
 
@@ -204,7 +204,7 @@ Okay, everything’s setup. Now to build and deploy a game.
 
  
 
-[![XNA Game Studio Connect](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image1_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image1.jpg)
+  ![XNA Game Studio Connect](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image1.jpg)
 
  
 
@@ -212,7 +212,7 @@ Okay, everything’s setup. Now to build and deploy a game.
 
  
 
-[![Hello World!](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image2_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image2.jpg)
+  ![Hello World!](https://wadewegner.blob.core.windows.net/wordpress/2010/01/Image2.jpg)
 
  
 

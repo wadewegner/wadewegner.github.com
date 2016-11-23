@@ -135,15 +135,15 @@ Now, to help test, you can use System.Threading to make the button click sleep f
 
 Okay, now to test. Here's the page prior to the postback:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_4.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_10.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_10.png)
 
 Once the page is clicked, the experience changes to the following while the server is processing the request:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_8.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_18.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_18.png)
 
 And yes, this works in Firefox too:
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_thumb_7.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_16.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/UsingtheUpdateProgresstodisablepagecontr_11308/image_16.png)
 
 As I mentioned before, the "blur" and "progress" controls act as a screen over all the other controls, and since they are part of the ProgressTemplate these controls they are only active during server processing. You can confirm this by removing the Sleep method -- you won't even see you the "blur" and "progress" controls, as they are not needed.
 

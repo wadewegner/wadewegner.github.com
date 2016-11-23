@@ -12,9 +12,7 @@ categories:
 
 Earlier this week we had a team lunch to wish [Ryan Dunn](http://dunnry.com/blog/) well as he moves on to new challenges outside of Microsoft.
 
- 
-
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image12.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/12/image12.png)
 
  
 

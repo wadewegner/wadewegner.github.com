@@ -25,7 +25,7 @@ I’ve been waiting for almost a year to write this blog post.
 
  
 
-[![WP_000321](https://wadewegner.blob.core.windows.net/wordpress/2012/06/WP_000321_thumb.jpg)](https://wadewegner.blob.core.windows.net/wordpress/2012/06/WP_000321.jpg)
+![WP_000321](https://wadewegner.blob.core.windows.net/wordpress/2012/06/WP_000321_thumb.jpg)
 
  
 

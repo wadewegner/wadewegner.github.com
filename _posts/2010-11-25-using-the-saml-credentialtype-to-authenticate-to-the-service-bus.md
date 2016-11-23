@@ -215,7 +215,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
        
     * Endpoint URI: [http://localhost:8000/STS/FederationMetadata/2007-06/FederationMetadata.xml](http://localhost:8000/STS/FederationMetadata/2007-06/FederationMetadata.xml) (from the SelfSTS)             
            
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image2.png)             
+![image](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image2.png)             
 
        
    
@@ -239,7 +239,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
            
       * Value: Send                
                
-[![test send](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image3.png)                 
+![test send](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image3.png)                 
 
                
        
@@ -262,7 +262,7 @@ Okay, now that you have the basics loaded into AcmBrowser, here are the steps to
            
       * Value: Listen                
                
-[![test listen](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image4.png)                 
+![test listen](https://wadewegner.blob.core.windows.net/wordpress/2010/11/image4.png)                 
 
                
        
@@ -288,47 +288,57 @@ The rest of this sample is really pretty straightforward – we’ve either alre
 
 Getting the SAML Token
 
-  1. private static string GetSAMLToken(string identityProviderUrl, string identityProviderCertificateSubjectName, string username, string password, string appliesTo)
-  2. {
-  3.     GenericXmlSecurityToken token = null;
-  4.   5.     var binding = new WS2007HttpBinding();
-  6.   7.     binding.Security.Mode = SecurityMode.Message;
-  8.     binding.Security.Message.ClientCredentialType = MessageCredentialType.UserName;
-  9.     binding.Security.Message.EstablishSecurityContext = false;
-  10.     binding.Security.Message.NegotiateServiceCredential = true;
-  11.   12.     using (var trustChannelFactory = new WSTrustChannelFactory(binding, new EndpointAddress(new Uri(identityProviderUrl), new DnsEndpointIdentity(identityProviderCertificateSubjectName), new AddressHeaderCollection())))
-  13.     {
-  14.         trustChannelFactory.Credentials.UserName.UserName = username;
-  15.         trustChannelFactory.Credentials.UserName.Password = password;
-  16.         trustChannelFactory.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
-  17.   18.         trustChannelFactory.TrustVersion = TrustVersion.WSTrust13;
-  19.   20.         WSTrustChannel channel = null;
-  21.   22.         try
-  23.         {
-  24.             var rst = new RequestSecurityToken(WSTrust13Constants.RequestTypes.Issue);
-  25.             rst.AppliesTo = new EndpointAddress(appliesTo);
-  26.             rst.KeyType = KeyTypes.Bearer;
-  27.   28.             channel = (WSTrustChannel)trustChannelFactory.CreateChannel();
-  29.             token = channel.Issue(rst) as GenericXmlSecurityToken;
-  30.             ((IChannel)channel).Close();
-  31.             channel = null;
-  32.   33.             trustChannelFactory.Close();
-  34.   35.             string tokenString = token.TokenXml.OuterXml;
-  36.             return tokenString;
-  37.         }
-  38.         finally
-  39.         {
-  40.             if (channel != null)
-  41.             {
-  42.                 ((IChannel)channel).Abort();
-  43.             }
-  44.   45.             if (trustChannelFactory != null)
-  46.             {
-  47.                 trustChannelFactory.Abort();
-  48.             }
-  49.         }
-  50.     }
-  51. }
+	  1. private static string GetSAMLToken(string identityProviderUrl, string identityProviderCertificateSubjectName, string username, string password, string appliesTo)
+	  2. {
+	  3.     GenericXmlSecurityToken token = null;
+	
+	  5.     var binding = new WS2007HttpBinding();
+	
+	  7.     binding.Security.Mode = SecurityMode.Message;
+	  8.     binding.Security.Message.ClientCredentialType = MessageCredentialType.UserName;
+	  9.     binding.Security.Message.EstablishSecurityContext = false;
+	  10.     binding.Security.Message.NegotiateServiceCredential = true;
+	
+	  12.     using (var trustChannelFactory = new WSTrustChannelFactory(binding, new EndpointAddress(new Uri(identityProviderUrl), new DnsEndpointIdentity(identityProviderCertificateSubjectName), new AddressHeaderCollection())))
+	  13.     {
+	  14.         trustChannelFactory.Credentials.UserName.UserName = username;
+	  15.         trustChannelFactory.Credentials.UserName.Password = password;
+	  16.         trustChannelFactory.Credentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
+	
+	  18.         trustChannelFactory.TrustVersion = TrustVersion.WSTrust13;
+	
+	  20.         WSTrustChannel channel = null;
+	
+	  22.         try
+	  23.         {
+	  24.             var rst = new RequestSecurityToken(WSTrust13Constants.RequestTypes.Issue);
+	  25.             rst.AppliesTo = new EndpointAddress(appliesTo);
+	  26.             rst.KeyType = KeyTypes.Bearer;
+	
+	  28.             channel = (WSTrustChannel)trustChannelFactory.CreateChannel();
+	  29.             token = channel.Issue(rst) as GenericXmlSecurityToken;
+	  30.             ((IChannel)channel).Close();
+	  31.             channel = null;
+	
+	  33.             trustChannelFactory.Close();
+	
+	  35.             string tokenString = token.TokenXml.OuterXml;
+	  36.             return tokenString;
+	  37.         }
+	  38.         finally
+	  39.         {
+	  40.             if (channel != null)
+	  41.             {
+	  42.                 ((IChannel)channel).Abort();
+	  43.             }
+	
+	  45.             if (trustChannelFactory != null)
+	  46.             {
+	  47.                 trustChannelFactory.Abort();
+	  48.             }
+	  49.         }
+	  50.     }
+	  51. }
 
  
 
@@ -355,15 +365,15 @@ Now, there are a few values that we’re going to start in the App.config file. 
 
 App.Config file
 
-  1. <appSettings>
-  2.   <add key="identityProviderCertificateSubjectName" value="adventureWorks" />
-  3.   <add key="identityProviderUrl" value="http://localhost:8000/STS/Username" />
-  4.   <add key="appliesTo" value="https://{0}-sb.accesscontrol.windows.net/WRAPv0.9" />
-  5.   <add key="serviceNamespace" value="YOURSERVICENAMESPACE" />
-  6.   7.   <!-- this is the user and pwd of the user in AdventureWorks IdP -->
-  8.   <add key="username" value="joe" />
-  9.   <add key="password" value="p@ssw0rd" />
-  10. </appSettings>
+	  1. <appSettings>
+	  2.   <add key="identityProviderCertificateSubjectName" value="adventureWorks" />
+	  3.   <add key="identityProviderUrl" value="http://localhost:8000/STS/Username" />
+	  4.   <add key="appliesTo" value="https://{0}-sb.accesscontrol.windows.net/WRAPv0.9" />
+	  5.   <add key="serviceNamespace" value="YOURSERVICENAMESPACE" />
+	  6.   7.   <!-- this is the user and pwd of the user in AdventureWorks IdP -->
+	  8.   <add key="username" value="joe" />
+	  9.   <add key="password" value="p@ssw0rd" />
+	  10. </appSettings>
 
  
 
@@ -378,12 +388,12 @@ Now, let’s create some static variables for these values in the Program.cs fil
 
 Static Variables
 
-  1. static string identityProviderUrl = ConfigurationManager.AppSettings["identityProviderUrl"];
-  2. static string identityProviderCertificateSubjectName = ConfigurationManager.AppSettings["identityProviderCertificateSubjectName"];
-  3. static string username = ConfigurationManager.AppSettings["username"];
-  4. static string password = ConfigurationManager.AppSettings["password"];
-  5. static string serviceNamespace = ConfigurationManager.AppSettings["serviceNamespace"];
-  6. static string appliesTo = String.Format(ConfigurationManager.AppSettings["appliesTo"], serviceNamespace);
+	  1. static string identityProviderUrl = ConfigurationManager.AppSettings["identityProviderUrl"];
+	  2. static string identityProviderCertificateSubjectName = ConfigurationManager.AppSettings["identityProviderCertificateSubjectName"];
+	  3. static string username = ConfigurationManager.AppSettings["username"];
+	  4. static string password = ConfigurationManager.AppSettings["password"];
+	  5. static string serviceNamespace = ConfigurationManager.AppSettings["serviceNamespace"];
+	  6. static string appliesTo = String.Format(ConfigurationManager.AppSettings["appliesTo"], serviceNamespace);
 
  
 
@@ -394,7 +404,7 @@ Now, we’re going to change a number of things within the Main method. First, r
 
 Code Snippet
 
-  1. string samlToken = GetSAMLToken(identityProviderUrl, identityProviderCertificateSubjectName, username, password, appliesTo);
+	  1. string samlToken = GetSAMLToken(identityProviderUrl, identityProviderCertificateSubjectName, username, password, appliesTo);
 
  
 
@@ -409,9 +419,9 @@ Now, we have to take this SAML token as use it with the TransportClientEndpointB
 
 Code Snippet
 
-  1. TransportClientEndpointBehavior samlCredentials = new TransportClientEndpointBehavior();
-  2. samlCredentials.CredentialType = TransportClientCredentialType.Saml;
-  3. samlCredentials.Credentials.Saml.SamlToken = samlToken;
+	  1. TransportClientEndpointBehavior samlCredentials = new TransportClientEndpointBehavior();
+	  2. samlCredentials.CredentialType = TransportClientCredentialType.Saml;
+	  3. samlCredentials.Credentials.Saml.SamlToken = samlToken;
 
  
 

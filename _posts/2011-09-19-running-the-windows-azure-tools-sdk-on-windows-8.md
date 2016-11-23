@@ -90,19 +90,8 @@ As you can see, the script changes the VisualStudioVersion to 10.0 then launches
 Save the above script as a CMD file (i.e. OpenVisualStudio2010.cmd) and then make sure to right-click and **Run as administrator**! If you forget to run the script as administrator then Visual Studio won’t have the permissions needed to run the Windows Azure tools correctly.
 
 
-
-
-
-[![Running Instance](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance.png)
-
-
-
-
-
+![Running Instance](https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance_thumb.png)
 Look, it’s working!
-
-
-
 
 
 **NOTE**: I found myself having to reboot Windows 8 in order to resolve a problem where the debugger wouldn’t attach. Not sure if this occurs every time, but in case you have a similar issue just try rebooting.

@@ -29,7 +29,7 @@ Once you start up the application, the first thing you’ll want to do is enable
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image.png)
 
  
 
@@ -37,7 +37,7 @@ Once this has successfully registered, head over to the website and log in as th
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb1.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image1.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image1.png)
 
  
 
@@ -45,7 +45,7 @@ From here you can the the push notification channel by sending all three push ty
 
  
 
-[![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image2.png) [![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb3.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image3.png) [![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image_thumb4.png)](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image4.png)
+![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image2.png) ![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image3.png) ![image](https://wadewegner.blob.core.windows.net/wordpress/2011/05/image4.png)
 
  
 

@@ -20,7 +20,7 @@ Recently, though, this has all changed. I didn't realize how much satisfaction I
 
 
 
-[![100 readers](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb_3.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_3.png)
+![100 readers](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb_3.png)
 
 
 
@@ -35,7 +35,7 @@ I just thought I'd share my feed stats with you. It's neat (at least, _I think i
 
 
 
-[![Feed Stats Dashboard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image.png)
+![Feed Stats Dashboard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb.png)
 
 
 
@@ -45,7 +45,7 @@ At the same time, traffic to the blog itself has continued to grow. Here are sta
 
 
 
-[![Google dashboard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb_2.png)](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_2.png)
+![Google dashboard](https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/Milestone100feedsubscribers_A8B1/image_thumb_2.png)
 
 
 

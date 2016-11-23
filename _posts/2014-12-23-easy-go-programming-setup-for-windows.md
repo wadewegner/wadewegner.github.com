@@ -13,7 +13,7 @@ I've had to do this more than once recently, so I figured I'd document the simpl
 
 Follow these five simple steps to install Go.
 
-1. Make sure you have both Git [[download](http://git-scm.com/download/win)] and Mercurial [[download](http://mercurial.selenic.com/wiki/Download)] installed. With Go programming you'll make heavy use of open source repositories.
+1. Make sure you have both Git [download](http://git-scm.com/download/win) and Mercurial [download](http://mercurial.selenic.com/wiki/Download) installed. With Go programming you'll make heavy use of open source repositories.
 
 2. **Download** and **install** the latest 64-bit Go MSI distributable (which sets most of the environmental variables for you). [https://golang.org/dl/](https://golang.org/dl/)
 

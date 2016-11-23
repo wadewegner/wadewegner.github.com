@@ -20,42 +20,16 @@ On an email thread today, someone was looking for suggestions on how to start a 
 Definitely an interesting scenario, and many different ways to approach it. Initial ideas and thoughts centered around using Windows Azure storage tables or blobs – in fact, [Steve Marx](http://blog.smarx.com/) quickly threw out some <strike>pseudo</strike> code highlighting a reasonable way to approach the problem:
 
  
-
-  
-
-    
-    
-    <span style="color: #606060" id="lnum1">   1:</span> <span style="color: #0000ff">while</span> (blob.DownloadText() != “RELEASE THE HOUNDS!”)
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum2">   2:</span>     Thread.Sleep(TimeSpan.FromSeconds(1));
-
-
-
-    
-    
-    <span style="color: #606060" id="lnum3">   3:</span> // do the actual work
-
-
+    1: while (blob.DownloadText() != “RELEASE THE HOUNDS!”)
+    2: Thread.Sleep(TimeSpan.FromSeconds(1)); 
+    3: // do the actual work
 
 
 
 Then to release:
 
 
-
-
-
-
-  
-
-
-    
-    
-    <span style="color: #606060" id="lnum1">   1:</span> blob.UploadText(“RELEASE THE HOUNDS!”);
+    1: blob.UploadText(“RELEASE THE HOUNDS!”);
 
 
 
@@ -124,16 +98,7 @@ In this scenario, an admin sitting on a laptop can send a message to the Service
 
 
 
-
-
-
-So, without further ado, here’s the [code to release the hounds!](http://cid-952ba2b9cf071aa0.skydrive.live.com/self.aspx/.Public/ReleaseTheHounds.zip)
-
-
-
-
-
-Now, a few comments on the code:
+A few comments on the code:
 
 
 

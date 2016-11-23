@@ -41,37 +41,37 @@ This first part takes the longest. This is because you’re preparing the disk y
 
 1. Create a Virtual Machine.
  
-	[![WAIIASImage1](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image.png)  
+	![WAIIASImage1](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb.png) 
 
 2. Enter the VM information. Use the default “Windows Server 2012 Datacenter” image. Size doesn’t matter. This VM will sysprepped and used as a disk image for creating future virtual machines. Be sure to note the location you use and the password you create - you'll need them!
 
-	[![WAIIASImage2](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_3.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_3.png)
+	![WAIIASImage2](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_3.png)
 	
 3. Start the VM. Note that VMs create a Cloud Service. 
 
 4. RDP into the VM once it has provisioned and started.
 
-	[![WAIIASImage3](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_4.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_4.png)
+	![WAIIASImage3](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_4.png)
 
 5. Click to **Add roles and features**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_5.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_5.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_5.png)
 
 6. Leave defaults and click **Next** until you get to Server Roles.  
 
 7. Choose **Application Server** and **Web Server (IIS)**. Click **Next**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_6.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_6.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_6.png)
 
 8. Under **Features** be sure to select **ASP.NET 4.5**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_7.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_7.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_7.png) 
 
 9. Click **Next** until you get to **Role Services** under **Web Server Role (IIS).**
 
 10. Add **ASP.NET 4.5** under **Application Development**. This will add the other default values.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_8.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_8.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_8.png)
 
 11. Click **Next** until you get to the last step. Click **Install**. Wait until the operation completes.  
 
@@ -81,7 +81,7 @@ This first part takes the longest. This is because you’re preparing the disk y
 
 13. Install the cmdlets. This can take 5-15 minutes.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_9.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_9.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_9.png)
 
 14. Create the folder **c:\\Scripts**.  
 
@@ -104,7 +104,7 @@ Set-ExecutionPolicy Unrestricted
 
 		C:\>msiexec /I webdeploy_amd64_en-us.msi /passive ADDLOCAL=ALL LISTENURL=http://+:8080/  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_10.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_10.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_10.png)
 
 **_Configure Firewall Settings_**
 
@@ -116,7 +116,7 @@ Set-ExecutionPolicy Unrestricted
 
 24. Level TCP selected and enter **8080** for the **Specific local ports**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_11.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_11.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_11.png)
 
 25. Keep the defaults and click **Next** until prompted to give a name. Choose a name (e.g. Web Deploy Port) and click **Finish**.  
 
@@ -128,11 +128,11 @@ Set-ExecutionPolicy Unrestricted
 
 28. Run **sysprep.exe**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_12.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_12.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_12.png)
 
 29. Ensure the following options are selected: **Enter System Out-of-Box Experience (OOBE)**, **Generalize**, and **Shutdown**.
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_13.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_13.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_13.png)
 
 **_Capture the Virtual Machine_**
 
@@ -140,19 +140,19 @@ Set-ExecutionPolicy Unrestricted
 
 31. Wait until you see that the status of your virtual machine is **Stopped**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_14.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_14.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_14.png)
 
 32. Capture the image by clicking the **CAPTURE** button below.  
 
-	[![clip_image024](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image024_thumb.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image024.png)  
+	![clip_image024](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image024_thumb.png)  
 
 33. Select an image name (e.g. WS2012-WebFarmImage) and check that you have sysprepped the machine. Click the button.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_15.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_15.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_15.png) 
 
 34. When the capture operation completes you’ll see the disk image available under **Images** in the portal: [https://manage.windowsazure.com/#Workspaces/VirtualMachineExtension/images](https://manage.windowsazure.com/#Workspaces/VirtualMachineExtension/images)  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_16.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_16.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_16.png)
 
 # Virtual Machine Deployment
 
@@ -170,11 +170,11 @@ You’ll run these steps from your own PC.
 
 		Get-AzureSubscription -Current  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_17.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_17.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_17.png)
 
 4. You need to get the storage account that contains your disk image. You’ll need to use the same storage account for the disks attached to the web servers in your web farm. Select the **Images** tab under **Virtual Machines** on the portal. Find your image and look at the location. The first part of the URL is the storage account name.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_18.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_18.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_18.png)
 
 5. It’s now time to deploy your web farm using the disk image you created in the previous section. Review the following script and update appropriately. 
 
@@ -218,23 +218,23 @@ It is _important_ to note that the setup for $iisvm1 is different than $iisvm2 a
 
 6. It’s time to run the script. Note: the script does not rollback. If you have values that are incorrect you’ll have to clean them up manually. If all goes well, you’ll see progress indicators like the following:  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_19.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_19.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_19.png)
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_20.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_20.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_20.png)
 
 7. You can now look in the portal and you’ll see the following machines Running/Provisioning.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_21.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_21.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_21.png)
 
 8. You can browse the URL, for example: [http://demowebfarm.cloudapp.net](http://demowebfarm.cloudapp.net). You’ll get the standard IIS page:  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_22.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_22.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_22.png)
 
 # Setup Synchronization across Virtual Machine
 
 1. Remote into **iis1**. From the portal, select **iis1** under **Virtual Machine Instances** and click the **CONNECT** button. This will download an RDP file. Save this and use it for connecting to the machine later.  
 
-	[![clip_image039](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image039_thumb.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image039.png) 
+	![clip_image039](http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image039_thumb.png) 
 
 
 2. Open **Windows PowerShell ISE**. 
@@ -276,36 +276,36 @@ It is _important_ to note that the setup for $iisvm1 is different than $iisvm2 a
 
 6. Click **Create Task ... **
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_23.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_23.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_23.png)
 
 7. On the **General **tab set the **Name** and **Run wehather user is logged on or not**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_24.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_24.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_24.png)
 
 8. On the **Triggers** tab click **New**. Create a **Daily** trigger and **Repeat task every** 2 minutes. Click **OK**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_25.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_25.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_25.png)
 
 9. On the **Actions** tab click **New**. Set the following values:
 
 	**Program/script**: C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe  
 	**Add arguments**: -File C:\\Scripts\\Sync.ps1  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_26.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_26.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_26.png)
 
 10. You should now see this as a scheduled task.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_27.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_27.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_27.png)
 
 11. You can wait for this to run or run it manually. It should run successfully.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_28.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_28.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_28.png)
 
 **_Deploy a Website through Web Deploy_**
 
 1. Create a new **ASP.NET MVC 4 Web Applications**. (In actually it can be anything.) Choose an **Internet Application**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_29.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_29.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_29.png)
 
 
 2. Update the **HomeController.cs** code: 
@@ -320,19 +320,19 @@ It is _important_ to note that the setup for $iisvm1 is different than $iisvm2 a
 
 3. Right-click on your application and click **Publish**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_30.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_30.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_30.png)
 
 4. In the dropdown select **New**.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_31.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_31.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_31.png)
 
 5. Give your publish profile a name. Click OK.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_32.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_32.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_32.png)
 
 6. Update all the fields:  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_33.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_33.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_33.png)
 
 	**Server**: This is the DNS name of the cloud service with port 8080. 
 	
@@ -348,7 +348,7 @@ It is _important_ to note that the setup for $iisvm1 is different than $iisvm2 a
 
 8. In Visual Studio you should see that it deployed successfully.  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_34.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_34.png)
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_34.png)
 
 	**WARNING**: Don’t be alarmed if the browser opens and you don’t see your site. Remember that we set synchronization at two minutes and you have a 66% chance of hitting iis2 or iis3. 
 
@@ -356,9 +356,9 @@ It is _important_ to note that the setup for $iisvm1 is different than $iisvm2 a
 
 10. Either way two minutes or manually invoke your synchronization task. Hit the website again and start refreshing:  
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_35.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_35.png)  
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_35.png) 
 
-	[![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_36.png)](http://www.wadewegner.com/content/acc7ea03346c_12181/image_36.png) 
+	![image](http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_36.png)
 
 That’s it!
 

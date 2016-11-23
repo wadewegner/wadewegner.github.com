@@ -24,9 +24,9 @@ Is this the absolutely authority on running Go Language in Azure Websites? No, b
 
 	In the console to the right, type the following commands:
 
-	`curl -O https://storage.googleapis.com/golang/go1.4.windows-386.zip`
+	`curl -O https://storage.googleapis.com/golang/go1.4.windows-386.zip `
 
-	`unzip go1.4.windows-386.zip`
+	`unzip go1.4.windows-386.zip `
 
 	You should see the following:
 
@@ -58,7 +58,7 @@ package main
 
 	Once downloaded, type `type server.go` to confirm you grabbed everything correctly.
 
-4. Create a `Web.Config` file in the `wwwroot` folder. We will use the `httpPlatformHandler` simpilar to [running Tomcat in Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/).{% highlight xml %}
+4. Create a `Web.Config` file in the `wwwroot` folder. We will use the `httpPlatformHandler` simpilar to [running Tomcat in Azure Websites](http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/). {% highlight xml %}
 
 <?xml version="1.0" encoding="UTF-8"?>
 	<configuration>

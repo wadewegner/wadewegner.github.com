@@ -11,7 +11,9 @@ categories:
 - SQL Azure
 ---
 
-[![SQL Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image_2_thumb2.png)](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image_22.png) As many of you probably already know, the CTP of [SQL Azure](http://www.microsoft.com/azure/sql.mspx) is now feature complete! Fantastic work by the SQL Azure product team, as it was only in August that they announced the opening of the SQL Azure Database CTP!
+![SQL Azure](https://wadewegner.blob.core.windows.net/wordpress/2009/10/image_22.png) 
+
+As many of you probably already know, the CTP of [SQL Azure](http://www.microsoft.com/azure/sql.mspx) is now feature complete! Fantastic work by the SQL Azure product team, as it was only in August that they announced the opening of the SQL Azure Database CTP!
 
  
 
