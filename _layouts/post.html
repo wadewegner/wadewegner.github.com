@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-<div class="post-header mb2">
-  <!--<h1 class="py2">{{ page.title }}</h1>-->
-  <!--<h3 class="h2 post-title">{{ page.title }}</h3>
-  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>-->
+<!--<div class="post-header mb2">
+  <h1 class="py2">{{ page.title }}</h1>
+  <h3 class="h2 post-title">{{ page.title }}</h3>
+  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
 
   <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
   <h3 class="h2 post-title" style="margin-top: 0rem;">{{ page.title }}</h3>
@@ -13,7 +13,26 @@ layout: default
 
 <article class="post-content">
   {{ content }}
-</article>
+</article>-->
+
+
+<div class="home">
+
+  <div class="posts">
+      <div class="post">
+        <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
+          <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
+          <h3 class="h2 post-title">{{ page.title }}</h3>
+          <p class="post-summary">{{ page.description }}</p>
+        </a>
+      </div>
+  </div>
+
+  {{ content }}
+
+</div>
+
+
 
  <div id="disqus_thread"></div>
 <script type="text/javascript">
