@@ -1,23 +1,7 @@
 ---
 layout: default
 ---
-<!--<div class="post-header mb2">
-  <h1 class="py2">{{ page.title }}</h1>
-  <h3 class="h2 post-title">{{ page.title }}</h3>
-  <span class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</span>
-
-  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}</p>
-  <h3 class="h2 post-title" style="margin-top: 0rem;">{{ page.title }}</h3>
-
-</div>
-
-<article class="post-content">
-  {{ content }}
-</article>-->
-
-
 <div class="home">
-
   <div class="posts">
       <div class="post">
         <a href="{{ post.url | prepend: site.baseurl }}" class="post-link">
@@ -27,14 +11,10 @@ layout: default
         </a>
       </div>
   </div>
-
   {{ content }}
-
 </div>
 
-
-
- <div id="disqus_thread"></div>
+<div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'wadewegner'; // required: replace example with your forum shortname
