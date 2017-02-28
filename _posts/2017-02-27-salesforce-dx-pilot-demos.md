@@ -16,4 +16,4 @@ I thought it would be helpful to share with everyone the demos from the Salesfor
 
 If you have any questions, please ask me [@WadeWegner](https://twitter.com/wadewegner).
 
-To add yourself to the Salesforce Pilot waitlist, enter your info here: http://go.pardot.com/l/27572/2017-01-23/6gh89x
+To add yourself to the Salesforce Pilot waitlist, enter your info here: [http://go.pardot.com/l/27572/2017-01-23/6gh89x](http://go.pardot.com/l/27572/2017-01-23/6gh89x)
