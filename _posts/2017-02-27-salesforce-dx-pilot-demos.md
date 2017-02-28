@@ -10,7 +10,7 @@ categories:
 
 We're so excited to have recently launched the Salesforce DX pilot. Our teams have been hard at work on Salesforce DX, and it's tremendously exciting to have so many of you using the tools and trying out an entirely new way to build applications on the Salesforce platform.
 
-I thought it would be helpful to share with everyone the demos from the Salesforce DX pilot kickoff webinar.
+I thought it would be helpful to share with everyone the demos from the Salesforce DX pilot kickoff webinar. This is cut directly from the webinar, so apologies for any rough edges.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/TFe0bthtYP4?ecver=1" frameborder="0" allowfullscreen></iframe>
 
