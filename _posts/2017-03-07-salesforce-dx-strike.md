@@ -1,16 +1,16 @@
 ---
 layout: post
 title: "Salesforce DX Strike"
-description: "Here's a look at using Salesforce DX to quickly take advantage of Appiphany's Lightning Strike components in a Salesforce DX project."
+description: "Here's a look at using Salesforce DX to quickly take advantage of Appiphony's Lightning Strike components in a Salesforce DX project."
 categories: 
 - salesforce
 - salesforce dx
 - sfdx
-- Appiphany
+- Appiphony
 - Lightning Components
 ---
 
-Like many people at Salesforce and in the community, I was really excited and impressed to see [Lightning Strike by Appiphany](http://www.lightningstrike.io/). Not to take away from the remarkable tool they built to visually explore and configure Lightning components, I was most excited by the custom Lightning Components they built and released to the community through their [Github repository Strike-Components](https://github.com/appiphony/Strike-Components).
+Like many people at Salesforce and in the community, I was really excited and impressed to see [Lightning Strike by Appiphony](http://www.lightningstrike.io/). Not to take away from the remarkable tool they built to visually explore and configure Lightning components, I was most excited by the custom Lightning Components they built and released to the community through their [Github repository Strike-Components](https://github.com/appiphony/Strike-Components).
 
 Immediately I wanted to try these components out myself. And fortunate, using Salesforce DX, it's really quite easy.
 
