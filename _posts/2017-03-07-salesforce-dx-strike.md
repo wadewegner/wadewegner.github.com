@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Salesforce DX Strike"
-description: "Here's a quick look at using Salesforce DX to quickly take advantage of Appiphany's Lightning Strike components in a Salesforce DX project."
+description: "Here's a look at using Salesforce DX to quickly take advantage of Appiphany's Lightning Strike components in a Salesforce DX project."
 categories: 
 - salesforce
 - salesforce dx
