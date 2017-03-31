@@ -16,7 +16,14 @@ Recently I highlighted a neat way to [use open source software with Salesforce D
 
 It didn't take long for me to get tired of removing the Git details when pulling the OSS from Github. So I created [sfdx-oss-plugin]( https://github.com/wadewegner/sfdx-oss-plugin). With this command, you can run `sfdx wadewegner:source:oss -r wadewegner/Strike-Components -p .` to grab all the source listed in the [SFDX oss manifest](https://github.com/wadewegner/Strike-Components/blob/master/sfdx-oss-manifest.json) into whatever directory you specify. It also makes it really easy to create a SFDX oss manifest file with the command `sfdx wadewegner:source:create -p .`, which creates the JSON file for everything in the specified path.
 
-Pretty nifty, eh?
+Pretty nifty, eh? To try it out:
+
+1) Install the SDFX CLI.
+2) `git clone git@github.com:wadewegner/sfdx-oss-plugin.git`
+3) Install npm modules: `npm install`
+4) Link the plugin: `sfdx plugins:link .`
+
+(Perhaps I'll publish this at somepoint.)
 
 This highlights one of the advantages building our Salesforce CLI on the Heroku CLI. Not only do we get to take advantage of frequent updates (both for features and security) of the Heroku CLI, but we can also take advantage of plugin extensibility.
 
