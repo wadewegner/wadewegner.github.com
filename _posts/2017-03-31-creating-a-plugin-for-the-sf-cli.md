@@ -10,9 +10,7 @@ categories:
 - salesforce cli
 ---
 
-```
-This post is valid for the Salesforce DX (SFDX) pilot. Please note that details may change and I'll do my best to update accordingly.
-```
+*This post is valid for the Salesforce DX (SFDX) pilot. Please note that details may change and I'll do my best to update accordingly.*
 
 Recently I highlighted a neat way to [use open source software with Salesforce DX](http://www.wadewegner.com/2017/03/salesforce-dx-strike/). Since then I've used Appiphony's custom base components many, many times in demos and apps I've built.
 
