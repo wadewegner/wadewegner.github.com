@@ -20,7 +20,7 @@ Pretty nifty, eh? To try it out:
 
 1) Install the SDFX CLI.
 
-2) `git clone git@github.com:wadewegner/sfdx-oss-plugin.git`
+2) Clone the repo: `git clone git@github.com:wadewegner/sfdx-oss-plugin.git`
 
 3) Install npm modules: `npm install`
 
