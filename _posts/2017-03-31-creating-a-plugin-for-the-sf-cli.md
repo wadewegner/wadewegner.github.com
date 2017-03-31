@@ -19,8 +19,11 @@ It didn't take long for me to get tired of removing the Git details when pulling
 Pretty nifty, eh? To try it out:
 
 1) Install the SDFX CLI.
+
 2) `git clone git@github.com:wadewegner/sfdx-oss-plugin.git`
+
 3) Install npm modules: `npm install`
+
 4) Link the plugin: `sfdx plugins:link .`
 
 (Perhaps I'll publish this at somepoint.)
