@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Creating a Plugin for the Salesforce CLI"
-description: "A peek into the mechanics of creating a customer plugin for the Salesforce command-line interface (CLI)."
+description: "A peek into the mechanics of creating a custom plugin for the Salesforce command-line interface (CLI)."
 categories: 
 - salesforce
 - salesforce dx
