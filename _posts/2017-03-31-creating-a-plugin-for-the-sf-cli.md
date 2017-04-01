@@ -32,7 +32,7 @@ This highlights one of the advantages building our Salesforce CLI on the Heroku 
 
 For the most part, building a plugin for the Salesforce CLI is exactly the same as [building a plugin for the Heroku CLI](https://devcenter.heroku.com/articles/developing-cli-plugins). I think you'll find [sfdx-oss-plugin](https://github.com/wadewegner/sfdx-oss-plugin) a very good reference.
 
-One significant change we've made is the introduction of a namespace. You can see it on [index.js#L12](https://github.com/wadewegner/sfdx-oss-plugin/blob/master/index.js#L12) and in the following sample:
+One significant change we've made is the introduction of a namespace. You can see it on [index.js#L16](https://github.com/wadewegner/sfdx-oss-plugin/blob/master/index.js#L16) and in the following sample:
 
 ```
 exports.namespace = {
