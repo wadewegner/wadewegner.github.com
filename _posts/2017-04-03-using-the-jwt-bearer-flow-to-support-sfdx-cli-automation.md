@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Using the JWT Bearer Flow to Support SFDX CLI Automation"
+title: "Using the OAuth 2.0 JWT Bearer Flow to Support SFDX CLI Automation"
 description: "The JWT Bearer Flow enables you to perform headless authentication against your Salesforce org. In Salesforce DX this facilitates the automation of scripts without requiring an interactive login. In this post, you'll learn how to set it up."
 categories: 
 - salesforce
