@@ -34,7 +34,7 @@ For the most part, building a plugin for the Salesforce CLI is exactly the same 
 
 One significant change we've made is the introduction of a namespace. You can see it on [index.js#L16](https://github.com/wadewegner/sfdx-oss-plugin/blob/master/index.js#L16) and in the following sample:
 
-```node
+```javascript
 exports.namespace = {
     name: 'wadewegner',
     description: 'commands from Wade Wegner'
