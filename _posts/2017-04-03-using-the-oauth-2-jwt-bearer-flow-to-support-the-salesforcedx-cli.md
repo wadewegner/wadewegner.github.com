@@ -31,6 +31,8 @@ The key to the use of the JWT bearer flow is that it supports the RSA SHA256 alg
 
 In this post, we'll create both the key and the certificate, as well as setup the Connected App to facilitate the `sfdx force:auth:jwt:grant` command.
 
+[Update 4/6/17: you can now install my plugin (`sfdx plugins:install sfdx-oss-plugin`) and run the command `sfdx wadewegner:connectedapp:create -u <username|alias> -n <name> -r` to get through step #5. You'll still need to complete steps #6 and #7.]
+
 1. Follow [these instructions](https://devcenter.heroku.com/articles/ssl-certificate-self) to generate a private key and a certificate signing request. The resulting `server.key` file contains your private key, and we’re going to use that as input when signing the JWT bearer token payload.
 
 2. Execute the [subsequent instructions](https://devcenter.heroku.com/articles/ssl-certificate-self#generate-ssl-certificate) to generate a self-signed SSL certificate.
