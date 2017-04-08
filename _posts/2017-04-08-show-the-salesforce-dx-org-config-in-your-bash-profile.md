@@ -16,7 +16,7 @@ Using the capabilities of Salesforce DX you can enable some neat tricks. Such as
 
 But, first, a little background ...
 
-The Salesforce DX CLI provides some powerful capabilities for tracking your Salesforce org. When you login with `sfdx force:auth:web:login` (`-a <alias>` lets you alias the org) your credentials are encrypted and stored locally. When running subsequent commands, you can append `-u <username|alias>` to the command to target the local org. Since the CLI stores the refresh token, it can generate a new access token automatically.
+The Salesforce DX CLI provides some powerful capabilities for tracking your Salesforce org. When you login with `sfdx force:auth:web:login` (`-a <alias>` lets you alias the org) your credentials are encrypted and stored locally. When running subsequent commands, you can append `-u <username|alias>` to the command to target an org. Since the CLI stores the refresh token, it can generate a new access token automatically.
 
 Two additional things you should understand are:
 
