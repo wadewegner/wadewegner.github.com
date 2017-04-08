@@ -12,4 +12,4 @@ I first started programming in middle school by writing Pascal-based scripts for
 
 I work for Salesforce as a Product Manager on the Salesforce Platform. If you care to know all the boring details of my career, please connect with me on [LinkedIn](http://www.linkedin.com/in/wadewegner/).
 
-Outside of work, I am an aspiring brew master. If you care to hear about my brewing (and tasting) adventures you can [follow me on Twitter](http://twitter.com/wadewegner).1
+Outside of work, I am an aspiring brew master. If you care to hear about my brewing (and tasting) adventures you can [follow me on Twitter](http://twitter.com/wadewegner).
