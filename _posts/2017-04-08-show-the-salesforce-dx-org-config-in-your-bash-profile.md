@@ -42,4 +42,4 @@ It's not 100% perfect, but it's extremely useful. Now, the same information coul
 
 I hope you find this useful!
 
-Special thanks to [Chris Wall (@cwall)](https://twitter.com/cwall), an amazing architect and developer on the Salesforce DX team, for the inspiration!
+Special thanks to [Chris Wall (@cwallatx)](https://twitter.com/cwallatx), an amazing architect and developer on the Salesforce DX team, for the inspiration!
