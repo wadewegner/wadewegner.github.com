@@ -34,46 +34,7 @@ To solve this, I've updated my `.bash_profile` to display the dev hub org and de
 
 Here's the `.bash_profile` code:
 
-```bash
-bldwht='\e[1;37m' # White
-bldgrn='\e[1;32m' # Green
-txtylw='\e[0;33m' # Yellow
-
-get_usernames() {
-  config="$(cat .sfdx/sfdx-config.json 2> /dev/null)";
-  globalConfig="$(cat ~/.sfdx/sfdx-config.json)";
-
-  defaultusername="$(echo ${config} | jq -r .defaultusername)"
-  defaultdevhubusername="$(echo ${config} | jq -r .defaultdevhubusername)"
-  globaldefaultusername="$(echo ${globalConfig} | jq -r .defaultusername)"
-  globaldefaultdevhubusername="$(echo ${globalConfig} | jq -r .defaultdevhubusername)"
-
-  echoString="$bldwht""hub: $bldgrn";
-  if [ ! $defaultdevhubusername = "null" ]
-  then
-    echoString=$echoString$defaultdevhubusername"$txtylw (local)"
-  else
-    echoString=$echoString$globaldefaultdevhubusername"$txtylw (global)"
-  fi
-  echo "\n"$echoString
-
-  echoString="$bldwht""default: $bldgrn"
-  if [ ! $defaultusername = "null" ]
-  then
-    echoString=$echoString$defaultusername"$txtylw (local)"
-  else
-    echoString=$echoString$globaldefaultusername"$txtylw (global)"
-  fi
-  echo $echoString"\n"
-}
-
-print_before_the_prompt () {
-    printf "$(get_usernames)"
-}
-
-PROMPT_COMMAND=print_before_the_prompt
-PS1='-> '
-```
+<script src="https://gist.github.com/wadewegner/2c9339618983c9b40cc58b03d700e2b9.js"></script>
 
 It's not 100% perfect, but it's extremely useful. Now, the same information could be determine with `sfdx force:config:list` with the advantage that it's 100% accurate (my script isn't accurate in workspace subdirectories, for example), but there's still some latency we need to workout of the CLI. When that latency is resolved I'll update to use that command.
 
