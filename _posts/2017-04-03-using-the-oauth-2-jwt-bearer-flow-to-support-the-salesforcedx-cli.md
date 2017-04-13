@@ -45,13 +45,13 @@ In this post, we'll create both the key and the certificate, as well as setup th
 
     * Check **Use digital signatures** and upload your `server.crt` certificate.
 
-    * Add the following **OAuth Scopes**: `refresh_token`, `offline_access`, `web`
+    * Add the following **OAuth Scopes**: `basic`, `api`, `web`, `refresh_token`
     
 5. Save your **Consumer Key**.
 
 6. Click the **Manage** button, then **Edit Policies**. Under the OAuth policies subsection, change the **Permitted Users** combo box to be `Admin approved users are pre-authorized`. Then click **Save**.
 
-7. Click **Manage Profiles** OR **Manage Permission Sets**, and select the profiles and/or perm sets that should be allowed to be pre-authorized to use this Connected App. Then click **Save**.
+7. Click **Manage Profiles** OR **Manage Permission Sets**, and select the profiles and/or perm sets that should be allowed to be pre-authorized to use this Connected App. (For perm sets, create a perm set without any particular permissions, assign it your user, then assign that perm set to the connected app.) Then click **Save**.
 
 When this is setup correctly, running the command will look like the following:
 
