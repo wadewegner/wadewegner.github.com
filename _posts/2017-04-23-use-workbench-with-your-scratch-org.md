@@ -74,4 +74,6 @@ Now, armed with this information, it's easy to log into the Workbench.
 
 Voilà! You're using Workbench with your Scratch Org.
 
-A useful tip from a set of useful commands. I hope this helps!
+Of course, these two commands enable all kinds of other useful scenarios, not just logging into the Workbench. Please explore their use and try them out yourself.
+
+I hope this helps!
