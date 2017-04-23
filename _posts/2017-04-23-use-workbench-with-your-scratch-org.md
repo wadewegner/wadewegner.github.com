@@ -15,7 +15,9 @@ The [Salesforce Workbench](https://workbench.developerforce.com) is a powerful s
 
 And if all of this isn't enough to convince you of its value, I can almost guarantee that Josh Kaplan ([@JoshSfdx](https://twitter.com/joshsfdc)) is playing around in Workbench right now!
 
+<center>
 ![Josh Kaplan](https://cloud.githubusercontent.com/assets/746259/25318133/f82383cc-283c-11e7-9887-26c89e9ce32a.jpeg)
+</center>
 
 Recently, I found the need to use the Workbench while working on a side project. Of course, I'm using Salesforce DX and scratch orgs. Scratch orgs provide the perfect environment to quickly development my app and, when I'm done, I delete it. I also use the new source synchronization capabilities to externalize all my source so I can easily commit it in a Github repository.
 
