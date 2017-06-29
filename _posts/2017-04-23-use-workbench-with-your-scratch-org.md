@@ -29,12 +29,12 @@ First, assuming you're in your project workspace, we're going to run the command
 
 Successfully set the password "XXXXXXXX" for user 
 scratchorgXXXXXXXXXXXXXX@wade.wegnercompany.com. You can see the password
-again by running "force:org:describe".
+again by running "force:org:display".
 ```
 
-Now you know the password! What's more, it's encrypted and stored locally, so running `sfdx force:org:describe` will remind you of the password if you forget it.
+Now you know the password! What's more, it's encrypted and stored locally, so running `sfdx force:org:display` will remind you of the password if you forget it.
 
-Second, you'll need to know the "my domain" used with the scratch org. This is also generated randomly when the scratch org is created. To get it, you run the same command, `sfdx force:org:describe`:
+Second, you'll need to know the "my domain" used with the scratch org. This is also generated randomly when the scratch org is created. To get it, you run the same command, `sfdx force:org:display`:
 
 ```
 Key              Value
