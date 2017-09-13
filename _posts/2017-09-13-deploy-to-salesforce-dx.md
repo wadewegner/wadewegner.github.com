@@ -23,11 +23,11 @@ One of our top goals has been to make deployment incredibly easy. With the Sales
 
 Yet, during the beta, we've seen a number of use cases for providing the ability to deploy source into a Scratch Org directly from a source control repository like Github:
 
-1) You want to quickly try out the latest and greatest from a [Christophe Coenraets](https://twitter.com/ccoenraets) or [René Winkelmeyer](https://twitter.com/muenzpraeger) blog post. (You know you do!)
+1. You want to quickly try out the latest and greatest from a [Christophe Coenraets](https://twitter.com/ccoenraets) or [René Winkelmeyer](https://twitter.com/muenzpraeger) blog post. (You know you do!)
 
-2) You're not able to access a machine where you can install the Salesforce CLI. (Maybe you're at a conference?)
+2. You're not able to access a machine where you can install the Salesforce CLI. (Maybe you're at a conference?)
 
-3) Laziness. (It's okay, it happens to me too.)
+3. Laziness. (It's okay, it happens to me too.)
 
 Regardless of the reasons, a few of us agree and thought it worth doing something about it.
 
