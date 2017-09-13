@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deploy to Salesforce DX"
-description: "Deploy to Salesforce DX, an open-source and community-driven tool for automating Salesforce DX deployments from public repositories to Scratch Orgs"
+description: "Deploy to Salesforce DX, an open-source and community-driven tool for automating Salesforce DX deployments from public repositories to Scratch Orgs."
 categories: 
 - salesforce
 - salesforce dx
