@@ -125,7 +125,7 @@ With this alias, I can convert, deploy, and clean all with one command: `mdd tpo
 
 Definitely a lot easier!
 
-## Additional things you might need to do
+## Additional things to know
 
 Certain modules will require you to do additional things.
 
