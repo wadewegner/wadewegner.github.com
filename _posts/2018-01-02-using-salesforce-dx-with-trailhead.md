@@ -125,7 +125,11 @@ With this alias, I can convert, deploy, and clean all with one command: `mdd tpo
 
 Definitely a lot easier!
 
-## Installing required packages
+## Additional things you might need to do
+
+Certain modules will require you to do additional things.
+
+### Installing required packages
 
 As pointed out by [Bonny Hinners](https://twitter.com/SNUGSFBay/status/948927117248491520), there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO to complete a challenge. This can give you custom objects and other metadata you'll use within the challenge. You'll need to do the same thing with your scratch org.
 
@@ -140,6 +144,22 @@ No problem, we can install this unmanaged package in the scratch org. Then, any 
 3. Install the package into your scratch org: `sfdx force:package:install -i 04t36000000i5UM --wait 100`
 
 That's it! Now all the required schema and dependencies are in your scratch org.
+
+### Exporting and importing data
+
+A few of the challenges will verify that you've created data in the TPO. Now, of course you could open the TPO and manually enter the data it's looking for. But where's the fun in that? Instead, do it in your scratch org, export it, and then import it into your TPO.
+
+This is a great way to discover some of the useful data import/export commands in the CLI.
+
+1. Open your scratch org and enter your data. Yes, you can do this through other tools, but let's face it: the app you've built is likely the best interace for creating your data.
+
+2. Use the CLI to write a query that will grab the data you added: `sfdx force:data:soql:query -q "SELECT Waypoint_Name__c FROM Waypoints__c"`. Ensure you get the data you're expecting.
+
+3. Export to JSON files and store in your project (other developers on your team will appreciate you doing this; trust me): `sfdx force:data:tree:export -q "SELECT Waypoint_Name__c FROM Waypoints__c" -p -d data`. Notice it's the same query as before. Also, we're using a plan definition file and exporting it into the `data` folder.
+
+4. Now, import the data into your TPO: `sfdx force:data:tree:import -p data/Waypoint__c-plan.json -u tpo`. This will create the records in our TPO without you having to do it manually.
+
+Pretty slick.
 
 ## Wrap it up
 
