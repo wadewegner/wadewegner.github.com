@@ -105,7 +105,7 @@ Two important notes:
 
 #### Profiles are messy and need clean-up
 
-Let's face it, they are. It's better to use permission sets if you can. But, you'll notice that when you create schema or do just about anything else, it created profiles. Did you notice them when you pulled them out of the scratch org?
+Let's face it, they are. It's better to use permission sets if you can. But, you'll notice that when you create schema or do just about anything else, it updates profiles. Did you notice them when you pulled them out of the scratch org?
 
 Often times, when you pull from the scratch org, you'll pull profiles that don't exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format.
 
