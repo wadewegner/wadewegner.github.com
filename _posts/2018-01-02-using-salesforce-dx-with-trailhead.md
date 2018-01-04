@@ -125,11 +125,11 @@ With this alias, I can convert, deploy, and clean all with one command: `mdd tpo
 
 Definitely a lot easier!
 
-## Additional actions / tips
+## Installing required packages
 
 As pointed out by [Bonny Hinners](https://twitter.com/SNUGSFBay/status/948927117248491520), there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO. This can give you custom objects and other metadata you'll use within the challenge.
 
-A good example is the [Apex Specialist Superbadge](https://trailhead.salesforce.com/en/super_badges/superbadge_apex). Notice that the pre-work includes an unamanged package you need to install.
+A good example is the [Apex Specialist Superbadge](https://trailhead.salesforce.com/en/super_badges/superbadge_apex). Notice that the pre-work includes an unmanaged package you need to install.
 
 No problem, we can install this unmanaged package in the scratch org. Then, any changes we make, even if these changes are made against metadata that comes from the package, will get pulled out.
 
