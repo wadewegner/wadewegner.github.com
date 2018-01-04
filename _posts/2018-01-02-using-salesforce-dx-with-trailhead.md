@@ -26,7 +26,7 @@ The first thing you'll want to do is log into your trailhead playground org (TPO
 
 1. Reset your TPO password. You'll find all the information in the [Get Your Trailhead Playground Usernamd and Password](https://trailhead.salesforce.com/modules/trailhead_playground_management/units/get-your-trailhead-playground-username-and-password) module. You have to do this because Trailhead created the TPO for you and you they set the password.
 
-2. Log into your TPO using your username & password: `sfdx force:auth:web:login -a tpo`. Notice we've aliased it `tpo` so that it's easier to target in the future. Once done, you can test this by opening up your TPO with `sfdx force:org:open -u tpo` and it'll pop right up.
+2. Log into your TPO using your username & password: `sfdx force:auth:web:login -a tpo`. Notice we've aliased it `tpo` so that it's easier to target in the future. Once done, you can test this by opening up your TPO with `sfdx force:org:open -u tpo` and it'll pop right up. Note: you'll likely end up having more than one TPO, so a good practice would be to give it an alias that's specific to your task.
 
 Okay, that complete's the initial setup. Now it's time to dig in.
 
