@@ -133,7 +133,7 @@ A good example is the [Apex Specialist Superbadge](https://trailhead.salesforce.
 
 No problem, we can install this unmanaged package in the scratch org. Then, any changes we make, even if these changes are made against metadata that comes from the package, will get pulled out.
 
-1. Figure out the package ID. Usually this is pretty simple, if not transparent. Notice the URL for the unmanaged package: https://login.salesforce.com/packaging/installPackage.apexp?p0=04t36000000i5UM. An ID that starts with `04t` is a package. Copy this package ID.
+1. Figure out the package ID. Usually this is pretty simple, if not transparent. Notice the URL for the unmanaged package: `https://login.salesforce.com/packaging/installPackage.apexp?p0=04t36000000i5UM`. An ID that starts with `04t` is a package. Copy this package ID.
 
 2. Create your scratch org the normal way we highlighted above.
 
