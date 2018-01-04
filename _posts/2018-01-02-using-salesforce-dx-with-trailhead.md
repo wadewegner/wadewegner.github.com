@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Using Salesforce DX with Trailhead"
-description: "You should use Salesforce DX with Trailhead. In this article, we'll look at the development workflow and what you need to do to be successful."
+description: "You should use Salesforce DX with Trailhead. Not only does it reinforce best practices for development, it will help you to really understand what it is you're doing. In this article, we'll look at the development workflow and what you need to do to be successful."
 categories: 
 - salesforce
 - salesforce dx
