@@ -165,7 +165,7 @@ A few of the challenges will verify that you've created data in the TPO. Now, of
 
 This is a great way to discover some of the useful data import/export commands in the CLI.
 
-1. Open your scratch org and enter your data. Yes, you can do this through other tools, but let's face it: the app you've built is likely the best interace for creating your data.
+1. Open your scratch org and enter your data. Yes, you can do this through other tools, but let's face it: the app you've built is likely the best interface for creating your data.
 
 2. Use the CLI to write a query that will grab the data you added: `sfdx force:data:soql:query -q "SELECT Waypoint_Name__c FROM Waypoints__c"`. Ensure you get the data you're expecting.
 
@@ -177,11 +177,11 @@ Pretty slick.
 
 ### Executing anonymous Apex code
 
-There are some things that either don't fit into the model of source push/pull (e.g. connected apps) or will require you to take a different approach to updating in the org. So, get ready to busy out some anonymous Apex!
+There are some things that either don't fit into the model of source push/pull (e.g. connected apps) or will require you to take a different approach to updating in the org. So, get ready to bust out some anonymous Apex!
 
 Here's what I do:
 
-1. I create a folder called `scripts`. This is where I'll create my apex scripts.
+1. I create a folder called `scripts`. This is where I'll create my Apex scripts.
 
 2. Create a file with an `.apex` extension in the `scripts` folder. Need to create a scheduled job? Call it `scheduledjob.apex`.
 
@@ -191,7 +191,7 @@ Here's what I do:
   System.schedule('WarehouseCallout','0 0 13 * * ?' , new WarehouseSyncSchedule())
   ```
 
-4. Execute the script against your scratch org to test: `sfdx force:apex:execute -f scripts/scheduledjob.apex`. Note: sometimes to get this right, you'll want to create a new scratch org to try again. I've gone through many iterations sometimes until I finally get it workin the way I want.
+4. Execute the script against your scratch org to test: `sfdx force:apex:execute -f scripts/scheduledjob.apex`. Note: sometimes to get this right, you'll want to create a new scratch org to try again. I've gone through many iterations sometimes until I finally get it working the way I want.
 
 5. Execute the script against your TPO: `sfdx force:apex:execute -f scripts/servicetoken.apex -u tpo`.
 
@@ -211,6 +211,8 @@ git commit -m "It works"
 git push origin master
 ```
 
-And then you'll have a nice repo of your code refer to in the future: [https://github.com/wadewegner/th-trailblazerapp](https://github.com/wadewegner/th-trailblazerapp)
+And then you'll have a nice repo of your code to refer to in the future: [https://github.com/wadewegner/th-trailblazerapp](https://github.com/wadewegner/th-trailblazerapp)
 
 Hope this helps!
+
+P.S. Thanks to George Murnock for literally finding (and pointing out) hundreds of typos.
