@@ -38,7 +38,7 @@ The first thing you'll want to do is log into your trailhead playground org (TPO
 
 2. Log into your TPO using your username & password: `sfdx force:auth:web:login -a tpo`. Notice we've aliased it `tpo` so that it's easier to target in the future. Once done, you can test this by opening up your TPO with `sfdx force:org:open -u tpo` and it'll pop right up. Note: you'll likely end up having more than one TPO, so a good practice would be to give it an alias that's specific to your task.
 
-Okay, that complete's the initial setup. Now it's time to dig in.
+Okay, that completes the initial setup. Now it's time to dig in.
 
 ## Step 2: Create a project & scratch org 
 
