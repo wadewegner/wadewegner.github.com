@@ -111,7 +111,11 @@ At this point, you're ready to verify you completed the challenge. But the metad
 
     And that's it!
 
-3. Click the `Verify` button. If you completed everything successfully, you'll pass.
+3. Click the `Verify` button. If you completed everything successfully, you'll pass. If it fails, you have a few options: 
+
+    - Update your source, test in scratch org, and re-deploy. In most cases, this will work.
+    - Maybe you defined the schema for a custom object wrong? You might need to manually (or automatically) delete it in the TPO before you re-deploy.
+    - When all else fails, create a new TPO. It's free and not too hard.
 
 Two important notes:
 
