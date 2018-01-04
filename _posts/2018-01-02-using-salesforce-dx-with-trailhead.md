@@ -48,7 +48,7 @@ I like to create a new project for each trail/project/superbadge. This lets me k
 
 2. Depending on the challenge, you may want/need to change the default scratch org configuration file. Take a look at [the docs](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs_def_file.htm) to see if there's anything you want to do.
 
-3. Create your scratch org. I do something like `sfdx force:org:create -s -f config/project-scratch-def.json`. This not only creates the scratch org, but `-s` makes it the default for the project, meaning all other commands I invoke will default to this scratch org.
+3. Create your scratch org. This assumes you already have your Dev Hub setup and ready to go (if not, [look here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm)). I do something like `sfdx force:org:create -s -f config/project-scratch-def.json`. This not only creates the scratch org, but `-s` makes it the default for the project, meaning all other commands I invoke will default to this scratch org.
 
 ## Step 3: Complete the challenge in the scratch org and pull the source
 
