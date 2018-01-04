@@ -123,7 +123,7 @@ Two important notes:
 
 Let's face it, they are. It's better to use permission sets if you can. But, you'll notice that when you create schema or do just about anything else, it updates profiles. Did you notice them when you pulled them out of the scratch org?
 
-Often times, when you pull from the scratch org, you'll pull profiles that don't exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format. S tip, shared by SFDX engineer [George Murnock](https://twitter.com/gmurnock__c) and platform architect [Shane McLaughlin](https://twitter.com/MShaneMc/status/948991161389273090) is to include `**profiles` to your `.forceignore` file. This will force you to use permsets.
+Often times, when you pull from the scratch org, you'll pull profiles that don't exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format. A tip, shared by SFDX engineer [George Murnock](https://twitter.com/gmurnock__c) and platform architect [Shane McLaughlin](https://twitter.com/MShaneMc/status/948991161389273090) is to include `**profiles` to your `.forceignore` file. This will force you to use permsets.
 
 Ideally, try to avoid profiles. Sadly, since they're so pervasive, Trailhead often assumes (and even checks) for the existence of the profile, so sometimes you can't avoid it.
 
