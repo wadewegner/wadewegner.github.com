@@ -161,6 +161,28 @@ This is a great way to discover some of the useful data import/export commands i
 
 Pretty slick.
 
+### Executing anonymous Apex code
+
+There are some things that either don't fit into the model of source push/pull (e.g. connected apps) or will require you to take a different approach to updating in the org. So, get ready to busy out some anonymous Apex!
+
+Here's what I do:
+
+1. I create a folder called `scripts`. This is where I'll create my apex scripts.
+
+2. Create a file with an `.apex` extension in the `scripts` folder. Need to create a scheduled job? Call it `scheduledjob.apex`.
+
+3. Write your code. Example:
+
+  ```
+  System.schedule('WarehouseCallout','0 0 13 * * ?' , new WarehouseSyncSchedule())
+  ```
+
+4. Execute the script against your scratch org to test: `sfdx force:apex:execute -f scripts/scheduledjob.apex`. Note: sometimes to get this right, you'll want to create a new scratch org to try again. I've gone through many iterations sometimes until I finally get it workin the way I want.
+
+5. Execute the script against your TPO: `sfdx force:apex:execute -f scripts/servicetoken.apex -u tpo`.
+
+Notice how easy that is? And, even better, it's completely repeatable!
+
 ## Wrap it up
 
 That's pretty much it! You can do this over and over again. The best part is, as I mentioned, you can setup version control and push all your source.
