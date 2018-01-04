@@ -137,6 +137,6 @@ git commit -m "It works"
 git push origin master
 ```
 
-And then you'll have a nice repo of your code refer to in the future: https://github.com/wadewegner/th-trailblazerapp
+And then you'll have a nice repo of your code refer to in the future: [https://github.com/wadewegner/th-trailblazerapp](https://github.com/wadewegner/th-trailblazerapp)
 
 Hope this helps!
