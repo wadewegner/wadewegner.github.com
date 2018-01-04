@@ -64,40 +64,40 @@ At this point, you're ready to verify you completed the challenge. But the metad
 
 2. Now, deploy the metadata into your TPO with `sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo`. Notice we've targeted the `mdapiout` folder, we're using `--wait` so that it's synchronous and with `-u` we've targeted our TPO.
 
-You'll see something like:
+    You'll see something like:
 
-```
-❯ sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo
-9185 bytes written to /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip using 44.179ms
-Deploying /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip...
+    ```
+    ❯ sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo
+    9185 bytes written to /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip using 44.179ms
+    Deploying /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip...
 
-=== Status
-Status:  Pending
-jobid:  0Af4100001aS6FLCA0
-Component errors:  0
-Components deployed:  0
-Components total:  0
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
+    === Status
+    Status:  Pending
+    jobid:  0Af4100001aS6FLCA0
+    Component errors:  0
+    Components deployed:  0
+    Components total:  0
+    Tests errors:  0
+    Tests completed:  0
+    Tests total:  0
+    Check only: false
 
-Deployment finished in 9000ms
+    Deployment finished in 9000ms
 
-=== Result
-Status:  Succeeded
-jobid:  0Af4100001aS6FLCA0
-Completed:  2018-01-04T14:02:11.000Z
-Component errors:  0
-Components deployed:  11
-Components total:  11
-Tests errors:  0
-Tests completed:  0
-Tests total:  0
-Check only: false
-```
+    === Result
+    Status:  Succeeded
+    jobid:  0Af4100001aS6FLCA0
+    Completed:  2018-01-04T14:02:11.000Z
+    Component errors:  0
+    Components deployed:  11
+    Components total:  11
+    Tests errors:  0
+    Tests completed:  0
+    Tests total:  0
+    Check only: false
+    ```
 
-And that's it!
+    And that's it!
 
 3. Click the `Verify` button. If you completed everything successfully, you'll pass.
 
