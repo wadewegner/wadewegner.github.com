@@ -10,6 +10,8 @@ categories:
 - cli
 ---
 
+![image](https://user-images.githubusercontent.com/746259/34568070-75637fae-f119-11e7-8551-9b036a9d7fd2.png)
+
 As you've likely seen on Twitter, I've really gotten into [Trailhead](trailhead.com) these past few months. In particular, the Superbadges. I not only enjoy the challenge of working through the project, but regularly discover I don't know nearly as much as I think I do. There's a ton of useful and practical information in Trailead just waiting for us all to discover.
 
 Of course, I have other motivations for doing Trailhead. I find it's an amazing way to validate various workflows with [Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm). I've logged at least a dozen bugs or feature requests based on trying to get something in Trailhead to work with various things, such as the Salesforce CLI, Scratch Orgs, source synch, or continuous integration.
