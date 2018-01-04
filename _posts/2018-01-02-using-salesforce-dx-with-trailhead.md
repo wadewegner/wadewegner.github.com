@@ -127,7 +127,7 @@ Definitely a lot easier!
 
 ## Installing required packages
 
-As pointed out by [Bonny Hinners](https://twitter.com/SNUGSFBay/status/948927117248491520), there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO. This can give you custom objects and other metadata you'll use within the challenge.
+As pointed out by [Bonny Hinners](https://twitter.com/SNUGSFBay/status/948927117248491520), there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO to complete a challenge. This can give you custom objects and other metadata you'll use within the challenge. You'll need to do the same thing with your scratch org.
 
 A good example is the [Apex Specialist Superbadge](https://trailhead.salesforce.com/en/super_badges/superbadge_apex). Notice that the pre-work includes an unmanaged package you need to install.
 
