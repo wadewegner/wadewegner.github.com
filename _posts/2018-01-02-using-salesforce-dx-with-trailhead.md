@@ -119,7 +119,9 @@ I've created an alias that makes it really easy to deploy to my TPO.
 alias mdd='function _blah(){ sfdx force:source:convert -d mdapiout && sfdx force:mdapi:deploy -d mdapiout --wait 100 -u $1 && rm -rf mdapiout };_blah'
 ```
 
-With this alias, I can convert, deploy, and clean all with one command: `mdd tpo`. Definitely makes it a lot easier!
+With this alias, I can convert, deploy, and clean all with one command: `mdd tpo`
+
+Definitely a lot easier!
 
 ## Wrap it up
 
