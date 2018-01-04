@@ -10,15 +10,15 @@ categories:
 - cli
 ---
 
-As you've likely seen on Twitter, I've really gotten into Trailhead these past few months. In particular, the Superbadges. I not only enjoy the challenge of working through the project but regularly discover I don't know nearly as much as I think I do. There's a ton of useful and practical information in Trailead just waiting for us all to discover.
+As you've likely seen on Twitter, I've really gotten into [Trailhead](trailhead.com) these past few months. In particular, the Superbadges. I not only enjoy the challenge of working through the project, but regularly discover I don't know nearly as much as I think I do. There's a ton of useful and practical information in Trailead just waiting for us all to discover.
 
-Of course, I have other motivations for doing Trailhead. I find it's an amazing way to validate various workflows with Salesforce DX. I've logged at least a dozen bugs or feature requests based on trying to get something in Trailhead to work with various things, such as the Salesforce CLI, Scratch Orgs, source synch, or continuous integration.
+Of course, I have other motivations for doing Trailhead. I find it's an amazing way to validate various workflows with [Salesforce DX](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm). I've logged at least a dozen bugs or feature requests based on trying to get something in Trailhead to work with various things, such as the Salesforce CLI, Scratch Orgs, source synch, or continuous integration.
 
 Numerous people have asked me to share my workflow and tips for getting started. So, please pardon the more tutorial-style post as I write this all out. Also, before you get started, be sure to review the [Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm) to ensure you have everything all set!
 
 I thought it'd be good to use the [Quick Start: Build Your First App](https://trailhead.salesforce.com/projects/quickstart-devzone-app) project as the example for this tutorial.
 
-## Step 1: Log into to your TPO using the CLI
+## Step 1: Log into your TPO using the CLI
 
 The first thing you'll want to do is log into your trailhead playground org (TPO) using the [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli). Doing this will allow you to target your TPO and deploy your metadata to pass challenges.
 
@@ -32,7 +32,7 @@ Okay, that complete's the initial setup. Now it's time to dig in.
 
 I like to create a new project for each trail/project/superbadge. This lets me keep all the required source in a place where it's easy to re-use and also allows me to easily push to a version control system (VCS). (You're using VCS, right?)
 
-1. Create a project. For this quick start, I'd do: `sfdx force:project:create -n firstapp`. This will create a new directory with all the requisite files for using Salesforce DX.
+1. Create a project. For this quick start, I'd do: `sfdx force:project:create -n trailblazerapp`. This will create a new directory with all the requisite files for using Salesforce DX.
 
 2. Depending on the challenge, you may want/need to change the default scratch org configuration file. Take a look at [the docs](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs_def_file.htm) to see if there's anything you want to do.
 
@@ -103,7 +103,7 @@ At this point, you're ready to verify you completed the challenge. But the metad
 
 Two important notes:
 
-### Profiles are messy and need clean-up
+#### Profiles are messy and need clean-up
 
 Let's face it, they are. It's better to use permission sets if you can. But, you'll notice that when you create schema or do just about anything else, it created profiles. Did you notice them when you pulled them out of the scratch org?
 
@@ -111,7 +111,7 @@ Often times, when you pull from the scratch org, you'll pull profiles that don't
 
 Ideally, try to avoid profiles. Sadly, since they're so pervasive, Trailhead often assumes (and even checks) for the existence of the profile, so sometimes you can't avoid it.
 
-### Script this step to make it easier
+#### Script this step to make it easier
 
 I've created an alias that makes it really easy to deploy to my TPO.
 
