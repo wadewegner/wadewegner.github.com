@@ -18,6 +18,16 @@ Of course, I have other motivations for doing Trailhead. I find it's an amazing 
 
 Numerous people have asked me to share my workflow and tips for getting started. So, please pardon the more tutorial-style post as I write this all out. Also, before you get started, be sure to review the [Salesforce DX Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm) to ensure you have everything all set!
 
+You'll find the following in this post:
+
+- Logging into your Trailhead playground org in the CLI
+- Creating a project & scratch org
+- Completing the challenge and pulling your source
+- Deploying source to your TPO to verify
+- Installing required packages
+- Exporting and importing data
+- Executing anonymous Apex
+
 I thought it'd be good to use the [Quick Start: Build Your First App](https://trailhead.salesforce.com/projects/quickstart-devzone-app) project as the example for this tutorial.
 
 ## Step 1: Log into your TPO using the CLI
