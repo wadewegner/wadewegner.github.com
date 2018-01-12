@@ -27,6 +27,7 @@ You'll find the following in this post:
 - Installing required packages
 - Exporting and importing data
 - Executing anonymous Apex
+- Opening up a Lightning App 
 
 I thought it'd be good to use the [Quick Start: Build Your First App](https://trailhead.salesforce.com/projects/quickstart-devzone-app) project as the example for this tutorial.
 
@@ -199,9 +200,9 @@ Notice how easy that is? And, even better, it's completely repeatable!
 
 ### Opening up a Lightning App 
 
-In many of the modules you'll create a lightning app as a test harness call `harnessApp.app` (see [Create and Edit Lightning Components](https://trailhead.salesforce.com/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_create) for an example). This test harness is used to test the Lightning Componebnts as you create them. Super helpful!
+In many of the modules you'll create a lightning app as a test harness called `harnessApp.app` (see [Create and Edit Lightning Components](https://trailhead.salesforce.com/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_create) for an example). This test harness is used to test the Lightning Components as you create them. Super helpful!
 
-Now, Trailhead assumes you're doing your development in Developer Console. If you're using Salesforce DX, how do you easily open `harnessApp.app` to test your component? Well, the CLI let's you target a specific page.
+Now, Trailhead assumes you're doing your development in the Developer Console. If you're using Salesforce DX, how do you easily open `harnessApp.app` to test your component? Well, the CLI let's you target a specific page:
 
 ```
 sfdx force:org:open -p c/harnessApp.app
