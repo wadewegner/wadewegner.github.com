@@ -123,7 +123,7 @@ Two important notes:
 
 Let's face it, they are. It's better to use permission sets if you can. But, you'll notice that when you create schema or do just about anything else, it updates profiles. Did you notice them when you pulled them out of the scratch org?
 
-Often times, when you pull from the scratch org, you'll pull profiles that don't exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format. A tip, shared by SFDX engineer [George Murnock](https://twitter.com/gmurnock__c) and platform architect [Shane McLaughlin](https://twitter.com/MShaneMc/status/948991161389273090) is to include `**profiles` to your `.forceignore` file. This will force you to use permsets.
+Often times, when you pull from the scratch org, you'll pull profiles that don't exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format. A tip, shared by SFDX engineer [George Murnock](https://twitter.com/gmurnock__c) and platform architect [Shane McLaughlin](https://twitter.com/MShaneMc/status/948991161389273090), is to include `**profiles` to your `.forceignore` file. This will force you to use permsets.
 
 Ideally, try to avoid profiles. Sadly, since they're so pervasive, Trailhead often assumes (and even checks) for the existence of the profile, so sometimes you can't avoid it.
 
@@ -196,6 +196,20 @@ Here's what I do:
 5. Execute the script against your TPO: `sfdx force:apex:execute -f scripts/servicetoken.apex -u tpo`.
 
 Notice how easy that is? And, even better, it's completely repeatable!
+
+### Opening up a Lightning App 
+
+In many of the modules you'll create a lightning app as a test harness call `harnessApp.app` (see [Create and Edit Lightning Components](https://trailhead.salesforce.com/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_create) for an example). This test harness is used to test the Lightning Componebnts as you create them. Super helpful!
+
+Now, Trailhead assumes you're doing your development in Developer Console. If you're using Salesforce DX, how do you easily open `harnessApp.app` to test your component? Well, the CLI let's you target a specific page.
+
+```
+sfdx force:org:open -p c/harnessApp.app
+```
+
+This will directly open your `harnessApp.app` in the browser, without even having to login. Pretty cool, right?
+
+Of course, if you want to test it in your TPO, just add your alias (e.g. `-u tpo`).
 
 ## Wrap it up
 
