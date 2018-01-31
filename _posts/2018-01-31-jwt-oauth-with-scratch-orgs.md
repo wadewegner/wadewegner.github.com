@@ -75,7 +75,9 @@ $ sfdx waw:connectedapp:create --help
 
 You'll want to run this command against your Dev Hub; I've aliased mine as `HubOrg` (not sure why).
 
-    sfdx waw:connectedapp:create -c http://localhost:1717/OauthRedirect -e [YOUR_EMAIL_ADDRESS] -s Basic,Api,Web,RefreshToken -n jwtrulz -u HubOrg
+```bash
+$ sfdx waw:connectedapp:create -c http://localhost:1717/OauthRedirect -e [YOUR_EMAIL_ADDRESS] -s Basic,Api,Web,RefreshToken -n jwtrulz -u HubOrg
+```
 
 When you run this command it will output information.
 
@@ -103,7 +105,9 @@ Grab both the `consumerKey` and the `consumerSecret`.
 
 Now we're going to open our Dev Hub so that we can finish setting up the JWT Bearer Flow. (As I mentioned before, you can't automate all of this through our APIs today.)
 
-    sfdx force:org:open -u HubOrg
+```bash
+$ sfdx force:org:open -u HubOrg
+```
 
 We're going to complete the setup of the Connected App. (Unfortunately, there aren't any APIs exposed to assist you in this process).
 
