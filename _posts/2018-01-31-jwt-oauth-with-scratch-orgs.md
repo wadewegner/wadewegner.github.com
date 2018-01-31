@@ -140,6 +140,7 @@ You should see something like:
 
 > Successfully authorized YOUR_DEVHUB_LOGIN] with org ID [YOUR_ORG_ID].
 
+It's worth noting that this step is required. If you're not logged into your Dev Hub using `jwt:grant` then the rest of the magic won't work.
 
 ### Create a new scratch org and login with `jwt:grant`
 
