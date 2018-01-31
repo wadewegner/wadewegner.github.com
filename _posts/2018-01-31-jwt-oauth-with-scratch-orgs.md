@@ -148,7 +148,7 @@ Are you ready? Okay, let's login to your scratch org with the `jwt:grant` comman
 
     sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] --username [YOUR_SCRATCHORG_USERNAME] --jwtkeyfile ~/.certs/server.key --instanceurl https://test.salesforce.com
 
-You shoudl see:
+You should see:
 
     Successfully authorized YOUR_SCRATCHORG_USERNAME] with org ID [YOUR_SCRATCHORG_ID].
 
