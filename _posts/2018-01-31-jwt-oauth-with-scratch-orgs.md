@@ -38,7 +38,7 @@ As I said, this is a powerful capability for CI systems that create scratch orgs
 
 Without further ado, let's go started.
 
-## Create the certificate & private key
+### Create the certificate & private key
 
 The first step step is to create the certiricate and private key you're going to use. I prefer to do this in a place that's both secure and not related to any specific project I'm working on. This way I can make everything work independent of my current project.
 
@@ -56,7 +56,7 @@ The first step step is to create the certiricate and private key you're going to
 
 When finished, you'll have the files you need later in the process. And, while I have these files setup to use locally, it's entirely likely you'll want to put them on a server to make them more accessible. It's also not uncommon to encrypt them and use them with systems like Travis CI (see our [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci) Trailhead module for details).
 
-## Create the Connected App
+### Create the Connected App
 
 We're going to use a Connected App in our Dev Hub org. This is part of the magic. By having this Connected App in our Dev Hub and setup with JWT Grant, we can use this flow with all of the Scratch Orgs we create.
 
@@ -130,7 +130,7 @@ You should see something like:
 
 **Tip:** Notice I've changed my alias here to `HubOrgJWT`. This way I have my normal `HubOrg` which used `force:auth:web:login` and one with JWT. It's not entirely necessary, but I like to have have them both.
 
-## Create a new scratch org and login with `jwt:grant`
+### Create a new scratch org and login with `jwt:grant`
 
 Okay, now it's time for the payoff!
 
