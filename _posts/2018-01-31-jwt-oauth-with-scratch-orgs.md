@@ -104,17 +104,17 @@ Now we're going to open our Dev Hub so that we can finish setting up the JWT Bea
 
 We're going to complete the setup of the Connected App. (Unfortunately, there aren't any APIs exposed to assist you in this process).
 
-1) Open **App Manager**, find your Connected App.
+1. Open **App Manager**, find your Connected App.
 
-2) Click **Edit**. Turn on **Use digital signatures** and choose your **server.crt**.
+2. Click **Edit**. Turn on **Use digital signatures** and choose your **server.crt**.
 
 ![Use Digital Signatures](https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png)
 
-3) Click **Manage** then **Edit Policies**. Update **Permitted Users**.
+3. Click **Manage** then **Edit Policies**. Update **Permitted Users**.
 
 ![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
 
-4) Click **Manage Profiles** and add your permset.
+4. Click **Manage Profiles** and add your permset.
 
 If you need a refresher for any of these steps, see my blog post [Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI](http://www.wadewegner.com/2017/04/using-the-oauth-2-jwt-bearer-flow-to-support-the-salesforcedx-cli/).
 
