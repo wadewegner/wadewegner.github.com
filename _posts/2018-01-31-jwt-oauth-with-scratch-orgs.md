@@ -50,6 +50,8 @@ The first step step is to create the certiricate and private key you're going to
 
     rm server.pass.key
 
+    openssl req -new -key server.key -out server.csr
+
     openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
 
 When finished, you'll have the files you need later in the process. And, while I have these files setup to use locally, it's entirely likely you'll want to put them on a server to make them more accessible. It's also not uncommon to encrypt them and use them with systems like Travis CI (see our [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci) Trailhead module for details).
@@ -106,11 +108,11 @@ We're going to complete the setup of the Connected App. (Unfortunately, there ar
 
 2) Click **Edit**. Turn on **Use digital signatures** and choose your **server.crt**.
 
-    ![Use Digital Signatures](https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png)
+        ![Use Digital Signatures](https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png)
 
 3) Click **Manage** then **Edit Policies**. Update **Permitted Users**.
 
-    ![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
+        ![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
 
 4) Click **Manage Profiles** and add your permset.
 
