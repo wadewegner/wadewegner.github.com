@@ -76,7 +76,11 @@ $ sfdx waw:connectedapp:create --help
 You'll want to run this command against your Dev Hub; I've aliased mine as `HubOrg` (not sure why).
 
 ```bash
-$ sfdx waw:connectedapp:create -c http://localhost:1717/OauthRedirect -e [YOUR_EMAIL_ADDRESS] -s Basic,Api,Web,RefreshToken -n jwtrulz -u HubOrg
+$ sfdx waw:connectedapp:create -c http://localhost:1717/OauthRedirect 
+    -e [YOUR_EMAIL_ADDRESS] 
+    -s Basic,Api,Web,RefreshToken 
+    -n jwtrulz 
+    -u HubOrg
 ```
 
 When you run this command it will output information.
