@@ -114,7 +114,7 @@ We're going to complete the setup of the Connected App. (Unfortunately, there ar
 
     ![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
 
-4. Click **Manage Profiles** and add your permset.
+4. Click **Manage Profiles** or **Managed Permission Sets** and add your profile or permset.
 
 If you need a refresher for any of these steps, see my blog post [Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI](http://www.wadewegner.com/2017/04/using-the-oauth-2-jwt-bearer-flow-to-support-the-salesforcedx-cli/).
 
@@ -122,7 +122,7 @@ If you need a refresher for any of these steps, see my blog post [Using the OAut
 
 For this to work, you'll want to log into your Dev Hub using `force:auth:jwt:grant`, not `force:auth:web:login`. 
 
-    sfdx force:auth:jwt:grant —clientid [YOUR_CONSUMER_KEY] —username [YOUR_DEVHUB_LOGIN] —jwtkeyfile ~/.certs/server.key —setdefaultdevhubusername -a HubOrgJWT
+    sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] --username [YOUR_DEVHUB_LOGIN] --jwtkeyfile ~/.certs/server.key --setdefaultdevhubusername -a HubOrgJWT
 
 You should see something like:
 
@@ -146,7 +146,7 @@ Now, we want to demonstrate that you can authenticate into the scratch org using
 
 Are you ready? Okay, let's login to your scratch org with the `jwt:grant` command:
 
-    sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] --username [YOUR_SCRATCHORG_USERNAME] --jwtkeyfile ~/.certs/server.key --setdefaultdevhubusername --instanceurl https://test.salesforce.com
+    sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] --username [YOUR_SCRATCHORG_USERNAME] --jwtkeyfile ~/.certs/server.key --instanceurl https://test.salesforce.com
 
 You shoudl see:
 
