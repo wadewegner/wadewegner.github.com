@@ -43,17 +43,18 @@ Without further ado, let's go started.
 The first step is to create the certificate and private key you're going to use. I prefer to do this in a place that's both secure and not related to any specific project I'm working on. This way I can make everything work independent of my current project.
 
 ```bash
-cd ~/ && mkdir .certs && cd .certs
+$ cd ~/ && mkdir .certs && cd .certs
 
-openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
+$ openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
 
-openssl rsa -passin pass:x -in server.pass.key -out server.key
+$ openssl rsa -passin pass:x -in server.pass.key -out server.key
 
-rm server.pass.key
+$ rm server.pass.key
 
-openssl req -new -key server.key -out server.csr
+$ openssl req -new -key server.key -out server.csr
 
-openssl x509 -req -sha256 -days 365 -in server.csr -signkey server.key -out server.crt
+$ openssl x509 -req -sha256 -days 365 -in server.csr \
+    -signkey server.key -out server.crt
 ```
 
 When finished, you'll have the files you need later in the process. And, while I have these files setup to use locally, it's entirely likely you'll want to put them on a server to make them more accessible. It's also not uncommon to encrypt them and use them with systems like Travis CI (see our [Continuous Integration Using Salesforce DX](https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci) Trailhead module for details).
@@ -67,9 +68,9 @@ To make things easier, I like to use my CLI plugin: `sfdx-waw-plugin` (feel free
 Install the `sfdx-waw-plugin` to and look at the command:
 
 ```bash
-sfdx plugins:install sfdx-waw-plugin
+$ sfdx plugins:install sfdx-waw-plugin
 
-sfdx waw:connectedapp:create --help
+$ sfdx waw:connectedapp:create --help
 ```
 
 You'll want to run this command against your Dev Hub; I've aliased mine as `HubOrg` (not sure why).
@@ -125,7 +126,7 @@ If you need a refresher for any of these steps, see my blog post [Using the OAut
 For this to work, you'll want to log into your Dev Hub using `force:auth:jwt:grant`, not `force:auth:web:login`. 
 
 ```bash
-sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
+$ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
     --username [YOUR_DEVHUB_LOGIN] \
     --jwtkeyfile ~/.certs/server.key \
     --setdefaultdevhubusername -a HubOrgJWT
@@ -144,9 +145,9 @@ Okay, now it's time for the payoff!
 Go ahead and create a new Scratch Org:
 
 ```bash
-sfdx force:project:create -n jwtrulz && cd jwtrulz
+$ sfdx force:project:create -n jwtrulz && cd jwtrulz
 
-sfdx force:org:create -s -f config/project-scratch-def.json
+$ sfdx force:org:create -s -f config/project-scratch-def.json
 ```
 
 Copy down the username to the newly screated scratch org. Let's pretend it's `test-qyczf1ot1p6j@wade.wegner_company.net`.
@@ -156,7 +157,7 @@ Now, we want to demonstrate that you can authenticate into the scratch org using
 Are you ready? Okay, let's login to your scratch org with the `jwt:grant` command:
 
 ```
-sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
+$ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
     --username [YOUR_SCRATCHORG_USERNAME] \
     --jwtkeyfile ~/.certs/server.key \
     --instanceurl https://test.salesforce.com
