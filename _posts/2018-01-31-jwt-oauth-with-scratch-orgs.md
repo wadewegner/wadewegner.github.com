@@ -156,7 +156,7 @@ Now, we want to demonstrate that you can authenticate into the scratch org using
 
 Are you ready? Okay, let's login to your scratch org with the `jwt:grant` command:
 
-```
+```bash
 $ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
     --username [YOUR_SCRATCHORG_USERNAME] \
     --jwtkeyfile ~/.certs/server.key \
