@@ -134,7 +134,7 @@ $ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
 
 You should see something like:
 
-    Successfully authorized YOUR_DEVHUB_LOGIN] with org ID [YOUR_ORG_ID].
+**Successfully authorized YOUR_DEVHUB_LOGIN] with org ID [YOUR_ORG_ID].**
 
 **Tip:** Notice I've changed my alias here to `HubOrgJWT`. This way I have my normal `HubOrg` which used `force:auth:web:login` and one with JWT. It's not entirely necessary, but I like to have have them both.
 
@@ -165,7 +165,7 @@ $ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
 
 You should see:
 
-    Successfully authorized YOUR_SCRATCHORG_USERNAME] with org ID [YOUR_SCRATCHORG_ID].
+**Successfully authorized YOUR_SCRATCHORG_USERNAME] with org ID [YOUR_SCRATCHORG_ID].**
 
 BOOM!
 
