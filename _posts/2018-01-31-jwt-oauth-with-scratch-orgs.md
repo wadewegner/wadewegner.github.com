@@ -140,9 +140,7 @@ You should see something like:
 
 ### Create a new scratch org and login with `jwt:grant`
 
-Okay, now it's time for the payoff!
-
-Go ahead and create a new Scratch Org:
+Okay, now it's time for the payoff! Go ahead and create a new scratch org:
 
 ```bash
 $ sfdx force:project:create -n jwtrulz && cd jwtrulz
