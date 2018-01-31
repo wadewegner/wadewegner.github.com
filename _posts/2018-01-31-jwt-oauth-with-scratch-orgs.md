@@ -40,7 +40,7 @@ Without further ado, let's go started.
 
 ### Create the certificate & private key
 
-The first step step is to create the certiricate and private key you're going to use. I prefer to do this in a place that's both secure and not related to any specific project I'm working on. This way I can make everything work independent of my current project.
+The first step is to create the certificate and private key you're going to use. I prefer to do this in a place that's both secure and not related to any specific project I'm working on. This way I can make everything work independent of my current project.
 
     cd ~/ && mkdir .certs && cd .certs
 
