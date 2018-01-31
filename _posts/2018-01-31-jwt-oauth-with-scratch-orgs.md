@@ -118,7 +118,7 @@ We're going to complete the setup of the Connected App. (Unfortunately, there ar
 
 If you need a refresher for any of these steps, see my blog post [Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI](http://www.wadewegner.com/2017/04/using-the-oauth-2-jwt-bearer-flow-to-support-the-salesforcedx-cli/).
 
-## Log into your Dev Hub with `jwt:grant`
+### Log into your Dev Hub with `jwt:grant`
 
 For this to work, you'll want to log into your Dev Hub using `force:auth:jwt:grant`, not `force:auth:web:login`. 
 
