@@ -133,14 +133,13 @@ For this to work, you'll want to log into your Dev Hub using `force:auth:jwt:gra
 $ sfdx force:auth:jwt:grant --clientid [YOUR_CONSUMER_KEY] \
     --username [YOUR_DEVHUB_LOGIN] \
     --jwtkeyfile ~/.certs/server.key \
-    --setdefaultdevhubusername -a HubOrgJWT
+    --setdefaultdevhubusername -a HubOrg
 ```
 
 You should see something like:
 
 > Successfully authorized YOUR_DEVHUB_LOGIN] with org ID [YOUR_ORG_ID].
 
-**Tip:** Notice I've changed my alias here to `HubOrgJWT`. This way I have my normal `HubOrg` which used `force:auth:web:login` and one with JWT. It's not entirely necessary, but I like to have have them both.
 
 ### Create a new scratch org and login with `jwt:grant`
 
