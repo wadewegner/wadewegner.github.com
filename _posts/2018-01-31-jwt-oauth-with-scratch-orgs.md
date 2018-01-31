@@ -108,11 +108,11 @@ We're going to complete the setup of the Connected App. (Unfortunately, there ar
 
 2) Click **Edit**. Turn on **Use digital signatures** and choose your **server.crt**.
 
-        ![Use Digital Signatures](https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png)
+![Use Digital Signatures](https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png)
 
 3) Click **Manage** then **Edit Policies**. Update **Permitted Users**.
 
-        ![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
+![Edit Policies](https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png)
 
 4) Click **Manage Profiles** and add your permset.
 
