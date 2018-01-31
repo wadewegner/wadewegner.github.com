@@ -200,8 +200,9 @@ pre {
 
 blockquote {
   /* padding: 2rem; */
+  padding-left: 2rem;
   font-style: italic;
-  border-left: 5px solid #7a7a7a;
+  border-left: 3px solid #7a7a7a;
 }
 
 blockquote footer {
