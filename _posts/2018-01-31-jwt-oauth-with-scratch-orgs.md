@@ -15,8 +15,8 @@ categories:
 
 A different, if not more accurate or better, name for this blog post could be: "Authenticate to a Scratch Org You Didn't Create and When You Don't Know the Password." I even went out to Twitter to ask for help and, well, [Peter Churchill](https://twitter.com/britishboyindc) did not disappoint:
 
-<blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">&quot;I used JWT Bearer Flow with my Scratch Orgs and Dev Hub - you won&#39;t believe what happened next!&quot;</p>&mdash; Peter Churchill (@britishboyindc) <a href="https://twitter.com/britishboyindc/status/958702877475790848?ref_src=twsrc%5Etfw">January 31, 2018</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<center><blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">&quot;I used JWT Bearer Flow with my Scratch Orgs and Dev Hub - you won&#39;t believe what happened next!&quot;</p>&mdash; Peter Churchill (@britishboyindc) <a href="https://twitter.com/britishboyindc/status/958702877475790848?ref_src=twsrc%5Etfw">January 31, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
 
 But, as you can see, I went the boring and conservative route. Naming things, even blog posts, is hard. Anyway ...
 
