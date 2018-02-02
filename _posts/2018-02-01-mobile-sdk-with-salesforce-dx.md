@@ -23,7 +23,7 @@ To install it, run the following command:
 $ sfdx plugins:install sfdx-mobilesdk-plugin
 ```
 
-Now you if you run `sfdx mobilesdk --help` you'll see all the SDK commands are available.
+Now if you run `sfdx mobilesdk --help` you'll see all the SDK commands are available.
 
 In case you're wondering, these commands are no different than the `forceios`, `forcedriod`, `forcehybrid`, and `forcereact` commands. This plugin is simply a wrapper to include all these commands in a single CLI. A big improvement, in my opinion.
 
