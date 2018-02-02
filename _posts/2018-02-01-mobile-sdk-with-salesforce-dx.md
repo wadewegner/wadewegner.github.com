@@ -60,7 +60,7 @@ Next, let's create the Salesforce DX project. The first time I tried this out, I
 
 > To use the script below, grab my CLI plugin which allows you to create Connected Apps through the CLI: `sfdx plugins:install sfdx-waw-plugin`
 
-Here's a script you can use. Create a file like `script.sh` (and make it executable `chmod +x script.sh`) and add the following to it:
+Here's a script you can use. Create a file like `setup.sh` (and make it executable `chmod +x setup.sh`) and add the following to it:
 
 ```bash
 # set the callback URL
