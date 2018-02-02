@@ -104,7 +104,7 @@ cd ..
 Then, run it:
 
 ```bash
-./setup.sh
+$ ./setup.sh
 ```
 
 Boom! Neat, right? You're output should be something like ...
