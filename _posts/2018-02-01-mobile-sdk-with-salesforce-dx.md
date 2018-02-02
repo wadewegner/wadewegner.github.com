@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build a Native Mobile App Using Salesforce DX and the Mobile SDK"
-description: "Salesforce DX provides a lot of great tools for development that, frankly, will significantly improve the life of a mobile app developer who's building an integration to Salesforce. In this post I'll show you how to use the Mobile SDK as a way to quickly get started on a React Native app and then use Salesforce DX to make it easy to build everything else in Salesforce."
+description: "Salesforce DX provides a lot of great tools for development that, frankly, will significantly improve the life of a mobile app developer who's building an integration to Salesforce. In this post I'll show you how to use the Mobile SDK as a way to quickly get started on a React Native app and then use Salesforce DX to make it easy to build everything elselaz in Salesforce."
 categories: 
 - salesforce
 - salesforce dx
@@ -11,7 +11,7 @@ categories:
 - react native
 ---
 
-This week I had the opportunity to highlight how developers can combine project-based app development with Salesforce DX, the Salesforce CLI, Scratch Orgs, and the Mobile SDK together to make -- at least, in my humble opinion -- a pretty compelling native app dev experience with Salesforce. In this post I'll share some of the things I did with the hope that, after you look at it, you'll want to try it out too.
+This week I had the opportunity to demo how developers can combine project-based app development with Salesforce DX, the Salesforce CLI, Scratch Orgs, and the Mobile SDK to make -- at least, in my humble opinion -- a pretty compelling native app dev experience with Salesforce. In this post I'll share some of the things I did with the hope that, after you look at it, you'll want to try it out too.
 
 ### Setup the CLI Plugin for the Mobile SDK
 
@@ -161,23 +161,25 @@ Let's go ahead and log into the mobile app and see it in action!
 
 1. On the login screen, click "Use Costom Domain".
 
-![image](https://user-images.githubusercontent.com/746259/35710831-8a82348c-076e-11e8-9894-c6c2121cb92b.png)
+    <img src="https://user-images.githubusercontent.com/746259/35710831-8a82348c-076e-11e8-9894-c6c2121cb92b.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
 
 2. Paste in the **Instance URL** we echo'd above (be sure you don't copy in the `https://` as it won't remove it.)
 
-![image](https://user-images.githubusercontent.com/746259/35710869-b3626b9c-076e-11e8-82fd-52a84cbae230.png)
+    <img src="https://user-images.githubusercontent.com/746259/35710869-b3626b9c-076e-11e8-82fd-52a84cbae230.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
 
 3. Then type (or copy) the username and password.
 
-![image](https://user-images.githubusercontent.com/746259/35710893-d4fd09c4-076e-11e8-9099-113ca98456e2.png)
+    <img src="https://user-images.githubusercontent.com/746259/35710893-d4fd09c4-076e-11e8-9099-113ca98456e2.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
 
 4. Click the Allow button to use the Connected App for API access.
 
-![image](https://user-images.githubusercontent.com/746259/35710910-e7c80edc-076e-11e8-9c9b-9bc742c747fb.png)
+    <img src="https://user-images.githubusercontent.com/746259/35710910-e7c80edc-076e-11e8-9c9b-9bc742c747fb.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
 
 And presto, your mobile app is working against your scratch org!
 
-![image](https://user-images.githubusercontent.com/746259/35710925-f78a27a6-076e-11e8-8b20-b85e8952f97a.png)
+<img src="https://user-images.githubusercontent.com/746259/35710925-f78a27a6-076e-11e8-8b20-b85e8952f97a.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
+
+Pretty neat!
 
 # Conclusion
 
