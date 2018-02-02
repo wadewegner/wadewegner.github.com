@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Build a Native Mobile App Using Salesforce DX and the Mobile SDK"
-description: "Salesforce DX provides a lot of great tools for development that, frankly, will significantly improve the life of a mobile app developer who's building an integration to Salesforce. In this post I'll show you how to use the Mobile SDK as a way to quickly get started on a React Native app and then use Salesforce DX to make it easy to build your everyone in Salesforce."
+description: "Salesforce DX provides a lot of great tools for development that, frankly, will significantly improve the life of a mobile app developer who's building an integration to Salesforce. In this post I'll show you how to use the Mobile SDK as a way to quickly get started on a React Native app and then use Salesforce DX to make it easy to build everything else in Salesforce."
 categories: 
 - salesforce
 - salesforce dx
