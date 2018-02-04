@@ -133,7 +133,8 @@ Ideally, try to avoid profiles. Sadly, since they're so pervasive, Trailhead oft
 I've created an alias that makes it really easy to deploy to my TPO.
 
 ```bash
-alias mdd='function _blah(){ sfdx force:source:convert -d mdapiout && sfdx force:mdapi:deploy -d mdapiout --wait 100 -u $1 && rm -rf mdapiout };_blah'
+alias mdd='function _blah(){ sfdx force:source:convert -d mdapiout && /
+  sfdx force:mdapi:deploy -d mdapiout --wait 100 -u $1 && rm -rf mdapiout };_blah'
 ```
 
 With this alias, I can convert, deploy, and clean all with one command: `mdd tpo`
@@ -189,7 +190,8 @@ Here's what I do:
 3. Write your code. Example:
 
   ```java
-  System.schedule('WarehouseCallout','0 0 13 * * ?' , new WarehouseSyncSchedule())
+  System.schedule('WarehouseCallout','0 0 13 * * ?' ,
+    new WarehouseSyncSchedule())
   ```
 
 4. Execute the script against your scratch org to test: `sfdx force:apex:execute -f scripts/scheduledjob.apex`. Note: sometimes to get this right, you'll want to create a new scratch org to try again. I've gone through many iterations sometimes until I finally get it working the way I want.
