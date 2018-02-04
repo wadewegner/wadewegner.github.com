@@ -190,7 +190,8 @@ Here's what I do:
 3. Write your code. Example:
 
     ```java
-    System.schedule('WarehouseCallout','0 0 13 * * ?' , new WarehouseSyncSchedule())
+    System.schedule('WarehouseCallout','0 0 13 * * ?' , 
+        new WarehouseSyncSchedule())
     ```
 
 4. Execute the script against your scratch org to test: `sfdx force:apex:execute -f scripts/scheduledjob.apex`. Note: sometimes to get this right, you'll want to create a new scratch org to try again. I've gone through many iterations sometimes until I finally get it working the way I want.
