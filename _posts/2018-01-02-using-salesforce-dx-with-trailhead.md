@@ -31,7 +31,7 @@ You'll find the following in this post:
 
 I thought it'd be good to use the [Quick Start: Build Your First App](https://trailhead.salesforce.com/projects/quickstart-devzone-app) project as the example for this tutorial.
 
-## Step 1: Log into your TPO using the CLI
+### Step 1: Log into your TPO using the CLI
 
 The first thing you'll want to do is log into your trailhead playground org (TPO) using the [Salesforce CLI](https://developer.salesforce.com/tools/sfdxcli). Doing this will allow you to target your TPO and deploy your metadata to pass challenges.
 
@@ -41,7 +41,7 @@ The first thing you'll want to do is log into your trailhead playground org (TPO
 
 Okay, that completes the initial setup. Now it's time to dig in.
 
-## Step 2: Create a project & scratch org 
+### Step 2: Create a project & scratch org 
 
 I like to create a new project for each trail/project/superbadge. This lets me keep all the required source in a place where it's easy to re-use and also allows me to easily push to a version control system (VCS). (You're using VCS, right?)
 
@@ -51,7 +51,7 @@ I like to create a new project for each trail/project/superbadge. This lets me k
 
 3. Create your scratch org. This assumes you already have your Dev Hub setup and ready to go (if not, [look here](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm)). I do something like `sfdx force:org:create -s -f config/project-scratch-def.json`. This not only creates the scratch org, but `-s` makes it the default for the project, meaning all other commands I invoke will default to this scratch org.
 
-## Step 3: Complete the challenge in the scratch org and pull the source
+### Step 3: Complete the challenge in the scratch org and pull the source
 
 You'll see that the [Create the Trailblazer App](https://trailhead.salesforce.com/projects/quickstart-devzone-app/steps/devzone-app-1) module has you complete a number of steps. You'll want to do all of this in the scratch org, not your TPO. Then, when you've completed the steps, you can pull it all out of the scratch org so that you have a local copy of all your changes.
 
@@ -69,7 +69,7 @@ Now you'll see you'll see your source in the `force-app/main/default` folder:
 
 If you haven't done so before, poke around and take a look. This is what metadata looks like!
 
-## Step 4: Deploy to your TPO and verify
+### Step 4: Deploy to your TPO and verify
 
 At this point, you're ready to verify you completed the challenge. But the metadata isn't yet in your TPO. No problem, all the MDAPI commands are available in the CLI. And, since we already logged into your TPO, it's really simple to deploy it.
 
@@ -79,8 +79,8 @@ At this point, you're ready to verify you completed the challenge. But the metad
 
     You'll see something like:
 
-    ```
-    ❯ sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo
+    ```bash
+    $ sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo
     9185 bytes written to /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip using 44.179ms
     Deploying /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip...
 
@@ -132,7 +132,7 @@ Ideally, try to avoid profiles. Sadly, since they're so pervasive, Trailhead oft
 
 I've created an alias that makes it really easy to deploy to my TPO.
 
-```
+```bash
 alias mdd='function _blah(){ sfdx force:source:convert -d mdapiout && sfdx force:mdapi:deploy -d mdapiout --wait 100 -u $1 && rm -rf mdapiout };_blah'
 ```
 
@@ -140,11 +140,11 @@ With this alias, I can convert, deploy, and clean all with one command: `mdd tpo
 
 Definitely a lot easier!
 
-## Additional things to know
+### Additional things to know
 
 Certain modules will require you to do additional things.
 
-### Installing required packages
+#### Installing required packages
 
 As pointed out by [Bonny Hinners](https://twitter.com/SNUGSFBay/status/948927117248491520), there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO to complete a challenge. This can give you custom objects and other metadata you'll use within the challenge. You'll need to do the same thing with your scratch org.
 
@@ -160,7 +160,7 @@ No problem, we can install this unmanaged package in the scratch org. Then, any 
 
 That's it! Now all the required schema and dependencies are in your scratch org.
 
-### Exporting and importing data
+#### Exporting and importing data
 
 A few of the challenges will verify that you've created data in the TPO. Now, of course you could open the TPO and manually enter the data it's looking for. But where's the fun in that? Instead, do it in your scratch org, export it, and then import it into your TPO.
 
@@ -176,7 +176,7 @@ This is a great way to discover some of the useful data import/export commands i
 
 Pretty slick.
 
-### Executing anonymous Apex code
+#### Executing anonymous Apex code
 
 There are some things that either don't fit into the model of source push/pull (e.g. connected apps) or will require you to take a different approach to updating in the org. So, get ready to bust out some anonymous Apex!
 
@@ -188,7 +188,7 @@ Here's what I do:
 
 3. Write your code. Example:
 
-  ```
+  ```java
   System.schedule('WarehouseCallout','0 0 13 * * ?' , new WarehouseSyncSchedule())
   ```
 
@@ -198,32 +198,32 @@ Here's what I do:
 
 Notice how easy that is? And, even better, it's completely repeatable!
 
-### Opening up a Lightning App 
+#### Opening up a Lightning App 
 
 In many of the modules you'll create a lightning app as a test harness called `harnessApp.app` (see [Create and Edit Lightning Components](https://trailhead.salesforce.com/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_create) for an example). This test harness is used to test the Lightning Components as you create them. Super helpful!
 
 Now, Trailhead assumes you're doing your development in the Developer Console. If you're using Salesforce DX, how do you easily open `harnessApp.app` to test your component? Well, the CLI let's you target a specific page:
 
-```
-sfdx force:org:open -p c/harnessApp.app
+```bash
+$ sfdx force:org:open -p c/harnessApp.app
 ```
 
 This will directly open your `harnessApp.app` in the browser, without even having to login. Pretty cool, right?
 
 Of course, if you want to test it in your TPO, just add your alias (e.g. `-u tpo`).
 
-## Wrap it up
+### Wrap it up
 
 That's pretty much it! You can do this over and over again. The best part is, as I mentioned, you can setup version control and push all your source.
 
 In your project, it's as simple as the following:
 
-```
-git init
-git remote add origin git@github.com:wadewegner/th-trailblazerapp.git
-git add -A
-git commit -m "It works"
-git push origin master
+```bash
+$ git init
+$ git remote add origin git@github.com:wadewegner/th-trailblazerapp.git
+$ git add -A
+$ git commit -m "It works"
+$ git push origin master
 ```
 
 And then you'll have a nice repo of your code to refer to in the future: [https://github.com/wadewegner/th-trailblazerapp](https://github.com/wadewegner/th-trailblazerapp)
