@@ -34,15 +34,13 @@ line-height:1.5rem
 }
 
 @media screen and (min-width: 48em) {
-
-  .h2 {
-  font-size:2rem;
-  line-height:2.5rem
-  }
+.h2 {
+font-size:2rem;
+line-height:2.5rem
+}
 }
 
 @media screen and (min-width: 64em) {
-
 .h2 {
 font-size:3rem;
 line-height:3.5rem
@@ -322,7 +320,7 @@ display:block
 }
 
 html {
-font-family: "Salesforce Sans",Arial,sans-serif;
+font-family:"Salesforce Sans",Arial,sans-serif;
 font-weight:300;
 }
 
@@ -369,7 +367,7 @@ background:#fff
 }
 
 body {
-color:#333;
+color:#333
 }
 
 .highlight,.gist-syntax .highlight {
