@@ -153,16 +153,14 @@ strong,
 body {
   color: #333;
   background-color: #fff;
+  height: 100%;
+  margin: 0;
+  color: #333;  
 }
 
 a {
   color: #0096cc;
   text-decoration: none;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 .site-wrap {
@@ -376,10 +374,8 @@ footer:after {
 html {
   font-family: "Salesforce Sans", Arial, sans-serif;
   font-weight: 300;
-}
-
-body {
-  margin: 0;
+  height: 100%;
+  background: #fff;  
 }
 
 article,
@@ -430,14 +426,6 @@ pre,
 samp {
   font-family: monospace, monospace;
   font-size: 1em;
-}
-
-html {
-  background: #fff;
-}
-
-body {
-  color: #333;
 }
 
 .highlight,
