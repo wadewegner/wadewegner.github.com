@@ -159,7 +159,7 @@ Okay -- now you can run the app in Xcode.
 
 Let's go ahead and log into the mobile app and see it in action!
 
-1. On the login screen, click "Use Costom Domain".
+1. On the login screen, click "Use Custom Domain".
 
     <img src="https://user-images.githubusercontent.com/746259/35710831-8a82348c-076e-11e8-9894-c6c2121cb92b.png" width="200" alt="image" style="border-style: solid;border-width:1px;border-color:#767676;">
 
