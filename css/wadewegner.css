@@ -140,12 +140,6 @@ display:block
 height:100px
 }
 
-body {
-box-sizing:border-box;
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box
-}
-
 .gist,.gist .highlight .p {
 font-size:.75rem
 }
@@ -210,7 +204,6 @@ font-style:italic
 }
 
 p {
-/* font-weight:300; */
 line-height:1.75rem;
 color:#333
 }
@@ -227,7 +220,6 @@ pre {
 padding:1rem;
 font-size:1.125rem;
 line-height:1.25rem;
-overflow-x:scroll;
 margin-bottom:1rem
 }
 
@@ -370,12 +362,6 @@ overflow:auto
 code,kbd,pre,samp {
 font-family:monospace,monospace;
 font-size:1em
-}
-
-* {
--webkit-box-sizing:border-box;
--moz-box-sizing:border-box;
-box-sizing:border-box
 }
 
 html {
