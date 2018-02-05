@@ -127,7 +127,7 @@ Speaking of which, let's create that mobile app.
 This step is pretty easy thanks to all the hard work done by the Salesforce Mobile SDK team. Make sure you're in the `myproject` folder and run the following CLI command:
 
 ```bash
-sfdx mobilesdk:reactnative:create
+$ sfdx mobilesdk:reactnative:create
     --platform ios
     --appname demo1
     --packagename com.wadewegner.demo1
