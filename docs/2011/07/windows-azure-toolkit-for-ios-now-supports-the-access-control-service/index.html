@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Windows Azure Toolkit for I O S Now Supports the Access Control Service - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Windows Azure Toolkit for iOS Now Supports the Access Control Service - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/07/windows-azure-toolkit-for-ios-now-supports-the-access-control-service/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/07/windows-azure-toolkit-for-ios-now-supports-the-access-control-service/">Windows Azure Toolkit for iOS Now Supports the Access Control Service</a>
+    </h2>
+    <div class="post-data">
+        Jul 25, 2011 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Today we released an update to our <a href="https://github.com/microsoft-dpe/watoolkitios-lib">Windows Azure Toolkit for iOS</a> that provides some significant enhancements – in particular, we now provide support for using the <a href="http://acs.codeplex.com/">Windows Azure Access Control Server (ACS)</a> from an iOS application. You can get all the bits here:</p>
+<ul>
+<li>
+<p>(updated) <a href="https://github.com/microsoft-dpe/watoolkitios-lib">watoolkitios-lib</a></p>
+</li>
+<li>
+<p>(updated) <a href="https://github.com/microsoft-dpe/watoolkitios-samples">watoolkitios-samples</a></p>
+</li>
+<li>
+<p>(updated) <a href="https://github.com/microsoft-dpe/watoolkitios-doc">watoolkitios-doc</a></p>
+</li>
+<li>
+<p>(new) <a href="https://github.com/microsoft-dpe/watoolkitios-configutility">watoolkitios-configutility</a></p>
+</li>
+<li>
+<p>(new) <a href="https://github.com/microsoft-dpe/cloudreadypackages">cloudreadypackages</a></p>
+</li>
+</ul>
+<p>We first released this toolkit on May 6th, and since then we’ve released two minor updates and even accepted a <a href="http://www.wadewegner.com/2011/05/released-windows-azure-toolkit-for-ios-v1-0-1/">merge request from the community</a>. This toolkit has been a real pleasure to work on. Not only has it been to break out of the traditional Microsoft stack and learn about new languages and environments, but it’s also been great to introduce a lot of Objective-C and iOS developers to the power of Windows Azure.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/HomeRealm.png" alt="ACS & iOS/iPhone"></p>
+<p>There are three key aspects to version 1.2 of the iOS toolkit:</p>
+<ol>
+<li>
+<p>Cloud Ready Packages for Devices</p>
+</li>
+<li>
+<p>Configuration Tool</p>
+</li>
+<li>
+<p>Support for ACS</p>
+</li>
+</ol>
+<p>These three pieces are incredibly important when trying to develop iOS applications that use Windows Azure; consequently, let me try and explain each of these components and how they help to make development easier.</p>
+<p><strong><em>Cloud Ready Packages for Devices</em></strong></p>
+<p>One of the biggest challenges when using Windows Azure for an iOS developer today is the inability to create a package that can be deployed to Windows Azure. To make this easier, we have pre-built four Cloud Ready Packages for Devices so that you – the iOS developer – don’t have to setup Windows 7 and run CSPACK. Instead, you simply have to download the most appropriate cloud ready package, update the .CSCFG file, then deploy through the Windows Azure Portal.</p>
+<p>We have four “flavors” of the Cloud Ready Packages:</p>
+<ul>
+<li>
+<p>ACS + APNS – this version allows you to use the Access Control Service and register your certificate for the Apple Push Notification Service</p>
+</li>
+<li>
+<p>ACS – this version allows you to use the Access Control Service</p>
+</li>
+<li>
+<p>Membership + APNS – this version allows you to use a simple membership store in Windows Azure table storage for users and register your certificate for the Apple Push Notification Service</p>
+</li>
+<li>
+<p>Membership – this version allows you to use a simple membership store in Windows Azure table storage for users</p>
+</li>
+</ul>
+<p>For more information on how to use and deploy these packages, take a look at this video on <a href="http://channel9.msdn.com/posts/Deploying-the-Cloud-Ready-Packages-for-Devices">deploying the Cloud Ready Packages for Devices</a>.</p>
+<p><strong><em>Configuration Tool</em></strong></p>
+<p>Along with the CSPKG you need a CSCFG to deploy your application to Windows Azure. The CSCFG file is an xml document that helps to describe elements of your application to Windows Azure so that it is able to correctly run your application.</p>
+<p>In Visual Studio we have tools that make it easy to update the CSCFG file without having to open up the XML, but of course you cannot do this on a Mac. To make this easier, we created a tool that you can use on the Mac to walkthrough and generate the CSCFG file with all the appropriate details. Once created, you can use this CSCFG file along with the downloaded CSPKG file to deploy your application.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/07/iosconig.png" alt="iosconig"></p>
+<p>In addition to creating the CSCFG file, the configuration tool will also updated ACS with all the appropriate settings so that you can build &amp; run your application quickly. For all the details, please take a look at Vittorio Bertocci’s post on <a href="http://blogs.msdn.com/b/vbertocci/archive/2011/07/25/using-the-windows-azure-access-control-service-in-ios-applications.aspx">Using the Windows Azure Access Control Service in iOS Applications</a>.</p>
+<p><strong><em>Support for ACS</em></strong></p>
+<p>Everything I’ve described above is designed to make it easier for an iOS developer to quickly and easily use the Access Control Service. To use the library for authenticating to ACS, it’s really quite simple:</p>
+<pre><code>NSLog(@&quot;Intializing the Access Control Client...&quot;); 
+WACloudAccessControlClient *acsClient = [WACloudAccessControlClient accessControlClientForNamespace:@&quot;iostest-walkthrough&quot; realm:@&quot;uri:wazmobiletoolkit&quot;];
+
+[acsClient showInViewController:self.viewController allowsClose:NO withCompletionHandler:^(BOOL authenticated)
+{ 
+    if (!authenticated) 
+    { 
+        NSLog(@&quot;Error authenticating&quot;); 
+    } 
+    else 
+    { 
+        NSLog(@&quot;Creating the authentication token...&quot;); 
+        WACloudAccessToken token = [WACloudAccessControlClient sharedToken]; 
+
+        / Do something with the token here! */ 
+    } 
+}]
+</code></pre>
+<p>I’ll post more walkthroughs and documentation shortly.</p>
+<p>As always, please let me know what you think of the release! Your feedback is important to us, especially as it pertains to prioritizing future features and capabilities.</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

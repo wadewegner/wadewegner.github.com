@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+A Command Line Interface for Force.com - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="A Command-line Interface for Force.com - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2013/11/a-command-line-interface-for-force.com/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2013/11/a-command-line-interface-for-force.com/">A Command-line Interface for Force.com</a>
+    </h2>
+    <div class="post-data">
+        Nov 18, 2013 |
+        5 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+     <p>
+         Tags: 
+          
+        </p>
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Released this week at Dreamforce is a new command-line interface (CLI) tool for Force.com. This tool is open-sourced and available at <a href="http://github.com/heroku/force">http://github.com/heroku/force</a>. This tool lets you quickly interact with the Force.com APIs and opens up interesting opportunities for scripting and automating tasks on Force.com.</p>
+<p><img src="http://wadewegner.blob.core.windows.net/wordpress/2013-11-18-ApexCode.png" alt="Apex code example"></p>
+<p>You can immediately download the precompiled binaries for the force command-line interface and start using it today:</p>
+<ul>
+<li>Linux: <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/linux-386/force">32-bit</a> | <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/linux-amd64/force">64-bit</a></li>
+<li>OS X: <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/darwin-386/force">32-bit</a> | <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/darwin-amd64/force">64-bit</a></li>
+<li>Windows: <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/windows-386/force.exe">32-bit</a> | <a href="https://godist.herokuapp.com/projects/heroku/force/releases/current/windows-amd64/force.exe">64-bit</a></li>
+</ul>
+<p>Simply download the binary and run it from the command-line.</p>
+<pre><code>Usage: force &lt;command&gt; [&lt;args&gt;]
+
+Available commands:
+   login     Log in to force.com
+   logout    Log out from force.com
+   whoami    Show information about the active account
+   sobject   Manage sobjects
+   field     Manage sobject fields
+   record    Create, modify, or view records
+   export    Export metadata to a local directory
+   import    Import metadata from a local directory
+   query     Execute a SOQL query
+   apex      Execute anonymous Apex code
+   version   Display current version
+   update    Update to the latest version
+   help      Show this help
+
+Run 'force help [command]' for details.
+</code></pre>
+<p>Let&rsquo;s take a look at a few simple examples.</p>
+<p>To start, you need to login so that you are able to execute commands against Force.com.</p>
+<pre><code>&gt; force login
+</code></pre>
+<p>When you initiate the login experience the tool will open up your browser so that you can enter your username and password.</p>
+<p><img src="http://wadewegner.blob.core.windows.net/wordpress/2013-11-17-Login.png" alt="Login"></p>
+<p>Using some internal trickery (you can take a look <a href="https://github.com/heroku/force/blob/master/force.go#L374">here</a> to get in on the secret) the browser is able to return the OAuth token to the command-line. Now the command-line is able to make authenticated calls to force.com.</p>
+<p>Once logged in, you&rsquo;re ready to go.</p>
+<pre><code>&gt; force whoami | grep Username
+Username: wwegner@64demo.com
+</code></pre>
+<p>Just in case you forget.</p>
+<p>Let&rsquo;s create a new object.</p>
+<pre><code>&gt; force sobject create MyNewObject Description:string
+</code></pre>
+<p>This creates a new object called <strong>MyNewObject</strong> with a string field called <strong>Description</strong>.</p>
+<p>You can confirm it is created.</p>
+<pre><code>&gt; force sobject list | grep MyNewObject
+MyNewObject__c
+</code></pre>
+<p>Okay. So, in addition to these simple commands, you can also run apex code. You will likely not use this by hand all of the time, but this provides a great opportunity for scripting.</p>
+<p>Let&rsquo;s give it a try.</p>
+<pre><code>&gt; force apex
+MyNewObject__c newObject = new MyNewObject__c();
+newObject.Description__c = 'description';
+insert newObject;
+</code></pre>
+<p>Now, hit Control-D to submit the code for execution.</p>
+<pre><code>&gt;&gt; Executing code...
+
+28.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO
+Execute Anonymous: MyNewObject__c newObject = new MyNewObject__c();
+Execute Anonymous: newObject.Description__c = 'description';
+Execute Anonymous: insert newObject;
+08:34:11.084 (84957822)|EXECUTION_STARTED
+08:34:11.084 (84970827)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+08:34:11.300 (223609040)|CUMULATIVE_LIMIT_USAGE
+08:34:11.300|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 1 out of 150
+  Number of DML rows: 1 out of 10000
+  Number of code statements: 3 out of 200000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 10
+  Number of Email Invocations: 0 out of 10
+  Number of fields describes: 0 out of 100
+  Number of record type describes: 0 out of 100
+  Number of child relationships describes: 0 out of 100
+  Number of picklist describes: 0 out of 100
+  Number of future calls: 0 out of 10
+
+08:34:11.300|CUMULATIVE_LIMIT_USAGE_END
+
+08:34:11.223 (223678184)|CODE_UNIT_FINISHED|execute_anonymous_apex
+08:34:11.223 (223688365)|EXECUTION_FINISHED
+</code></pre>
+<p>Pretty fantastic. The possibilities are almost endless.</p>
+<p>Now, if you really want to have some fun, you can fork the <a href="https://github.com/heroku/force/fork">fork the heroku/github repository</a> and start to extend the command-line interface itself! Let me show you how to quickly get started.</p>
+<p>The force command-line interface is built using the <a href="http://golang.org/">Go programming language</a>. Go is a fun C-derived language originally created at Google. There&rsquo;s a good book called <a href="http://www.golang-book.com/">An Introduction to Programming in Go</a> that provides a good overview of the language.</p>
+<p>In order to build the source make sure you have the following setup.</p>
+<ul>
+<li>
+<p>The <a href="http://golang.org/pkg/runtime/">Go language runtime</a>. Download and install this tool. Make sure you can execute it from the command-line (i.e. it&rsquo;s in your path).</p>
+</li>
+<li>
+<p><a href="http://git-scm.com/downloads">Git</a> and <a href="http://mercurial.selenic.com/downloads/">Mercurial</a>. The force command-line Go package has dependencies on packages that are hosted on Github and Bitbucket.</p>
+</li>
+</ul>
+<p>Go uses packages for builds so that it&rsquo;s easier to manage dependencies.</p>
+<p>The first step is to create and set your GOPATH - this is where go will place packages you get later on. I have mine set simply:</p>
+<pre><code>&gt; echo $GOPATH
+/Users/wwegner/go
+</code></pre>
+<p>Ideally you should add this to your ~/.bash_profile but you can also quickly set it by typing:</p>
+<pre><code>export GOPATH=&quot;/Users/wwegner/go&quot;
+</code></pre>
+<p>Once you have set the GOPATH you can grab the Go package for the force command-line interface.</p>
+<pre><code>&gt; go get -u github.com/heroku/force
+</code></pre>
+<p>When this finishes you&rsquo;ll find you have three folders in your go folder.</p>
+<p><img src="http://wadewegner.blob.core.windows.net/wordpress/2013-11-18-GoFolder.png" alt="Go folder"></p>
+<p>If you explore these folders you&rsquo;ll find that they include all the dependences you need in order to successfully build and install the force command-line tool locally.</p>
+<p>Fantastic.</p>
+<p>Now, clone your forked heroku/force repository so that you have the bits pulled down locally. Browse to the folder and type the following:</p>
+<pre><code>&gt; go build
+</code></pre>
+<p>Since you have your GOPATH setup correctly you will find that this will create a <strong>force</strong> binary in your local directory. You can easily run it.</p>
+<pre><code>&gt; ./force login
+</code></pre>
+<p>And you&rsquo;re all set! Now, you can start to update the *.go files, build a new binary, and away you go.</p>
+<p>Hopefully you&rsquo;ve found this a useful introduction to the force command-line interface. I&rsquo;m sure we&rsquo;ll find more ways to benefit from this tool over time!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Send a Text Message to Your Io T Thermal Printer? No Problem. ( and Print Your Lunch Menu Too!) - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Send a Text Message to Your IoT Thermal Printer? No Problem. (And Print Your Lunch Menu Too!) - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="How do you send a text message from your phone and have it print on a thermal printer that&#39;s sitting on your kitchen counter? With the Internet of Things, and services like Heroku and Twilio coupled with hardware like the Raspberry Pi, anything&#39;s possible."/>
+<meta property="og:url" content="https://www.wadewegner.com/2014/02/send-a-text-message-to-your-iot-thermal-printer-no-problem.-and-print-your-lunch-menu-too/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2014/02/send-a-text-message-to-your-iot-thermal-printer-no-problem.-and-print-your-lunch-menu-too/">Send a Text Message to Your IoT Thermal Printer? No Problem. (And Print Your Lunch Menu Too!)</a>
+    </h2>
+    <div class="post-data">
+        Feb 7, 2014 |
+        5 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+     <p>
+         Tags: 
+          
+        </p>
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>How do you send a text message from your phone and have it print on a thermal printer that&rsquo;s sitting on your kitchen counter?</p>
+<p><img src="https://f.cloud.github.com/assets/746259/2115102/87aa3efe-9048-11e3-9222-b32b825909ef.jpg" alt="iot-beer"></p>
+<p>Hang on, we&rsquo;ll get to that shortly!</p>
+<p>Shortly after Dreamforce last year I was turned on to Adafruit Industries by my teammate <a href="https://twitter.com/ReidCarlberg">Reid Carlberg</a>. I&rsquo;ve since built a number of cool little gadgets, including the <a href="https://www.adafruit.com/products/287">Brain Machine</a> and the <a href="http://www.adafruit.com/products/73">TV B Gone</a>. Both projects were a ton of fun and a great way to get started with soldering and simple circuitry. It&rsquo;s been great fun having the TV B Gone when I travel. There&rsquo;s nothing more satisfying than turning off loud, annoying TVs (invariably on CNN) at the airport when you&rsquo;re trying to read or work.</p>
+<p>I don&rsquo;t recall exactly how/where I first heard of it, but I was immediately drawn to the <a href="http://learn.adafruit.com/pi-thermal-printer">Internet of Things Printer for Raspberry Pi</a>. I think it&rsquo;s the combination of a number of things that got me interested:</p>
+<ul>
+<li>A small <strong>thermal printer</strong> that doesn&rsquo;t require an ink cartridge.</li>
+<li>It&rsquo;s powered by a <strong>Raspberry Pi</strong>, providing lots of opportunities for coding.</li>
+<li>A miniature USB <strong>WiFi</strong> allowing it to run almost anywhere.</li>
+</ul>
+<p>And of course, having three young kids, I thought of so many different ways the printer could be fun and useful (although, to be 100% honest, I haven&rsquo;t found all that much utility in it yet, but it sure has been fun).</p>
+<p>The construction of the printer was fun. It took me a couple of days, but I&rsquo;m slow.</p>
+<div class="row">
+	<div class="col-sm-6" style="padding-right:0px;">
+		<img border="0" alt="" src="https://f.cloud.github.com/assets/746259/2114554/da19da0a-903e-11e3-9977-7cc67eb248da.jpg">
+	</div>
+	<div class="col-sm-6" style="padding-right:0px;">
+		<img border="0" alt="" src="https://f.cloud.github.com/assets/746259/2114556/dd0e28ba-903e-11e3-808c-eee837a68be6.jpg">
+	</div>
+</div>
+<p />
+<p>Simply follow the <a href="http://learn.adafruit.com/pi-thermal-printer">Adafruit tutorial</a>. It&rsquo;s fantastic and almost impossible to go wrong if you follow the directions.</p>
+<p>The Adafruit tutorials also show you how setup some Python scripts to provide simple functions on the IoT printer, including:</p>
+<ul>
+<li><strong>Daily weather scripts</strong>. Pretty useful at providing a local forecast.</li>
+<li><strong>Twitter script</strong>. Prints everytime someone tweets you. I immediately disabled this script.</li>
+<li><strong>Daily Sudoku puzzle</strong>. I love Sudoku and have kept this one running.</li>
+</ul>
+<p>But, honestly, beyond this it&rsquo;s up to you to figure out interesting uses for the printer.</p>
+<p>Not a problem for me. I had two ideas:</p>
+<ol>
+<li>
+<p>Figure out a way to let people send messages to the printer though simple text (SMS) messages.</p>
+</li>
+<li>
+<p>Print out my kids daily school lunch menu. This had always been a huge annoyance as we&rsquo;d have to load the school website almost every day to look it up.</p>
+</li>
+</ol>
+<p>Given that the thermal printer is powered by a <strong>Raspberry Pi</strong>, giving you the ability to write just about any kind of code you can think of in various languages, these ideas proved pretty simple.</p>
+
+<h3 id="printing-text-messages-on-the-iot-thermal-printer" class="anchor-link"><a href="#printing-text-messages-on-the-iot-thermal-printer">Printing text messages on the IoT thermal printer</a></h3>
+<p>You may ask yourself, why would you want to send a text message to a printer? The best answer I can come up with is, because I can! As with most things, it&rsquo;s solving the challenge that provides the satisfaction, not the function itself.</p>
+<p>As you&rsquo;ve no doubt guessed, I used a number of cloud services to make it possible:</p>
+<ul>
+<li>
+<p><a href="http://www.twilio.com/">Twilio</a>. Seriously one of the best developer services I&rsquo;ve ever used. It&rsquo;s so much fun to bridge your applications with a phone (whether through SMS, MMS, or IVR).</p>
+</li>
+<li>
+<p><a href="http://www.heroku.com/">Heroku</a>. A cloud platform-as-a-service (PaaS) and part of the Salesforce1 Platform.</p>
+</li>
+<li>
+<p><a href="http://www.cloudamqp.com/">CloudAMQP</a>. A managed RabbitMQ server in the cloud, acquired as a <a href="https://addons.heroku.com/">Heroku Add-On</a>.</p>
+</li>
+</ul>
+<p>And, of course, some Python code on the Raspberry Pi.</p>
+<p>Here&rsquo;s how the three cloud services work:</p>
+<ol>
+<li>
+<p>You text a message to a phone number. This phone number is owned by Twilio and I&rsquo;m effectively &ldquo;renting&rdquo; it. They receive the message and send it (and some additional metadata) to a web service I have running in Heroku. This is set by specifying the <strong>Messaging Request URL</strong> on your Twilio number. (Note: Please refer to Twilio&rsquo;s fantastic developer documentation if you have any problems.)</p>
+ <img src="https://f.cloud.github.com/assets/746259/2115239/f2396b48-904b-11e3-855b-a4f7c03497c0.png" alt="Twillio Message Request URL" style="border-style: solid;border-width:1px;border-color:#767676;padding-left:10px;">
+</li>
+<li>
+<p>Our web service running in Heroku receives the message and extracts the phone number and message. (Note: Heroku also has fantastic developer documentation. Please refer to it to see how to create and deploy your web service.)</p>
+</li>
+<li>
+<p>Using the data received from Twilio, we write a message to <strong>CloudAMQP</strong>, queuing it up for later retrieval.</p>
+</li>
+<li>
+<p>Before finishing, the web service on Heroku creates and sends a Twilio response so that the sender knows their message was successfully received.</p>
+<p>Here&rsquo;s the code for the web service running in Heroku:</p>
+ <script src="https://gist.github.com/wadewegner/8872919.js?file=run.py"></script>
+</li>
+</ol>
+<p>At this point we have our message sitting in a queue. This is perfect, as it allows us to write a little code on our printer to periodically check the queue and, if a message is found, print it!</p>
+<p>On the Raspberry Pi, there are two things I did:</p>
+<ol>
+<li>
+<p>I created a script called <span class="inline-code">amqp.py</span> that checks for messages in the CloudAMQP queue and, if found, formats and prints the message.</p>
+ <script src="https://gist.github.com/wadewegner/8872919.js?file=amqp.py"></script>
+</li>
+<li>
+<p>Modified <span class="inline-code">/etc/rc.local</span> to automatically run the <span class="inline-code">amqp.py</span> script when the Raspberry Pi is booted.</p>
+<pre><code> cd /home/pi/Python-Thermal-Printer
+ python amqp.py &amp;
+</code></pre>
+</li>
+</ol>
+<p>Now the printer automatically run the <span class="inline-code">amqp.py</span> script on start-up and, whenever a message is delivered, it will print it!</p>
+<p>Let me tell you, it&rsquo;s super cool when you see messages start to pour in!</p>
+<p><img src="https://f.cloud.github.com/assets/746259/2115364/947f6fc2-904e-11e3-9c81-c495e80a82b7.jpg" alt="printerworks"></p>
+<p>Text away!</p>
+
+<h3 id="getting-the-school-lunch-menu" class="anchor-link"><a href="#getting-the-school-lunch-menu">Getting the school lunch menu</a></h3>
+<p>As I said, I had grown tired of having to load up the school lunch menu every morning. We&rsquo;d routinely have to browse to <a href="http://dcsd.nutrislice.com/menu/eldorado/lunch/">this lunch menu</a>. It gets tiring after the 100th time.</p>
+<p>So, with the help of my friend <a href="http://twitter.com/smarx">Steve Marx</a> I created a Python script that does the following:</p>
+<ol>
+<li>
+<p>Downloads all the HTML from the lunch menu website.</p>
+</li>
+<li>
+<p>Using a REGEX to extract the lunch menu data.</p>
+</li>
+<li>
+<p>Iterates through the data until it finds today&rsquo;s date.</p>
+</li>
+<li>
+<p>Formats and prints the menu on the printer.</p>
+</li>
+</ol>
+<p>Take a look at the code:</p>
+<script src="https://gist.github.com/wadewegner/8872919.js?file=lunch.py"></script>
+<p>Simple (except for the REGEX) and effective.</p>
+<p>Here it is in action:</p>
+<p><img src="https://f.cloud.github.com/assets/746259/2115402/5f1da8a2-904f-11e3-91f6-bdfb78e09912.jpg" alt="2014-02-07 16 23 51"></p>
+<p>Mmm, there&rsquo;s nothing quite like Cowboy Mac!</p>
+<p>There you have it! A solution guaranteed to reduce your daily stress and make your children incredibly happy!</p>
+<p>I hope you found this solution interesting. If you do something like this yourself definitely let me know! You can find all the source code for this solution in the following gist: <a href="https://gist.github.com/wadewegner/8872919">https://gist.github.com/wadewegner/8872919</a></p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

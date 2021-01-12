@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Commerce Server 2007 Upgrade Wizard (Post S P1 Install) Walkthrough - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Commerce Server 2007 Upgrade Wizard (post SP1 install) Walkthrough - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2007/06/commerce-server-2007-upgrade-wizard-post-sp1-install-walkthrough/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2007/06/commerce-server-2007-upgrade-wizard-post-sp1-install-walkthrough/">Commerce Server 2007 Upgrade Wizard (post SP1 install) Walkthrough</a>
+    </h2>
+    <div class="post-data">
+        Jun 23, 2007 |
+        3 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>In my previous post, I detailed the process for <a href="http://www.wadewegner.com/PermaLink,guid,3e9bb1c9-4c0f-4468-af92-68ecf4db73d7.aspx">installing the Commerce Server 2007 SP1</a>. In this post, I have created a walkthrough for the Commerce Server 2007 Upgrade Wizard. The upgrade wizard should be run for all of your Commerce Server 2007 sites immediately after you have installed SP1. So, before you begin this process, be sure you have successfully installed SP1.</p>
+<p>(Note: I created this walkthrough, along with verbose screen shots and text, largely for documentation I am delivering to clients. Please feel free to use these screen shots and/or text for your own documentation.)</p>
+<p>A couple comments based on my experience installing SP1 and upgrading through the wizard:</p>
+<ul>
+<li>Immediately upgrade all of your Commerce Server 2007 sites. Do not reboot your machine before you run the Upgrade Wizard.</li>
+<li>Make sure SQL Server 2005 is running with the appropriate built-in account. For example, when I initially installed SP1 my SQL Server 2005 instance ran as &ldquo;Local System&rdquo;. However, post install, I had to switch the built-in account to &ldquo;Network Service&rdquo; for SQL Server 2005 to start-up properly. I will write a separate post about some issues I had the first time installing SP1.</li>
+</ul>
+<p>That said, here&rsquo;s the process for using the Upgrade Wizard to upgrade your Commerce Server 2007 sites.</p>
+<ol>
+<li>
+<p>Launch the Upgrade Wizard. You can launch this application automatically after installing SP1 or by running the Upgrade Wizard (Start -&gt; All Programs -&gt; Microsoft Commerce Server 2007 -&gt; Tools -&gt; Upgrade Wizard). Click Next to begin.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade1_1.gif" alt="CS 2007 Upgrade Wizard: Welcome"></p>
+</li>
+<li>
+<p>On the Select Options screen, specify the log file path. I left the default location. Click Next to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade2_1.gif" alt="CS 2007 Upgrade Wizard: Select Options"></p>
+</li>
+<li>
+<p>On the Select a Commerce Site screen, specify the site you want to upgrade. Note: if you have more than one site, you can only upgrade on at a time; you can re-run the Upgrade Wizard to upgrade additional sites. Click Next to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade3_1.gif" alt="CS 2007 Upgrade Wizard: Select a Commerce Site"></p>
+</li>
+<li>
+<p>On the Upgrade Site Resources screen, you have the option to choose Migrate or Do Nothing for your various resources. Select the action Migrate for all your resources. Click Next to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade4_1.gif" alt="CS 2007 Upgrade Wizard: Upgrade Site Resources"></p>
+</li>
+<li>
+<p>The Upgrade Summary screen reviews the selections you have made. Review the selections, and click Next to start the upgrade.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade6_1.gif" alt="CS 2007 Upgrade Wizard: Upgrade Summary"></p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade7_1.gif" alt="CS 2007 Upgrade Wizard: Upgrade Process"></p>
+</li>
+<li>
+<p>Once the upgrade is complete you will have to click the Next button to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade8_1.gif" alt="CS 2007 Upgrade Wizard: Upgrade Process (summary)"></p>
+</li>
+<li>
+<p>On the Summary screen, you can review the upgrade and click Main error log to review any errors. Click Next to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade9_1.gif" alt="CS 2007 Upgrade Wizard: Summary"></p>
+</li>
+<li>
+<p>You have successfully upgraded your Commerce Server 2007 site. Click Finish to complete the upgrade wizard.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade10_1.gif" alt="CS 2007 Upgrade Wizard: Complete"></p>
+</li>
+<li>
+<p>After you click Finish you are reminded to restart. Click OK to continue.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/8f31dba0b1b5_A611/Upgrade11_1.gif" alt="CS 2007 Upgrade Wizard: Restart notice"></p>
+</li>
+<li>
+<p>If you have additional Commerce Server 2007 sites to upgrade, repeat steps 1-8.</p>
+</li>
+<li>
+<p>Once you have upgraded all your Commerce Server 2007 sites, restart your computer.</p>
+</li>
+</ol>
+<p>The process is reasonably straightforward, and I encountered no problems.</p>
+<p>Please be sure to share your experiences.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

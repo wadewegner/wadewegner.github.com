@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Using Windows Azure for Windows Phone 7 Push Notification Support - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Using Windows Azure for Windows Phone 7 Push Notification Support - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/05/using-windows-azure-for-windows-phone-7-push-notification-support/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/05/using-windows-azure-for-windows-phone-7-push-notification-support/">Using Windows Azure for Windows Phone 7 Push Notification Support</a>
+    </h2>
+    <div class="post-data">
+        May 9, 2011 |
+        2 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>At MIX11 we released the <a href="http://watoolkitwp7.codeplex.com/releases/view/61952">Windows Azure Toolkit for Windows Phone 7 v1.1.0</a>, which included out-of-the-box support for the <a href="http://msdn.microsoft.com/en-us/library/ff402558%28VS.92%29.aspx">Microsoft Push Notification Service</a> (MPNS) for Windows Phone. The MPNS provides an efficient way for an application to register itself for updates that are pushed directly to the phone rather than writing the application to frequently poll a web service to look for pending notifications. This has the benefit of reducing the impact on your phone battery, as polling results in the device radio turning on frequently.</p>
+<p>When using the MPNS you need to setup your own web service that notifies Microsoft to send the notification. It’s your responsibility to setup this service – you have to create the notification channel, bind it to the correct type of notification, and ultimately host the web service. The Windows Azure Toolkit for Windows Phone 7 makes it really easy to not only host your web service in Windows Azure but also create the channel and setup the correct notification binding (largely thanks to the <a href="http://windowsteamblog.com/windows_phone/b/wpdev/archive/2011/01/14/windows-push-notification-server-side-helper-library.aspx">Windows Push Notification Service Side Helper Library</a> from Yochay Kiriaty).</p>
+<p>To get started, grab v1.1 of the toolkit from our CodePlex site: <a href="http://watoolkitwp7.codeplex.com/">http://watoolkitwp7.codeplex.com/</a>. If this is your first time, take a look at the <a href="http://watoolkitwp7.codeplex.com/wikipage?title=Getting%20Started&amp;referringTitle=Documentation">Getting Started documentation</a> and <a href="http://channel9.msdn.com/posts/Getting-Started-with-the-Windows-Azure-Toolkit-for-Windows-Phone-7">webcast</a>.</p>
+<p>Once you start up the application, the first thing you’ll want to do is enable push notifications. To do this, check the box on the initial page to create the channel.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/05/image.png" alt="image"></p>
+<p>Once this has successfully registered, head over to the website and log in as the administrator. There’s now a Push Notifications tab where you’ll see your user registered:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/05/image1.png" alt="image"></p>
+<p>From here you can the the push notification channel by sending all three push types: toast, tile, and raw. In that order, here’s what you’ll see (note: to see the tile message you must first pin the app to start):</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/05/image2.png" alt="image"> <img src="https://wadewegner.blob.core.windows.net/wordpress/2011/05/image3.png" alt="image"> <img src="https://wadewegner.blob.core.windows.net/wordpress/2011/05/image4.png" alt="image"></p>
+<p>Not bad for an out-of-the-box experience requiring ZERO updates!</p>
+<p>To learn more about this version of the toolkit – or to see it live and in action – take a look at the session I presented at MIX11 entitled <a href="http://channel9.msdn.com/Events/MIX/MIX11/SVC02">Building Windows Phone 7 Applications with the Windows Azure Platform</a>.</p>
+<p>Hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

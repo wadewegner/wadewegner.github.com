@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+4 Simple Steps to Run Go Language in Azure Websites - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="4 Simple Steps to Run Go Language in Azure Websites - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A few weeks ago I wrote a Go web app and wanted to find a good place to host it. Turns out, Azure Websites is a great fit! Follow these four simple steps to try it out."/>
+<meta property="og:url" content="https://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/">4 Simple Steps to Run Go Language in Azure Websites</a>
+    </h2>
+    <div class="post-data">
+        Dec 29, 2014 |
+        3 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>A few weeks ago I wrote a GoLang web app and wanted to find a good place to host it. Given I work with the team that builds Azure Websites, it seemed only fitting to host it in Azure Websites. Turns out, it works great! However, there aren&rsquo;t any resources available that walk you through the steps. Consequently, I wrote the following tutorial.</p>
+<p>(Incidentally, if you want to start to use Go Language and run Windows you&rsquo;ll want to review my post <a href="http://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/">Easy Go Programming Setup for Windows</a>.)</p>
+<p>Is this the absolutely authority on running Go Language in Azure Websites? No, but it works. I plan to publish a few more articles on more complex scenarios in the future.</p>
+
+<h3 id="4-simple-steps" class="anchor-link"><a href="#4-simple-steps">4 Simple Steps</a></h3>
+<ol>
+<li>
+<p>Create your Azure Website in the <a href="https://portal.azure.com">Azure Portal</a>. Without a doubt the easiest step.</p>
+</li>
+<li>
+<p>Download and unzip the Go executables. In the Azure Portal select your website blade and scroll down until you see the <code>Console</code> tile.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/746259/5574198/146ffd92-8f76-11e4-9975-f9e4cd51b9fe.png" alt="Open Console on the Azure websites blade"></p>
+<p>In the console to the right, type the following commands:</p>
+<p><code>curl -O https://storage.googleapis.com/golang/go1.4.windows-386.zip </code></p>
+<p><code>unzip go1.4.windows-386.zip </code></p>
+<p>You should see the following:</p>
+<p><img src="https://cloud.githubusercontent.com/assets/746259/5574286/0ac47f78-8f78-11e4-91c3-1a5f4a6540ae.png" alt="unzipped"></p>
+<p>Be patient with the console as these two operations may take a few moments. It&rsquo;s purposefully simple.</p>
+<p>Note: I&rsquo;m not sure why it returns <code>Bad Request</code> but so far it doesn&rsquo;t seem to cause any issues.</p>
+</li>
+<li>
+<p>Create a <code>server.go</code> file in the <code>wwwroot</code> folder. This is a super simple Go file which will reply for any resource on the website.<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-go" data-lang="go"><span style="color:#007020;font-weight:bold">package</span> main
+	<span style="color:#007020;font-weight:bold">import</span> (
+	    <span style="color:#4070a0">&#34;fmt&#34;</span>
+	    <span style="color:#4070a0">&#34;net/http&#34;</span>
+	    <span style="color:#4070a0">&#34;os&#34;</span> 
+	)
+	<span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">handler</span>(w http.ResponseWriter, r <span style="color:#666">*</span>http.Request) {
+	    fmt.<span style="color:#06287e">Fprintf</span>(w, <span style="color:#4070a0">&#34;You just browsed page (if blank you&#39;re at the root): %s&#34;</span>, r.URL.Path[<span style="color:#40a070">1</span>:])
+	}
+	<span style="color:#007020;font-weight:bold">func</span> <span style="color:#06287e">main</span>() {
+	    http.<span style="color:#06287e">HandleFunc</span>(<span style="color:#4070a0">&#34;/&#34;</span>, handler)
+	    http.<span style="color:#06287e">ListenAndServe</span>(<span style="color:#4070a0">&#34;:&#34;</span><span style="color:#666">+</span>os.<span style="color:#06287e">Getenv</span>(<span style="color:#4070a0">&#34;HTTP\_PLATFORM\_PORT&#34;</span>), <span style="color:#007020;font-weight:bold">nil</span>)
+	}
+</code></pre></div></p>
+<p>As a convenience, feel free to use <code>curl</code> and download this directly from <a href="https://gist.github.com/wadewegner/52a925a7b1607a48d796">my public gist</a>. Otherwise, you should consider using Kudu or git to get your files into your Azure Website.</p>
+<p><code>curl -L http://bit.ly/1xtYNRU --output server.go</code></p>
+<p>Once downloaded, type <code>type server.go</code> to confirm you grabbed everything correctly.</p>
+</li>
+<li>
+<p>Create a <code>Web.Config</code> file in the <code>wwwroot</code> folder. We will use the <code>httpPlatformHandler</code> simpilar to <a href="http://azure.microsoft.com/en-us/documentation/articles/web-sites-java-custom-upload/">running Tomcat in Azure Websites</a>. <div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#007020">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;configuration&gt;</span>
+	    <span style="color:#062873;font-weight:bold">&lt;system.webServer&gt;</span>
+	        <span style="color:#062873;font-weight:bold">&lt;handlers&gt;</span>
+	            <span style="color:#062873;font-weight:bold">&lt;add</span> <span style="color:#4070a0">name=</span><span style="color:#4070a0">&#34;httpplatformhandler&#34;</span> <span style="color:#4070a0">path=</span><span style="color:#4070a0">&#34;\*&#34;</span> <span style="color:#4070a0">verb=</span><span style="color:#4070a0">&#34;\*&#34;</span> <span style="color:#4070a0">modules=</span><span style="color:#4070a0">&#34;httpPlatformHandler&#34;</span> <span style="color:#4070a0">resourceType=</span><span style="color:#4070a0">&#34;Unspecified&#34;</span> <span style="color:#062873;font-weight:bold">/&gt;</span>
+	        <span style="color:#062873;font-weight:bold">&lt;/handlers&gt;</span>
+	        <span style="color:#062873;font-weight:bold">&lt;httpPlatform</span> <span style="color:#4070a0">processPath=</span><span style="color:#4070a0">&#34;d:\home\site\wwwroot\go\bin\go.exe&#34;</span> 
+	                      <span style="color:#4070a0">arguments=</span><span style="color:#4070a0">&#34;run d:\home\site\wwwroot\server.go&#34;</span> 
+	                      <span style="color:#4070a0">startupTimeLimit=</span><span style="color:#4070a0">&#34;60&#34;</span><span style="color:#062873;font-weight:bold">&gt;</span>
+	            <span style="color:#062873;font-weight:bold">&lt;environmentVariables&gt;</span>
+	              <span style="color:#062873;font-weight:bold">&lt;environmentVariable</span> <span style="color:#4070a0">name=</span><span style="color:#4070a0">&#34;GOROOT&#34;</span> <span style="color:#4070a0">value=</span><span style="color:#4070a0">&#34;d:\home\site\wwwroot\go&#34;</span> <span style="color:#062873;font-weight:bold">/&gt;</span>
+	            <span style="color:#062873;font-weight:bold">&lt;/environmentVariables&gt;</span>
+	        <span style="color:#062873;font-weight:bold">&lt;/httpPlatform&gt;</span>
+	    <span style="color:#062873;font-weight:bold">&lt;/system.webServer&gt;</span>
+	<span style="color:#062873;font-weight:bold">&lt;/configuration&gt;</span></code></pre></div></p>
+<p>Again, you can use the following curl command to download the <code>Web.Config</code> file:</p>
+<p><code>curl -L http://bit.ly/1wx4JFY --output Web.Config</code></p>
+</li>
+</ol>
+<p>That is it! You can now browse to your Azure Website and see it in action.</p>
+<p>For now, try it out here: <a href="http://golang.azurewebsites.net/hello">http://golang.azurewebsites.net/hello</a></p>
+<p>Is there more we can do here? Absolutely, and I intend to cover some additional topics in future posts. However, for now, it feels good knowing that we can push our Go Language code to Azure Websites.</p>
+<p>Special thanks to <a href="https://twitter.com/ranjithtweeets">Ranjith Mukkai Ramachandra</a> for his help and answering all my questions quickly and thoroughly!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

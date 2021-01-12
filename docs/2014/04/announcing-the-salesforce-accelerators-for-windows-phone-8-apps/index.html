@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Announcing the Salesforce Accelerators for Windows Phone 8 Apps - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Announcing the Salesforce Accelerators for Windows Phone 8 Apps - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="The accelerators for Windows Phone 8 make it easier to build new Windows Phone 8 apps using the Salesforce Toolkits for .NET"/>
+<meta property="og:url" content="https://www.wadewegner.com/2014/04/announcing-the-salesforce-accelerators-for-windows-phone-8-apps/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2014/04/announcing-the-salesforce-accelerators-for-windows-phone-8-apps/">Announcing the Salesforce Accelerators for Windows Phone 8 Apps</a>
+    </h2>
+    <div class="post-data">
+        Apr 24, 2014 |
+        5 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>I am pleased to announce the <strong>Salesforce Accelerators for Windows Phone 8 Apps</strong>, a set of assets designed to make it easier to create new applications using the Salesforce Toolkits for .NET:</p>
+<ul>
+<li><a href="https://www.nuget.org/packages/DeveloperForce.Windows8.Login/">DeveloperForce.WindowsPhone8.Login</a></li>
+<li><a href="https://www.nuget.org/packages/DeveloperForce.WindowsPhone8.Samples.Accounts/">DeveloperForce.WindowsPhone8.Samples.Accounts</a></li>
+</ul>
+<p>The <a href="http://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-net/">Salesforce Toolkits for .NET</a>, released earlier this year, allow you to interact with the Force.com and Chatter REST APIs using native .NET code on multiple platforms and devices. Many developers and companies have already benefited from these libraries and have built new ASP.NET web applications, Windows Phone 8 apps, and even Windows 8 store apps.</p>
+<p>Nevertheless, one of the requests I kept receiving was to create additional tools and samples that make it easier to get started; little <em>nuggets</em> of code that <em>accelerate</em> the process. These accelerators are the answer to those requests and deliver functionality through small, composable NuGet packages.</p>
+<p>This short video shows how quick and easy it is to build a Windows Phone 8 app that connects to Salesforce.</p>
+<iframe width="640" height="360" src="//www.youtube.com/embed/i-vYcyZL9Yo" frameborder="0" allowfullscreen></iframe>
+<p>Let&rsquo;s dig a little deeper and look at exactly what is happening.</p>
+
+<h3 id="using-the-developerforcewindowsphone8login-nuget" class="anchor-link"><a href="#using-the-developerforcewindowsphone8login-nuget">Using the DeveloperForce.WindowsPhone8.Login NuGet</a></h3>
+<p>Using the <a href="https://www.nuget.org/packages/DeveloperForce.WindowsPhone8.Login/">DeveloperForce.WindowsPhone8.Login</a> NuGet is pretty straightforward and only involves a few steps.</p>
+<ol>
+<li>
+<p>Setup a <strong>Connected App</strong> in Salesforce (<a href="https://help.salesforce.com/HTViewHelpDoc?id=connected_app_create.htm&amp;language=en_US">instructions here</a>). Be sure to <strong>Enable OAuth Settings</strong>, at least choose <strong>Full access (full)</strong> and set the <strong>Callback URL</strong> to <span class="inline-code">sfdc://success</span>.</p>
+</li>
+<li>
+<p>Install the NuGet Package via the command line &hellip;</p>
+<pre><code> Install-Package DeveloperForce.WindowsPhone8.Login
+</code></pre>
+<p>&hellip; or using <strong>Manage NuGet Packages</strong> in Visual Studio. When you install this NuGet package you also get the <strong>DeveloperForce.Force</strong> and <strong>DeveloperForce.Common</strong> NuGet packages, which are defined as dependencies.</p>
+</li>
+<li>
+<p>Set <strong>LoginPage.xaml</strong> (installed with the NuGet) as the default page by changing <strong>Navigation Page</strong> in <strong>WMAppManifest.xml</strong> to <span class="inline-code">Pages\LoginPage.xaml</span></p>
+</li>
+<li>
+<p>Open <strong>Pages\LoginPage.xaml.cs</strong> and change the <span class="inline-code">ConsumerKey</span> value to the one specified by your <strong>Connected App</strong>.</p>
+</li>
+<li>
+<p>Run the application.</p>
+</li>
+</ol>
+<p>As you can see, using the NuGet is quite simple and takes away the guess work and trouble of setting up the user login experience. Nevertheless, it&rsquo;s worth noting a few things about how it all works.</p>
+<ul>
+<li>
+<p><strong>App_SFDC.xaml.cs</strong> is a partial class that extends the functionality of <span class="inline-code">App</span> by defining three public properties: <span class="inline-code">AccessToken</span>, <span class="inline-code">RefreshToken</span>, and <span class="inline-code">InstanceUrl</span>. These values are returned to us and set after the user logs in. Having these as public properties gives us the ability to share these around the app so that we can use them when making subsequent REST API calls.</p>
+  <script src="https://gist.github.com/wadewegner/11270012.js?file=properties.cs"></script>
+</li>
+<li>
+<p>The <strong>LoginPage.xaml</strong> has a <span class="inline-code">WebBrowser</span> control. The user will log into Salesforce from within this control.</p>
+  <script src="https://gist.github.com/wadewegner/11270012.js?file=WebBrowser"></script>
+</li>
+<li>
+<p>There is a set of constants defined at the top of the <strong>LoginPage.xaml.cs</strong>: <span class="inline-code">AuthorizationEndpointUrl</span>, <span class="inline-code">ConsumerKey</span>, <span class="inline-code">CallbackUrl</span>, and <span class="inline-code">ApiVersion</span>. The only value you must change is <span class="inline-code">ConsumerKey</span> as by default it is set to nonsense.</p>
+</li>
+<li>
+<p>The <span class="inline-code">LoginPage</span> constructor enables scripts on the <span class="inline-code">WebBrowser</span> control. This is required for the login process to work.</p>
+</li>
+<li>
+<p>The <span class="inline-code">OnNavigatedTo</span> event fires when the user is navigated to the login page. It constructs a URL to the Salesforce login page (using a helper from the <strong>DeveloperForce.Common</strong> NuGet) and then navigates the <span class="inline-code">WebBrowser</span> control to the page. This is where the user logs in and authorizes the application.</p>
+  <script src="https://gist.github.com/wadewegner/11270012.js?file=OnNavigatedTo.cs"></script>
+</li>
+<li>
+<p>After the user logs in the <span class="inline-code">WebBrowser_Navigating</span> method is fired. If the return URI has the &ldquo;sfdc://success&rdquo; callback URI then we know that the login has been successful. The returned querystring contains the <span class="inline-code">AccessToken</span>, <span class="inline-code">RefreshToken</span>, and <span class="inline-code">InstanceUrl</span>; these values are grabbed and stored as global variables.</p>
+  <script src="https://gist.github.com/wadewegner/11270012.js?file=WebBrowser_Navigating.cs"></script>
+</li>
+<li>
+<p>Lastly, the user is redirected back to the <strong>MainPage.xaml</strong> after a successful login. (Which you can see on line 18 in the code snippet above.)</p>
+</li>
+</ul>
+<p>That&rsquo;s all it takes. After you login you&rsquo;ll be back on a blank <strong>MainPage.xaml</strong> but you&rsquo;ll have your <span class="inline-code">AccessToken</span> available to use when calling the Salesforce1 Platform REST APIs, which is a great transition to the <strong>DeveloperForce.WindowsPhone8.Samples.Accounts</strong> NuGet package accelerator.</p>
+
+<h3 id="using-the-developerforcewindowsphone8samplesaccounts-nuget" class="anchor-link"><a href="#using-the-developerforcewindowsphone8samplesaccounts-nuget">Using the DeveloperForce.WindowsPhone8.Samples.Accounts NuGet</a></h3>
+<p>An access token is worthless if you don&rsquo;t do anything with it.</p>
+<p>Using the <a href="https://www.nuget.org/packages/DeveloperForce.WindowsPhone8.Samples.Accounts/">DeveloperForce.WindowsPhone8.Samples.Accounts</a> NuGet makes it easy to create a page where you can query and view your account information. It is designed to demonstrate how to use the access token and instance url retrieved during the login process.</p>
+<p>To use this NuGet, just follow these quick steps:</p>
+<ol>
+<li>
+<p>Install the NuGet Package via the command line &hellip;</p>
+<pre><code> Install-Package DeveloperForce.WindowsPhone8.Samples.Accounts
+</code></pre>
+<p>&hellip; or using <strong>Manage NuGet Packages</strong> in Visual Studio.</p>
+</li>
+<li>
+<p>Instead of navigating the user to the <strong>MainPage.xaml</strong> after logging in, navigate them to <strong>Pages\AccountsPage.xaml</strong>. In the <span class="inline-code">WebBrowser_Navigating</span> event on <strong>LoginPage.xaml.cs</strong> change URI as follows:</p>
+ <script src="https://gist.github.com/wadewegner/11270012.js?file=accountspage.cs"></script>
+</li>
+</ol>
+<p>That&rsquo;s it! Now run it and see it in action.</p>
+<p>As with the previous accelerator, it will help if you know a few things about how this works. Here&rsquo;s the code that makes it function.</p>
+<script src="https://gist.github.com/wadewegner/11270012.js?file=PhoneApplicationPage_Loaded.cs"></script>
+<ul>
+<li>
+<p>You can see that we first ensure we have the <span class="inline-code">InstanceUrl</span> and <span class="inline-code">AccessToken</span> variables available.</p>
+</li>
+<li>
+<p>Next we create an instance of the <span class="inline-code">ForceClient</span>.</p>
+</li>
+<li>
+<p>We perform an asynchronous query using a simple SOQL select statement.</p>
+</li>
+<li>
+<p>Lastly, we take the records and bind them to an accounts list on the page.</p>
+</li>
+</ul>
+<p>It&rsquo;s as simple as that!</p>
+<p>It is my hope that these accelerators help get you over the initial hurdles that exist when building new applications that integrate with Salesforce. As always, if you have additional ideas (or find bugs!) you can open a <a href="https://github.com/developerforce/Force.com-Toolkit-for-NET/issues">new issue on Github</a> or (if you&rsquo;re so inclinded) take a tab at it yourself and <a href="http://help.github.com/send-pull-requests/">send me a pull request</a>.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Using Salesforce D X With Trailhead - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Using Salesforce DX with Trailhead - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="You should use Salesforce DX with Trailhead. Not only does it reinforce best practices for development, it will help you to really understand what it is you&#39;re doing. In this article, we&#39;ll look at the development workflow and what you need to do to be successful."/>
+<meta property="og:url" content="https://www.wadewegner.com/2018/01/using-salesforce-dx-with-trailhead/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2018/01/using-salesforce-dx-with-trailhead/">Using Salesforce DX with Trailhead</a>
+    </h2>
+    <div class="post-data">
+        Jan 2, 2018 |
+        10 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p><img src="https://user-images.githubusercontent.com/746259/34568070-75637fae-f119-11e7-8551-9b036a9d7fd2.png" alt="image"></p>
+<p>As you&rsquo;ve likely seen on Twitter, I&rsquo;ve really gotten into <a href="trailhead.com">Trailhead</a> these past few months. In particular, the Superbadges. I not only enjoy the challenge of working through the project, but regularly discover I don&rsquo;t know nearly as much as I think I do. There&rsquo;s a ton of useful and practical information in Trailead just waiting for us all to discover.</p>
+<p>Of course, I have other motivations for doing Trailhead. I find it&rsquo;s an amazing way to validate various workflows with <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm">Salesforce DX</a>. I&rsquo;ve logged at least a dozen bugs or feature requests based on trying to get something in Trailhead to work with various things, such as the Salesforce CLI, Scratch Orgs, source synch, or continuous integration.</p>
+<p>Numerous people have asked me to share my workflow and tips for getting started. So, please pardon the more tutorial-style post as I write this all out. Also, before you get started, be sure to review the <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm">Salesforce DX Setup Guide</a> to ensure you have everything all set!</p>
+<p>You&rsquo;ll find the following in this post:</p>
+<ul>
+<li>Logging into your Trailhead playground org in the CLI</li>
+<li>Creating a project &amp; scratch org</li>
+<li>Completing the challenge and pulling your source</li>
+<li>Deploying source to your TPO to verify</li>
+<li>Installing required packages</li>
+<li>Exporting and importing data</li>
+<li>Executing anonymous Apex</li>
+<li>Opening up a Lightning App</li>
+</ul>
+<p>I thought it&rsquo;d be good to use the <a href="https://trailhead.salesforce.com/projects/quickstart-devzone-app">Quick Start: Build Your First App</a> project as the example for this tutorial.</p>
+
+<h3 id="step-1-log-into-your-tpo-using-the-cli" class="anchor-link"><a href="#step-1-log-into-your-tpo-using-the-cli">Step 1: Log into your TPO using the CLI</a></h3>
+<p>The first thing you&rsquo;ll want to do is log into your trailhead playground org (TPO) using the <a href="https://developer.salesforce.com/tools/sfdxcli">Salesforce CLI</a>. Doing this will allow you to target your TPO and deploy your metadata to pass challenges.</p>
+<ol>
+<li>
+<p>Reset your TPO password. You&rsquo;ll find all the information in the <a href="https://trailhead.salesforce.com/modules/trailhead_playground_management/units/get-your-trailhead-playground-username-and-password">Get Your Trailhead Playground Usernamd and Password</a> module. You have to do this because Trailhead created the TPO for you and you they set the password.</p>
+</li>
+<li>
+<p>Log into your TPO using your username &amp; password: <code>sfdx force:auth:web:login -a tpo</code>. Notice we&rsquo;ve aliased it <code>tpo</code> so that it&rsquo;s easier to target in the future. Once done, you can test this by opening up your TPO with <code>sfdx force:org:open -u tpo</code> and it&rsquo;ll pop right up. Note: you&rsquo;ll likely end up having more than one TPO, so a good practice would be to give it an alias that&rsquo;s specific to your task.</p>
+</li>
+</ol>
+<p>Okay, that completes the initial setup. Now it&rsquo;s time to dig in.</p>
+
+<h3 id="step-2-create-a-project--scratch-org" class="anchor-link"><a href="#step-2-create-a-project--scratch-org">Step 2: Create a project &amp; scratch org</a></h3>
+<p>I like to create a new project for each trail/project/superbadge. This lets me keep all the required source in a place where it&rsquo;s easy to re-use and also allows me to easily push to a version control system (VCS). (You&rsquo;re using VCS, right?)</p>
+<ol>
+<li>
+<p>Create a project. For this quick start, I&rsquo;d do: <code>sfdx force:project:create -n trailblazerapp</code>. This will create a new directory with all the requisite files for using Salesforce DX.</p>
+</li>
+<li>
+<p>Depending on the challenge, you may want/need to change the default scratch org configuration file. Take a look at <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_scratch_orgs_def_file.htm">the docs</a> to see if there&rsquo;s anything you want to do.</p>
+</li>
+<li>
+<p>Create your scratch org. This assumes you already have your Dev Hub setup and ready to go (if not, <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_enable_devhub.htm">look here</a>). I do something like <code>sfdx force:org:create -s -f config/project-scratch-def.json</code>. This not only creates the scratch org, but <code>-s</code> makes it the default for the project, meaning all other commands I invoke will default to this scratch org.</p>
+</li>
+</ol>
+
+<h3 id="step-3-complete-the-challenge-in-the-scratch-org-and-pull-the-source" class="anchor-link"><a href="#step-3-complete-the-challenge-in-the-scratch-org-and-pull-the-source">Step 3: Complete the challenge in the scratch org and pull the source</a></h3>
+<p>You&rsquo;ll see that the <a href="https://trailhead.salesforce.com/projects/quickstart-devzone-app/steps/devzone-app-1">Create the Trailblazer App</a> module has you complete a number of steps. You&rsquo;ll want to do all of this in the scratch org, not your TPO. Then, when you&rsquo;ve completed the steps, you can pull it all out of the scratch org so that you have a local copy of all your changes.</p>
+<p>This is the eye-opening moment for most people when they start using Salesforce DX. It&rsquo;s really simple to make changes in your scratch org then externalize them out of the org.</p>
+<ol>
+<li>
+<p>Open your scratch org: <code>sfdx force:org:open</code></p>
+</li>
+<li>
+<p>Complete all the steps required for the challenge.</p>
+</li>
+<li>
+<p>Pull the changes: <code>sfdx force:source:pull</code></p>
+</li>
+</ol>
+<p>Now you&rsquo;ll see you&rsquo;ll see your source in the <code>force-app/main/default</code> folder:</p>
+<p><img src="https://user-images.githubusercontent.com/746259/34566625-fc9a041c-f113-11e7-868f-f06ed147bdbd.png" alt="image"></p>
+<p>If you haven&rsquo;t done so before, poke around and take a look. This is what metadata looks like!</p>
+
+<h3 id="step-4-deploy-to-your-tpo-and-verify" class="anchor-link"><a href="#step-4-deploy-to-your-tpo-and-verify">Step 4: Deploy to your TPO and verify</a></h3>
+<p>At this point, you&rsquo;re ready to verify you completed the challenge. But the metadata isn&rsquo;t yet in your TPO. No problem, all the MDAPI commands are available in the CLI. And, since we already logged into your TPO, it&rsquo;s really simple to deploy it.</p>
+<ol>
+<li>
+<p>Convert your source into the MDAPI format. Simple: <code>sfdx force:source:convert -d mdapiout</code>. This will create a new folder called <code>mdapiout</code>. If you look in it, it will look similar to your source, but there are subtle differences. You can learn about <a href="https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_source_file_format.htm">source file format</a>, and it&rsquo;s benefits, in the docs.</p>
+</li>
+<li>
+<p>Now, deploy the metadata into your TPO with <code>sfdx force:mdapi:deploy -d mdapiout --wait 100 -u tpo</code>. Notice we&rsquo;ve targeted the <code>mdapiout</code> folder, we&rsquo;re using <code>--wait</code> so that it&rsquo;s synchronous and with <code>-u</code> we&rsquo;ve targeted our TPO.</p>
+<p>You&rsquo;ll see something like:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:mdapi:deploy -d mdapiout --wait <span style="color:#40a070">100</span> -u tpo
+<span style="color:#40a070">9185</span> bytes written to /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip using 44.179ms
+Deploying /var/folders/9t/rvzqw72n7jj03c4pccmq3vrj7b3gyz/T/mdapiout.zip...
+
+<span style="color:#666">===</span> Status
+Status:  Pending
+jobid:  0Af4100001aS6FLCA0
+Component errors:  <span style="color:#40a070">0</span>
+Components deployed:  <span style="color:#40a070">0</span>
+Components total:  <span style="color:#40a070">0</span>
+Tests errors:  <span style="color:#40a070">0</span>
+Tests completed:  <span style="color:#40a070">0</span>
+Tests total:  <span style="color:#40a070">0</span>
+Check only: <span style="color:#007020">false</span>
+
+Deployment finished in <span style="color:#bb60d5">9000ms</span>
+
+<span style="color:#666">===</span> Result
+Status:  Succeeded
+jobid:  0Af4100001aS6FLCA0
+Completed:  2018-01-04T14:02:11.000Z
+Component errors:  <span style="color:#40a070">0</span>
+Components deployed:  <span style="color:#40a070">11</span>
+Components total:  <span style="color:#40a070">11</span>
+Tests errors:  <span style="color:#40a070">0</span>
+Tests completed:  <span style="color:#40a070">0</span>
+Tests total:  <span style="color:#40a070">0</span>
+Check only: <span style="color:#007020">false</span>
+</code></pre></div><p>And that&rsquo;s it!</p>
+</li>
+<li>
+<p>Click the <code>Verify</code> button. If you completed everything successfully, you&rsquo;ll pass. If it fails, you have a few options:</p>
+<ul>
+<li>Update your source, test in scratch org, and re-deploy. In most cases, this will work.</li>
+<li>Maybe you defined the schema for a custom object wrong? You might need to manually (or automatically) delete it in the TPO before you re-deploy.</li>
+<li>When all else fails, create a new TPO. It&rsquo;s free and not too hard.</li>
+</ul>
+</li>
+</ol>
+<p>Two important notes:</p>
+
+<h4 id="profiles-are-messy-and-need-clean-up" class="anchor-link"><a href="#profiles-are-messy-and-need-clean-up">Profiles are messy and need clean-up</a></h4>
+<p>Let&rsquo;s face it, they are. It&rsquo;s better to use permission sets if you can. But, you&rsquo;ll notice that when you create schema or do just about anything else, it updates profiles. Did you notice them when you pulled them out of the scratch org?</p>
+<p>Often times, when you pull from the scratch org, you&rsquo;ll pull profiles that don&rsquo;t exist in your target org. This happens. When it does, simply remove the unwanted profiles from your source (not the MDAPI format) and convert it again into MDAPI format. A tip, shared by SFDX engineer <a href="https://twitter.com/gmurnock__c">George Murnock</a> and platform architect <a href="https://twitter.com/MShaneMc/status/948991161389273090">Shane McLaughlin</a>, is to include <code>**profiles</code> to your <code>.forceignore</code> file. This will force you to use permsets.</p>
+<p>Ideally, try to avoid profiles. Sadly, since they&rsquo;re so pervasive, Trailhead often assumes (and even checks) for the existence of the profile, so sometimes you can&rsquo;t avoid it.</p>
+
+<h4 id="script-this-step-to-make-it-easier" class="anchor-link"><a href="#script-this-step-to-make-it-easier">Script this step to make it easier</a></h4>
+<p>I&rsquo;ve created an alias that makes it really easy to deploy to my TPO.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#007020">alias</span> <span style="color:#bb60d5">mdd</span><span style="color:#666">=</span><span style="color:#4070a0">&#39;function _blah(){ sfdx force:source:convert -d mdapiout &amp;&amp; /
+</span><span style="color:#4070a0">  sfdx force:mdapi:deploy -d mdapiout --wait 100 -u $1 &amp;&amp; rm -rf mdapiout };_blah&#39;</span>
+</code></pre></div><p>With this alias, I can convert, deploy, and clean all with one command: <code>mdd tpo</code></p>
+<p>Definitely a lot easier!</p>
+
+<h3 id="additional-things-to-know" class="anchor-link"><a href="#additional-things-to-know">Additional things to know</a></h3>
+<p>Certain modules will require you to do additional things.</p>
+
+<h4 id="installing-required-packages" class="anchor-link"><a href="#installing-required-packages">Installing required packages</a></h4>
+<p>As pointed out by <a href="https://twitter.com/SNUGSFBay/status/948927117248491520">Bonny Hinners</a>, there are times when you need to install some dependencies (typically via an unmanaged package but possibly through a labs app too) into your TPO to complete a challenge. This can give you custom objects and other metadata you&rsquo;ll use within the challenge. You&rsquo;ll need to do the same thing with your scratch org.</p>
+<p>A good example is the <a href="https://trailhead.salesforce.com/en/super_badges/superbadge_apex">Apex Specialist Superbadge</a>. Notice that the pre-work includes an unmanaged package you need to install.</p>
+<p>No problem, we can install this unmanaged package in the scratch org. Then, any changes we make, even if these changes are made against metadata that comes from the package, will get pulled out.</p>
+<ol>
+<li>
+<p>Figure out the package ID. Usually this is pretty simple, if not transparent. Notice the URL for the unmanaged package: <code>https://login.salesforce.com/packaging/installPackage.apexp?p0=04t36000000i5UM</code>. An ID that starts with <code>04t</code> is a package. Copy this package ID.</p>
+</li>
+<li>
+<p>Create your scratch org the normal way we highlighted above.</p>
+</li>
+<li>
+<p>Install the package into your scratch org: <code>sfdx force:package:install -i 04t36000000i5UM --wait 100</code></p>
+</li>
+</ol>
+<p>That&rsquo;s it! Now all the required schema and dependencies are in your scratch org.</p>
+
+<h4 id="exporting-and-importing-data" class="anchor-link"><a href="#exporting-and-importing-data">Exporting and importing data</a></h4>
+<p>A few of the challenges will verify that you&rsquo;ve created data in the TPO. Now, of course you could open the TPO and manually enter the data it&rsquo;s looking for. But where&rsquo;s the fun in that? Instead, do it in your scratch org, export it, and then import it into your TPO.</p>
+<p>This is a great way to discover some of the useful data import/export commands in the CLI.</p>
+<ol>
+<li>
+<p>Open your scratch org and enter your data. Yes, you can do this through other tools, but let&rsquo;s face it: the app you&rsquo;ve built is likely the best interface for creating your data.</p>
+</li>
+<li>
+<p>Use the CLI to write a query that will grab the data you added: <code>sfdx force:data:soql:query -q &quot;SELECT Waypoint_Name__c FROM Waypoints__c&quot;</code>. Ensure you get the data you&rsquo;re expecting.</p>
+</li>
+<li>
+<p>Export to JSON files and store in your project (other developers on your team will appreciate you doing this; trust me): <code>sfdx force:data:tree:export -q &quot;SELECT Waypoint_Name__c FROM Waypoints__c&quot; -p -d data</code>. Notice it&rsquo;s the same query as before. Also, we&rsquo;re using a plan definition file and exporting it into the <code>data</code> folder.</p>
+</li>
+<li>
+<p>Now, import the data into your TPO: <code>sfdx force:data:tree:import -p data/Waypoint__c-plan.json -u tpo</code>. This will create the records in our TPO without you having to do it manually.</p>
+</li>
+</ol>
+<p>Pretty slick.</p>
+
+<h4 id="executing-anonymous-apex-code" class="anchor-link"><a href="#executing-anonymous-apex-code">Executing anonymous Apex code</a></h4>
+<p>There are some things that either don&rsquo;t fit into the model of source push/pull (e.g. connected apps) or will require you to take a different approach to updating in the org. So, get ready to bust out some anonymous Apex!</p>
+<p>Here&rsquo;s what I do:</p>
+<ol>
+<li>
+<p>I create a folder called <code>scripts</code>. This is where I&rsquo;ll create my Apex scripts.</p>
+</li>
+<li>
+<p>Create a file with an <code>.apex</code> extension in the <code>scripts</code> folder. Need to create a scheduled job? Call it <code>scheduledjob.apex</code>.</p>
+</li>
+<li>
+<p>Write your code. Example:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">System<span style="color:#666">.</span><span style="color:#4070a0">schedule</span><span style="color:#666">(</span><span style="">&#39;</span>WarehouseCallout<span style="color:#4070a0">&#39;,&#39;</span>0 0 13 <span style="color:#666">*</span> <span style="color:#666">*</span> <span style="color:#666">?</span><span style="">&#39;</span> <span style="color:#666">,</span> 
+    <span style="color:#007020;font-weight:bold">new</span> WarehouseSyncSchedule<span style="color:#666">())</span>
+</code></pre></div></li>
+<li>
+<p>Execute the script against your scratch org to test: <code>sfdx force:apex:execute -f scripts/scheduledjob.apex</code>. Note: sometimes to get this right, you&rsquo;ll want to create a new scratch org to try again. I&rsquo;ve gone through many iterations sometimes until I finally get it working the way I want.</p>
+</li>
+<li>
+<p>Execute the script against your TPO: <code>sfdx force:apex:execute -f scripts/servicetoken.apex -u tpo</code>.</p>
+</li>
+</ol>
+<p>Notice how easy that is? And, even better, it&rsquo;s completely repeatable!</p>
+
+<h4 id="opening-up-a-lightning-app" class="anchor-link"><a href="#opening-up-a-lightning-app">Opening up a Lightning App</a></h4>
+<p>In many of the modules you&rsquo;ll create a lightning app as a test harness called <code>harnessApp.app</code> (see <a href="https://trailhead.salesforce.com/modules/lex_dev_lc_basics/units/lex_dev_lc_basics_create">Create and Edit Lightning Components</a> for an example). This test harness is used to test the Lightning Components as you create them. Super helpful!</p>
+<p>Now, Trailhead assumes you&rsquo;re doing your development in the Developer Console. If you&rsquo;re using Salesforce DX, how do you easily open <code>harnessApp.app</code> to test your component? Well, the CLI let&rsquo;s you target a specific page:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:org:open -p c/harnessApp.app
+</code></pre></div><p>This will directly open your <code>harnessApp.app</code> in the browser, without even having to login. Pretty cool, right?</p>
+<p>Of course, if you want to test it in your TPO, just add your alias (e.g. <code>-u tpo</code>).</p>
+
+<h3 id="wrap-it-up" class="anchor-link"><a href="#wrap-it-up">Wrap it up</a></h3>
+<p>That&rsquo;s pretty much it! You can do this over and over again. The best part is, as I mentioned, you can setup version control and push all your source.</p>
+<p>In your project, it&rsquo;s as simple as the following:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git init
+$ git remote add origin git@github.com:wadewegner/th-trailblazerapp.git
+$ git add -A
+$ git commit -m <span style="color:#4070a0">&#34;It works&#34;</span>
+$ git push origin master
+</code></pre></div><p>And then you&rsquo;ll have a nice repo of your code to refer to in the future: <a href="https://github.com/wadewegner/th-trailblazerapp">https://github.com/wadewegner/th-trailblazerapp</a></p>
+<p>Hope this helps!</p>
+<p>P.S. Thanks to George Murnock for literally finding (and pointing out) hundreds of typos.</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

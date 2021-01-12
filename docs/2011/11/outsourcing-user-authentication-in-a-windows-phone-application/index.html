@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Outsourcing User Authentication in a Windows Phone Application - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Outsourcing User Authentication in a Windows Phone Application - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/11/outsourcing-user-authentication-in-a-windows-phone-application/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/11/outsourcing-user-authentication-in-a-windows-phone-application/">Outsourcing User Authentication in a Windows Phone Application</a>
+    </h2>
+    <div class="post-data">
+        Nov 17, 2011 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Yesterday I shared all the <a href="http://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/">NuGet packages we’re building</a> to make it easy to build Windows Phone and Windows Azure applications. Today I wanted to share how easy it is to build a Windows Phone application that leverages the <a href="http://www.microsoft.com/windowsazure/features/accesscontrol/">Windows Azure Access Control service</a>.</p>
+<p>The <strong>Phone.Identity.AccessControl.BasePage</strong> NuGet package includes a control for Window Phone that allows your phone applications to outsource user authentication to the Windows Azure Access Control service (ACS). This service enables your users to login by reusing their existing accounts from identity providers such as Windows Live ID, Google, Yahoo, Facebook, and even Active Directory. If you want to know more about ACS you can take a look at the dedicated hands-on labs in the <a href="http://msdn.microsoft.com/gg271268">Windows Azure Platform Training Course</a>.</p>
+<p>Using this NuGet package and the included control for ACS in your Windows Phone applications takes care of all the runtime interactions with ACS. Additionally, this package provides a base login page that uses the control and is easy to setup in your phone application. All that is left for you to do is to configure your ACS namespace via the management portal (i.e. specifying your preferences such as the identity providers you want to enable in your application) and integrate the login page into your existing Windows Phone application.</p>
+<p>For more information on setting up ACS take a look at the resources at <a href="http://acs.codeplex.com/">http://acs.codeplex.com/</a></p>
+<p>To help simplify the process below, I’m making the assumption you already have ACS setup and configured. I’ll be using the following values in the below sample (no guarantee that they’ll be available when you read this post but I’ll do my best):</p>
+<ul>
+<li>
+<p><strong>namespace</strong>: watwindowsphone</p>
+</li>
+<li>
+<p><strong>realm</strong>: uri:watwindowsphone</p>
+</li>
+</ul>
+<p>Without further ado, here are the steps to build a Windows Phone application that outsources authentication to ACS:</p>
+<ol>
+<li>
+<p>Create a new <strong>Windows Phone OS 7.1</strong> application.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/WindowsPhoneOS71.jpg" alt="WindowsPhoneOS71"></p>
+</li>
+<li>
+<p>From the <strong>Package Manager Console</strong> type the following to install the ACS base login page NuGet package for Windows Phone: Install-Package Phone.Identity.AccessControl.BasePage</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/InstallPackage.jpg" alt="InstallPackage"></p>
+</li>
+<li>
+<p>Update the <strong>AccessControlResources.xaml</strong> resources file to use your ACS namespace and the realm you have configured.</p>
+<pre><code> static ChannelFactory&lt;ICustomerChannel&gt; customersChannelFactory; 
+ static ICustomerChannel customersChannel;
+	
+ public static IEnumerable&lt;Customer&gt; GetCustomers() 
+ { 
+     List&lt;Customer&gt; customers = null;
+	
+     if (customersChannelFactory == null) 
+     { 
+         Uri serviceUri = ServiceBusEnvironment.CreateServiceUri(&quot;sb&quot;, &quot;MYSERVICENAMESPACE&quot;, &quot;Customer&quot;); 
+         customersChannelFactory = new ChannelFactory&lt;ICustomerChannel&gt;(&quot;RelayEndpoint&quot;, new EndpointAddress(serviceUri))
+	
+         int tries = 0; 
+         while (tries++ &lt; 3) 
+         { 
+             try 
+             { 
+                 if (customersChannel == null) 
+                 {
+                     customersChannel = customersChannelFactory.CreateChannel(); 
+                     customersChannel.Open(); 
+                 }
+	
+                 return customersChannel.GetCustomers(); 
+             } 
+             catch (CommunicationException) 
+             {
+                 customersChannel.Abort(); 
+                 customersChannel = null; 
+             } 
+         }
+	            
+         return customers; 
+     }
+ }
+</code></pre>
+</li>
+<li>
+<p>Update the <strong>WMAppManifest.xml</strong> file so that the default page is the <strong>LoginPage.xaml</strong>. This way the user will come to the login page before the <strong>MainPage.xaml</strong>.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/WMAManifiest.jpg" alt="WMAManifiest"></p>
+</li>
+<li>
+<p>Update the <strong>LoginPage.xaml.cs</strong> so that the user is navigated to the **MainPage.xaml **upon successfully logging into the application. Make sure to update **Line 23 **and <strong>Line 33</strong>.</p>
+<pre><code> this.NavigationService.Navigate(new Uri(&quot;/MainPage.xaml&quot;, UriKind.Relative));
+</code></pre>
+</li>
+<li>
+<p>Let’s display some information from the Simple Web Token. Add a <strong>TextBlock</strong> control to the **MainPage.xaml **page.</p>
+<pre><code> &lt;Grid x:Name=&quot;ContentPanel&quot; Grid.Row=&quot;1&quot; Margin=&quot;12,0,12,0&quot;&gt; &lt;TextBlock Name=&quot;DisplayLoginInfo&quot; /&gt; &lt;/Grid&gt;
+</code></pre>
+</li>
+<li>
+<p>Add a Loaded event for the <strong>MainPage.xaml</strong>. In this event you’ll want to load the <strong>simpleWebTokenStore</strong> out of the application resources. You can then use it to grab resources like the name identifier or various other claim types (like Name). Finish by updating the <strong>DisplayLoginInfo</strong>textblock.</p>
+<pre><code> using Microsoft.WindowsAzure.Samples.Phone.Identity.AccessControl;
+
+ ...
+
+ var simpleWebTokenStore = Application.Current.Resources[&quot;swtStore&quot;] as SimpleWebTokenStore;
+ var userNameIdentifier = simpleWebTokenStore.SimpleWebToken.NameIdentifier;
+ var name = simpleWebTokenStore.SimpleWebToken.Claims[ClaimTypes.Name];
+	
+ this.DisplayLoginInfo.Text = &quot;Identifier: &quot; + userNameIdentifier + Environment.NewLine + &quot;Name: &quot; + name;
+</code></pre>
+</li>
+<li>
+<p>Run the application. I’d recommend using Facebook, Google, or Yahoo! for the identity providers, as Live ID does not provide the name claim type in the SWT token.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/LoginExperience.jpg" alt="LoginExperience"></p>
+</li>
+</ol>
+<p>And that’s it! You can now take advantage of the Identifier claim (and others) in your phone application for many things – tracking users, displaying additional user information, and so forth. Additionally, you can use these claims to authenticate against additional services running in Windows Azure – I’ll cover this token in a future post.</p>
+<p>The **Phone.Identity.AccessControl.BasePage **NuGet package makes it really easy for you to take advantage of the Windows Azure Access Control service within your applications. ACS provides a great way for you to leverage your users existing identity providers when using your application.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

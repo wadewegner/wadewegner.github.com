@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Running a P H P Application on Windows Azure - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Running a PHP application on Windows Azure - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2009/03/running-a-php-application-on-windows-azure/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2009/03/running-a-php-application-on-windows-azure/">Running a PHP application on Windows Azure</a>
+    </h2>
+    <div class="post-data">
+        Mar 23, 2009 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>I recently returned from <a href="http://live.visitmix.com/">MIX09</a> – what a fantastic event! So many great things were announced; so many that there’s no way I can list them all here. Please visit <a href="http://live.visitmix.com/">http://live.visitmix.com/</a> for access to the keynote videos and all the breakout sessions. I would also recommend reading the <a href="http://archive.visitmix.com/blogs/News/MIX08-Day-1-Keynote-Recap/">day one recap</a> and the <a href="http://www.visitmix.com/Opinions/MIX09-Keynote-and-Partner-Highlights">day two recap</a>.</p>
+<p>One of the major announcements was new capabilities for the Windows Azure CTP. This includes the support for FastCGI, Full Trust, and Geo-location. Please take a look at the <a href="http://blogs.msdn.com/windowsazure/archive/2009/03/18/windows-azure-delivers-new-ctp-capabilities.aspx">Windows Azure team’s blog for all the announcements</a>.</p>
+<p>In this post, I want to walk you through the step you need to take to run a PHP application on Windows Azure. As you’ll see, it’s quite simple and straightforward – after a few configuration updates and additional steps, you can run nearly any PHP application. This walkthrough assumes that you have installed the latest bits for Windows Azure. If you are just getting started with Azure, please visit <a href="http://www.azure.com/">http://www.azure.com/</a> – this is the primary landing page for the Azure Services Platform. If you want to get the updated bits that allows for Full Trust and FastCGI, you can grab the bits at the <a href="http://www.microsoft.com/downloads/details.aspx?familyid=59E8FC0C-C399-4AB7-8A93-882D8E74B67A&amp;displaylang=en">Windows Azure Tools for Microsoft Visual Studio March 2009 CTP page</a>.</p>
+<ol>
+<li>
+<p>Create a new project. Select <strong>File</strong> –&gt; <strong>New</strong> –&gt; <strong>Project</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Cloud Service</strong> project type and select the <strong>Blank Cloud Service</strong> template. Specify the name/location, and click <strong>OK</strong>.</p>
+</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_4.png" alt="New Windows Azure project"></p>
+<ol start="3">
+<li>Add a **Cgi Web Role **project. Right-click the project (e.g. CloudService1) and select <strong>New Web Role Project</strong>.</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_6.png" alt="Add a web role project"></p>
+<ol start="4">
+<li>Specify the <strong>Name</strong> and click <strong>OK</strong>.</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_8.png" alt="Add a CGI web role"></p>
+<ol start="5">
+<li>By default the <strong>Web.roleconfig</strong> file is opened in the new project. Remove the comments and update the **application fullPath **to &ldquo;%RoleRoot%phpphp-cgi.exe&rdquo;.</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_10.png" alt="image"></p>
+<ol start="6">
+<li>
+<p>Now we need to actually grab the PHP executable that will bet invoked. Browse to <a href="http://www.php.net/downloads.php">http://www.php.net/downloads.php</a> and grab the non-thread-safe Windows binary (at the time of writing, it is “PHP 5.2.9-1 Non-thread-safe zip package”).</p>
+</li>
+<li>
+<p>You might as well configure PHP to run on your Windows environment. Rather than specifying all these steps, please see <a href="http://simonguest.com/blogs/smguest/archive/2009/03/09/Using-Windows-7-to-host-PHP-applications-in-5-easy-steps_2100_.aspx">Simon Guest’s post on hosting PHP applications in 5 easy steps</a>. Follow the steps in his post, and at the end you should be able to confirm that PHP works in IIS 7.</p>
+</li>
+<li>
+<p>Copy all the files in the PHP folder you downloaded into your Cgi Web Role project. XCopy works really well. For example, open a command prompt in the root of your Cgi Web Role project and type:
+<strong>xcopy /s php php</strong>
+When asked, specify “D for directory”. This will copy everything from c:php into a folder called php in your Cgi Web Role project. Note that this is where we pointed Windows Azure to in step 5.</p>
+</li>
+<li>
+<p>Select your Cgi Web Role project, show all files, and add the new php folder into your project. This way it will get packaged up with the rest of your application and deployed to Windows Azure.</p>
+</li>
+<li>
+<p>Open up the <strong>Web.config</strong> file and specify a new default document. This will tell Windows Azure to open up our PHP page by default. Under the &lt;system.webServer&gt; element, add a <defaultDocument>:</p>
+</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_12.png" alt="defaultDocument"></p>
+<ol start="11">
+<li>Additionally, we need to setup a handler in the Web.config file. Add the following code to the <handlers> element in the web.Config:</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_22.png" alt="FastCGI"></p>
+<ol start="12">
+<li>In order for this to function, we have to enable native code execution in Windows Azure. To do so, open the <strong>ServiceDefinition.csdef</strong> file and set the <strong>enableNativeCodeExecutiion</strong> flag to true:</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_14.png" alt="enableNativeCodeExecution"></p>
+<ol start="13">
+<li>Now, let’s create a new PHP file. Right-click on your Cgi Web Role and add a new item. Select the Text File template and change the name to index.php. Click <strong>Add</strong>.</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_16.png" alt="index.php"></p>
+<ol start="14">
+<li>To test, create some PHP code. A quick, but effective, test is to simply echo “Hello World”. In the index.php file, write the following code:</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_18.png" alt="hello world"></p>
+<ol start="15">
+<li>Press F5, and your browser should open and show you the following page:</li>
+</ol>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/RunningaPHPapplicationonWindowsAzure_E6D6/image_20.png" alt="Hello World!"></p>
+<p>And that’s all it takes!</p>
+<p>While this is a simple demonstration, I hope it impresses upon you the impact that allowing native code execution has in Windows Azure. With native code execution, and fast CGI support, you can now leverage all the rich content created in the PHP community on Windows Azure. The story even gets better with the new relational capabilities of SQL Data Services, but I’ll save that for another post.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

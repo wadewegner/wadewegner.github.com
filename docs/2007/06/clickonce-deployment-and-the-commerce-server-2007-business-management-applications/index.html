@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Click Once Deployment and the Commerce Server 2007 Business Management Applications - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="ClickOnce Deployment and the Commerce Server 2007 Business Management Applications - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2007/06/clickonce-deployment-and-the-commerce-server-2007-business-management-applications/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2007/06/clickonce-deployment-and-the-commerce-server-2007-business-management-applications/">ClickOnce Deployment and the Commerce Server 2007 Business Management Applications</a>
+    </h2>
+    <div class="post-data">
+        Jun 20, 2007 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>As a Commerce Server developer, you are bound to come across a situation where the smart client business user applications (e.g. the Catalog Manager, Catalog and Inventory Schema Manager, Customer and Orders Manager, and Marketing Manager) do not satisfy a business requirement, need to reflect a company&rsquo;s brand or style, or your business users simply want it changed.</p>
+<p>Fortunately, you can get the full C# source code for the business user applications (except for the Catalog and Inventory Schema Manager; see <a href="http://blogs.msdn.com/maxakbar/">Max&rsquo;s</a> comment in <a href="http://forums.microsoft.com/MSDN/ShowPost.aspx?PostID=1141608&amp;SiteID=1">this thread</a>) through the <a href="http://www.microsoft.com/commerceserver/partners/sdk/default.mspx">Commerce Server 2007 Partner SDK</a>. This gives you the ability to modify the business user applications and be a hero to all your colleagues and clients (chuckle!).</p>
+<p>Yeah, yeah, this is all old news. However, I just came across a great idea from <a href="http://www.publicvoid.dk/default.aspx">Søren Spelling Lund</a> in which he talks about his experiences using ClickOnce Deployment along with the business user applications.</p>
+
+<h3 id="what-is-clickonce-deployment" class="anchor-link"><a href="#what-is-clickonce-deployment">What is ClickOnce Deployment?</a></h3>
+<p><a href="http://msdn2.microsoft.com/en-us/library/t71a733d(VS.80).aspx">ClickOnce deployment</a> is a technology designed to ease the difficulty in creating self-updating Windows-based applications. Using the Publish Wizard in Visual Studio 2005 (or mage.exe, mageui.exe, or MSBuild), you can publish your application in three different ways: to media (such as a CD-ROM), to a network file share, or to a Web page.</p>
+<p>When an application is published, two files are created: an application manifest, and a deployment manifest. The application manifest describes the contents of the application, including the assemblies, dependencies, and the files that make up the application. The deployment manifest describes how the application is deployed, the location of the application manifest, and the version of the application that should be run by the clients.</p>
+<p>Here&rsquo;s an example of an application published to a Web page (this particular example is from the SpaceWar SDK for the XNA framework - yes, I truly aspire to be an <a href="http://msdn2.microsoft.com/en-us/xna/default.aspx">XBOX 360 game developer</a>):</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/content/binary/WindowsLiveWriter/ClickOnceDeploymentoftheCommerceServer20_DCB4/ClickOnce_thumb.gif" alt="Example of application published to a Web page via ClickOnce"></p>
+<p>(Note the deployment version number.)</p>
+<p>Once the end-user installs the application from the deployment location, the application is, by default, added to the Start menu and the Add/Remove programs group in the Control Panel. <strong>Nothing is added to the Program Files folder, the registry, or the desktop.</strong> When I first played around with ClickOnce this last part caught me unaware &ndash; I couldn&rsquo;t figure out where my application had been installed! Also, no administrative rights are required to install the application.</p>
+<p>Now, remember the deployment version number? The best part about this technology is that, if a developer publishes a new version of the application, the deployment version number is incremented. Consequently, the next time the end-user runs the application they are <strong>presented with an opportunity to update their application</strong>. What&rsquo;s neat is that, as a developer, you actually have a lot of control: you can require an update, and you can even require that a user rolls back to an earlier version of the application (not that any of us would ever have to roll back to an earlier version &hellip;).</p>
+<p>All-in-all, it&rsquo;s neat stuff. And, while it&rsquo;s not a perfect solution and <a href="http://www.google.com/search?hl=en&amp;rlz=1T4GGIG_enUS227US227&amp;q=clickonce+problems">has it&rsquo;s own problems</a>, you can very rapidly integrate it into your application and quickly reap the rewards. Oh, and you can easily become a hero to your colleagues and clients (are you starting to sense a pattern?).</p>
+
+<h3 id="integrate-clickonce-deployment-into-the-partner-sdk" class="anchor-link"><a href="#integrate-clickonce-deployment-into-the-partner-sdk">Integrate ClickOnce Deployment into the Partner SDK?</a></h3>
+<p>So, we&rsquo;re back to the smart client business user applications. I&rsquo;m sure you&rsquo;re now asking yourself, what does this have to do with the Commerce Server 2007 business user applications (or maybe not, since I alluded to it above)?</p>
+<p><a href="http://www.publicvoid.dk/default.aspx">Søren Spelling Lund</a> posted an article about integrating ClickOnce Deployment into the business user applications. It&rsquo;s a great idea, and one I will definitely use in the future. Additionally, he takes the time to point out a problem him and his colleagues ran into when they tried to run the ClickOnce installer on the Customer and Orders Manager. Essentially, it appears that the project file included a <TargetZone> element that interfered with the ClickOnce installer. Removing the <TargetZone> element resolved the problem. Check out <a href="http://www.publicvoid.dk/ClickOnceDeploymentOfCommerceServer2007BusinessTools.aspx">his blog article</a> for the full details.</p>
+<p>What are the benefits of integrating ClickOnce Deployment into the Partner SDK?</p>
+<ul>
+<li>Ease - Easily deployment of business user applications to end-users</li>
+<li>Versioning - Make sure your end-users are running the latest and greatest</li>
+<li>Safety - The ability to roll back to a previous version of the application (just in case!)</li>
+<li>Security - The applications run in a security context that prevents users from doing malicious things</li>
+<li>Fame - Yes, you too can be a hero &hellip;</li>
+</ul>
+<p>Thanks to Søren for a great idea and a great post!</p>
+<p>What great ideas have you put into play? Please let me know!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>
