@@ -1,4 +1,4 @@
-{{- if .Site.DisqusShortname }}
+{{- if and (.Site.DisqusShortname) (not .Params.noComment) }}
     <div class="container disqus">
         {{ template "_internal/disqus.html" . }}
     </div>
