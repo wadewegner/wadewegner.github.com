@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Running the Windows Azure Tools &amp;Amp; S D K on the Windows Developer Preview - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Running the Windows Azure Tools &amp; SDK on the Windows Developer Preview - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/09/running-the-windows-azure-tools-amp-sdk-on-the-windows-developer-preview/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/09/running-the-windows-azure-tools-amp-sdk-on-the-windows-developer-preview/">Running the Windows Azure Tools &amp; SDK on the Windows Developer Preview</a>
+    </h2>
+    <div class="post-data">
+        Sep 19, 2011 |
+        3 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Now that we can get our hands on the Windows Developer Preview of Windows 8, I’m sure everyone is excited to start building applications! For many of us, this means that we’ll want to install all of the great Windows Azure tools on our Windows Developer Preview machine – especially if we plan to take advantage of the new <a href="http://watwindows8.codeplex.com/">Windows Azure Toolkit for Windows 8</a>. However, there are a few things we’ll need to do in order to get things to work.</p>
+<p>Quickly let me explain the three challenges you’ll run into:</p>
+<ol>
+<li>
+<p>The current Windows Azure Tools for Visual Studio do not yet support Dev11 – you’ll have to install Visual Studio 2010.</p>
+</li>
+<li>
+<p>There are a few quirks getting dependencies for IIS installed on Windows 8 using the Web Platform Installer.</p>
+</li>
+<li>
+<p>After Visual Studio 2010 and the Windows Azure Tools for Visual Studio are installed on a machine with Dev11, the Windows Azure tools will grab an environmental path variable that points to 11.0 instead of 10.0.</p>
+</li>
+</ol>
+<p>Fortunately, these things are pretty easy to resolve and will certainly get addressed in later builds.</p>
+<p>Here’s what you’ll have to do to get the tools and SDK working with the Windows Developer Preview:</p>
+<ol>
+<li>
+<p>Install <strong>Microsoft .NET Framework 3.5.1</strong>. Easiest way is to type “Windows Features”, select <strong>Settings</strong>, and select <strong>Turn Windows features on or off</strong>. Then simply check the checkbox. Click <strong>OK</strong> to install.      <br>
+<img src="https://wadewegner.blob.core.windows.net/wordpress/2011/09/Step-1-.NET-3.5.1.png" alt="Step 1 - .NET 3.5.1"></p>
+</li>
+<li>
+<p>Next we need to correctly configure IIS. Typically we’d do this through the Web Platform Installer, but this doesn’t work correctly on Windows 8. From <strong>Turn Windows features on or off</strong> you’ll need to do the following, then click <strong>OK</strong> to install.           <br>
+* Check <strong>Internet Information Services</strong>.</p>
+</li>
+</ol>
+<pre><code>* Expand **Internet Information Services** and **World Wide Web Services**. 
+   
+* Expand **Application Development Features** and check **ASP.NET 2.0**, **ASP.NET 4.5**, and **CGI**. 
+   
+* Expand **Common HTTP Features** and check **HTTP Redirection**. 
+   
+* Expand **Health and Diagnostics** and check **Logging Tools**, **Request Monitor**, and **Tracing**. 
+</code></pre>
+<ol start="3">
+<li>
+<p>Install the <strong><a href="http://www.microsoft.com/web/downloads/platform.aspx">Web Platform Installer</a> (WebPI)</strong>.</p>
+</li>
+<li>
+<p>Install <strong>Visual Web Developer 2010 Express</strong> through <strong>WebPI</strong>. (You can use a different version of Visual Studio 2010, so long as it’s supported by the Windows Azure Tools for Visual Studio.)</p>
+</li>
+<li>
+<p>Install <strong>Windows Azure Tools for Microsoft Visual Studio 2010 – September 2011</strong> through <strong>WebPI</strong>.</p>
+</li>
+</ol>
+<p>Okay, now you have everything installed. However, before you trying running Visual Studio, you have to create a script to launch Visual Studio 2010. This is because the Windows Azure tools use an environmental variable that’s incorrectly pointing to version 11.0, and we’ll need to change it right before we launch to version 10.0 (for Visual Studio 2010).</p>
+<pre><code>@ECHO OFF
+
+SET VisualStudioVersion=10.0
+
+SET VisualStudioPath=&quot;%ProgramFiles(x86)%\Microsoft Visual Studio 10.0\Common7\IDE&quot;
+IF NOT EXIST %WINDIR%\SysWow64 SET VisualStudioPath=&quot;%ProgramFiles%\Microsoft Visual Studio 10.0\Common7\IDE&quot;
+
+CD /D %VisualStudioPath%
+
+VWDExpress.exe
+</code></pre>
+<p>As you can see, the script changes the VisualStudioVersion to 10.0 then launches Visual Web Developer Express (there’s a little extra code to set the path correctly regardless of 32- or 64-bit versions of Windows).</p>
+<p>Save the above script as a CMD file (i.e. OpenVisualStudio2010.cmd) and then make sure to right-click and <strong>Run as administrator</strong>! If you forget to run the script as administrator then Visual Studio won’t have the permissions needed to run the Windows Azure tools correctly.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/09/Running-Instance_thumb.png" alt="Running Instance">
+Look, it’s working!</p>
+<p><strong>NOTE</strong>: I found myself having to reboot Windows 8 in order to resolve a problem where the debugger wouldn’t attach. Not sure if this occurs every time, but in case you have a similar issue just try rebooting.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

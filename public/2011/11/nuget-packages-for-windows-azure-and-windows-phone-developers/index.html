@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Nu Get Packages for Windows Azure and Windows Phone Developers - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="NuGet Packages for Windows Azure and Windows Phone Developers - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/">NuGet Packages for Windows Azure and Windows Phone Developers</a>
+    </h2>
+    <div class="post-data">
+        Nov 15, 2011 |
+        8 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>If you’ve been paying attention to the <a href="http://watwp.codeplex.com/">Windows Azure Toolkit for Windows Phone</a> (or my <a href="http://twitter.com/WadeWegner">twitter feed</a>) the last couple weeks, you’ve probably noticed something about NuGet packages. We’ve been building a lot of Windows Phone and Windows Azure NuGet packages that, when composed together, give you the ability to quickly build some cool applications. To highlight this, here’s a short video that shows how you can enable push notification support in a brand new Windows Phone 7.1 project—and send notifications from a new ASP.NET MVC 3 Web Application running in Windows Azure—in less than two minutes!</p>
+<p>Here’s a look at how to use the storage NuGet packages to quickly (and securely) upload a picture from the Windows Phone to Windows Azure blob storage.</p>
+<p>All of this is made possible by delivering functional, discrete, and composable NuGet packages. I’ve gotten a lot of feedback (positive and <em>constructive</em>, but fortunately mostly positive) about the <a href="http://watwp.codeplex.com/">Windows Azure Toolkit for Windows Phone</a>, and invariably people have said that it’s too hard to decompose the sample applications – often times people just want Push Notification support or user management, and it’s too hard to get rid of the rest.</p>
+<p>I think the NuGet packages make it very easy to do two things:</p>
+<ol>
+<li>
+<p>Build brand new applications that quickly can get some advanced capabilities</p>
+</li>
+<li>
+<p>Quickly update existing applications to get some desirable enhancements</p>
+</li>
+</ol>
+<p>This is largely possible because we can easily manage and deliver dependencies through NuGet. Let us handle the hard stuff – you focus on building out cool applications.</p>
+<p>In this post I’d like to provide a list and description of the NuGet packages we’ve delivered so far – I imagine I’ll update this post many times to keep it accurate. I don’t plan to show exactly how to use these packages—I’ll save that for many future posts—but instead I want to use this post as a reference and guidepost moving forward.</p>
+<p>So, without further ado, I’d like to introduce you to the two kinds of NuGet packages we have today: Client Side NuGet Packages, and Server Side NuGet Packages.</p>
+<p><strong><em>Client Side NuGet Packages</em></strong></p>
+<p>The first set of NuGet packages to be aware of are the NuGet packages for Windows Phone, designed to target Windows Phone OS 7.1 project types.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/Windows-Phone-OS-7.1_thumb.jpg" alt="Windows Phone OS 7.1"></p>
+<p>You can use these NuGets in a number of interesting ways. For example, you can quickly incorporate the <a href="http://www.microsoft.com/windowsazure/features/accesscontrol/">Access Control Service</a> into your phone applications using the following NuGet packages:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Identity.AccessControl">Phone.Identity.AccessControl</a></strong>: Access Control Service Log In control for Windows Phone.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Identity.AccessControl.BasePage">Phone.Identity.AccessControl.BasePage</a></strong>: Base log in page for Windows Phone that uses the Access Control Service Log In control.</p>
+</li>
+</ul>
+<p>If you’re not using ACS but instead want simple username/password, you can quickly incorporate membership into your phone applications using the following NuGet packages:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Identity.Membership">Phone.Identity.Membership</a></strong>: Membership Sign In control for Windows Phone.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Identity.Membership.BasePage">Phone.Identity.Membership.BasePage</a></strong>: Base log in and register pages for Windows Phone that use the Membership Log In control</p>
+</li>
+</ul>
+<p>To get full support for Push Notifications (including Mango updates like deep linking) you can easily incorporate Push Notifications using the following NuGet packages:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Notifications">Phone.Notifications</a></strong>: Class library for Windows Phone to communicate with the Push Notification Registration Cloud Service.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Phone.Notifications.BasePage">Phone.Notifications.BasePage</a></strong>: Base notifications page for Windows Phone to register / unregister with the Push Notification Registration Cloud Service for receiving push notification messages.</p>
+</li>
+</ul>
+<p>In scenarios where you’d want to secure your notification services using the Access Control Service, you can use the following packages:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/Phone.Notifications.AccessControl">Phone.Notifications.AccessControl</a></strong>: This package enables communication with the Push Notification Registration Cloud Service using Windows Azure Access Control Service (ACS) for authentication, by adding a set of base pages to the phone application.</li>
+</ul>
+<p>The dependencies and relationships between these NuGets are as follows:<br>
+<img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/Phone.Notifications.AccessControl.png" alt="Phone.Notifications.AccessControl"></p>
+<p>In scenarios where you’d want to secure your notification services using traditional membership, you can use the following packages:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/Phone.Notifications.Membership">Phone.Notifications.Membership</a></strong>: This package enables communication with the Push Notification Registration Cloud Service using Membership for authentication, by adding a set of base pages to the phone application.</li>
+</ul>
+<p>The dependencies and relationships between these NuGets are as follows:<br>
+<img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/Phone.Notifications.Membership.png" alt="Phone.Notifications.Membership"></p>
+<p><strong>__</strong></p>
+<p><strong>__</strong></p>
+<p><strong>[Updated 1/6/12]</strong></p>
+<p>Recently we added a set of client side NuGet packages that can communicate with the Windows Azure storage service – either directly (using the storage account information) or through proxy services running in Windows Azure. Here are the packages for the client:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/Phone.Storage">Phone.Storage</a></strong>: Class library for Windows Phone to communicate with Windows Azure storage services directly (using the storage account information) or through Proxy Cloud Services (using custom authentication mechanisms).</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/Phone.Storage.Sample">Phone.Storage.Sample</a></strong>: Sample application for Windows Phone that shows how to use the Windows Azure Storage Client Library for Windows Phone.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/Phone.Storage.AccessControl">Phone.Storage.AccessControl</a></strong>: This package enables communication with the Windows Azure Storage Proxy Cloud Services using Windows Azure Access Control Service (ACS) for authentication.      <br>
+<img src="http://www.wadewegner.com/content/2012/01/image6.png" alt="image"></p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/Phone.Storage.Membership">Phone.Storage.Membership</a></strong>: This package enables communication with the Windows Azure Storage Proxy Cloud Services using Membership for authentication.      <br>
+<img src="http://www.wadewegner.com/content/2012/01/image7.png" alt="image"></p>
+</li>
+</ul>
+<p><strong><em>Server Side NuGet Packages</em></strong></p>
+<p>Over the years our team has built a lot of libraries for Windows Azure that we regularly use for samples, demos, hands-on labs, and so forth. We’ve continued to refine these libraries and have started to expose some of them as discrete NuGet packages. Here are some of them:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/WindowsAzure.Common">WindowsAzure.Common</a></strong>: Class library that provides common helpers tools for Windows Azure.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/Storage.Providers">Storage.Providers</a></strong>: ASP.NET Providers (Membership, Roles, Profile and Session State Store) for Windows Azure Tables.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/MpnsRecipe">MpnsRecipe</a></strong>: Class library to communicate with the Microsoft Push Notification Service (MPNS).</p>
+</li>
+</ul>
+<p>If you plan to manage users through ASP.NET membership, we have a NuGet package that will handle everything in your Windows Azure project:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/WindowsAzure.Identity.Membership">WindowsAzure.Identity.Membership</a></strong>: Class library that includes the Membership Authentication Cloud Service.</li>
+</ul>
+<p>We have a set of WebAPI services that work with the Phone.Notifications NuGet packages for handling the Channel URIs and push notification registration services:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/WindowsAzure.Notifications">WindowsAzure.Notifications</a></strong>: This package contains a class library with the Push Notification Registration Cloud Service, and a WebActivator enabled class with the default configuration.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/List/Packages/WindowsAzure.Notifications.Sql">WindowsAzure.Notifications.Sql</a></strong>: Class library that provides storage in a SQL Azure or SQL Server database for the Push Notification Registration Cloud Service.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Notifications.Client.Sql">WindowsAzure.Notifications.Client.Sql</a></strong>: This package contains a class library with a Table Context to access the Push Notification Registration Cloud Service&rsquo;s SQL Server tables where the registered enpoints are stored. This package can be used from a worker role to query registered endpoints and send notifications.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Notifications.Client.AzureTables">WindowsAzure.Notifications.Client.AzureTables</a></strong>: This package contains a class library with a Table Context to access the Push Notification Registration Cloud Service&rsquo;s Azure Tables where the registered enpoints are stored. This package can be used from a worker role to query registered endpoints and send notifications.</p>
+</li>
+</ul>
+<p>If you plan to use the Phone.Notifications.AccessControl NuGet package and secure the communications channel with ACS, then you can use this NuGet package:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/WindowsAzure.Notifications.AccessControl">WindowsAzure.Notifications.AccessControl</a></strong>: This package enables authentication using Windows Azure Access Control Service (ACS) for the Push Notification Registration Cloud Service. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config.</li>
+</ul>
+<p>The dependencies and relationships between these NuGets are as follows:<br>
+<img src="http://www.wadewegner.com/content/2012/01/image2.png" alt="WindowsAzure.Notifications.AccessControl"></p>
+<p>If you plan to use the Phone.Notifications.Membership NuGet package and secure the communications channel with membership, then you can use this NuGet package:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/CloudServices.Notifications.Membership">CloudServices.Notifications.Membership</a></strong>: This package enables authentication using the Membership provider for the Push Notification.</li>
+</ul>
+<p>The dependencies and relationships between these NuGets are as follows:<br>
+<img src="http://www.wadewegner.com/content/2012/01/image3.png" alt="WindowsAzure.Notifications.Membership"></p>
+<p>When working with Push Notifications, you need some kind of client to generate and send notifications. We’ve built some simple scaffolding that you can use during development (or production?) to generate and send notifications:</p>
+<ul>
+<li><strong><a href="http://www.nuget.org/List/Packages/WindowsPhone.Notifications.ManagementUI.Sample">WindowsPhone.Notifications.ManagementUI.Sample</a></strong>: A sample MVC Area containing the Management UI for sending Push Notifications to Windows Phone Devices.</li>
+</ul>
+<p><strong>[Updated 1/6/12]</strong></p>
+<p>Recently we added a set of client side NuGet packages that can communicate with the Windows Azure storage service – either directly (using the storage account information) or through proxy services running in Windows Azure. Here are the packages for the services:</p>
+<ul>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage">WindowsAzure.Storage</a></strong>: This client library enables working with the Windows Azure storage services which include the blob service for storing binary and text data, the table service for storing structured non-relational data, and the queue service for storing messages that may be accessed by a client.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage.Proxy">WindowsAzure.Storage.Proxy</a></strong>: This package contains a class library with the Windows Azure Storage Proxy Cloud Services, and a <em>WebActivator</em> enabled class with the default configuration.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage.AccessControl">WindowsAzure.Storage.AccessControl</a></strong>:This package enables authentication using Windows Azure Access Control Service (ACS) for the Windows Azure Storage Proxy Cloud Services. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage.Proxy.AccessControl">WindowsAzure.Storage.Proxy.AccessControl</a></strong>: This package enables authentication using Windows Azure Access Control Service (ACS) for the Windows Azure Storage Proxy Cloud Services. You just need to configure a Relying Party Application with Simple Web Token (SWT) in your ACS namespace, and configure its settings accordingly in the Web.config.      <br>
+<img src="http://www.wadewegner.com/content/2012/01/image4.png" alt="WindowsAzure.Storage.AccessControl"></p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage.Membership">WindowsAzure.Storage.Membership</a></strong>: This package enables authentication using the Membership provider for the Windows Azure Storage Proxy Cloud Services. You just need to make sure to have a valid Membership provider configured in your Web.config.</p>
+</li>
+<li>
+<p><strong><a href="http://www.nuget.org/packages/WindowsAzure.Storage.Proxy.Membership">WindowsAzure.Storage.Proxy.Membership</a></strong>: This package enables authentication using the Membership provider for the Windows Azure Storage Proxy Cloud Services. You just need to make sure to have a valid Membership provider configured in your Web.config.      <br>
+<img src="http://www.wadewegner.com/content/2012/01/image5.png" alt="WindowsAzure.Storage.Membership"></p>
+</li>
+</ul>
+<p>That’s it!</p>
+<p>It’s a lot of resources, I know. The intent of this post isn’t to necessarily provide you with the guidance on how to use all these NuGets, but rather to explain what we have available. I plan to write a lot of blog posts that highlight real scenarios and use cases for these NuGet packages, so I’ll refer back to this post quite often. In the meantime, I hope it gives you a feel for how we’re thinking about engineering and delivering resources for Windows Phone and Windows Azure moving forward.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

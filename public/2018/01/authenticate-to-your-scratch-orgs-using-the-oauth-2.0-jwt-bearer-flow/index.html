@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Authenticate to Your Scratch Orgs Using the O Auth 2.0 J W T Bearer Flow - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Authenticate to your Scratch Orgs using the OAuth 2.0 JWT Bearer Flow - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Advanced automation and continuous integration designs often separate the creation of a scratch org from the use of the scratch org. In this scenario, you need a way to authenticate to the newly created scratch org. Fortunately, you can use a Connected App configured for the OAuth 2.0 JWT Bearer Flow in your Dev Hub to perform a non-interactive login into a scratch org created from that Dev Hub. In this post we&#39;ll look at the steps required to get this to work."/>
+<meta property="og:url" content="https://www.wadewegner.com/2018/01/authenticate-to-your-scratch-orgs-using-the-oauth-2.0-jwt-bearer-flow/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2018/01/authenticate-to-your-scratch-orgs-using-the-oauth-2.0-jwt-bearer-flow/">Authenticate to your Scratch Orgs using the OAuth 2.0 JWT Bearer Flow</a>
+    </h2>
+    <div class="post-data">
+        Jan 31, 2018 |
+        6 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>A different, if not more accurate or better, name for this blog post could be &ldquo;Authenticate to a Scratch Org You Didn&rsquo;t Create and Whose Password You Don&rsquo;t Know.&rdquo; I even went out to Twitter to ask for help and, well, <a href="https://twitter.com/britishboyindc">Peter Churchill</a> did not disappoint:</p>
+<center><blockquote class="twitter-tweet" data-conversation="none" data-lang="en"><p lang="en" dir="ltr">&quot;I used JWT Bearer Flow with my Scratch Orgs and Dev Hub - you won&#39;t believe what happened next!&quot;</p>&mdash; Peter Churchill (@britishboyindc) <a href="https://twitter.com/britishboyindc/status/958702877475790848?ref_src=twsrc%5Etfw">January 31, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center>
+<p>But, as you can see, I went the boring and conservative route. Naming things, even blog posts, is hard. Anyway &hellip;</p>
+<p>One of my more popular blog posts recently is <a href="http://www.wadewegner.com/2017/04/using-the-oauth-2-jwt-bearer-flow-to-support-the-salesforcedx-cli/">Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI</a>. Not only is JWT Bearer Flow a powerful capability for automating continuous integration (you&rsquo;re not using usernames and passwords, are you?), but setting it up is rather complex and the blog post details the required steps as simply as possible. In this post, I want to build the capability of the JWT Bearer Flow and introduce a capability of the Dev Hub that makes it easier for you to authenticate to newly created Scratch Orgs, even when you&rsquo;re not on the machine that initially created the scratch org.</p>
+<p>Consider, if you will, the following: you have a script that automates these steps every morning:</p>
+<ol>
+<li>Creates 50 new scratch orgs (possibly with different scratch org configuration settings).</li>
+<li>Installs 3rd party packages that are used/required.</li>
+<li>Pushes unpackaged source/metadata required (e.g. custom objects).</li>
+<li>Assigns permsets.</li>
+<li>Imports sample data.</li>
+</ol>
+<p>This isn&rsquo;t a fictional scenario, as there are a number of ISVs and customers already doing this today as a way to bootstrap environments. But, invariably, the next question is: how do I let a developer, or separate CI system, authenticate to the newly created scratch org?</p>
+<p>Turns out, you can setup a Connected App in your Dev Hub to support the JWT OAuth flow that you can then use to authenticate to your scratch org. That&rsquo;s right, you don&rsquo;t have to create the Connected App in the scratch org itself (which is good, as you can&rsquo;t automate it). Using the Connected App in the Dev Hub, you can use the same certificate key and <code>force:auth:jwt:grant</code> command to authenticate directly to a scratch org.</p>
+<p>As I said, this is a powerful capability for CI systems that create scratch orgs and then need to auth into them but don&rsquo;t have access to access token stored in <code>~/.sfdx</code> during the scratch org creation process.</p>
+<p>Without further ado, let&rsquo;s go started.</p>
+
+<h3 id="create-the-certificate--private-key" class="anchor-link"><a href="#create-the-certificate--private-key">Create the certificate &amp; private key</a></h3>
+<p>The first step is to create the certificate and private key you&rsquo;re going to use. I prefer to do this in a place that&rsquo;s both secure and not related to any specific project I&rsquo;m working on. This way I can make everything work independent of my current project.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ <span style="color:#007020">cd</span> ~/ <span style="color:#666">&amp;&amp;</span> mkdir .certs <span style="color:#666">&amp;&amp;</span> <span style="color:#007020">cd</span> .certs
+
+$ openssl genrsa -des3 -passout pass:x -out server.pass.key <span style="color:#40a070">2048</span>
+
+$ openssl rsa -passin pass:x -in server.pass.key -out server.key
+
+$ rm server.pass.key
+
+$ openssl req -new -key server.key -out server.csr
+
+$ openssl x509 -req -sha256 -days <span style="color:#40a070">365</span> -in server.csr <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    -signkey server.key -out server.crt
+</code></pre></div><p>When finished, you&rsquo;ll have the files you need later in the process. And, while I have these files setup to use locally, it&rsquo;s entirely likely you&rsquo;ll want to put them on a server to make them more accessible. It&rsquo;s also not uncommon to encrypt them and use them with systems like Travis CI (see our <a href="https://trailhead.salesforce.com/trails/sfdx_get_started/modules/sfdx_travis_ci">Continuous Integration Using Salesforce DX</a> Trailhead module for details).</p>
+
+<h3 id="create-the-connected-app" class="anchor-link"><a href="#create-the-connected-app">Create the Connected App</a></h3>
+<p>We&rsquo;re going to use a Connected App in our Dev Hub org. This is part of the magic. By having this Connected App in our Dev Hub and setup with JWT Grant, we can use this flow with all of the Scratch Orgs we create.</p>
+<p>To make things easier, I like to use my CLI plugin: <code>sfdx-waw-plugin</code> (feel free to contribute here: <a href="https://github.com/wadewegner/sfdx-waw-plugin">https://github.com/wadewegner/sfdx-waw-plugin</a>). It includes commands for creating the Connected App (and minimizes the manual steps).</p>
+<p>Install the <code>sfdx-waw-plugin</code> to and look at the command:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx plugins:install sfdx-waw-plugin
+
+$ sfdx waw:connectedapp:create --help
+</code></pre></div><p>You&rsquo;ll want to run this command against your Dev Hub; I&rsquo;ve aliased mine as <code>HubOrg</code> (not sure why).</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx waw:connectedapp:create -c http://localhost:1717/OauthRedirect 
+    -e <span style="color:#666">[</span>YOUR_EMAIL_ADDRESS<span style="color:#666">]</span> 
+    -s Basic,Api,Web,RefreshToken 
+    -n jwtrulz 
+    -u HubOrg
+</code></pre></div><p>When you run this command it will output information.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+   <span style="color:#062873;font-weight:bold">&#34;fullName&#34;</span>:<span style="color:#4070a0">&#34;jwtrulz&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;contactEmail&#34;</span>:<span style="color:#4070a0">&#34;wade.wegner@salesforce.com&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;description&#34;</span>:<span style="color:#4070a0">&#34;generated by waw:connectedapp:create&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;label&#34;</span>:<span style="color:#4070a0">&#34;jwtrulz&#34;</span>,
+   <span style="color:#062873;font-weight:bold">&#34;oauthConfig&#34;</span>:{
+      <span style="color:#062873;font-weight:bold">&#34;callbackUrl&#34;</span>:<span style="color:#4070a0">&#34;http://localhost:1717/OauthRedirect&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;consumerKey&#34;</span>:<span style="color:#4070a0">&#34;[YOUR_CONSUMER_KEY]&#34;</span>,
+      <span style="color:#062873;font-weight:bold">&#34;scopes&#34;</span>:[
+         <span style="color:#4070a0">&#34;Basic&#34;</span>,
+         <span style="color:#4070a0">&#34;Api&#34;</span>,
+         <span style="color:#4070a0">&#34;Web&#34;</span>,
+         <span style="color:#4070a0">&#34;RefreshToken&#34;</span>
+      ],
+      <span style="color:#062873;font-weight:bold">&#34;consumerSecret&#34;</span>:<span style="color:#4070a0">&#34;[YOUR_CONSUMER_SECRET]&#34;</span>
+   }
+}
+</code></pre></div><p>Grab both the <code>consumerKey</code> and the <code>consumerSecret</code>.</p>
+<p>Now we&rsquo;re going to open our Dev Hub so that we can finish setting up the JWT Bearer Flow. (As I mentioned before, you can&rsquo;t automate all of this through our APIs today.)</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:org:open -u HubOrg
+</code></pre></div><p>We&rsquo;re going to complete the setup of the Connected App. (Unfortunately, there aren&rsquo;t any APIs exposed to assist you in this process).</p>
+<ol>
+<li>
+<p>Open <strong>App Manager</strong>, find your Connected App.</p>
+</li>
+<li>
+<p>Click <strong>Edit</strong>. Turn on <strong>Use digital signatures</strong> and choose your <strong>server.crt</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/746259/35624777-d75b3892-0644-11e8-89c2-4aa83e18d50b.png" alt="Use Digital Signatures"></p>
+</li>
+<li>
+<p>Click <strong>Manage</strong> then <strong>Edit Policies</strong>. Update <strong>Permitted Users</strong>.</p>
+<p><img src="https://user-images.githubusercontent.com/746259/35624805-ef677694-0644-11e8-9f66-40050f404cea.png" alt="Edit Policies"></p>
+</li>
+<li>
+<p>Click <strong>Manage Profiles</strong> or <strong>Managed Permission Sets</strong> and add your profile or permset.</p>
+</li>
+</ol>
+<p>If you need a refresher for any of these steps, see my blog post <a href="http://www.wadewegner.com/2017/04/using-the-oauth-2-jwt-bearer-flow-to-support-the-salesforcedx-cli/">Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI</a>.</p>
+
+<h3 id="log-into-your-dev-hub-with-jwtgrant" class="anchor-link"><a href="#log-into-your-dev-hub-with-jwtgrant">Log into your Dev Hub with <code>jwt:grant</code></a></h3>
+<p>For this to work, you&rsquo;ll want to log into your Dev Hub using <code>force:auth:jwt:grant</code>, not <code>force:auth:web:login</code>.</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:auth:jwt:grant --clientid <span style="color:#666">[</span>YOUR_CONSUMER_KEY<span style="color:#666">]</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --username <span style="color:#666">[</span>YOUR_DEVHUB_LOGIN<span style="color:#666">]</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --jwtkeyfile ~/.certs/server.key <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --setdefaultdevhubusername -a HubOrg
+</code></pre></div><p>You should see something like:</p>
+<blockquote>
+<p>Successfully authorized YOUR_DEVHUB_LOGIN] with org ID [YOUR_ORG_ID].</p>
+</blockquote>
+<p>It&rsquo;s worth noting that this step is required. If you&rsquo;re not logged into your Dev Hub using <code>jwt:grant</code> then the rest of the magic won&rsquo;t work.</p>
+
+<h3 id="create-a-new-scratch-org-and-login-with-jwtgrant" class="anchor-link"><a href="#create-a-new-scratch-org-and-login-with-jwtgrant">Create a new scratch org and login with <code>jwt:grant</code></a></h3>
+<p>Okay, now it&rsquo;s time for the payoff! Go ahead and create a new scratch org:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:project:create -n jwtrulz <span style="color:#666">&amp;&amp;</span> <span style="color:#007020">cd</span> jwtrulz
+
+$ sfdx force:org:create -s -f config/project-scratch-def.json
+</code></pre></div><p>Copy down the username to the newly screated scratch org. Let&rsquo;s pretend it&rsquo;s <code>test-qyczf1ot1p6j@wade.wegner_company.net</code>.</p>
+<p>Now, we want to demonstrate that you can authenticate into the scratch org using the JWT Grant flow and the certificate &ndash; nothing else. If you&rsquo;re doing this on your machine, and you want to guarantee that you&rsquo;re not cheating, you can delete the JSON file that&rsquo;s storing the creds for the newly created scratch org: <code>rm ~/.sfdx/test-qyczf1ot1p6j@wade.wegner_company.net.json</code>. Not necessary, but it&rsquo;ll help prove I&rsquo;m not pulling the wool over your eyes.</p>
+<p>Are you ready? Okay, let&rsquo;s login to your scratch org with the <code>jwt:grant</code> command:</p>
+<div class="highlight"><pre style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ sfdx force:auth:jwt:grant --clientid <span style="color:#666">[</span>YOUR_CONSUMER_KEY<span style="color:#666">]</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --username <span style="color:#666">[</span>YOUR_SCRATCHORG_USERNAME<span style="color:#666">]</span> <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --jwtkeyfile ~/.certs/server.key <span style="color:#4070a0;font-weight:bold">\
+</span><span style="color:#4070a0;font-weight:bold"></span>    --instanceurl https://test.salesforce.com
+</code></pre></div><p>You should see:</p>
+<blockquote>
+<p>Successfully authorized YOUR_SCRATCHORG_USERNAME] with org ID [YOUR_SCRATCHORG_ID].</p>
+</blockquote>
+<p>BOOM!</p>
+<p>Yes, this is the kind of stuff that I really enjoy. And I know there are a few of you out there who dig this too.</p>
+<p>I hope you&rsquo;ve found this post helpful! It will definitely provide new and powerful ways for you to automate your continuous integration systems and provide more flexible ways for you to design some of your automation.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Using Windows Azure Virtual Machines to Publish and Synchronize a Web Farm - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Using Windows Azure Virtual Machines to Publish and Synchronize a Web Farm - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2013/03/using-windows-azure-virtual-machines-to-publish-and-synchronize-a-web-farm/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2013/03/using-windows-azure-virtual-machines-to-publish-and-synchronize-a-web-farm/">Using Windows Azure Virtual Machines to Publish and Synchronize a Web Farm</a>
+    </h2>
+    <div class="post-data">
+        Mar 4, 2013 |
+        8 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Lately I’ve been attempting to try out a number of different techniques for publishing web applications – both websites and web APIs – to the cloud. I’m being purposely vague when saying “the cloud” – it could be Windows Azure, AWS, or even a traditional hosting provider. It’s likely you saw a <a href="http://michaelwasham.com/2012/08/13/publishing-and-synchronizing-web-farms-using-windows-azure-virtual-machines/">great post by Michael Washam</a> that provides a solution for using Windows Azure virtual machines along with Web Deploy and a few PowerShell scripts. What’s below is a technique adapted from Michael’s post and detailed for each of the steps. What I like about this approach is that, aside from the machine preparation, the deployment technique is consistent across different platforms.</p>
+<p>There are certainly a few things missing below: scripts for scaling up/down, scripts for running Windows update, and so forth. I’ll tackle these in future posts. My point here is to highlight a different way to look at tackling a common problem.</p>
+<p>What are some of the advantages to this approach?</p>
+<ul>
+<li>Near instant deployment.</li>
+<li>Fully automated.</li>
+<li>Consistent development model with other platforms.</li>
+<li>Consistent deployment model with other platforms.</li>
+</ul>
+<p>I’m sure there are more. There are some limitations as well – in particular, you’re bound by the number of roles you can have in your Cloud Service, which today is (I think) 25. This means that, at most, you can only scale out to 25 virtual machines. I imagine this limitation will be removed at some point (or perhaps you could get around it by using virtual networks).</p>
+<p>Regardless, give it a try.</p>
+<p><strong>Note</strong>: You can find the PowerShell scripts used below in this gist here: <a href="https://gist.github.com/wadewegner/5080199">https://gist.github.com/wadewegner/5080142</a>.</p>
+
+<h1 id="image-preparation" class="anchor-link"><a href="#image-preparation">Image Preparation</a></h1>
+<p>In this first step you’ll create and customize a virtual machine that you’ll then sysprep and turn into a disk that we’ll use later on.</p>
+
+<h5 id="_create-the-base-virtual-machine_" class="anchor-link"><a href="#_create-the-base-virtual-machine_"><em>Create the Base Virtual Machine</em></a></h5>
+<p>This first part takes the longest. This is because you’re preparing the disk you’ll use moving forward. Note that you only do it once – this is not something you have to do over and over again.</p>
+<ol>
+<li>
+<p>Create a Virtual Machine.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb.png" alt="WAIIASImage1"></p>
+</li>
+<li>
+<p>Enter the VM information. Use the default “Windows Server 2012 Datacenter” image. Size doesn’t matter. This VM will sysprepped and used as a disk image for creating future virtual machines. Be sure to note the location you use and the password you create - you&rsquo;ll need them!</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_3.png" alt="WAIIASImage2"></p>
+</li>
+<li>
+<p>Start the VM. Note that VMs create a Cloud Service.</p>
+</li>
+<li>
+<p>RDP into the VM once it has provisioned and started.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_4.png" alt="WAIIASImage3"></p>
+</li>
+<li>
+<p>Click to <strong>Add roles and features</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_5.png" alt="image"></p>
+</li>
+<li>
+<p>Leave defaults and click <strong>Next</strong> until you get to Server Roles.</p>
+</li>
+<li>
+<p>Choose <strong>Application Server</strong> and <strong>Web Server (IIS)</strong>. Click <strong>Next</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_6.png" alt="image"></p>
+</li>
+<li>
+<p>Under <strong>Features</strong> be sure to select <strong>ASP.NET 4.5</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_7.png" alt="image"></p>
+</li>
+<li>
+<p>Click <strong>Next</strong> until you get to <strong>Role Services</strong> under <strong>Web Server Role (IIS).</strong></p>
+</li>
+<li>
+<p>Add <strong>ASP.NET 4.5</strong> under <strong>Application Development</strong>. This will add the other default values.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_8.png" alt="image"></p>
+</li>
+<li>
+<p>Click <strong>Next</strong> until you get to the last step. Click <strong>Install</strong>. Wait until the operation completes.</p>
+</li>
+</ol>
+<p><strong><em>Install and Use Windows Azure PowerShell Cmdlets</em></strong></p>
+<ol start="12">
+<li>
+<p>From the machine, download the Windows Azure PowerShell Cmdlets. These can be found at: <a href="http://www.windowsazure.com/en-us/downloads/">http://www.windowsazure.com/en-us/downloads/</a>.</p>
+</li>
+<li>
+<p>Install the cmdlets. This can take 5-15 minutes.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_9.png" alt="image"></p>
+</li>
+<li>
+<p>Create the folder <strong>c:\Scripts</strong>.</p>
+</li>
+<li>
+<p>Run the following script in <strong>Windows PowerShell ISE</strong> to download your publish settings file:</p>
+<pre><code>Get-AzurePublishSettingsFile 
+</code></pre>
+</li>
+<li>
+<p>Save or move this file into the <strong>c:\Scripts</strong> folder and rename to <strong>credentials.publishsettings</strong>.</p>
+</li>
+<li>
+<p>Run the following script in <strong>Windows PowerShell ISE</strong> to change the execution policy:<br>
+Set-ExecutionPolicy Unrestricted</p>
+</li>
+</ol>
+<p><strong><em>Setup Web Deploy</em></strong></p>
+<ol start="18">
+<li>
+<p>Download <strong>Web Deploy 3.0</strong> from the following link: <a href="http://download.microsoft.com/download/1/B/3/1B3F8377-CFE1-4B40-8402-AE1FC6A0A8C3/WebDeploy_amd64_en-US.msi">http://download.microsoft.com/download/1/B/3/1B3F8377-CFE1-4B40-8402-AE1FC6A0A8C3/WebDeploy_amd64_en-US.msi</a>. <strong>Do not install</strong>. To simplify, download to C:\.</p>
+</li>
+<li>
+<p>Open a <strong>Command Prompt</strong>.</p>
+</li>
+<li>
+<p>Run the following command:</p>
+<pre><code>C:\&gt;msiexec /I webdeploy_amd64_en-us.msi /passive ADDLOCAL=ALL LISTENURL=http://+:8080/  
+</code></pre>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_10.png" alt="image"></p>
+</li>
+</ol>
+<p><strong><em>Configure Firewall Settings</em></strong></p>
+<ol start="21">
+<li>
+<p>Run <strong>Windows Firewall with Advanced Security</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Inbound Rules</strong> and click <strong>New Rule</strong>.</p>
+</li>
+<li>
+<p>Select <strong>Port</strong> and click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Level TCP selected and enter <strong>8080</strong> for the <strong>Specific local ports</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_11.png" alt="image"></p>
+</li>
+<li>
+<p>Keep the defaults and click <strong>Next</strong> until prompted to give a name. Choose a name (e.g. Web Deploy Port) and click <strong>Finish</strong>.</p>
+</li>
+</ol>
+<p><strong><em>System Preparation</em></strong></p>
+<ol start="26">
+<li>
+<p>Open a <strong>Command Prompt</strong> as an administrator.</p>
+</li>
+<li>
+<p>Change the directory to: %windir%\system32\sysprep</p>
+</li>
+<li>
+<p>Run <strong>sysprep.exe</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_12.png" alt="image"></p>
+</li>
+<li>
+<p>Ensure the following options are selected: <strong>Enter System Out-of-Box Experience (OOBE)</strong>, <strong>Generalize</strong>, and <strong>Shutdown</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_13.png" alt="image"></p>
+</li>
+</ol>
+<p><strong><em>Capture the Virtual Machine</em></strong></p>
+<ol start="30">
+<li>
+<p>Return to your Virtual Machine Instances tab in the portal: <a href="https://manage.windowsazure.com/#Workspace/VirtualMachineExtension/vms">https://manage.windowsazure.com/#Workspace/VirtualMachineExtension/vms</a>.</p>
+</li>
+<li>
+<p>Wait until you see that the status of your virtual machine is <strong>Stopped</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_14.png" alt="image"></p>
+</li>
+<li>
+<p>Capture the image by clicking the <strong>CAPTURE</strong> button below.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image024_thumb.png" alt="clip_image024"></p>
+</li>
+<li>
+<p>Select an image name (e.g. WS2012-WebFarmImage) and check that you have sysprepped the machine. Click the button.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_15.png" alt="image"></p>
+</li>
+<li>
+<p>When the capture operation completes you’ll see the disk image available under <strong>Images</strong> in the portal: <a href="https://manage.windowsazure.com/#Workspaces/VirtualMachineExtension/images">https://manage.windowsazure.com/#Workspaces/VirtualMachineExtension/images</a></p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_16.png" alt="image"></p>
+</li>
+</ol>
+
+<h1 id="virtual-machine-deployment" class="anchor-link"><a href="#virtual-machine-deployment">Virtual Machine Deployment</a></h1>
+<p>You’ll run these steps from your own PC.</p>
+<ol>
+<li>
+<p>Open the <strong>Windows PowerShell ISE</strong> to run the following scripts. It’s always a good idea to save them somewhere to use later.</p>
+</li>
+<li>
+<p>You might need to import your publish settings. If so, download your publish settings file, save it, then import it.</p>
+<pre><code> Get-AzurePublishSettingsFile
+
+ Import-AzurePublishSettingsFile C:\\credentials.publishsettings
+</code></pre>
+</li>
+<li>
+<p>Get the subscription name to which you’ll deploy. Run the following script:</p>
+<pre><code> Get-AzureSubscription -Current  
+</code></pre>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_17.png" alt="image"></p>
+</li>
+<li>
+<p>You need to get the storage account that contains your disk image. You’ll need to use the same storage account for the disks attached to the web servers in your web farm. Select the <strong>Images</strong> tab under <strong>Virtual Machines</strong> on the portal. Find your image and look at the location. The first part of the URL is the storage account name.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_18.png" alt="image"></p>
+</li>
+<li>
+<p>It’s now time to deploy your web farm using the disk image you created in the previous section. Review the following script and update appropriately.</p>
+<pre><code> $imgname = 'WS2012-WebFarmImage'
+ $cloudsvc = 'DemoWebFarm'
+ $pass = 'Password'
+ $subscriptionName = 'Windows Azure MSDN - Visual Studio Ultimate'
+ $storageAccount = 'portalvhds9dvbvvff5hdg3'
+ $location = 'East US'
+
+ Set-AzureSubscription -SubscriptionName $subscriptionName -CurrentStorageAccount $storageAccount
+
+ $iisvm1 = New-AzureVMConfig -Name 'iis1' -InstanceSize Small -ImageName $imgname |
+     Add-AzureEndpoint -Name web -LocalPort 80 -PublicPort 80 -Protocol tcp -LBSetName web -ProbePath '/' -ProbeProtocol http -ProbePort 80 |
+     Add-AzureEndpoint -Name webdeploy -LocalPort 8080 -PublicPort 8080 -Protocol tcp | 
+     Add-AzureProvisioningConfig -Windows -Password $pass
+
+ $iisvm2 = New-AzureVMConfig -Name 'iis2' -InstanceSize Small -ImageName $imgname |
+     Add-AzureEndpoint -Name web -LocalPort 80 -PublicPort 80 -Protocol tcp -LBSetName web -ProbePath '/' -ProbeProtocol http -ProbePort 80 |
+     Add-AzureProvisioningConfig -Windows -Password $pass
+
+ $iisvm3 = New-AzureVMConfig -Name 'iis3' -InstanceSize Small -ImageName $imgname |
+     Add-AzureEndpoint -Name web -LocalPort 80 -PublicPort 80 -Protocol tcp -LBSetName web -ProbePath '/' -ProbeProtocol http -ProbePort 80 |
+     Add-AzureProvisioningConfig -Windows -Password $pass    
+
+ New-AzureVM -ServiceName $cloudsvc -VMs $iisvm1, $iisvm2, $iisvm3 -Location $location
+</code></pre>
+</li>
+</ol>
+<p>Notes on script:</p>
+<ul>
+<li>
+<p><strong>$imgname</strong>: This is the name of the disk image you created.</p>
+</li>
+<li>
+<p><strong>$cloudsvc</strong>: When you deploy it will create a cloud service. This is the name for the cloud service.</p>
+</li>
+<li>
+<p><strong>$pass</strong>: This is the password for the virtual machine you created.</p>
+</li>
+<li>
+<p><strong>$subscriptionName</strong>: This is your subscription name.</p>
+</li>
+<li>
+<p><strong>$location</strong>: The datacenter you want to deploy into. Note: this has to be the same data center as your storage account.</p>
+</li>
+</ul>
+<p>It is <em>important</em> to note that the setup for $iisvm1 is different than $iisvm2 and $iisvm3. That’s because we’re adding an additional endpoint named <strong>webdeploy</strong> on 8080. We’ll use this public port for deploying via web deploy. It is not opened on the other machines.</p>
+<ol start="6">
+<li>
+<p>It’s time to run the script. Note: the script does not rollback. If you have values that are incorrect you’ll have to clean them up manually. If all goes well, you’ll see progress indicators like the following:</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_19.png" alt="image"></p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_20.png" alt="image"></p>
+</li>
+<li>
+<p>You can now look in the portal and you’ll see the following machines Running/Provisioning.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_21.png" alt="image"></p>
+</li>
+<li>
+<p>You can browse the URL, for example: <a href="http://demowebfarm.cloudapp.net">http://demowebfarm.cloudapp.net</a>. You’ll get the standard IIS page:</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_22.png" alt="image"></p>
+</li>
+</ol>
+
+<h1 id="setup-synchronization-across-virtual-machine" class="anchor-link"><a href="#setup-synchronization-across-virtual-machine">Setup Synchronization across Virtual Machine</a></h1>
+<ol>
+<li>
+<p>Remote into <strong>iis1</strong>. From the portal, select <strong>iis1</strong> under <strong>Virtual Machine Instances</strong> and click the <strong>CONNECT</strong> button. This will download an RDP file. Save this and use it for connecting to the machine later.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/clip_image039_thumb.png" alt="clip_image039"></p>
+</li>
+<li>
+<p>Open <strong>Windows PowerShell ISE</strong>.</p>
+</li>
+<li>
+<p>Click <strong>New</strong> to create a new script.</p>
+</li>
+<li>
+<p>Copy the following script and save it as <strong>C:\Scripts\Sync.ps1</strong>. DO NOT RUN IT.</p>
+<pre><code> $subscriptionName = 'Windows Azure MSDN - Visual Studio Ultimate'
+ $storageAccount = 'portalvhds9dvbvvff5hdg3'
+ $cloudsvc = ' DemoWebFarm' 
+ $publishSettings = 'C:\\Scripts\\credentials.publishsettings'
+
+ Import-Module 'C:\\Program Files (x86)\\Microsoft SDKs\\Windows Azure\\PowerShell\\Azure\\Azure.psd1'
+
+ Import-AzurePublishSettingsFile $publishSettings
+ Set-AzureSubscription -SubscriptionName $subscriptionName -CurrentStorageAccount $storageAccount
+
+ $publishingServer = (gc env:computername).toLower()
+
+ Get-AzureVM -ServiceName $cloudsvc | foreach { 
+     if ($_.Name.toLower() -ne $publishingServer) {
+        $target = $_.Name + &quot;:8080&quot;
+        $source = $publishingServer + &quot;:8080&quot;
+
+        $exe = &quot;C:\\Program Files\\IIS\\Microsoft Web Deploy V3\\msdeploy.exe&quot;
+        [Array]$params = &quot;-verb:sync&quot;, &quot;-source:contentPath=C:\\Inetpub\\wwwroot,computerName=$source&quot;, &quot;-dest:contentPath=C:\\Inetpub\\wwwroot,computerName=$target&quot;;
+
+         &amp; $exe $params;
+     }   
+ }
+</code></pre>
+</li>
+</ol>
+<p><strong><em>Create a Scheduled Task</em></strong></p>
+<ol start="5">
+<li>
+<p>Open <strong>Task Scheduler</strong>.</p>
+</li>
+<li>
+<p>Click **Create Task &hellip; **</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_23.png" alt="image"></p>
+</li>
+<li>
+<p>On the **General **tab set the <strong>Name</strong> and <strong>Run wehather user is logged on or not</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_24.png" alt="image"></p>
+</li>
+<li>
+<p>On the <strong>Triggers</strong> tab click <strong>New</strong>. Create a <strong>Daily</strong> trigger and <strong>Repeat task every</strong> 2 minutes. Click <strong>OK</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_25.png" alt="image"></p>
+</li>
+<li>
+<p>On the <strong>Actions</strong> tab click <strong>New</strong>. Set the following values:</p>
+<p><strong>Program/script</strong>: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe<br>
+<strong>Add arguments</strong>: -File C:\Scripts\Sync.ps1</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_26.png" alt="image"></p>
+</li>
+<li>
+<p>You should now see this as a scheduled task.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_27.png" alt="image"></p>
+</li>
+<li>
+<p>You can wait for this to run or run it manually. It should run successfully.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_28.png" alt="image"></p>
+</li>
+</ol>
+<p><strong><em>Deploy a Website through Web Deploy</em></strong></p>
+<ol>
+<li>
+<p>Create a new <strong>ASP.NET MVC 4 Web Applications</strong>. (In actually it can be anything.) Choose an <strong>Internet Application</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_29.png" alt="image"></p>
+</li>
+<li>
+<p>Update the <strong>HomeController.cs</strong> code:</p>
+<pre><code> public ActionResult Index()
+ {
+     string machineName = Environment.MachineName;
+     ViewBag.Message = &quot;Computer Name: &quot; + machineName;
+
+     return View();
+ }
+</code></pre>
+</li>
+<li>
+<p>Right-click on your application and click <strong>Publish</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_30.png" alt="image"></p>
+</li>
+<li>
+<p>In the dropdown select <strong>New</strong>.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_31.png" alt="image"></p>
+</li>
+<li>
+<p>Give your publish profile a name. Click OK.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_32.png" alt="image"></p>
+</li>
+<li>
+<p>Update all the fields:</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_33.png" alt="image"></p>
+<p><strong>Server</strong>: This is the DNS name of the cloud service with port 8080.</p>
+<p><strong>Site name</strong>: This needs to be “Default Web Site”.</p>
+<p><strong>User name</strong>: This is the administrator account.</p>
+<p><strong>Password</strong>: The password you set.</p>
+<p><strong>Destination URL</strong>: The same as server without the ports.</p>
+</li>
+<li>
+<p>Click <strong>Publish.</strong></p>
+</li>
+<li>
+<p>In Visual Studio you should see that it deployed successfully.</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_34.png" alt="image"></p>
+<p><strong>WARNING</strong>: Don’t be alarmed if the browser opens and you don’t see your site. Remember that we set synchronization at two minutes and you have a 66% chance of hitting iis2 or iis3.</p>
+</li>
+<li>
+<p>If you go back to your RDP session with <strong>iis1</strong> and browse to C:\inetpub\wwwroot you’ll see all your content has been deployed.</p>
+</li>
+<li>
+<p>Either way two minutes or manually invoke your synchronization task. Hit the website again and start refreshing:</p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_35.png" alt="image"></p>
+<p><img src="http://www.wadewegner.com/content/acc7ea03346c_12181/image_thumb_36.png" alt="image"></p>
+</li>
+</ol>
+<p>That’s it!</p>
+<p>Yeah, that might seem like a lot but realize that most of the work detailed here – such as the image preparation – you’ll only have to do one time. The rest of the time you’re using tools like PowerShell and Visual Studio.</p>
+<p>Enjoy!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

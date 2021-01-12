@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Configuring H T T P as a Transport Protocol in Biz Talk 2006 - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Configuring HTTP as a transport protocol in BizTalk 2006 - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2007/03/configuring-http-as-a-transport-protocol-in-biztalk-2006/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2007/03/configuring-http-as-a-transport-protocol-in-biztalk-2006/">Configuring HTTP as a transport protocol in BizTalk 2006</a>
+    </h2>
+    <div class="post-data">
+        Mar 6, 2007 |
+        2 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>I&rsquo;ve been working on a project where we have two independent BizTalk 2006 clusters &ndash; one at the headquarters, and one (actually, a few) at some a remote office. In order to send messages back and forth, we are using HTTP as the transport protocol.</p>
+<p>For example, we first query an AS400/DB2 database (via the HOST adapters for BizTalk 2006) through a receive port/location. This is picked up by a subscribing send port, which posts it via HTTP to the remote office. That remote office has an receive port/location configured to listen on HTTP, via the BTSHTTPReceive.dll ISAPI extension. This is then picked up by a send port that then inserts the data into an MSSQL database.</p>
+<p>Having set this up a few times now, I&rsquo;ve found that I keep making the same mistakes. Consequently, here&rsquo;s my short-list of items to watch for when setting up HTTP for both send/receive in BizTalk 2006:</p>
+<ul>
+<li>
+<p>Make sure your application pool is configured to run under the context of your BizTalk use account</p>
+</li>
+<li>
+<p>Confirm that your virtual directory has Scripts and Executables execute permissions</p>
+</li>
+<li>
+<p>Copy the file &ldquo;BTSHTTPReceive.dll&rdquo; into your virtual directory from the folder &ldquo;C:Program FilesMicrosoft BizTalk Server 2006HttpReceive&rdquo;</p>
+</li>
+<li>
+<p>Make sure to configure a &ldquo;Web Service Extension&rdquo; in IIS for the &ldquo;BTSHTTPReceive.dll&rdquo; file</p>
+</li>
+<li>
+<p>Remove anonymous access to your virtual directory, and use either Integrated or Basic authentication (preferrably Integrated)</p>
+</li>
+<li>
+<p>Make sure your send port utilizes the same security context, so that it can post to the site</p>
+</li>
+<li>
+<p>Confirm that your BizTalkUser account belongs to the BizTalk Server Administrators group</p>
+</li>
+</ul>
+<p>For your send port, configure your destination with a querystring value, like this: <a href="http://localhost/transport/BTSHTTPReceive.dll?MessageType">http://localhost/transport/BTSHTTPReceive.dll?MessageType</a>. I like to append the message type, but that&rsquo;s up to you. For your receive location, configure your virtual directory plus ISAPI extension to something like: /transport/BTSHTTPReceive.dll?MessageType.</p>
+<p>That&rsquo;s all I can think of off the top of my head.</p>
+<p>Best of luck!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

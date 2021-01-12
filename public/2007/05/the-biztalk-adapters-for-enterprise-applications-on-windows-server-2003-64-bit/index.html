@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+The Biz Talk Adapters for Enterprise Applications on Windows Server 2003 64 Bit - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="The BizTalk Adapters for Enterprise Applications on Windows Server 2003 64-bit - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2007/05/the-biztalk-adapters-for-enterprise-applications-on-windows-server-2003-64-bit/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2007/05/the-biztalk-adapters-for-enterprise-applications-on-windows-server-2003-64-bit/">The BizTalk Adapters for Enterprise Applications on Windows Server 2003 64-bit</a>
+    </h2>
+    <div class="post-data">
+        May 4, 2007 |
+        6 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>As I mentioned in a previous blog, I&rsquo;ve been setting up BizTalk 2006 in a 64-bit Windows Server 2003 environment. This BizTalk solution communicates to AS/400 and Oracle, so I&rsquo;ve been using the Microsoft BizTalk Adapters for Enterprise Applications (for Oracle connectivity) as well as Microsoft BizTalk Adapters for Host Systems (for AS/400 DB2 connectivity).</p>
+<p>Setting up these adapters has not gone extremely well in the 64-bit O/S (whereas a 32-bit O/S is quite simple to configure). I&rsquo;ve been set back about a week because many different issues related to the 64-bit environment (and a few other issues). In this post, I want to explain the issues I&rsquo;ve encountered with regards to the Oracle adapter in a Windows Server 2003 64-bit environment.</p>
+<p>This post assume that you&rsquo;ve already installed your Oracle client. Check out my post <a href="http://www.wadewegner.com/PermaLink,guid,c99bc4ea-984d-418c-aff7-9462f994f0a9.aspx">Using the &ldquo;ODBC Adapter for Oracle Database&rdquo; in BizTalk 2006</a> for information on how to install the client. However, if you&rsquo;re installing on a 64-bit machine, stop after you install the client. The 64-bit world is quite different &hellip;</p>
+<ol>
+<li>
+<p>Install the .NET Framework 1.1 and SP 1. The Oracle adapter requires the .NET Framework 1.1 and SP 1. My 64-bit environment didn&rsquo;t have the .NET Framework 1.1 installed, so this was an additional step I had to take. This was the easiest of all the steps I had to take &hellip;</p>
+</li>
+<li>
+<p>Create the ODBC connection. Turns out that you cannot simply run Data Sources (ODBC) from Administrative Tools. You have to run %WINDIR%\SysWOW64\odbc\ad32.exe, which invokes the 32-bit version of the Data Sources (ODBC) GUI. See my post <a href="http://wadewegner.com/2007/05/adding-odbc-connections-in-windows-server-2003-64-bit/">Adding ODBC connections in Windows Server 2003 64-bit</a> for more information.</p>
+</li>
+<li>
+<p>Install the Microsoft BizTalk Adapters for Enterprise Applications. I only installed Oracle (r) Database. Surprisingly, with the .NET Framework 1.1 and SP 1 installed, this goes very well.</p>
+</li>
+<li>
+<p>Update registry settings for the Microsoft BizTalk Adapters for Enterprise Applications. Turns out that some of the registry keys that are written during the installation are wrong (or rather, they&rsquo;re not interpreted correctly). Browse to the following registry key: HKEY_LOCAL_MACHINESOFTWAREWow6432NodeMicrosoftBizTalkAdapters. Two of the values, InstallDir and InstallPath, need to be changed. Do the following:</p>
+<ol>
+<li>
+<p>Change InstallDir from &ldquo;C:Program Files (x86)Microsoft BizTalk Adapters for Enterprise Applications&rdquo; to &ldquo;C:Progra~2Microsoft BizTalk Adapters for Enterprise Applications&rdquo;.</p>
+</li>
+<li>
+<p>Change InstallPath from &ldquo;C:Program Files (x86)Common FilesMicrosoft BizTalk Adapters for Enterprise Applications&rdquo; to &ldquo;C:Progra~2Common FilesMicrosoft BizTalk Adapters for Enterprise Applications&rdquo;.</p>
+</li>
+</ol>
+<p>Yes, for some reason, you have to change &ldquo;Program Files (x86)&rdquo; to &ldquo;Progra~2&rdquo;, probably because the Adapter isn&rsquo;t written very well. If you don&rsquo;t update these registry settings, you will most likely get the following error:</p>
+<pre><code> The description for Event ID ( 0 ) in Source ( Microsoft BizTalk Adapters for Enterprise Applications ) cannot be found. The local computer may not have the necessary registry information or message DLL files to display messages from a remote computer. You may be able to use the /AUXSOURCE= flag to retrieve this description; see Help and Support for details. The following information is part of the event: Exception occurred:  
+
+ Error Code: 12154 (0x2f7a)  
+ 08004 : [Oracle][ODBC][Ora]ORA-12154: TNS:could not resolve service name.
+</code></pre>
+</li>
+<li>
+<p>Update additional registry settings to fix permission errors if you are using domain groups for authentication.</p>
+</li>
+</ol>
+<p>Your domain groups will not have access to the Oracle adapter by default. In order to allow the runtimeagent.exe (which is the executable that is spawned and runs the Oracle adapter) to run appropriately, it needs to be able to access a registry key. See the following article for more information: <a href="http://support.microsoft.com/?id=923650">http://support.microsoft.com/?id=923650</a>.</p>
+<p>Do the following to resolve this issue (from the article):</p>
+<ol>
+<li>
+<p>Locate the following registry key: HKEY_LOCAL_MACHINESoftwareWow6432NodeMicrosoftBizTalkAdaptersConfig</p>
+<p>Thanks to <a href="http://www.soa-thoughts.blogspot.com/">Steef-Jan Wiggers</a> for noting that I forgot to display the 32-bit path in the Wow6432Node key.</p>
+</li>
+<li>
+<p>Right-click the registry key that you located in step 1, and then click Permissions.</p>
+</li>
+<li>
+<p>On the Security tab, click Add.</p>
+</li>
+<li>
+<p>Type the domain group or the domain user account that is configured as the BizTalk host instance, and then click OK.</p>
+</li>
+<li>
+<p>On the Security tab, click the domain group or the domain user account that you added in step 4, click to select the Read check box, and then click OK.</p>
+<p>If you don&rsquo;t update these registry settings, you will most likely get the following (unhelpful) error:</p>
+<pre><code> &quot;RuntimeAgent: Error trapped in constructor: No connection could be made because the target machine actively refused it&quot;
+
+ Error transmitting message: No connection could be made because the target machine actively refused it
+</code></pre>
+</li>
+<li>
+<p>Update the security permissions on your Oracle folder.</p>
+</li>
+</ol>
+<p>This is the most bizarre step of all, and it&rsquo;s not particular to the 64-bit environment. Oracle software requires that you give the Authenticated User privilege to the Oracle Home. In most cases, your Oracle agent will not be the Administrator account (or at least, I hope it&rsquo;s not). However, there seems to be an issue with the permissions associated to Authenticated Users. Consequently, the agent you specify to run the Oracle &ldquo;runtimeagent.exe&rdquo; is unable to gain access to the folder. You might see the following error:</p>
+<pre><code>IM003 : Specified driver could not be loaded due to system error 5
+</code></pre>
+<p>To resolve this problem, you have to do the following:</p>
+<ol>
+<li>
+<p>Log on to Windows as a user with Administrator privileges.</p>
+</li>
+<li>
+<p>Launch Windows Explorer from the Start Menu and and navigate to the ORACLE_HOME folder. This is typically the &ldquo;Ora92&rdquo; folder under the &ldquo;Oracle&rdquo; folder (i.e. D:OracleOra92).</p>
+</li>
+<li>
+<p>Right-click on the ORACLE_HOME folder and choose the &ldquo;Properties&rdquo; option from the drop down list. A &ldquo;Properties&rdquo; window should appear.</p>
+</li>
+<li>
+<p>Click on the &ldquo;Security&rdquo; tab of the &ldquo;Properties&rdquo; window.</p>
+</li>
+<li>
+<p>Click on &ldquo;Authenticated Users&rdquo; item in the &ldquo;Name&rdquo; list (on Windows XP the &ldquo;Name&rdquo; list is called &ldquo;Group or user names&rdquo;).</p>
+</li>
+<li>
+<p>Uncheck the &ldquo;Read and Execute&rdquo; box in the &ldquo;Permissions&rdquo; list under the &ldquo;Allow&rdquo; column (on Windows XP the &ldquo;Permissions&rdquo; list is called &ldquo;Permissions for Authenticated Users&rdquo;).</p>
+</li>
+<li>
+<p>Re-check the &ldquo;Read and Execute&rdquo; box under the &ldquo;Allow&rdquo; column (this is the box you just unchecked).</p>
+</li>
+<li>
+<p>Click the &ldquo;Advanced&rdquo; button and in the &ldquo;Permission Entries&rdquo; list make sure you see the &ldquo;Authenticated Users&rdquo; listed there with:</p>
+<pre><code> Permission = Read &amp; Execute
+
+ Apply To = This folder, subfolders and files
+</code></pre>
+<p>If this is NOT the case, edit that line and make sure the &ldquo;Apply onto&rdquo; drop-down box is set to &ldquo;This folder, subfolders and files&rdquo;. This should already be set properly but it is important that you verify this.</p>
+</li>
+<li>
+<p>Click the &ldquo;Ok&rdquo; button until you close out all of the security properties windows. The cursor may present the hour glass for a few seconds as it applies the permissions you just changed to all subfolders and files.</p>
+</li>
+<li>
+<p>Reboot your computer to assure that these changes have taken effect.</p>
+</li>
+</ol>
+<p>Yes, I was in as much shock as you are. Uncheck a flag, and then re-check it. I lost almost three days because of this bug.</p>
+<p>That&rsquo;s about it! A series of (mostly) undocumented steps that are required in order to get the Oracle adapter to function in a 64-bit environment. Fortunately, I had some great support from the escalation engineer&rsquo;s with the Microsoft Product Support Services group.</p>
+<p>I hope this post helps someone else avoid much of the pain and agony I had to go through &hellip;</p>
+<p>Best of luck!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

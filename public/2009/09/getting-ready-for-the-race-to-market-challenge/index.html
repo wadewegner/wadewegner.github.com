@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Getting Ready for the &#39; Race to Market Challenge&#39; - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Getting ready for the &lsquo;Race to Market Challenge&rsquo; - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2009/09/getting-ready-for-the-race-to-market-challenge/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2009/09/getting-ready-for-the-race-to-market-challenge/">Getting ready for the &lsquo;Race to Market Challenge&rsquo;</a>
+    </h2>
+    <div class="post-data">
+        Sep 3, 2009 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>I am really excited about <a href="http://www.mobilethisdeveloper.com/">The Race to Market Challenge</a>, sponsored by the Windows Mobile team.  Nothing motivates me like a challenge that promises great prizes and glory - especially when the prize is a <a href="http://www.microsoft.com/surface/">Microsoft Surface</a>!</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2009/09/image10.png" alt="image"></p>
+<p>If that&rsquo;s not enough to get you pumped up about developing a killer application, what will?</p>
+<p>I&rsquo;ve decided to build a mobile application myself (two, actually), and consequently needed to make sure that I had my development environment setup appropriately.  There are quite a few steps required in order to prepare your machine for Windows Mobile development, but it&rsquo;s not too bad.</p>
+<blockquote>
+<p>I am running Windows 7 RTM 64 bit with Visual Studio 2008 Team Suite.  Your mileage may vary if you&rsquo;re running a different O/S or version of Visual Studio.  That said, I strongly recommend you upgrade to <a href="http://www.microsoft.com/windows/windows-7/default.aspx">Windows 7</a> and insist on <a href="http://www.microsoft.com/visualstudio/en-us/products/teamsystem/default.mspx">Team Suite</a> - there are no substitutes for good tools.</p>
+</blockquote>
+<p>Here are the steps I took in order to setup my machine:</p>
+<ol>
+<li>
+<p>Download and install <a href="http://www.microsoft.com/downloads/details.aspx?familyid=4F68EB56-7825-43B2-AC89-2030ED98ED95&amp;displaylang=en">Microsoft Windows Mobile Device Center 6.1 Driver for Windows Vista (64-bit)</a>.  At the moment it doesn&rsquo;t appear as if there&rsquo;s a specific version for Windows 7.  This Windows Vista version seems to work just fine.</p>
+</li>
+<li>
+<p>Download the Windows Mobile 6 SDKs and 6.5 tool kit.  Be sure and note the different terminology for the different phones - evidently there are distinctions between Windows Mobile Standard (previously Windows Mobile for Smartphone) and Windows Mobile Professional (previously Windows Mobile for Pocket PC).�</p>
+</li>
+</ol>
+<pre><code>* Install [Windows Mobile 6 Professional and Standard Software Development Kits Refresh](http://www.microsoft.com/downloads/details.aspx?FamilyID=06111a3a-a651-4745-88ef-3d48091a390b&amp;displaylang=en).
+
+
+* Install [Windows Mobile 6.5 Developer Tool Kit](http://www.microsoft.com/downloads/details.aspx?displaylang=en&amp;FamilyID=20686a1d-97a8-4f80-bc6a-ae010e085a6e).
+</code></pre>
+<ol start="3">
+<li>I also wanted to install the Mobile Applications Blocks from patterns &amp; practices.</li>
+</ol>
+<pre><code>* First install [SQL Server Compact 3.5 SP1 for Windows Mobile](http://www.microsoft.com/downloads/details.aspx?FamilyID=FCE9ABBF-F807-45D6-A457-AB5615001C8F&amp;displaylang=en).  This is required for using the Data Access Block, Disconnected Agent, and Subscription Block.
+
+
+* Install the [Mobile Application Blocks](http://mobile.codeplex.com/) through the [Community Drop Installer (05-21-2009)](http://mobile.codeplex.com/Release/ProjectReleases.aspx?ReleaseId=27708).
+</code></pre>
+<ol start="4">
+<li>I am also a big fan of reference applications, and using them to evaluate best practices when developing on a new platform.  Consequently, I wanted to get the following two solution accelerators for Windows Mobile.</li>
+</ol>
+<pre><code>* Install [Microsoft Windows Mobile 6 Consumer Solution Accelerator](http://www.microsoft.com/downloads/details.aspx?FamilyID=ACB764DF-EF79-4B96-A47F-6C7D916473E5&amp;displaylang=en).  This is a showcase mobile consumer application that assists a user traveling to a meeting.  Definitely worth reviewing to harness best practices.
+
+
+* Install [Windows Mobile Line of Business Solution Accelerator 2008](http://www.microsoft.com/downloads/details.aspx?FamilyId=428E4C3D-64AD-4A3D-85D2-E711ABC87F04&amp;displaylang=en).  This is a supply chain application that uses the .NET Compact Framework 3.5, SQL Server Compact 3.5, and has a great deal of useful documentation.
+</code></pre>
+<p>A lengthy process, but not too difficult.</p>
+<p>Once I completed the setup, I wanted to confirm that I could actually build and emulate an application.  I decided to do this very quickly by creating a &ldquo;Hello Windows Mobile!&rdquo; application and deploy to one of the Windows Mobile 6.5 emulators.</p>
+<p>Here are the steps I took:</p>
+<ol>
+<li>You need to start a device emulator so that you have something to which you can deploy the application.  Run the Device Emulator Manager by selecting <strong>Start -&gt; All Programs -&gt; Windows Mobile 6 SDK -&gt; Tools -&gt; Device Emulator Manager</strong>.</li>
+</ol>
+<pre><code>* I Create a new smart device project.  This will create a new project and give you a blank windows mobile form.
+
+
+* Open up Visual Studio, and click **File -&gt; New -&gt; Project**.
+
+
+* Select **Visual C# -&gt; Smart Device -&gt; Smart Device Project**.  Name it whatever you like.
+
+
+* From the New Smart Device Project screen select &quot;Windows Mobile 6 Professional SDK&quot; for your target platform and choose &quot;Device Application&quot;.
+</code></pre>
+<ol start="2">
+<li>
+<p>From the Toolbox, drag a Label control onto the form and change the text to &ldquo;Hello Windows Mobile!&rdquo;</p>
+</li>
+<li>
+<p>Debug the project by clicking F5 (or <strong>Debug -&gt; Start Debugging</strong>).</p>
+</li>
+</ol>
+<pre><code>* You will be prompted to choose an emulator.  I chose the USA Windows Mobile 6.5 Professional VGA Emulator under **Datastore -&gt; Windows Mobile 6 Professional SDK**.
+
+
+* Here's what it looks like - very cool:
+</code></pre>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2009/09/image11.png" alt="image"></p>
+<pre><code>* After a few moments, your applications will get deployed to the device.  It may take a few minutes the first time as all the necessary pieces are deployed.  Once it has finished, you should see your application deployed.  It will look like this:
+</code></pre>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2009/09/image12.png" alt="image"></p>
+<ol start="4">
+<li>When you close the emulator, go ahead and have it save the state.  This will speed things up when you go to deploy the next time.</li>
+</ol>
+<p>In the end, it&rsquo;s really exciting to have a fully functional development environment that can target all the Windows Mobile 6.X platforms.  Lots of potential for building applications that have a huge install base!</p>
+<p>I really hope that you found this useful.  I strongly encourage you to sign up for the <a href="http://www.mobilethisdeveloper.com/">Race to Market Challenge</a> and start building some great applications.</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

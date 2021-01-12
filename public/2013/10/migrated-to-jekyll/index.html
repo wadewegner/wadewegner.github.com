@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Migrated to Jekyll - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Migrated to Jekyll - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2013/10/migrated-to-jekyll/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2013/10/migrated-to-jekyll/">Migrated to Jekyll</a>
+    </h2>
+    <div class="post-data">
+        Oct 25, 2013 |
+        5 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>For quite some time I&rsquo;ve wanted to move my blog off  WordPress and start to use <a href="http://jekyllrb.com/">Jekyll</a> - in fact, I started looking into Jekyll back when I was still at Microsoft and had many conversations with <a href="http://blog.smarx.com/">Steve Marx</a> about making the move. In this short post I want to discuss my motivations for making the switch and also highlight some of the unique things I did to make this quick and simple. I do not plan to get into the details of Jekyll and how it works - there are a lot of posts and articles available for you to review.</p>
+<p><strong>Why Did You Move to Jekyll?</strong></p>
+<p>I&rsquo;ve already had a number of people ask my why I made the move.</p>
+<ul>
+<li>
+<p>I want more control of my HTML. I found it extremely difficult to customize and control the rendering of content with WordPress.</p>
+</li>
+<li>
+<p>It&rsquo;s just HTML. No databases. No server-side rendering of content. It&rsquo;s simple.</p>
+</li>
+<li>
+<p>Because it&rsquo;s just HTML and so simple, you can host it almost anywhere. I&rsquo;ve chosen Github Pages (for now), but you could easily host it on <a href="http://www.site44.com/">Site44</a>, <a href="https://www.heroku.com/">Heroku</a>, or even <a href="http://www.allthingsdistributed.com/2011/08/Jekyll-amazon-s3.html">Amazon S3</a>.</p>
+</li>
+<li>
+<p>Cost. I know there are cheaper ways to host WordPress, but I had been on GoDaddy for quite a long time. Moving to Jekyll and Github Pages removes the cost of hosting.</p>
+</li>
+<li>
+<p>Easy to have your entire blog - most importantly all your posts! - in source control. I simply commit and push my updates to Github and not only does it get published it also commits to my repository.</p>
+</li>
+<li>
+<p>Writing posts doesn&rsquo;t require any fancy tools - since everything is written in Markdown, I can use any text editing software I want. I use <a href="http://www.sublimetext.com/">Sublime Text</a>, but I could just as easily use Notepad.</p>
+</li>
+<li>
+<p>Like any other hacker, I wanted to learn something knew.</p>
+</li>
+</ul>
+<p>It&rsquo;s unlikely all of these points will resonate with you, but it&rsquo;s likely that a few will.</p>
+<p><strong>A Few Tips on Migration</strong></p>
+<p>So, now that you understand my motivation, let me share a few of the things I did to make the migration from WordPress to Jekyll easier.</p>
+<ol>
+<li>
+<p>Use a Mac. I hate saying this, but the reality is that this entire process will go easier if you use a Mac. I have tried twice in the past to migrate and failed both times from a PC. Even now that I have the migration complete I find that I&rsquo;m unable to run the command &hellip;</p>
+<pre><code> bundle exec jekyll serve --watch
+</code></pre>
+<p>&hellip; on the PC and get it to create the static files as it will fail to properly convert the markdown files. This works perfectly fine on both the Mac as well as in the Github Pages.</p>
+</li>
+<li>
+<p>Use <a href="https://github.com/thomasf/exitwp">ExitWP</a>. I performed my migration against a WordPress export file. Originally I used the Jekyll importer for Wordpress but found that it did not do a good job of converting my HTML into markdown. I dug around a bit and found ExitWP - it ran like a champ and did a fantastic job of creating the markdown files. Simply clone the repository and use your WordPress.xml export file.</p>
+</li>
+<li>
+<p>I decided to use <a href="http://jekyllbootstrap.com/">Jekyll Bootstrap</a> as the starting point for a few reasons:</p>
+</li>
+</ol>
+<ul>
+<li>I love the simple elegance of Bootstrap, and it was already baked in.</li>
+<li>It&rsquo;s 100% compatible with Github Pages.</li>
+<li>There are some nice <a href="https://github.com/Shopify/liquid">Liquid</a> templates for common things like Archives, Categories, Tags, and so forth.</li>
+</ul>
+  <br/>
+	All this said, Jekyll Boostrap also had a ton of code for tools and includes that I'll never use. I ended up spending a good amount of time removing and triaging much of the code. I like it simple and neat. You can take a look at my repository for inspiration.
+<ol start="4">
+<li>
+<p>My blog has a lot of code snippets. Even though ExitWP did a good job of converting my HTML to markdown, I found that most of the code snippets did not get converted well. I&rsquo;ve spent a decent amount of time going through the posts and updating. To make my life simpler, I decided to use Webscript and some simple jQuery code to give my readers the ability to notify me of a page with bad formatting.</p>
+<p>To implement this I simply created a link at the top of each blog post.</p>
+<p><img src="http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-25-PardonOurDust.JPG" alt=""></p>
+<p>When clicked, I perform a simple post to my Webscript &hellip;</p>
+<pre><code> $( &quot;#target&quot; ).click(function() {
+	
+   $.post('http://MYCNAME.webscript.io/fixit', {
+       url: '{{ BASE_PATH }}{{ page.url }}', submittedDate: new Date().getTime()
+     }, function (data) {
+	    
+       // capture response
+	
+     });
+	
+   reset();
+   alertify.alert(&quot;Thank you for letting me know! I'll try to get this fixed ASAP.&quot;);
+ });
+</code></pre>
+<p>&hellip; and then thank the user (using alertify.js).</p>
+<p><img src="http://wadewegner.blob.core.windows.net/wordpress/2013/10/2013-10-25-ThankYou.JPG" alt=""></p>
+<p>In my Webscript I store the URL in a JSON file. I have a second Webscript that will return the JSON file and show me all the URLs posted by users.</p>
+<pre><code> [
+    {
+       &quot;url&quot;:&quot;/2013/03/creating-anonymous-rest-apis-with-salesforce-com/&quot;,
+       &quot;submittedDate&quot;:&quot;1382712106161&quot;
+    },
+    {
+       &quot;url&quot;:&quot;/2011/02/running-multiple-websites-in-a-windows-azure-web-role/&quot;,
+       &quot;submittedDate&quot;:&quot;1382687836498&quot;
+    },
+    {
+       &quot;url&quot;:&quot;/2011/02/running-multiple-websites-in-a-windows-azure-web-role/&quot;,
+       &quot;submittedDate&quot;:&quot;1382687828850&quot;
+    },
+    {
+       &quot;url&quot;:&quot;/2007/05/a-new-twist-to-the-error-unable-to-enlist-in-the-transaction/&quot;,
+       &quot;submittedDate&quot;:&quot;1382676576905&quot;
+    },
+    {
+       &quot;url&quot;:&quot;/2010/12/using-web-deploy-with-windows-azure-for-rapid-development/&quot;,
+       &quot;submittedDate&quot;:&quot;1382673263024&quot;
+    }
+ ]
+</code></pre>
+</li>
+<li>
+<p>It was important for me to migrate all the comments people have made over the years. The easiest way I found to do this is to setup an account with <a href="http://disqus.com/">Disqus</a>, use their tools for migrating Wordpress comments into Disqus, and then use Disqus as your comment system.</p>
+</li>
+<li>
+<p>Ensure that your URLs are consistent so that pages indexed by search providers still work. I simply updated the _config.yml file so that the permalink is defined like this:</p>
+<pre><code> permalink: /:year/:month/:title/
+</code></pre>
+</li>
+</ol>
+<p>I&rsquo;ll dig into the topic of Webscript.io deeper in a separate post. Webscript.io is a fantastic tool that you should look into using - especially if you have a static website and don&rsquo;t want to host your own Web APIs. Suffice to say, this is an easy / simple way to use crowd-sourcing to help me identify posts that need to be fixed.</p>
+<p>Aside from the above, I haven&rsquo;t done all that much. I love having all my code accessible and find that I spend more time experimenting with things I&rsquo;d never do on Wordpress.</p>
+<p>Hopefully this post explains my rationale for migrating to Jekyll and gives a few tips to help you, should you also decide to make the move.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>
