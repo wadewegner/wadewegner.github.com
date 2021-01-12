@@ -5,7 +5,7 @@
         {{ if .Site.Params.home.showLatest | default true }}
         <h2 class="title is-2 has-text-centered">{{ i18n "index_home_latestPosts" . }}</h2>
             {{ range first 5 .Pages.ByPublishDate.Reverse }}
-            <div class="summary">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}
+            <div class="summary top-pad"><span style="font-weight:bold;">{{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }}{{ end }}</span>
                 <h3 class="title is-3 latest-post-title top-pad"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h3>
                     <div class="markdown">
                     {{ .Summary }}
