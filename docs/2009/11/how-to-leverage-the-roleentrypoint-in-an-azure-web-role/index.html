@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+How to Leverage the Role Entry Point in an Azure Web Role - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="How to Leverage the RoleEntryPoint in an Azure Web Role - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2009/11/how-to-leverage-the-roleentrypoint-in-an-azure-web-role/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2009/11/how-to-leverage-the-roleentrypoint-in-an-azure-web-role/">How to Leverage the RoleEntryPoint in an Azure Web Role</a>
+    </h2>
+    <div class="post-data">
+        Nov 4, 2009 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p><img src="https://wadewegner.blob.core.windows.net/wordpress/2009/11/WindowsAzure.png" alt="Windows Azure"></p>
+<p>One of the advantages to the approach our teams building the Windows Azure Platform have taken is flexibility. Recently, when I spoke at the <a href="http://www.wadewegner.com/index.php/2009/10/16/presenting-on-the-windows-azure-platform-at-the-day-of-cloud/">Day of Cloud presentation</a>, I recall Don Schwarz from Google making these two points (you can see video of his talk <a href="http://www.blip.tv/file/2786812">here</a>):</p>
+<ul>
+<li>
+<p>You can’t spin up your own threads in Google App Engine.</p>
+</li>
+<li>
+<p>You build your applications according to how Google thinks your apps should be built (the argument being that Google knows how to run highly available services at scale, which I think is a fair statement).</p>
+</li>
+</ul>
+<p>Now to be fair, there are good reasons for this – the Google App Engine has a number of very good use cases (Don Schwarz demonstrated one of them when showing the audience a multiplayer game running on Google App Engine).</p>
+<blockquote>
+<p>Note: I’d like state for the record that I mean no criticism of other cloud vendors (i.e. Amazon, Google, and SalesForce). I think each of them have a place in the market, and exhibit various strengths. That said, I do believe that the Windows Azure Platform stands out as the only real platform that can bridge the chasm between cloud services and on-premises software. (Note to self: back this statement up in a future blog post.)</p>
+</blockquote>
+<p>I would argue, however, that most enterprise developers require a little more flexibility when building out enterprise class applications. The Windows Azure Platform provides this flexibility (I mean, come on – sometimes you just want to execute some native code!).</p>
+<p>I decided to test how far I could take this flexibility in Windows Azure.</p>
+<p>I am a big fan of <a href="http://msdn.microsoft.com/en-us/library/dd179341.aspx">Worker Roles</a> in Windows Azure. I really like the idea of having an asynchronous, “headless” service that’s working for me in the background. I wanted to see if I could spin up an equivalent to a Worker Role in a <a href="http://msdn.microsoft.com/en-us/library/dd179341.aspx">Web Role</a>, so that in addition to having my Web application running in a Web Role I could also get a service running in the background.</p>
+<p>Why would I want to do this? Well, here are a few of reasons:</p>
+<ul>
+<li>
+<p>Asynchronous logging service running in every Azure instance (whether a web or worker role); this service might take information from the event log and write it to an Azure table.</p>
+</li>
+<li>
+<p>Clean-up operations (i.e. temporary scratch writes, etc.)</p>
+</li>
+<li>
+<p>Opening and managing socket connections to the service bus (this is my favorite scenario).</p>
+</li>
+</ul>
+<p>The list could go on. Hopefully you get the point.</p>
+<p>So, how would you do this? Again, given the flexibility of the platform, there are many ways you can do this. Below you’ll find one simple way.</p>
+<ol>
+<li>
+<p>Create a new cloud services project, and add a web role.</p>
+</li>
+<li>
+<p>Create a new class and inherit from Microsoft.ServiceHosting.ServiceRuntime.RoleEntryPoint. You&rsquo;ll have to override the Start and RoleStatus methods.</p>
+<p><span style="color: #0000ff">using</span> Microsoft.ServiceHosting.ServiceRuntime;</p>
+<p><span style="color: #0000ff">using</span> System.Threading;</p>
+<p><span style="color: #0000ff">namespace</span> Web</p>
+<p>{</p>
+<pre><code> &lt;span style=&quot;color: #0000ff&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #0000ff&quot;&gt;class&lt;/span&gt; MyWebWorkerRole : RoleEntryPoint
+
+
+ {
+
+
+     &lt;span style=&quot;color: #0000ff&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #0000ff&quot;&gt;override&lt;/span&gt; &lt;span style=&quot;color: #0000ff&quot;&gt;void&lt;/span&gt; Start()
+
+
+     {
+
+
+         &lt;span style=&quot;color: #0000ff&quot;&gt;while&lt;/span&gt; (&lt;span style=&quot;color: #0000ff&quot;&gt;true&lt;/span&gt;)
+
+
+         {
+
+
+             RoleManager.WriteToLog(&quot;&lt;span style=&quot;color: #8b0000&quot;&gt;Information&lt;/span&gt;&quot;, &quot;&lt;span style=&quot;color: #8b0000&quot;&gt;The worker role is running.&lt;/span&gt;&quot;);
+
+
+             Thread.Sleep(5000);
+
+
+         }
+
+
+     }
+
+
+     &lt;span style=&quot;color: #0000ff&quot;&gt;public&lt;/span&gt; &lt;span style=&quot;color: #0000ff&quot;&gt;override&lt;/span&gt; RoleStatus GetHealthStatus()
+
+
+     {
+
+
+         &lt;span style=&quot;color: #0000ff&quot;&gt;return&lt;/span&gt; RoleStatus.Healthy;
+
+
+     }
+
+
+ }
+</code></pre>
+<p>}</p>
+</li>
+<li>
+<p>Create a Global.asax page.</p>
+</li>
+<li>
+<p>Create a method where you initialize and start and initialize your class that inherits from RoleEntryPoint.</p>
+<p><span style="color: #0000ff">private</span> <span style="color: #0000ff">void</span> StartWorkerRole()</p>
+<p>{</p>
+<pre><code> MyWebWorkerRole myWebWorkerRole = &lt;span style=&quot;color: #0000ff&quot;&gt;new&lt;/span&gt; MyWebWorkerRole();
+
+
+ myWebWorkerRole.Initialize();
+
+
+ myWebWorkerRole.Start();
+</code></pre>
+<p>}</p>
+</li>
+<li>
+<p>Create local threading variables that you will use to run your method.</p>
+<p><span style="color: #0000ff">public</span> <span style="color: #0000ff">class</span> Global : System.Web.HttpApplication</p>
+<p>{</p>
+<pre><code> System.Threading.ThreadStart ts;
+
+
+ System.Threading.Thread t;
+
+
+ ...
+</code></pre>
+</li>
+<li>
+<p>Update the Application_BeginRequest method to invoke your method on a new thread. Be sure and check to see if the thread is already running, otherwise it will get started multiple times.</p>
+<p><span style="color: #0000ff">protected</span> <span style="color: #0000ff">void</span> Application_BeginRequest(<span style="color: #0000ff">object</span> sender, EventArgs e)</p>
+<p>{</p>
+<pre><code> &lt;span style=&quot;color: #0000ff&quot;&gt;if&lt;/span&gt; (t == &lt;span style=&quot;color: #0000ff&quot;&gt;null&lt;/span&gt;)
+
+
+ {
+
+
+     ts = &lt;span style=&quot;color: #0000ff&quot;&gt;new&lt;/span&gt; System.Threading.ThreadStart(StartWorkerRole);
+
+
+     t = &lt;span style=&quot;color: #0000ff&quot;&gt;new&lt;/span&gt; System.Threading.Thread(ts);
+
+
+     t.Start();
+
+
+ }
+</code></pre>
+<p>}</p>
+</li>
+</ol>
+<p>And that should do it. Now you have a class that will run asynchronously in all your Web Role instances. And since it inherits from the RoleEntryPoint, you can leverage this technique for both your Web and Worker Role instances. I’d recommend placing this class in a separate class library and adding a reference to it from your various projects.</p>
+<blockquote>
+</blockquote>
+<blockquote>
+<p>Note: It is highly probable that there will be some changes to the APIs and assemblies come PDC. While these concepts will stay valid, the underlying code will probably change. If this happens, I’ll be sure and provide an update.</p>
+</blockquote>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Creating a Plugin for the Salesforce C L I - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Creating a Plugin for the Salesforce CLI - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="A peek into the mechanics of creating a custom plugin for the Salesforce command-line interface (CLI)."/>
+<meta property="og:url" content="https://www.wadewegner.com/2017/03/creating-a-plugin-for-the-salesforce-cli/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2017/03/creating-a-plugin-for-the-salesforce-cli/">Creating a Plugin for the Salesforce CLI</a>
+    </h2>
+    <div class="post-data">
+        Mar 31, 2017 |
+        2 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p><em>This post is valid for the Salesforce DX (SFDX) pilot. Please note that details may change and I&rsquo;ll do my best to update accordingly.</em></p>
+<p>Recently I highlighted a neat way to <a href="http://www.wadewegner.com/2017/03/salesforce-dx-strike/">use open source software with Salesforce DX</a>. Since then I&rsquo;ve used Appiphony&rsquo;s custom base components many, many times in demos and apps I&rsquo;ve built.</p>
+<p>It didn&rsquo;t take long for me to get tired of removing the Git details when pulling the OSS from Github. So I created <a href="https://github.com/wadewegner/sfdx-oss-plugin">sfdx-oss-plugin</a>. With this command, you can run <code>sfdx wadewegner:source:oss -r wadewegner/Strike-Components -p .</code> to grab all the source listed in the <a href="https://github.com/wadewegner/Strike-Components/blob/master/sfdx-oss-manifest.json">SFDX oss manifest</a> into whatever directory you specify. It also makes it really easy to create a SFDX oss manifest file with the command <code>sfdx wadewegner:source:create -p .</code>, which creates the JSON file for everything in the specified path.</p>
+<p>Pretty nifty, eh? To try it out:</p>
+<ol>
+<li>
+<p>Install the SDFX CLI.</p>
+</li>
+<li>
+<p>Clone the repo: <code>git clone git@github.com:wadewegner/sfdx-oss-plugin.git</code></p>
+</li>
+<li>
+<p>Install npm modules: <code>npm install</code></p>
+</li>
+<li>
+<p>Link the plugin: <code>sfdx plugins:link .</code></p>
+</li>
+</ol>
+<p>(Perhaps I&rsquo;ll publish this at somepoint.)</p>
+<p>This highlights one of the advantages building our Salesforce CLI on the Heroku CLI. Not only do we get to take advantage of frequent updates (both for features and security) of the Heroku CLI, but we can also take advantage of plugin extensibility.</p>
+<p>For the most part, building a plugin for the Salesforce CLI is exactly the same as <a href="https://devcenter.heroku.com/articles/developing-cli-plugins">building a plugin for the Heroku CLI</a>. I think you&rsquo;ll find <a href="https://github.com/wadewegner/sfdx-oss-plugin">sfdx-oss-plugin</a> a very good reference.</p>
+<p>One significant change we&rsquo;ve made is the introduction of a namespace. You can see it on <a href="https://github.com/wadewegner/sfdx-oss-plugin/blob/master/index.js#L16">index.js#L16</a> and in the following sample:</p>
+<pre><code>exports.namespace = {
+    name: 'wadewegner',
+    description: 'commands from Wade Wegner'
+};
+</code></pre><p>This organizes all the commands in my plugin under <code>sfdx wadewegner</code>.</p>
+<p>Overtime, things will change. I&rsquo;ll be sure to update this post accordingly.</p>
+<p>I hope you&rsquo;ve found this post useful and that you&rsquo;re enjoying the Salesforce DX pilot! To add yourself to the Salesforce DX pilot waitlist, enter your info here: <a href="http://go.pardot.com/l/27572/2017-01-23/6gh89x">http://go.pardot.com/l/27572/2017-01-23/6gh89x</a></p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

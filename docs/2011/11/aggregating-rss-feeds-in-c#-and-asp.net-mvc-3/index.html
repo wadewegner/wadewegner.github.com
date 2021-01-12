@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Aggregating R S S Feeds in C# and a S P. N E T M v C 3 - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Aggregating RSS Feeds in C# and ASP.NET MVC 3 - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/11/aggregating-rss-feeds-in-c#-and-asp.net-mvc-3/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/11/aggregating-rss-feeds-in-c#-and-asp.net-mvc-3/">Aggregating RSS Feeds in C# and ASP.NET MVC 3</a>
+    </h2>
+    <div class="post-data">
+        Nov 9, 2011 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>I’m working on a Windows Phone project that requires me to surface up multiple RSS feeds as a single source. I needed a way to do this quickly and easily, and with a little help from friends on Twitter (particularly a suggestion from <a href="http://twitter.com/bertcraven">@bertcraven</a>) I found a nice way to accomplish this using the <strong>SyndicationFeed</strong> in <strong>System.ServiceModel.Syndication</strong>.</p>
+<p>I’ve detailed the steps below, but if you want to get to the heart of it then here’s the code to get this working:</p>
+<pre><code>SyndicationFeed mainFeed = new SyndicationFeed(); 
+List&lt;string&gt; feeds = new List&lt;string&gt;(); 
+
+feeds.Add(&quot;http://feeds2.feedburner.com/WadeWegner&quot;); 
+feeds.Add(&quot;http://www.nickharris.net/feed/&quot;); 
+feeds.Add(&quot;http://feeds.feedburner.com/ntotten&quot;); 
+feeds.Add(&quot;http://michaelwasham.com/feed/&quot;); 
+feeds.Add(&quot;http://blogs.msdn.com/b/hpctrekker/rss.aspx&quot;); 
+
+foreach (var feed in GetRssFeeds()) 
+{ 
+    Uri feedUri = new Uri(feed); SyndicationFeed syndicationFeed; 
+    using (XmlReader reader = XmlReader.Create(feedUri.AbsoluteUri)) 
+    {
+        syndicationFeed = SyndicationFeed.Load(reader); 
+    }
+    syndicationFeed.Id = feed;
+
+    SyndicationFeed tempFeed = new SyndicationFeed( 
+        mainFeed.Items.Union(syndicationFeed.Items).OrderByDescending(u =&gt; u.PublishDate)); 
+	
+    mainFeed = tempFeed; 
+}
+</code></pre>
+<p>It’s really quite simple – once you know how to do it!</p>
+<p>As you iterate through the list of feeds we use LINQ to union the feeds together – in the end this produces a main feed that has all the contents. Along the way we sort the elements in a descending order based on the <strong>PublishDate</strong> – otherwise you’ll just get blocks from each of the feeds and nothing is sorted according to the date publish. Once this is done you end up with a main feed that you can use.</p>
+<p>For me I wanted to create a service that published the aggregated feed – I chose to use ASP.NET MVC 3 for this new feed. Here are steps you can follow in order to get this working in ASP.NET MVC 3.</p>
+<ol>
+<li>
+<p>Create a new ASP.NET MVC 3 Web Application. I’ve called mine <strong>RssFeed</strong>.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/NewProject_thumb.jpg" alt="NewProject"></p>
+</li>
+<li>
+<p>Choose an <strong>Internet Application</strong> using the <strong>Razor</strong> view engine and <strong>HTML5 semantic</strong> markup.</p>
+</li>
+<li>
+<p>Add <strong>System.ServiceModel</strong> as a reference in the application. We’ll use this with <strong>SyndicationFeed</strong>.</p>
+</li>
+<li>
+<p>Create an empty controller. I’ve called mine the <strong>RssController</strong>.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg" alt="RssFeed"></p>
+</li>
+<li>
+<p>We’re going to define our own <strong>ActionResult</strong> implementation that can emit RSS by deriving from <strong>ActionResult</strong>. Inspiration and original source comes from <a href="http://www.developerzen.com/2009/01/11/aspnet-mvc-rss-feed-action-result/">this post</a> on Developer Zen.</p>
+<pre><code> public class RssActionResult : ActionResult 
+ { 
+     public SyndicationFeed Feed { get; set; }
+
+     public override void ExecuteResult(ControllerContext context)
+     {
+
+         context.HttpContext.Response.ContentType = &quot;application/rss+xml&quot;;
+         Rss20FeedFormatter rssFormatter = new Rss20FeedFormatter(Feed);
+
+         using (XmlWriter writer = XmlWriter.Create(context.HttpContext.Response.Output)) 
+         { 
+             rssFormatter.WriteTo(writer);
+         } 
+     } 
+ }
+</code></pre>
+</li>
+<li>
+<p>We can now update the <strong>Index</strong> method to use the <strong>RssActionResult</strong> instead of the default <strong>ActionResult</strong> implementation.</p>
+<pre><code> public RssActionResult Index() { return new RssActionResult(); }
+</code></pre>
+</li>
+<li>
+<p>Define a method that returns all the feeds with which you want to aggregate. You can pull from many different places – I recommend SQL Azure – but for the purposes of this demo you can just use a generic list of strings.</p>
+<pre><code> private static List&lt;string&gt; GetRssFeeds() 
+ { 
+     List&lt;string&gt; feeds = new List&lt;string&gt;();
+
+     feeds.Add(&quot;http://feeds2.feedburner.com/WadeWegner&quot;); 
+     feeds.Add(&quot;http://www.nickharris.net/feed/&quot;);
+     feeds.Add(&quot;http://feeds.feedburner.com/ntotten&quot;);
+
+     return feeds; 
+ }
+</code></pre>
+</li>
+<li>
+<p>Now we can update our Index method to iterate through the feeds and aggregate them into a single SyndicationFeed that is sorted (descending) by the publish date.</p>
+<pre><code> public RssActionResult Index() 
+ { 
+     SyndicationFeed mainFeed = new SyndicationFeed();
+
+     foreach (var feed in GetRssFeeds())
+     { 
+         Uri feedUri = new Uri(feed); 
+         SyndicationFeed syndicationFeed; 
+         using (XmlReader reader = XmlReader.Create(feedUri.AbsoluteUri)) 
+         { 
+             syndicationFeed = SyndicationFeed.Load(reader); 
+         }
+			
+         syndicationFeed.Id = feed;
+         SyndicationFeed tempFeed = new SyndicationFeed( 
+             mainFeed.Items.Union(syndicationFeed.Items).OrderByDescending(u =&gt; u.PublishDate)); 
+
+         mainFeed = tempFeed; 
+     }
+		
+     return new RssActionResult() { Feed = mainFeed }; 
+ }
+</code></pre>
+</li>
+<li>
+<p>Now, hit F5 and run. Browse to http://localhost:<port>/rss to see the aggregated RSS feed.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/RssFeed_thumb.jpg" alt="RssFeed"></p>
+</li>
+</ol>
+<p>And that’s it!</p>
+<p>There’s certainly more you can do with this – in fact, given the cost it takes to aggregate a large number of feeds, I’ve started to take the aggregated feed and store it in Windows Azure blob storage attached to the Content Delivery Network (CDN). The code to do this is similar to the following:</p>
+<pre><code>StringBuilder builder = new StringBuilder();
+
+using (XmlWriter writer = XmlWriter.Create(builder)) 
+{ 
+    mainFeed.SaveAsRss20(writer); 
+    string rssFeed = builder.ToString();
+} 
+
+// write to Windows Azure blob storage
+</code></pre>
+<p>You might consider doing something similar.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

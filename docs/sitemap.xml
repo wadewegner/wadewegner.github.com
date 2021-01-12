@@ -1,0 +1,1365 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://www.wadewegner.com/blog/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2018/02/build-a-native-mobile-app-using-salesforce-dx-and-the-mobile-sdk/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/</loc>
+    <lastmod>2018-02-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2018/01/authenticate-to-your-scratch-orgs-using-the-oauth-2.0-jwt-bearer-flow/</loc>
+    <lastmod>2018-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2018/01/using-salesforce-dx-with-trailhead/</loc>
+    <lastmod>2018-01-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/09/deploy-to-salesforce-dx/</loc>
+    <lastmod>2017-09-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/04/use-workbench-with-your-scratch-org/</loc>
+    <lastmod>2017-04-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/04/show-the-salesforce-dx-org-config-in-your-bash-prompt/</loc>
+    <lastmod>2017-04-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/04/using-the-oauth-2.0-jwt-bearer-flow-to-support-the-salesforce-dx-cli/</loc>
+    <lastmod>2017-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/03/creating-a-plugin-for-the-salesforce-cli/</loc>
+    <lastmod>2017-03-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/03/salesforce-dx-strike/</loc>
+    <lastmod>2017-03-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2017/02/salesforce-dx-pilot-demos/</loc>
+    <lastmod>2017-02-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2015/01/creating-a-go-site-extension-and-resource-template-for-azure/</loc>
+    <lastmod>2015-01-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/12/4-simple-steps-to-run-go-language-in-azure-websites/</loc>
+    <lastmod>2014-12-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/12/easy-go-programming-setup-for-windows/</loc>
+    <lastmod>2014-12-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/08/build-a-windows-8-app-for-salesforce-with-no-code-using-project-siena/</loc>
+    <lastmod>2014-08-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/05/create-an-ibeacon-transmitter-with-the-raspberry-pi/</loc>
+    <lastmod>2014-05-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/05/salesforce-did-what-how-we-built-the-salesforce-toolkits-for-.net/</loc>
+    <lastmod>2014-05-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/05/uploading-an-attachment-to-salesforce-with-the-soap-and-rest-apis/</loc>
+    <lastmod>2014-05-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/04/update-records-with-python-and-the-salesforce-bulk-api/</loc>
+    <lastmod>2014-04-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/04/announcing-the-salesforce-accelerators-for-windows-store-apps/</loc>
+    <lastmod>2014-04-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/04/announcing-the-salesforce-accelerators-for-windows-phone-8-apps/</loc>
+    <lastmod>2014-04-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/03/create-a-custom-object-with-.net-using-the-force.com-metadata-api-...-and-no-proxy-classes/</loc>
+    <lastmod>2014-03-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/02/send-a-text-message-to-your-iot-thermal-printer-no-problem.-and-print-your-lunch-menu-too/</loc>
+    <lastmod>2014-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/02/support-for-refresh-tokens-async-suffix-and-updated-sample-apps/</loc>
+    <lastmod>2014-02-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/01/using-the-webauthenticationbroker-for-salesforce-authentication-on-windows-8/</loc>
+    <lastmod>2014-01-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/01/connecting-to-salesforce-from-a-windows-phone-8-app/</loc>
+    <lastmod>2014-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/01/better-support-for-httpclient-in-the-salesforce-toolkits-for-.net/</loc>
+    <lastmod>2014-01-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/01/announcing-the-salesforce-toolkits-for-.net/</loc>
+    <lastmod>2014-01-15T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2014/01/how-to-write-unit-tests-to-check-your-http-headers-and-other-http-request-stuff-in-c/</loc>
+    <lastmod>2014-01-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/12/salesforce1-tutorial-for-the-dreamforce-13-developer-keynote/</loc>
+    <lastmod>2013-12-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/11/a-simple-lua-script-token-request-with-webscript.io/</loc>
+    <lastmod>2013-11-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/11/force.com-token-requests-with-python/</loc>
+    <lastmod>2013-11-19T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/11/a-command-line-interface-for-force.com/</loc>
+    <lastmod>2013-11-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/11/preparing-for-the-salesforce-1-million-hackathon/</loc>
+    <lastmod>2013-11-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/11/joining-salesforce/</loc>
+    <lastmod>2013-11-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/10/configuring-the-force.com-ide-with-eclipse-and-using-git/</loc>
+    <lastmod>2013-10-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/10/migrated-to-jekyll/</loc>
+    <lastmod>2013-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/10/powershell-script-for-cleaning-up-your-windows-azure-resources/</loc>
+    <lastmod>2013-10-25T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/03/creating-anonymous-apex-rest-apis-with-force.com/</loc>
+    <lastmod>2013-03-10T21:23:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/03/a-few-tips-on-getting-started-with-force.com/</loc>
+    <lastmod>2013-03-09T00:59:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/03/to-the-clouds/</loc>
+    <lastmod>2013-03-06T16:26:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/03/using-windows-azure-virtual-machines-to-publish-and-synchronize-a-web-farm/</loc>
+    <lastmod>2013-03-04T04:47:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2013/02/detecting-expired-pki-certificates/</loc>
+    <lastmod>2013-02-23T19:06:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/09/getting-the-application-id-and-hardware-id-in-windows-store-applications/</loc>
+    <lastmod>2012-09-21T22:02:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/08/generating-c#-classes-from-json/</loc>
+    <lastmod>2012-08-22T13:15:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/06/notes-from-the-meet-windows-azure-keynote/</loc>
+    <lastmod>2012-06-07T21:35:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/06/early-thoughts-on-the-windows-azure-announcements/</loc>
+    <lastmod>2012-06-07T16:43:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/04/simple-capped-exponential-back-off-for-queues/</loc>
+    <lastmod>2012-04-27T21:15:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/04/return-empty-set-instead-of-resourcenotfound-from-table-storage/</loc>
+    <lastmod>2012-04-14T21:50:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/04/joining-aditi-technologies-as-chief-technology-officer/</loc>
+    <lastmod>2012-04-13T14:08:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/03/leaving-microsoft/</loc>
+    <lastmod>2012-03-21T15:05:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/01/cannot-create-database-developmentstoragedb20110816-for-the-windows-azure-storage-emulator/</loc>
+    <lastmod>2012-01-25T18:37:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2012/01/are-you-building-mobile-cloud-applications-tell-me/</loc>
+    <lastmod>2012-01-09T19:02:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/12/how-to-handle-a-faulted-channel-with-the-windows-azure-service-bus/</loc>
+    <lastmod>2011-12-13T04:52:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/unable-to-find-assembly-references-that-are-compatible-with-the-target-framework-silverlightversionv4.0-profilewindowsphone71/</loc>
+    <lastmod>2011-11-30T18:18:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/adding-push-notification-support-to-your-windows-phone-application/</loc>
+    <lastmod>2011-11-18T22:32:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/outsourcing-user-authentication-in-a-windows-phone-application/</loc>
+    <lastmod>2011-11-17T05:18:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/programmatically-installing-and-using-your-management-certificate-with-the-new-.publishsettings-file/</loc>
+    <lastmod>2011-11-16T21:11:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/nuget-packages-for-windows-azure-and-windows-phone-developers/</loc>
+    <lastmod>2011-11-15T22:21:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/11/aggregating-rss-feeds-in-c#-and-asp.net-mvc-3/</loc>
+    <lastmod>2011-11-09T19:48:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/10/windows-azure-platform-training-kit-october-release/</loc>
+    <lastmod>2011-10-27T21:42:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/10/windows-azure-toolkit-for-windows-phone-v1.3.1/</loc>
+    <lastmod>2011-10-25T22:22:25+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/09/windows-azure-platform-training-kit-september-2011-release/</loc>
+    <lastmod>2011-09-23T15:38:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/09/running-the-windows-azure-tools-amp-sdk-on-the-windows-developer-preview/</loc>
+    <lastmod>2011-09-19T06:52:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/09/metro-style-apps-with-windows-azure/</loc>
+    <lastmod>2011-09-14T17:53:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/windows-azure-toolkits-for-devices-now-with-android/</loc>
+    <lastmod>2011-08-31T15:29:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/using-elmah-in-windows-azure-with-table-storage/</loc>
+    <lastmod>2011-08-19T03:34:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/introduction-to-windows-azure-marketplace-for-applications/</loc>
+    <lastmod>2011-08-09T04:06:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/wa-toolkit-for-ios-new-project-experience-with-windows-azure-access-control-service/</loc>
+    <lastmod>2011-08-08T23:01:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/wa-toolkit-for-ios-new-project-experience-for-accessing-windows-azure-storage/</loc>
+    <lastmod>2011-08-08T22:15:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/using-windows-azure-blob-storage-and-cdn-with-wordpress/</loc>
+    <lastmod>2011-08-07T20:59:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/deploying-the-windows-azure-asp.net-mvc-3-web-role/</loc>
+    <lastmod>2011-08-04T12:19:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/08/updates-to-the-windows-azure-platform-training-kit/</loc>
+    <lastmod>2011-08-03T15:45:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/07/windows-azure-toolkit-for-ios-now-supports-the-access-control-service/</loc>
+    <lastmod>2011-07-25T17:29:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/released-windows-azure-toolkit-for-ios-v1.0.1/</loc>
+    <lastmod>2011-05-27T16:40:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/wpdt-7.1-beta-support-added-to-the-windows-azure-toolkit-for-windows-phone-7/</loc>
+    <lastmod>2011-05-25T02:27:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/deploying-your-services-from-the-windows-azure-toolkit-for-windows-phone-7/</loc>
+    <lastmod>2011-05-25T02:10:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/merged-a-pull-request-for-the-ios-toolkit/</loc>
+    <lastmod>2011-05-23T20:02:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/vb.net-and-bug-fixes-for-windows-azure-toolkit-for-windows-phone-7-v1.2.1/</loc>
+    <lastmod>2011-05-19T16:22:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/now-available-windows-azure-toolkit-for-windows-phone-7-v1.2/</loc>
+    <lastmod>2011-05-16T05:48:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/updates-coming-soon-to-the-windows-azure-toolkit-for-windows-phone-7/</loc>
+    <lastmod>2011-05-09T15:56:07+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/using-windows-azure-for-windows-phone-7-push-notification-support/</loc>
+    <lastmod>2011-05-09T04:44:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/05/getting-started-with-the-windows-azure-toolkit-for-ios/</loc>
+    <lastmod>2011-05-06T22:48:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/04/article-introducing-the-windows-azure-appfabric-caching-service/</loc>
+    <lastmod>2011-04-06T04:56:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/03/getting-started-with-the-windows-azure-toolkit-for-windows-phone-7/</loc>
+    <lastmod>2011-03-30T00:21:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/03/windows-azure-toolkit-for-windows-phone-7/</loc>
+    <lastmod>2011-03-23T07:16:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/03/requesting-access-to-the-vm-role-beta/</loc>
+    <lastmod>2011-03-17T04:00:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/03/windows-azure-platform-training-kit-and-course-february-2011-update/</loc>
+    <lastmod>2011-03-02T20:36:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/</loc>
+    <lastmod>2011-02-18T06:00:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/02/managing-the-securestring-in-the-datacachesecurity-constructor/</loc>
+    <lastmod>2011-02-09T18:42:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/02/windows-azure-appfabric-ctp-february-caching-enhancements-and-the-new-labs-portal/</loc>
+    <lastmod>2011-02-09T03:44:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/02/families-and-the-oil-of-monkeys/</loc>
+    <lastmod>2011-02-04T04:53:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/01/windows-azure-platform-training-kit-and-course-january-2011-update/</loc>
+    <lastmod>2011-01-31T19:17:27+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/01/using-expression-encoder-4-in-a-windows-azure-worker-role/</loc>
+    <lastmod>2011-01-28T06:26:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/01/overlay-text-on-video-using-expression-encoder-4/</loc>
+    <lastmod>2011-01-25T01:10:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/01/programmatically-changing-the-apppool-identity-in-a-windows-azure-web-role/</loc>
+    <lastmod>2011-01-17T18:49:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2011/01/come-join-my-team/</loc>
+    <lastmod>2011-01-06T17:14:43+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/web-deploy-with-windows-azure-on-restrictive-networks/</loc>
+    <lastmod>2010-12-21T18:10:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/using-web-deploy-with-windows-azure-for-rapid-development/</loc>
+    <lastmod>2010-12-17T19:20:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/goodbye-lunch-for-ryan-dunn/</loc>
+    <lastmod>2010-12-17T06:51:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/try-out-the-wordpress-app-for-windows-phone-7/</loc>
+    <lastmod>2010-12-17T06:47:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/use-the-waptk-to-help-setup-your-windows-azure-development-environment/</loc>
+    <lastmod>2010-12-16T18:09:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/windows-azure-platform-training-kit-december-2010-update/</loc>
+    <lastmod>2010-12-15T19:58:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/article-re-introducing-the-windows-azure-appfabric-access-control-service/</loc>
+    <lastmod>2010-12-10T00:04:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/programmatically-configuring-the-caching-client/</loc>
+    <lastmod>2010-12-02T13:38:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/12/setting-up-the-bidnow-sample-application-for-windows-azure/</loc>
+    <lastmod>2010-12-02T00:35:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/significant-updates-released-in-the-bidnow-sample-for-windows-azure/</loc>
+    <lastmod>2010-11-30T17:16:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/using-the-saml-credentialtype-to-authenticate-to-the-service-bus/</loc>
+    <lastmod>2010-11-25T05:00:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/hands-on-lab-building-windows-azure-applications-with-the-caching-service/</loc>
+    <lastmod>2010-11-22T22:51:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/code-for-the-windows-azure-appfabric-caching-demo/</loc>
+    <lastmod>2010-11-22T18:03:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/teched-emea-a-lap-around-the-windows-azure-appfabric-asi205/</loc>
+    <lastmod>2010-11-10T15:12:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/11/pdc10-introduction-to-windows-azure-appfabric-caching-cs60/</loc>
+    <lastmod>2010-11-02T16:29:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/10/new-services-and-enhancements-with-the-windows-azure-appfabric/</loc>
+    <lastmod>2010-10-28T17:46:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/10/what-have-i-been-doing-for-pdc10/</loc>
+    <lastmod>2010-10-27T19:57:50+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/09/7-reasons-im-excited-about-ie9/</loc>
+    <lastmod>2010-09-15T22:51:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/service-bus-on-the-cloud-cover-show/</loc>
+    <lastmod>2010-08-27T19:01:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/using-the-trustservercertificate-property-with-sql-azure-and-entity-framework/</loc>
+    <lastmod>2010-08-27T04:48:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/sql-azure-adds-support-for-database-copy/</loc>
+    <lastmod>2010-08-25T04:36:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/autostart-wcf-services-to-expose-them-as-service-bus-endpoints/</loc>
+    <lastmod>2010-08-23T16:30:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/configuring-an-asp.net-web-application-to-use-a-windows-server-appfabric-cache-for-session-state/</loc>
+    <lastmod>2010-08-16T22:36:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/getting-started-with-windows-server-appfabric-cache/</loc>
+    <lastmod>2010-08-13T21:22:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/updated-windows-azure-appfabric-sdk/</loc>
+    <lastmod>2010-08-12T22:36:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/using-the-expression-encoder-sdk-to-encode-lots-of-videos/</loc>
+    <lastmod>2010-08-09T05:31:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/article-tips-for-migrating-your-applications-to-the-cloud/</loc>
+    <lastmod>2010-08-06T15:36:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/08/use-social-web-providers-in-less-than-5-minutes/</loc>
+    <lastmod>2010-08-06T05:13:46+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/07/using-the-default-sql-server-instance-for-windows-azure-development-storage/</loc>
+    <lastmod>2010-07-15T18:46:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/07/how-would-you-describe-the-windows-azure-appfabric/</loc>
+    <lastmod>2010-07-12T03:57:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/07/my-first-week-as-a-technical-evangelist/</loc>
+    <lastmod>2010-07-10T01:11:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/06/real-world-patterns-for-cloud-computing-at-teched-na-2010/</loc>
+    <lastmod>2010-06-24T04:14:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/host-wcf-services-in-iis-with-service-bus-endpoints/</loc>
+    <lastmod>2010-05-12T03:56:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/using-the-.net-framework-4.0-with-the-azure-appfabric-sdk/</loc>
+    <lastmod>2010-05-11T21:01:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/release-the-hounds-multicasting-with-azure-appfabric/</loc>
+    <lastmod>2010-05-07T05:17:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/jon-box-on-the-capabilities-of-internet-explorer-8/</loc>
+    <lastmod>2010-05-05T21:43:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/what-is-the-azure-appfabric/</loc>
+    <lastmod>2010-05-05T16:19:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/05/new-role-technical-evangelist-for-azure-appfabric/</loc>
+    <lastmod>2010-05-04T00:55:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/03/silverlight-customers-light-up-the-web/</loc>
+    <lastmod>2010-03-15T17:45:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2010/01/getting-started-with-xna-development/</loc>
+    <lastmod>2010-01-06T16:50:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/12/significant-updates-to-the-sql-azure-migration-wizard/</loc>
+    <lastmod>2009-12-15T18:37:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/12/wi-azure-user-group-windows-azure-platform-update/</loc>
+    <lastmod>2009-12-06T16:34:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/11/preview-of-lessons-learned-migrating-applications-to-the-windows-azure-platform/</loc>
+    <lastmod>2009-11-08T01:04:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/11/how-to-leverage-the-roleentrypoint-in-an-azure-web-role/</loc>
+    <lastmod>2009-11-04T14:24:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/11/chunking-bcp-output-to-upload-lots-of-data-into-sql-azure/</loc>
+    <lastmod>2009-11-02T17:28:44+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/taste-of-chicago-benefits-from-windows-azure-and-silverlight/</loc>
+    <lastmod>2009-10-26T16:34:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/presenting-on-the-windows-azure-platform-at-the-day-of-cloud/</loc>
+    <lastmod>2009-10-16T14:14:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/the-sql-azure-migration-wizard-will-now-migrate-your-data/</loc>
+    <lastmod>2009-10-15T17:50:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/sql-azure-database-is-feature-complete/</loc>
+    <lastmod>2009-10-15T14:53:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/webcast-running-an-asp.net-mvc-web-application-in-windows-azure/</loc>
+    <lastmod>2009-10-11T16:59:42+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/10/passive-federation-with-windows-azure-and-adfs-v2/</loc>
+    <lastmod>2009-10-09T15:38:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/09/windows-azure-in-the-real-world/</loc>
+    <lastmod>2009-09-13T15:39:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/09/getting-ready-for-the-race-to-market-challenge/</loc>
+    <lastmod>2009-09-03T03:23:03+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/09/sql-azure-migration-wizard/</loc>
+    <lastmod>2009-09-02T03:29:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/06/architecting-your-data-access-layer-with-the-entity-framework/</loc>
+    <lastmod>2009-06-26T17:57:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/06/stratus-tamer-of-clouds/</loc>
+    <lastmod>2009-06-19T13:33:05+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/06/.net-architecture-for-enterprises/</loc>
+    <lastmod>2009-06-16T16:14:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/05/the-commerce-server-book-is-now-available/</loc>
+    <lastmod>2009-05-28T15:17:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/03/running-a-php-application-on-windows-azure/</loc>
+    <lastmod>2009-03-23T22:31:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2009/02/the-commerce-server-2007-book-lives/</loc>
+    <lastmod>2009-02-04T21:32:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/12/looking-to-explore-the-cloud-then-join-your-community/</loc>
+    <lastmod>2008-12-11T20:30:01+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/11/building-multi-enterprise-business-applications-on-the-azure-services-platform/</loc>
+    <lastmod>2008-11-01T03:07:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/10/pdc-2008-is-coming/</loc>
+    <lastmod>2008-10-04T02:35:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/09/installing-windows-from-a-bootable-usb-drive/</loc>
+    <lastmod>2008-09-09T21:23:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/04/illinois-indiana-and-wisconsin-user-groups/</loc>
+    <lastmod>2008-04-17T14:20:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/04/developing-a-relationship-with-twitter-.../</loc>
+    <lastmod>2008-04-16T19:52:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/04/installing-windows-server-2008/</loc>
+    <lastmod>2008-04-15T02:21:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/04/intel-wireless-wifi-link-4965agn-on-a-dell-d830-running-windows-server-2008-ee-x64/</loc>
+    <lastmod>2008-04-14T19:56:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/04/update-on-the-commerce-server-book/</loc>
+    <lastmod>2008-04-13T22:52:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/03/traveling-to-las-vegas-tomorrow-for-mix08/</loc>
+    <lastmod>2008-03-04T03:02:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/02/my-new-job-architect-evangelist-for-microsoft/</loc>
+    <lastmod>2008-02-25T10:09:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2008/01/using-the-updateprogress-to-lock-down-controls-in-the-browser/</loc>
+    <lastmod>2008-01-07T03:51:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/12/another-statera-blogger-ryan-mccutchen/</loc>
+    <lastmod>2007-12-02T16:24:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/12/using-the-audit-policy-to-diagnose-security-problems/</loc>
+    <lastmod>2007-12-01T22:16:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/microsoft-certified-architect-mca-posts/</loc>
+    <lastmod>2007-11-30T04:24:08+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/donate-rice-and-test-your-vocabulary/</loc>
+    <lastmod>2007-11-26T03:23:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/some-great-blog-posts-on-commerce-server-2007/</loc>
+    <lastmod>2007-11-25T20:50:31+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/white-papers-migration-from-oracle-or-sybase-to-sql-server-2005/</loc>
+    <lastmod>2007-11-18T19:32:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/architectural-resources-from-msft/</loc>
+    <lastmod>2007-11-18T15:58:53+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/aspiring-architects-four-100-level-webcasts/</loc>
+    <lastmod>2007-11-17T19:15:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/updated-silverlight-hangman-application/</loc>
+    <lastmod>2007-11-13T22:54:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/11/msdn-masters-series-event-silverlight/</loc>
+    <lastmod>2007-11-03T14:59:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/10/converting-the-commerce-server-2007-mom-2005-pack-for-opsmgr-2007/</loc>
+    <lastmod>2007-10-06T21:55:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/windows-xp-professional-96-updates/</loc>
+    <lastmod>2007-09-17T20:34:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/commerce-server-2007-and-operational-monitoring/</loc>
+    <lastmod>2007-09-16T23:50:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/update-professional-commerce-server-2007/</loc>
+    <lastmod>2007-09-14T19:10:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/a-few-tips-when-using-wcf-with-biztalk-server-2006-r2/</loc>
+    <lastmod>2007-09-11T07:02:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/setting-up-a-biztalk-server-2006-r2-beta-2-development-environment/</loc>
+    <lastmod>2007-09-10T22:37:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/presenting-to-the-denver-biztalk-user-group/</loc>
+    <lastmod>2007-09-10T21:29:26+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/biztalk-process-crashing-with-econnect-9-adapter/</loc>
+    <lastmod>2007-09-05T18:51:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/microsoft-hotfix-request-web-submission-form/</loc>
+    <lastmod>2007-09-01T16:07:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/09/simpsonize-us/</loc>
+    <lastmod>2007-09-01T14:47:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/microsoft-virtual-server-2005-r2-service-pack-1/</loc>
+    <lastmod>2007-08-20T05:46:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/viewing-help-files-in-windows-vista/</loc>
+    <lastmod>2007-08-20T02:52:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/deleting-team-project-in-tfs-doesnt-really-delete-the-team-project/</loc>
+    <lastmod>2007-08-20T02:46:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/setting-up-a-virtual-visual-studio-2005-team-foundation-server/</loc>
+    <lastmod>2007-08-20T02:32:38+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/milestone-100-feed-subscribers/</loc>
+    <lastmod>2007-08-18T18:19:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/adding-a-printer-in-vista-with-uac-turned-off/</loc>
+    <lastmod>2007-08-18T16:24:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/warning-about-windows-live-writer/</loc>
+    <lastmod>2007-08-18T16:06:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/system.net.webexception-when-issuing-more-than-two-concurrent-webrequests/</loc>
+    <lastmod>2007-08-16T18:40:40+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/warning-the-cid-values-for-both-test-machines-are-the-same/</loc>
+    <lastmod>2007-08-13T21:48:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/commerce-server-2007-development-environments/</loc>
+    <lastmod>2007-08-11T16:19:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/more-details-on-the-commerce-server-roadmap-and-csid/</loc>
+    <lastmod>2007-08-09T02:35:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/08/exciting-commerce-server-news/</loc>
+    <lastmod>2007-08-08T19:46:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/commerce-server-staging-error-operation-must-use-an-updateable-query/</loc>
+    <lastmod>2007-07-28T20:37:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/setting-up-a-silverlight-development-environment/</loc>
+    <lastmod>2007-07-23T15:17:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/updates-to-the-hangman-application/</loc>
+    <lastmod>2007-07-22T21:08:13+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/hangman-application-built-on-silverlight-and-wpf/</loc>
+    <lastmod>2007-07-21T22:49:47+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/silverlight-error-invoking-service-when-calling-a-web-service/</loc>
+    <lastmod>2007-07-21T21:24:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/devising-a-strategy-to-consistently-win-hangman-part-i/</loc>
+    <lastmod>2007-07-16T02:28:23+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/how-to-automatically-and-recursively-delete-empty-directories/</loc>
+    <lastmod>2007-07-15T19:18:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/sharing-photos-with-family-and-friends/</loc>
+    <lastmod>2007-07-15T17:00:48+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/commerce-server-in-the-headlines-07/08/2007-07/14/2007/</loc>
+    <lastmod>2007-07-15T14:51:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/google-says-were-sorry-.../</loc>
+    <lastmod>2007-07-15T01:33:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/configuring-and-testing-a-windows-mobile-5.0-development-environment/</loc>
+    <lastmod>2007-07-11T08:58:36+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/commerce-server-in-the-headlines-07/01/2007-07/07/2007/</loc>
+    <lastmod>2007-07-08T21:18:35+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/biztalk-server-2006-econnect-adapters-for-great-plains-9.0/</loc>
+    <lastmod>2007-07-05T17:34:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/07/resolving-the-biztalk-server-2006-warning-that-dependencies-cannot-be-found/</loc>
+    <lastmod>2007-07-05T15:32:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/problem-with-the-commerce-server-2007-sp1-installation/</loc>
+    <lastmod>2007-06-23T19:23:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/commerce-server-2007-upgrade-wizard-post-sp1-install-walkthrough/</loc>
+    <lastmod>2007-06-23T18:33:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/clickonce-deployment-and-the-commerce-server-2007-business-management-applications/</loc>
+    <lastmod>2007-06-20T02:50:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/commerce-server-2007-starter-site-installation-error-error-importing-object-data-for-transaction-config/</loc>
+    <lastmod>2007-06-19T19:15:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/two-great-blogging-widgets-clustrmap-and-whos.amung.us/</loc>
+    <lastmod>2007-06-19T00:45:51+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/max-akbar-has-announced-his-new-commerce-server-training-company-and-web-site/</loc>
+    <lastmod>2007-06-18T18:18:58+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/do-you-yahoo-no-cant-say-that-i-do-.../</loc>
+    <lastmod>2007-06-14T22:09:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/script-the-creation-of-sql-logins-and-role-assignments-for-commerce-server-2007/</loc>
+    <lastmod>2007-06-14T16:46:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/script-the-creation-and-assignment-of-windows-groups-for-commerce-server/</loc>
+    <lastmod>2007-06-14T15:01:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/script-permission-updates-for-commerce-server-2007/</loc>
+    <lastmod>2007-06-14T04:21:33+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/add-vs.net-command-prompt-here-to-windows-explorer/</loc>
+    <lastmod>2007-06-14T02:40:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/script-the-creation-of-local-user-accounts-for-commerce-server-2007/</loc>
+    <lastmod>2007-06-13T21:24:52+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/the-database-version-c.0.8.40-does-not-match-your-reporting-services-installation./</loc>
+    <lastmod>2007-06-13T19:09:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/whats-your-google-rank-or-page-position/</loc>
+    <lastmod>2007-06-06T04:17:21+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/06/the-project-location-is-not-trusted-.../</loc>
+    <lastmod>2007-06-02T21:09:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/oracle-for-microsoft-developers-part-ii-setting-up-your-database/</loc>
+    <lastmod>2007-05-28T13:35:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/oracle-for-microsoft-developers-part-i-installing-oracle-9.2-on-windows-server-2003/</loc>
+    <lastmod>2007-05-28T03:34:04+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/unc-error-xxxxxxx-is-not-accessible.-you-might-not-have-permission-to-use-this-network-resource.-access-is-denied./</loc>
+    <lastmod>2007-05-27T19:30:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/commerce-server-road-map-and-commitment/</loc>
+    <lastmod>2007-05-24T12:58:55+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/troubleshooting-with-the-sysinternals-utilities/</loc>
+    <lastmod>2007-05-24T01:47:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/commerce-server-2007-biztalk-2006-adapter-white-papers/</loc>
+    <lastmod>2007-05-19T02:41:29+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/a-new-twist-to-the-error-unable-to-enlist-in-the-transaction./</loc>
+    <lastmod>2007-05-10T19:10:41+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/the-biztalk-adapters-for-enterprise-applications-on-windows-server-2003-64-bit/</loc>
+    <lastmod>2007-05-04T21:21:14+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/unable-to-open-shim-database-version-registry-key-v2.0.50727.00000./</loc>
+    <lastmod>2007-05-04T18:35:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/adding-odbc-connections-in-windows-server-2003-64-bit/</loc>
+    <lastmod>2007-05-03T15:51:45+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/05/configuring-the-adventure-works-catalog-for-commerce-server-2007/</loc>
+    <lastmod>2007-05-02T20:23:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/04/biztalk-2006-xpath-expression-gotcha/</loc>
+    <lastmod>2007-04-26T17:22:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/04/biztalk-deployment-errors-from-visual-studio-2005/</loc>
+    <lastmod>2007-04-18T21:09:54+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/04/new-hosting-for-blog/</loc>
+    <lastmod>2007-04-06T01:01:57+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/04/creating-a-universal-data-link-udl/</loc>
+    <lastmod>2007-04-04T02:32:28+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/commerce-server-2007-inventory-catalog/</loc>
+    <lastmod>2007-03-24T21:49:10+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/commerce-server-2007-training-resources/</loc>
+    <lastmod>2007-03-23T16:13:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/programming-with-commerce-server-in-two-modes-inproc-mode-and-web-service-mode/</loc>
+    <lastmod>2007-03-23T02:03:37+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/max-akbar-has-agreed-to-be-the-technical-reviewer/</loc>
+    <lastmod>2007-03-20T13:55:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/announcing-the-release-of-infinitygl-by-rhythmiq/</loc>
+    <lastmod>2007-03-20T03:07:24+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/windows-live-writer-beta/</loc>
+    <lastmod>2007-03-18T21:19:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/commerce-server-2007-webcasts-and-other-valuable-links/</loc>
+    <lastmod>2007-03-17T19:40:15+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/changing-the-computer-name-of-a-biztalk-2006-server/</loc>
+    <lastmod>2007-03-15T16:39:12+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/taking-exam-70-235-tomorrow-...-passed/</loc>
+    <lastmod>2007-03-15T01:34:20+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/how-to-stop-the-high-pitched-noise-emitted-by-dell-latitudes-updated/</loc>
+    <lastmod>2007-03-14T14:25:06+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/professional-commerce-server-2007/</loc>
+    <lastmod>2007-03-13T19:24:09+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/using-the-odbc-adapter-for-oracle-database-in-biztalk-2006/</loc>
+    <lastmod>2007-03-09T03:57:11+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/how-to-turn-off-the-beep-sound-in-a-virtual-machine-in-virtual-server-2005/</loc>
+    <lastmod>2007-03-06T14:20:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/configuring-http-as-a-transport-protocol-in-biztalk-2006/</loc>
+    <lastmod>2007-03-06T03:01:22+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/connecting-directly-to-the-console-via-remote-desktop/</loc>
+    <lastmod>2007-03-06T00:28:59+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/configuring-and-integrating-microsoft-office-sharepoint-server-2007-and-microsoft-commerce-server-2007/</loc>
+    <lastmod>2007-03-04T18:44:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/03/installing-virtual-server-2005-r2-on-windows-vista-updated/</loc>
+    <lastmod>2007-03-03T00:14:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2007/02/error-this-request-requires-buffering-data-to-succeed./</loc>
+    <lastmod>2007-02-28T16:39:32+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2006/12/using-ai-to-predict-football-outcomes/</loc>
+    <lastmod>2006-12-04T00:29:18+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2006/12/initial-approach-to-using-ai-to-predict-football-outcomes/</loc>
+    <lastmod>2006-12-03T20:09:16+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2006/11/setting-up-networking-over-wireless-with-virtual-server-2005-r2/</loc>
+    <lastmod>2006-11-30T22:09:56+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/2006/11/about-me/</loc>
+    <lastmod>2006-11-02T01:01:49+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/contact/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/series/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.wadewegner.com/home/</loc>
+  </url>
+  
+</urlset>

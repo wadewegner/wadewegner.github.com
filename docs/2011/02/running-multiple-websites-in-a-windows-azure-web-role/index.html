@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Running Multiple Websites in a Windows Azure Web Role - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Running Multiple Websites in a Windows Azure Web Role - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/02/running-multiple-websites-in-a-windows-azure-web-role/">Running Multiple Websites in a Windows Azure Web Role</a>
+    </h2>
+    <div class="post-data">
+        Feb 18, 2011 |
+        7 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Prior to the release of the <a href="http://www.microsoft.com/downloads/en/details.aspx?FamilyID=7a1089b6-4050-4307-86c4-9dadaa5ed018">Windows Azure 1.3 SDK</a>, Web roles hosted your application in <a href="http://technet.microsoft.com/en-us/library/cc735238(WS.10).aspx">IIS Hosted Web Core (HWC)</a>. While there were certainly ways to extend HWC, for the most part you were stuck with a single application bound to no more than a single HTTP or HTTPS endpoint. This model enabled only a minimal number of configurations, and prevented you from fully benefiting from the full capabilities of IIS. Here’s what the <strong>ServiceDefinition.csdef</strong> file looks like when using HWC:</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;ServiceDefinition name=&quot;WindowsAzureProject15&quot; xmlns=&quot;http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition&quot;&gt; 
+    &lt;WebRole name=&quot;WebRole1&quot;&gt; 
+        &lt;Endpoints&gt; 
+            &lt;InputEndpoint name=&quot;Endpoint1&quot; protocol=&quot;http&quot; port=&quot;80&quot; /&gt; 
+        &lt;/Endpoints&gt; 
+        &lt;Imports&gt; 
+            &lt;Import moduleName=&quot;Diagnostics&quot; /&gt; 
+        &lt;/Imports&gt; 
+    &lt;/WebRole&gt; 
+&lt;/ServiceDefinition&gt;
+</code></pre>
+<p>While you can still use this code today and run HWC in your Web role, you’ll miss you on a lot of great capabilities.</p>
+<p>One of the capabilities that, surprisingly, people still doesn’t seem aware of in Windows Azure is the ability to <strong>run multiple websites in a Web Role</strong>. In fact, this capability is easy to add once we add seven additional lines of code.</p>
+<pre><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;
+&lt;ServiceDefinition name=&quot;WindowsAzureProject15&quot; xmlns=&quot;http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition&quot;&gt; 
+    &lt;WebRole name=&quot;WebRole1&quot;&gt; 
+        &lt;Sites&gt; 
+            &lt;Site name=&quot;Web&quot;&gt; 
+                &lt;Bindings&gt; 
+                    &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; /&gt; 
+                &lt;/Bindings&gt; 
+            &lt;/Site&gt; 
+        &lt;/Sites&gt; 
+        &lt;Endpoints&gt;
+            &lt;InputEndpoint name=&quot;Endpoint1&quot; protocol=&quot;http&quot; port=&quot;80&quot; /&gt; 
+        &lt;/Endpoints&gt; 
+        &lt;Imports&gt; 
+            &lt;Import moduleName=&quot;Diagnostics&quot; /&gt; 
+        &lt;/Imports&gt; 
+    &lt;/WebRole&gt; 
+&lt;/ServiceDefinition&gt;
+</code></pre>
+<p>The difference here is found in lines <strong>#4</strong> through <strong>#10</strong>. We now have a <strong><Sites></strong> element that includes a default **<Site> **named “Web”. When run (locally or in Windows Azure), this translates into an actual web site running in IIS.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/11/Deployment.jpg" alt="Deployment"></p>
+<p>You can see that our website is now running in IIS. And what’s nice is that the syntax used in the **ServiceDefinition.csdef **file is nearly identical to how this is traditionally accomplished in the <a href="http://www.iis.net/ConfigReference/system.applicationHost/sites"><strong>system.applicationHost</strong></a> – there’s not much new we have to learn.</p>
+<p><strong>Run the Same Project in Two Sites in the Web Role</strong></p>
+<p>So, how can we take this further and run a second website in a Web role? It’s as simple as adding an additional <strong><Site></strong> to the <strong><Sites></strong> element.</p>
+<p>Copy lines <strong>#5</strong> through <strong>#9</strong> above, and past them below line <strong>#9</strong>. You’re going to have to make a few updates:</p>
+<ol>
+<li>
+<p>Change the site name. You can’t have multiple sites with the same name.</p>
+</li>
+<li>
+<p>You’ll have to specify a physical directory for the second site.</p>
+<blockquote>
+<p><strong>Note:</strong> the only reason we don’t have to specify a physical path for the first site is because “Web” is consider a special case, and Visual Studio knows that it’s referring to the path of the Web role project. You can confirm this by renaming “Web” to “Web1” – once you do this you’ll have to specify a physical path for the site.</p>
+</blockquote>
+</li>
+<li>
+<p>Create a host header entry for the binding element. The reason for this is because both sites are listening on port 80. This is the same behavior you’ll find in IIS – you cannot have more than one site listening on the same port without adding a host header.</p>
+</li>
+</ol>
+<p>Once you make these modifications, your <Sites> element will look something like this:</p>
+<pre><code>&lt;Sites&gt;
+    &lt;Site name=&quot;Web&quot;&gt; 
+    &lt;Bindings&gt; 
+        &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; /&gt; 
+    &lt;/Bindings&gt; 
+    &lt;/Site&gt; 
+        &lt;Site name=&quot;Web2&quot; physicalDirectory=&quot;..\WebRole1&quot;&gt; 
+    &lt;Bindings&gt; 
+        &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; hostHeader=&quot;www.litware.com&quot; /&gt; 
+    &lt;/Bindings&gt; 
+    &lt;/Site&gt; 
+&lt;/Sites&gt;
+</code></pre>
+<p>While this syntax is correct, <a href="http://www.litware.com">www.litware.com</a> will not locally resolve to our application. To make this work, we have to update our hosts file to assist in correctly resolving the address to 127.0.0.1 (the loopback address). Update the hosts file (C:\Windows\System32\drivers\etc\hosts) to include the following hostnames:</p>
+<pre><code>127.0.0.1 www.fabrikam.com
+127.0.0.1 www.contoso.com
+127.0.0.1 www.litware.com
+</code></pre>
+<p>After you’ve done this, you can confirm that they’re resolving correctly by pinging one of the addresses:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image3.png" alt="image"></p>
+<p>The reply should come from 127.0.0.1.</p>
+<p>With this complete, hit <strong>F5</strong> and run again. You’re now running the same project in two different websites – take a look at IIS:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image4.png" alt="image"></p>
+<p>In fact, if you take a look at the bindings on <strong>Web2</strong>, you’ll see that the host name has been set to <a href="http://www.litware.com">www.litware.com</a>.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image5.png" alt="image"></p>
+<p>And if you type <a href="http://www.litware.com:81/">http://www.litware.com:81/</a> (or whatever port the compute emulator is using), you’ll see the website display.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image6.png" alt="image"></p>
+<p>This is pretty cool, especially when want to use the same application for multiple websites – you can handle the requests in such a way that you either pull from different databases or even display different CSS files to make the website display differently.</p>
+<blockquote>
+<p><strong>Note:</strong> Some of you may have noticed above that IIS showed <a href="http://www.litware.com">www.litware.com</a> as running under port 5100. You may be wondering why it’s not on port 81, which is what we’re browsing to in IE. This is because it’s the compute emulator that’s listening on port 81, and then routing to port 5100. This is necessary so that incase we’re running more than one instance of our web application, both of which have the same host header, they’re not running on the same port. Nifty, eh?</p>
+</blockquote>
+<p>Now we can even go further. Let’s take a look at how we can take a completely separate web application and run it in the same Web role.</p>
+<p><strong>Run Two Different Projects in the Web Role</strong></p>
+<p>Open up a new instance of Visual Studio 2010, and create a new Web Application. I’d recommend you make a few changes to make it easily recognizable (e.g. change “Welcome to ASP.NET!” to something else). Be sure to <strong>Build</strong> your solution (failure to do this will cause problems later). Copy the <strong>Project Folder</strong> for the project, and then return to the <strong>ServiceDefinition.csdef</strong> file in your Windows Azure project.</p>
+<p>Create a new <strong><Site></strong> element where the <strong>physicalDirectory</strong> value is the location of the <strong>Project Folder</strong> you copied a moment ago. Also, update the site name and the <strong>hostHoder</strong>. It should look something like this:</p>
+<pre><code>&lt;Site name=&quot;Web3&quot; physicalDirectory=&quot;c:\Projects\WebApplication7\WebApplication7&quot;&gt; 
+    &lt;Bindings&gt; 
+        &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; hostHeader=&quot;www.fabrikam.com&quot; /&gt; 
+    &lt;/Bindings&gt; 
+&lt;/Site&gt;
+</code></pre>
+<p>We’ve now create a third website, but this time – instead of pointing to the Web role project in our solution – we’ve pointed to a completely separate project that lives outside of our solution. Hit F5 and take a look at IIS:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image7.png" alt="image"></p>
+<p>We now have three sites running, the third which includes the files from “WebApplication7”. Try it out by updating the URL to <a href="http://www.fabrikam.com:81/">http://www.fabrikam.com:81/</a> and you’ll see:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image8.png" alt="image"></p>
+<p>You can see that this is the not the Web role project itself, but the second project we created. The packaging tools know to include all the files needed from the <strong>physicalDirectory</strong> location and make them a part of the CSPKG that is ultimately given to the fabric controller.</p>
+<p>This is pretty awesome, cause it demonstrates that you can run two completely different websites in the same Web role with a minimal amount of work.</p>
+<p>Now, let’s take this even one step further … because we can.</p>
+<p><strong>Run a Virtual Application Within a Site</strong></p>
+<p>There may be times when you want to run a <strong>Virtual Application</strong> within your site (see <a href="http://blogs.msdn.com/b/wenlong/archive/2006/11/22/virtual-application-vs-virtual-directory.aspx">Wenlong Dong’s post Virtual Application vs Virtual Directory</a> for some interesting information). Given that the semantics of the <Sites> element is similar to system.applicationHost, it’s not hard to accomplish.</p>
+<p>Create a brand new <strong>Web Application</strong>, and this time update with a different description (e.g. “This is my virtual application!”). Build the solution, then grab the project’s path. Return to your Windows Azure project and the <strong>ServiceDefinition.csdef</strong> file. We’re going to add this virtual application to the “Web3” site. We do this by adding a <strong><VirtualApplication></strong> element with name and <strong>physicalDirectory</strong> values. Here’s what it will look like:</p>
+<pre><code>&lt;Site name=&quot;Web3&quot; physicalDirectory=&quot;c:\Projects\WebApplication7\WebApplication7&quot; VirtualApplication name=&quot;VirtualApp&quot; physicalDirectory=&quot;c:\Projects\WebApplication8\WebApplication8&quot; /&gt; 
+&lt;Bindings&gt; 
+    &lt;Binding name=&quot;Endpoint1&quot; endpointName=&quot;Endpoint1&quot; hostHeader=&quot;www.fabrikam.com&quot; /&gt;
+&lt;/Bindings&gt; 
+&lt;/Site&gt;
+</code></pre>
+<p>The <strong><VirtualApplication></strong> element is on line <strong>#3</strong>. Go ahead and hit F5, and take a look at IIS:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image9.png" alt="image"></p>
+<p>You can see that now, in Web3, our virtual application called <strong>VirtualApp</strong> is running. And if we browse to <a href="http://www.fabrikam.com:81/virtualapp/">http://www.fabrikam.com:81/virtualapp/</a>, we’ll see that it is indeed “WebApplication8” that’s running.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/02/image10.png" alt="image"></p>
+<p>So there you have it!</p>
+<p>You’ve now seen how to:</p>
+<ol>
+<li>
+<p>Run multiple websites that run off of the same project in the same Web role.</p>
+</li>
+<li>
+<p>Run multiple websites that use different projects in the same Web role.</p>
+</li>
+<li>
+<p>Run a virtual application within a website that uses a different project in a Web role.</p>
+</li>
+</ol>
+<p>Of course, when you deploy this to Windows Azure, you’ll want to use your own domain name and set the host headers accordingly. For tips on how to do this – especially as as it relates to setting up CNAMEs for your domain – take a look at Steve Marx’s post on <a href="http://blog.smarx.com/posts/custom-domain-names-in-windows-azure">Custom Domain Names in Windows Azure</a>.</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Using Windows Azure Blob Storage and C D N With Word Press - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Using Windows Azure Blob Storage and CDN with WordPress - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2011/08/using-windows-azure-blob-storage-and-cdn-with-wordpress/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2011/08/using-windows-azure-blob-storage-and-cdn-with-wordpress/">Using Windows Azure Blob Storage and CDN with WordPress</a>
+    </h2>
+    <div class="post-data">
+        Aug 7, 2011 |
+        9 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p><em><strong>UPDATE</strong>: In publishing this post, I encountered an issue with the plugin. Originally I used OneNote to create screen clippings of all the images in the post, then I pasted them into Live Writer. This is my normal practice for blog posts. Unfortunately, when I published, there ended up being a mismatch between the files stored in blob storage and those included in my blog post. However, when I updated the blog post and made actual JPEGs for each image (instead of screen clippings), everything worked fine. So, until I track down the underlying issue, simply save the image to a file first.</em></p>
+<p>Serving up your blogs content through CDN can create a much better experience for your readers (additionally, I’m told it helps in page ranking, so search engines will rank based on response time). I personally use WordPress running on Windows Server (not yet Windows Azure), and using Windows Azure Blob Storage and CDN seemed daunting until I found a few resources to help. Below you’ll find a tutorial on setting this up yourself.</p>
+<p>There are two resources you need to grab in order to easily set this up.</p>
+<ul>
+<li>
+<p><a href="http://phpazure.codeplex.com/releases/view/66558">Windows Azure SDK for PHP Developers v3.0.0</a></p>
+</li>
+<li>
+<p><a href="http://wordpress.org/extend/plugins/windows-azure-storage/">Windows Azure Storage for WordPress</a></p>
+</li>
+</ul>
+<p><em><strong>Important</strong>: These two resources ship separately, which means that you must ensure you’re grabbing versions designed to work together. In my case, I’ve downloaded version 3.0.0 of the Windows Azure SDK for PHP v3.0.0 even thought v4.0.1 is the most recent drop.</em></p>
+<p>These two resources provide documentation that _I assume _works well when running on Linux, but there’s hardly any documentation for those of us running WordPress on Windows Server (in my case Windows Server 2008 R2). Here are the steps I took to configure these resources.</p>
+<p><em><strong>Setting up the Windows Azure SDK for PHP Developers v3.0.0</strong></em></p>
+<p>Downloading the <a href="http://phpazure.codeplex.com/releases/view/66558">v3.0.0 SDK</a> will yield a zip field named <em>PHPAzure-3.0.0.zip</em>. The first thing I did was to unzip it under C:\Program Files (x86)\PHPAzure-3.0.0. Why did I choose this folder structure? Two reasons:</p>
+<ol>
+<li>
+<p>PHP itself is installed to C:\Program Files (x86), so I thought I’d keep this SDK near to PHP.</p>
+</li>
+<li>
+<p>It’s possible in the future that I’ll want to use v4.0.1 along side version v.3.0.0 (although to be honest I don’t know if this is supported) and I didn’t want to get myself stuck by using a non-versioned folder.</p>
+</li>
+</ol>
+<p>You should now have a folder that looks like this:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-1.jpg" alt="CDNWordpress-1"></p>
+<p>In order to take advantage of the SDK, you need to update your php.ini file and add the path to the library folder in the _include_path _variable. Browse to your PHP folder (in my case it is C:\Program Files (x86)\PHP\v5.2) and open the php.ini file.</p>
+<p>Search for the include_path variable. It might help to use “include_path = “ for your search terms. In my case, this variable was commented out, so I had to both uncomment the variable and add my path. In the end, you should have something looking like this:</p>
+<p>include_path = &ldquo;.;c:\Program Files (x86)\PHPAzure-3.0.0&rdquo;</p>
+<p>Pretty reasonable. This is all you need to do with the Windows Azure SDK for PHP Developers.</p>
+<p><strong><em>Setting up Windows Azure Storage for WordPress</em></strong></p>
+<p>Now you can download the <a href="http://wordpress.org/extend/plugins/windows-azure-storage/">Windows Azure Storage for WordPress</a> plugin. This time I unzipped the contents of the folder to my plugins folder at C:\Websites\WadeWegner\wp-content\plugins. Your folder path will most definitely be different; however, I will need to be under “wp-content\plugins” to work correctly.</p>
+<p>Once unzipped, you should see the following:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-2.jpg" alt="CDNWordpress-2"></p>
+<p>Now, to get this to work, you also have to add the path to the SDK in the windows-azure-storage.php file. It took me a bit to figure out exactly what to update, but in the end it’s not particularly challenging.</p>
+<p>We’re going to update the set_include_path method so that it includes the SDK library.</p>
+<p>Initially, the code block looks like this:</p>
+<pre><code>if (isset($_SERVER[&quot;APPL_PHYSICAL_PATH&quot;])) {        
+set_include_path(         
+get_include_path() . PATH_SEPARATOR . $_SERVER[&quot;APPL_PHYSICAL_PATH&quot;]         
+);         
+}
+</code></pre>
+<p>You should update it accordingly (where the updates are highlighted in yellow):</p>
+<pre><code>if (isset($_SERVER[&quot;APPL_PHYSICAL_PATH&quot;])) {        
+set_include_path(         
+get_include_path() . PATH_SEPARATOR . $_SERVER[&quot;APPL_PHYSICAL_PATH&quot;] . PATH_SEPARATOR . 'C:\\Program Files (x86)\\PHPAzure-3.0.0\\library'         
+);         
+}
+</code></pre>
+<p>Be sure to use the correct path based on where you placed the SDK. Also, but sure use double backslashes, or it won’t work.</p>
+<p>At this point you should be ready to activate and configure the plugin.</p>
+<p><strong><em>Activating and Configuring the Windows Azure Storage plugin.</em></strong></p>
+<p>In WordPress, browse to your Installed Plugins. The Windows Azure Storage for WordPress plugin will be deactivated – activate it. If activation fails, then something above is incorrect.</p>
+<p>Once activated, you’ll have a <strong>Windows Azure</strong> link under <strong>Settings</strong>. Browse to it.</p>
+<p>Here’s where you’ll specify information specific to your Windows Azure storage account. In the <a href="http://windows.azure.com/">Windows Azure Platform Management Portal</a>, login and grab your storage name and key. You can get this by going to <strong>Hosted Services, Storage Accounts &amp; CDN –&gt; Storage Accounts</strong>. From here, select the appropriate storage account. Under properties you can get the name from the <strong>Name</strong> property, and you can get your key by clicking the <strong>View</strong> button under the <strong>Primary access key</strong> property.</p>
+<p>Back in WordPress, enter your <strong>Storage Account Name</strong> and <strong>Primary Access Key</strong>. It should look something like this:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-3.jpg" alt="CDNWordpress-3"></p>
+<p>Of course, your values will be different.</p>
+<p>Click the <strong>Save Changes</strong> button. Once you’ve saved, the <strong>Default Storage Container</strong> dropdown list will populate with storage containers listed in your storage account. Here’s what mine looks like:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-4.jpg" alt="CDNWordpress-4"></p>
+<p>I created a container called “wordpress”. If you don’t see a container you want to use, you’ll have to create it. To do this easily, I recommend you use a tool like <a href="http://clumsyleaf.com/products/downloads">CloudXplorer</a>. This tool is not only useful for creating the container, but setting the access control policy to “Public read access (blobs only)” – this is important because by default the container is marked “private” and is not accessible through the browser without the proper credentials.</p>
+<p>When you’ve set the policy correctly, it should look like this:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-5.jpg" alt="CDNWordpress-5"></p>
+<p>Test this out and make sure you can browse to a file in your container and view it correctly.</p>
+<p>Once you have your container, select it and click <strong>Save Changes</strong>.</p>
+<p>Lastly, I recommend you check the <strong>Use Windows Azure Storage for default upload</strong> option so that by default your resources will go to Windows Azure storage instead of your server. Click <strong>Save Changes</strong> when complete.</p>
+<p>At this point everything should be correctly setup such that when you publish a blog post – even with a tool such as Windows Live Writer – it will place your images and resources into your Windows Azure blob storage account. This is great! Test it out yourself (but I recommend you publish as a draft post just in case things don’t work correctly).</p>
+<p>Now that you have this setup correctly, I think you should strongly consider using the CDN. The primary reason to do this is so that your site loads as fast as possible for your readers. Take a look at the article <a href="http://www.bloggingpro.com/archives/2009/07/07/wordpress-cdn-fast-load-times/">WordPress + CDN == Fast Load Times</a> for more info.</p>
+<p><strong><em>Setting Up the CDN</em></strong></p>
+<p>While this is a bit more advanced of a topic, it is by no means difficult to accomplish.</p>
+<p>The Windows Azure CDN is setup such that you can easily turn the CDN on for your storage account such that everything stored in blob storage can get served through the CDN. In the Windows Azure Platform Management Portal, select <strong>Hosted Services, Storage Accounts &amp; CDN –&gt; CDN</strong>. Select your storage account. In the upper left and corner of the portal, click the button <strong>New Endpoint</strong>.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-6.jpg" alt="CDNWordpress-6"></p>
+<p>A dialog window will open that gives you the opportunity to choose some settings:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-7.jpg" alt="CDNWordpress-7"></p>
+<p>You don’t need to change any of the settings (unless you want to do so). Click <strong>OK</strong>.</p>
+<p>At this point it will start to create and propagate your CDN settings. This <strong>will take awhile</strong>, so don’t get impatient – it needs to propagate to the 26 (or more) CDN nodes worldwide.</p>
+<p>Once this process has completed, you’ll see a note saying that the CDN endpoint has been enabled (again, note that the portal will say <strong>Enabled</strong> before everything has propagated worldwide – patience!).</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-8.jpg" alt="CDNWordpress-8"></p>
+<p>Now, once this is done, you’ll be able to browse to resources in storage through the CDN URL, which will look something like this:</p>
+<p><img src="http://az29238.vo.msecnd.net/images/Mug-195w.jpg" alt="Mug-195w"></p>
+<p>While this works perfectly well, I personally don’t like the non-customized URL. To fix this, you can use a custom domain name of your own choosing with the CDN. Take a look at Steve Marx’s post on <a href="http://blog.smarx.com/posts/using-the-new-windows-azure-cdn-with-a-custom-domain">Using the New Windows Azure CDN with a Custom Domain</a>. Warning: his post pre-dates the new portal design, but conceptually it’s still the same. Note that once you verify your account it can take another 60 minutes or so for your new custom domain name to propagate to the CDN nodes. The end result should look like this:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/images/Mug-195w.jpg" alt="mug"></p>
+<p>If you run nslookup on the custom domain name, you should see that it ultimately resolves to the CDN:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-9.jpg" alt="CDNWordpress-9"></p>
+<p>Great, now you have successfully enabled the CDN on your storage account along with a custom domain name. Now we have to perform one last update in WordPress.</p>
+<p><strong><em>Using the CDN with the WordPress Plugin</em></strong></p>
+<p>Last step is to configure the Windows Azure Storage for WordPress plugin to serve your content up via the CDN.</p>
+<p>One the plugin settings page you’ll se a <strong>CNAME</strong> property you can specify. Set the value to your custom domain’s FQDN, like this: <a href="http://images.wadewegner.com">http://images.wadewegner.com</a>. It should look like this on the page:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-10.jpg" alt="CDNWordpress-10"></p>
+<p>Make sure to click <strong>Save Changes</strong>.</p>
+<p><strong><em>Test it Out!</em></strong></p>
+<p>The easiest way to test it out is to create a draft blog post with an image. I’ll use Windows Live Writer. Here’s a quick example.</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-11.jpg" alt="CDNWordpress-11"></p>
+<p>When you go to post, but sure to use <strong>Post draft to blog</strong>. This way, if you screw up, no one will know.</p>
+<p>After you post, take a look at the preview of the post. In particular, right-click on the image and look at the URL:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-12.jpg" alt="CDNWordpress-12"></p>
+<p>See how it’s getting served up from the custom CDN domain? Awesome!</p>
+<p>Furthermore, take a look at blob storage. You’ll see that your resources/images where uploaded:</p>
+<p><img src="https://wadewegner.blob.core.windows.net/wordpress/2011/08/CDNWordpress-13.jpg" alt="CDNWordpress-13"></p>
+<p>That’s it!</p>
+<p>I hope you find this useful. I plan to go through all the resources on my blog soon and update them such that the images are served through the CDN, but I’ll save that for another post!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

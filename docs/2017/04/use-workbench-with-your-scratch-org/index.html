@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Use Workbench With Your Scratch Org - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Use Workbench with your Scratch Org - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="The Salesforce Workbench is a powerful open-source tool used by both admins and developers. But how can you use it with your Salesforce DX scratch org? In this post I&#39;ll explain how to use the Salesforce CLI and two powerful commands to make it possible!"/>
+<meta property="og:url" content="https://www.wadewegner.com/2017/04/use-workbench-with-your-scratch-org/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2017/04/use-workbench-with-your-scratch-org/">Use Workbench with your Scratch Org</a>
+    </h2>
+    <div class="post-data">
+        Apr 23, 2017 |
+        3 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>The <a href="https://workbench.developerforce.com">Salesforce Workbench</a> is a powerful set of tools for developers and admins to use with their org. You can easily describe, query, manipulate, and migrate data and metadata through the web browser, using a combination of Partner, Bulk, REST, Streaming, Metadata, and Tooling APIs. It&rsquo;s completely <a href="https://github.com/ryanbrainard/forceworkbench">open-sourced on Github</a> by Ryan Brainard (<a href="https://twitter.com/ryanbrainard">@RyanBrainard</a>).</p>
+<p>And if all of this isn&rsquo;t enough to convince you of its value, I can almost guarantee that Josh Kaplan (<a href="https://twitter.com/joshsfdc">@JoshSfdx</a>) is playing around in Workbench right now!</p>
+<p>{:.center}
+<img src="https://cloud.githubusercontent.com/assets/746259/25318133/f82383cc-283c-11e7-9887-26c89e9ce32a.jpeg" alt="Josh Kaplan approves"></p>
+<p>Recently, I found the need to use the Workbench while working on a side project. Of course, I&rsquo;m using Salesforce DX and scratch orgs. Scratch orgs provide the perfect environment to quickly development my app and, when I&rsquo;m done, I delete it. I also use the new source synchronization capabilities to externalize all my source so I can easily commit it in a Github repository.</p>
+<p>If you&rsquo;re one of our Salesforce DX pilot participants, you might be asking yourself: uh, how are you able to use your Scratch org with Workbench when you don&rsquo;t know your scratch org password, it&rsquo;s my domain, and it&rsquo;s not running on production? Well, I&rsquo;m glad you asked! And not to fear, there are two commands in the Salesforce CLI you can use to make this work!</p>
+<p>First, assuming you&rsquo;re in your project workspace, we&rsquo;re going to run the command <code>sfdx force:user:password:generate</code> to generate a random password. If you&rsquo;re not in your project workspace, you use the <code>targetusername</code> (or <code>-u</code>) to specify the scratch org (and consequently the user).</p>
+<pre><code>&gt; sfdx force:user:password:generate
+
+Successfully set the password &quot;XXXXXXXX&quot; for user 
+scratchorgXXXXXXXXXXXXXX@wade.wegnercompany.com. You can see the password
+again by running &quot;force:org:display&quot;.
+</code></pre><p>Now you know the password! What&rsquo;s more, it&rsquo;s encrypted and stored locally, so running <code>sfdx force:org:display</code> will remind you of the password if you forget it.</p>
+<p>Second, you&rsquo;ll need to know the &ldquo;my domain&rdquo; used with the scratch org. This is also generated randomly when the scratch org is created. To get it, you run the same command, <code>sfdx force:org:display</code>:</p>
+<pre><code>Key              Value
+───────────────  ───────────────────────────────────────────────────────────
+Access Token     XXXXXXXXX...
+Client Id        SalesforceDevelopmentExperience
+Created Date     2017-04-23
+Dev Hub Id       XXXXXXXXX...
+Edition          Developer Edition
+Expiration Date  2017-05-01
+Id               XXXXXXXXX...
+Instance Url     https://dream-business-XXXX-dev-ed.cs70.my.salesforce.com
+Password         XXXXXXXX
+Scratch Org      true
+Username         scratchorgXXXXXXXXXXXXXX@wade.wegnercompany.com
+</code></pre><p>As you can see, this command includes all kinds of useful information.</p>
+<p>Now, armed with this information, it&rsquo;s easy to log into the Workbench.</p>
+<ol>
+<li>
+<p>Change the <strong>Environment</strong> to <code>Sandbox</code>.</p>
+</li>
+<li>
+<p>Click <strong>I agree to the terms of service</strong>.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/746259/25318071/74bed640-283b-11e7-8021-a6a60fb13ae0.png" alt="Workbench"></p>
+</li>
+<li>
+<p>Click <strong>Login with Salesforce</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Use Custom Domain</strong>.</p>
+</li>
+<li>
+<p>Paste your <strong>Instance Url</strong> into the <strong>Custom Domain</strong> box and click <strong>Continue</strong>.</p>
+<p><img src="https://cloud.githubusercontent.com/assets/746259/25318084/d9dd2450-283b-11e7-8a12-501838b32dde.png" alt="Custom Domain"></p>
+</li>
+<li>
+<p>Paste your <strong>Username</strong> and <strong>Password</strong> in the box, and click <strong>Log In to Sandbox</strong>.</p>
+</li>
+</ol>
+<p>Voilà! You&rsquo;re using Workbench with your Scratch Org.</p>
+<p>Of course, these two commands enable all kinds of other useful scenarios, not just logging into the Workbench. Please explore their use and try them out yourself.</p>
+<p>I hope this helps!</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

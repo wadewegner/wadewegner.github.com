@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        
+        <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer">
+<meta name="description" content="test 123">
+<title>
+Force.com Token Requests With Python - Wade Wegner
+</title>
+
+
+
+        
+        <meta property="og:title" content="Force.com Token Requests with Python - Wade Wegner" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="test 123"/>
+<meta property="og:url" content="https://www.wadewegner.com/2013/11/force.com-token-requests-with-python/"/>
+<meta property="og:site_name" content="Wade Wegner"/>
+
+
+
+
+<meta property="og:image" content="https://www.wadewegner.com/home/favicon.ico"/>
+
+
+
+
+        
+<link rel="shortcut icon" href="/home/favicon.ico">
+
+
+        
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.min.778f8c0624f7ae349aa2b4358579913ce6f77cb5b765b36e008240dd5024d883.css" integrity="sha256-d4&#43;MBiT3rjSaorQ1hXmRPOb3fLW3ZbNuAIJA3VAk2IM=" crossorigin="anonymous" media="screen">
+
+
+
+
+
+        
+        
+        
+        
+    </head>
+    <body>
+        <section id="top" class="section">
+            
+            <div class="container hero ">
+                
+
+<h1 class="bold-title is-1">Blog</h1>
+
+
+            </div>
+            
+            <div class="section ">
+                
+<div class="container">
+    <hr>
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        
+        <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false" >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+        <div class="navbar-menu " id="navMenu">
+            
+            
+            
+            
+            <a class="navbar-item" href="/">
+                
+                Home
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/blog/">
+                
+                All Posts
+                
+            </a>
+            
+            
+            
+            <a class="navbar-item" href="/about/">
+                
+                About
+                
+            </a>
+            
+            
+            
+        </div>
+    </nav>
+    <hr>
+</div>
+
+
+
+                
+<div class="container">
+    <h2 class="title is-1 top-pad strong-post-title">
+        <a href="https://www.wadewegner.com/2013/11/force.com-token-requests-with-python/">Force.com Token Requests with Python</a>
+    </h2>
+    <div class="post-data">
+        Nov 19, 2013 |
+        4 minutes read
+    </div>
+    
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+      
+     <p>
+         Tags: 
+          
+        </p>
+      
+    
+      
+    
+</div>
+
+<div class="container markdown top-pad">
+    <p>Today I wrote some Python code for querying the Force.com REST APIs. It started pretty straightforward but I stumbled upon an important concept when I tried to run this Python from an untrusted location. More on this in a moment. Let&rsquo;s start at the beginning.</p>
+<p>You first need to create a <strong>Connected App</strong>.</p>
+<p>A connected app is an application that integrates with salesforce.com using APIs and uses either SAML and OAuth protocols to authenticate, provide Single Sign-On, and provide tokens for use with Salesforce APIs. In addition to standard OAuth capabilities, connected apps allow administrators to set various security policies and have explicit control over who may use the applications.</p>
+<ol>
+<li>
+<p>Login to your Salesforce organization: <a href="https://login.salesforce.com/">https://login.salesforce.com/</a></p>
+</li>
+<li>
+<p>Create a <strong>Connected App</strong> by clicking <strong>Create</strong>, <strong>App</strong>, then <strong>New</strong> in the <strong>Connected Apps</strong> section.</p>
+</li>
+<li>
+<p>Enter all the pertinent data and enable <strong>API (Enable OAuth Settings)</strong> with <strong>Full access (full)</strong>. You can likely change the access level to suit your needs, but full access will at least work.</p>
+</li>
+<li>
+<p>Once created, grab your <strong>Consumer Key</strong> and <strong>Consumer Secret</strong>. You&rsquo;ll need them in a moment.</p>
+</li>
+</ol>
+<p>Using this information, you can now execute the following code.</p>
+<script src="https://gist.github.com/7557434.js?file=gettoken_local.py" type="text/javascript"></script>
+<p>Executing this Pyton code returns the following JSON output:</p>
+<pre><code>{&quot;issued_at&quot;: &quot;1384921072679&quot;, &quot;access_token&quot;: &quot;00DG0000000hatg!AQ8AQIhjBSS9le6QOs_VMQ2iwTPNp78.bzo8JmcdtqtFXN7poIkg5dm6HxpeHPBQhhpw3GXs7383kAM0pWMSmaKlIxO7.GTu&quot;, &quot;instance_url&quot;: &quot;https://na11.salesforce.com&quot;, &quot;id&quot;: &quot;https://login.salesforce.com/id/00DG0000000hatgMAA/005G0000003TE91IAG&quot;, &quot;signature&quot;: &quot;oGbSI0OTkXgN00+kdsNExzMq1RQzZNFrQy9PeGaWuEI=&quot;}
+</code></pre>
+<p>Exactly what we&rsquo;d expect. Or so we think.</p>
+<p>Turns out, the fact that this code executes at all is because we&rsquo;ve logged into Salesforce from our machine and we have inadvertantly completed one of two steps required for identify verification. Through the APIs it&rsquo;s not enough to simply provide the username and password. We need to do more.</p>
+<p>To test this (if you&rsquo;re up for it), try to execute this from a different machine with a different IP address - for example, AWS. You will get the following error:</p>
+<pre><code>authentication failure - Failed: API security token required
+</code></pre>
+<p>While you may find this annoying it&rsquo;s purposeful and important. The reality is that sometimes a username and password isn&rsquo;t enough. We need more protection. This error is in effect telling you that you&rsquo;re not calling from a trusted IP address.</p>
+<p>There are three ways to fix it. The easy way, the somewhat more challenging way, and then the right way.</p>
+<p>Let&rsquo;s take a look at the three ways. But don&rsquo;t use the first two. Seriously.</p>
+<ol>
+<li>
+<p>Set appropriate login ranges for the user profile. <strong>Administration Setup</strong>, <strong>Manage Users</strong>, <strong>Users</strong>. Find your login name and then click the link under <strong>Profile</strong>. In my case, this is <strong>System Administrator</strong>. Click <strong>Login IP Ranges</strong> then the *<em>New</em> button. For giggles, add the range 0.0.0.0 to 255.255.255.255 as this will enable access from everywhere.</p>
+<p>Hopefully you see why this is not a good long term solution.</p>
+</li>
+<li>
+<p>Set appropriate login ranges for the connected app. <strong>App Setup</strong>, <strong>Create</strong>, <strong>Apps</strong>. Click the connected app you created. Click <strong>New</strong> next to <strong>IP Ranges</strong>. Unlike the IP ranges for the user profile you cannot set a ridiculously large range; your have to be more specific and concrete. Figure out the IP range for your host and enter it here.</p>
+<p>This is also not a good solution although it&rsquo;s better than the previous. Fight the urge to do this and let&rsquo;s look at the right option.</p>
+</li>
+<li>
+<p>Get a security token. This is the right thing to do and is called the <a href="http://www.salesforce.com/us/developer/docs/api_rest/Content/intro_understanding_username_password_oauth_flow.htm">Username-Password OAuth Authentication Flow</a>. Turns out, it&rsquo;s not hard to do this. <strong>Personal Setup</strong>, <strong>My Personal Information</strong>, <strong>Reset My Security Token</strong>. This will send a new security token to you via email.</p>
+<p>You must append the security token to their password. For example, if a user&rsquo;s password is &ldquo;mypassword&rdquo; and the security token is &ldquo;XXXXXXXXXX&rdquo;, then the value provided for this parmeter must be &ldquo;mypasswordXXXXXXXXXX&rdquo;.</p>
+<p>As you can see, this is not at all difficult.</p>
+</li>
+</ol>
+<p>So, knowing this and proceeding with option #3, we can make a minor change to our Python code.</p>
+<script src="https://gist.github.com/7557434.js?file=gettoken_remote.py" type="text/javascript"></script>
+<p>This code will run anywhere. Try it out.</p>
+<p>I hope you found this interesting. I certainly learned a lot!</p>
+<p>Special thanks to both <a href="https://twitter.com/metadaddy">Pat Patterson</a> and <a href="https://twitter.com/smarx">Steve Marx</a> for their help along the way.</p>
+
+</div>
+
+
+    <div class="container disqus">
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "wadewegner" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+    </div>
+
+
+
+                
+                <div class="container">
+    <hr>
+</div>
+<div class="container has-text-centered top-pad">
+    <a href="#top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
+</div>
+
+<div class="container">
+    <hr>
+</div>
+
+                <div class="section" id="footer">
+    <div class="container has-text-centered">
+    
+        <span class="footer-text">
+            <a href="https://github.com/victoriadrake/hugo-theme-introduction/"><strong>Introduction</strong></a> theme for <a href="http://gohugo.io/">Hugo</a>. Made with <a href="https://victoria.dev"><i class="fa fa-heart"></i> and <i class="fa fa-coffee"></i></a> by open source contributors.
+        </span>
+    
+    </div>
+</div>
+
+                
+            </div>
+        </section>
+        
+        
+
+
+<script src="https://www.wadewegner.com/js/bundle.2ee571453a8980175e10bda96bda797cc9c4e2e745e488df68d50cef5deb57ff.js" integrity="sha256-LuVxRTqJgBdeEL2pa9p5fMnE4udF5IjfaNUM713rV/8="></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-1174672-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+        
+        
+        
+        
+    </body>
+</html>

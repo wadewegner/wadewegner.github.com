@@ -4,6 +4,7 @@ DefaultContentLanguage           = "en"                             # Default la
 disqusshortname                  = "wadewegner"                     # https://gohugo.io/content-management/comments
 googleAnalytics                  = "UA-1174672-2"                   # https://gohugo.io/templates/internal/#google-analytics
 Title                            = "Wade Wegner"
+publishDir                       = "docs"
 
 [params]
     themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
@@ -96,3 +97,4 @@ Title                            = "Wade Wegner"
 
 [permalinks]
     blog = "/:year/:month/:title/"
+
