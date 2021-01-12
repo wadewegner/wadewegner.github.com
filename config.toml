@@ -8,7 +8,7 @@ Title                            = "Wade Wegner"
 publishDir                       = "docs"
 
 [params]
-    themeStyle                   = "auto"                  # Choose "light" or "dark" or "auto"
+    themeStyle                   = "light"                  # Choose "light" or "dark" or "auto"
     favicon                      = "/home/favicon.ico"     # Path to favicon file
     showRSSButton                = false                   # Show rss button in navigation
     fadeIn                       = false                   # Turn on/off the fade-in effect
