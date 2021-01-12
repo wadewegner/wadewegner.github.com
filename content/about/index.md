@@ -2,6 +2,7 @@
 title: "About"
 draft: false
 weight: 0
+noComment: true
 ---
 <div class="container">
 <div class="columns">
