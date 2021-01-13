@@ -7,6 +7,8 @@ date: "2013-11-18T00:00:00Z"
 description: ""
 tags: []
 title: A Command-line Interface for Force.com
+aliases:
+- /2013/11/a-command-line-interface-for-forcecom/
 ---
 
 Released this week at Dreamforce is a new command-line interface (CLI) tool for Force.com. This tool is open-sourced and available at [http://github.com/heroku/force](http://github.com/heroku/force). This tool lets you quickly interact with the Force.com APIs and opens up interesting opportunities for scripting and automating tasks on Force.com.
