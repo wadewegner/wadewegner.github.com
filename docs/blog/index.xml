@@ -5,7 +5,17 @@
     <link>https://www.wadewegner.com/blog/</link>
     <description>Recent content in Blog on Wade Wegner</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Feb 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wadewegner.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Jan 2021 14:56:45 -0800</lastBuildDate><atom:link href="https://www.wadewegner.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mahalo a Aloha, Salesforce</title>
+      <link>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</link>
+      <pubDate>Wed, 13 Jan 2021 14:56:45 -0800</pubDate>
+      
+      <guid>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</guid>
+      <description>I never thought I’d be writing this blog post, yet here I am. After an incredible five years at Salesforce, it’s time to say “Mahalo a Aloha,” or thank you and goodbye.
+I have so much gratitude for my colleagues at Salesforce, our customers, and of course, the fantastic Salesforce community. Never in my career have I felt the sense of mission that I have at Salesforce. The desire to advance the “state-of-the-art” for Salesforce developers was a passion reciprocated by my colleagues, supported by leadership, and always appreciated by our customers.</description>
+    </item>
+    
     <item>
       <title>Build a Native Mobile App Using Salesforce DX and the Mobile SDK</title>
       <link>https://www.wadewegner.com/2018/02/build-a-native-mobile-app-using-salesforce-dx-and-the-mobile-sdk/</link>
