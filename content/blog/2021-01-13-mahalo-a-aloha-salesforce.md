@@ -14,11 +14,9 @@ I thought it’d be fitting to use this opportunity to celebrate a few of my fav
 
 So, what is Salesforce DX? Ha! After five years, I’m not sure I can quickly answer this question anymore.
 
-The journey started with a recognition by product and engineering leadership that it was too hard for developers—particularly ISVs—to build and manage their apps on the Salesforce platform. But it turned into so much more. We’ve seen some incredible innovation released under the banner of Salesforce DX, most of it focused on making development more modern and predictable. And what’s so rewarding about this work is how foundational it has been. Without it, other advances like Lightning Web Components, building Salesforce Functions, and all kinds of developer productivity delivered from us and our partners, either wouldn’t have been possible or looked very different.
+The journey started with a recognition by product and engineering leadership that it was too hard for developers—particularly ISVs—to build and manage their apps on the Salesforce platform. But it turned into so much more. We’ve seen some incredible innovation released under the banner of Salesforce DX, most of it focused on making development more modern and predictable. And what’s so rewarding about this work is how foundational it has been. Without it, other advances like Lightning Web Components, building Salesforce Functions, and all kinds of developer productivity delivered from us and our partners either wouldn’t have been possible or looked very different.
 
 I’d be remiss if I didn’t include a callout to the Dreamforce Developer Keynote from 2016. What an exciting time! I was so honored to join Srini Tallapragada and John Vogt — a good friend and one of my longtime DX product partners here at Salesforce — to introduce a fundamentally new approach to building apps on Salesforce. I honestly can’t believe they let me and John Vogt go on so long, but I still think the demo was absolutely amazing! Definitely still worth watching, even after five years.
-
-(But geez, Natala, why did you make me wear that suit jacket?)
 
 [![image](https://user-images.githubusercontent.com/746259/104525680-8690a500-55b5-11eb-8c9f-437dbf400271.png)](https://youtu.be/RMKFTLtn0-E?t=1881)
 
@@ -33,6 +31,8 @@ You are all amazing! I have meaningful memories of working with all of you, and 
 (The best part about this list is I accept pull requests … seriously, please ping me to remind me of the people I’m missing!)
 
 I also want to acknowledge four amazing partners in this journey: Jim Wunderlich, the principal architect who had the vision to advocate for the work we did; Scott Musson, the engineering leader who’s leadership enabled us to successfully build and ship these capabilities; Angela McCole, our brave and tireless TPM who kept us aligned and always moving forward; and Natala Menezes, an amazing product marketer who for years has helped us to better understand and articulate what it is we’re doing for developers.
+
+(But geez, Natala, why did you make me wear that suit jacket?)
 
 Seriously, consider everything we introduced that year:
 
@@ -159,7 +159,7 @@ Many who read this post (and let’s be honest, few will get here) will know tha
 
 I really hope you all forgive me for taking so much time to reflect on the last five years. I’m a bit shocked by how much I had to say so far, and yet, there’s so much more.
 
-- **Next Generation Sandboxes**: Rohit Mehta and the entire CRM infra team who helped make this possible — Subho Chatterjee, Nat Wyatt, Robert Frankus, and Rajkumar Irudayaraj — are heroes. The underlying technology that makes these instant copies and clones possible is so mind blowing.
+- **Next Generation Sandboxes**: Rohit Mehta, the Sandbox engineering team, and the CRM infra team who helped make this possible — Subho Chatterjee, Nat Wyatt, Robert Frankus, and Rajkumar Irudayaraj — are all heroes. The underlying technology that makes these instant copies and clones possible is so mind blowing.
 - **Unlocked and Managed 2GPs**: I had no idea what a journey it would be to reinvent packaging on the platform. 2GPs are the future, without a doubt. But getting there has been so hard. And this is one of the reasons I have so much respect and admiration for Dileep Burki, who has continued to advance the cause for as long as I’ve been at Salesforce. I know we’ve said this many times, but we really are on the precipice of the promise 2GPs bring to Salesforce. 
 - **Package Push Upgrades API and Feature Management**: While these two things aren’t directly related, they are important capabilities Dileep and team have brought to ISV developers. And these two are really great representations of why it’s so rewarding to build platforms, because we built these capabilities, and we have seen all the powerful ways Salesforce Developers have used them.
 - **Metadata One**: Who loves gaps in APIs? Who wants scratch orgs that don’t reflect your production org? Not this developer! This is one of those programs that you rarely hear about but it is so important, removing all the papercuts that make building things hard. Karen Fidelak did an amazing job driving this program from the very beginning and really transformed the Salesforce DX experience in the process.
