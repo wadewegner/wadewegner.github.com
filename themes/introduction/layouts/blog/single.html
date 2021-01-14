@@ -9,7 +9,7 @@
     <h2 class="title is-1 top-pad strong-post-title">
         <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
     </h2>
-    <div class="post-data">
+    <div class="post-data" style="font-weight: bold;">
         {{ if .Params.date }}{{ .Date.Format (.Site.Params.dateFormat | default "Jan 02, 2006") }} |{{ end }}
         {{ i18n "blog_readingTime" .ReadingTime }}
     </div>
