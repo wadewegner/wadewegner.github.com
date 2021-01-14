@@ -14,25 +14,25 @@ I thought it’d be fitting to use this opportunity to celebrate a few of my fav
 
 So, what is Salesforce DX? Ha! After five years, I’m not sure I can quickly answer this question anymore.
 
-The journey started with a recognition by product and engineering leadership that it was too hard for developers—particularly ISVs—to build and manage their apps on the Salesforce platform. But it turned into so much more. We’ve seen some incredible innovation released under the banner of Salesforce DX, most of it focused on making development more modern and predictable. And what’s so rewarding about this work is it set up so much more, including Lightning Web Components, connecting to Heroku, and all kinds of developer productivity delivered from us and our partners.
+The journey started with a recognition by product and engineering leadership that it was too hard for developers—particularly ISVs—to build and manage their apps on the Salesforce platform. But it turned into so much more. We’ve seen some incredible innovation released under the banner of Salesforce DX, most of it focused on making development more modern and predictable. And what’s so rewarding about this work is how foundational it has been. Without it, other advances like Lightning Web Components, building Salesforce Functions, and all kinds of developer productivity delivered from us and our partners, either wouldn’t have been possible or looked very different.
 
-I’d be remiss if I didn’t include a callout to the Dreamforce Developer Keynote from 2016. What an exciting time! I was so honored to join Srini Tallapragada and John Vogt — a good friend and one of my longtime DX product partners here at Salesforce — to introduce a fundamentally new approach to building apps on Salesforce. I honestly can’t believe they let me and John Vogt go on so long, but I still think the demo was absolutely amazing! Definitely still worth watching, even after five years. (But geez, Natala, why did you make me wear that suit jacket?)
+I’d be remiss if I didn’t include a callout to the Dreamforce Developer Keynote from 2016. What an exciting time! I was so honored to join Srini Tallapragada and John Vogt — a good friend and one of my longtime DX product partners here at Salesforce — to introduce a fundamentally new approach to building apps on Salesforce. I honestly can’t believe they let me and John Vogt go on so long, but I still think the demo was absolutely amazing! Definitely still worth watching, even after five years.
 
-<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/RMKFTLtn0-E?start=1881" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+(But geez, Natala, why did you make me wear that suit jacket?)
 
 [![image](https://user-images.githubusercontent.com/746259/104525680-8690a500-55b5-11eb-8c9f-437dbf400271.png)](https://youtu.be/RMKFTLtn0-E?t=1881)
 
 > The video above will jump directly to my part in the keynote. Don’t you just love seeing how supportive Sarah Franklin is before and after I speak? She’s amazing and I’m so blessed to have had the fortune to work with her.
 
-A lot of people came together to make Salesforce DX possible. It would be a travesty to not call them all out, so I’m not even going to try. Except, yeah, I’m going to try:
+A lot of people came together to make Salesforce DX possible. It would be a travesty to not call them all out, so I’m not even going to try. Except, yeah, I’m going to try.
 
-Anastasia Shpurik, Andy Fawcett, Carolyn Grabill, Carolyn James, Chad Labrosse, Chris Peterson, Chris Wall, Claire Bianchi, Dave Carroll, Dileep Burki, Emily Kapner, Federico Recio, George Murnock, Ginny Peterson, Greg Wester, Gunnar Wagenknecht, Jeff Bartolotta, Jiahan Ericsson, Jim Spagnola, Joe McTee, John Vogt, Josh Kaplan, Karen Fidelak, Kate Bierbaum, Kim Shain, Kyle Herbig, Luis Campos-Guajardo, Lydia Mann, Martha Morgan, Mike Boilen, Mike Hoefer, Mike Miller, Mike Olson, Nate Totten, Nick Chen, Peter Hale, Peter Wisnovsky, Raj Advani, Reid Elliott, Rohit Mehta, Ruth Sears, Shane McLaughlin, Thomas Dvornik, Vladimir Gerasimov, Zay Guan, and Zayne Turner.
+Anastasia Shpurik, Andy Fawcett, Carolyn Grabill, Carolyn James, Chad Labrosse, Chris Peterson, Chris Wall, Claire Bianchi, Dave Carroll, Dileep Burki, Emily Kapner, Federico Recio, George Murnock, Ginny Peterson, Greg Wester, Gunnar Wagenknecht, Jeff Bartolotta, Jiahan Ericsson, Jim Spagnola, Joe McTee, John Vogt, Josh Kaplan, Karen Fidelak, Kate Bierbaum, Kim Shain, Kyle Herbig, Luis Campos-Guajardo, Lydia Mann, Martha Morgan, Mike Boilen, Mike Hoefer, Mike Miller, Mike Olson, Nathan Totten, Nick Chen, Peter Hale, Peter Wisnovsky, Raj Advani, Reid Elliott, Rohit Mehta, Ruth Sears, Shane McLaughlin, Thomas Dvornik, Vladimir Gerasimov, Zay Guan, and Zayne Turner.
 
 You are all amazing! I have meaningful memories of working with all of you, and it was a privilege.
 
 (The best part about this list is I accept pull requests … seriously, please ping me to remind me of the people I’m missing!)
 
-I also want to acknowledge four amazing partners in this journey: Jim Wunderlich, the principal architect who had the vision to advocate for the work we did; Scott Musson, the engineering leader who’s leadership enabled us to successfully build and ship these capabilities; Angela McCole, our brave and tireless TPM who kept us aligned on always moving forward; and Natala Menezes, an amazing product marketer who for years has helped us to better understand and articulate what it is we’re doing for developers.
+I also want to acknowledge four amazing partners in this journey: Jim Wunderlich, the principal architect who had the vision to advocate for the work we did; Scott Musson, the engineering leader who’s leadership enabled us to successfully build and ship these capabilities; Angela McCole, our brave and tireless TPM who kept us aligned and always moving forward; and Natala Menezes, an amazing product marketer who for years has helped us to better understand and articulate what it is we’re doing for developers.
 
 Seriously, consider everything we introduced that year:
 
@@ -44,7 +44,7 @@ Seriously, consider everything we introduced that year:
 - Support for VCS
 - Support for CI/CD and automation in general
 
-But it all didn’t come together overnight. I’d be lying if I said it all worked just the way we wanted from the beginning. Some things have taken longer than others to deliver on. Transforming a 16-year-old company’s developer experience doesn’t change overnight, but I still believe we focused on the right goals. And our commitment to removing the pain and challenges our customers felt was sincere — we reviewed and tried to understand every bug or defect reported to us, and I’m proud to say that what we have today is stable and works.
+But it all didn’t come together overnight. I’d be lying if I said it all worked just the way we wanted from the beginning. Some things have taken longer than others to deliver on. Transforming a 16-year-old company’s developer experience doesn’t change overnight, but I still believe we focused on the right goals. And our commitment to removing the pain and challenges our customers felt was sincere — we reviewed and tried to understand every bug or defect reported to us, and I’m proud to say that what we have today is stable and works as expected.
 
 ### Salesforce CLI and OCLIF
 
@@ -52,7 +52,7 @@ I’m seriously a CLI junkie. I just love writing scripts and automation.
 
 <img width="600" alt="sfdx-cli-automation" src="https://user-images.githubusercontent.com/746259/34654565-87851aa8-f3b2-11e7-9745-83181d2dd234.gif">
 
-One of the first major ways I feel I contributed personally to the Salesforce developer experience was when I learned that the CLI we were building wasn’t based on the great work the engineers at Heroku had put into their CLI. For those of you who’ve used Heroku, you know that their CLI is amazing and ultimately has led to the Open CLI Framework (OCLIF) that’s now adopted by many companies. I think we ultimately made the right call.
+One of the first major ways I feel I contributed personally to the Salesforce developer experience was when I learned that the CLI we were building wasn’t based on the great work the engineers at Heroku had put into their CLI. For those of you who’ve used Heroku, you know that their CLI is amazing and ultimately has led to the Open CLI Framework (OCLIF) that’s now adopted by many companies. To not use what Heroku created would have not only made things a lot harder, but would have made integration of the two developer experiences even more difficult down the road. I think we ultimately made the right call.
 
 I had a lot of fun with our CLI. The best part is how easy it is to build plugins. They’re so powerful. I built a few.
 
@@ -66,7 +66,7 @@ But my learning didn’t stop there. I even dug into Zsh and Bash autocompletion
 - https://github.com/wadewegner/salesforce-cli-zsh-completion
 - https://github.com/wadewegner/salesforce-cli-bash-completion
 
-Claire Bianchi and Thomas Dvornik are my heroes and their continued focus on the CLI is incredible. What’s great is the team now builds not only the SFDX CLI, but also the Heroku CLI and OCLIF. I’d be remiss, though, if I didn’t call-out the original PM for the CLI, and that’s John Vogt. Back in the day, the core function of the CLI was to move metadata in and out of an org, facilitating all the "magic" performed by Salesforce DX. We’d never have done it without John.
+Claire Bianchi and Thomas Dvornik are my heroes and their continued focus on the CLI is incredible. What’s great is the team now builds not only the SFDX CLI, but also the Heroku CLI and OCLIF. I’d be remiss, though, if I didn’t call-out the original PM for the CLI, and that’s John Vogt. Back in the day, the core function of the CLI was to move metadata in and out of an org, facilitating all the “magic” performed by Salesforce DX. We’d never have done it without John.
 
 ### Salesforce Extensions for Visual Studio Code
 
@@ -76,11 +76,9 @@ I’m blown away by all the outstanding extensions we’ve built.
 
 ![image](https://user-images.githubusercontent.com/746259/104526186-ad031000-55b6-11eb-8fc4-17115af3bbb4.png)
 
-And it’s not even just our extensions, but there’s now an entire ecosystem of developers building tooling for VS Code and Salesforce Developers. I continue to believe we made the right call to take advantage of VS Code rather than building our own proprietary IDE.
+And it’s not even just our extensions, but there’s now an entire ecosystem of developers building tooling for VS Code and Salesforce Developers. I think we did the right thing to take advantage of VS Code rather than building our own proprietary IDE.
 
-One of the things we did behind the scenes to make this possible was standardize on the Language Server Protocol for providing code completion, navigation, diagnostics, and more, for Salesforce proprietary frameworks/languages like Apex, Visualforce, Lightning, and LWC.
-
-These investments are paying off with respect to our work on Code Builder, which is the soon-to-come Web IDE.
+Behind the scenes, we standardized on the Language Server Protocol for providing code completion, navigation, diagnostics, and more, for Salesforce proprietary frameworks/languages like Apex, Visualforce, Lightning, and LWC. These investments not only supported our use of VS Code, but are now paying off with respect to our work on Code Builder, which is the soon-to-come Web IDE.
 
 The team is now in the very capable hands of product manager Stephanie Maddox, but distinguished alums include Nate Totten, Dave Carroll, Josh Kaplan, and Greg Wester. And I’d be remiss to not call out Nick Chen, one of my favorite people and an incredible engineer and technologist here at Salesforce. Nick has had his hands in almost all of the work our teams have done, and we’re better for it!
 
@@ -100,7 +98,7 @@ Of course, there’s more work to do. This is more of an integration or proof-of
 
 ### DevOps Center
 
-I recognize that DevOps Center isn’t yet Generally Available (GA) but we already have customers using it as part of a pilot and the reception and feedback has been positive.
+I recognize that DevOps Center isn’t yet Generally Available (GA) but we already have customers using it as part of a pilot and the reception and feedback has been really positive.
 
 A consequence of all the great work we did for Salesforce DX is we moved the release management and DevOps needle substantially for programmatic developers but, in many ways, left low-code developers and Salesforce Admins behind. The tools they currently use, such as Change Sets, have many flaws and unfortunately don't work well with Salesforce DX. The whole idea of working as a team was unfortunately made more complex right from the very beginning.
 
@@ -126,13 +124,13 @@ The rest is history. While at times stressful and confusing, a large cross-funct
 
 I’d like to call out a few amazing people who were instrumental in Work.com.
 
-While many of us were still scratching our heads and trying to figure out what to do, Ashley McDermott — an amazing TPM partner I’m lucky to have worked with for the last couple years — took charge and started running daily standups. She helped us confront open questions head on and bring clarity. When she transitioned to Diem Nguyen, I’ll admit I worried we’d flounder a bit, but Diem took what we’d started and scaled it to incredible levels, driving the largest cross-functional working group I’ve ever been a part of. I’m in awe of Diem’s confident and patient leadership at scale. And of course, my partner in crime, Taksina Eammano. Taks was able to mobilize parts of the company I didn’t even know existed, and at the same time engaged in countless customer conversations and brought so much amazing insight to the team.
+While many of us were still scratching our heads and trying to figure out what to do, Ashley McDermott — an amazing TPM partner I’m lucky to have worked with for the last couple years — took charge and started running daily standups. She helped us confront open questions head on and bring clarity. Diem Nguyen took what Ashley started, and scaled it to incredible levels, driving the largest cross-functional working group I’ve ever been a part of. I’m in awe of Diem’s confident and patient leadership at scale. And of course, my partner in crime, Taksina Eammano. Taks was able to mobilize parts of the company I didn’t even know existed, and at the same time engaged in countless customer conversations and brought so much amazing insight to the team.
 
 I learned so much by watching these amazing women perform their jobs with humility and excellence. 
 
 ### Salesforce Functions
 
-Before I talk about Salesforce Functions, let me take a moment to talk about one of my best hires of all time … none other than Andrew Fawcett. Andy is a unique combination of incredible technical depth, an ability to see connections that don’t exist, humility, and a commitment to people and customers I’ve rarely seen. With his deep knowledge of all things Salesforce Platform, and insatiable desire to build incredible things, Andy was able to see connections well ahead of most of us. And his patient yet unwavering leadership has literally moved mountains.
+Before I talk about Salesforce Functions, let me take a moment to talk about one of my best hires of all time … none other than Andrew Fawcett. Andy is a unique combination of incredible technical depth, an ability to see connections that don’t yet exist, humility, and a strong commitment to people and customers. With his deep knowledge of all things Salesforce Platform, and insatiable desire to build incredible things, Andy was able to see connections well ahead of most of us. And his patient yet unwavering leadership has literally moved mountains.
 
 Case in point, Salesforce Functions.
 
@@ -155,11 +153,11 @@ When Sarah Franklin presented the Platform keynote at Dreamforce 2019, she menti
 
 It turns out that, in practice, this is harder than it sounds.
 
-Many who read this post (and let’s be honest, get this far) will know that behind a simple hashtag is so much more. The transformation that so many of us were and are a part of has been technically, operationally, and emotionally difficult. But I believe taking on these hard things is not only important but a responsibility. There’s more work to do, but this past year has seen so many important and bold changes, and I have a lot of confidence in the broader team to continue this transformation.
+Many who read this post (and let’s be honest, few will get here) will know that behind a simple hashtag is so much more. The transformation that so many of us were and are a part of has been technically, operationally, and emotionally challenging. But I believe taking on these hard things is not only important but a responsibility. There’s more work to do, but this past year has seen so many consequential changes and I have a lot of confidence in the team to continue this transformation.
 
 ### Can We Finally Wrap This Up?
 
-I really hope you all forgive me for taking so much time to reflect on the last five years. I’m a bit shocked by how much I had to say so far, and yet, there’s so much more. When you reflect on five years, there’s just so much. 
+I really hope you all forgive me for taking so much time to reflect on the last five years. I’m a bit shocked by how much I had to say so far, and yet, there’s so much more.
 
 - **Next Generation Sandboxes**: Rohit Mehta and the entire CRM infra team who helped make this possible — Subho Chatterjee, Nat Wyatt, Robert Frankus, and Rajkumar Irudayaraj — are heroes. The underlying technology that makes these instant copies and clones possible is so mind blowing.
 - **Unlocked and Managed 2GPs**: I had no idea what a journey it would be to reinvent packaging on the platform. 2GPs are the future, without a doubt. But getting there has been so hard. And this is one of the reasons I have so much respect and admiration for Dileep Burki, who has continued to advance the cause for as long as I’ve been at Salesforce. I know we’ve said this many times, but we really are on the precipice of the promise 2GPs bring to Salesforce. 
@@ -168,11 +166,11 @@ I really hope you all forgive me for taking so much time to reflect on the last 
 - **Dependency API**: The origins of this work is really interesting. We saw customers struggle to decompose their “happy soup” and make sense of their metadata. Andy Fawcett and Mike Boilen dove right in and it was clear there was more value here than we realized. Just look at what Vladimir Gerasimov has done since, including the “find my field” button. The best part is simply to see what amazing things developers do when you create an API like this one — it’s always a surprise and delight!
 - **Scratch Org Shape and Snapshots**: Highly anticipated, and a long time coming, these two capabilities of scratch orgs are must-haves for serious developers. With Rohit’s leadership, they’re so close to GA!
 - **Data Mask**: I learned so much on the Data Mask journey, and was fortunate to learn from so many people — Josh Alexander (the professor!), Blake Poutra (CEO of Phennecs), Rohit Mehta, Brenda Niem … and really, a huge team of awesome people. And I’d be remiss to not mention the role Amanda Grady and Assaf Ben-Gur had in identifying the opportunity, and then the grace to support others to take it to the next level.
-- **Apex improvements**: too many to share (and often internal), but without the strong leadership and devotion of Chris Peterson, developers would have so much more work to do!
-- **Apex Compiler**: Speaking of Apex, did you know we completely rebuilt the Apex Compiler and released it and, had we not mentioned it, no one would have known? A work of art.
+- **Apex improvements**: Too many to share (and often internal), but without the strong leadership and devotion of Chris Peterson, developers would have so much more work to do!
+- **Apex Compiler**: Speaking of Apex, did you know we completely rebuilt the Apex Compiler and released it and, had we not mentioned it, no one would have known? A work of art. 
 - **Security Center**: Another great example of product leaders identifying customer challenges and figuring out ways to bring meaningful products to market. John Whelan saw the opportunity and, working with engineering, put together a plan to make it a reality.
 
-I’m humbled to have been on such a journey with all of you.
+I’m humbled to have been a part of doing such extraordinary things with all of you.
 
 If I may (and why not, it's my blog), to close I’d also like to mention a few people directly and thank them.
 
@@ -180,7 +178,7 @@ If I may (and why not, it's my blog), to close I’d also like to mention a few 
 
 **Adrian Kunzle**: While I had many reasons for joining Salesforce, working for you was perhaps the largest. I benefited a lot learning from you and I appreciate how you always provided support and mentorship. You had a vision for the Salesforce Platform that I always believed in, and I am proud for my part in helping to see it realized.
 
-**Andy Fawcett**: As I said above, you were the right person and the right time. Seeing the impact you have had at Salesforce has been a pleasure, and I’m so thankful for the vision you’ve shared with all of us.
+**Andy Fawcett**: As I said above, you were the right person at the right time. Seeing the impact you have had at Salesforce has been a pleasure, and I’m so thankful for the vision you’ve shared with all of us.
 
 **Angela McCole**: In many ways, we started on this journey together as partners! So many of the successes shared above were your successes, and I am so thankful for all the great things we got to do together!
 
@@ -188,11 +186,13 @@ If I may (and why not, it's my blog), to close I’d also like to mention a few 
 
 **Bill Patterson**: I wish we had spent more time working together. I will forever value your leadership and mentorship while on the work.com journey. Your willingness to take the time and set all other things aside to provide support is uncommon and I’ll remain forever grateful.
 
+**Dimitrua Jackson**: I’ve never had an assistant before and at first I really didn’t know what to do (or not to do). But you so quickly became an indispensable part of my life, and I value you so much as a human being and a friend. Thank you for everything you’ve done for me and our teams!
+
 **Doug Scott**: You provided a ton of leadership and steering at the helm of an enormous ship, yet always took the time to meet, share your candid thoughts, and reflect on the opportunities that lay ahead. Thank you!
 
 **Guy Jenkins**: If I could go back to earlier naive Wade and give him a piece of advice, it would be to partner more closely with you sooner. Your ability to sift through the noise to find signal is unparalleled, and every engagement or partnership with you or your team has made things exponentially better!
 
-**John Stormer**: I have always appreciated and respected the way you bring a smile and positivity to everything you do, even though you have an enormous charter and a seemingly impossible task. 
+**John Stormer**: I have always appreciated and respected the way you bring a smile and positivity to everything you do, even though you have an enormous charter and a seemingly impossible task.
 
 **John Vogt**: We’ve definitely been together through a lot. We’ve had a lot of good times, and definitely our share of frustrations. But the friendship we’ve built and the respect I have for you will forever remain. It’s been awesome working with you all these years.
 
@@ -200,10 +200,10 @@ If I may (and why not, it's my blog), to close I’d also like to mention a few 
 
 **Rick Reicker**: You’re the busiest person I know, yet you bring a smile and somehow keep it all together. If there’s any one person who’s been responsible for keeping the platform together and functioning through all the changes over the last few years, it’s been you.
 
-**Sarah Franklin**: I’m proud to always call you my boss, a supportive colleague, and of course a friend. From the beginning you were a champion for me and believed in me. I’ve learned a lot from you — fearless and transparent leadership, the value of preparation and practice (lol!), and how you’ll never go wrong when you keep the needs of your customers front and center.
+**Sarah Franklin**: I’m proud to call you my boss, a supportive colleague, and of course a friend. From the beginning you were a champion for me and believed in me. I’ve learned a lot from you — fearless and transparent leadership, the value of preparation and practice (lol!), and how you’ll never go wrong when you keep the needs of your customers front and center.
 
-**Scott Musson**: I feel like you and I have been through so much together over the years, and I'm proud to have done it with you. You've been a source of stability, pragmatism, and the often needed kick in the pants. I really value your wisdom and friendship.
+**Scott Musson**: I feel like you and I have been through so much together over the years, and I'm proud to have done it with you. You've been a source of stability, pragmatism, and the often needed kick in the pants. I really value your wisdom, experience, and friendship.
 
-Okay, I think I’ve said enough. Probably too much. But if you made it this far, I hope it’s clear to you what an impact this great company and these great people have had on me. I’ll never be the same, and I’ll always remain grateful.
+Okay, I think I’ve said enough. Maybe too much. But if you made it this far, I hope it’s clear to you what an impact this great company and these great people have had on me. I’ll never be the same, and I’ll always remain grateful.
 
 🙏
