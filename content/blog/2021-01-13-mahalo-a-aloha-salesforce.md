@@ -25,7 +25,7 @@ I’d be remiss if I didn’t include a callout to the Dreamforce Developer Keyn
 
 A lot of people came together to make Salesforce DX possible. It would be a travesty to not call them all out, so I’m not even going to try. Except, yeah, I’m going to try.
 
-Anastasia Shpurik, Andy Fawcett, Carolyn Grabill, Carolyn James, Chad Labrosse, Chris Peterson, Chris Wall, Claire Bianchi, Dave Carroll, Dileep Burki, Emily Kapner, Federico Recio, George Murnock, Ginny Peterson, Greg Wester, Gunnar Wagenknecht, Jeff Bartolotta, Jiahan Ericsson, Jim Spagnola, Joe McTee, John Vogt, Josh Kaplan, Karen Fidelak, Kate Bierbaum, Kim Shain, Kyle Herbig, Luis Campos-Guajardo, Lydia Mann, Martha Morgan, Mike Boilen, Mike Hoefer, Mike Miller, Mike Olson, Nathan Totten, Nick Chen, Peter Hale, Peter Wisnovsky, Raj Advani, Reid Elliott, Rohit Mehta, Ruth Sears, Shane McLaughlin, Thomas Dvornik, Vladimir Gerasimov, Zay Guan, and Zayne Turner.
+Anastasia Shpurik, Andy Fawcett, Carolyn Grabill, Carolyn James, Chad Labrosse, Chris Peterson, Chris Wall, Claire Bianchi, Dave Carroll, Dileep Burki, Emily Kapner, Federico Recio, George Murnock, Ginny Peterson, Greg Wester, Gunnar Wagenknecht, Jeff Bartolotta, Jiahan Ericsson, Jim Spagnola, Joe McTee, John Vogt, Josh Kaplan, Juliet Shackell, Karen Fidelak, Kate Bierbaum, Kim Shain, Kyle Herbig, Luis Campos-Guajardo, Lydia Mann, Martha Morgan, Mike Boilen, Mike Hoefer, Mike Miller, Mike Olson, Nathan Totten, Nick Chen, Peter Hale, Peter Wisnovsky, Raj Advani, Reid Elliott, Rohit Mehta, Ruth Sears, Shane McLaughlin, Thomas Dvornik, Vladimir Gerasimov, Zay Guan, and Zayne Turner.
 
 You are all amazing! I have meaningful memories of working with all of you, and it was a privilege.
 
