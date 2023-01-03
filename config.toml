@@ -5,7 +5,7 @@ disqusshortname                  = "wadewegner"                     # https://go
 # disqus_url                       = "www.wadewegner.com"
 googleAnalytics                  = "UA-1174672-2"                   # https://gohugo.io/templates/internal/#google-analytics
 Title                            = "Wade Wegner"
-publishDir                       = "public"
+publishDir                       = "docs"
 
 [params]
     themeStyle                   = "light"                 # Choose "light" or "dark" or "auto"
