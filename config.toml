@@ -131,7 +131,7 @@ publishDir                       = "docs"
         languageCode     = "en-us"
         contentDir       = "content"
         weight           = 0
-        title            = "Introduction"
+        title            = "Wade Wegner"
         [languages.en.params]
             description  = "Wade Wegner"   # Max 160 characters show in search results
             footerText   = ""                      # Text to override default footer text (markdown allowed)

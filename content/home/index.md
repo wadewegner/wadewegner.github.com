@@ -1,5 +1,5 @@
 ---
-title: "Wade Wegner"
+title: "Merging code and miles"
 draft: false
-weight: 0
 ---
+Wade Wegner's website and blog
