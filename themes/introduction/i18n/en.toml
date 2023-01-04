@@ -6,8 +6,6 @@
     other = "All Projects"
 [index_blog_latestPosts]
     other = "Latest Post"
-[index_home_latestPosts]
-    other = "Most Recent Posts"
 [index_blog_allPosts]
     other = "All Posts"
 [index_blog_readMore]
