@@ -1,6 +1,6 @@
 {
     "scripts": {
-      "build": "npm install -g postcss postcss-cli autoprefixer && hugo --gc --minify",
+      "build": "npm install -g postcss postcss-cli autoprefixer && hugo --gc --minify"
     },
     "devDependencies": {
       "autoprefixer": "^10.4.2",
