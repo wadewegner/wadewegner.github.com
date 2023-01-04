@@ -1,20 +1,3 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Blog on Wade Wegner</title>
-    <link>https://www.wadewegner.com/blog/</link>
-    <description>Recent content in Blog on Wade Wegner</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 13 Jan 2021 14:56:45 -0800</lastBuildDate><atom:link href="https://www.wadewegner.com/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Mahalo a Aloha, Salesforce</title>
-      <link>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</link>
-      <pubDate>Wed, 13 Jan 2021 14:56:45 -0800</pubDate>
-      
-      <guid>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</guid>
-      <description>I never thought I’d be writing this blog post, yet here I am. After an incredible five years at Salesforce, it’s time to say “Mahalo a Aloha,” or thank you and goodbye.
-I have so much gratitude for my colleagues at Salesforce, our customers, and of course, the fantastic Salesforce community. Never in my career have I felt the sense of mission that I have at Salesforce. The desire to advance the “state-of-the-art” for Salesforce developers was a passion reciprocated by my colleagues, supported by leadership, and always appreciated by our customers.</description>
-    </item>
-    
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Introduction</title><link>https://www.wadewegner.com/blog/</link><description>Recent content in Blog on Introduction</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Tue, 03 Jan 2023 15:12:02 -0800</lastBuildDate><atom:link href="https://www.wadewegner.com/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>My Return to Blogging</title><link>https://www.wadewegner.com/2023/01/my-return-to-blogging/</link><pubDate>Tue, 03 Jan 2023 15:12:02 -0800</pubDate><guid>https://www.wadewegner.com/2023/01/my-return-to-blogging/</guid><description>It&amp;rsquo;s been a while since I&amp;rsquo;ve sat down and written a blog post. I&amp;rsquo;m humbled to say it took me a few hours to relearn Hugo and get it functioning on my PC. But this post isn&amp;rsquo;t about Hugo, migrating from GitHub Pages to Netlify, nor my decision to archive 12 years of old blog posts.
+This blog post is to say, well, I have things I want to say.</description></item><item><title>Mahalo a Aloha, Salesforce</title><link>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</link><pubDate>Wed, 13 Jan 2021 14:56:45 -0800</pubDate><guid>https://www.wadewegner.com/2021/01/mahalo-a-aloha-salesforce/</guid><description>I never thought I’d be writing this blog post, yet here I am. After an incredible five years at Salesforce, it’s time to say “Mahalo a Aloha,” or thank you and goodbye.
+I have so much gratitude for my colleagues at Salesforce, our customers, and of course, the fantastic Salesforce community. Never in my career have I felt the sense of mission that I have at Salesforce. The desire to advance the “state-of-the-art” for Salesforce developers was a passion reciprocated by my colleagues, supported by leadership, and always appreciated by our customers.</description></item></channel></rss>

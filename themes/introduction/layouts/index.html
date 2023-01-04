@@ -20,18 +20,18 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <!-- Title and tagline -->
-                    <h1 class="title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
+                    <h1 class="bold-title {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in one{{ end }}">
                         {{ .Title | markdownify }}
                     </h1>
-                    <div class="is3 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
+                    <div class="subtitle is-3 {{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in two{{ end }}">
                         {{ .Content }}
                     </div>
                     <!-- End title and tagline -->
-                  <!-- Some social icons -->
-                  <div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
-                    {{ partial "home/social.html" . }}
-                </div>
-                <!-- End top social icons -->
+                    <!-- Some social icons -->
+                    <div class="{{ if or (.Site.Params.fadeIn | default true) .Site.Params.fadeInIndex }}fade-in three{{ end }}">
+                        {{ partial "home/social.html" . }}
+                    </div>
+                    <!-- End top social icons -->
                 </div>
             </div> <!-- End of Hero body -->
             {{ end }}

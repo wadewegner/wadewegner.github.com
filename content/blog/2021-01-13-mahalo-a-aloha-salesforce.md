@@ -2,7 +2,7 @@
 title: "Mahalo a Aloha, Salesforce"
 date: 2021-01-13T14:56:45-08:00
 draft: false
-description: "I never thought I’d be writing this blog post, yet here I am. After an incredible five years at Salesforce, it’s time to say “Mahalo a Aloha,” or thank you and goodbye."
+description: "After an incredible five years at Salesforce, it’s time to say 'Mahalo a Aloha,' or thank you and goodbye."
 ---
 
 I never thought I’d be writing this blog post, yet here I am. After an incredible five years at Salesforce, it’s time to say “Mahalo a Aloha,” or thank you and goodbye.  
