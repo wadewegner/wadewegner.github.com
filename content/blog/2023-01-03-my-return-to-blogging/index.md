@@ -3,7 +3,11 @@ title: "My Return to Blogging"
 date: 2023-01-03T15:12:02-08:00
 draft: false
 description: "There are things I'd like to say. But mostly I want to talk about running and ultramarathons."
+images:
+ - 2023-01-03-my-return-to-blogging.JPG
 ---
+
+![A selfie of me while running at Deception Pass State Park](/blog/images/2023-01-03-my-return-to-blogging.JPG)
 
 It's been a while since I've sat down and written a blog post. I'm humbled to say it took me a few hours to relearn Hugo and get it functioning on my PC. But this post isn't about Hugo, migrating from GitHub Pages to Netlify, nor my decision to archive 12 years of old blog posts.
 
