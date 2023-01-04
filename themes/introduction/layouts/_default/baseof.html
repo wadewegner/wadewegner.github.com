@@ -28,8 +28,10 @@
                 {{ end }}
 
                 {{ block "footer" . }}
+                {{ if (not .Params.noComment) }}
                 {{ partial "top-icon-with-hr.html" . }}
-                {{ partial "footer/text.html" . }}
+                {{ end }}
+                {{/* waw {{ partial "footer/text.html" . }}  */}}
                 {{ end }}
             </div>
         </section>
