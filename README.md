@@ -12,3 +12,9 @@ Except where otherwise noted, content on this site is licensed under a [Creative
 ```
 git checkout -b new-branch-name
 ```
+
+## Create a New Blog Post
+
+```
+hugo new content/blog/<date>-<title>/index.md
+```
