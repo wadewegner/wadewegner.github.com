@@ -143,7 +143,7 @@ Back-to-back long runs are key to my training strategy. Today felt great! In fac
 **Average pace**: 11:12 (min/mi)<br/>
 **Elevation**: 807 (ft)<br/>
 **TSS**: 165 | 175<br/>
-**IF**: 0.80| 0.84<br/>
+**IF**: 0.80 | 0.84<br/>
 
 All-in-all, a great week of training!
 
