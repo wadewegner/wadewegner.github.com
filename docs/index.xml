@@ -6,7 +6,18 @@
     <description>Recent content on Wade Wegner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 03 Jan 2023 15:12:02 -0800</lastBuildDate><atom:link href="https://www.wadewegner.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 08 Jan 2023 15:06:27 -0800</lastBuildDate><atom:link href="https://www.wadewegner.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Training Week-In-Review: January 8, 2023</title>
+      <link>https://www.wadewegner.com/2023/01/training-week-in-review-january-8-2023/</link>
+      <pubDate>Sun, 08 Jan 2023 15:06:27 -0800</pubDate>
+      
+      <guid>https://www.wadewegner.com/2023/01/training-week-in-review-january-8-2023/</guid>
+      <description>Playing &amp;ldquo;bump&amp;rdquo; with my son and wife during the week.
+I think this past week marked a turning point for my training. The last few months have brought challenges that were new for me, and consequently I struggled with recovery and rest. I&amp;rsquo;ve been able to debug and resolve most of those issues, and as a result feel as if I&amp;rsquo;m headed in the right direction.
+As this is my first &amp;ldquo;Week-In-Review&amp;rdquo; post, I&amp;rsquo;ll share a few things to set some context:</description>
+    </item>
+    
     <item>
       <title>My Return to Blogging</title>
       <link>https://www.wadewegner.com/2023/01/my-return-to-blogging/</link>
@@ -33,8 +44,8 @@ I have so much gratitude for my colleagues at Salesforce, our customers, and of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://www.wadewegner.com/about/</guid>
-      <description>I have been lucky to have so many amazing opportunities throughout my career, working with some of the smartest engineers and technologists in the world and filling various roles from software developer to architect to technology evangelist.
-I first started programming in middle school by writing Pascal-based scripts for VT220 telnet clients that automatically played (and leveled) characters in MUDs. Since then, I&amp;rsquo;ve worked on increasingly more complex solutions (if not as fun) including large-scale commerce implementations, low-latency distributed messaging systems, and cloud-based Monte Carlo simulations.</description>
+      <description>I have been lucky to have so many amazing opportunities throughout my career, working with some of the smartest engineers and technologists in the world and filling various roles from software developer to technology evangelist to product executive.
+I first started programming in middle school by writing Pascal-based scripts for VT220 telnet clients that automatically played (and leveled) characters in MUDs. Since then, I&amp;rsquo;ve worked on increasingly more complex solutions (if not as fun) including large-scale commerce implementations, low-latency distributed messaging systems, and building developer platforms.</description>
     </item>
     
     <item>
