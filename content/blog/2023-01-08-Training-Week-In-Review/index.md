@@ -32,7 +32,7 @@ As this is my first "Week-In-Review" post, I'll share a few things to set some c
 This week, I wrapped up the Steady State block. I won't lie, it was tough. State state workouts generally involve three intervals run for 10 minutes at an RPE of 8-9. This means that I'm running HARD for 10 minutes. Making this harder, we had a lot of snow in December, and the majority of my runs ended up on the treadmill (which I love but also hate). I do much better with hard runs when I'm outside on a trail.
 
 **Run Duration**: 7:04 | 7:55 (h:m)<br/>
-**Total TSS**: 561 | 580
+**Total TSS**: 561 | 580<br/>
 **Total Distance**: 41.4 mi
 
 I was a little short of goals this week. But it's okay.
