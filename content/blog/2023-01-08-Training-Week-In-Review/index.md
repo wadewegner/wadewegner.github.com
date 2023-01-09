@@ -117,8 +117,8 @@ It was chilly and rainy outside. I got a new jacket recently that's water proof;
 
 ![Map of Saturday's run](saturday-run-map.png)
 
-**RPE**: <br/>
-**Felt**: <br/>
+**RPE**: 7 | 5-6<br/>
+**Felt**: Normal<br/>
 **Time**: 1:47:25 | 2:00:00 (h:m:s)<br/>
 **Distance**: 9.19 (mi)<br/>
 **Average pace**: 11:41 (min/mi)<br/>
@@ -136,8 +136,8 @@ Back-to-back long runs are key to my training strategy. Today felt great! In fac
 
 ![Map of Sunday's run](sunday-run-map.png)
 
-**RPE**: <br/>
-**Felt**: <br/>
+**RPE**: 7 | 5-6<br/>
+**Felt**: Somewhat Good<br/>
 **Time**: 2:17:57 | 2:30:00 (h:m:s)<br/>
 **Distance**: 12.3 (mi)<br/>
 **Average pace**: 11:12 (min/mi)<br/>
