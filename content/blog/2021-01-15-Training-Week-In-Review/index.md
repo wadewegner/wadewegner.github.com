@@ -13,15 +13,17 @@ _<figcaption>My son and me before running the trails in the neighborhood.</figca
 
 #### Summary
 
-**Run Duration**: 6:54 | 6:15 (h:m)<br/>
-**Total TSS**: 453 | 433<br/>
-**Total Distance**: 34.2 mi
-
 Week 3 was a recovery week. As I mentioned in [last week's post](https://www.wadewegner.com/2023/01/training-week-in-review-january-8-2023/), I just finished the Lactate Threshold block. Next week, I'll start the Steady State block.
 
 The Steady State block is my favorite training block. While there is variety, it typically involved running 90 minutes with two 30 minute blocks at Steady State, which is characterized by a Rate of Perceived Exersion (RPE) of 7. During a Steady State effort, you should be able to say a few sentences between breaths. It's just below your Tempo run effort, but not as easy as an Endurance effort.
 
 But that's next week. This week was about rest and recovery. The timing was good as I was in San Francisco for work. I have to workout pretty early to avoid disrupting busy days, and so I opt for treadmills given I don't like running in the city at night.
+
+**Run Duration**: 6:54 | 6:15 (h:m)<br/>
+**Total TSS**: 453 | 433<br/>
+**Total Distance**: 34.2 mi
+
+I'm pretty happy with the week. I got much needed recovery during the week, and a couple long runs on the weekend.
 
 ##### Monday
 
