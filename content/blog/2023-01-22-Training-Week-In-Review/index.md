@@ -157,4 +157,4 @@ It was a great way to end the week. As you know, it started off a bit rough, but
 **TSS**: 109 | 105<br/>
 **IF**: 0.89 | 0.84<br/>
 
-That's a wrap! Week 4 of 2023 is complete!
+That's a wrap! Week 4 is complete!

@@ -76,7 +76,7 @@ publishDir                       = "docs"
         icon_pack = "fab"
 
     [[params.social]]
-        url   = "http://strava.com/"
+        url   = "https://www.strava.com/athletes/27524150"
         icon  = "strava" # icon name without the 'fa-'
         icon_pack = "fab"
 
