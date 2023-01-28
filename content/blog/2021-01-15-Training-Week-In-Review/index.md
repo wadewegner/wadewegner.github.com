@@ -1,13 +1,13 @@
 ---
 title: "Training Week-In-Review: January 15, 2023"
 date: 2023-01-15T05:18:16-08:00
-description: "tbd"
+description: "I enjoyed my recovery week and a couple long runs on the weekend."
 images:
   - wade-ethan-blue-sky.jpeg
 draft: false
 ---
 
-![My son and me before running the trails in the neighborhoow](wade-ethan-blue-sky.jpeg)
+![My son and me before running the trails in the neighborhood](wade-ethan-blue-sky.jpeg)
 
 _<figcaption>My son and me before running the trails in the neighborhood.</figcaption>_
 

@@ -14,7 +14,7 @@ publishDir                       = "docs"
     fadeInIndex                  = false                   # Turn on/off the fade-in effect on the index page even if fade-in was otherwise turned off
     dateFormat                   = "Jan 2, 2006"
     email                        = "wade.wegner@gmail.com" # E-mail address for contact section
-    # customCSS                  = ["css/screen.css"]        # Include custom css files placed under assets/
+    # customCSS                    = ["styles.css"]        # Include custom css files placed under assets/
     # customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
     # plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)
     # description                  = "From the whiteboard to the keyboard"
@@ -62,6 +62,8 @@ publishDir                       = "docs"
     # Social icons appear in introduction and contact section. Add as many more as you like.
     # Icon pack "fab" includes social network icons, see: https://fontawesome.com/icons?d=gallery&s=brands&m=free
     # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
+    
+
     [[params.social]]
         url   = "https://hachyderm.io/@WadeWegner"
         icon  = "mastodon" # icon name without the 'fa-'
@@ -71,6 +73,11 @@ publishDir                       = "docs"
     [[params.social]]
         url   = "https://linkedin.com/in/wadewegner/"
         icon  = "linkedin-in" # icon name without the 'fa-'
+        icon_pack = "fab"
+
+    [[params.social]]
+        url   = "https://www.strava.com/athletes/27524150"
+        icon  = "strava" # icon name without the 'fa-'
         icon_pack = "fab"
 
     [[params.social]]
