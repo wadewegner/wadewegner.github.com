@@ -1,0 +1,21 @@
+.markdown tbody tr:nth-child(odd) td,
+.markdown tbody tr:nth-child(odd) th,
+.markdown tbody tr:nth-child(even) td,
+.markdown tbody tr:nth-child(even) th .markdown table,
+.markdown table,
+.markdown td,
+.markdown th {
+  background-color: #ffffff;
+  border-width: 0px;
+  margin: 0px 0px 0px 0px;
+  border: 0px;
+  padding: 5px 5px 0px 0px;
+  border-spacing: 0px;
+}
+
+.markdown img {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  border: 0px;
+  background-color: #ffffff;
+}
