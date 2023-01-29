@@ -31,7 +31,7 @@ Early in the week I asked folks on Mastodon (and Twitter) what they do when this
 
 Speaking of Steady State workouts, these are my favorites. In the past, I feel as if I've seen the most growth in my capacity as a runner during these Steady State blocks.
 
-A State State interval has a Rate of Perceived Exertion (RPE) of 7, so you should be breathing deeply but could still say a few sentences. I feel like it's a great way to build stamina and start to build a strong base of miles.
+A Steady State interval has a Rate of Perceived Exertion (RPE) of 7, so you should be breathing deeply but could still say a few sentences. I feel like it's a great way to build stamina and start to build a strong base of miles.
 
 Steady State intervals are usually balanced by an Endurance Run pace, which is an RPE of 5-6, defined as rhythmic breathing, and not labored at any point. Something you could do for hours.
 
