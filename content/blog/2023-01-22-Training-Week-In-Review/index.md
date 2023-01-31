@@ -23,6 +23,8 @@ draft: false
 </tr>
 </table>
 
+<p />
+
 #### Summary
 
 Week 4 started out with a few bumps. I developed a pretty bad chest cold that got progressively worse through the week. Additionally, I traveled to Berlin and, likely because of the chest cold, did not sleep well on the trip and as a result started off my visit with some bad jet lag. I then ended the week traveling to Marrakech and, fortunately, was on the mend.
