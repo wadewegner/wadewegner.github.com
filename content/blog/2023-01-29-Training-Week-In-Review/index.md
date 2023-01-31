@@ -3,15 +3,42 @@ title: "Training Week-In-Review: January 29, 2023"
 date: 2023-01-29T10:47:49+01:00
 description: "An amazing week of running, travel, spending time with my colleagues in Morocco."
 images:
-  - image.JPG
+  - berlin1.jpg
+  - berlin2.jpg
+  - berlin3.jpg
+  - cactus.jpg
 draft: false
 ---
 
-![pic summary](pic.png)
+<table>
+<tr>
+    <td colspan="2">
+        <img src="berlin1.jpg" alt="A picture from the start of my run in Berlin." />
+    </td>
+</tr>
+<tr>
+    <td>
+        <img src="berlin2.jpg" alt="A selfie while on my 15 mile run in Berlin." />
+    </td>
+    <td>
+        <img src="cactus.jpg" alt="A picture of a cactus that I saw every morning I ran in Morocco. It reminded me of a parent holding their child." />
+    </td>
+</tr>
+</table>
+
+_<figcaption>A picture from the start of my run in Berlin. A selfie while on my 15-mile run in Berlin. A picture of a cactus I saw every morning I ran in Morocco that reminded me of a parent holding their child.</figcaption>_
+
+<p />
 
 #### Summary
 
-todo
+An amazing week! Not only did I travel to Africa for the first time, but I crushed my training goals for the week. All of this despite lots of travel (three different continents) and energy spent focused on our company's annual kickoff throughout the week.
+
+It's hard to describe how much my training success means to me this week. After having dealt with a bad cold the week before, I really felt good this week.
+
+**Run Duration**: 8:26 | 8:45 (h:m)<br/>
+**Total TSS**: 724 | 607<br/>
+**Total Distance**: 49.8 mi (almost 50!)
 
 ##### Monday
 
@@ -26,6 +53,8 @@ I jumped out of bed, confused. It took me a few minutes to figure out what was h
 This time I unplugged it from the wall.
 
 Sadly, I was unable to get back to sleep. So what to do? Run!
+
+<img width="600" alt="Monday's run route" src="monday-map.png" />
 
 Now that I knew the grounds of the hotel better, I decided to run laps around the front of the hotel. Each lap is 1.2 miles.
 
@@ -46,6 +75,8 @@ Glad I brought my headlamp with me!
 
 I felt alive on this run! I was able to push the Steady State intervals hard, and I thoroughly enjoyed myself.
 
+<img width="600" alt="Tuesday's run route" src="tuesday-map.png" />
+
 Around 7am, the call to pray sounded. I looked up from my run and could see faint signs of sunrise, and suddenly felt a profound sense of peace and gratitude. Runner's high? Maybe. But I think it was more.
 
 **RPE**: 7 | 7<br/>
@@ -63,6 +94,8 @@ Around 7am, the call to pray sounded. I looked up from my run and could see fain
 
 A restful run.
 
+<img width="600" alt="Wednesday's run route" src="wednesday-map.png" />
+
 **RPE**: 5 | 5-6<br/>
 **Felt**: Normal<br/>
 **Time**: 0:54:28 | 1:00:00 (h:m:s)<br/>
@@ -79,6 +112,8 @@ A restful run.
 I struggled getting up early to get out and run. A little low on the motivation, but I went through the motions and eventually got myself going.
 
 I felt I ran the intervals pretty well, but I felt tired on the cooldown so cut it a bit short.
+
+<img width="600" alt="Thursday's run route" src="thursday-map.png" />
 
 **RPE**: 7 | 7<br/>
 **Felt**: Somewhat Weak<br/>
@@ -100,6 +135,8 @@ I felt I ran the intervals pretty well, but I felt tired on the cooldown so cut 
 The early run felt pretty hard. I hadn't gotten a lot of sleep the night before, as we had a late dinner party and I wasn't back to the room until pretty late. I also had some lower tummy discomfort during the run, likely due to the late meal.
 
 Note: that tummy discomfort got worst and lasted a few days.
+
+<img width="600" alt="Saturday's run route" src="saturday-map.png" />
 
 **RPE**: 7 | 7<br/>
 **Felt**: Normal<br/>
@@ -124,6 +161,8 @@ I continued to have tummy trouble, but fortunately was good during the run.
 
 For the run itself, I ran a loop through east Berlin. I haven't visited that part of the city nearly as much, and I thoroughly enjoyed it.
 
+<img width="600" alt="Sunday's run route" src="sunday-map.png" />
+
 **RPE**: 8 | 7<br/>
 **Felt**: Normal<br/>
 **Time**: 2:32:34 | 2:30:00 (h:m:s)<br/>
@@ -133,4 +172,4 @@ For the run itself, I ran a loop through east Berlin. I haven't visited that par
 **TSS**: 211 | 178<br/>
 **IF**: 0.86 | 0.84<br/>
 
-That's a wrap! Week 5 is complete!
+That's a wrap! What a week. I hit fifty miles, ran on two contentinets (neither of which was North America), and felt strong. Week 5 is in the books!
