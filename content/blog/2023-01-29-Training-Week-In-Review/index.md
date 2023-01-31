@@ -32,9 +32,9 @@ _<figcaption>A picture from the start of my run in Berlin. A selfie while on my 
 
 #### Summary
 
-An amazing week! Not only did I travel to Africa for the first time, but I crushed my training goals for the week. All of this despite lots of travel (three different continents) and energy spent focused on our company's annual kickoff throughout the week.
+An amazing week! Not only did I travel to Africa for the first time, but I crushed my training goals. All of this despite lots of travel (three different continents) and energy spent focused on our company's annual kickoff.
 
-It's hard to describe how much my training success means to me this week. After having dealt with a bad cold the week before, I really felt good this week.
+It's hard to describe how much my training success means to me this week. After having dealt with a bad cold the week before, I really felt good this week. And it's given me renewed confidence as I quickly approach some big trail runs.
 
 **Run Duration**: 8:26 | 8:45 (h:m)<br/>
 **Total TSS**: 724 | 607<br/>
@@ -172,4 +172,4 @@ For the run itself, I ran a loop through east Berlin. I haven't visited that par
 **TSS**: 211 | 178<br/>
 **IF**: 0.86 | 0.84<br/>
 
-That's a wrap! What a week. I hit fifty miles, ran on two contentinets (neither of which was North America), and felt strong. Week 5 is in the books!
+That's a wrap! What a week. I hit 50 miles, ran on two contentinets (neither of which was North America), and felt strong. Week 5 is in the books!
