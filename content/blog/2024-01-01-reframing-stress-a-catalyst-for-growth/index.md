@@ -4,7 +4,7 @@ date: 2024-01-01T14:56:45-08:00
 draft: false
 description: "In this short article, I share my journey of ultramarathon training and the parallels I discovered with managing life stress. I explore the concept of stress not as a threat, but as a catalyst promoting growth and progression. See how the judicious stress management can benefit both our training sessions and daily life."
 images:
-  - Images/ssw_Image_1.jpeg
+  - 2024/01/reframing-stress-a-catalyst-for-growth/Images/ssw_Image_1.jpeg
 ---
 
 ![A picture of me at Buffalo Park in Flagstaff AZ](Images/ssw_Image_1.jpeg)
