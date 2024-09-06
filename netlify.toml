@@ -7,11 +7,11 @@
   HUGO_VERSION = "0.109.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
+  NODE_VERSION = "18"  # Add this line to specify Node.js version 18
 
 # This will be your preview build
 [context.deploy-preview]
-  command = "npm install -g postcss postcss-cli autoprefixer"
-  command = "hugo --config config.toml,config-prod.toml --buildFuture --buildDrafts --gc -b $DEPLOY_PRIME_URL"
+  command = "npm install -g postcss postcss-cli autoprefixer &&hugo --config config.toml,config-prod.toml --buildFuture --buildDrafts --gc -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.109.0"
