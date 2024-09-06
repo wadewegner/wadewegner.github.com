@@ -10,7 +10,8 @@
 
 # This will be your preview build
 [context.deploy-preview]
-  command = "npm install -g postcss postcss-cli autoprefixer && hugo --config config.toml,config-prod.toml --buildFuture --buildDrafts --gc -b $DEPLOY_PRIME_URL"
+  command = "npm install -g postcss postcss-cli autoprefixer"
+  command = "hugo --config config.toml,config-prod.toml --buildFuture --buildDrafts --gc -b $DEPLOY_PRIME_URL"
 
 [context.deploy-preview.environment]
   HUGO_VERSION = "0.109.0"
