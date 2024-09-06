@@ -1,8 +1,8 @@
 baseURL                          = "https://www.wadewegner.com/"    # Your domain name. Must end with "/"
 theme                            = "introduction"
 DefaultContentLanguage           = "en"                             # Default language for multilingual sites
-# disqusshortname                  = "wadewegner"                     # https://gohugo.io/content-management/comments
-# disqus_url                       = "www.wadewegner.com"
+disqusshortname                  = "wadewegner"                     # https://gohugo.io/content-management/comments
+disqus_url                       = "www.wadewegner.com"
 googleAnalytics                  = "UA-1174672-2"                   # https://gohugo.io/templates/internal/#google-analytics
 publishDir                       = "docs"
 
@@ -41,16 +41,16 @@ publishDir                       = "docs"
     # input the repository for the discussions below. For more details, see
     # https://www.joelnitta.com/posts/2021-11-24_using-giscus/
     # and https://github.com/giscus/giscus
-    [params.giscus]
-        repo = "wadewegner/wadewegner.github.com" # Entering repo will enable giscus
-        repo-id = "MDEwOlJlcG9zaXRvcnkxMzcwNTI5MA=="
-        category = "Comments"
-        category-id = "DIC_kwDOANEgSs4CTZDn"
-        mapping = "pathname"
-        reactions-enabled = "1"
-        emit-metadata = "0"
-        theme = "light"
-        lang = "en"
+    #[params.giscus]
+    #    repo = "wadewegner/wadewegner.github.com" # Entering repo will enable giscus
+    #    repo-id = "MDEwOlJlcG9zaXRvcnkxMzcwNTI5MA=="
+    #    category = "Comments"
+    #    category-id = "DIC_kwDOANEgSs4CTZDn"
+    #    mapping = "pathname"
+    #    reactions-enabled = "1"
+    #    emit-metadata = "0"
+    #    theme = "light"
+    #    lang = "en"
 
     # Share buttons on blog post pages
     [params.share]
@@ -64,11 +64,11 @@ publishDir                       = "docs"
     # Icon pack "fas" includes solid style icons, see: https://fontawesome.com/icons?d=gallery&s=solid&m=free
     
 
-    [[params.social]]
-        url   = "https://hachyderm.io/@WadeWegner"
-        icon  = "mastodon" # icon name without the 'fa-'
-        icon_pack = "fab"
-        html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
+    #[[params.social]]
+    #    url   = "https://hachyderm.io/@WadeWegner"
+    #    icon  = "mastodon" # icon name without the 'fa-'
+    #    icon_pack = "fab"
+    #    html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
 
     [[params.social]]
         url   = "https://linkedin.com/in/wadewegner/"

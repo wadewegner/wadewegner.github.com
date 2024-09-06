@@ -1,5 +1,5 @@
 {{ $bundleRaw := resources.Get "sass/style.sass" | resources.ExecuteAsTemplate
-"css/main.tmp.css" . }} {{ if .Site.IsServer }} {{ $cssOpts := (dict
+"css/main.tmp.css" . }} {{ if not hugo.IsServer }} {{ $cssOpts := (dict
 "targetPath" "css/main.css" "enableSourceMap" true ) }} {{ $bundle := $bundleRaw
 | toCSS $cssOpts }}
 <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" media="screen" />
