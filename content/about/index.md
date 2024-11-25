@@ -7,7 +7,7 @@ noComment: true
 <div class="container">
 <div class="columns">
 <div class="column is-one-third has-text-centered">
-    <img class="img-responsive avatar" src="me-colorful-400x400.png" style="margin-top:0px" alt="A selfie of Wade Wegner in front of a gray background">
+    <img class="img-responsive avatar" src="me-colorful2-400x400.png" style="margin-top:0px" alt="A selfie of Wade Wegner in front of a gray background">
 </div>
 <div class="markdown column">
 
