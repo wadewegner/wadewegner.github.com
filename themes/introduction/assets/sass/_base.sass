@@ -150,6 +150,7 @@ details[open] summary
 .navbar-burger
     margin-right: auto
     color: $primary
+    display: none
 
 .navbar-burger:hover
     background-color: $navbar-background-color
@@ -432,3 +433,22 @@ details[open] summary
   .button
     padding: 0.5rem 1.5rem
     height: auto
+
+// Navbar customization
+.navbar-burger
+  display: none
+
+.navbar-menu
+  display: flex !important
+  box-shadow: none
+  background-color: transparent
+  
+  .navbar-start,
+  .navbar-end
+    display: flex
+    align-items: center
+
+  @media screen and (max-width: 768px)
+    .navbar-item
+      display: inline-flex
+      padding: 0.5rem
