@@ -1,5 +1,5 @@
 ---
-title: "Merging code and miles"
+title: "Miles, making, and musings"
 draft: false
 ---
-Sharing my journey as a product manager, midpack ultrarunner, and aspiring brewmaster.
+Adventures in ultrarunning, coaching, and life's longer trails

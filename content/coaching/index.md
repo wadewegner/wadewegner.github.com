@@ -7,7 +7,7 @@ noComment: true
 
 # My Coaching Philosophy
 
-As a UESCA-certified ultrarunning coach, my philosophy centers on one fundamental truth: every runner is unique. I don't believe in one-size-fits-all training programs. Instead, I offer a personalized approach that combines exercise science with real-world practicality.
+As a [UESCA-certified ultrarunning coach](https://uesca.com/coach-directory/entry/9794/), my philosophy centers on one fundamental truth: every runner is unique. I don't believe in one-size-fits-all training programs. Instead, I offer a personalized approach that combines exercise science with real-world practicality.
 
 At the core of my coaching is the belief in an athlete-centered partnership. Your goals are my priority, and our success is built on open, two-way communication. While I serve as your guide, educator, and motivator, you maintain ownership of your journey. This relationship creates a powerful foundation for achieving your ultrarunning aspirations.
 
@@ -18,6 +18,20 @@ What sets my coaching apart is its real-world practicality. Life doesn't always 
 My commitment is to help you achieve your ultrarunning goals safely and effectively. Through our partnership, you'll receive a training experience that's personalized to your needs, grounded in science, and focused on long-term success. Whether you're preparing for your first ultra or aiming for a personal best, I'm here to guide you every step of the way.
 
 Want to learn more about how we can work together? Let's discuss your ultrarunning goals and create a plan that works for you.
+
+# Limited Availability & Expectations
+
+As an active professional balancing multiple commitments, I intentionally maintain a small, focused coaching roster. This allows me to provide the dedicated attention each athlete deserves. I'm selective in who I work with, looking for athletes who match my level of commitment to the sport and process.
+
+My ideal athletes are:
+
+- Serious about their ultrarunning goals and willing to put in the work
+- Comfortable with open, honest communication
+- Ready to engage in a collaborative coaching relationship
+- Committed to using TrainingPeaks as our primary training platform
+- Understanding that success in ultrarunning requires patience and consistency
+
+I believe in quality over quantity when it comes to coaching relationships. If you're looking for a coach who will be deeply invested in your journey, are ready to embrace the training process, and want to join a small community of dedicated ultrarunners, we might be a good fit.
 
 ## Get Started
 
