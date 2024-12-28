@@ -97,13 +97,17 @@ publishDir                       = "docs"
     url     = "/"
     weight  = 1
 [[menu.main]]
+    name    = "Coaching"
+    url     = "/coaching/"
+    weight  = 2
+[[menu.main]]
     name    = "Posts"
     url     = "/blog/"
-    weight  = 2
+    weight  = 3
 [[menu.main]]
     name    = "About"
     url     = "/about/"
-    weight  = 3
+    weight  = 4
 
 
 # We only use tag as a taxonomies
