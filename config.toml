@@ -3,7 +3,7 @@ theme                            = "introduction"
 DefaultContentLanguage           = "en"                             # Default language for multilingual sites
 disqusshortname                  = "wadewegner"                     # https://gohugo.io/content-management/comments
 disqus_url                       = "www.wadewegner.com"
-googleAnalytics                  = "UA-1174672-2"                   # https://gohugo.io/templates/internal/#google-analytics
+googleAnalytics                  = "G-Q3R8WWR4S5"                   # https://gohugo.io/templates/internal/#google-analytics
 publishDir                       = "docs"
 
 [params]
