@@ -19,7 +19,7 @@ My commitment is to help you achieve your ultrarunning goals safely and effectiv
 
 Want to learn more about how we can work together? Let's discuss your ultrarunning goals and create a plan that works for you.
 
-# Limited Availability & Expectations
+# Limited Availability & High Expectations
 
 As an active professional balancing multiple commitments, I intentionally maintain a small, focused coaching roster. This allows me to provide the dedicated attention each athlete deserves. I'm selective in who I work with, looking for athletes who match my level of commitment to the sport and process.
 
