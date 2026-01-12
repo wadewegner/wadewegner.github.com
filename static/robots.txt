@@ -1,0 +1,10 @@
+# https://www.wadewegner.com/robots.txt
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.wadewegner.com/sitemap.xml
+
+# LLMs.txt for AI crawlers
+# See https://llmstxt.org/

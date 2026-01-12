@@ -1,0 +1,35 @@
+# Wade Wegner
+
+> Personal blog and professional site of Wade Wegner - technologist, ultramarathon runner, and coach.
+
+## About
+
+Wade Wegner is a technology leader with experience at Microsoft, Salesforce, and various startups. This site contains his blog posts spanning from 2006 to present, covering topics in cloud computing, software development, and technology leadership.
+
+## Topics
+
+- Cloud Computing (Windows Azure, Salesforce, AWS)
+- Software Development (.NET, C#, Python, Go, JavaScript)
+- API Development and Integration
+- Mobile Development
+- Developer Tools and SDKs
+- Technology Leadership
+- Ultramarathon Running and Endurance Coaching
+
+## Sections
+
+- [Blog](/blog/): Technical articles and personal reflections (2006-present)
+- [Coaching](/coaching/): Ultramarathon and endurance running coaching services
+- [About](/about/): Professional background and contact information
+
+## Contact
+
+- Email: wade.wegner@gmail.com
+- GitHub: https://github.com/wadewegner
+- LinkedIn: https://linkedin.com/in/wadewegner/
+- Twitter: https://twitter.com/WadeWegner
+- Bluesky: https://bsky.app/profile/wadewegner.com
+
+## Optional
+
+- [Full content for LLMs](/llms-full.txt)

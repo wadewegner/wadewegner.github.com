@@ -1,0 +1,373 @@
+# Wade Wegner - Full Site Content for LLMs
+
+> Comprehensive content index for AI assistants and language models.
+
+## Site Overview
+
+Wade Wegner's personal blog and professional site. Active since 2006, featuring 272 technical articles on cloud computing, software development, and technology leadership.
+
+## About Wade Wegner
+
+Wade Wegner is a technology leader with deep expertise in cloud computing and platform development. His career highlights include:
+
+- **Microsoft** (2008-2012): Technical Evangelist for Windows Azure AppFabric
+- **Salesforce** (2013-2021): Principal Architect, led development of Salesforce DX
+- **Startups**: CTO roles at multiple technology companies
+
+He is also an ultramarathon runner and UESCA-certified running coach.
+
+## Primary Topics
+
+### Cloud Computing
+- Windows Azure / Microsoft Azure
+- Azure AppFabric (Service Bus, Caching, Access Control)
+- Salesforce Platform / Force.com
+- Cloud architecture and migration
+
+### Software Development
+- .NET / C# development
+- Python programming
+- Go language
+- JavaScript / Node.js
+- REST API development
+- Mobile development (iOS, Android, Windows Phone)
+
+### Developer Tools
+- Salesforce DX and CLI
+- Visual Studio and development environments
+- Git and version control
+- CI/CD and DevOps
+
+### Other Topics
+- BizTalk Server
+- Commerce Server
+- IoT and hardware projects
+- Running and ultramarathons
+
+## Complete Blog Index (272 posts)
+
+### 2025
+- [Vibe Coding in Production on DigitalOcean](/blog/2025-08-05-vibe-coding-in-production-on-digitalocean/)
+- [How I Set Up a Rust Server on DigitalOcean](/blog/2025-01-27-rust-server/)
+
+### 2024
+- [From Athlete to Certified Coach: My UESCA Ultrarunning Journey](/blog/2024-03-21-from-athlete-to-certified-coach/)
+- [Reframing Stress: A Catalyst for Growth](/blog/2024-01-01-reframing-stress-a-catalyst-for-growth/)
+
+### 2023
+- [My Return to Blogging](/blog/2023-01-03-my-return-to-blogging/)
+
+### 2021
+- [Mahalo a Aloha, Salesforce](/blog/2021-01-13-mahalo-a-aloha-salesforce/)
+
+### 2018
+- [Build a Native Mobile App Using Salesforce DX and the Mobile SDK](/blog/2018-02-01-build-a-native-mobile-app-using-salesforce-dx-and/)
+- [Authenticate to your Scratch Orgs using the OAuth 2.0 JWT Bearer Flow](/blog/2018-01-31-authenticate-to-your-scratch-orgs-using-the-oauth/)
+- [Using Salesforce DX with Trailhead](/blog/2018-01-02-using-salesforce-dx-with-trailhead/)
+
+### 2017
+- [Deploy to Salesforce DX](/blog/2017-09-13-deploy-to-salesforce-dx/)
+- [Use Workbench with your Scratch Org](/blog/2017-04-23-use-workbench-with-your-scratch-org/)
+- [Show the Salesforce DX Org Config in your Bash Prompt](/blog/2017-04-08-show-the-salesforce-dx-org-config-in-your-bash-pro/)
+- [Using the OAuth 2.0 JWT Bearer Flow to Support the Salesforce DX CLI](/blog/2017-04-03-using-the-oauth-20-jwt-bearer-flow-to-support-the/)
+- [Creating a Plugin for the Salesforce CLI](/blog/2017-03-31-creating-a-plugin-for-the-salesforce-cli/)
+- [Salesforce DX Strike](/blog/2017-03-07-salesforce-dx-strike/)
+- [Salesforce DX Pilot Demos](/blog/2017-02-27-salesforce-dx-pilot-demos/)
+
+### 2015
+- [Creating a Go Site Extension and Resource Template for Azure](/blog/2015-01-05-creating-a-go-site-extension-and-resource-template/)
+
+### 2014
+- [Easy Go Programming Setup for Windows](/blog/2014-12-23-easy-go-programming-setup-for-windows/)
+- [4 Simple Steps to Run Go Language in Azure Websites](/blog/2014-12-29-4-simple-steps-to-run-go-language-in-azure-website/)
+- [Build a Windows 8 App for Salesforce With No Code Using Project Siena](/blog/2014-08-07-build-a-windows-8-app-for-salesforce-with-no-code/)
+- [Create an iBeacon Transmitter with the Raspberry Pi](/blog/2014-05-20-create-an-ibeacon-transmitter-with-the-raspberry-p/)
+- [Salesforce Did What? How We Built the Salesforce Toolkits for .NET](/blog/2014-05-15-salesforce-did-what-how-we-built-the-salesforce-to/)
+- [Uploading an Attachment to Salesforce with the SOAP and REST APIs](/blog/2014-05-01-uploading-an-attachment-to-salesforce-with-the-soa/)
+- [Update Records with Python and the Salesforce Bulk API](/blog/2014-04-30-update-records-with-python-and-the-salesforce-bulk/)
+- [Announcing the Salesforce Accelerators for Windows Store Apps](/blog/2014-04-25-announcing-the-salesforce-accelerators-for-windows/)
+- [Announcing the Salesforce Accelerators for Windows Phone 8 Apps](/blog/2014-04-24-announcing-the-salesforce-accelerators-for-windows/)
+- [Create a Custom Object with .NET using the Force.com Metadata API](/blog/2014-03-01-create-a-custom-object-with-net-using-the-forcecom/)
+- [Send a Text Message to Your IoT Thermal Printer](/blog/2014-02-07-send-a-text-message-to-your-iot-thermal-printer-no/)
+- [Support for Refresh Tokens, Async Suffix, and Updated Sample Apps](/blog/2014-02-05-support-for-refresh-tokens-async-suffix-and-update/)
+- [Using the WebAuthenticationBroker for Salesforce Authentication on Windows 8](/blog/2014-01-31-using-the-webauthenticationbroker-for-salesforce-a/)
+- [Connecting to Salesforce from a Windows Phone 8 App](/blog/2014-01-29-connecting-to-salesforce-from-a-windows-phone-8-ap/)
+- [Better Support for HttpClient in the Salesforce Toolkits for .NET](/blog/2014-01-21-better-support-for-httpclient-in-the-salesforce-to/)
+- [Announcing the Salesforce Toolkits for .NET](/blog/2014-01-15-announcing-the-salesforce-toolkits-for-net/)
+- [How to Write Unit Tests to Check Your HTTP Headers in C#](/blog/2014-01-07-how-to-write-unit-tests-to-check-your-http-headers/)
+
+### 2013
+- [Salesforce1 Tutorial for the Dreamforce '13 Developer Keynote](/blog/2013-12-12-salesforce1-tutorial-for-the-dreamforce-13-develop/)
+- [A Simple Lua Script Token Request with Webscript.io](/blog/2013-11-20-a-simple-lua-script-token-request-with-webscriptio/)
+- [Force.com Token Requests with Python](/blog/2013-11-19-forcecom-token-requests-with-python/)
+- [A Command-line Interface for Force.com](/blog/2013-11-18-a-command-line-interface-for-forcecom/)
+- [Preparing for the Salesforce $1 Million Hackathon](/blog/2013-11-12-preparing-for-the-salesforce-1-million-hackathon/)
+- [Joining Salesforce](/blog/2013-11-11-joining-salesforce/)
+- [Configuring the Force.com IDE with Eclipse and Using Git](/blog/2013-10-29-configuring-the-forcecom-ide-with-eclipse-and-usin/)
+- [PowerShell Script for Cleaning Up Your Windows Azure Resources](/blog/2013-10-25-powershell-script-for-cleaning-up-your-windows-azu/)
+- [Migrated to Jekyll](/blog/2013-10-25-migrated-to-jekyll/)
+- [Creating Anonymous Apex REST APIs with Force.com](/blog/2013-03-10-creating-anonymous-apex-rest-apis-with-forcecom/)
+- [A Few Tips on Getting Started with Force.com](/blog/2013-03-09-a-few-tips-on-getting-started-with-forcecom/)
+- [To The Cloud(s)](/blog/2013-03-06-to-the-clouds/)
+- [Using Windows Azure Virtual Machines to Publish and Synchronize a Web Farm](/blog/2013-03-04-using-windows-azure-virtual-machines-to-publish-an/)
+- [Detecting Expired PKI Certificates](/blog/2013-02-23-detecting-expired-pki-certificates/)
+
+### 2012
+- [Getting the Application ID and Hardware ID in Windows Store Applications](/blog/2012-09-21-getting-the-application-id-and-hardware-id-in-wind/)
+- [Generating C# Classes from JSON](/blog/2012-08-22-generating-c-classes-from-json/)
+- [Notes from the MEET Windows Azure Keynote](/blog/2012-06-07-notes-from-the-meet-windows-azure-keynote/)
+- [Early Thoughts on the Windows Azure Announcements](/blog/2012-06-07-early-thoughts-on-the-windows-azure-announcements/)
+- [Simple Capped Exponential Back-Off for Queues](/blog/2012-04-27-simple-capped-exponential-back-off-for-queues/)
+- [Return Empty Set Instead of ResourceNotFound from Table Storage](/blog/2012-04-14-return-empty-set-instead-of-resourcenotfound-from/)
+- [Joining Aditi Technologies as Chief Technology Officer](/blog/2012-04-13-joining-aditi-technologies-as-chief-technology-off/)
+- [Leaving Microsoft](/blog/2012-03-21-leaving-microsoft/)
+- [Cannot create database 'DevelopmentStorageDb20110816' for the Windows Azure Storage Emulator](/blog/2012-01-25-cannot-create-database-developmentstoragedb2011081/)
+- [Are You Building Mobile + Cloud Applications? Tell Me!](/blog/2012-01-09-are-you-building-mobile-cloud-applications-tell-me/)
+
+### 2011
+- [How to Handle a Faulted Channel with the Windows Azure Service Bus](/blog/2011-12-13-how-to-handle-a-faulted-channel-with-the-windows-a/)
+- [Unable to find assembly references that are compatible with the target framework](/blog/2011-11-30-unable-to-find-assembly-references-that-are-compat/)
+- [Adding Push Notification Support to Your Windows Phone Application](/blog/2011-11-18-adding-push-notification-support-to-your-windows-p/)
+- [Outsourcing User Authentication in a Windows Phone Application](/blog/2011-11-17-outsourcing-user-authentication-in-a-windows-phone/)
+- [Programmatically Installing and Using Your Management Certificate](/blog/2011-11-16-programmatically-installing-and-using-your-managem/)
+- [NuGet Packages for Windows Azure and Windows Phone Developers](/blog/2011-11-15-nuget-packages-for-windows-azure-and-windows-phone/)
+- [Aggregating RSS Feeds in C# and ASP.NET MVC 3](/blog/2011-11-09-aggregating-rss-feeds-in-c-and-aspnet-mvc-3/)
+- [Windows Azure Platform Training Kit - October Release](/blog/2011-10-27-windows-azure-platform-training-kit-october-releas/)
+- [Windows Azure Toolkit for Windows Phone v1.3.1](/blog/2011-10-25-windows-azure-toolkit-for-windows-phone-v131/)
+- [Windows Azure Platform Training Kit, September 2011 Release](/blog/2011-09-23-windows-azure-platform-training-kit-september-2011/)
+- [Running the Windows Azure Tools & SDK on the Windows Developer Preview](/blog/2011-09-19-running-the-windows-azure-tools-amp-sdk-on-the-win/)
+- [Metro Style Apps with Windows Azure](/blog/2011-09-14-metro-style-apps-with-windows-azure/)
+- [Windows Azure Toolkits for Devices - Now With Android!](/blog/2011-08-31-windows-azure-toolkits-for-devices-now-with-androi/)
+- [Using ELMAH in Windows Azure with Table Storage](/blog/2011-08-19-using-elmah-in-windows-azure-with-table-storage/)
+- [Introduction to Windows Azure Marketplace for Applications](/blog/2011-08-09-introduction-to-windows-azure-marketplace-for-appl/)
+- [WA Toolkit for iOS: New Project Experience with Windows Azure Access Control Service](/blog/2011-08-08-wa-toolkit-for-ios-new-project-experience-with-win/)
+- [WA Toolkit for iOS: New Project Experience for Accessing Windows Azure Storage](/blog/2011-08-08-wa-toolkit-for-ios-new-project-experience-for-acce/)
+- [Using Windows Azure Blob Storage and CDN with WordPress](/blog/2011-08-07-using-windows-azure-blob-storage-and-cdn-with-word/)
+- [Deploying the Windows Azure ASP.NET MVC 3 Web Role](/blog/2011-08-04-deploying-the-windows-azure-aspnet-mvc-3-web-role/)
+- [Updates to the Windows Azure Platform Training Kit](/blog/2011-08-03-updates-to-the-windows-azure-platform-training-kit/)
+- [Windows Azure Toolkit for iOS Now Supports the Access Control Service](/blog/2011-07-25-windows-azure-toolkit-for-ios-now-supports-the-acc/)
+- [RELEASED: Windows Azure Toolkit for iOS V1.0.1](/blog/2011-05-27-released-windows-azure-toolkit-for-ios-v101/)
+- [WPDT 7.1 Beta Support Added to the Windows Azure Toolkit for Windows Phone 7](/blog/2011-05-25-wpdt-71-beta-support-added-to-the-windows-azure-to/)
+- [Deploying Your Services from the Windows Azure Toolkit for Windows Phone 7](/blog/2011-05-25-deploying-your-services-from-the-windows-azure-too/)
+- [Merged a Pull Request for the iOS Toolkit](/blog/2011-05-23-merged-a-pull-request-for-the-ios-toolkit/)
+- [VB.NET and Bug Fixes for Windows Azure Toolkit for Windows Phone 7](/blog/2011-05-19-vbnet-and-bug-fixes-for-windows-azure-toolkit-for/)
+- [NOW AVAILABLE: Windows Azure Toolkit for Windows Phone 7 v1.2](/blog/2011-05-16-now-available-windows-azure-toolkit-for-windows-ph/)
+- [Using Windows Azure for Windows Phone 7 Push Notification Support](/blog/2011-05-09-using-windows-azure-for-windows-phone-7-push-notif/)
+- [Updates Coming Soon to the Windows Azure Toolkit for Windows Phone 7](/blog/2011-05-09-updates-coming-soon-to-the-windows-azure-toolkit-f/)
+- [Getting Started with the Windows Azure Toolkit for iOS](/blog/2011-05-06-getting-started-with-the-windows-azure-toolkit-for/)
+- [Article: Introducing the Windows Azure AppFabric Caching Service](/blog/2011-04-06-article-introducing-the-windows-azure-appfabric-ca/)
+- [Getting Started with the Windows Azure Toolkit for Windows Phone 7](/blog/2011-03-30-getting-started-with-the-windows-azure-toolkit-for/)
+- [Windows Azure Toolkit for Windows Phone 7](/blog/2011-03-23-windows-azure-toolkit-for-windows-phone-7/)
+- [Requesting Access to the VM Role Beta](/blog/2011-03-17-requesting-access-to-the-vm-role-beta/)
+- [Windows Azure Platform Training Kit and Course, February 2011 Update](/blog/2011-03-02-windows-azure-platform-training-kit-and-course-feb/)
+- [Running Multiple Websites in a Windows Azure Web Role](/blog/2011-02-18-running-multiple-websites-in-a-windows-azure-web-r/)
+- [Windows Azure AppFabric CTP February, Caching Enhancements](/blog/2011-02-09-windows-azure-appfabric-ctp-february-caching-enhan/)
+- [Managing the SecureString in the DataCacheSecurity Constructor](/blog/2011-02-09-managing-the-securestring-in-the-datacachesecurity/)
+- [Families and the Oil of Monkeys](/blog/2011-02-04-families-and-the-oil-of-monkeys/)
+- [Windows Azure Platform Training Kit and Course, January 2011 Update](/blog/2011-01-31-windows-azure-platform-training-kit-and-course-jan/)
+- [Using Expression Encoder 4 in a Windows Azure Worker Role](/blog/2011-01-28-using-expression-encoder-4-in-a-windows-azure-work/)
+- [Overlay Text On Video Using Expression Encoder 4](/blog/2011-01-25-overlay-text-on-video-using-expression-encoder-4/)
+- [Programmatically Changing the AppPool Identity in a Windows Azure Web Role](/blog/2011-01-17-programmatically-changing-the-apppool-identity-in/)
+- [Come Join My Team!](/blog/2011-01-06-come-join-my-team/)
+
+### 2010
+- [Web Deploy with Windows Azure on Restrictive Networks](/blog/2010-12-21-web-deploy-with-windows-azure-on-restrictive-netwo/)
+- [Using Web Deploy with Windows Azure for Rapid Development](/blog/2010-12-17-using-web-deploy-with-windows-azure-for-rapid-deve/)
+- [Try out the WordPress app for Windows Phone 7](/blog/2010-12-17-try-out-the-wordpress-app-for-windows-phone-7/)
+- [Goodbye Lunch for Ryan Dunn](/blog/2010-12-17-goodbye-lunch-for-ryan-dunn/)
+- [Use the WAPTK to help setup your Windows Azure development environment](/blog/2010-12-16-use-the-waptk-to-help-setup-your-windows-azure-dev/)
+- [Windows Azure Platform Training Kit, December 2010 Update](/blog/2010-12-15-windows-azure-platform-training-kit-december-2010/)
+- [Article: Re-Introducing the Windows Azure AppFabric Access Control Service](/blog/2010-12-10-article-re-introducing-the-windows-azure-appfabric/)
+- [Setting up the BidNow Sample Application for Windows Azure AppFabric Caching](/blog/2010-12-02-setting-up-the-bidnow-sample-application-for-windo/)
+- [Programmatically Configuring the Caching Client](/blog/2010-12-02-programmatically-configuring-the-caching-client/)
+- [Significant Updates Released in the BidNow Sample](/blog/2010-11-30-significant-updates-released-in-the-bidnow-sample/)
+- [Using the SAML CredentialType to Authenticate to the Service Bus](/blog/2010-11-25-using-the-saml-credentialtype-to-authenticate-to-t/)
+- [Hands-on Lab: Building Windows Azure Applications with the Caching Service](/blog/2010-11-22-hands-on-lab-building-windows-azure-applications-w/)
+- [Code for the Windows Azure AppFabric Caching demo](/blog/2010-11-22-code-for-the-windows-azure-appfabric-caching-demo/)
+- [TechEd EMEA: A Lap Around the Windows Azure AppFabric](/blog/2010-11-10-teched-emea-a-lap-around-the-windows-azure-appfabr/)
+- [PDC10: Introduction to Windows Azure AppFabric Caching](/blog/2010-11-02-pdc10-introduction-to-windows-azure-appfabric-cach/)
+- [New Services and Enhancements with the Windows Azure AppFabric](/blog/2010-10-28-new-services-and-enhancements-with-the-windows-azu/)
+- [What have I been doing for PDC10?](/blog/2010-10-27-what-have-i-been-doing-for-pdc10/)
+- [7 Reasons I'm Excited About IE9](/blog/2010-09-15-7-reasons-im-excited-about-ie9/)
+- [Service Bus on the Cloud Cover Show](/blog/2010-08-27-service-bus-on-the-cloud-cover-show/)
+- [Using the 'TrustServerCertificate' Property with SQL Azure](/blog/2010-08-27-using-the-trustservercertificate-property-with-sql/)
+- [SQL Azure Adds Support for Database Copy](/blog/2010-08-25-sql-azure-adds-support-for-database-copy/)
+- [AutoStart WCF Services to Expose them as Service Bus Endpoints](/blog/2010-08-23-autostart-wcf-services-to-expose-them-as-service-b/)
+- [Configuring an ASP.NET Web Application to Use AppFabric Cache for Session State](/blog/2010-08-16-configuring-an-aspnet-web-application-to-use-a-win/)
+- [Getting Started with Windows Server AppFabric Cache](/blog/2010-08-13-getting-started-with-windows-server-appfabric-cach/)
+- [Updated Windows Azure AppFabric SDK](/blog/2010-08-12-updated-windows-azure-appfabric-sdk/)
+- [Using the Expression Encoder SDK to encode lots of videos](/blog/2010-08-09-using-the-expression-encoder-sdk-to-encode-lots-of/)
+- [Use social web providers in less than 5 minutes](/blog/2010-08-06-use-social-web-providers-in-less-than-5-minutes/)
+- [Article: Tips for Migrating Your Applications to the Cloud](/blog/2010-08-06-article-tips-for-migrating-your-applications-to-th/)
+- [Using the default SQL Server instance for Windows Azure development storage](/blog/2010-07-15-using-the-default-sql-server-instance-for-windows/)
+- [How would you describe the Windows Azure AppFabric?](/blog/2010-07-12-how-would-you-describe-the-windows-azure-appfabric/)
+- [My First Week as a Technical Evangelist](/blog/2010-07-10-my-first-week-as-a-technical-evangelist/)
+- [Real-World Patterns for Cloud Computing at TechEd North America 2010](/blog/2010-06-24-real-world-patterns-for-cloud-computing-at-teched/)
+- [Host WCF Services in IIS with Service Bus Endpoints](/blog/2010-05-12-host-wcf-services-in-iis-with-service-bus-endpoint/)
+- [Using the .NET Framework 4.0 with the Azure AppFabric SDK](/blog/2010-05-11-using-the-net-framework-40-with-the-azure-appfabri/)
+- [Release the Hounds! Multicasting with Azure AppFabric Service Bus](/blog/2010-05-07-release-the-hounds-multicasting-with-azure-appfabr/)
+- [Jon Box on the Capabilities of Internet Explorer 8](/blog/2010-05-05-jon-box-on-the-capabilities-of-internet-explorer-8/)
+- [What is the Azure AppFabric?](/blog/2010-05-05-what-is-the-azure-appfabric/)
+- [New Role: Technical Evangelist for Azure AppFabric](/blog/2010-05-04-new-role-technical-evangelist-for-azure-appfabric/)
+- [Silverlight Customers Light Up the Web](/blog/2010-03-15-silverlight-customers-light-up-the-web/)
+- [Getting Started with XNA Development](/blog/2010-01-06-getting-started-with-xna-development/)
+
+### 2009
+- [Significant Updates to the SQL Azure Migration Wizard](/blog/2009-12-15-significant-updates-to-the-sql-azure-migration-wiz/)
+- [WI Azure User Group – Windows Azure Platform update](/blog/2009-12-06-wi-azure-user-group-windows-azure-platform-update/)
+- [Preview of Lessons Learned Migrating Applications to Windows Azure](/blog/2009-11-08-preview-of-lessons-learned-migrating-applications/)
+- [How to Leverage the RoleEntryPoint in an Azure Web Role](/blog/2009-11-04-how-to-leverage-the-roleentrypoint-in-an-azure-web/)
+- [Chunking BCP output to upload lots of data into SQL Azure](/blog/2009-11-02-chunking-bcp-output-to-upload-lots-of-data-into-sq/)
+- [Taste of Chicago benefits from Windows Azure and Silverlight](/blog/2009-10-26-taste-of-chicago-benefits-from-windows-azure-and-s/)
+- [Presenting on the Windows Azure Platform at the Day of .NET](/blog/2009-10-16-presenting-on-the-windows-azure-platform-at-the-da/)
+- [The SQL Azure Migration Wizard will now migrate your data!](/blog/2009-10-15-the-sql-azure-migration-wizard-will-now-migrate-yo/)
+- [SQL Azure Database is Feature Complete!](/blog/2009-10-15-sql-azure-database-is-feature-complete/)
+- [Webcast: Running an ASP.NET MVC Web Application in Windows Azure](/blog/2009-10-11-webcast-running-an-aspnet-mvc-web-application-in-w/)
+- [Passive Federation with Windows Azure and ADFS v2](/blog/2009-10-09-passive-federation-with-windows-azure-and-adfs-v2/)
+- [Windows Azure in the Real World](/blog/2009-09-13-windows-azure-in-the-real-world/)
+- [Getting Ready for the Race to Market Challenge](/blog/2009-09-03-getting-ready-for-the-race-to-market-challenge/)
+- [SQL Azure Migration Wizard](/blog/2009-09-02-sql-azure-migration-wizard/)
+- [Architecting Your Data Access Layer with the Entity Framework](/blog/2009-06-26-architecting-your-data-access-layer-with-the-entit/)
+- [Stratus: Tamer of Clouds](/blog/2009-06-19-stratus-tamer-of-clouds/)
+- [.NET Architecture for Enterprises](/blog/2009-06-16-net-architecture-for-enterprises/)
+- [The Commerce Server book is now available!](/blog/2009-05-28-the-commerce-server-book-is-now-available/)
+- [Running a PHP Application on Windows Azure](/blog/2009-03-23-running-a-php-application-on-windows-azure/)
+- [The Commerce Server 2007 book lives!](/blog/2009-02-04-the-commerce-server-2007-book-lives/)
+
+### 2008
+- [Looking to explore the Cloud? Then join your community!](/blog/2008-12-11-looking-to-explore-the-cloud-then-join-your-commun/)
+- [Building Multi-Enterprise Business Applications on the Azure Services Platform](/blog/2008-11-01-building-multi-enterprise-business-applications-on/)
+- [PDC 2008 is coming!](/blog/2008-10-04-pdc-2008-is-coming/)
+- [Installing Windows from a bootable USB drive](/blog/2008-09-09-installing-windows-from-a-bootable-usb-drive/)
+- [Illinois, Indiana, and Wisconsin user groups](/blog/2008-04-17-illinois-indiana-and-wisconsin-user-groups/)
+- [Developing a relationship with Twitter](/blog/2008-04-16-developing-a-relationship-with-twitter/)
+- [Installing Windows Server 2008](/blog/2008-04-15-installing-windows-server-2008/)
+- [Intel Wireless WiFi Link 4965AGN on a Dell D830 running Windows Server 2008](/blog/2008-04-14-intel-wireless-wifi-link-4965agn-on-a-dell-d830-ru/)
+- [Update on the Commerce Server book](/blog/2008-04-13-update-on-the-commerce-server-book/)
+- [Traveling to Las Vegas tomorrow for MIX08](/blog/2008-03-04-traveling-to-las-vegas-tomorrow-for-mix08/)
+- [My new job: Architect Evangelist for Microsoft](/blog/2008-02-25-my-new-job-architect-evangelist-for-microsoft/)
+- [Using the UpdateProgress to lock down controls in the browser](/blog/2008-01-07-using-the-updateprogress-to-lock-down-controls-in/)
+
+### 2007
+- [Another Statera blogger - Ryan McCutchen](/blog/2007-12-02-another-statera-blogger-ryan-mccutchen/)
+- [Using the Audit Policy to diagnose security problems](/blog/2007-12-01-using-the-audit-policy-to-diagnose-security-proble/)
+- [Microsoft Certified Architect (MCA) posts](/blog/2007-11-30-microsoft-certified-architect-mca-posts/)
+- [Donate rice and test your vocabulary](/blog/2007-11-26-donate-rice-and-test-your-vocabulary/)
+- [Some great blog posts on Commerce Server 2007](/blog/2007-11-25-some-great-blog-posts-on-commerce-server-2007/)
+- [White papers: Migration from Oracle or Sybase to SQL Server 2005](/blog/2007-11-18-white-papers-migration-from-oracle-or-sybase-to-sq/)
+- [Architectural resources from MSFT](/blog/2007-11-18-architectural-resources-from-msft/)
+- [Aspiring Architects: Four 100-Level Webcasts](/blog/2007-11-17-aspiring-architects-four-100-level-webcasts/)
+- [Updated Silverlight Hangman Application](/blog/2007-11-13-updated-silverlight-hangman-application/)
+- [MSDN Masters Series Event – Silverlight](/blog/2007-11-03-msdn-masters-series-event-silverlight/)
+- [Converting the Commerce Server 2007 MOM 2005 Pack for OpsMgr 2007](/blog/2007-10-06-converting-the-commerce-server-2007-mom-2005-pack/)
+- [Windows XP Professional - 96 updates!](/blog/2007-09-17-windows-xp-professional-96-updates/)
+- [Commerce Server 2007 and Operational Monitoring](/blog/2007-09-16-commerce-server-2007-and-operational-monitoring/)
+- [Update: Professional Commerce Server 2007](/blog/2007-09-14-update-professional-commerce-server-2007/)
+- [A few tips when using WCF with BizTalk Server 2006 R2](/blog/2007-09-11-a-few-tips-when-using-wcf-with-biztalk-server-2006/)
+- [Setting Up a BizTalk Server 2006 R2 Beta 2 Development Environment](/blog/2007-09-10-setting-up-a-biztalk-server-2006-r2-beta-2-develop/)
+- [BizTalk process crashing with eConnect 9 adapter](/blog/2007-09-05-biztalk-process-crashing-with-econnect-9-adapter/)
+- [Simpsonize Us!](/blog/2007-09-01-simpsonize-us/)
+- [Microsoft Hotfix Request Web Submission Form](/blog/2007-09-01-microsoft-hotfix-request-web-submission-form/)
+- [Deleting Team Project in TFS doesn't really delete the Team Project](/blog/2007-08-20-deleting-team-project-in-tfs-doesnt-really-delete/)
+- [Setting up a Virtual Visual Studio 2005 Team Foundation Server Environment](/blog/2007-08-20-setting-up-a-virtual-visual-studio-2005-team-found/)
+- [Microsoft Virtual Server 2005 R2 Service Pack 1](/blog/2007-08-20-microsoft-virtual-server-2005-r2-service-pack-1/)
+- [Viewing help files in Windows Vista](/blog/2007-08-20-viewing-help-files-in-windows-vista/)
+- [Milestone: 100 feed subscribers](/blog/2007-08-18-milestone-100-feed-subscribers/)
+- [Warning about Windows Live Writer](/blog/2007-08-18-warning-about-windows-live-writer/)
+- [Adding a printer in Vista with UAC turned off](/blog/2007-08-18-adding-a-printer-in-vista-with-uac-turned-off/)
+- [System.Net.WebException when issuing more than two concurrent WebRequest's](/blog/2007-08-16-systemnetwebexception-when-issuing-more-than-two-c/)
+- [Warning: the CID values for both test machines are the same](/blog/2007-08-13-warning-the-cid-values-for-both-test-machines-are/)
+- [Commerce Server 2007 Development Environments](/blog/2007-08-11-commerce-server-2007-development-environments/)
+- [More details on the Commerce Server roadmap (and CS 2009!)](/blog/2007-08-09-more-details-on-the-commerce-server-roadmap-and-cs/)
+- [Exciting Commerce Server news!](/blog/2007-08-08-exciting-commerce-server-news/)
+- [Commerce Server Staging error: Operation must use an updateable query](/blog/2007-07-28-commerce-server-staging-error-operation-must-use-a/)
+- [Setting up a Silverlight development environment](/blog/2007-07-23-setting-up-a-silverlight-development-environment/)
+- [Updates to the Hangman application](/blog/2007-07-22-updates-to-the-hangman-application/)
+- [Silverlight error "Invoking Service" when calling a web service](/blog/2007-07-21-silverlight-error-invoking-service-when-calling-a/)
+- [Hangman Application Built on Silverlight (and WPF)](/blog/2007-07-21-hangman-application-built-on-silverlight-and-wpf/)
+- [Devising a strategy to (consistently) win Hangman: Part I](/blog/2007-07-16-devising-a-strategy-to-consistently-win-hangman-pa/)
+- [Sharing photos with family and friends](/blog/2007-07-15-sharing-photos-with-family-and-friends/)
+- [How to automatically (and recursively) delete empty folders](/blog/2007-07-15-how-to-automatically-and-recursively-delete-empty/)
+- [Google Says We're Sorry](/blog/2007-07-15-google-says-were-sorry/)
+- [Commerce Server in the headlines: 07/08/2007 - 07/14/2007](/blog/2007-07-15-commerce-server-in-the-headlines-07/)
+- [Configuring and Testing a Windows Mobile 5.0 Development Environment](/blog/2007-07-11-configuring-and-testing-a-windows-mobile-50-develo/)
+- [Commerce Server in the headlines: 07/01/2007 - 07/07/2007](/blog/2007-07-08-commerce-server-in-the-headlines-07/)
+- [Resolving the BizTalk Server 2006 Warning that Deployment Requires Manual Restart](/blog/2007-07-05-resolving-the-biztalk-server-2006-warning-that-dep/)
+- [BizTalk Server 2006 eConnect Adapters for Great Plains 9.0](/blog/2007-07-05-biztalk-server-2006-econnect-adapters-for-great-pl/)
+- [Problem with the Commerce Server 2007 SP1 Installation](/blog/2007-06-23-problem-with-the-commerce-server-2007-sp1-installa/)
+- [Commerce Server 2007 Upgrade Wizard (post SP1 install) Walkthrough](/blog/2007-06-23-commerce-server-2007-upgrade-wizard-post-sp1-insta/)
+- [ClickOnce Deployment and the Commerce Server 2007 Business Management Applications](/blog/2007-06-20-clickonce-deployment-and-the-commerce-server-2007/)
+- [Commerce Server 2007 Starter Site installation error](/blog/2007-06-19-commerce-server-2007-starter-site-installation-err/)
+- [Two great blogging widgets: ClustrMap and whos.amung.us](/blog/2007-06-19-two-great-blogging-widgets-clustrmap-and-whosamung/)
+- [Max Akbar has announced his new Commerce Server training course](/blog/2007-06-18-max-akbar-has-announced-his-new-commerce-server-tr/)
+- [Script the creation of SQL logins and role assignments](/blog/2007-06-14-script-the-creation-of-sql-logins-and-role-assignm/)
+- [Script the creation and assignment of Windows groups](/blog/2007-06-14-script-the-creation-and-assignment-of-windows-grou/)
+- [Script permission updates for Commerce Server 2007](/blog/2007-06-14-script-permission-updates-for-commerce-server-2007/)
+- [Do you Yahoo!? No, can't say that I do](/blog/2007-06-14-do-you-yahoo-no-cant-say-that-i-do/)
+- [Add "VS.NET Command Prompt Here" to Windows Explorer](/blog/2007-06-14-add-vsnet-command-prompt-here-to-windows-explorer/)
+- [The database version (C.0.8.40) does not match your reporting services installation](/blog/2007-06-13-the-database-version-c0840-does-not-match-your-rep/)
+- [Script the creation of local user accounts for Commerce Server 2007](/blog/2007-06-13-script-the-creation-of-local-user-accounts-for-com/)
+- [What's your Google rank or page position?](/blog/2007-06-06-whats-your-google-rank-or-page-position/)
+- [The project location is not trusted](/blog/2007-06-02-the-project-location-is-not-trusted/)
+- [Oracle for Microsoft Developers, Part II: Setting up an Oracle Development Environment](/blog/2007-05-28-oracle-for-microsoft-developers-part-ii-setting-up/)
+- [Oracle for Microsoft Developers, Part I: Installing Oracle Database 10g Express Edition](/blog/2007-05-28-oracle-for-microsoft-developers-part-i-installing/)
+- [UNC error: XXXXXXX is not accessible](/blog/2007-05-27-unc-error-xxxxxxx-is-not-accessible-you-might-not/)
+- [Troubleshooting with the Sysinternals utilities](/blog/2007-05-24-troubleshooting-with-the-sysinternals-utilities/)
+- [Commerce Server road map and commitment!](/blog/2007-05-24-commerce-server-road-map-and-commitment/)
+- [Commerce Server 2007: BizTalk 2006 Adapter White Papers](/blog/2007-05-19-commerce-server-2007-biztalk-2006-adapter-white-pa/)
+- [A new twist to the error: "Unable to enlist in the transaction."](/blog/2007-05-10-a-new-twist-to-the-error-unable-to-enlist-in-the-t/)
+- [Unable to open shim database version registry key](/blog/2007-05-04-unable-to-open-shim-database-version-registry-key/)
+- [The BizTalk Adapters for Enterprise Applications on Windows Server 2003 64-bit](/blog/2007-05-04-the-biztalk-adapters-for-enterprise-applications-o/)
+- [Adding ODBC connections in Windows Server 2003 64-bit](/blog/2007-05-03-adding-odbc-connections-in-windows-server-2003-64/)
+- [Configuring the Adventure Works catalog for Commerce Server 2007](/blog/2007-05-02-configuring-the-adventure-works-catalog-for-commer/)
+- [BizTalk 2006 XPath expression gotcha!](/blog/2007-04-26-biztalk-2006-xpath-expression-gotcha/)
+- [BizTalk deployment errors from Visual Studio 2005](/blog/2007-04-18-biztalk-deployment-errors-from-visual-studio-2005/)
+- [New hosting for blog](/blog/2007-04-06-new-hosting-for-blog/)
+- [Creating a Universal Data Link (UDL)](/blog/2007-04-04-creating-a-universal-data-link-udl/)
+- [Commerce Server 2007 - Inventory Catalog](/blog/2007-03-24-commerce-server-2007-inventory-catalog/)
+- [Programming with Commerce Server in Two Modes: InProc and Web Service](/blog/2007-03-23-programming-with-commerce-server-in-two-modes-inpr/)
+- [Commerce Server 2007 training resources](/blog/2007-03-23-commerce-server-2007-training-resources/)
+- [Max Akbar has agreed to be the technical reviewer for my book!](/blog/2007-03-20-max-akbar-has-agreed-to-be-the-technical-reviewer/)
+- [Announcing the release of InfinityGL, by rhythmiQ](/blog/2007-03-20-announcing-the-release-of-infinitygl-by-rhythmiq/)
+- [Windows Live Writer (beta)](/blog/2007-03-18-windows-live-writer-beta/)
+- [Commerce Server 2007 Webcasts and other valuable links](/blog/2007-03-17-commerce-server-2007-webcasts-and-other-valuable-l/)
+- [Taking exam 70-235 tomorrow ... [Passed!]](/blog/2007-03-15-taking-exam-70-235-tomorrow-passed/)
+- [Changing the computer name of a BizTalk 2006 server](/blog/2007-03-15-changing-the-computer-name-of-a-biztalk-2006-serve/)
+- [How to stop the high pitched noise emitted by Dell laptops](/blog/2007-03-14-how-to-stop-the-high-pitched-noise-emitted-by-dell/)
+- [Professional Commerce Server 2007](/blog/2007-03-13-professional-commerce-server-2007/)
+- [Using the "ODBC Adapter for Oracle Database" in BizTalk 2006](/blog/2007-03-09-using-the-odbc-adapter-for-oracle-database-in-bizt/)
+- [How to turn off the beep sound in a Virtual Machine](/blog/2007-03-06-how-to-turn-off-the-beep-sound-in-a-virtual-machin/)
+- [Connecting Directly to the Console via Remote Desktop](/blog/2007-03-06-connecting-directly-to-the-console-via-remote-desk/)
+- [Configuring HTTP as a transport protocol in BizTalk 2006](/blog/2007-03-06-configuring-http-as-a-transport-protocol-in-biztal/)
+- [Configuring and Integrating Microsoft Office SharePoint Server 2007 and Microsoft Commerce Server 2007](/blog/2007-03-04-configuring-and-integrating-microsoft-office-share/)
+- [Installing Virtual Server 2005 R2 on Windows Vista](/blog/2007-03-03-installing-virtual-server-2005-r2-on-windows-vista/)
+- [Error: This request requires buffering data to succeed](/blog/2007-02-28-error-this-request-requires-buffering-data-to-succ/)
+
+### 2006
+- [Using AI to predict football outcomes](/blog/2006-12-04-using-ai-to-predict-football-outcomes/)
+- [Initial approach to using AI to predict football outcomes](/blog/2006-12-03-initial-approach-to-using-ai-to-predict-football-o/)
+- [Setting up Networking over Wireless with Virtual Server 2005](/blog/2006-11-30-setting-up-networking-over-wireless-with-virtual-s/)
+- [About Me](/blog/2006-11-02-about-me/)
+
+## Site Structure
+
+- `/` - Homepage with introduction
+- `/blog/` - All blog posts (main content)
+- `/coaching/` - Ultramarathon coaching services
+- `/about/` - About page and professional background
+- `/contact/` - Contact information
+
+## Technical Details
+
+- **Platform**: Hugo static site generator
+- **Theme**: Introduction theme (modified)
+- **Hosting**: Netlify
+- **Repository**: github.com/wadewegner/wadewegner.github.com
+
+## Contact
+
+- **Email**: wade.wegner@gmail.com
+- **GitHub**: https://github.com/wadewegner
+- **LinkedIn**: https://linkedin.com/in/wadewegner/
+- **Twitter**: https://twitter.com/WadeWegner
+- **Bluesky**: https://bsky.app/profile/wadewegner.com
