@@ -3,6 +3,7 @@ title: "Generating C# Classes from JSON"
 date: 2012-08-22T00:00:00-08:00
 draft: false
 description: "From the whiteboard to the keyboard"
+slug: "generating-csharp-classes-from-json"
 ---
 
 I’ve long advocated using JSON when building mobile and cloud applications. If nothing else, the payload size makes it extremely efficient when transferred over the wire – take a look at the size of the same information formatted as OData, REST-XML, and lastly JSON:

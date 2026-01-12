@@ -3,6 +3,7 @@ title: "Aggregating RSS Feeds in C# and ASP.NET MVC 3"
 date: 2011-11-09T00:00:00-08:00
 draft: false
 description: "From the whiteboard to the keyboard"
+slug: "aggregating-rss-feeds-in-csharp-and-aspnet-mvc-3"
 ---
 
 I’m working on a Windows Phone project that requires me to surface up multiple RSS feeds as a single source. I needed a way to do this quickly and easily, and with a little help from friends on Twitter (particularly a suggestion from [@bertcraven](http://twitter.com/bertcraven)) I found a nice way to accomplish this using the **SyndicationFeed** in **System.ServiceModel.Syndication**.

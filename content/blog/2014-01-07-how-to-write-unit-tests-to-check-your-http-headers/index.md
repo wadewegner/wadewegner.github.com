@@ -3,6 +3,7 @@ title: "How to Write Unit Tests to Check Your HTTP Headers (and Other HTTP Reque
 date: 2014-01-07T00:00:00-08:00
 draft: false
 description: "From the whiteboard to the keyboard"
+slug: "how-to-write-unit-tests-to-check-your-http-headers-in-csharp"
 ---
 
 I’ve been building a set of libraries recently that make HTTP calls into the [Force.com](http://www.salesforce.com/us/developer/docs/api_rest/index_Left.htm#StartTopic=Content/quickstart.htm) and [Chatter](http://www.salesforce.com/us/developer/docs/chatterapi/) REST APIs and I needed to find a way to test my methods and ensure that my HTTP Requests were constructed correctly. These libraries do a number of things to help make valid HTTP calls; any inadvertant changes (or introduced bugs) could cause a lot of problems. Fortunately, with help from [Ryan Dunn](http://twitter.com/dunnry), I was able to build some unit tests that are able to inspect my HttpRequestMessage an ensure that everything has been properly setup.
