@@ -18,7 +18,7 @@ I first started programming in middle school by writing Pascal-based scripts for
 
 But life's most meaningful challenges often find us outside the office. After discovering ultrarunning, I found a passion in exploring the limits of human endurance. What started as a personal journey has grown into something more meaningful, the opportunity to coach and guide other runners in their own ultradistance adventures. As a UESCA-certified ultrarunning coach, I've combined my love for systematic thinking with the raw challenge of long-distance trail running.
 
-I believe in sharing these adventures and insights along the way. If you'd like to connect or follow along on these journey, you can find me on [Bluesky](https://bsky.app/profile/wadewegner.com).
+I believe in sharing these adventures and insights along the way. If you'd like to connect or follow along on these journey, you can find me on [Twitter](https://x.com/wadewegner).
 
 </div>
 </div>
