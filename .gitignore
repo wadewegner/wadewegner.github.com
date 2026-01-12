@@ -15,3 +15,6 @@ $RECYCLE.BIN/
 docs
 
 resources/
+
+# Migration tooling (temporary - delete after migration)
+_migration/
