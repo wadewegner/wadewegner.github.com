@@ -138,7 +138,7 @@ publishDir                       = "docs"
     tabWidth = 4
 
 [permalinks]
-    blog = "/:year/:month/:title/"
+    blog = "/:year/:month/:slug/"
 
 [languages]
     [languages.en]
