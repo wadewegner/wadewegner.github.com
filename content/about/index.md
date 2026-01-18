@@ -5,12 +5,31 @@ image: "me.jpeg"
 weight: 1
 noComment: true
 ---
-<div class="container">
-<div class="columns">
-<div class="column is-one-third has-text-centered">
-    <img class="img-responsive avatar" src="me.jpeg" style="margin-top:0px" alt="A selfie of Wade Wegner">
-</div>
-<div class="markdown column">
+
+<style>
+  .about-content {
+    line-height: 1.6;
+  }
+  .about-image {
+    float: left !important;
+    display: inline !important;
+    width: 250px !important;
+    margin: 0 1.5rem 0.5rem 0 !important;
+    border-radius: 8px;
+  }
+  @media (max-width: 768px) {
+    .about-image {
+      float: none !important;
+      display: block !important;
+      width: 60% !important;
+      margin: 0 auto 2rem auto !important;
+    }
+  }
+</style>
+
+<div class="markdown about-content">
+
+<img class="img-responsive about-image" src="me.jpeg" alt="A selfie of Wade Wegner">
 
 I have been lucky to have so many amazing opportunities throughout my career, working with some of the smartest engineers and technologists in the world and filling various roles from software developer to technology evangelist to technology executive.
 
@@ -22,6 +41,4 @@ But life's most meaningful challenges often find us outside the office. After di
 
 I believe in sharing these adventures and insights along the way. If you'd like to connect or follow along on these journey, you can find me on [Twitter](https://x.com/wadewegner).
 
-</div>
-</div>
 </div>

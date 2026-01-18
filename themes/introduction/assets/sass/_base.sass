@@ -68,8 +68,10 @@ details[open]
 details[open] summary
     margin-bottom: .5em
 
-.container
+.site-container
     max-width: 1000px
+    margin: 0 auto
+    padding: 0 1.5rem
 
 .noborder
     border-radius: 0px
@@ -113,9 +115,10 @@ details[open] summary
     margin: 0
     padding: 1.5rem 0 1rem 0
     color: $h-color
+    text-align: left
     @include mobile
         font-size: 1.5rem
-        text-align: center
+        text-align: left
         padding: 1rem 0 0.75rem 0
 
 // Modern Site Header
@@ -131,17 +134,16 @@ details[open] summary
     align-items: center
     justify-content: space-between
     height: 60px
-    padding: 0 1.5rem
-    max-width: 1000px
-    margin: 0 auto
 
 .navbar-brand
     font-size: 1.1rem
     font-weight: 600
     color: $h-color
     text-decoration: none
+    text-transform: uppercase
     line-height: 1
-    padding: 0.5rem 0
+    padding: 0 !important
+    margin: 0 !important
     display: flex
     align-items: center
     &:hover
@@ -202,9 +204,8 @@ details[open] summary
 // Site Main Content Area
 .site-main
     padding: 0
-    .container
-        padding-left: 1.5rem
-        padding-right: 1.5rem
+    .site-container
+        // Padding is now handled by the global .site-container class
 
 // Homepage Hero Section
 .home-hero
@@ -277,11 +278,9 @@ details[open] summary
 
     .site-navbar
         position: relative
-    
-    .page-title
-        font-size: 1.5rem
-        text-align: center
-        padding: 1rem 0 0.75rem 0
+
+    .site-header
+        border-bottom: none
 
 .top-pad
     padding-top: 1rem

@@ -18,14 +18,14 @@
         
         <main id="top" class="site-main">
             <!-- Page Title -->
-            <div class="container {{ if .Site.Params.fadeIn | default true }}fade-in one{{ end }}">
+            <div class="site-container {{ if .Site.Params.fadeIn | default true }}fade-in one{{ end }}">
                 {{ block "title" . }}
                 <h1 class="page-title">{{ .Title | markdownify }}</h1>
                 {{ end }}
             </div>
             
             <!-- Main Content -->
-            <div class="container {{ if .Site.Params.fadeIn | default true }}fade-in two{{ end }}">
+            <div class="site-container {{ if .Site.Params.fadeIn | default true }}fade-in two{{ end }}">
                 {{ block "main" . }}
                 {{ end }}
 

@@ -246,8 +246,7 @@ noComment: true
     height: calc(100vh - 250px);
     min-height: 400px;
     border-radius: 0;
-    border-left: none;
-    border-right: none;
+    border: none;
   }
   
   .chat-messages {
@@ -260,6 +259,7 @@ noComment: true
   
   .chat-input-container {
     padding: 12px 16px;
+    border-top: none;
   }
 }
 </style>
