@@ -90,11 +90,6 @@ publishDir                       = "docs"
         icon  = "twitter" # icon name without the 'fa-'
         icon_pack = "fab"
 
-    [[params.social]]
-        url   = "https://bsky.app/profile/wadewegner.com"
-        icon  = "kiwi-bird" # icon name without the 'fa-'
-        icon_pack = "fas"
-
 # If you don't want to use the default menu, you can define one by yourself
 [[menu.main]]
     name    = "Home"

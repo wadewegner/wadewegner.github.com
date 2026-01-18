@@ -11,8 +11,8 @@ noComment: true
   flex-direction: column;
   height: calc(100vh - 300px);
   min-height: 500px;
-  max-width: 800px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
   border: 1px solid #e0e0e0;
   border-radius: 12px;
   overflow: hidden;
