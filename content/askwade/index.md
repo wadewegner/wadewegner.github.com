@@ -67,7 +67,7 @@ noComment: true
 }
 
 .message.assistant .message-avatar {
-  background: #3273dc;
+  background: #00b8d4;
   color: white;
 }
 
@@ -151,8 +151,8 @@ noComment: true
 }
 
 .chat-input:focus {
-  border-color: #3273dc;
-  box-shadow: 0 0 0 2px rgba(50, 115, 220, 0.1);
+  border-color: #00b8d4;
+  box-shadow: 0 0 0 2px rgba(0, 184, 212, 0.1);
 }
 
 .chat-input::placeholder {
@@ -163,7 +163,7 @@ noComment: true
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  background: #3273dc;
+  background: #00b8d4;
   color: white;
   border: none;
   cursor: pointer;
@@ -175,7 +175,7 @@ noComment: true
 }
 
 .send-button:hover:not(:disabled) {
-  background: #2366d1;
+  background: #0097af;
 }
 
 .send-button:active:not(:disabled) {

@@ -1,5 +1,5 @@
 ---
-title: "Miles, making, and musings"
+title: "Wade Wegner"
 draft: false
 ---
-Adventures in ultrarunning, coaching, and life's longer trails
+Writing code, running trails, building things in between.

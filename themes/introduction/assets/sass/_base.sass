@@ -96,6 +96,7 @@ details[open] summary
     height: 100%
     object-fit: cover
 
+// Keep bold-title for homepage hero
 .bold-title
     font-size: 5rem
     line-height: 1.2
@@ -103,6 +104,184 @@ details[open] summary
     @include mobile
         font-size: 3rem
         text-align: center
+
+// New compact page title for interior pages
+.page-title
+    font-size: 2rem
+    font-weight: 300
+    line-height: 1.3
+    margin: 0
+    padding: 1.5rem 0 1rem 0
+    color: $h-color
+    @include mobile
+        font-size: 1.5rem
+        text-align: center
+        padding: 1rem 0 0.75rem 0
+
+// Modern Site Header
+.site-header
+    background-color: $background
+    border-bottom: 1px solid $secondary
+    position: sticky
+    top: 0
+    z-index: 100
+
+.site-navbar
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 60px
+    padding: 0 1.5rem
+    max-width: 1000px
+    margin: 0 auto
+
+.navbar-brand
+    font-size: 1.1rem
+    font-weight: 600
+    color: $h-color
+    text-decoration: none
+    line-height: 1
+    padding: 0.5rem 0
+    display: flex
+    align-items: center
+    &:hover
+        color: $primary
+
+.navbar-links
+    display: flex
+    align-items: center
+    gap: 0.5rem
+
+.navbar-link
+    text-transform: uppercase
+    font-size: 0.8rem
+    font-weight: 500
+    color: $body-color
+    text-decoration: none
+    padding: 0.5rem 0.75rem
+    border-radius: 4px
+    transition: color 0.2s ease, background-color 0.2s ease
+    // Remove any dropdown arrows from Bulma
+    &::after
+        display: none !important
+    &:hover
+        color: $primary
+        background-color: rgba($primary, 0.05)
+    &.is-active
+        color: $primary
+
+// Hamburger Menu Button
+.navbar-toggle
+    display: none
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 40px
+    height: 40px
+    padding: 0
+    background: transparent
+    border: none
+    cursor: pointer
+    gap: 5px
+
+.hamburger-line
+    display: block
+    width: 24px
+    height: 2px
+    background-color: $h-color
+    transition: transform 0.3s ease, opacity 0.3s ease
+
+.navbar-toggle.is-active
+    .hamburger-line:nth-child(1)
+        transform: translateY(7px) rotate(45deg)
+    .hamburger-line:nth-child(2)
+        opacity: 0
+    .hamburger-line:nth-child(3)
+        transform: translateY(-7px) rotate(-45deg)
+
+// Site Main Content Area
+.site-main
+    padding: 0
+    .container
+        padding-left: 1.5rem
+        padding-right: 1.5rem
+
+// Homepage Hero Section
+.home-hero
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: calc(100vh - 61px)
+    padding: 2rem 1.5rem
+
+.home-title
+    font-size: 3.5rem
+    font-weight: 300
+    color: $h-color
+    margin-bottom: 0.5rem
+    +mobile
+        font-size: 2.5rem
+
+.home-tagline
+    font-size: 2.5rem
+    color: $h-color
+    margin: 0 auto 2rem auto
+    max-width: 800px
+    font-weight: 300
+    line-height: 1.4
+    p
+        font-size: inherit
+        color: inherit
+        font-weight: inherit
+        line-height: inherit
+    +mobile
+        font-size: 1.8rem
+        max-width: 100%
+        padding: 0 1rem
+
+.home-social
+    margin-top: 1rem
+    a
+        margin: 0 0.5rem
+        font-size: 1.5rem
+        color: $primary
+        transition: color 0.2s ease
+        &:hover
+            color: $link-hover
+
+// Mobile Navigation - using +mobile mixin from Bulma
++mobile
+    .navbar-toggle
+        display: flex !important
+    
+    .navbar-links
+        display: none !important
+        position: absolute
+        top: 60px
+        left: 0
+        right: 0
+        background-color: $background
+        flex-direction: column
+        padding: 1rem 0
+        border-bottom: 1px solid $secondary
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+        z-index: 999
+        &.is-open
+            display: flex !important
+    
+    .navbar-link
+        padding: 0.75rem 1.5rem
+        width: 100%
+        text-align: left
+        border-radius: 0
+
+    .site-navbar
+        position: relative
+    
+    .page-title
+        font-size: 1.5rem
+        text-align: center
+        padding: 1rem 0 0.75rem 0
 
 .top-pad
     padding-top: 1rem
@@ -144,16 +323,13 @@ details[open] summary
         vertical-align: baseline
         margin: 0 5px
 
+// Legacy Bulma navbar styles (kept for homepage)
 .navbar
     background-color: $navbar-background-color
 
 .navbar-burger
     margin-right: auto
     color: $primary
-    display: none
-
-.navbar-burger:hover
-    background-color: $navbar-background-color
 
 .navbar-item
     text-transform: uppercase
@@ -434,21 +610,6 @@ details[open] summary
     padding: 0.5rem 1.5rem
     height: auto
 
-// Navbar customization
-.navbar-burger
-  display: none
-
-.navbar-menu
-  display: flex !important
-  box-shadow: none
-  background-color: transparent
-  
-  .navbar-start,
-  .navbar-end
-    display: flex
-    align-items: center
-
-  @media screen and (max-width: 768px)
-    .navbar-item
-      display: inline-flex
-      padding: 0.5rem
+// Legacy navbar styles (kept for homepage compatibility)
+.navbar
+    background-color: $navbar-background-color
