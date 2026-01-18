@@ -321,6 +321,13 @@ noComment: true
   }
 
   function formatMessage(text) {
+    // Remove surrounding quotes if present
+    if (text.charAt(0) === '"' && text.charAt(text.length - 1) === '"') {
+      text = text.slice(1, -1);
+    }
+    // Convert literal \n to actual newlines
+    text = text.replace(/\\n/g, '\n');
+    
     var formatted = escapeHtml(text);
     formatted = formatted.replace(/```(\w*)\n?([\s\S]*?)```/g, function(m, lang, code) {
       var pre = document.createElement('pre');
