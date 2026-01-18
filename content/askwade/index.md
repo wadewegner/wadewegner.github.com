@@ -291,6 +291,7 @@ noComment: true
 </div>
 
 {{< rawhtml >}}
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
 (function() {
   var chatMessages = document.getElementById('chatMessages');
@@ -331,31 +332,8 @@ noComment: true
     text = text.replace(/\\'/g, "'");
     text = text.replace(/\\\\/g, '\\');
     
-    var formatted = escapeHtml(text);
-    formatted = formatted.replace(/```(\w*)\n?([\s\S]*?)```/g, function(m, lang, code) {
-      var pre = document.createElement('pre');
-      var codeEl = document.createElement('code');
-      codeEl.textContent = code;
-      pre.appendChild(codeEl);
-      return pre.outerHTML;
-    });
-    formatted = formatted.replace(/`([^`]+)`/g, function(m, code) {
-      var codeEl = document.createElement('code');
-      codeEl.textContent = code;
-      return codeEl.outerHTML;
-    });
-    formatted = formatted.replace(/\*\*([^*]+)\*\*/g, function(m, txt) {
-      var strong = document.createElement('strong');
-      strong.textContent = txt;
-      return strong.outerHTML;
-    });
-    formatted = formatted.replace(/\*([^*]+)\*/g, function(m, txt) {
-      var em = document.createElement('em');
-      em.textContent = txt;
-      return em.outerHTML;
-    });
-    formatted = formatted.replace(/\n/g, '<br>');
-    return formatted;
+    // Use marked.js to parse markdown
+    return marked.parse(text);
   }
 
   function addMessage(content, isUser) {
