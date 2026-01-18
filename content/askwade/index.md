@@ -457,7 +457,12 @@ noComment: true
       return response.json();
     })
     .then(function(data) {
-      var assistantMessage = data.response || data.message || data.output || JSON.stringify(data);
+      var assistantMessage;
+      if (typeof data === 'string') {
+        assistantMessage = data;
+      } else {
+        assistantMessage = data.response || data.message || data.output || data.text || data.content || String(data);
+      }
       addMessage(assistantMessage, false);
     })
     .catch(function(error) {
