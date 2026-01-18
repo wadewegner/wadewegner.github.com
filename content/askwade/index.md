@@ -300,6 +300,7 @@ noComment: true
   var errorContainer = document.getElementById('errorContainer');
   
   var isLoading = false;
+  var conversationHistory = [];
 
   chatInput.addEventListener('input', function() {
     this.style.height = 'auto';
@@ -411,6 +412,20 @@ noComment: true
     chatInput.disabled = loading;
   }
 
+  function buildPromptWithHistory(newMessage) {
+    var prompt = '';
+    for (var i = 0; i < conversationHistory.length; i++) {
+      var msg = conversationHistory[i];
+      if (msg.role === 'user') {
+        prompt += 'User: ' + msg.content + '\n\n';
+      } else {
+        prompt += 'Assistant: ' + msg.content + '\n\n';
+      }
+    }
+    prompt += 'User: ' + newMessage;
+    return prompt;
+  }
+
   function sendMessage() {
     var message = chatInput.value.trim();
     if (!message || isLoading) return;
@@ -424,10 +439,13 @@ noComment: true
     setLoading(true);
     addTypingIndicator();
 
+    var fullPrompt = buildPromptWithHistory(message);
+    conversationHistory.push({ role: 'user', content: message });
+
     fetch('/.netlify/functions/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ prompt: message })
+      body: JSON.stringify({ prompt: fullPrompt })
     })
     .then(function(response) {
       removeTypingIndicator();
@@ -441,6 +459,7 @@ noComment: true
       } else {
         assistantMessage = data.response || data.message || data.output || data.text || data.content || String(data);
       }
+      conversationHistory.push({ role: 'assistant', content: assistantMessage });
       addMessage(assistantMessage, false);
     })
     .catch(function(error) {
