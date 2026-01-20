@@ -3,7 +3,7 @@ title: "Build for Gorge Waterfalls 100K: Week 5 of 16"
 date: 2026-01-19T18:25:20-08:00
 description: "Week 5 of my 16-week build toward the Gorge Waterfalls 100K"
 images:
- - images/image.png
+ - /2026/01/build-for-gorge-waterfalls-100k-week-5-of-16/images/image.png
 draft: false
 ---
 
