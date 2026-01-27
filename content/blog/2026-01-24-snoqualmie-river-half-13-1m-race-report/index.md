@@ -63,7 +63,7 @@ I held the 7:30 pace, and with less than a mile to go, stepped up to a 6:45 pace
 
 <img src="images/PRs.jpg" alt="PRs" width="30%">
 
-At the end of the day, I was quite happy with the race. Not only did I get PRs across the board (for the 5K, 10K, 10 mile, 20K, and half-marathon), but also my first win.
+At the end of the day, I was quite happy with the race. Not only did I get PRs across the board (for the 10K, 10 mile, 20K, and half-marathon), but also my first win.
 
 At the finish, I was handed a medal, a $15 Starbucks gift card, and a Chipotle burrito.
 
