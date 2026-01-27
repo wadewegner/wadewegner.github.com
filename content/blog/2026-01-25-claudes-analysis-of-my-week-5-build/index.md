@@ -3,9 +3,11 @@ title: "Claude's Analysis of My Week 5 Build"
 date: 2026-01-25T18:00:00-08:00
 description: "Week 5 analysis of my 16-week build toward the Gorge Waterfalls 100K"
 images:
- - /2026/01/build-for-gorge-waterfalls-100k-week-5-analysis/images/image.png
+ - /2026/01/claudes-analysis-of-my-week-5-build/images/ai-analysis.jpg
 draft: false
 ---
+
+![100K Build: Week 5 of 16](images/ai-analysis.jpg)
 
 I generated this analysis for [my week 5 training build for Gorge Waterfalls](https://www.wadewegner.com/2026/01/build-for-gorge-waterfalls-100k-week-5-of-16/) by taking my Garmin FIT files for all six runs, my training plan, then loaded them into Claude and used this prompt:
 
