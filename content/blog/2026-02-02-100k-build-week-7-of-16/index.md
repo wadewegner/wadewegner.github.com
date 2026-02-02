@@ -3,11 +3,11 @@ title: "Build for Gorge Waterfalls 100K: Week 7 of 16"
 date: 2026-02-02T06:00:00-08:00
 description: "Week 7 of my 16-week build toward the Gorge Waterfalls 100K"
 images:
- - /2026/02/build-for-gorge-waterfalls-100k-week-7-of-16/images/image.png
+ - /2026/02/build-for-gorge-waterfalls-100k-week-7-of-16/images/image.jpg
 draft: false
 ---
 
-![100K Build: Week 7 of 16](images/image.png)
+![100K Build: Week 7 of 16](images/image.jpg)
 
 Week 6 is in the books.
 
