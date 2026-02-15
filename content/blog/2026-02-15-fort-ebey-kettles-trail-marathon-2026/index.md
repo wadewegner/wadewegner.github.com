@@ -21,7 +21,7 @@ My plan was to eat, wait an hour, and take 18 mg of Maurten sodium bicarb. I’v
 
 <img src="images/gels.jpg" alt="Carbs make me happy" width="50%">
 
-My plan was to gel every 30 minutes. I designed it so I’d go through a 90 g Precision pack and then follow each of them up with a 40 g Enervit Carbo Gel (Cola) that also has 100 mg of caffeine. The good stuff. I also filled 5 hydroflasks (500 ml) with water and Precision 1000 tabs for electrolytes.
+My plan was to gel every 20 minutes. I designed it so I’d go through a 90 g Precision pack and then follow each of them up with a 40 g Enervit Carbo Gel (Cola) that also has 100 mg of caffeine. The good stuff. I also filled 5 hydroflasks (500 ml) with water and Precision 1000 tabs for electrolytes.
 
 The previous night had rained, but it was pretty clear driving to Fort Ebey. By the time I got there, you could see signs of blue sky through the clouds. The weather was about 41 to 42 degrees.
 
