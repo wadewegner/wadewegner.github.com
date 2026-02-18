@@ -1,5 +1,5 @@
 ---
-title: "Snoqualmie River Half 13.1M Race Report"
+title: "Snoqualmie River Half 13.1M - Race Report"
 date: 2026-01-24T12:00:00-08:00
 description: "Race report from the Snoqualmie River Half Marathon"
 images:

@@ -1,5 +1,5 @@
 ---
-title: "Fort Ebey Kettles Trail Marathon 2026"
+title: "Fort Ebey Kettles Trail Marathon - Race Report"
 date: 2026-02-14T06:00:00-08:00
 description: "A race report from Fort Ebey’s Kettles Trail Marathon: 3rd place, a big PR, bicarb GI drama, and a late-race push to the line."
 images:
