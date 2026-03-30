@@ -100,13 +100,9 @@ publishDir                       = "docs"
     url     = "/blog/"
     weight  = 2
 [[menu.main]]
-    name    = "Ask Wade"
-    url     = "/askwade/"
-    weight  = 3
-[[menu.main]]
     name    = "About"
     url     = "/about/"
-    weight  = 4
+    weight  = 3
 
 
 # We only use tag as a taxonomies

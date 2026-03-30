@@ -1,6 +1,3 @@
-[functions]
-  directory = "netlify/functions"
-
 # This will be your default build command
 [build]
   publish = "./docs/"
