@@ -1,14 +1,10 @@
 {{ define "title" }}
-{{ with .Site.GetPage "/blog" }}
-<h1 class="bold-title">{{ .Title | markdownify }}</h1>
-{{ end }}
 {{ end }}
 
 {{ define "main" }}
 <div class="container">
-    <h2 class="title is-1 top-pad strong-post-title">
-        <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
-    </h2>
+    <p class="post-kicker"><a href="{{ "/blog/" | relLangURL }}">Posts</a></p>
+    <h1 class="post-title">{{ .Title | markdownify }}</h1>
     {{ if .Params.author }}
     <h4 class="title is-4">
         {{ $data := .Params.author }}

@@ -1,7 +1,8 @@
 <div class="social-icons">
     {{ range .Site.Params.social }}
-    <a href="{{ .url }}" {{ .html_attributes | safeHTMLAttr }}>
-        <i class="{{ .icon_pack}} fab fa-{{ .icon}}"></i>
+    {{ $label := .name | default (.icon | humanize | title) }}
+    <a href="{{ .url }}" aria-label="{{ $label }}" {{ .html_attributes | safeHTMLAttr }}>
+        <i class="{{ .icon_pack}} fa-{{ .icon}}" aria-hidden="true"></i>
     </a>
     {{ end }}
 </div>

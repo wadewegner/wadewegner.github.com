@@ -2,4 +2,4 @@
 title: "Wade Wegner"
 draft: false
 ---
-Writing code, running trails, building things in between.
+Building developer platforms, growing communities, and coaching ultrarunners toward big trail goals.

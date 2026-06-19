@@ -17,7 +17,8 @@ publishDir                       = "docs"
     # customCSS                    = ["styles.css"]        # Include custom css files placed under assets/
     # customJS                   = ["foo.js"]              # Include custom JavaScript files placed under assets/
     # plausible                  = true                    # Use Plausible analytics (requires an account at Plausible.io)
-    # description                  = "From the whiteboard to the keyboard"
+    description                   = "Writing on developer platforms, AI-assisted software delivery, and ultrarunning."
+    images                        = ["/about/me-colorful-400x400.png"]
 
     # Configure the home page
     [params.home]
@@ -71,21 +72,25 @@ publishDir                       = "docs"
     #    html_attributes = "rel=\"me\"" # Add rel attribute for Mastodon profile link verification
 
     [[params.social]]
+        name  = "LinkedIn"
         url   = "https://linkedin.com/in/wadewegner/"
         icon  = "linkedin-in" # icon name without the 'fa-'
         icon_pack = "fab"
 
     [[params.social]]
+        name  = "Strava"
         url   = "https://www.strava.com/athletes/27524150"
         icon  = "strava" # icon name without the 'fa-'
         icon_pack = "fab"
 
     [[params.social]]
+        name  = "GitHub"
         url   = "https://github.com/wadewegner"
         icon  = "github" # icon name without the 'fa-'
         icon_pack = "fab"
 
     [[params.social]]
+        name  = "Twitter"
         url   = "https://twitter.com/WadeWegner"
         icon  = "twitter" # icon name without the 'fa-'
         icon_pack = "fab"
@@ -100,9 +105,17 @@ publishDir                       = "docs"
     url     = "/blog/"
     weight  = 2
 [[menu.main]]
+    name    = "Coaching"
+    url     = "/coaching/"
+    weight  = 3
+[[menu.main]]
     name    = "About"
     url     = "/about/"
-    weight  = 3
+    weight  = 4
+[[menu.main]]
+    name    = "Contact"
+    url     = "/contact/"
+    weight  = 5
 
 
 # We only use tag as a taxonomies
@@ -139,5 +152,5 @@ publishDir                       = "docs"
         weight           = 0
         title            = "Wade Wegner"
         [languages.en.params]
-            description  = "Wade Wegner"   # Max 160 characters show in search results
+            description  = "Writing on developer platforms, AI-assisted software delivery, and ultrarunning."
             footerText   = ""                      # Text to override default footer text (markdown allowed)

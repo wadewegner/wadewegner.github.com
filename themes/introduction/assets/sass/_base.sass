@@ -178,6 +178,7 @@ details[open] summary
     flex-direction: column
     justify-content: center
     align-items: center
+    position: relative
     width: 40px
     height: 40px
     padding: 0
@@ -194,12 +195,16 @@ details[open] summary
     transition: transform 0.3s ease, opacity 0.3s ease
 
 .navbar-toggle.is-active
+    .hamburger-line
+        position: absolute
+        left: 8px
+        top: 19px
     .hamburger-line:nth-child(1)
-        transform: translateY(7px) rotate(45deg)
+        transform: rotate(45deg)
     .hamburger-line:nth-child(2)
         opacity: 0
     .hamburger-line:nth-child(3)
-        transform: translateY(-7px) rotate(-45deg)
+        transform: rotate(-45deg)
 
 // Site Main Content Area
 .site-main
@@ -209,25 +214,43 @@ details[open] summary
 
 // Homepage Hero Section
 .home-hero
+    min-height: calc(74vh - 61px)
+    padding: 5rem 0 4rem 0
     display: flex
     align-items: center
-    justify-content: center
-    min-height: calc(100vh - 61px)
-    padding: 2rem 1.5rem
-
-.home-title
-    font-size: 3.5rem
-    font-weight: 300
-    color: $h-color
-    margin-bottom: 0.5rem
     +mobile
-        font-size: 2.5rem
+        min-height: auto
+        padding: 3.5rem 0 3rem 0
+
+.home-hero-grid
+    display: grid
+    grid-template-columns: minmax(0, 1fr) 240px
+    gap: 4rem
+    align-items: center
+    +mobile
+        grid-template-columns: 1fr
+        gap: 2rem
+        text-align: center
+
+.home-copy
+    max-width: 700px
+    +mobile
+        margin: 0 auto
+
+.home-heading
+    font-size: 4rem
+    font-weight: 300
+    line-height: 1.08
+    color: $h-color
+    margin: 0 0 1rem 0
+    +mobile
+        font-size: 2.8rem
 
 .home-tagline
-    font-size: 2.5rem
+    font-size: 2rem
     color: $h-color
-    margin: 0 auto 2rem auto
-    max-width: 800px
+    margin: 0 0 1rem 0
+    max-width: 640px
     font-weight: 300
     line-height: 1.4
     p
@@ -235,10 +258,124 @@ details[open] summary
         color: inherit
         font-weight: inherit
         line-height: inherit
+        margin: 0
     +mobile
-        font-size: 1.8rem
+        font-size: 1.5rem
         max-width: 100%
-        padding: 0 1rem
+
+.home-actions
+    display: flex
+    gap: 0.75rem
+    align-items: center
+    flex-wrap: wrap
+    margin-bottom: 1.5rem
+    +mobile
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+.home-button
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 2.75rem
+    padding: 0.7rem 1rem
+    border-radius: 4px
+    border: 1px solid $primary
+    font-size: 0.92rem
+    font-weight: 600
+    text-decoration: none
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease
+    &:focus-visible
+        outline: 2px solid rgba($primary, 0.45)
+        outline-offset: 3px
+    +mobile
+        width: 100%
+        max-width: 15rem
+
+.home-button-primary
+    background-color: $primary
+    color: white
+    &:hover
+        background-color: darken($primary, 6%)
+        border-color: darken($primary, 6%)
+        color: white
+
+.home-button-secondary
+    background-color: transparent
+    color: $primary
+    &:hover
+        background-color: rgba($primary, 0.08)
+        color: darken($primary, 18%)
+
+.home-visual
+    justify-self: end
+    width: 220px
+    aspect-ratio: 1
+    border-radius: 50%
+    overflow: hidden
+    border: 1px solid rgba($secondary, 0.9)
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08)
+    +mobile
+        justify-self: center
+        width: 160px
+        order: -1
+    img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center 42%
+        border: none
+        border-radius: 0
+        box-shadow: none
+        margin: 0
+
+.home-section
+    border-top: 1px solid $secondary
+    padding: 3rem 0 4rem 0
+
+.home-section-grid
+    display: grid
+    grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.8fr)
+    gap: 4rem
+    +mobile
+        grid-template-columns: 1fr
+        gap: 2.5rem
+    h2
+        font-size: 1.35rem
+        font-weight: 600
+        margin: 0 0 1rem 0
+        color: $h-color
+
+.home-posts
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+        display: grid
+        grid-template-columns: 8.5rem minmax(0, 1fr)
+        gap: 1rem
+        align-items: baseline
+        padding: 0.55rem 0
+        border-bottom: 1px solid rgba($secondary, 0.7)
+        +mobile
+            grid-template-columns: 1fr
+            gap: 0.15rem
+            text-align: left
+    time
+        color: lighten($body-color, 18%)
+        font-size: 0.92rem
+
+.home-coaching
+    p
+        line-height: 1.65
+        margin: 0 0 1rem 0
+
+.home-text-link
+    font-weight: 600
+    text-decoration: none
+    &:hover
+        text-decoration: underline
 
 .home-social
     margin-top: 1rem
@@ -296,6 +433,31 @@ details[open] summary
     list-style: none
     list-style-position: outside
     margin-left: 0
+
+.post-archive
+    margin: 0 0 1rem 0
+    padding: 0
+    list-style: none
+    .post-item
+        margin: 0 0 0.35rem 0
+        line-height: 1.45
+
+.post-kicker
+    margin: 1.5rem 0 0.35rem 0
+    font-size: 0.9rem
+    text-transform: uppercase
+    letter-spacing: 0
+    a
+        text-decoration: none
+
+.post-title
+    font-size: 3.2rem
+    font-weight: $weight-bold
+    line-height: 1.12
+    margin: 0.25rem 0 1rem 0
+    color: $primary
+    @include mobile
+        font-size: 2.35rem
 
 .post-data, .blog-share, .footer-text
     font-size: 1rem
@@ -608,6 +770,72 @@ details[open] summary
   .button
     padding: 0.5rem 1.5rem
     height: auto
+
+.coaching-intro
+    max-width: 720px
+    line-height: 1.65
+    margin: 0.5rem 0 1.5rem 0
+    +mobile
+        margin-bottom: 1.25rem
+
+.coaching-cta
+    display: grid
+    grid-template-columns: minmax(220px, 0.9fr) minmax(280px, 1.1fr)
+    gap: 2rem
+    align-items: start
+    margin: 1.5rem 0 3rem 0
+    padding: 2rem
+    border: 1px solid rgba($secondary, 0.95)
+    border-radius: 6px
+    background-color: #fbfbfb
+    +mobile
+        grid-template-columns: 1fr
+        gap: 1.25rem
+        padding: 1rem
+        margin-bottom: 2.5rem
+
+.coaching-cta-copy
+    h2
+        margin-top: 0
+        margin-bottom: 0.75rem
+        font-size: 1.35rem
+        line-height: 1.3
+    p
+        margin: 0
+        line-height: 1.65
+        color: lighten($body-color, 12%)
+
+.coaching-cta .coaching-form
+    max-width: none
+    margin: 0
+
+.coaching-cta .field
+    margin-bottom: 1rem
+
+.coaching-cta .field:last-child
+    margin-bottom: 0
+
+.coaching-cta .textarea
+    min-height: 88px
+
+.coaching-cta .button
+    background-color: $primary
+    border: 1px solid $primary
+    color: white
+    cursor: pointer
+    min-height: 2.65rem
+    padding: 0.65rem 1.25rem
+    font-weight: 600
+    transition: background-color 0.2s ease, border-color 0.2s ease
+    &:hover
+        background-color: darken($primary, 6%)
+        border-color: darken($primary, 6%)
+        color: white
+    &:focus-visible
+        outline: 2px solid rgba($primary, 0.45)
+        outline-offset: 3px
+    +mobile
+        width: 100%
 
 // Legacy navbar styles (kept for homepage compatibility)
 .navbar

@@ -13,17 +13,50 @@
         <!-- Navigation at top -->
         {{ partial "nav.html" . }}
         
-        <!-- Hero Section -->
-        {{ with .Site.GetPage "/home" }}
-        <section class="home-hero">
-            <div class="container has-text-centered">
-                <div class="home-tagline">{{ .Content }}</div>
-                <div class="home-social">
-                    {{ partial "home/social.html" . }}
+        <main id="top">
+            {{ $home := .Site.GetPage "/home" }}
+            <section class="home-hero">
+                <div class="site-container home-hero-grid">
+                    <div class="home-copy">
+                        <h1 class="home-heading">{{ .Site.Title }}</h1>
+                        {{ with $home }}
+                        <div class="home-tagline">{{ .Content }}</div>
+                        {{ end }}
+                        <div class="home-actions" aria-label="Primary links">
+                            <a class="home-button home-button-primary" href="/blog/">Read the writing</a>
+                            <a class="home-button home-button-secondary" href="/coaching/">Explore coaching</a>
+                        </div>
+                        <div class="home-social" aria-label="Social profiles">
+                            {{ partial "home/social.html" . }}
+                        </div>
+                    </div>
+                    <div class="home-visual" aria-label="Portrait of Wade Wegner">
+                        <img src="/about/me.jpeg" alt="Wade Wegner">
+                    </div>
                 </div>
-            </div>
-        </section>
-        {{ end }}
+            </section>
+
+            <section class="home-section" aria-labelledby="latest-writing">
+                <div class="site-container home-section-grid">
+                    <div class="home-latest">
+                        <h2 id="latest-writing">Latest Writing</h2>
+                        <ul class="home-posts">
+                            {{ range first 3 (where .Site.RegularPages.ByDate.Reverse "Section" "blog") }}
+                            <li>
+                                <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (.Site.Params.dateFormat | default "Jan 2, 2006") }}</time>
+                                <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                    <div class="home-coaching">
+                        <h2>Ultrarunning Coaching</h2>
+                        <p>Personalized coaching for runners who want a thoughtful, sustainable path into long-distance trail racing.</p>
+                        <a class="home-text-link" href="/coaching/">See the coaching approach</a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
         {{ partial "footer/scripts.html" . }}
     </body>
