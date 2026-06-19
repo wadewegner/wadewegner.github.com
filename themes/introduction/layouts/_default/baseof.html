@@ -17,12 +17,14 @@
         {{ partial "nav.html" . }}
         
         <main id="top" class="site-main">
+            {{ if not (and .IsPage (eq .Section "blog")) }}
             <!-- Page Title -->
             <div class="site-container {{ if .Site.Params.fadeIn | default true }}fade-in one{{ end }}">
                 {{ block "title" . }}
                 <h1 class="page-title">{{ .Title | markdownify }}</h1>
                 {{ end }}
             </div>
+            {{ end }}
             
             <!-- Main Content -->
             <div class="site-container {{ if .Site.Params.fadeIn | default true }}fade-in two{{ end }}">

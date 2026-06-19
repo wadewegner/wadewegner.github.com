@@ -7,6 +7,17 @@ noComment: true
 
 <p class="coaching-intro">I coach a small number of ultrarunners who want thoughtful, science-grounded training that still fits real life.</p>
 
+## How I coach
+
+- Personalized training rather than a one-size-fits-all plan
+- Progressive, science-grounded structure with room for real life
+- Practical race simulation, pacing, nutrition, and mental skills
+- Direct communication and an athlete-centered partnership
+
+## Who it's for
+
+I keep the roster small so each athlete gets meaningful attention. The best fit is a runner who is serious about long-distance trail goals, comfortable with honest communication, and ready to use TrainingPeaks as the shared training home.
+
 <section class="coaching-cta" id="get-started" aria-labelledby="coaching-cta-title">
   <div class="coaching-cta-copy">
     <h2 id="coaching-cta-title">Start a coaching conversation</h2>
@@ -57,14 +68,3 @@ noComment: true
   </div>
 </form>
 </section>
-
-## How I coach
-
-- Personalized training rather than a one-size-fits-all plan
-- Progressive, science-grounded structure with room for real life
-- Practical race simulation, pacing, nutrition, and mental skills
-- Direct communication and an athlete-centered partnership
-
-## Who it's for
-
-I keep the roster small so each athlete gets meaningful attention. The best fit is a runner who is serious about long-distance trail goals, comfortable with honest communication, and ready to use TrainingPeaks as the shared training home.

@@ -109,15 +109,17 @@ details[open] summary
 
 // New compact page title for interior pages
 .page-title
-    font-size: 2rem
-    font-weight: 300
+    font-family: $family-display
+    font-size: 2.35rem
+    font-weight: 400
     line-height: 1.3
+    letter-spacing: 0
     margin: 0
     padding: 1.5rem 0 1rem 0
     color: $h-color
     text-align: left
     @include mobile
-        font-size: 1.5rem
+        font-size: 1.85rem
         text-align: left
         padding: 1rem 0 0.75rem 0
 
@@ -227,24 +229,51 @@ details[open] summary
     grid-template-columns: minmax(0, 1fr) 240px
     gap: 4rem
     align-items: center
+    isolation: isolate
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        top: 2.4rem
+        right: 0.2rem
+        width: 23rem
+        height: 10rem
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 160' fill='none'%3E%3Cpath d='M12 118C58 28 112 134 168 72C224 10 270 40 334 104' stroke='%23006f7c' stroke-width='3' stroke-linecap='round' stroke-dasharray='8 12'/%3E%3Ccircle cx='12' cy='118' r='5' fill='%23006f7c'/%3E%3Ccircle cx='334' cy='104' r='5' fill='%23006f7c'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: contain
+        opacity: 0.16
+        pointer-events: none
+        z-index: 0
     +mobile
         grid-template-columns: 1fr
         gap: 2rem
         text-align: center
+        &::before
+            top: 2rem
+            left: 50%
+            right: auto
+            width: 13rem
+            height: 6rem
+            opacity: 0.14
+            transform: translateX(-50%)
 
 .home-copy
     max-width: 700px
+    position: relative
+    z-index: 1
     +mobile
         margin: 0 auto
 
 .home-heading
-    font-size: 4rem
-    font-weight: 300
+    font-family: $family-display
+    font-size: 4.25rem
+    font-weight: 400
     line-height: 1.08
+    letter-spacing: 0
     color: $h-color
     margin: 0 0 1rem 0
     +mobile
-        font-size: 2.8rem
+        font-size: 3rem
 
 .home-tagline
     font-size: 2rem
@@ -310,12 +339,14 @@ details[open] summary
 
 .home-visual
     justify-self: end
+    position: relative
+    z-index: 1
     width: 220px
     aspect-ratio: 1
     border-radius: 50%
     overflow: hidden
-    border: 1px solid rgba($secondary, 0.9)
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08)
+    border: 1px solid rgba($primary, 0.18)
+    box-shadow: 0 14px 32px rgba($primary, 0.14)
     +mobile
         justify-self: center
         width: 160px
@@ -366,10 +397,28 @@ details[open] summary
         color: lighten($body-color, 18%)
         font-size: 0.92rem
 
-.home-coaching
-    p
-        line-height: 1.65
-        margin: 0 0 1rem 0
+.home-focus
+    h2
+        margin-bottom: 0.8rem
+
+.home-focus-list
+    list-style: none
+    margin: 0 0 1rem 0
+    padding: 0
+    border-top: 1px solid rgba($primary, 0.22)
+    li
+        border-bottom: 1px solid rgba($primary, 0.16)
+        line-height: 1.55
+        padding: 0.78rem 0
+    strong
+        display: block
+        color: $h-color
+        font-family: $family-display
+        font-size: 1.16rem
+        font-weight: 400
+        line-height: 1.2
+        letter-spacing: 0
+        margin-bottom: 0.12rem
 
 .home-text-link
     font-weight: 600
@@ -451,11 +500,13 @@ details[open] summary
         text-decoration: none
 
 .post-title
+    font-family: $family-display
     font-size: 3.2rem
-    font-weight: $weight-bold
+    font-weight: 400
     line-height: 1.12
+    letter-spacing: 0
     margin: 0.25rem 0 1rem 0
-    color: $primary
+    color: $h-color
     @include mobile
         font-size: 2.35rem
 
@@ -546,10 +597,12 @@ details[open] summary
     p
         margin: 1em 0
     h1
-        font-size: 1.5rem
-        font-weight: 700
+        font-family: $family-display
+        font-size: 1.8rem
+        font-weight: 400
+        letter-spacing: 0
         @include mobile
-            font-size: 1.4rem
+            font-size: 1.55rem
     h2
         font-size: 1.3rem
         font-weight: 600
@@ -711,7 +764,8 @@ details[open] summary
     &:hover
       background-color: darken($primary, 5%)
 
-.coaching-form
+.coaching-form,
+.contact-form
   max-width: 600px
   margin: 1rem 0
 
@@ -771,30 +825,54 @@ details[open] summary
     padding: 0.5rem 1.5rem
     height: auto
 
-.coaching-intro
-    max-width: 720px
+.coaching-intro,
+.contact-intro
     line-height: 1.65
     margin: 0.5rem 0 1.5rem 0
     +mobile
         margin-bottom: 1.25rem
 
-.coaching-cta
+.coaching-cta,
+.contact-cta
     display: grid
     grid-template-columns: minmax(220px, 0.9fr) minmax(280px, 1.1fr)
     gap: 2rem
     align-items: start
     margin: 1.5rem 0 3rem 0
     padding: 2rem
-    border: 1px solid rgba($secondary, 0.95)
+    border: 1px solid rgba($primary, 0.22)
     border-radius: 6px
-    background-color: #fbfbfb
+    background-color: #fbfdfd
+    overflow: hidden
+    position: relative
+    &::before
+        content: ""
+        position: absolute
+        left: 1.1rem
+        bottom: 1rem
+        width: 13rem
+        height: 4.25rem
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 82' fill='none'%3E%3Cpath d='M8 62C42 16 76 70 112 38C148 6 182 18 228 54' stroke='%23006f7c' stroke-width='3' stroke-linecap='round' stroke-dasharray='7 10'/%3E%3Ccircle cx='8' cy='62' r='4' fill='%23006f7c'/%3E%3Ccircle cx='228' cy='54' r='4' fill='%23006f7c'/%3E%3C/svg%3E")
+        background-repeat: no-repeat
+        background-size: contain
+        opacity: 0.12
+        pointer-events: none
+        z-index: 0
     +mobile
         grid-template-columns: 1fr
         gap: 1.25rem
         padding: 1rem
         margin-bottom: 2.5rem
+        &::before
+            display: none
 
-.coaching-cta-copy
+.coaching-cta > *,
+.contact-cta > *
+    position: relative
+    z-index: 1
+
+.coaching-cta-copy,
+.contact-cta-copy
     h2
         margin-top: 0
         margin-bottom: 0.75rem
@@ -805,20 +883,25 @@ details[open] summary
         line-height: 1.65
         color: lighten($body-color, 12%)
 
-.coaching-cta .coaching-form
+.coaching-cta .coaching-form,
+.contact-cta .contact-form
     max-width: none
     margin: 0
 
-.coaching-cta .field
+.coaching-cta .field,
+.contact-cta .field
     margin-bottom: 1rem
 
-.coaching-cta .field:last-child
+.coaching-cta .field:last-child,
+.contact-cta .field:last-child
     margin-bottom: 0
 
-.coaching-cta .textarea
+.coaching-cta .textarea,
+.contact-cta .textarea
     min-height: 88px
 
-.coaching-cta .button
+.coaching-cta .button,
+.contact-cta .button
     background-color: $primary
     border: 1px solid $primary
     color: white
