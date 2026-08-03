@@ -121,6 +121,8 @@ Our aid-station times were 1:17 AM at Olallie, 3:30 AM at Meadow Mountain, and 5
 
 Seeing the crew at Stampede made me really happy. I was 24 minutes ahead of schedule when I arrived and left with Cam after a 12-minute stop.
 
+<img src="images/with-cam-at-stampede.jpg" alt="Wade and Cam at Stampede Pass before starting their section together" style="width: 100%; max-width: 600px;">
+
 Cam did exactly what I needed. He ran in front of me and gave me someone to follow. With the sun coming up and my legs still working, I started to run well again.
 
 <img src="images/with-cam.jpg" alt="Wade crossing a rocky section during his miles with Cam" width="100%">
