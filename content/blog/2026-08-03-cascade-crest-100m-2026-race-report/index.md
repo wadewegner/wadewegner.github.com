@@ -15,7 +15,7 @@ It has been a couple of weeks, and I still get emotional thinking about the fini
 
 Why? Well, six weeks before the race I wasn't even sure I'd be able to start. Then, less than a day before the race, the course changed completely.
 
-Let me back up.
+Okay, let me back up.
 
 # My Training this Year
 
