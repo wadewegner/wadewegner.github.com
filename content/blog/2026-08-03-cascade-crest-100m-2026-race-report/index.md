@@ -17,7 +17,7 @@ Why? Well, six weeks before the race I wasn't even sure I'd be able to start. Th
 
 Let me back up.
 
-# Training
+# My Training this Year
 
 I had a fantastic start to 2026. In January, I won a road half marathon. I finished [3rd at the Fort Ebey Kettles Marathon](/2026/02/fort-ebey-kettles-trail-marathon-2026/) in February. Badger Mountain 50M in March was a disaster for my stomach, but at [Gorge Waterfalls 100K](/2026/01/gorge-waterfalls-100k-build/) in April I ran almost 51 minutes faster than I had in 2025. Even better, my legs still felt strong at the end.
 
@@ -35,7 +35,7 @@ That helped. I had been seriously thinking about not starting, but I decided to 
 
 At least that was the plan for the normal course.
 
-# The Course Change
+# Changing the Course
 
 On Thursday afternoon, Teri, the crew, and I were at our Airbnb in Easton reviewing the plan I'd spent the previous six weeks putting together. Race director Jess Mullen sent an email letting us know that a wildfire had closed part of the course. Instead of running the normal loop, we would be running out to Hyak and then coming all the way back.
 
@@ -161,7 +161,7 @@ Apparently, I needed some time to think about it.
 
 We laughed and continued walking.
 
-# The Finish
+# Finishing
 
 From the last curve outside Easton, I could see the finish line about a mile away. That's when I started to get a little emotional. These races always seem so straightforward in the abstract, and so messy in reality. I think that's why I love them.
 
