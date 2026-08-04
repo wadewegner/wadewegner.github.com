@@ -171,9 +171,9 @@ Well, that got me going again.
 
 I was also in much better shape than I had been at the 2025 finish. Last year, I sat under the finish tent shaking and unable to eat. A woman from the fire station kept coming back to check on me.
 
-This year, I drank most of a vanilla milkshake and ate half a hamburger. Later, at the Airbnb, I even ate some of Teri's leftovers while we talked about the race.
+This year, I drank most of a vanilla milkshake and ate half a hamburger. Later, at the Airbnb, I even ate some of Teri's leftovers while we talked about the race. A huge difference from the previous year.
 
-Fantastic.
+While the legs were suffering, overall I was in much better shape this year.
 
 # Looking at the Data
 
