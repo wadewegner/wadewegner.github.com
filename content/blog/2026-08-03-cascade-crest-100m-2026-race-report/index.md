@@ -13,10 +13,6 @@ On Friday, July 17, I finished the Cascade Crest 100 in [33:08:47](https://ultra
 
 It has been a couple of weeks, and I still get emotional thinking about the finish. I am incredibly proud of this one.
 
-Why? Well, six weeks before the race I wasn't even sure I'd be able to start. Then, less than a day before the race, the course changed completely.
-
-Okay, let me back up.
-
 # My Training this Year
 
 I had a fantastic start to 2026. In January, I won a road half marathon. I finished [3rd at the Fort Ebey Kettles Marathon](/2026/02/fort-ebey-kettles-trail-marathon-2026/) in February. Badger Mountain 50M in March was a disaster for my stomach, but at [Gorge Waterfalls 100K](/2026/01/gorge-waterfalls-100k-build/) in April I ran almost 51 minutes faster than I had in 2025. Even better, my legs still felt strong at the end.
