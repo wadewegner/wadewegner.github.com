@@ -2,4 +2,4 @@
 title: "Wade Wegner"
 draft: false
 ---
-Building developer platforms, growing communities, and coaching ultrarunners toward big trail goals.
+Building AI tools, developer platforms, and helping runners reach their potential.
